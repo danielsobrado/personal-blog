@@ -8,7 +8,7 @@ canonifyurls    = true
 
 [params]
   title       = "Daniel Sobrado"
-  subtitle    = "Neural networking and deep learning!"
+  subtitle    = ""
   copyright   = "© 2018"
 
   cover       = "img/blog-cover.jpg"
@@ -25,7 +25,7 @@ canonifyurls    = true
   mediumName = "dalamar01977"
 
   logo = "/img/daniel-logo.png"
-  orgName = "EM"
+  orgName = "Daniel Sobrado"
   orgWebsite = "https://www.danielsobrado.com"
   orgDescription = "Personal Blog on Data Science, Big Data and Software Development."
 
