@@ -24,7 +24,7 @@ canonifyurls    = true
   linkedinName = "dsobrado"
   mediumName = "dalamar01977"
 
-  logo = "daniel-logo.jpeg"
+  logo = "/img/daniel-logo.png"
   orgName = "EM"
   orgWebsite = "https://www.danielsobrado.com"
   orgDescription = "Personal Blog on Data Science, Big Data and Software Development."
