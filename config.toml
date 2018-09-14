@@ -25,6 +25,8 @@ canonifyurls    = true
   githubName = "danielsobrado"
   linkedinName = "dsobrado"
   mediumName = "dalamar01977"
+  quoraName = "Daniel-Sobrado"
+  kaggleName = "danielsobrado"
 
   logo = "/img/daniel-logo.png"
   orgName = "Daniel Sobrado"
