@@ -1,7 +1,7 @@
 baseurl         = "/"
 theme           = "casper-two"
 languageCode    = "en-US"
-disqusShortname = ""
+disqusShortname = "dalamarsblog"
 paginate        = 6
 #SectionPagesMenu = "main"
 canonifyurls    = true
@@ -17,8 +17,10 @@ canonifyurls    = true
   googleAnalytics = ""
   customCSS = []
   RSSLink = ""
+  
+  publishDir = "docs"
 
-  twitterName = "DanielSobrado"
+  twitterName = "DalamarBlog"
   fbName = "j.daniel.sobrado"
   githubName = "danielsobrado"
   linkedinName = "dsobrado"
