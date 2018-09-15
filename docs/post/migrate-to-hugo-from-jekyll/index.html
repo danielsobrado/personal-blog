@@ -350,13 +350,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="/post/getting-started-with-hugo/">Getting Started with Hugo</a></li>            
-        
-                      
+          <li><a href="/post/hugo-template-primer/">(Hu)go Template Primer</a></li>            
         
           <li><a href="/post/creating-a-new-theme/">Creating a New Theme</a></li>            
         
-          <li><a href="/post/hugo-template-primer/">(Hu)go Template Primer</a></li>            
+                      
+        
+          <li><a href="/post/colenak/">Colenak</a></li>            
         
           <li><a href="/post/wonderful/">Wonderful</a></li>            
         </ul>
@@ -405,7 +405,7 @@ s.setAttribute('data-timestamp', +new Date());
       <article class="post-card post"> 
     
     <a class="post-card-image-link" href="/post/colenak/">
-      <div class="post-card-image" style="background-image: url(/defimg/1.jpg)"></div>
+      <div class="post-card-image" style="background-image: url(/defimg/7.jpg)"></div>
     </a>    
     
 
@@ -475,8 +475,8 @@ We&rsquo;ll start with creating a new site with a very basic template. ...  </p>
     </section>
     <nav class="site-footer-nav">
         <a href="/">Latest Posts</a>
-        <a href="https://www.kaggle.com/danielsobrado" target="_blank" rel="noopener">Github</a>
-        <a href="https://www.quora.com/profile/Daniel-Sobrado" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.kaggle.com/danielsobrado" target="_blank" rel="noopener">Kaggle</a>
+        <a href="https://www.quora.com/profile/Daniel-Sobrado" target="_blank" rel="noopener">Quora</a>
         <a href="https://github.com/danielsobrado" target="_blank" rel="noopener">Github</a>
         <a href="https://www.linkedin.com/in/dsobrado" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://medium.com/@dalamar01977" target="_blank" rel="noopener">Medium</a>
@@ -484,6 +484,41 @@ We&rsquo;ll start with creating a new site with a very basic template. ...  </p>
         <a href="https://twitter.com/DalamarBlog" target="_blank" rel="noopener">Twitter</a>
     </nav>  
   </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+	
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+	<script>
+	  renderMathInElement(document.body,
+		{
+			delimiters: [
+				{left: "$$", right: "$$", display: true},
+				{left: "$", right: "$", display: false},
+			]
+		}
+	  );
+
+	  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+	  for (var i = 0; i < inlineMathArray.length; i++) {
+		var inlineMath = inlineMathArray[i];
+		var tex = inlineMath.innerText || inlineMath.textContent;
+		var replaced = document.createElement("span");
+		replaced.innerHTML = katex.renderToString(tex, {displayMode: false});
+		inlineMath.parentNode.replaceChild(replaced, inlineMath);
+	  }
+
+	  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+	  for (var i = 0; i < displayMathArray.length; i++) {
+		var displayMath = displayMathArray[i];
+		var tex = displayMath.innerHTML;
+		var replaced = document.createElement("span");
+		replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+		displayMath.parentNode.replaceChild(replaced, displayMath);
+	  }
+	</script>
 </footer>
 
 </div>

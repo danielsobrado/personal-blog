@@ -6,8 +6,8 @@
     </section>
     <nav class="site-footer-nav">
         <a href="/">Latest Posts</a>
-        {{with .Site.Params.kaggleName}}<a href="https://www.kaggle.com/{{.}}" target="_blank" rel="noopener">Github</a>{{end}}
-        {{with .Site.Params.quoraName}}<a href="https://www.quora.com/profile/{{.}}" target="_blank" rel="noopener">LinkedIn</a>{{end}}
+        {{with .Site.Params.kaggleName}}<a href="https://www.kaggle.com/{{.}}" target="_blank" rel="noopener">Kaggle</a>{{end}}
+        {{with .Site.Params.quoraName}}<a href="https://www.quora.com/profile/{{.}}" target="_blank" rel="noopener">Quora</a>{{end}}
         {{with .Site.Params.githubName}}<a href="https://github.com/{{.}}" target="_blank" rel="noopener">Github</a>{{end}}
         {{with .Site.Params.linkedinName}}<a href="https://www.linkedin.com/in/{{.}}" target="_blank" rel="noopener">LinkedIn</a>{{end}}
         {{with .Site.Params.mediumName}}<a href="https://medium.com/@{{.}}" target="_blank" rel="noopener">Medium</a>{{end}}
@@ -15,4 +15,39 @@
         {{with .Site.Params.twitterName}}<a href="https://twitter.com/{{.}}" target="_blank" rel="noopener">Twitter</a>{{end}}
     </nav>  
   </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+	<!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+	<script>
+	  renderMathInElement(document.body,
+		{
+			delimiters: [
+				{left: "$$", right: "$$", display: true},
+				{left: "$", right: "$", display: false},
+			]
+		}
+	  );
+
+	  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
+	  for (var i = 0; i < inlineMathArray.length; i++) {
+		var inlineMath = inlineMathArray[i];
+		var tex = inlineMath.innerText || inlineMath.textContent;
+		var replaced = document.createElement("span");
+		replaced.innerHTML = katex.renderToString(tex, {displayMode: false});
+		inlineMath.parentNode.replaceChild(replaced, inlineMath);
+	  }
+
+	  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
+	  for (var i = 0; i < displayMathArray.length; i++) {
+		var displayMath = displayMathArray[i];
+		var tex = displayMath.innerHTML;
+		var replaced = document.createElement("span");
+		replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+		displayMath.parentNode.replaceChild(replaced, displayMath);
+	  }
+	</script>
 </footer>
