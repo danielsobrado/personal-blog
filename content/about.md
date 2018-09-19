@@ -10,17 +10,16 @@ type = "page"
 weight = 111
 
 +++
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Yow !
+Having a curious nature, growth mindset, and self-starter attitude, I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
 
-<script[type='math/tex']>
-$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-$$
-</script>
+Some days, I'm a big data engineer, onboarding new data sources and/or architecting our technology stack. 
+
+Some other days I'm a data scientist, conducting exploratory analyses or modeling machine learning solutions. 
+
+Though, some days, I am more of a management specialist and strategist, working with business leaders to make data-driven decisions. 
+
+Most days, I blend all of the above. 
+
+I prefer to view myself as a problem solver, where code and data are my tools, and business results are my guidance.
 
 ![Signature](/img/DanielSobradoSignature.PNG)
