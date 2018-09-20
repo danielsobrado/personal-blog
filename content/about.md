@@ -22,4 +22,10 @@ Most days, I blend all of the above.
 
 I prefer to view myself as a problem solver, where code and data are my tools, and business results are my guidance.
 
+I'm using this blog as a means of self-development, they say that you never completely understand a subject until you are able to explain it. I think that everyone has a different angle, a view on something that’s worth sharing. 
+
+I write about topics I want to refresh, subjects I'm studying and materials I want to learn, feel free to leave any comments. Because if it’s actually not good enough, I would like to know that, I want to be challenged to be able to advance further. 
+
+Though, if you like it, and it gets popular I will support it and continue writing more about it.
+
 ![Signature](/img/DanielSobradoSignature.PNG)
