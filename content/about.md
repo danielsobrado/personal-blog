@@ -10,7 +10,18 @@ type = "page"
 weight = 111
 
 +++
-On the professional side, I've been working in the banking industry for a long time, in banks like UBS, BNP, JP Morgan, Mitsubitsi/Morgan Stanley, National Bank of Abu Dhabi, in locations like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
+
+![](https://i.imgur.com/cYzzS7F.png)
+
+I´m Daniel, a Spanish native currently residing in Abu Dhabi. 
+
+I enjoy travelling, there is something magical in having a new stamp in the passport, apart from enjoying the beauty of the place, you get to meet new people, know their culture and traditions, and improve your knowledge. You totally emerge to a different person, a very different one. You start to respect people around you irrespective of their position in the society, respect other cultures and hence earn respect. 
+
+Naturally curious about how any new technology works and why, I enjoy spending time trying programming languages, tools and frameworks. 
+
+Join me as I explore tools, frameworks and datasets, feel free to comment and suggest.
+
+I've been working in the banking industry for a long time, in banks like UBS, BNP, JP Morgan, Mitsubitsi/Morgan Stanley, National Bank of Abu Dhabi, in locations like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
 
 Some days, I'm a big data engineer, onboarding new data sources and/or architecting our technology stack. 
 
@@ -26,7 +37,8 @@ I write about topics I want to refresh, subjects I'm studying and materials I wa
 
 Though, if you like it, and it gets popular I will support it and continue writing more about it.
 
-Feel free to contact me on: <a href="https://www.kaggle.com/danielsobrado" target="_blank" rel="noopener" style="font-size: 85%">Kaggle</a> <a href="https://www.quora.com/profile/Daniel-Sobrado" target="_blank" rel="noopener" style="font-size: 85%">Quora</a> <a href="https://www.stackoverflow.com//users/2507462/daniel-sobrado" target="_blank" rel="noopener" style="font-size: 85%">Stack Overflow</a> <a href="https://github.com/danielsobrado" target="_blank" rel="noopener" style="font-size: 85%">Github</a> <a href="https://www.linkedin.com/in/dsobrado" target="_blank" rel="noopener" style="font-size: 85%">LinkedIn</a> <a href="https://medium.com/@dalamar01977" target="_blank" rel="noopener" style="font-size: 85%">Medium</a> <a href="https://twitter.com/DalamarBlog" target="_blank" rel="noopener" style="font-size: 85%">Twitter</a>
+Let’s stay in touch! You can follow me, here on the following social media platforms:
+ <a href="https://www.kaggle.com/danielsobrado" target="_blank" rel="noopener" style="font-size: 85%">Kaggle</a> <a href="https://www.quora.com/profile/Daniel-Sobrado" target="_blank" rel="noopener" style="font-size: 85%">Quora</a> <a href="https://www.stackoverflow.com//users/2507462/daniel-sobrado" target="_blank" rel="noopener" style="font-size: 85%">Stack Overflow</a> <a href="https://github.com/danielsobrado" target="_blank" rel="noopener" style="font-size: 85%">Github</a> <a href="https://www.linkedin.com/in/dsobrado" target="_blank" rel="noopener" style="font-size: 85%">LinkedIn</a> <a href="https://medium.com/@dalamar01977" target="_blank" rel="noopener" style="font-size: 85%">Medium</a> <a href="https://twitter.com/DalamarBlog" target="_blank" rel="noopener" style="font-size: 85%">Twitter</a>
 
 Yours truly, 
 
