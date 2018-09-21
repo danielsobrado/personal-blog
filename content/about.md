@@ -10,12 +10,12 @@ type = "page"
 weight = 111
 
 +++
-![](https://i.imgur.com/cYzzS7F.png)
+![Me](https://i.imgur.com/cYzzS7F.png)
 I´m Daniel, a Spanish native currently residing in Abu Dhabi. 
 
 I enjoy travelling, there is something magical in having a new stamp in the passport, apart from enjoying the beauty of the place, you get to meet new people, know their culture and traditions, and improve your knowledge. You totally emerge to a different person, a very different one. You start to respect people around you irrespective of their position in the society, respect other cultures and hence earn respect. 
 
-![](https://i.imgur.com/uy9DSza.png)
+![Family](https://i.imgur.com/uy9DSza.png)
 
 Naturally curious about how any new technology works and why, I enjoy spending time trying programming languages, tools and frameworks. 
 
@@ -42,4 +42,4 @@ Let’s stay in touch! You can follow me, here on the following social media pla
 
 Yours truly, 
 
-![Signature](/img/DanielSobradoSignature.PNG)
+![Signature](https://i.imgur.com/Eg2RmZ1m.png)
