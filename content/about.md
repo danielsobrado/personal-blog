@@ -10,7 +10,7 @@ type = "page"
 weight = 111
 
 +++
-Having a curious nature, growth mindset, and self-starter attitude, I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
+On the professional side, I've been working in the banking industry for a long time, in banks like UBS, BNP, JP Morgan, Mitsubitsi/Morgan Stanley, National Bank of Abu Dhabi, in locations like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
 
 Some days, I'm a big data engineer, onboarding new data sources and/or architecting our technology stack. 
 
@@ -20,7 +20,7 @@ Though, some days, I am more of a management specialist and strategist, working 
 
 Most days, I blend all of the above. 
 
-I'm using this blog as a means of self-development, they say that you never completely understand a subject until you are able to explain it. I think that everyone has a different angle, a view on something that’s worth sharing. 
+I'm using this site as a means of self-development, they say that you never completely understand a subject until you are able to explain it. I think that everyone has a different angle, a view on something that’s worth sharing. 
 
 I write about topics I want to refresh, subjects I'm studying and materials I want to learn, feel free to leave any comments. Because if it’s actually not good enough, I would like to know that, I want to be challenged to be able to advance further. 
 
