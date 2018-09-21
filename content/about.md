@@ -20,12 +20,14 @@ Though, some days, I am more of a management specialist and strategist, working 
 
 Most days, I blend all of the above. 
 
-I prefer to view myself as a problem solver, where code and data are my tools, and business results are my guidance.
-
 I'm using this blog as a means of self-development, they say that you never completely understand a subject until you are able to explain it. I think that everyone has a different angle, a view on something that’s worth sharing. 
 
 I write about topics I want to refresh, subjects I'm studying and materials I want to learn, feel free to leave any comments. Because if it’s actually not good enough, I would like to know that, I want to be challenged to be able to advance further. 
 
 Though, if you like it, and it gets popular I will support it and continue writing more about it.
+
+Feel free to contact me on: <a href="https://www.kaggle.com/danielsobrado" target="_blank" rel="noopener" style="font-size: 85%">Kaggle</a> <a href="https://www.quora.com/profile/Daniel-Sobrado" target="_blank" rel="noopener" style="font-size: 85%">Quora</a> <a href="https://www.stackoverflow.com//users/2507462/daniel-sobrado" target="_blank" rel="noopener" style="font-size: 85%">Stack Overflow</a> <a href="https://github.com/danielsobrado" target="_blank" rel="noopener" style="font-size: 85%">Github</a> <a href="https://www.linkedin.com/in/dsobrado" target="_blank" rel="noopener" style="font-size: 85%">LinkedIn</a> <a href="https://medium.com/@dalamar01977" target="_blank" rel="noopener" style="font-size: 85%">Medium</a> <a href="https://twitter.com/DalamarBlog" target="_blank" rel="noopener" style="font-size: 85%">Twitter</a>
+
+Yours truly, 
 
 ![Signature](/img/DanielSobradoSignature.PNG)

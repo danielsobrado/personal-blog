@@ -28,6 +28,7 @@ canonifyurls    = true
   quoraName = "Daniel-Sobrado"
   kaggleName = "danielsobrado"
   stackName = "2507462/daniel-sobrado"
+  instagramName = "daniel.sobrado"
 
   logo = "/img/daniel-logo.png"
   orgName = "Daniel Sobrado"
