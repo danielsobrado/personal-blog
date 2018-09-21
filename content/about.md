@@ -10,7 +10,7 @@ type = "page"
 weight = 111
 
 +++
-![Me](https://i.imgur.com/cYzzS7F.png)
+![Me](https://i.imgur.com/zcNBd8m.png)
 I´m Daniel, a Spanish native currently residing in Abu Dhabi. 
 
 I enjoy travelling, there is something magical in having a new stamp in the passport, apart from enjoying the beauty of the place, you get to meet new people, know their culture and traditions, and improve your knowledge. You totally emerge to a different person, a very different one. You start to respect people around you irrespective of their position in the society, respect other cultures and hence earn respect. 
