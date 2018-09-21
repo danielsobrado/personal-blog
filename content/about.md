@@ -31,6 +31,8 @@ Though, some days, I am more of a management specialist and strategist, working 
 
 Most days, I blend all of the above. 
 
+![Me](https://i.imgur.com/cYzzS7F.png)
+
 I'm using this site as a means of self-development, they say that you never completely understand a subject until you are able to explain it. I think that everyone has a different angle, a view on something that’s worth sharing. 
 
 I write about topics I want to refresh, subjects I'm studying and materials I want to learn, feel free to leave any comments. Because if it’s actually not good enough, I would like to know that, I want to be challenged to be able to advance further. 
