@@ -11,17 +11,19 @@ weight = 111
 
 +++
 ![Me](https://i.imgur.com/zcNBd8m.png)
-I´m Daniel, a Spanish native currently residing in Abu Dhabi. 
+Hi!, I´m Daniel, originally from northern Spain and currently residing in Abu Dhabi.
 
-I enjoy travelling, there is something magical in having a new stamp in the passport, apart from enjoying the beauty of the place, you get to meet new people, know their culture and traditions, and improve your knowledge. You totally emerge to a different person, a very different one. You start to respect people around you irrespective of their position in the society, respect other cultures and hence earn respect. 
+I enjoy traveling. Each and every time, I find something magical about having a new stamp on my passport. Apart from experiencing the beauty of a new place, I enjoy the experience wherein I get to meet new people, learn about their culture and traditions, and thus expand my level of awareness to level higher. 
+
+Learning through travel changes you. It’s like you unravel and completely emerge to a different person. During my trips, I have learned how to appreciate people around me, irrespective of their position in the society, and their culture. Through immersion, I have earned their respect in return.
 
 ![Family](https://i.imgur.com/uy9DSza.png)
 
-Naturally curious about how any new technology works and why, I enjoy spending time trying programming languages, tools and frameworks. 
+Naturally curious about how any new technology works and why, I enjoy spending time trying programming languages, tools, and frameworks. 
 
-Join me as I explore tools, frameworks and datasets, feel free to comment and suggest.
+Join me on my journey in my search for new tools, frameworks,  and datasets. Together let us explore and broaden our horizon in the world of continuous learning. Together let us find the answers to questions we have been all seeking about. 
 
-I've been working in the banking industry for a long time, in banks like UBS, BNP, JP Morgan, Mitsubitsi/Morgan Stanley, National Bank of Abu Dhabi, in locations like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
+I have been working in the banking industry for a quite some time, in banks like UBS, BNP, JP Morgan, Mitsubishi/Morgan Stanley, National Bank of Abu Dhabi, and several locations around the globe like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
 
 Some days, I'm a big data engineer, onboarding new data sources and/or architecting our technology stack. 
 
@@ -33,7 +35,7 @@ Most days, I blend all of the above.
 
 ![Me](https://i.imgur.com/cYzzS7F.png)
 
-I'm using this site as a means of self-development, they say that you never completely understand a subject until you are able to explain it. I think that everyone has a different angle, a view on something that’s worth sharing. 
+I'm using this site as a tool of self-development, they say that you never completely understand a subject until you are able to explain it. I think that each one may view things at different angles. A view that may be contrasting but is something that’s worth sharing.
 
 I write about topics I want to refresh, subjects I'm studying and materials I want to learn, feel free to leave any comments. Because if it’s actually not good enough, I would like to know that, I want to be challenged to be able to advance further. 
 
