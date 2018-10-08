@@ -1,16 +1,20 @@
 ---
 author: "Michael Henderson"
-date: 2014-09-28
-linktitle: Creating a New Theme
-nomenu:
-  main:
-    parent: tutorials
+date: 2014-09-26
+linktitle: Numpy Introduction
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Creating a New Theme
+title: "Numpy: Introduction"
 weight: 10
-image: img/welcome.jpg
 authorAvatar: hugo-logo.png
+image: https://i.imgur.com/oQNt9Gt.jpg
+tags : [
+    "Python",
+	"Numpy"
+]
+categories : [
+    "Programming"
+]
 ---
 
 

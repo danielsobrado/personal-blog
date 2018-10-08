@@ -1,13 +1,19 @@
 ---
 date: 2014-03-10
-linktitle: Migrating from Jekyll
+linktitle: Basic probability concepts
 nomenu:
   main:
     parent: tutorials
 prev: /tutorials/mathjax
-title: Migrate to Hugo from Jekyll
+title: Basic probability concepts
 noweight: 10
-image: img/team.jpg
+image: https://i.imgur.com/IenFUVF.jpg
+tags : [
+    "probability"
+]
+categories : [
+    "Maths"
+]
 ---
 
 ## Move static content to `static`

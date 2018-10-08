@@ -1,19 +1,15 @@
 +++
-title = "Getting Started with Hugo"
+title = "Kaggle: Mercari competition"
 description = ""
 tags = [
-    "go",
-    "golang",
-    "hugo",
-    "development",
+    "Kaggle"
 ]
 date = "2014-06-02"
 categories = [
-    "Development",
-    "golang",
+    "Data Science"
 ]
 nomenu = "main"
-image= "img/tags.jpg"
+image= "https://i.imgur.com/DTfZsO4.png"
 +++
 
 ## Step 1. Install Hugo

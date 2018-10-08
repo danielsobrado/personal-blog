@@ -1,12 +1,23 @@
 ---
-author: "Michael Henderson"
-date: 2014-09-25
-linktitle: Creating a New Theme
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
-title: Wonderful
+author: "Daniel Sobrado"
+date: 2014-09-28
+linktitle: "Spark Introduction Tungsten"
+nomenu:
+  main:
+    parent: post
+next: /post/github-pages-blog
+prev: /post/automated-deployments
+title: "Apache Spark: Introduction to project Tungsten"
 weight: 10
+image: https://i.imgur.com/Ous3FT6.jpg
 authorAvatar: hugo-logo.png
+categories : [
+    "Big Data"
+]
+tags : [
+    "Spark"
+]
+
 ---
 
 

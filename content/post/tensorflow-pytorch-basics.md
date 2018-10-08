@@ -1,12 +1,20 @@
 ---
 author: "Michael Henderson"
-date: 2014-09-26
-linktitle: Awesomeness
+date: 2014-09-25
+linktitle: Tensorflow Pytorch Basics
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Awesomeness
+title: "Tensorflow vs Pytorch: Basics"
 weight: 10
 authorAvatar: hugo-logo.png
+image: https://i.imgur.com/IfReBDi.jpg
+tags : [
+    "Tensorflow",
+	"Pytorch"
+]
+categories : [
+    "Data Science"
+]
 ---
 
 
