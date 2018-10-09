@@ -1,7 +1,8 @@
 ---
 author: "Daniel Sobrado"
-date: 2014-09-28
+date: 2018-09-28
 linktitle: "Spark Introduction Tungsten"
+description : "The goal of Project Tungsten is to improve Spark execution by optimizing Spark jobs for CPU and memory efficiency, as opposed to network and disk I/O which are considered fast enough, it's a Spark SQL component that provides more efficient Spark operations by working directly at the byte level."
 nomenu:
   main:
     parent: post
@@ -10,7 +11,6 @@ prev: /post/automated-deployments
 title: "Apache Spark: Introduction to project Tungsten"
 weight: 10
 image: https://i.imgur.com/Ous3FT6.jpg
-authorAvatar: hugo-logo.png
 categories : [
     "Big Data"
 ]

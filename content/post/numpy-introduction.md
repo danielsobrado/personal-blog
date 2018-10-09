@@ -1,11 +1,12 @@
 ---
-author: "Michael Henderson"
-date: 2013-09-28
-linktitle: Creating a New Theme
+author: "Daniel Sobrado"
+date: 2018-02-28
+linktitle: Numpy Introduction
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Colenak
+title: "Numpy: Introduction"
 categories : ["food"]
+image: https://i.imgur.com/oQNt9Gt.jpg
 ---
 
 

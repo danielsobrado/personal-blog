@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,43 +14,34 @@
     <item>
       <title>Kaggle</title>
       <link>/tags/kaggle/</link>
-      <pubDate>Mon, 02 Jun 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/kaggle/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Numpy</title>
-      <link>/tags/numpy/</link>
-      <pubDate>Fri, 26 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Nlp</title>
+      <link>/tags/nlp/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/numpy/</guid>
+      <guid>/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability</title>
       <link>/tags/probability/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/probability/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>/tags/python/</link>
-      <pubDate>Fri, 26 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Pytorch</title>
       <link>/tags/pytorch/</link>
-      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/pytorch/</guid>
       <description></description>
@@ -59,7 +50,7 @@
     <item>
       <title>Spark</title>
       <link>/tags/spark/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/spark/</guid>
       <description></description>
@@ -68,7 +59,7 @@
     <item>
       <title>Tensorflow</title>
       <link>/tags/tensorflow/</link>
-      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/tensorflow/</guid>
       <description></description>

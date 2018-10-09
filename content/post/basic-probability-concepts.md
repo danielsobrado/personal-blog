@@ -1,5 +1,6 @@
 ---
-date: 2014-03-10
+author: "Daniel Sobrado"
+date: 2018-03-10
 linktitle: Basic probability concepts
 nomenu:
   main:

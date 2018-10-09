@@ -1,7 +1,8 @@
 +++
+author = "Daniel Sobrado"
 title = "Introduction to Data Science: Concepts"
-description = "This is a description. Hugo uses the **excellent** go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic."
-date = "2014-04-02"
+description = "Let's review the basics concepts to get familiar with data science."
+date = "2018-04-02"
 categories = [
     "Data Science"
 ]

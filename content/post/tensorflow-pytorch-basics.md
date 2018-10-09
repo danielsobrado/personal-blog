@@ -1,13 +1,12 @@
 ---
-author: "Michael Henderson"
-date: 2014-09-25
+author: "Daniel Sobrado"
+date: 2018-09-25
 linktitle: Tensorflow Pytorch Basics
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
 title: "Tensorflow vs Pytorch: Basics"
 weight: 10
-authorAvatar: hugo-logo.png
-image: https://i.imgur.com/IfReBDi.jpg
+image: https://i.imgur.com/k3fRAC4.jpg
 tags : [
     "Tensorflow",
 	"Pytorch"
