@@ -1,4 +1,5 @@
 ---
+description: "Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We'll start with essential concepts like an outcome, conditional probability, joint probability etc. "
 author: "Daniel Sobrado"
 date: 2018-03-10
 linktitle: Basic probability concepts
@@ -17,7 +18,7 @@ categories : [
 ]
 ---
 
-## Move static content to `static`
+## Move static content to `static asdsdswd`
 Jekyll has a rule that any directory not starting with `_` will be copied as-is to the `_site` output. Hugo keeps all static content under `static`. You should therefore move it all there.
 With Jekyll, something that looked like
 

@@ -1,7 +1,7 @@
 +++
 author = "Daniel Sobrado"
+description = "Let's review the basics concepts to get familiar with data science. Simple definitions for beginners that will allow them to deep dive into the theory and practice of Data Science and Machine Learning."
 title = "Introduction to Data Science: Concepts"
-description = "Let's review the basics concepts to get familiar with data science."
 date = "2018-04-02"
 categories = [
     "Data Science"
