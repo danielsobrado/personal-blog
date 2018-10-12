@@ -56,6 +56,16 @@ This document is a brief primer on using go templates.</description>
     </item>
     
     <item>
+      <title>Scipy: Introduction</title>
+      <link>/post/scipy-introduction/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/scipy-introduction/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
       <title>Basic probability concepts</title>
       <link>/post/basic-probability-concepts/</link>
       <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
@@ -85,6 +95,16 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Hi!, I´m Daniel, originally from northern Spain and currently residing in Abu Dhabi.
 I enjoy traveling. Each and every time, I find something magical about having a new stamp on my passport. Apart from experiencing the beauty of a new place, I enjoy the experience wherein I get to meet new people, learn about their culture and traditions, and thus expand my level of awareness to level higher.
 Learning through travel changes you.</description>
+    </item>
+    
+    <item>
+      <title>AngularJS: Introduction</title>
+      <link>/post/angularjs-introduction/</link>
+      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/post/angularjs-introduction/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
   </channel>

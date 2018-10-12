@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/post/scipy-introduction/</loc>
+    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/basic-probability-concepts/</loc>
     <lastmod>2018-03-10T00:00:00+00:00</lastmod>
   </url>
@@ -38,8 +43,19 @@
   </url>
   
   <url>
+    <loc>/post/angularjs-introduction/</loc>
+    <lastmod>2015-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/angularjs/</loc>
+    <lastmod>2015-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -62,8 +78,8 @@
   </url>
   
   <url>
-    <loc>/categories/food/</loc>
-    <lastmod>2018-02-28T00:00:00+00:00</lastmod>
+    <loc>/tags/javascript/</loc>
+    <lastmod>2015-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -86,6 +102,12 @@
   </url>
   
   <url>
+    <loc>/tags/numpy/</loc>
+    <lastmod>2018-02-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -98,8 +120,26 @@
   </url>
   
   <url>
+    <loc>/categories/programming/</loc>
+    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/pytorch/</loc>
     <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/scipy/</loc>
+    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -111,7 +151,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2015-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

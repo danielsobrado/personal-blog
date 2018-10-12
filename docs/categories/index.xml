@@ -30,20 +30,20 @@
     </item>
     
     <item>
-      <title>Food</title>
-      <link>/categories/food/</link>
-      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/food/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Maths</title>
       <link>/categories/maths/</link>
       <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/maths/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>/categories/programming/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/programming/</guid>
       <description></description>
     </item>
     

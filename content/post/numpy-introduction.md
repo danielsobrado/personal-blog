@@ -6,8 +6,15 @@ linktitle: Numpy Introduction
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
 title: "Numpy: Introduction"
-categories : ["food"]
 image: https://i.imgur.com/oQNt9Gt.jpg
+tags : [
+    "Python",
+	"Numpy"
+]
+categories : [
+    "Data Science",
+	"Programming"
+]
 ---
 
 
@@ -48,7 +55,7 @@ $
 ```
 
 
-## Some Definitions
+## Installing Scipy
 
 There are a few concepts that you need to understand before creating a theme.
 
