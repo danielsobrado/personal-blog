@@ -1,5 +1,5 @@
 ---
-description: "A well known python library for numerical computations widely used in the scientific community. This package contains algorithms to manipulate Numpy objects, including Linear Algebra, Numerical Analysis, Signal Processing, Data Mining and Computational Geometry."
+description: "A well known python library for numerical computations widely used in the scientific and engeneering community. This package contains algorithms to manipulate Numpy objects, including Linear Algebra, Numerical Analysis, Signal Processing, Data Mining and Computational Geometry."
 author: "Daniel Sobrado"
 date: 2018-03-28
 linktitle: Scipy Introduction
