@@ -18,7 +18,7 @@
       
       <guid>/post/tensorflow-vs-pytorch-basics/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+Introduction to Tensorflow Tensorflow is Google´s open source solution for computing large amounts of data, it is a symbolic math library based on dataflow programming.</description>
     </item>
     
     <item>

@@ -104,7 +104,7 @@
     <item>
       <title>Scipy</title>
       <link>/tags/scipy/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/scipy/</guid>
       <description></description>
@@ -125,6 +125,15 @@
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
+      <link>/tags/time-series/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/time-series/</guid>
       <description></description>
     </item>
     
