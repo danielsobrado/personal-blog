@@ -37,6 +37,17 @@ Follow the following steps:
     </item>
     
     <item>
+      <title>Fast Fourier Transform</title>
+      <link>/post/fast-fourier-transform/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/fast-fourier-transform/</guid>
+      <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Data Science: Concepts</title>
       <link>/post/introduction-to-data-science-concepts/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>

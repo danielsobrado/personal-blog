@@ -13,7 +13,7 @@ tags : [
 	"Pytorch"
 ]
 categories : [
-    "Data Science"
+    "Data-Science"
 ]
 ---
 

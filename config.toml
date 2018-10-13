@@ -54,21 +54,42 @@ canonifyurls    = true
 [[menu.main]]
   name = "Home"
   url = "/"
-  weight = 200
+  weight = 400
 
 [[menu.main]]
   name = "Data Science"
-  url = "/tags/datascience/"
-  weight = 100
-
-[[menu.main]]
-  name = "Others"
-  url = "https://google.com/"
-  weight = 95
-
-[[menu.main]]
-  name = "Categories"
-  url = "/categories/"
+  url = "/categories/data-science/"
   weight = 99
+
+[[menu.main]]
+  name = "Big Data"
+  url = "/categories/big-data/"
+  weight = 90
+
+[[menu.main]]
+  name = "Programming"
+  url = "/categories/programming/"
+  weight = 75
+
+[[menu.main]]
+  name = "Maths"
+  url = "/categories/maths/"
+  weight = 60
+  
+[[menu.main]]
+  name = "Wiki"
+  url = "/tags/wiki/"
+  weight = 50
+  
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 25
+
+  [[menu.main]]
+  name = "Others"
+  url = "/categories/others/"
+  weight = 10
+
 
 
