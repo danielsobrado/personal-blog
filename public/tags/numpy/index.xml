@@ -17,8 +17,12 @@
       <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/numpy-introduction/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <description>Introduction Numpy is the fundation of scientific computing in Python.
+Installing Numpy There are a few concepts that you need to understand before creating a theme.
+Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.
+Why do we need other arrays? We have Python lists and dictionaries,
+We can use the %timeit magic command in IPython to test the performance
+ndarrays are fast!</description>
     </item>
     
   </channel>
