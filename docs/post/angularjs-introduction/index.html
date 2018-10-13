@@ -151,11 +151,83 @@
 
 <p>I had the need to build a front end where the users can login, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc&hellip; This was one of these situations, but..</p>
 
-<p>I haven´t touched any front-end from ages, hiring a Java script developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.</p>
+<p>I haven´t touched any front-end from ages, hiring a Front-end/Javascript developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.</p>
 
 <p>This was built in AngularJS so I decided that it was a good opportunity to get some skills, anyway I &ldquo;<em>only</em>&rdquo; had to write some controllers on top of the main prject, right?</p>
 
 <h2 id="angularjs-basic-concepts">AngularJS basic concepts</h2>
+
+<p>The basic concepts inAngularJS are models, views and controllers, as in the MVC design pattern, if you know essential javascript and html/css you can start playing straight away.</p>
+
+<p>There are many other topics that are complementary like bootstrap, jquery, webpack etc.. You don´t need to know them all to start doing some work.</p>
+
+<p>We´ll use Karma and Protractor for testing and to do that we´ll require to know the basics on nodejs and npm.</p>
+
+<p>Of course, this is only front-end development, this needs to be tied up with a back-end, we´ll discuss that in future articles.</p>
+
+<h2 id="1-bootstraping">1. Bootstraping</h2>
+
+<p>The ng-app directive starts the bootstrap the angularJS application, this is the first step in the lifecycle and the initializations happen at this point.</p>
+
+<pre class="prettyprint lang-html">
+    <html ng-app="ourApp">
+    ...
+    </html>
+</pre>
+
+<h2 id="2-modules">2. Modules</h2>
+
+<pre class="prettyprint lang-js">
+var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
+</pre>
+
+<blockquote>
+<p>This is our entry point in the application.</p>
+</blockquote>
+
+<h2 id="3-dependency-injection">3. Dependency injection</h2>
+
+<h2 id="4-routes">4. Routes</h2>
+
+<h2 id="5-templates">5. Templates</h2>
+
+<p>Also known as partials, they are defined with <code>&lt;div ng-view&gt;</code>,</p>
+
+<h2 id="6-views">6. Views</h2>
+
+<p>The view shows the data from the models, the logic for the view is available on the controller.</p>
+
+<blockquote>
+<p>The presentation logic should be placed in the views, not in the controllers.</p>
+</blockquote>
+
+<h2 id="7-expressions">7. Expressions</h2>
+
+<h2 id="8-models">8. Models</h2>
+
+<h2 id="9-data-binding">9. Data binding</h2>
+
+<h2 id="10-controllers">10. Controllers</h2>
+
+<p>Controllers have two main functions, to initiate the model and to execute the business logic associated with that view.</p>
+
+<p>Controllers will call REST API functionality for the business logic implemented in the back-end, there is a trade off between implementing business logic in the front-end and back-end.</p>
+
+<p>The logic in the front-end it is fast to execute and doesn´t need network communication, but it can be hacked, syntactic validations are usually done at both levels.</p>
+
+<p>In the back-end we´ll secure the logic that we don´t want to be exposed, always taking into consideration that the response time should be sensible.</p>
+
+<h2 id="11-services">11. Services</h2>
+
+<p>Services are singleton objects that provide generic functionality, they are not specifically tied to a view.</p>
+
+<h2 id="12-scope">12. Scope</h2>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We´ve reviewed the very basic blocks of AngularJS, we´ll spend more time with each topic.</p>
+
+<p>In this case I decided to build the backend using Java and Spring MVC for the REST calls, we´ll see all this in the following articles.</p>
     
         </div>
     </section>
@@ -216,15 +288,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-                      
-        
-          <li><a href="/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
-        
-          <li><a href="/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="/post/numpy-introduction/">Numpy: Introduction</a></li>            
         
           <li><a href="/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         
-          <li><a href="/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+                      
+        
+          <li><a href="/post/basic-probability-concepts/">Basic probability concepts</a></li>            
+        
+          <li><a href="/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
