@@ -1,8 +1,8 @@
 ---
-description: "Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We'll start with essential concepts like an outcome, conditional probability, joint probability etc. "
+description: "PIt is usually said that FFT allows to transform a function of time into frequency, but... Why would I do that? We can use the components of the time series that FFT will give us as features for our models, FFT what it does it finding components in the time series and we can do this with Scipy!"
 author: "Daniel Sobrado"
 date: 2018-04-10
-linktitle: Basic probability concepts
+linktitle: Fast Fourier Transformations
 nomenu:
   main:
     parent: tutorials
