@@ -12,7 +12,7 @@ tags : [
 	"Numpy"
 ]
 categories : [
-    "Data Science",
+    "Data-Science",
 	"Programming"
 ]
 ---

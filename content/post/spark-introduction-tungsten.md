@@ -12,7 +12,7 @@ title: "Apache Spark: Introduction to project Tungsten"
 weight: 10
 image: https://i.imgur.com/Ous3FT6.jpg
 categories : [
-    "Big Data"
+    "Big-Data"
 ]
 tags : [
     "Spark"

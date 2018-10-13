@@ -8,7 +8,7 @@ tags = [
 ]
 date = "2018-06-02"
 categories = [
-    "Data Science"
+    "Data-Science"
 ]
 nomenu = "main"
 image= "https://i.imgur.com/DTfZsO4.png"

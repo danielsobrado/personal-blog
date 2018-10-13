@@ -13,7 +13,7 @@ tags : [
 	"Scipy"
 ]
 categories : [
-    "Data Science",
+    "Data-Science",
 	"Programming"
 ]
 ---

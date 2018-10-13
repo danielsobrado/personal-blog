@@ -16,7 +16,7 @@ tags : [
 ]
 categories : [
     "Maths",
-    "Datascience"
+    "Data-science"
 ]
 ---
 
