@@ -20,8 +20,13 @@ categories : [
 
 ## Introduction
 
-This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I'll explain how Hugo uses templates and how you can organize your templates to create a theme. I won't cover using CSS to style your theme.
+The best why to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding advantages and disadvantages.
 
+Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+
+Both heavily oriented towards machine learning and specially deep learning are low level libraries to operate on tensors (n-dimensional arrays).
+
+The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters. 
 
 ## Introduction to Tensorflow
 
@@ -45,11 +50,15 @@ $ pip install tensorflow-gpu
 
 Let´s verify the installation:
 
-```
+<pre class="prettyprint lang-py">
 import tensorflow as tf
 print("Tensorflow version: {}".format(tf.__version__))
->>> Tensorflow version: 1.10.0
-```
+
+<span class="nocode" style="color:white">
+Output:
+$ Tensorflow version: 1.10.0
+</span>
+</pre>
 
 ### Tensors
 
@@ -61,7 +70,7 @@ When Hugo runs, it looks for a configuration file that contains settings that ov
 
 ## Introduction to Pytorch
 
-Content is stored in text files that contain two sections. The first section is the “front matter,” which is the meta-information on the content. The second section contains Markdown that will be converted to HTML.
+Pytorch is Facobook´s solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.
 
 #### Front Matter
 
