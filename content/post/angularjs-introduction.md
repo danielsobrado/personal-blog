@@ -25,9 +25,26 @@ I love solving issues for my business partners and I immediately started rolling
 
 I had the need to build a front end where the users can login, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc... This was one of these situations, but.. 
 
-I haven´t touched any front-end from ages, hiring a Java script developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.
+I haven´t touched any front-end from ages, hiring a Front-end/Javascript developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.
 
 This was built in AngularJS so I decided that it was a good opportunity to get some skills, anyway I "*only*" had to write some controllers on top of the main prject, right?
 
 ## AngularJS basic concepts
 
+## 1. Bootstraping
+
+## 2. Dependency injection
+
+## 3. Routes
+
+## 4. Templates
+
+## 5. Views
+
+## 6. Models
+
+## 7. Controllers
+
+## Conclusion
+
+In this case I decided to build the backend using Java and Spring MVC for the REST calls, we´ll see all this in the following articles.
