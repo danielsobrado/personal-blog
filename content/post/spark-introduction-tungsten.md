@@ -23,6 +23,26 @@ tags : [
 
 ## Introduction
 
+Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second generation of the Tungsten engine.
+
+Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.
+
+> Tungsten compiles your queries into single bytecode JVM function that improve CPU efficiency and gain performance.
+
 This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.
 
 You never know if you'll find tugnsten useful for your next project!
+
+## Using Tungsten
+
+Tungsten is enabled by default, you can disable it if you want to compare the performance impact:
+```
+$ spark-shell --conf spark.sql.tungsten.enabled=false
+```
+
+And enable it again:
+```
+$ spark-shell --conf spark.sql.tungsten.enabled=true
+```
+
+## 
