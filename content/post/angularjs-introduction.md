@@ -1,10 +1,28 @@
+---
+description: "AngularJS is a Java script based front end development framwork maintained by Google. Very mature and stable is one of the preferred choices for Single Page Applications."
+author: "Daniel Sobrado"
+date: 2015-02-28
+linktitle: AngularJS Introduction
+next: /tutorials/github-pages-blog
+prev: /tutorials/automated-deployments
+title: "AngularJS: Introduction"
+image: https://i.imgur.com/ewEDGca.jpg
+tags : [
+    "AngularJS",
+	"Javascript"
+]
+categories : [
+	"Programming"
+]
+---
+
 ## Introduction
 
 All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: "*Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!*
 
 I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.
 
-I had the need to build a front end where the users can login, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc... This was one of these situations, but..
+I had the need to build a front end where the users can log in, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc... This was one of these situations, but... 
 
 I haven´t touched any front-end from ages, hiring a Front-end/Javascript developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.
 
@@ -22,19 +40,19 @@ Of course, this is only front-end development, this needs to be tied up with a b
 
 ## 1. Bootstrapping
 
-The ng-app directive starts the bootstrap the angularJS application, this is the first step in the lifecycle and the initializations happen at this point.
+The `ng-app` directive starts the bootstrap the angularJS application, this is the first step in the lifecycle and the initializations happen at this point.
 
-<pre class="prettyprint lang-html">
+<pre><code class="language-css">
     <html ng-app="ourApp">
     ...
     </html>
-</pre>
+</code></pre>
 
 ## 2. Modules
 
-<pre class="prettyprint lang-js">
+<pre><code class="language-javascript">
 var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
-</pre>
+</code></pre>
 
 > This is our entry point in the application.
 
@@ -44,14 +62,14 @@ var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
 
 ## 5. Templates
 
-Also known as partials, they are defined with `<div ng-view>`,
+Also known as partials, they are defined with `<div ng-view>`, 
 
 ## 6. Views
 
 The view shows the data from the models, the logic for the view is available on the controller.
 
-> The presentation logic should be placed in the views, not in the controllers.
->
+> The presentation logic should be placed in the views, not in the controllers. 
+> 
 
 ## 7. Expressions
 

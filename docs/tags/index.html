@@ -40,6 +40,7 @@
     <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
     <link rel="stylesheet" type="text/css" href="/css/casper-two.css" /> 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+	<link rel="stylesheet" href="/css/prism.css" />
     
 
      
@@ -120,7 +121,11 @@
         <h2 class="site-description">&#x2F;&nbsp;
           
           
+          <a href="/tags/angularjs"> angularjs </a> (1)&nbsp;&#x2F;&nbsp;
+          
           <a href="/tags/datasets"> datasets </a> (1)&nbsp;&#x2F;&nbsp;
+          
+          <a href="/tags/javascript"> javascript </a> (1)&nbsp;&#x2F;&nbsp;
           
           <a href="/tags/kaggle"> kaggle </a> (1)&nbsp;&#x2F;&nbsp;
           
@@ -159,21 +164,20 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/">
-      <div class="post-card-image" style="background-image: url(/defimg/2.jpg)"></div>
-    </a>    
+    <a class="post-card-image-link" href="/post/introduction-to-data-science-concepts/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/hRInlsC.jpg)"></div>
+    </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/">
+      <a class="post-card-content-link" href="/post/introduction-to-data-science-concepts/">
           <header class="post-card-header">
               
-              <h2 class="post-card-title"></h2>
+              <h2 class="post-card-title">Introduction to Data Science: Concepts</h2>
           </header>
           <section class="post-card-excerpt">
-              
-                <p>Introduction All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &ldquo;Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!
-I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc. ...  </p>
+               
+                <p>Let&rsquo;s review the basics concepts to get familiar with data science. Simple definitions for beginners that will allow them to deep dive into the theory and practice of Data Science and Machine Learning.</p>
               
           </section>
       </a>
@@ -188,22 +192,23 @@ I love solving issues for my business partners and I immediately started rolling
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/basic-probability-concepts/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/IenFUVF.jpg)"></div>
+    <a class="post-card-image-link" href="/post/tensorflow-vs-pytorch-basics/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/basic-probability-concepts/">
+      <a class="post-card-content-link" href="/post/tensorflow-vs-pytorch-basics/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #probability  </span>
+              #Tensorflow 
+              #Pytorch  </span>
               
-              <h2 class="post-card-title">Basic probability concepts</h2>
+              <h2 class="post-card-title">Tensorflow vs Pytorch: Basics</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&rsquo;ll start with essential concepts like an outcome, conditional probability, joint probability etc.</p>
+                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
               
           </section>
       </a>
@@ -218,22 +223,23 @@ I love solving issues for my business partners and I immediately started rolling
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/apache-spark-introduction-to-project-tungsten/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/Ous3FT6.jpg)"></div>
+    <a class="post-card-image-link" href="/post/fast-fourier-transform/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/rgOZmTh.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/apache-spark-introduction-to-project-tungsten/">
+      <a class="post-card-content-link" href="/post/fast-fourier-transform/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Spark  </span>
+              #time series 
+              #scipy  </span>
               
-              <h2 class="post-card-title">Apache Spark: Introduction to project Tungsten</h2>
+              <h2 class="post-card-title">Fast Fourier Transform</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>The goal of Project Tungsten is to improve Spark execution by optimizing Spark jobs for CPU and memory efficiency, as opposed to network and disk I/O which are considered fast enough, it&rsquo;s a Spark SQL component that provides more efficient Spark operations by working directly at the byte level.</p>
+                <p>It is usually said that FFT allows to transform a function of time into frequency, but&hellip; Why would I do that? We can use the components of the time series that FFT will give us as features for our models, FFT what it does it finding components in the time series and we can do this with Scipy!</p>
               
           </section>
       </a>
@@ -308,9 +314,9 @@ I love solving issues for my business partners and I immediately started rolling
 </footer>
 
 </div><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<link rel="stylesheet" href="/js/prism.js" />
 
 <script>hljs.initHighlightingOnLoad();</script>
 

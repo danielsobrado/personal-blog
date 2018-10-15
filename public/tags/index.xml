@@ -6,10 +6,19 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 28 Feb 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angularjs</title>
+      <link>/tags/angularjs/</link>
+      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/angularjs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Datasets</title>
@@ -17,6 +26,15 @@
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>/tags/datasets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>/tags/javascript/</link>
+      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     

@@ -45,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
     <link rel="stylesheet" type="text/css" href="/css/casper-two.css" /> 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+	<link rel="stylesheet" href="/css/prism.css" />
     
 
      
@@ -145,41 +146,41 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>All started when I started developping some quick reconcialition tool for the bank´s Product Control team, someone said: &ldquo;<em>Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!</em></p>
+<p>All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &ldquo;<em>Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!</em></p>
 
-<p>I love solving issues for my business partners and I immediately started rolling my sleaves, things look simple and easy at the begining but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many gobernance procedures, like authentication, authorization, chinese walls, user management etc.</p>
+<p>I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</p>
 
-<p>I had the need to build a front end where the users can login, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc&hellip; This was one of these situations, but..</p>
+<p>I had the need to build a front end where the users can log in, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc&hellip; This was one of these situations, but&hellip;</p>
 
 <p>I haven´t touched any front-end from ages, hiring a Front-end/Javascript developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.</p>
 
-<p>This was built in AngularJS so I decided that it was a good opportunity to get some skills, anyway I &ldquo;<em>only</em>&rdquo; had to write some controllers on top of the main prject, right?</p>
+<p>This was built in AngularJS so I decided that it was a good opportunity to get some skills, anyway I &ldquo;<em>only</em>&rdquo; had to write some controllers on top of the main project, right?</p>
 
 <h2 id="angularjs-basic-concepts">AngularJS basic concepts</h2>
 
-<p>The basic concepts inAngularJS are models, views and controllers, as in the MVC design pattern, if you know essential javascript and html/css you can start playing straight away.</p>
+<p>The basic concepts inAngularJS are models, views and controllers, as in the MVC design pattern, if you know essential javascript and HTML/CSS you can start playing straight away.</p>
 
-<p>There are many other topics that are complementary like bootstrap, jquery, webpack etc.. You don´t need to know them all to start doing some work.</p>
+<p>There are many other topics that are complementary like bootstrap, jquery, web pack etc.. You don´t need to know them all to start doing some work.</p>
 
 <p>We´ll use Karma and Protractor for testing and to do that we´ll require to know the basics on nodejs and npm.</p>
 
 <p>Of course, this is only front-end development, this needs to be tied up with a back-end, we´ll discuss that in future articles.</p>
 
-<h2 id="1-bootstraping">1. Bootstraping</h2>
+<h2 id="1-bootstrapping">1. Bootstrapping</h2>
 
-<p>The ng-app directive starts the bootstrap the angularJS application, this is the first step in the lifecycle and the initializations happen at this point.</p>
+<p>The <code>ng-app</code> directive starts the bootstrap the angularJS application, this is the first step in the lifecycle and the initializations happen at this point.</p>
 
-<pre class="prettyprint lang-html">
+<pre><code class="language-css">
     <html ng-app="ourApp">
     ...
     </html>
-</pre>
+</code></pre>
 
 <h2 id="2-modules">2. Modules</h2>
 
-<pre class="prettyprint lang-js">
+<pre><code class="language-javascript">
 var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
-</pre>
+</code></pre>
 
 <blockquote>
 <p>This is our entry point in the application.</p>
@@ -211,7 +212,7 @@ var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
 
 <p>Controllers have two main functions, to initiate the model and to execute the business logic associated with that view.</p>
 
-<p>Controllers will call REST API functionality for the business logic implemented in the back-end, there is a trade off between implementing business logic in the front-end and back-end.</p>
+<p>Controllers will call REST API functionality for the business logic implemented in the back-end, there is a tradeoff between implementing business logic in the front-end and back-end.</p>
 
 <p>The logic in the front-end it is fast to execute and doesn´t need network communication, but it can be hacked, syntactic validations are usually done at both levels.</p>
 
@@ -227,7 +228,7 @@ var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
 
 <p>We´ve reviewed the very basic blocks of AngularJS, we´ll spend more time with each topic.</p>
 
-<p>In this case I decided to build the backend using Java and Spring MVC for the REST calls, we´ll see all this in the following articles.</p>
+<p>In this case, I decided to build the backend using Java and Spring MVC for the REST calls, we´ll see all this in the following articles.</p>
     
         </div>
     </section>
@@ -288,11 +289,9 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-                      
+          <li><a href="/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
         
-          <li><a href="/post/numpy-introduction/">Numpy: Introduction</a></li>            
-        
-          <li><a href="/post/basic-probability-concepts/">Basic probability concepts</a></li>            
+          <li><a href="/post/scipy-introduction/">Scipy: Introduction</a></li>            
         
           <li><a href="/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
         
@@ -464,9 +463,9 @@ s.setAttribute('data-timestamp', +new Date());
 
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<link rel="stylesheet" href="/js/prism.js" />
 
 <script>hljs.initHighlightingOnLoad();</script>
 
