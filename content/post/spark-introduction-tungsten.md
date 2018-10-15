@@ -27,7 +27,7 @@ Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second ge
 
 Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.
 
-> Tungsten compiles your queries into single bytecode JVM function that improve CPU efficiency and gain performance.
+> Tungsten compiles your queries/stages into single bytecode JVM function that improve CPU efficiency and gain performance.
 
 This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.
 
@@ -45,4 +45,14 @@ And enable it again:
 $ spark-shell --conf spark.sql.tungsten.enabled=true
 ```
 
-## 
+## Thomas Neumann’s seminal VLDB 2011 paper
+
+See: <a href="https://blog.acolyer.org/2016/05/23/efficiently-compiling-efficient-query-plans-for-modern-hardware/" target="_blank">Efficiently compiling efficient query plans for modern hardware</a>
+
+## Eliminating virtual function dispatches
+
+## Intermediate data in CPU registers
+
+## SIMD
+
+## Whole Stage Code Generation

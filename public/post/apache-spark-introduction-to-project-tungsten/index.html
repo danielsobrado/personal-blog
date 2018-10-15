@@ -150,7 +150,7 @@
 <p>Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.</p>
 
 <blockquote>
-<p>Tungsten compiles your queries into single bytecode JVM function that improve CPU efficiency and gain performance.</p>
+<p>Tungsten compiles your queries/stages into single bytecode JVM function that improve CPU efficiency and gain performance.</p>
 </blockquote>
 
 <p>This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.</p>
@@ -168,6 +168,18 @@
 
 <pre><code>$ spark-shell --conf spark.sql.tungsten.enabled=true
 </code></pre>
+
+<h2 id="thomas-neumann-s-seminal-vldb-2011-paper">Thomas Neumann’s seminal VLDB 2011 paper</h2>
+
+<p>See: <a href="https://blog.acolyer.org/2016/05/23/efficiently-compiling-efficient-query-plans-for-modern-hardware/" target="_blank">Efficiently compiling efficient query plans for modern hardware</a></p>
+
+<h2 id="eliminating-virtual-function-dispatches">Eliminating virtual function dispatches</h2>
+
+<h2 id="intermediate-data-in-cpu-registers">Intermediate data in CPU registers</h2>
+
+<h2 id="simd">SIMD</h2>
+
+<h2 id="whole-stage-code-generation">Whole Stage Code Generation</h2>
     
         </div>
     </section>
@@ -228,15 +240,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="/post/scipy-introduction/">Scipy: Introduction</a></li>            
+        
                       
         
-          <li><a href="/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
+          <li><a href="/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
         
-          <li><a href="/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
+          <li><a href="/post/"></a></li>            
         
-          <li><a href="/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
-        
-          <li><a href="/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="/post/numpy-introduction/">Numpy: Introduction</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

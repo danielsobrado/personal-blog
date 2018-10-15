@@ -17,9 +17,9 @@
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/tensorflow-vs-pytorch-basics/</guid>
-      <description>Introduction The best why to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding advantages and disadvantages.
+      <description>Introduction The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
 Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and specially deep learning are low level libraries to operate on tensors (n-dimensional arrays).</description>
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
     </item>
     
   </channel>
