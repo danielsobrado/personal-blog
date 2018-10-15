@@ -19,7 +19,7 @@
       <guid>/post/apache-spark-introduction-to-project-tungsten/</guid>
       <description>Introduction Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second generation of the Tungsten engine.
 Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.
- Tungsten compiles your queries into single bytecode JVM function that improve CPU efficiency and gain performance.
+ Tungsten compiles your queries/stages into single bytecode JVM function that improve CPU efficiency and gain performance.
  This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.</description>
     </item>
     
@@ -29,9 +29,9 @@ Tungsten is a compiler that applies to queries and generates optimized bytecode 
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/tensorflow-vs-pytorch-basics/</guid>
-      <description>Introduction The best why to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding advantages and disadvantages.
+      <description>Introduction The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
 Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and specially deep learning are low level libraries to operate on tensors (n-dimensional arrays).</description>
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
     </item>
     
     <item>
@@ -114,16 +114,6 @@ Learning through travel changes you.</description>
     </item>
     
     <item>
-      <title>AngularJS: Introduction</title>
-      <link>/post/angularjs-introduction/</link>
-      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/angularjs-introduction/</guid>
-      <description>Introduction All started when I started developping some quick reconcialition tool for the bank´s Product Control team, someone said: &amp;ldquo;Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!
-I love solving issues for my business partners and I immediately started rolling my sleaves, things look simple and easy at the begining but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many gobernance procedures, like authentication, authorization, chinese walls, user management etc.</description>
-    </item>
-    
-    <item>
       <title>Worldbank datasets: Jobs and economic indicators</title>
       <link>/post/worldbank-datasets-jobs-and-economic-indicators/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
@@ -131,6 +121,16 @@ I love solving issues for my business partners and I immediately started rolling
       <guid>/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/</guid>
+      <description>Introduction All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &amp;ldquo;Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!
+I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</description>
     </item>
     
   </channel>
