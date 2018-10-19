@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>/post/lets-discuss-microservices/</loc>
+    <lastmod>2018-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/numpy-introduction/</loc>
     <lastmod>2018-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -108,6 +113,12 @@
   <url>
     <loc>/categories/maths/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/microservices/</loc>
+    <lastmod>2018-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
