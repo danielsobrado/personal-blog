@@ -23,14 +23,27 @@
     </item>
     
     <item>
+      <title>Prior and Posterior distributions</title>
+      <link>/post/prior-and-posterior-distributions/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/prior-and-posterior-distributions/</guid>
+      <description>Introduction Let´s suppose that we know all the possible causes for an outcome, for example:
+**
+Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
+$$P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) }$$ Next We&amp;rsquo;ll be using the following python packages: * pymc3 * pyro</description>
+    </item>
+    
+    <item>
       <title>Basic probability concepts</title>
       <link>/post/basic-probability-concepts/</link>
-      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>/post/basic-probability-concepts/</guid>
-      <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
+The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
+Concepts Let´s illustrate these concepts with poker cards and rolling dices:
+ An experiment is a well-defined action, that might result in a number of outcomes. Outcome: Possible result of an experiment. Each outcome is unique, and different outcomes are mutually exclusive.</description>
     </item>
     
   </channel>

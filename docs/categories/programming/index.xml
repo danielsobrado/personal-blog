@@ -43,6 +43,15 @@ Add extra services provide some advantages but there are also disadvantages, hav
     </item>
     
     <item>
+      <title>CRUD vs CQRS</title>
+      <link>/post/crud-vs-cqrs/</link>
+      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/crud-vs-cqrs/</guid>
+      <description> Introduction </description>
+    </item>
+    
+    <item>
       <title>AngularJS: Introduction</title>
       <link>/post/angularjs-introduction/</link>
       <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
@@ -60,6 +69,17 @@ I love solving issues for my business partners and I immediately started rolling
       <guid>/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Functional programming in Java: Lambdas</title>
+      <link>/post/functional-programming-in-java-lambdas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/functional-programming-in-java-lambdas/</guid>
+      <description>Introduction A lambda expression in
+Concepts Functional interface: Is an interface that declares one abstract method.
+Target type: The type expected by a lambda expression.</description>
     </item>
     
   </channel>
