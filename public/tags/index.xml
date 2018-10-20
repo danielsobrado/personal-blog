@@ -21,11 +21,47 @@
     </item>
     
     <item>
+      <title>Bayesian</title>
+      <link>/tags/bayesian/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Datasets</title>
       <link>/tags/datasets/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>/tags/datasets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design Patterns</title>
+      <link>/tags/design-patterns/</link>
+      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/design-patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functional Programming</title>
+      <link>/tags/functional-programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>/tags/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/java/</guid>
       <description></description>
     </item>
     
@@ -86,7 +122,7 @@
     <item>
       <title>Probability</title>
       <link>/tags/probability/</link>
-      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>/tags/probability/</guid>
       <description></description>

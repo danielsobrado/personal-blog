@@ -65,4 +65,4 @@ The **prior probability distribution** (prior), is ones beliefs about its quanti
 
 The **posterior probability distribution** (posterior), is the revised probability of an event occurring after some evidence has been taken into account.
 
-We´ll see in the next article more about these probability distributions.
+We´ll see in the [next article](https://www.danielsobrado.com/post/prior-and-posterior-distributions/) more about these probability distributions.

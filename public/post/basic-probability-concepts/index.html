@@ -33,8 +33,8 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. " />
 
-    <meta property="article:published_time" content="2018-03-10T00:00:00Z" />
-    <meta property="article:tag" content="probability" />
+    <meta property="article:published_time" content="2014-03-10T00:00:00Z" />
+    <meta property="article:tag" content="probability" /><meta property="article:tag" content="bayesian" />
 
     <meta property="og:image" content="https://i.imgur.com/IenFUVF.jpg"/>
 
@@ -131,8 +131,8 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2018-03-10">10 March 2018</time>
-                <span class="date-divider">/</span> <a href="/tags/probability/">#probability</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2014-03-10">10 March 2014</time>
+                <span class="date-divider">/</span> <a href="/tags/probability/">#probability</a>&nbsp;<a href="/tags/bayesian/">#bayesian</a>&nbsp;
         </section>
         <h1 class="post-full-title">Basic probability concepts</h1>
     </header>
@@ -144,172 +144,59 @@
         <div class="kg-card-markdown">
         
 
-<h2 id="move-static-content-to-static-asdsdswd">Move static content to <code>static asdsdswd</code></h2>
+<h1 id="introduction">Introduction</h1>
 
-<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
-With Jekyll, something that looked like</p>
+<p>In this series of articles, We&rsquo;ll dig deep into understanding <code>Bayesian inference</code>, starting from the basics.</p>
 
-<pre><code>▾ &lt;root&gt;/
-    ▾ images/
-        logo.png
-</code></pre>
+<p>The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.</p>
 
-<p>should become</p>
+<h1 id="concepts">Concepts</h1>
 
-<pre><code>▾ &lt;root&gt;/
-    ▾ static/
-        ▾ images/
-            logo.png
-</code></pre>
+<p>Let´s illustrate these concepts with poker cards and rolling dices:</p>
 
-<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
+<ul>
+<li>An <strong>experiment</strong> is a well-defined action, that might result in a number of outcomes.</li>
+<li><strong>Outcome</strong>: Possible result of an <code>experiment</code>. Each outcome is unique, and different outcomes are <code>mutually exclusive</code>.</li>
+<li>The <strong>sample space</strong> is the set of all possible outcomes.</li>
+<li>An <strong>event</strong> is a collection of outcomes.</li>
+<li>A <strong>probability</strong> is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.
+<div id="el"><span>$$P ( hearts ) = 0.25$$</span></div></li>
+<li>A <strong>conditional probability</strong> is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
+<div id="el"><span>$$P ( a \cap b ) = P ( a ) * P ( b )$$</span></div></li>
+</ul>
 
-<h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
+<blockquote>
+<p>We roll a six-sided dice, this is an experiment, we have 6 possible outcomes. If we get the number <em>3</em> by rolling the dice, we´ll say that from this event of rolling the dice we observed the outcome <em>3</em>, that has a prior probability of <sup>1</sup>&frasl;<sub>6</sub>.</p>
+</blockquote>
 
-<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="/overview/configuration/">Hugo configuration documentation</a> for details.</p>
+<ul>
+<li>We´ll say that 2 events are independent if one event doesn´t give any information about another event.</li>
+</ul>
 
-<h2 id="set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></h2>
+<p>A = Getting 3 in the first dice.
+B = Probability of getting 3 in the second dice.
+<div id="el"><span>$$P ( A | B ) = P ( A )$$</span></div></p>
 
-<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+<p>We´ll read &ldquo;<em>The probability of getting 3 in the first dice given that we got 3 in the second dice is the probability of getting 3 in the first dice.</em>&ldquo;</p>
 
-<ol>
-<li><p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+<blockquote>
+<p>Rolling a second dice doesn´t give us any information about the first dice.</p>
+</blockquote>
 
-<pre><code>git submodule deinit _site
-git rm _site
-git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
-</code></pre></li>
+<div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div>
 
-<li><p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+<p>We can generalize this to multiple events:
+<div id="el"><span>$$P \left[ \bigcap _ { i = 1 } ^ { n } A _ { i } \right] = \prod _ { i = 1 } ^ { n } P \left( A _ { i } \right)$$</span></div></p>
 
-<pre><code>{
-    ..
-    &quot;publishdir&quot;: &quot;_site&quot;,
-    ..
-}
-</code></pre></li>
-</ol>
+<p>Here A means rolling a dice, it can be the same dice or different dices.</p>
 
-<h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
+<h4 id="prior-and-posterior-distributions">Prior and Posterior distributions</h4>
 
-<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
+<p>The <strong>prior probability distribution</strong> (prior), is ones beliefs about its quantity before some evidence is taken into account.</p>
 
-<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
+<p>The <strong>posterior probability distribution</strong> (posterior), is the revised probability of an event occurring after some evidence has been taken into account.</p>
 
-<h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
-
-<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
-
-<h3 id="implementation">Implementation</h3>
-
-<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
-
-<p>Jekyll&rsquo;s plugin:</p>
-
-<pre><code>module Jekyll
-  class ImageTag &lt; Liquid::Tag
-    @url = nil
-    @caption = nil
-    @class = nil
-    @link = nil
-    // Patterns
-    IMAGE_URL_WITH_CLASS_AND_CAPTION =
-    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i
-    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;/i
-    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
-    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
-    def initialize(tag_name, markup, tokens)
-      super
-      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
-        @class   = $1
-        @url     = $3
-        @caption = $7
-        @link = $9
-      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
-        @class   = $1
-        @url     = $3
-        @caption = $7
-      elsif markup =~ IMAGE_URL_WITH_CAPTION
-        @url     = $1
-        @caption = $5
-      elsif markup =~ IMAGE_URL_WITH_CLASS
-        @class = $1
-        @url   = $3
-      elsif markup =~ IMAGE_URL
-        @url = $1
-      end
-    end
-    def render(context)
-      if @class
-        source = &quot;&lt;figure class='#{@class}'&gt;&quot;
-      else
-        source = &quot;&lt;figure&gt;&quot;
-      end
-      if @link
-        source += &quot;&lt;a href=\&quot;#{@link}\&quot;&gt;&quot;
-      end
-      source += &quot;&lt;img src=\&quot;#{@url}\&quot;&gt;&quot;
-      if @link
-        source += &quot;&lt;/a&gt;&quot;
-      end
-      source += &quot;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&quot; if @caption
-      source += &quot;&lt;/figure&gt;&quot;
-      source
-    end
-  end
-end
-Liquid::Template.register_tag('image', Jekyll::ImageTag)
-</code></pre>
-
-<p>is written as this Hugo shortcode:</p>
-
-<pre><code>&lt;!-- image --&gt;
-&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
-    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
-        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
-    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
-    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
-    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
-        {{ .Get &quot;title&quot; }}{{ end }}
-        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
-        {{ .Get &quot;caption&quot; }}
-        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
-            {{ .Get &quot;attr&quot; }}
-        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
-        &lt;/p&gt; {{ end }}
-    &lt;/figcaption&gt;
-    {{ end }}
-&lt;/figure&gt;
-&lt;!-- image --&gt;
-</code></pre>
-
-<h3 id="usage">Usage</h3>
-
-<p>I simply changed:</p>
-
-<pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
-</code></pre>
-
-<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
-
-<pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
-</code></pre>
-
-<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
-
-<h2 id="finishing-touches">Finishing touches</h2>
-
-<h3 id="fix-content">Fix content</h3>
-
-<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
-
-<h3 id="clean-up">Clean up</h3>
-
-<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
-
-<h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
-
-<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
+<p>We´ll see in the next article more about these probability distributions.</p>
     
         </div>
     </section>
@@ -370,13 +257,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="/post/scipy-introduction/">Scipy: Introduction</a></li>            
         
-          <li><a href="/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+          <li><a href="/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
         
-          <li><a href="/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
+          <li><a href="/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         
-          <li><a href="/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -389,23 +276,24 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/scipy-introduction/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/71DPO8N.png)"></div>
+    <a class="post-card-image-link" href="/post/prior-and-posterior-distributions/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/5O23Ebp.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/scipy-introduction/">
+      <a class="post-card-content-link" href="/post/prior-and-posterior-distributions/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Python 
-              #Scipy  </span>
+              #probability 
+              #bayesian  </span>
               
-              <h2 class="post-card-title">Scipy: Introduction</h2>
+              <h2 class="post-card-title">Prior and Posterior distributions</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>A well known python library for numerical computations widely used in the scientific and engeneering community. This package contains algorithms to manipulate Numpy objects, including Linear Algebra, Numerical Analysis, Signal Processing, Data Mining and Computational Geometry.</p>
+                <p>The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
+The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account.</p>
               
           </section>
       </a>
@@ -420,23 +308,24 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/numpy-introduction/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/oQNt9Gt.jpg)"></div>
+    <a class="post-card-image-link" href="/post/worldbank-datasets-jobs-and-economic-indicators/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/uPDsoHX.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/numpy-introduction/">
+      <a class="post-card-content-link" href="/post/worldbank-datasets-jobs-and-economic-indicators/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #Python 
-              #Numpy  </span>
+              #Pandas 
+              #Datasets  </span>
               
-              <h2 class="post-card-title">Numpy: Introduction</h2>
+              <h2 class="post-card-title">Worldbank datasets: Jobs and economic indicators</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Numpy is a fundamental library to perform numerical operations in Python. This package is about multi-dimensional arrays and performance. It allows us to work in a more powerful and simplified way with matrix algebra, emphasizing matrix methods that are extensively used in statistics, mathematics and machine learning algorithms.</p>
+                <p>World Bank Open Data contains multiple datasets covering demographics, as well as a large number of economic and development indicators from across the world. Let´s start looking at jobs and economic indicators dating from 1990. While we show how to read csvs and excel files using the Pandas library.</p>
               
           </section>
       </a>
