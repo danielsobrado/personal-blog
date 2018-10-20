@@ -38,7 +38,9 @@ Let´s illustrate these concepts with poker cards and rolling dices:
 The probability of an event E **P(E)** is the number of possible outcomes of event E **n(E)** divided by the number of outcomes of the sample space **n(S)**. 
 <div id="el"><span>$$\mathrm { P } ( \mathrm { E } ) = \frac { \mathrm { n } ( \mathrm { E } ) } { \mathrm { n } ( \mathrm { S } ) }$$</span></div>
 
+* We call mutually exclusive events, to two or more events that cannot happen simultaneusly. For example in Poker cards we cannot draw a card that is hearts and diamonds at the same time, but we can have a card that is 2 and diamonds.
 
+<div id="el"><span>$$P ( hearts \cup diamonds ) = P ( hearts ) + P ( diamonds )$$</span></div>
 
 * A **conditional probability** is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
 <div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div>
@@ -48,17 +50,25 @@ The probability of an event E **P(E)** is the number of possible outcomes of eve
 
 * We´ll say that 2 events are independent if one event doesn´t give any information about another event. </br></br>
 We have the following outcomes that we want to analize: </br>
-A = 3 in the first dice. </br>
-B = 3 in the second dice.
+A = Outcome 3 in the first dice. </br>
+B = Outcome 3 in the second dice.
 <div id="el"><span>$$P ( A | B ) = P ( A )$$</span></div>
-We´ll read "*The probability of getting 3 in the first dice given that we got 3 in the second dice is the probability of getting 3 in the first dice.*"
+We´ll read "*The probability of observing 3 in the first dice given that we got 3 in the second dice is the observing of getting 3 in the first dice.*"
 
 > Rolling a second dice doesn´t give us any information about the first dice.
 
+When two events are *independent* the probability of both of them occurring is:
+
 <div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div>
+
 We can generalize this to multiple events:
+
 <div id="el"><span>$$P \left[ \bigcap _ { i = 1 } ^ { n } A _ { i } \right] = \prod _ { i = 1 } ^ { n } P \left( A _ { i } \right)$$</span></div>
+
 Here A means rolling a dice, it can be the same dice or different dices.
+
+When two events are *dependent* the probability of both of them occurring is:
+<div id="el"><span>$$\mathrm { P } ( \mathrm { A } \text { and } \mathrm { B } ) = \mathrm { P } ( \mathrm { A } ) \times \mathrm { P } ( \mathrm { B } | \mathrm { A } ) $$</span></div>
 
 #### Prior and Posterior distributions
 
