@@ -31,6 +31,16 @@ Let´s suppose that we know all the possible causes for an outcome, for example:
 
 Posterior = ( Likelihood * Prior ) /  Evidence
 
+Here, P(movie|Sci-fi) is called Posterior,
+P(Sci-fi|Movie) is Likelihood,
+P(movie) is Prior,
+P(Sci-fi) is Evidence. 
+
+Prior: How probable was our hypothesis before observing the evidence?
+Posterior: How probable is our hypothesis given the observed evidence?
+Evidence: How probable is the new evidence under all possible hypotheses?
+Likelihood: How probable is the evidence give that our hypotheses is true?
+
 <div id="el"><span>$$P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) }$$</span></div>
 
 # Next 
