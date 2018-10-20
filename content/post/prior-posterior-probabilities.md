@@ -5,9 +5,6 @@ The posterior probability distribution, is the revised probability of an event o
 author: "Daniel Sobrado"
 date: 2014-03-15
 linktitle: Prior and Posterior distributions
-nomenu:
-  main:
-    parent: tutorials
 prev: /basic-probability-concepts
 title: Prior and Posterior distributions
 noweight: 10
