@@ -21,5 +21,14 @@
 I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</description>
     </item>
     
+    <item>
+      <title>Functional Programming Basic Concepts</title>
+      <link>/post/functional-programming-basic-concepts/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/functional-programming-basic-concepts/</guid>
+      <description> Introduction </description>
+    </item>
+    
   </channel>
 </rss>

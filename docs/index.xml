@@ -87,9 +87,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/basic-probability-concepts/</guid>
-      <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
+The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
+Concepts Let´s illustrate these concepts with poker cards and rolling dices:
+ A probability is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.</description>
     </item>
     
     <item>
@@ -111,6 +112,15 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;.
 There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
 Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</description>
+    </item>
+    
+    <item>
+      <title>CRUD vs CQRS</title>
+      <link>/post/crud-vs-cqrs/</link>
+      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/crud-vs-cqrs/</guid>
+      <description> Introduction </description>
     </item>
     
     <item>
@@ -142,6 +152,26 @@ I love solving issues for my business partners and I immediately started rolling
       <guid>/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Functional Programming Basic Concepts</title>
+      <link>/post/functional-programming-basic-concepts/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/functional-programming-basic-concepts/</guid>
+      <description> Introduction </description>
+    </item>
+    
+    <item>
+      <title>Functional programming in Java: Lambdas</title>
+      <link>/post/functional-programming-in-java-lambdas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/functional-programming-in-java-lambdas/</guid>
+      <description>Introduction A lambda expression in
+Concepts Functional interface: Is an interface that declares one abstract method.
+Target type: The type expected by a lambda expression.</description>
     </item>
     
   </channel>

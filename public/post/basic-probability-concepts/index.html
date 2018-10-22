@@ -144,172 +144,41 @@
         <div class="kg-card-markdown">
         
 
-<h2 id="move-static-content-to-static-asdsdswd">Move static content to <code>static asdsdswd</code></h2>
+<h1 id="introduction">Introduction</h1>
 
-<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
-With Jekyll, something that looked like</p>
+<p>In this series of articles, We&rsquo;ll dig deep into understanding <code>Bayesian inference</code>, starting from the basics.</p>
 
-<pre><code>▾ &lt;root&gt;/
-    ▾ images/
-        logo.png
-</code></pre>
+<p>The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.</p>
 
-<p>should become</p>
+<h1 id="concepts">Concepts</h1>
 
-<pre><code>▾ &lt;root&gt;/
-    ▾ static/
-        ▾ images/
-            logo.png
-</code></pre>
+<p>Let´s illustrate these concepts with poker cards and rolling dices:</p>
 
-<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
+<ul>
+<li>A <strong>probability</strong> is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.
+<div id="el"><span>$$P ( hearts ) = 0.25$$</span></div></li>
 
-<h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
+<li><p>A <strong>conditional probability</strong> is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
+<div id="el"><span>$$P ( a \cap b ) = P ( a ) * P ( b )$$</span></div></p></li>
 
-<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="/overview/configuration/">Hugo configuration documentation</a> for details.</p>
+<li><p><strong>Outcome</strong>: Possible result of an <code>experiment</code>. Each outcome is unique, and different outcomes are <code>mutually exclusive</code>.</p></li>
+</ul>
 
-<h2 id="set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></h2>
+<blockquote>
+<p>We roll a dice, this is an experiment, we get the number <em>3</em> as outcome, this outcome had a prior probability of <sup>1</sup>&frasl;<sub>6</sub>.</p>
+</blockquote>
 
-<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+<h4 id="prior-and-posterior-distributions">Prior and Posterior distributions</h4>
 
-<ol>
-<li><p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+<p>Let´s suppose that we know all the possible causes for an outcome, for example:</p>
 
-<pre><code>git submodule deinit _site
-git rm _site
-git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
-</code></pre></li>
+<p>**</p>
 
-<li><p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+<h1 id="next">Next</h1>
 
-<pre><code>{
-    ..
-    &quot;publishdir&quot;: &quot;_site&quot;,
-    ..
-}
-</code></pre></li>
-</ol>
-
-<h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
-
-<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
-
-<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
-
-<h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
-
-<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
-
-<h3 id="implementation">Implementation</h3>
-
-<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
-
-<p>Jekyll&rsquo;s plugin:</p>
-
-<pre><code>module Jekyll
-  class ImageTag &lt; Liquid::Tag
-    @url = nil
-    @caption = nil
-    @class = nil
-    @link = nil
-    // Patterns
-    IMAGE_URL_WITH_CLASS_AND_CAPTION =
-    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i
-    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;/i
-    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
-    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
-    def initialize(tag_name, markup, tokens)
-      super
-      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
-        @class   = $1
-        @url     = $3
-        @caption = $7
-        @link = $9
-      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
-        @class   = $1
-        @url     = $3
-        @caption = $7
-      elsif markup =~ IMAGE_URL_WITH_CAPTION
-        @url     = $1
-        @caption = $5
-      elsif markup =~ IMAGE_URL_WITH_CLASS
-        @class = $1
-        @url   = $3
-      elsif markup =~ IMAGE_URL
-        @url = $1
-      end
-    end
-    def render(context)
-      if @class
-        source = &quot;&lt;figure class='#{@class}'&gt;&quot;
-      else
-        source = &quot;&lt;figure&gt;&quot;
-      end
-      if @link
-        source += &quot;&lt;a href=\&quot;#{@link}\&quot;&gt;&quot;
-      end
-      source += &quot;&lt;img src=\&quot;#{@url}\&quot;&gt;&quot;
-      if @link
-        source += &quot;&lt;/a&gt;&quot;
-      end
-      source += &quot;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&quot; if @caption
-      source += &quot;&lt;/figure&gt;&quot;
-      source
-    end
-  end
-end
-Liquid::Template.register_tag('image', Jekyll::ImageTag)
-</code></pre>
-
-<p>is written as this Hugo shortcode:</p>
-
-<pre><code>&lt;!-- image --&gt;
-&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
-    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
-        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
-    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
-    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
-    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
-        {{ .Get &quot;title&quot; }}{{ end }}
-        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
-        {{ .Get &quot;caption&quot; }}
-        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
-            {{ .Get &quot;attr&quot; }}
-        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
-        &lt;/p&gt; {{ end }}
-    &lt;/figcaption&gt;
-    {{ end }}
-&lt;/figure&gt;
-&lt;!-- image --&gt;
-</code></pre>
-
-<h3 id="usage">Usage</h3>
-
-<p>I simply changed:</p>
-
-<pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
-</code></pre>
-
-<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
-
-<pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
-</code></pre>
-
-<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
-
-<h2 id="finishing-touches">Finishing touches</h2>
-
-<h3 id="fix-content">Fix content</h3>
-
-<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
-
-<h3 id="clean-up">Clean up</h3>
-
-<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
-
-<h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
-
-<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
+<p>We&rsquo;ll be using the following python packages:
+* <a href="https://github.com/pymc-devs/pymc3">pymc3</a>
+* <a href="https://github.com/uber/pyro">pyro</a></p>
     
         </div>
     </section>
@@ -372,11 +241,11 @@ s.setAttribute('data-timestamp', +new Date());
         <ul>
           <li><a href="/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
         
+          <li><a href="/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
+        
+          <li><a href="/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
+        
           <li><a href="/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
-        
-          <li><a href="/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
-        
-          <li><a href="/post/numpy-introduction/">Numpy: Introduction</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
