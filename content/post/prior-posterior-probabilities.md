@@ -40,6 +40,10 @@ Likelihood: How probable is the evidence give that our hypotheses is true?
 
 <div id="el"><span>$$P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) }$$</span></div>
 
+# Distributions
+
+# Density Functions
+
 # Next 
 
 We'll be using the following python packages:

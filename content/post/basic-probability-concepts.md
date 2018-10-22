@@ -25,6 +25,16 @@ In this series of articles, We'll dig deep into understanding `Bayesian inferenc
 
 The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
 
+# TL;DR
+
+Let´s take the following poker cards as an example:
+
+![](https://i.imgur.com/rypTeme.jpg)
+
+Our `experiment` is to take two cards for the deck, one at a time, each card extraction is an `event`. We define as outcomes that a card is of a defined 
+
+If we introduce the card in the deck again before extracting the next one, we´ll have `indepedent` events, if we don´t the events will be `dependent`, due to the fact that the fact of removing one card from the deck will alter the probabilities of the next event.
+
 # Concepts
 
 Let´s illustrate these concepts with poker cards and rolling dices:
