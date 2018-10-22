@@ -192,6 +192,19 @@ $ Tensorflow version: 1.10.0
 
 <p>Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.</p>
 
+<p>Eager execution in TensorFlow v1.5</p>
+
+<pre class="prettyprint lang-py">
+x = [[2.]]
+m = tf.matmul(x, x)
+
+print(m)
+<span class="nocode" style="color:white">
+Output:
+$ Tensorflow version: 1.10.0
+</span>
+</pre>
+
 <h3 id="placeholders">Placeholders</h3>
 
 <h3 id="variables">Variables</h3>
@@ -202,11 +215,11 @@ $ Tensorflow version: 1.10.0
 
 <pre class="prettyprint lang-py">
 import tensorflow as tf
-A = tf.constant([3])
-B = tf.constant([4])
-C = tf.add(A,B)
+x = tf.constant([3])
+y = tf.constant([4])
+z = tf.add(x,y)
 session = tf.Session()
-result = session.run(C)
+result = session.run(z)
 print(result)
 
 <span class="nocode" style="color:white">
@@ -218,6 +231,40 @@ $ [5]
 <h2 id="introduction-to-pytorch">Introduction to Pytorch</h2>
 
 <p>Pytorch is Facebook&rsquo;s solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.</p>
+
+<p>Pytorch is known for its simplicity. It uses Dynamic computation for greater flexibility.</p>
+
+<h3 id="installation-1">Installation</h3>
+
+<pre><code>$ conda install pytorch cuda90 
+</code></pre>
+
+<pre><code>$ conda install pytorch-cpu
+</code></pre>
+
+<p>Since PyTorch 0.4.0, there is official Window Support.</p>
+
+<h3 id="tensors-and-variables">Tensors and Variables</h3>
+
+<p>Pytorch provides two data abstractions Tensors and Variables.</p>
+
+<p>Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.</p>
+
+<p>We can slice tensors using the notation &lsquo;tensor[:slice index]&rsquo;</p>
+
+<pre class="prettyprint lang-py">
+import torch
+x = torch.Tensor([3])
+y = torch.Tensor([4])
+z = x+y
+print(z)  
+
+<span class="nocode" style="color:white">
+Output:
+ 7
+[torch.FloatTensor of size 1]
+</span>
+</pre>
     
         </div>
     </section>
@@ -278,13 +325,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+                      
+        
+          <li><a href="/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+        
           <li><a href="/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
         
-          <li><a href="/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
+          <li><a href="/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         
           <li><a href="/post/basic-probability-concepts/">Basic probability concepts</a></li>            
-        
-          <li><a href="/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

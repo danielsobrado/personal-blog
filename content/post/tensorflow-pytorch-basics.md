@@ -3,14 +3,14 @@ description: "Arguably the most famous machine learning low-level frameworks. Py
 author: "Daniel Sobrado"
 date: 2018-09-25
 linktitle: Tensorflow Pytorch Basics
-next: /tutorials/github-pages-blog
+next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
 title: "Tensorflow vs Pytorch: Basics"
 weight: 10
 image: https://i.imgur.com/k3fRAC4.jpg
 tags : [
     "Tensorflow",
-	"Pytorch"
+    "Pytorch"
 ]
 categories : [
     "Data-Science"
@@ -68,6 +68,19 @@ The home page, or landing page, is the first page that many visitors to a site s
 
 Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.
 
+Eager execution in TensorFlow v1.5
+
+<pre class="prettyprint lang-py">
+x = [[2.]]
+m = tf.matmul(x, x)
+
+print(m)
+<span class="nocode" style="color:white">
+Output:
+$ Tensorflow version: 1.10.0
+</span>
+</pre>
+
 ### Placeholders
 
 ### Variables
@@ -78,11 +91,11 @@ Any Tensorflow program is going to be a Graph, each operation is a function that
 
 <pre class="prettyprint lang-py">
 import tensorflow as tf
-A = tf.constant([3])
-B = tf.constant([4])
-C = tf.add(A,B)
+x = tf.constant([3])
+y = tf.constant([4])
+z = tf.add(x,y)
 session = tf.Session()
-result = session.run(C)
+result = session.run(z)
 print(result)
 
 <span class="nocode" style="color:white">
@@ -94,3 +107,39 @@ $ [5]
 ## Introduction to Pytorch
 
 Pytorch is Facebook's solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.
+
+Pytorch is known for its simplicity. It uses Dynamic computation for greater flexibility.
+
+### Installation
+
+```
+$ conda install pytorch cuda90 
+```
+
+```
+$ conda install pytorch-cpu
+```
+
+Since PyTorch 0.4.0, there is official Window Support.
+
+### Tensors and Variables
+Pytorch provides two data abstractions Tensors and Variables.
+
+Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.
+
+We can slice tensors using the notation 'tensor[:slice index]'
+
+### 
+<pre class="prettyprint lang-py">
+import torch
+x = torch.Tensor([3])
+y = torch.Tensor([4])
+z = x+y
+print(z)  
+
+<span class="nocode" style="color:white">
+Output:
+ 7
+[torch.FloatTensor of size 1]
+</span>
+</pre>
