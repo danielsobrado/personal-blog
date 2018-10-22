@@ -33,8 +33,8 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. " />
 
-    <meta property="article:published_time" content="2018-03-10T00:00:00Z" />
-    <meta property="article:tag" content="probability" />
+    <meta property="article:published_time" content="2014-03-10T00:00:00Z" />
+    <meta property="article:tag" content="probability" /><meta property="article:tag" content="bayesian" />
 
     <meta property="og:image" content="https://i.imgur.com/IenFUVF.jpg"/>
 
@@ -131,8 +131,8 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2018-03-10">10 March 2018</time>
-                <span class="date-divider">/</span> <a href="/tags/probability/">#probability</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2014-03-10">10 March 2014</time>
+                <span class="date-divider">/</span> <a href="/tags/probability/">#probability</a>&nbsp;<a href="/tags/bayesian/">#bayesian</a>&nbsp;
         </section>
         <h1 class="post-full-title">Basic probability concepts</h1>
     </header>
@@ -150,35 +150,79 @@
 
 <p>The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.</p>
 
+<h1 id="tl-dr">TL;DR</h1>
+
+<p>Let´s take the following poker cards as an example:</p>
+
+<p><img src="https://i.imgur.com/rypTeme.jpg" alt="" /></p>
+
+<p>Our <code>experiment</code> is to take two cards for the deck, one at a time, each card extraction is an <code>event</code>. We define as outcomes that a card is of a defined</p>
+
+<p>If we introduce the card in the deck again before extracting the next one, we´ll have <code>indepedent</code> events, if we don´t the events will be <code>dependent</code>, due to the fact that the fact of removing one card from the deck will alter the probabilities of the next event.</p>
+
 <h1 id="concepts">Concepts</h1>
 
 <p>Let´s illustrate these concepts with poker cards and rolling dices:</p>
 
 <ul>
-<li>A <strong>probability</strong> is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.
-<div id="el"><span>$$P ( hearts ) = 0.25$$</span></div></li>
+<li>An <strong>experiment</strong> is a well-defined action, that might result in a number of outcomes.</li>
+<li><strong>Outcome</strong>: Possible result of an <code>experiment</code>. Each outcome is unique, and different outcomes are <code>mutually exclusive</code>.</li>
+<li>The <strong>sample space</strong> is the set of all possible outcomes.</li>
+<li>An <strong>event</strong> is a collection of outcomes.</li>
 
-<li><p>A <strong>conditional probability</strong> is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
-<div id="el"><span>$$P ( a \cap b ) = P ( a ) * P ( b )$$</span></div></p></li>
+<li><p>A <strong>probability</strong> is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.
+<div id="el"><span>$$P ( hearts ) = 0.25$$</span></div>
+The probability of an event E <strong>P(E)</strong> is the number of possible outcomes of event E <strong>n(E)</strong> divided by the number of outcomes of the sample space <strong>n(S)</strong>.
+<div id="el"><span>$$\mathrm { P } ( \mathrm { E } ) = \frac { \mathrm { n } ( \mathrm { E } ) } { \mathrm { n } ( \mathrm { S } ) }$$</span></div></p></li>
 
-<li><p><strong>Outcome</strong>: Possible result of an <code>experiment</code>. Each outcome is unique, and different outcomes are <code>mutually exclusive</code>.</p></li>
+<li><p>We call mutually exclusive events, to two or more events that cannot happen simultaneusly. For example in Poker cards we cannot draw a card that is hearts and diamonds at the same time, but we can have a card that is 2 and diamonds.</p></li>
+</ul>
+
+<div id="el"><span>$$P ( hearts \cup diamonds ) = P ( hearts ) + P ( diamonds )$$</span></div>
+
+<ul>
+<li>A <strong>conditional probability</strong> is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
+<div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div></li>
 </ul>
 
 <blockquote>
-<p>We roll a dice, this is an experiment, we get the number <em>3</em> as outcome, this outcome had a prior probability of <sup>1</sup>&frasl;<sub>6</sub>.</p>
+<p>We roll a six-sided dice, this is an experiment, we have 6 possible outcomes. If we get the number <em>3</em> by rolling the dice, we´ll say that from this event of rolling the dice we observed the outcome <em>3</em>, that has a prior probability of <sup>1</sup>&frasl;<sub>6</sub>.</p>
 </blockquote>
+
+<ul>
+<li>We´ll say that 2 events are independent if one event doesn´t give any information about another event. </br></br>
+We have the following outcomes that we want to analize: </br>
+A = Outcome 3 in the first dice. </br>
+B = Outcome 3 in the second dice.
+<div id="el"><span>$$P ( A | B ) = P ( A )$$</span></div>
+We´ll read &ldquo;<em>The probability of observing 3 in the first dice given that we got 3 in the second dice is the observing of getting 3 in the first dice.</em>&ldquo;</li>
+</ul>
+
+<blockquote>
+<p>Rolling a second dice doesn´t give us any information about the first dice.</p>
+</blockquote>
+
+<p>When two events are <em>independent</em> the probability of both of them occurring is:</p>
+
+<div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div>
+
+<p>We can generalize this to multiple events:</p>
+
+<div id="el"><span>$$P \left[ \bigcap _ { i = 1 } ^ { n } A _ { i } \right] = \prod _ { i = 1 } ^ { n } P \left( A _ { i } \right)$$</span></div>
+
+<p>Here A means rolling a dice, it can be the same dice or different dices.</p>
+
+<p>When two events are <em>dependent</em> the probability of both of them occurring is:
+<div id="el"><span>$$\mathrm { P } ( \mathrm { A } \text { and } \mathrm { B } ) = \mathrm { P } ( \mathrm { A } ) \times \mathrm { P } ( \mathrm { B } | \mathrm { A } ) $$</span></div></p>
 
 <h4 id="prior-and-posterior-distributions">Prior and Posterior distributions</h4>
 
-<p>Let´s suppose that we know all the possible causes for an outcome, for example:</p>
+<p></br>
+The <strong>prior probability distribution</strong> (prior), is ones beliefs about its quantity before some evidence is taken into account.</p>
 
-<p>**</p>
+<p>The <strong>posterior probability distribution</strong> (posterior), is the revised probability of an event occurring after some evidence has been taken into account.</p>
 
-<h1 id="next">Next</h1>
-
-<p>We&rsquo;ll be using the following python packages:
-* <a href="https://github.com/pymc-devs/pymc3">pymc3</a>
-* <a href="https://github.com/uber/pyro">pyro</a></p>
+<p>We´ll see in the <a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">next article</a> more about these probability distributions.</p>
     
         </div>
     </section>
@@ -239,13 +283,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
         
-          <li><a href="/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
+          <li><a href="/post/numpy-introduction/">Numpy: Introduction</a></li>            
+        
+          <li><a href="/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
+        
+                      
         
           <li><a href="/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
-        
-          <li><a href="/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -258,23 +304,24 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/scipy-introduction/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/71DPO8N.png)"></div>
+    <a class="post-card-image-link" href="/post/prior-and-posterior-distributions/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/5O23Ebp.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/scipy-introduction/">
+      <a class="post-card-content-link" href="/post/prior-and-posterior-distributions/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Python 
-              #Scipy  </span>
+              #probability 
+              #bayesian  </span>
               
-              <h2 class="post-card-title">Scipy: Introduction</h2>
+              <h2 class="post-card-title">Prior and Posterior distributions</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>A well known python library for numerical computations widely used in the scientific and engeneering community. This package contains algorithms to manipulate Numpy objects, including Linear Algebra, Numerical Analysis, Signal Processing, Data Mining and Computational Geometry.</p>
+                <p>The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
+The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account.</p>
               
           </section>
       </a>
@@ -289,23 +336,24 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/numpy-introduction/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/oQNt9Gt.jpg)"></div>
+    <a class="post-card-image-link" href="/post/worldbank-datasets-jobs-and-economic-indicators/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/uPDsoHX.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/numpy-introduction/">
+      <a class="post-card-content-link" href="/post/worldbank-datasets-jobs-and-economic-indicators/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #Python 
-              #Numpy  </span>
+              #Pandas 
+              #Datasets  </span>
               
-              <h2 class="post-card-title">Numpy: Introduction</h2>
+              <h2 class="post-card-title">Worldbank datasets: Jobs and economic indicators</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Numpy is a fundamental library to perform numerical operations in Python. This package is about multi-dimensional arrays and performance. It allows us to work in a more powerful and simplified way with matrix algebra, emphasizing matrix methods that are extensively used in statistics, mathematics and machine learning algorithms.</p>
+                <p>World Bank Open Data contains multiple datasets covering demographics, as well as a large number of economic and development indicators from across the world. Let´s start looking at jobs and economic indicators dating from 1990. While we show how to read csvs and excel files using the Pandas library.</p>
               
           </section>
       </a>

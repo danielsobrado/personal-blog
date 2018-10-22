@@ -23,15 +23,28 @@
     </item>
     
     <item>
+      <title>Prior and Posterior distributions</title>
+      <link>/post/prior-and-posterior-distributions/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/post/prior-and-posterior-distributions/</guid>
+      <description>Introduction Let´s suppose that we know all the possible causes for an outcome, for example:
+**
+Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
+Here, P(movie|Sci-fi) is called Posterior, P(Sci-fi|Movie) is Likelihood, P(movie) is Prior, P(Sci-fi) is Evidence.
+Prior: How probable was our hypothesis before observing the evidence? Posterior: How probable is our hypothesis given the observed evidence? Evidence: How probable is the new evidence under all possible hypotheses?</description>
+    </item>
+    
+    <item>
       <title>Basic probability concepts</title>
       <link>/post/basic-probability-concepts/</link>
-      <pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>/post/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
 The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
-Concepts Let´s illustrate these concepts with poker cards and rolling dices:
- A probability is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.</description>
+TL;DR Let´s take the following poker cards as an example:
+Our experiment is to take two cards for the deck, one at a time, each card extraction is an event. We define as outcomes that a card is of a defined</description>
     </item>
     
   </channel>
