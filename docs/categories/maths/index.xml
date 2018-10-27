@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Maths on </title>
-    <link>/categories/maths/</link>
+    <link>https://www.danielsobrado.com/categories/maths/</link>
     <description>Recent content in Maths on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/maths/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.danielsobrado.com/categories/maths/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fast Fourier Transform</title>
-      <link>/post/fast-fourier-transform/</link>
+      <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/fast-fourier-transform/</guid>
+      <guid>https://www.danielsobrado.com/post/fast-fourier-transform/</guid>
       <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Prior and Posterior distributions</title>
-      <link>/post/prior-and-posterior-distributions/</link>
+      <link>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/prior-and-posterior-distributions/</guid>
+      <guid>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</guid>
       <description>Introduction Let´s suppose that we know all the possible causes for an outcome, for example:
 **
 Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
@@ -37,10 +37,10 @@ Prior: How probable was our hypothesis before observing the evidence? Posterior:
     
     <item>
       <title>Basic probability concepts</title>
-      <link>/post/basic-probability-concepts/</link>
+      <link>https://www.danielsobrado.com/post/basic-probability-concepts/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/basic-probability-concepts/</guid>
+      <guid>https://www.danielsobrado.com/post/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
 The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
 TL;DR Let´s take the following poker cards as an example:

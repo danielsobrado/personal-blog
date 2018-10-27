@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pytorch on </title>
-    <link>/tags/pytorch/</link>
+    <link>https://www.danielsobrado.com/tags/pytorch/</link>
     <description>Recent content in Pytorch on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 25 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.danielsobrado.com/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tensorflow vs Pytorch: Basics</title>
-      <link>/post/tensorflow-vs-pytorch-basics/</link>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/tensorflow-vs-pytorch-basics/</guid>
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</guid>
       <description>Introduction The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
 Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
 Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>

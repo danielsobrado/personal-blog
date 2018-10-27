@@ -1,4 +1,4 @@
-baseurl         = "/"
+baseurl         = "https://www.danielsobrado.com/"
 theme           = "casper-two"
 languageCode    = "en-US"
 disqusShortname = "dalamarsblog"
@@ -15,7 +15,7 @@ canonifyurls    = true
   description = "Personal Blog on Data Science, Big Data and Software Development."
   metaDescription = ""
   googleAnalytics = ""
-  customCSS = []
+  customCSS = ["/css/atelier-heath-light.css", "/css/prettify.css"]
   RSSLink = ""
   
   publishDir = "docs"

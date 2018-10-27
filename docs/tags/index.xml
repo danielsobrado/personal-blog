@@ -2,183 +2,183 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>/tags/</link>
+    <link>https://www.danielsobrado.com/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 28 Feb 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.danielsobrado.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Angularjs</title>
-      <link>/tags/angularjs/</link>
+      <link>https://www.danielsobrado.com/tags/angularjs/</link>
       <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>/tags/angularjs/</guid>
+      <guid>https://www.danielsobrado.com/tags/angularjs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian</title>
-      <link>/tags/bayesian/</link>
+      <link>https://www.danielsobrado.com/tags/bayesian/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/tags/bayesian/</guid>
+      <guid>https://www.danielsobrado.com/tags/bayesian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Datasets</title>
-      <link>/tags/datasets/</link>
+      <link>https://www.danielsobrado.com/tags/datasets/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>/tags/datasets/</guid>
+      <guid>https://www.danielsobrado.com/tags/datasets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design Patterns</title>
-      <link>/tags/design-patterns/</link>
+      <link>https://www.danielsobrado.com/tags/design-patterns/</link>
       <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/design-patterns/</guid>
+      <guid>https://www.danielsobrado.com/tags/design-patterns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functional Programming</title>
-      <link>/tags/functional-programming/</link>
+      <link>https://www.danielsobrado.com/tags/functional-programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/functional-programming/</guid>
+      <guid>https://www.danielsobrado.com/tags/functional-programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>/tags/java/</link>
+      <link>https://www.danielsobrado.com/tags/java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/java/</guid>
+      <guid>https://www.danielsobrado.com/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>/tags/javascript/</link>
+      <link>https://www.danielsobrado.com/tags/javascript/</link>
       <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>/tags/javascript/</guid>
+      <guid>https://www.danielsobrado.com/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kaggle</title>
-      <link>/tags/kaggle/</link>
+      <link>https://www.danielsobrado.com/tags/kaggle/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/kaggle/</guid>
+      <guid>https://www.danielsobrado.com/tags/kaggle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microservices</title>
-      <link>/tags/microservices/</link>
+      <link>https://www.danielsobrado.com/tags/microservices/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/microservices/</guid>
+      <guid>https://www.danielsobrado.com/tags/microservices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nlp</title>
-      <link>/tags/nlp/</link>
+      <link>https://www.danielsobrado.com/tags/nlp/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/nlp/</guid>
+      <guid>https://www.danielsobrado.com/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Numpy</title>
-      <link>/tags/numpy/</link>
+      <link>https://www.danielsobrado.com/tags/numpy/</link>
       <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/numpy/</guid>
+      <guid>https://www.danielsobrado.com/tags/numpy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pandas</title>
-      <link>/tags/pandas/</link>
+      <link>https://www.danielsobrado.com/tags/pandas/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pandas/</guid>
+      <guid>https://www.danielsobrado.com/tags/pandas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability</title>
-      <link>/tags/probability/</link>
+      <link>https://www.danielsobrado.com/tags/probability/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/tags/probability/</guid>
+      <guid>https://www.danielsobrado.com/tags/probability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>/tags/python/</link>
+      <link>https://www.danielsobrado.com/tags/python/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>https://www.danielsobrado.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pytorch</title>
-      <link>/tags/pytorch/</link>
+      <link>https://www.danielsobrado.com/tags/pytorch/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pytorch/</guid>
+      <guid>https://www.danielsobrado.com/tags/pytorch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scipy</title>
-      <link>/tags/scipy/</link>
+      <link>https://www.danielsobrado.com/tags/scipy/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/scipy/</guid>
+      <guid>https://www.danielsobrado.com/tags/scipy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spark</title>
-      <link>/tags/spark/</link>
+      <link>https://www.danielsobrado.com/tags/spark/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/spark/</guid>
+      <guid>https://www.danielsobrado.com/tags/spark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>/tags/tensorflow/</link>
+      <link>https://www.danielsobrado.com/tags/tensorflow/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tensorflow/</guid>
+      <guid>https://www.danielsobrado.com/tags/tensorflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time Series</title>
-      <link>/tags/time-series/</link>
+      <link>https://www.danielsobrado.com/tags/time-series/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/time-series/</guid>
+      <guid>https://www.danielsobrado.com/tags/time-series/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scipy on </title>
-    <link>/tags/scipy/</link>
+    <link>https://www.danielsobrado.com/tags/scipy/</link>
     <description>Recent content in Scipy on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/scipy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.danielsobrado.com/tags/scipy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fast Fourier Transform</title>
-      <link>/post/fast-fourier-transform/</link>
+      <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/fast-fourier-transform/</guid>
+      <guid>https://www.danielsobrado.com/post/fast-fourier-transform/</guid>
       <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Scipy: Introduction</title>
-      <link>/post/scipy-introduction/</link>
+      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/scipy-introduction/</guid>
+      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>

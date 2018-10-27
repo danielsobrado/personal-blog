@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Probability on </title>
-    <link>/tags/probability/</link>
+    <link>https://www.danielsobrado.com/tags/probability/</link>
     <description>Recent content in Probability on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.danielsobrado.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Prior and Posterior distributions</title>
-      <link>/post/prior-and-posterior-distributions/</link>
+      <link>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/prior-and-posterior-distributions/</guid>
+      <guid>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</guid>
       <description>Introduction Let´s suppose that we know all the possible causes for an outcome, for example:
 **
 Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
@@ -26,10 +26,10 @@ Prior: How probable was our hypothesis before observing the evidence? Posterior:
     
     <item>
       <title>Basic probability concepts</title>
-      <link>/post/basic-probability-concepts/</link>
+      <link>https://www.danielsobrado.com/post/basic-probability-concepts/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/basic-probability-concepts/</guid>
+      <guid>https://www.danielsobrado.com/post/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
 The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
 TL;DR Let´s take the following poker cards as an example:

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Datasets on </title>
-    <link>/tags/datasets/</link>
+    <link>https://www.danielsobrado.com/tags/datasets/</link>
     <description>Recent content in Datasets on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 28 Feb 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/datasets/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.danielsobrado.com/tags/datasets/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Worldbank datasets: Jobs and economic indicators</title>
-      <link>/post/worldbank-datasets-jobs-and-economic-indicators/</link>
+      <link>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
+      <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
