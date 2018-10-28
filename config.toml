@@ -15,7 +15,7 @@ canonifyurls    = true
   description = "Personal Blog on Data Science, Big Data and Software Development."
   metaDescription = ""
   googleAnalytics = ""
-  customCSS = ["/css/atelier-heath-light.css", "/css/prettify.css"]
+  customCSS = ["atelier-heath-light.css", "prettify.css"]
   RSSLink = ""
   
   publishDir = "docs"
