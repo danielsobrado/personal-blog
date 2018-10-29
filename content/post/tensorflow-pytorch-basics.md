@@ -70,11 +70,12 @@ Any Tensorflow program is going to be a Graph, each operation is a function that
 
 Eager execution in TensorFlow v1.5
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 x = [[2.]]
 m = tf.matmul(x, x)
 
 print(m)
+
 <span class="nocode" style="color:white">
 Output:
 $ Tensorflow version: 1.10.0
@@ -89,7 +90,7 @@ $ Tensorflow version: 1.10.0
 
 ### The Session
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import tensorflow as tf
 x = tf.constant([3])
 y = tf.constant([4])
@@ -130,7 +131,7 @@ Tensors are similar to numpy arrays but they have GPU support and methods to swi
 We can slice tensors using the notation 'tensor[:slice index]'
 
 ### 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import torch
 x = torch.Tensor([3])
 y = torch.Tensor([4])
@@ -154,7 +155,7 @@ Where Y is the true or reference sample and Y_hat is the predicted result:
 
 ### RMSE using numpy
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import numpy as np
 
 def rmse(y, y_hat):
@@ -168,7 +169,7 @@ def rmse(y, y_hat):
 
 ### RMSE using scikit-learn
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import numpy as np
 from sklearn import metrics
 
@@ -177,7 +178,7 @@ def rmse(y, y_hat):
 </pre>
 
 ### RMSE using Tensorflow
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import torch
 
 def rmse(y, y_hat):
@@ -185,7 +186,7 @@ def rmse(y, y_hat):
 </pre>
 
 ### RMSE using Pytorch
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import tensorflow as tf
 
 def rmse(y, y_hat):

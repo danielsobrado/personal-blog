@@ -21,10 +21,12 @@
   margin-bottom: 0;
   padding-left: 1.8em;
   color: #5a7b8c;
+  line-height: 1.0em;
 } 
 
 .prettyprint  .linenums li {
   list-style-type: decimal;
+  line-height: 1.0em;
 }
 
 .prettyprint li.L0,
@@ -40,6 +42,7 @@ li.L9 {
   padding-left: 1em;
   background-color: #f7f3f7;
   list-style-type: decimal;
+  line-height: 1.0em !important;
 }
 
 @media screen {

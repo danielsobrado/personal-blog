@@ -195,11 +195,12 @@ $ Tensorflow version: 1.10.0
 
 <p>Eager execution in TensorFlow v1.5</p>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 x = [[2.]]
 m = tf.matmul(x, x)
 
 print(m)
+
 <span class="nocode" style="color:white">
 Output:
 $ Tensorflow version: 1.10.0
@@ -214,7 +215,7 @@ $ Tensorflow version: 1.10.0
 
 <h3 id="the-session">The Session</h3>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import tensorflow as tf
 x = tf.constant([3])
 y = tf.constant([4])
@@ -253,7 +254,7 @@ $ [5]
 
 <p>We can slice tensors using the notation &lsquo;tensor[:slice index]&rsquo;</p>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import torch
 x = torch.Tensor([3])
 y = torch.Tensor([4])
@@ -277,7 +278,7 @@ Output:
 
 <h3 id="rmse-using-numpy">RMSE using numpy</h3>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import numpy as np
 
 def rmse(y, y_hat):
@@ -291,7 +292,7 @@ def rmse(y, y_hat):
 
 <h3 id="rmse-using-scikit-learn">RMSE using scikit-learn</h3>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import numpy as np
 from sklearn import metrics
 
@@ -301,7 +302,7 @@ def rmse(y, y_hat):
 
 <h3 id="rmse-using-tensorflow">RMSE using Tensorflow</h3>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import torch
 
 def rmse(y, y_hat):
@@ -310,7 +311,7 @@ def rmse(y, y_hat):
 
 <h3 id="rmse-using-pytorch">RMSE using Pytorch</h3>
 
-<pre class="prettyprint lang-py">
+<pre class="prettyprint lang-py linenums">
 import tensorflow as tf
 
 def rmse(y, y_hat):
@@ -388,15 +389,17 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
-        
                       
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
+                      
+        
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
