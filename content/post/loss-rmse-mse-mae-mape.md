@@ -17,7 +17,14 @@ categories : [
 ---
 
 
-## Loss Functions
+# Loss Functions
 
-The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+The loss function calculates the difference between the output of your model and the "Ground Truth" or reference values.
 
+There are multiple loss functions for regression and classification pourposes:
+
+# MAE
+# MAPE
+# MSE
+# RMSE
+# RMSLE
