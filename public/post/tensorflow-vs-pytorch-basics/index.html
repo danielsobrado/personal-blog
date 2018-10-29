@@ -266,6 +266,68 @@ Output:
 [torch.FloatTensor of size 1]
 </span>
 </pre>
+
+<h2 id="let-s-implement-rmse">Let&rsquo;s implement RMSE</h2>
+
+<p>Root Mean Square Error (RMSE) is one of the most used loss functions in Deep Learning.</p>
+
+<p>Where Y is the true or reference sample and Y_hat is the predicted result:</p>
+
+<div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{Y_i} - Y_i)^2}{n}}}$$</span></div>
+
+<h3 id="rmse-using-numpy">RMSE using numpy</h3>
+
+<pre class="prettyprint lang-py">
+import numpy as np
+
+def rmse(y, y_hat):
+    y_actual=np.array(y)
+    y_pred=np.array(y_hat)
+    error=(y_actual-y_pred)**2
+    error_mean=round(np.mean(error))
+    error_sqrt=sqrt(error_mean)
+    return error_sqrt
+</pre>
+
+<h3 id="rmse-using-scikit-learn">RMSE using scikit-learn</h3>
+
+<pre class="prettyprint lang-py">
+import numpy as np
+from sklearn import metrics
+
+def rmse(y, y_hat):
+    return np.sqrt(metrics.mean_squared_error(y, y_hat))
+</pre>
+
+<h3 id="rmse-using-tensorflow">RMSE using Tensorflow</h3>
+
+<pre class="prettyprint lang-py">
+import torch
+
+def rmse(y, y_hat):
+    return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
+</pre>
+
+<h3 id="rmse-using-pytorch">RMSE using Pytorch</h3>
+
+<pre class="prettyprint lang-py">
+import tensorflow as tf
+
+def rmse(y, y_hat):
+    return torch.sqrt(torch.mean((y - y_hat).pow(2)))
+</pre>
+
+<h4 id="comparison">Comparison</h4>
+
+<p>You can also use a library like StatsModels and use it&rsquo;s own implementation: <a href="http://www.statsmodels.org/devel/generated/statsmodels.tools.eval_measures.rmse.html#statsmodels.tools.eval_measures.rmse">RMSE</a></p>
+
+<p>And investigate in github, how this has been <a href="https://github.com/statsmodels/statsmodels/blob/d7936886235aadf1f3ccf1fafb2411a0c1219da5/statsmodels/tools/eval_measures.py">implemented</a>.</p>
+
+<p>You can find valuable tips like:</p>
+
+<blockquote>
+<p>This uses <code>numpy.asanyarray</code> to convert the input. Whether this is the desired result or not depends on the array subclass, for  example numpy matrices will silently produce an incorrect result.</p>
+</blockquote>
     
         </div>
     </section>
@@ -326,15 +388,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         
                       
         
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -377,23 +439,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/DTfZsO4.png)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Kaggle 
-              #NLP  </span>
+              #Tensorflow 
+              #Pytorch  </span>
               
-              <h2 class="post-card-title">Kaggle: Mercari competition</h2>
+              <h2 class="post-card-title">Tensorflow vs Pytorch: Basics</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Mercari is Japanese unicorn startup, this competition is to predict the product’s selling price, it has a large NLP component given that the names, category names and item descriptions are provided. It is a kernels only competition and the evaluation metric is Root Mean Squared Logarithmic Error. We&rsquo;ll review the approaches used by the participants and the best performing kernels.</p>
+                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
               
           </section>
       </a>

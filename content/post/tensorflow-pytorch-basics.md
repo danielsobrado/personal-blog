@@ -143,3 +143,61 @@ Output:
 [torch.FloatTensor of size 1]
 </span>
 </pre>
+
+## Let's implement RMSE 
+
+Root Mean Square Error (RMSE) is one of the most used loss functions in Deep Learning.
+
+Where Y is the true or reference sample and Y_hat is the predicted result:
+
+<div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{Y_i} - Y_i)^2}{n}}}$$</span></div>
+
+### RMSE using numpy
+
+<pre class="prettyprint lang-py">
+import numpy as np
+
+def rmse(y, y_hat):
+    y_actual=np.array(y)
+    y_pred=np.array(y_hat)
+    error=(y_actual-y_pred)**2
+    error_mean=round(np.mean(error))
+    error_sqrt=sqrt(error_mean)
+    return error_sqrt
+</pre>
+
+### RMSE using scikit-learn
+
+<pre class="prettyprint lang-py">
+import numpy as np
+from sklearn import metrics
+
+def rmse(y, y_hat):
+    return np.sqrt(metrics.mean_squared_error(y, y_hat))
+</pre>
+
+### RMSE using Tensorflow
+<pre class="prettyprint lang-py">
+import torch
+
+def rmse(y, y_hat):
+    return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
+</pre>
+
+### RMSE using Pytorch
+<pre class="prettyprint lang-py">
+import tensorflow as tf
+
+def rmse(y, y_hat):
+    return torch.sqrt(torch.mean((y - y_hat).pow(2)))
+</pre>
+
+#### Comparison
+
+You can also use a library like StatsModels and use it's own implementation: [RMSE](http://www.statsmodels.org/devel/generated/statsmodels.tools.eval_measures.rmse.html#statsmodels.tools.eval_measures.rmse)
+
+And investigate in github, how this has been [implemented](https://github.com/statsmodels/statsmodels/blob/d7936886235aadf1f3ccf1fafb2411a0c1219da5/statsmodels/tools/eval_measures.py).
+
+You can find valuable tips like:
+
+> This uses ```numpy.asanyarray``` to convert the input. Whether this is the desired result or not depends on the array subclass, for  example numpy matrices will silently produce an incorrect result.
