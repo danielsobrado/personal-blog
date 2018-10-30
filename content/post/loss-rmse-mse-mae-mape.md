@@ -19,12 +19,25 @@ categories : [
 
 # Loss Functions
 
-The loss function calculates the difference between the output of your model and the "Ground Truth" or reference values.
+The loss function calculates the difference between the output of your model and the "Ground Truth" or actual values.
 
 There are multiple loss functions for regression and classification pourposes:
 
+All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliersd impact the final outcome.
+
 # MAE
 # MAPE
-# MSE
+# Mean Squared Error (MSE)
+
+Incorporates both the variance and the bias of the predictor.
+
 # RMSE
 # RMSLE
+
+When the differences from predicted and actuals are large the log function helps normalizing this.
+
+log(pi+1)−log(ai+1)
+
+Squared root of variance is the Standard Deviation.
+
+See: https://www.quora.com/What-is-the-difference-between-an-RMSE-and-RMSLE-logarithmic-error-and-does-a-high-RMSE-imply-low-RMSLE
