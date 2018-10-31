@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loss Functions on </title>
+    <link>https://www.danielsobrado.com/tags/loss-functions/</link>
+    <description>Recent content in Loss Functions on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 23 Jul 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.danielsobrado.com/tags/loss-functions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</title>
+      <link>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</link>
+      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</guid>
+      <description>Loss Functions The loss function calculates the difference between the output of your model and the &amp;ldquo;Ground Truth&amp;rdquo; or actual values.
+There are multiple loss functions for regression and classification pourposes:
+All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliersd impact the final outcome.
+MAE MAPE Mean Squared Error (MSE) Incorporates both the variance and the bias of the predictor.
+RMSE RMSLE When the differences from predicted and actuals are large the log function helps normalizing this.</description>
+    </item>
+    
+  </channel>
+</rss>
