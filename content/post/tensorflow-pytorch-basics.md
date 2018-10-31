@@ -57,7 +57,7 @@ $ conda install tensorflow-gpu
 
 Which one is better? Anaconda makes use of Intel Math Kernel Library for Deep Neural Networks or the MKL-DNN.
 
-![](https://i.imgur.com/bfktqrq.png)
+![](https://i.imgur.com/l6ZbUuP.png)
 
 Let´s verify the installation:
 
