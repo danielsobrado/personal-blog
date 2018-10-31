@@ -48,6 +48,17 @@ or the GPU version: (Usually you´ll require CUDA installed)
 $ pip install tensorflow-gpu
 ```
 
+Now we´ll use Anconda:
+
+```
+$ conda install tensorflow
+$ conda install tensorflow-gpu
+```
+
+Which one is better? Anaconda makes use of Intel Math Kernel Library for Deep Neural Networks or the MKL-DNN.
+
+![](https://i.imgur.com/bfktqrq.png)
+
 Let´s verify the installation:
 
 <pre class="prettyprint lang-py">
