@@ -18,7 +18,7 @@ categories : [
 ---
 
 
-## Introduction
+# Introduction
 
 The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
 
@@ -73,7 +73,6 @@ $ Tensorflow version: 1.10.0
 
 ### Tensors
 
-The home page, or landing page, is the first page that many visitors to a site see. It is the index.html file in the root directory of the website. Since Hugo writes files to the public/ directory, our home page is public/index.html.
 
 ### Graphs in Tensorflow
 
@@ -156,13 +155,13 @@ Output:
 </span>
 </pre>
 
-## Let's implement RMSE 
+# Let's implement RMSE 
 
 Root Mean Square Error (RMSE) is one of the most used loss functions in Deep Learning.
 
 Where Y is the true or reference sample and Y_hat is the predicted result:
 
-<div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{Y_i} - Y_i)^2}{n}}}$$</span></div>
+<div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
 
 ### RMSE using numpy
 
