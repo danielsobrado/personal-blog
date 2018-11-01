@@ -73,25 +73,6 @@ $ Tensorflow version: 1.10.0
 
 ### Tensors
 
-
-### Graphs in Tensorflow
-
-Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.
-
-Eager execution in TensorFlow v1.5
-
-<pre class="prettyprint lang-py linenums">
-x = [[2.]]
-m = tf.matmul(x, x)
-
-print(m)
-
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
-
 ### Placeholders
 
 Placeholders are use to feed external data into a graph, we don't need to initialize them.
@@ -131,16 +112,29 @@ The size of a variable is fixed and specied while constructionf the graph.
 
 ### Graphs and Sessions
 
-Tensorflow has a lazy evaluation in other words Tensorflow will first create a computational graph with the operations as the nodes of the graph and tensors to it’s edges and the execution happens when the graph executed in a session. This is commonly called as dataflow programming model specially for parallel computing.
+Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.
 
-#### Graphs
+A graph defines the computation. It doesn’t compute anything by itself, it doesn’t hold any values, it defines the operations specified the code.
 
-A graph defines the computation. It doesn’t compute anything, it doesn’t hold any values, it just defines the operations that you specified in your code.
+Tensorflow uses lazy evaluation (also called call-by-need), in other words, Tensorflow will generate a computational graph that gets executed inside a session.
 
-#### Graphs
-A session allows to execute graphs or part of graphs. It allocates resources (on one or more machines) for that and holds the actual values of intermediate results and variables.
+There is eager execution from TensorFlow v1.5 onwards.
 
-TensorFlow creates a default graph for you, so we don’t need the first two lines of the code above.
+<pre class="prettyprint lang-py linenums">
+x = [[2.]]
+m = tf.matmul(x, x)
+
+print(m)
+
+<span class="nocode" style="color:white">
+Output:
+$ Tensorflow version: 1.10.0
+</span>
+</pre>
+
+A session allows executing graphs and sections of graphs. It allocates resources (distributed or not) and contains the values of intermediate results and variables.
+
+TensorFlow creates a default graph for you, the first two lines of the code are optional.
 
 graph = tf.Graph()
 with graph.as_default():
