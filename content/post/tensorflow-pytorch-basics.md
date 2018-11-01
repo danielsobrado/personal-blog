@@ -73,6 +73,8 @@ $ Tensorflow version: 1.10.0
 
 ### Tensors
 
+To start with we can consider that Tensor a tensor is a matrix of any order, zero for a sigle value, one for a venctor, two for a matrix...
+
 ### Placeholders
 
 Placeholders are use to feed external data into a graph, we don't need to initialize them.
