@@ -94,7 +94,30 @@ $ Tensorflow version: 1.10.0
 
 ### Placeholders
 
+Placeholders are use to feed external data into a graph, we don't need to initialize them.
+
+The size of a placeholder is dynamic, can change during the execution.
+
+We use feed_dict to feed data into the placeholders.
+
+<pre class="prettyprint lang-py linenums">
+a = tf.placeholder(tf.float32)
+b = a+5
+with tf.Session() as session:
+    result = session.run(y, feed_dict={x: [1, 2, 3]})
+
+print(result)
+<span class="nocode" style="color:white">
+Output:
+$ 
+</span>
+</pre>
+
 ### Variables
+
+Variables are used to store the state of the graph, they need a value to be initialized during the declaration.
+
+The size of a variable is fixed and specied while constructionf the graph.
 
 ### Mathematical Operations
 
@@ -138,7 +161,7 @@ Pytorch provides two data abstractions Tensors and Variables.
 
 Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.
 
-We can slice tensors using the notation 'tensor[:slice index]'
+We can slice tensors using the notation 'tensor[:slice index]'.
 
 ### 
 <pre class="prettyprint lang-py linenums">
@@ -204,6 +227,10 @@ def rmse(y, y_hat):
 </pre>
 
 #### Comparison
+
+We've seen the basics of Tensorflow and Pytorch and apart for the syntaxis they don't look so difference, the main differences will come later, these are the fundations to start playing with them.
+
+We've also implemented one common loss function in several ways.
 
 You can also use a library like StatsModels and use it's own implementation: [RMSE](http://www.statsmodels.org/devel/generated/statsmodels.tools.eval_measures.rmse.html#statsmodels.tools.eval_measures.rmse)
 
