@@ -42,13 +42,13 @@ Let´s start with plain pip:
 $ pip install tensorflow
 ```
 
-or the GPU version: (Usually you´ll require CUDA installed)
+Or the GPU version: (Usually you´ll require CUDA installed)
 
 ```
 $ pip install tensorflow-gpu
 ```
 
-Now we´ll use Anconda:
+Now we´ll install it using Anaconda:
 
 ```
 $ conda install tensorflow
@@ -115,17 +115,19 @@ $
 </span>
 </pre>
 
-when we don't know the number of rows that we are going to feed we can use **None**: x = tf.placeholder(tf.float32, shape=(None,4))
+When we don't know the number of rows, that we are going to feed we can use **None**: x = tf.placeholder(tf.float32, shape=(None,4))
 
-Placeholders can be the input flows for our neural networks.
+> Placeholders can be the input flows for our neural networks.
 
 ### Variables
+
+Variables in Tensorflow, are similar to variables in standard programming languages, they can be initialized and modified later.
 
 Variables are used to store the state of the graph, they need a value to be initialized during the declaration.
 
 The size of a variable is fixed and specied while constructionf the graph.
 
-Variables can be the the weights in our neural networks.
+> Variables can be the the weights in our neural networks.
 
 ### Graphs and Sessions
 
