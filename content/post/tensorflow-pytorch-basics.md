@@ -100,6 +100,8 @@ The size of a placeholder is dynamic, can change during the execution.
 
 We use feed_dict to feed data into the placeholders.
 
+You can provide values for placeholders defined earlier to the session as python dictionary where the key is your placeholder name and value can be a list.
+
 <pre class="prettyprint lang-py linenums">
 a = tf.placeholder(tf.float32)
 b = a+5
@@ -125,7 +127,21 @@ The size of a variable is fixed and specied while constructionf the graph.
 
 Variables can be the the weights in our neural networks.
 
-### The Session
+### Graphs and Sessions
+
+Tensorflow has a lazy evaluation in other words Tensorflow will first create a computational graph with the operations as the nodes of the graph and tensors to it’s edges and the execution happens when the graph executed in a session. This is commonly called as dataflow programming model specially for parallel computing.
+
+#### Graphs
+
+A graph defines the computation. It doesn’t compute anything, it doesn’t hold any values, it just defines the operations that you specified in your code.
+
+#### Graphs
+A session allows to execute graphs or part of graphs. It allocates resources (on one or more machines) for that and holds the actual values of intermediate results and variables.
+
+TensorFlow creates a default graph for you, so we don’t need the first two lines of the code above.
+
+graph = tf.Graph()
+with graph.as_default():
 
 <pre class="prettyprint lang-py linenums">
 import tensorflow as tf
