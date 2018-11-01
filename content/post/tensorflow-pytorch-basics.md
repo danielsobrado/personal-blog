@@ -113,13 +113,17 @@ $
 </span>
 </pre>
 
+when we don't know the number of rows that we are going to feed we can use **None**: x = tf.placeholder(tf.float32, shape=(None,4))
+
+Placeholders can be the input flows for our neural networks.
+
 ### Variables
 
 Variables are used to store the state of the graph, they need a value to be initialized during the declaration.
 
 The size of a variable is fixed and specied while constructionf the graph.
 
-### Mathematical Operations
+Variables can be the the weights in our neural networks.
 
 ### The Session
 
