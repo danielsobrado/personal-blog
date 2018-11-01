@@ -75,6 +75,15 @@ $ Tensorflow version: 1.10.0
 
 To start with we can consider that Tensor a tensor is a matrix of any order, zero for a sigle value, one for a venctor, two for a matrix...
 
+* Boolean:  Boolean (tf.bool).
+* String:   Variable length (tf.string).
+* 8 bits:	Signed Integer (tf.int8) and Unsigned Integer (tf.uint8).
+* 16 bits:	Integer (tf.int16).
+* 32 bits:	Floating (tf.float32) and Integer (tf.int32).
+* 64 bits:	Floating (tf.float64) and Integer (tf.int64).
+* Complex 64/128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)
+* Quantized Ops 8/32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).
+
 ### Placeholders
 
 Placeholders are use to feed external data into a graph, we don't need to initialize them.
@@ -180,6 +189,13 @@ Pytorch provides two data abstractions Tensors and Variables.
 Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.
 
 We can slice tensors using the notation 'tensor[:slice index]'.
+
+Types of tensors supported:
+
+* 32 bits: Float and Int
+* 64 bits: Float and Int
+* 16 bits: Float and Int
+* 8 bits: Signed and Unsigned
 
 ### 
 <pre class="prettyprint lang-py linenums">

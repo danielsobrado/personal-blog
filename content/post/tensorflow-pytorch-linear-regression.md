@@ -2,10 +2,10 @@
 description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
 author: "Daniel Sobrado"
 date: 2018-09-25
-linktitle: Tensorflow Pytorch Basics
+linktitle: Tensorflow Pytorch Linear Regression
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
-title: "Tensorflow vs Pytorch: Basics"
+title: "Tensorflow vs Pytorch: Linear Regression"
 weight: 10
 image: https://i.imgur.com/k3fRAC4.jpg
 tags : [
@@ -18,7 +18,7 @@ categories : [
 ---
 
 
-## Introduction
+## Introduction to Linear Regression
 
 The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
 
