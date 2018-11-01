@@ -168,12 +168,12 @@
 <pre><code>$ pip install tensorflow
 </code></pre>
 
-<p>or the GPU version: (Usually you´ll require CUDA installed)</p>
+<p>Or the GPU version: (Usually you´ll require CUDA installed)</p>
 
 <pre><code>$ pip install tensorflow-gpu
 </code></pre>
 
-<p>Now we´ll use Anconda:</p>
+<p>Now we´ll install it using Anaconda:</p>
 
 <pre><code>$ conda install tensorflow
 $ conda install tensorflow-gpu
@@ -197,11 +197,58 @@ $ Tensorflow version: 1.10.0
 
 <h3 id="tensors">Tensors</h3>
 
-<h3 id="graphs-in-tensorflow">Graphs in Tensorflow</h3>
+<p>To start with we can consider that Tensor a tensor is a matrix of any order, zero for a sigle value, one for a venctor, two for a matrix&hellip;</p>
+
+<h3 id="placeholders">Placeholders</h3>
+
+<p>Placeholders are use to feed external data into a graph, we don&rsquo;t need to initialize them.</p>
+
+<p>The size of a placeholder is dynamic, can change during the execution.</p>
+
+<p>We use feed_dict to feed data into the placeholders.</p>
+
+<p>You can provide values for placeholders defined earlier to the session as python dictionary where the key is your placeholder name and value can be a list.</p>
+
+<pre class="prettyprint lang-py linenums">
+a = tf.placeholder(tf.float32)
+b = a+5
+with tf.Session() as session:
+    result = session.run(y, feed_dict={x: [1, 2, 3]})
+
+print(result)
+<span class="nocode" style="color:white">
+Output:
+$ 
+</span>
+</pre>
+
+<p>When we don&rsquo;t know the number of rows, that we are going to feed we can use <strong>None</strong>: x = tf.placeholder(tf.float32, shape=(None,4))</p>
+
+<blockquote>
+<p>Placeholders can be the input flows for our neural networks.</p>
+</blockquote>
+
+<h3 id="variables">Variables</h3>
+
+<p>Variables in Tensorflow, are similar to variables in standard programming languages, they can be initialized and modified later.</p>
+
+<p>Variables are used to store the state of the graph, they need a value to be initialized during the declaration.</p>
+
+<p>The size of a variable is fixed and specied while constructionf the graph.</p>
+
+<blockquote>
+<p>Variables can be the the weights in our neural networks.</p>
+</blockquote>
+
+<h3 id="graphs-and-sessions">Graphs and Sessions</h3>
 
 <p>Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.</p>
 
-<p>Eager execution in TensorFlow v1.5</p>
+<p>A graph defines the computation. It doesn’t compute anything by itself, it doesn’t hold any values, it defines the operations specified the code.</p>
+
+<p>Tensorflow uses lazy evaluation (also called call-by-need), in other words, Tensorflow will generate a computational graph that gets executed inside a session.</p>
+
+<p>There is eager execution from TensorFlow v1.5 onwards.</p>
 
 <pre class="prettyprint lang-py linenums">
 x = [[2.]]
@@ -215,13 +262,12 @@ $ Tensorflow version: 1.10.0
 </span>
 </pre>
 
-<h3 id="placeholders">Placeholders</h3>
+<p>A session allows executing graphs and sections of graphs. It allocates resources (distributed or not) and contains the values of intermediate results and variables.</p>
 
-<h3 id="variables">Variables</h3>
+<p>TensorFlow creates a default graph for you, the first two lines of the code are optional.</p>
 
-<h3 id="mathematical-operations">Mathematical Operations</h3>
-
-<h3 id="the-session">The Session</h3>
+<p>graph = tf.Graph()
+with graph.as_default():</p>
 
 <pre class="prettyprint lang-py linenums">
 import tensorflow as tf
@@ -260,7 +306,7 @@ $ [5]
 
 <p>Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.</p>
 
-<p>We can slice tensors using the notation &lsquo;tensor[:slice index]&rsquo;</p>
+<p>We can slice tensors using the notation &lsquo;tensor[:slice index]&lsquo;.</p>
 
 <pre class="prettyprint lang-py linenums">
 import torch
@@ -327,6 +373,10 @@ def rmse(y, y_hat):
 </pre>
 
 <h4 id="comparison">Comparison</h4>
+
+<p>We&rsquo;ve seen the basics of Tensorflow and Pytorch and apart for the syntaxis they don&rsquo;t look so difference, the main differences will come later, these are the fundations to start playing with them.</p>
+
+<p>We&rsquo;ve also implemented one common loss function in several ways.</p>
 
 <p>You can also use a library like StatsModels and use it&rsquo;s own implementation: <a href="http://www.statsmodels.org/devel/generated/statsmodels.tools.eval_measures.rmse.html#statsmodels.tools.eval_measures.rmse">RMSE</a></p>
 
@@ -397,15 +447,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
+        
                       
         
-          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -448,22 +498,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/isyQF4V.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Loss Functions  </span>
+              #Tensorflow 
+              #Pytorch  </span>
               
-              <h2 class="post-card-title">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</h2>
+              <h2 class="post-card-title">Tensorflow vs Pytorch: Basics</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases&hellip; MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences&hellip;</p>
+                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
               
           </section>
       </a>
