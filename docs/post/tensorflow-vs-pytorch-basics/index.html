@@ -206,13 +206,16 @@ $ Tensorflow version: 1.10.0
 <li>16 bits:  Integer (tf.int16).</li>
 <li>32 bits:  Floating (tf.float32) and Integer (tf.int32).</li>
 <li>64 bits:  Floating (tf.float64) and Integer (tf.int64).</li>
-<li>Complex <sup>64</sup>&frasl;<sub>128</sub> bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)</li>
-<li>Quantized Ops <sup>8</sup>&frasl;<sub>32</sub> bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).</li>
+<li>Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)</li>
+<li>Quantized Ops 8 and 32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).</li>
 </ul>
+
+<p>It’s possible to change the type of a tensor by using casting functions such as <code>tf.to_double()</code>, <code>tf.to_float()</code>, <code>tf.to_int32()</code>,
+<code>tf.to_int64()</code>&hellip;</p>
 
 <h4 id="create-tensor-with-zeros">Create tensor with zeros</h4>
 
-<p>We can initialize tensors with zeros or ones using ghe following methods <code>tf.zeros()</code> and <code>tf.ones()</code>.</p>
+<p>We can initialize tensors with zeros or ones using the following methods <code>tf.zeros()</code> and <code>tf.ones()</code>:</p>
 
 <pre class="prettyprint lang-py linenums">
 tf.zeros(3)
@@ -223,23 +226,79 @@ $ <tf.Tensor 'zeros:0' shape=(3,) dtype=float32>
 </span>
 </pre>
 
-<h4 id="evaluate-the-value-of-a-tensor">Evaluate the value of a tensor</h4>
+<p>It is possile to define the type of the values stored in your tensor by using <code>dtype</code>, e.g. <code>tf.zeros((3,3), dtype=tf.int32)</code></p>
+
+<h4 id="evaluate-the-value-of-a-tensor-or-ones">Evaluate the value of a tensor or ones</h4>
 
 <p>Using <code>tf.Tensor.eval()</code> we&rsquo;ll get the value of a tensor evaluated and returned as a numpy array <code>numpy.ndarray</code>.</p>
 
 <pre class="prettyprint lang-py linenums">
-a = tf.zeros(3)
+a = tf.ones(3)
 a.eval()
 
 <span class="nocode" style="color:white">
 Output:
-$ array([ 0., 0., 0.], dtype=float32)
+$ array([ 1., 1., 1.], dtype=float32)
 </span>
 </pre>
 
 <p>Note: we need to initialize <code>tf.InteractiveSession()</code> to get the values returned to us during the session.</p>
 
+<h4 id="filling-a-tensor-with-other-values">Filling a tensor with other values</h4>
+
+<p>Using <code>tf.fill</code></p>
+
+<pre class="prettyprint lang-py linenums">
+a = tf.fill((2, 2), value=3.)
+a.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([[ 3., 3.],
+$        [ 3., 3.]], dtype=float32)
+</span>
+</pre>
+
+<h4 id="filling-with-random-normally-distributed-values">Filling with random normally distributed values</h4>
+
+<p>Using <code>tf.random_normal()</code></p>
+
+<p><code>tf.truncated_normal()</code></p>
+
+<pre class="prettyprint lang-py linenums">
+a = tf.random_normal((2, 2), mean=0, stddev=1)
+a.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([[-0.73437649, -0.77678096],
+$ [ 0.51697761, 1.15063596]], dtype=float32)
+</span>
+</pre>
+
+<p>You can also use <code>tf.random_uniform()</code></p>
+
+<h4 id="tensor-operations">Tensor operations</h4>
+
+<p>Adding, substracting, multiplying and dividing is done with simple operations
+Creating an identity matrix by using <code>tf.eye</code>
+Matrix transpose <code>tf.matrix_transpose</code> and matrix multiplication <code>tf.matmul</code></p>
+
 <h3 id="constants">Constants</h3>
+
+<p>Using <code>tf.constant</code></p>
+
+<pre class="prettyprint lang-py linenums">
+a = tf.constant(4)
+a.eval()
+
+
+<span class="nocode" style="color:white">
+Output:
+$ 4
+
+</span>
+</pre>
 
 <h3 id="placeholders">Placeholders</h3>
 
@@ -381,7 +440,9 @@ Output:
 
 <div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
 
-<h3 id="rmse-using-numpy">RMSE using numpy</h3>
+<h4 id="rmse-using-numpy">RMSE using numpy</h4>
+
+<p>We can use plain python with numpy, to calculate RMSE, we can see it is complete calculation step by step:</p>
 
 <pre class="prettyprint lang-py linenums">
 import numpy as np
@@ -395,7 +456,9 @@ def rmse(y, y_hat):
     return error_sqrt
 </pre>
 
-<h3 id="rmse-using-scikit-learn">RMSE using scikit-learn</h3>
+<h4 id="rmse-using-scikit-learn">RMSE using scikit-learn</h4>
+
+<p>With the help of scikit-learn we can save time and lines of code by using:</p>
 
 <pre class="prettyprint lang-py linenums">
 import numpy as np
@@ -405,7 +468,9 @@ def rmse(y, y_hat):
     return np.sqrt(metrics.mean_squared_error(y, y_hat))
 </pre>
 
-<h3 id="rmse-using-tensorflow">RMSE using Tensorflow</h3>
+<h4 id="rmse-using-tensorflow">RMSE using Tensorflow</h4>
+
+<p>The implementation of Tensorflow doesn&rsquo;t look too different to the one in scikit-learn, but in this case we are running it into a graph and session and this can be distributed and take advantage of the GPU:</p>
 
 <pre class="prettyprint lang-py linenums">
 import torch
@@ -414,7 +479,9 @@ def rmse(y, y_hat):
     return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
 </pre>
 
-<h3 id="rmse-using-pytorch">RMSE using Pytorch</h3>
+<h4 id="rmse-using-pytorch">RMSE using Pytorch</h4>
+
+<p>Pretty much the same with Pytorch:</p>
 
 <pre class="prettyprint lang-py linenums">
 import tensorflow as tf
@@ -500,11 +567,13 @@ s.setAttribute('data-timestamp', +new Date());
         <ul>
           <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
+                      
         
-          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

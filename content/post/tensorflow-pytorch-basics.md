@@ -84,9 +84,12 @@ To start with we can consider that Tensor a tensor is a matrix of any order, zer
 * Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)
 * Quantized Ops 8 and 32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).
 
+It’s possible to change the type of a tensor by using casting functions such as `tf.to_double()`, `tf.to_float()`, `tf.to_int32()`,
+`tf.to_int64()`...
+
 #### Create tensor with zeros
 
-We can initialize tensors with zeros or ones using ghe following methods `tf.zeros()` and `tf.ones()`.
+We can initialize tensors with zeros or ones using the following methods `tf.zeros()` and `tf.ones()`:
 
 <pre class="prettyprint lang-py linenums">
 tf.zeros(3)
@@ -96,6 +99,8 @@ Output:
 $ <tf.Tensor 'zeros:0' shape=(3,) dtype=float32>
 </span>
 </pre>
+
+It is possile to define the type of the values stored in your tensor by using `dtype`, e.g. `tf.zeros((3,3), dtype=tf.int32)`
 
 #### Evaluate the value of a tensor or ones
 
@@ -146,6 +151,12 @@ $ [ 0.51697761, 1.15063596]], dtype=float32)
 </pre>
 
 You can also use `tf.random_uniform()`
+
+#### Tensor operations
+
+Adding, substracting, multiplying and dividing is done with simple operations
+Creating an identity matrix by using `tf.eye`
+Matrix transpose `tf.matrix_transpose` and matrix multiplication `tf.matmul`
 
 ### Constants
 
@@ -301,6 +312,8 @@ Where Y is the true or reference sample and Y_hat is the predicted result:
 
 #### RMSE using numpy
 
+We can use plain python with numpy, to calculate RMSE, we can see it is complete calculation step by step:
+
 <pre class="prettyprint lang-py linenums">
 import numpy as np
 
@@ -315,6 +328,8 @@ def rmse(y, y_hat):
 
 #### RMSE using scikit-learn
 
+With the help of scikit-learn we can save time and lines of code by using:
+
 <pre class="prettyprint lang-py linenums">
 import numpy as np
 from sklearn import metrics
@@ -324,6 +339,9 @@ def rmse(y, y_hat):
 </pre>
 
 #### RMSE using Tensorflow
+
+The implementation of Tensorflow doesn't look too different to the one in scikit-learn, but in this case we are running it into a graph and session and this can be distributed and take advantage of the GPU:
+
 <pre class="prettyprint lang-py linenums">
 import torch
 
@@ -331,7 +349,10 @@ def rmse(y, y_hat):
     return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
 </pre>
 
-### RMSE using Pytorch
+#### RMSE using Pytorch
+
+Pretty much the same with Pytorch:
+
 <pre class="prettyprint lang-py linenums">
 import tensorflow as tf
 
