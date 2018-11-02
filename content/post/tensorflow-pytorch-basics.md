@@ -81,8 +81,8 @@ To start with we can consider that Tensor a tensor is a matrix of any order, zer
 * 16 bits:	Integer (tf.int16).
 * 32 bits:	Floating (tf.float32) and Integer (tf.int32).
 * 64 bits:	Floating (tf.float64) and Integer (tf.int64).
-* Complex 64/128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)
-* Quantized Ops 8/32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).
+* Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)
+* Quantized Ops 8 and 32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).
 
 #### Create tensor with zeros
 
@@ -97,25 +97,71 @@ $ <tf.Tensor 'zeros:0' shape=(3,) dtype=float32>
 </span>
 </pre>
 
-#### Evaluate the value of a tensor
+#### Evaluate the value of a tensor or ones
 
 Using `tf.Tensor.eval()` we'll get the value of a tensor evaluated and returned as a numpy array `numpy.ndarray`.
 
 <pre class="prettyprint lang-py linenums">
-a = tf.zeros(3)
+a = tf.ones(3)
 a.eval()
 
 <span class="nocode" style="color:white">
 Output:
-$ array([ 0., 0., 0.], dtype=float32)
+$ array([ 1., 1., 1.], dtype=float32)
 </span>
 </pre>
 
 Note: we need to initialize `tf.InteractiveSession()` to get the values returned to us during the session.
 
+#### Filling a tensor with other values
+
+Using `tf.fill`
+
+<pre class="prettyprint lang-py linenums">
+a = tf.fill((2, 2), value=3.)
+a.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([[ 3., 3.],
+$        [ 3., 3.]], dtype=float32)
+</span>
+</pre>
+
+#### Filling with random normally distributed values
+
+Using `tf.random_normal()`
+
+`tf.truncated_normal()`
+
+<pre class="prettyprint lang-py linenums">
+a = tf.random_normal((2, 2), mean=0, stddev=1)
+a.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([[-0.73437649, -0.77678096],
+$ [ 0.51697761, 1.15063596]], dtype=float32)
+</span>
+</pre>
+
+You can also use `tf.random_uniform()`
+
 ### Constants
 
+Using `tf.constant`
 
+<pre class="prettyprint lang-py linenums">
+a = tf.constant(4)
+a.eval()
+
+
+<span class="nocode" style="color:white">
+Output:
+$ 4
+
+</span>
+</pre>
 
 ### Placeholders
 
@@ -253,7 +299,7 @@ Where Y is the true or reference sample and Y_hat is the predicted result:
 
 <div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
 
-### RMSE using numpy
+#### RMSE using numpy
 
 <pre class="prettyprint lang-py linenums">
 import numpy as np
@@ -267,7 +313,7 @@ def rmse(y, y_hat):
     return error_sqrt
 </pre>
 
-### RMSE using scikit-learn
+#### RMSE using scikit-learn
 
 <pre class="prettyprint lang-py linenums">
 import numpy as np
@@ -277,7 +323,7 @@ def rmse(y, y_hat):
     return np.sqrt(metrics.mean_squared_error(y, y_hat))
 </pre>
 
-### RMSE using Tensorflow
+#### RMSE using Tensorflow
 <pre class="prettyprint lang-py linenums">
 import torch
 
