@@ -1,7 +1,7 @@
 ---
 description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
 author: "Daniel Sobrado"
-date: 2018-09-25
+date: 2016-09-25
 linktitle: Tensorflow Pytorch Basics
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
