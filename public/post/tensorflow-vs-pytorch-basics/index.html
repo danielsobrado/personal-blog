@@ -199,6 +199,48 @@ $ Tensorflow version: 1.10.0
 
 <p>To start with we can consider that Tensor a tensor is a matrix of any order, zero for a sigle value, one for a venctor, two for a matrix&hellip;</p>
 
+<ul>
+<li>Boolean:  Boolean (tf.bool).</li>
+<li>String:   Variable length (tf.string).</li>
+<li>8 bits:   Signed Integer (tf.int8) and Unsigned Integer (tf.uint8).</li>
+<li>16 bits:  Integer (tf.int16).</li>
+<li>32 bits:  Floating (tf.float32) and Integer (tf.int32).</li>
+<li>64 bits:  Floating (tf.float64) and Integer (tf.int64).</li>
+<li>Complex <sup>64</sup>&frasl;<sub>128</sub> bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)</li>
+<li>Quantized Ops <sup>8</sup>&frasl;<sub>32</sub> bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).</li>
+</ul>
+
+<h4 id="create-tensor-with-zeros">Create tensor with zeros</h4>
+
+<p>We can initialize tensors with zeros or ones using ghe following methods <code>tf.zeros()</code> and <code>tf.ones()</code>.</p>
+
+<pre class="prettyprint lang-py linenums">
+tf.zeros(3)
+
+<span class="nocode" style="color:white">
+Output:
+$ <tf.Tensor 'zeros:0' shape=(3,) dtype=float32>
+</span>
+</pre>
+
+<h4 id="evaluate-the-value-of-a-tensor">Evaluate the value of a tensor</h4>
+
+<p>Using <code>tf.Tensor.eval()</code> we&rsquo;ll get the value of a tensor evaluated and returned as a numpy array <code>numpy.ndarray</code>.</p>
+
+<pre class="prettyprint lang-py linenums">
+a = tf.zeros(3)
+a.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([ 0., 0., 0.], dtype=float32)
+</span>
+</pre>
+
+<p>Note: we need to initialize <code>tf.InteractiveSession()</code> to get the values returned to us during the session.</p>
+
+<h3 id="constants">Constants</h3>
+
 <h3 id="placeholders">Placeholders</h3>
 
 <p>Placeholders are use to feed external data into a graph, we don&rsquo;t need to initialize them.</p>
@@ -307,6 +349,15 @@ $ [5]
 <p>Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.</p>
 
 <p>We can slice tensors using the notation &lsquo;tensor[:slice index]&lsquo;.</p>
+
+<p>Types of tensors supported:</p>
+
+<ul>
+<li>32 bits: Float and Int</li>
+<li>64 bits: Float and Int</li>
+<li>16 bits: Float and Int</li>
+<li>8 bits: Signed and Unsigned</li>
+</ul>
 
 <pre class="prettyprint lang-py linenums">
 import torch
@@ -447,15 +498,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
-        
-                      
-        
-          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -498,19 +547,19 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">
       <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #Tensorflow 
               #Pytorch  </span>
               
-              <h2 class="post-card-title">Tensorflow vs Pytorch: Basics</h2>
+              <h2 class="post-card-title">Tensorflow vs Pytorch: Linear Regression</h2>
           </header>
           <section class="post-card-excerpt">
                

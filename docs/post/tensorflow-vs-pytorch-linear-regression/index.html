@@ -4,39 +4,39 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Basic probability concepts &middot; </title>
+    <title>Tensorflow vs Pytorch: Linear Regression &middot; </title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="https://www.danielsobrado.com/favicon.ico" />
-    <link rel="canonical" href="https://www.danielsobrado.com/post/basic-probability-concepts/" />
+    <link rel="canonical" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/" />
 
-     <meta name="description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. " /> 
+     <meta name="description" content="Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&#39;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras." /> 
 
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="https://i.imgur.com/IenFUVF.jpg"/>
+    <meta name="twitter:image" content="https://i.imgur.com/k3fRAC4.jpg"/>
     
  
-    <meta name="twitter:title" content="Basic probability concepts"/>
-    <meta name="twitter:description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. "/>
-    <meta name="twitter:url" content="https://www.danielsobrado.com/post/basic-probability-concepts/" />
+    <meta name="twitter:title" content="Tensorflow vs Pytorch: Linear Regression"/>
+    <meta name="twitter:description" content="Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&#39;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."/>
+    <meta name="twitter:url" content="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/" />
     <meta name="twitter:site" content="@DalamarBlog"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Basic probability concepts &middot; Daniel Sobrado" />
-    <meta property="og:url" content="https://www.danielsobrado.com/post/basic-probability-concepts/" />
+    <meta property="og:title" content="Tensorflow vs Pytorch: Linear Regression &middot; Daniel Sobrado" />
+    <meta property="og:url" content="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/" />
     <meta property="article:publisher" content="https://www.facebook.com/j.daniel.sobrado" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. " />
+    <meta property="og:description" content="Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&#39;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras." />
 
-    <meta property="article:published_time" content="2014-03-10T00:00:00Z" />
-    <meta property="article:tag" content="probability" /><meta property="article:tag" content="bayesian" />
+    <meta property="article:published_time" content="2018-09-25T00:00:00Z" />
+    <meta property="article:tag" content="Tensorflow" /><meta property="article:tag" content="Pytorch" />
 
-    <meta property="og:image" content="https://i.imgur.com/IenFUVF.jpg"/>
+    <meta property="og:image" content="https://i.imgur.com/k3fRAC4.jpg"/>
 
 
     <meta name="generator" content="Hugo 0.48" />
@@ -132,98 +132,140 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2014-03-10">10 March 2014</time>
-                <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/probability/">#probability</a>&nbsp;<a href="https://www.danielsobrado.com/tags/bayesian/">#bayesian</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2018-09-25">25 September 2018</time>
+                <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/tensorflow/">#Tensorflow</a>&nbsp;<a href="https://www.danielsobrado.com/tags/pytorch/">#Pytorch</a>&nbsp;
         </section>
-        <h1 class="post-full-title">Basic probability concepts</h1>
+        <h1 class="post-full-title">Tensorflow vs Pytorch: Linear Regression</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/IenFUVF.jpg)">
+    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction-to-linear-regression">Introduction to Linear Regression</h2>
 
-<p>In this series of articles, We&rsquo;ll dig deep into understanding <code>Bayesian inference</code>, starting from the basics.</p>
+<p>The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.</p>
 
-<p>The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.</p>
+<p>Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.</p>
 
-<h1 id="tl-dr">TL;DR</h1>
+<p>Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</p>
 
-<p>Let´s take the following poker cards as an example:</p>
+<p>The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters.</p>
 
-<p><img src="https://i.imgur.com/rypTeme.jpg" alt="" /></p>
+<h2 id="introduction-to-tensorflow">Introduction to Tensorflow</h2>
 
-<p>Our <code>experiment</code> is to take two cards for the deck, one at a time, each card extraction is an <code>event</code>. We define as outcomes that a card is of a defined</p>
+<p>Tensorflow is Google´s open source solution for computing large amounts of data, it is a symbolic math library based on data-flow programming.</p>
 
-<p>If we introduce the card in the deck again before extracting the next one, we´ll have <code>indepedent</code> events, if we don´t the events will be <code>dependent</code>, due to the fact that the fact of removing one card from the deck will alter the probabilities of the next event.</p>
+<h3 id="installation">Installation</h3>
 
-<h1 id="concepts">Concepts</h1>
+<p>You can install Tensorflow using pip or using your favourite virtual environments and package managers like Anaconda or VirtualEnv.</p>
 
-<p>Let´s illustrate these concepts with poker cards and rolling dices:</p>
+<p>Let´s start with plain pip:</p>
 
-<ul>
-<li>An <strong>experiment</strong> is a well-defined action, that might result in a number of outcomes.</li>
-<li><strong>Outcome</strong>: Possible result of an <code>experiment</code>. Each outcome is unique, and different outcomes are <code>mutually exclusive</code>.</li>
-<li>The <strong>sample space</strong> is the set of all possible outcomes.</li>
-<li>An <strong>event</strong> is a collection of outcomes.</li>
+<pre><code>$ pip install tensorflow
+</code></pre>
 
-<li><p>A <strong>probability</strong> is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.
-<div id="el"><span>$$P ( hearts ) = 0.25$$</span></div>
-The probability of an event E <strong>P(E)</strong> is the number of possible outcomes of event E <strong>n(E)</strong> divided by the number of outcomes of the sample space <strong>n(S)</strong>.
-<div id="el"><span>$$\mathrm { P } ( \mathrm { E } ) = \frac { \mathrm { n } ( \mathrm { E } ) } { \mathrm { n } ( \mathrm { S } ) }$$</span></div></p></li>
+<p>or the GPU version: (Usually you´ll require CUDA installed)</p>
 
-<li><p>We call mutually exclusive events, to two or more events that cannot happen simultaneusly. For example in Poker cards we cannot draw a card that is hearts and diamonds at the same time, but we can have a card that is 2 and diamonds.</p></li>
-</ul>
+<pre><code>$ pip install tensorflow-gpu
+</code></pre>
 
-<div id="el"><span>$$P ( hearts \cup diamonds ) = P ( hearts ) + P ( diamonds )$$</span></div>
+<p>Let´s verify the installation:</p>
 
-<ul>
-<li>A <strong>conditional probability</strong> is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
-<div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div></li>
-</ul>
+<pre class="prettyprint lang-py">
+import tensorflow as tf
+print("Tensorflow version: {}".format(tf.__version__))
 
-<blockquote>
-<p>We roll a six-sided dice, this is an experiment, we have 6 possible outcomes. If we get the number <em>3</em> by rolling the dice, we´ll say that from this event of rolling the dice we observed the outcome <em>3</em>, that has a prior probability of <sup>1</sup>&frasl;<sub>6</sub>.</p>
-</blockquote>
+<span class="nocode" style="color:white">
+Output:
+$ Tensorflow version: 1.10.0
+</span>
+</pre>
 
-<ul>
-<li>We´ll say that 2 events are independent if one event doesn´t give any information about another event. </br></br>
-We have the following outcomes that we want to analize: </br>
-A = Outcome 3 in the first dice. </br>
-B = Outcome 3 in the second dice.
-<div id="el"><span>$$P ( A | B ) = P ( A )$$</span></div>
-We´ll read &ldquo;<em>The probability of observing 3 in the first dice given that we got 3 in the second dice is the observing of getting 3 in the first dice.</em>&ldquo;</li>
-</ul>
+<h3 id="tensors">Tensors</h3>
 
-<blockquote>
-<p>Rolling a second dice doesn´t give us any information about the first dice.</p>
-</blockquote>
+<p>The home page, or landing page, is the first page that many visitors to a site see. It is the index.html file in the root directory of the website. Since Hugo writes files to the public/ directory, our home page is public/index.html.</p>
 
-<p>When two events are <em>independent</em> the probability of both of them occurring is:</p>
+<h3 id="graphs-in-tensorflow">Graphs in Tensorflow</h3>
 
-<div id="el"><span>$$P ( A \cap B ) = P ( A ) * P ( B )$$</span></div>
+<p>Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.</p>
 
-<p>We can generalize this to multiple events:</p>
+<p>Eager execution in TensorFlow v1.5</p>
 
-<div id="el"><span>$$P \left[ \bigcap _ { i = 1 } ^ { n } A _ { i } \right] = \prod _ { i = 1 } ^ { n } P \left( A _ { i } \right)$$</span></div>
+<pre class="prettyprint lang-py">
+x = [[2.]]
+m = tf.matmul(x, x)
 
-<p>Here A means rolling a dice, it can be the same dice or different dices.</p>
+print(m)
+<span class="nocode" style="color:white">
+Output:
+$ Tensorflow version: 1.10.0
+</span>
+</pre>
 
-<p>When two events are <em>dependent</em> the probability of both of them occurring is:
-<div id="el"><span>$$\mathrm { P } ( \mathrm { A } \text { and } \mathrm { B } ) = \mathrm { P } ( \mathrm { A } ) \times \mathrm { P } ( \mathrm { B } | \mathrm { A } ) $$</span></div></p>
+<h3 id="placeholders">Placeholders</h3>
 
-<h4 id="prior-and-posterior-distributions">Prior and Posterior distributions</h4>
+<h3 id="variables">Variables</h3>
 
-<p></br>
-The <strong>prior probability distribution</strong> (prior), is ones beliefs about its quantity before some evidence is taken into account.</p>
+<h3 id="mathematical-operations">Mathematical Operations</h3>
 
-<p>The <strong>posterior probability distribution</strong> (posterior), is the revised probability of an event occurring after some evidence has been taken into account.</p>
+<h3 id="the-session">The Session</h3>
 
-<p>We´ll see in the <a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">next article</a> more about these probability distributions.</p>
+<pre class="prettyprint lang-py">
+import tensorflow as tf
+x = tf.constant([3])
+y = tf.constant([4])
+z = tf.add(x,y)
+session = tf.Session()
+result = session.run(z)
+print(result)
+
+<span class="nocode" style="color:white">
+Output:
+$ [5]
+</span>
+</pre>
+
+<h2 id="introduction-to-pytorch">Introduction to Pytorch</h2>
+
+<p>Pytorch is Facebook&rsquo;s solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.</p>
+
+<p>Pytorch is known for its simplicity. It uses Dynamic computation for greater flexibility.</p>
+
+<h3 id="installation-1">Installation</h3>
+
+<pre><code>$ conda install pytorch cuda90 
+</code></pre>
+
+<pre><code>$ conda install pytorch-cpu
+</code></pre>
+
+<p>Since PyTorch 0.4.0, there is official Window Support.</p>
+
+<h3 id="tensors-and-variables">Tensors and Variables</h3>
+
+<p>Pytorch provides two data abstractions Tensors and Variables.</p>
+
+<p>Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.</p>
+
+<p>We can slice tensors using the notation &lsquo;tensor[:slice index]&rsquo;</p>
+
+<pre class="prettyprint lang-py">
+import torch
+x = torch.Tensor([3])
+y = torch.Tensor([4])
+z = x+y
+print(z)  
+
+<span class="nocode" style="color:white">
+Output:
+ 7
+[torch.FloatTensor of size 1]
+</span>
+</pre>
     
         </div>
     </section>
@@ -249,8 +291,8 @@ The <strong>prior probability distribution</strong> (prior), is ones beliefs abo
 
 
 var disqus_config = function () {
-this.page.url = "https:\/\/www.danielsobrado.com\/post\/basic-probability-concepts\/";  
-this.page.identifier = "https:\/\/www.danielsobrado.com\/post\/basic-probability-concepts\/"; 
+this.page.url = "https:\/\/www.danielsobrado.com\/post\/tensorflow-vs-pytorch-linear-regression\/";  
+this.page.identifier = "https:\/\/www.danielsobrado.com\/post\/tensorflow-vs-pytorch-linear-regression\/"; 
 };
 
 (function() { 
@@ -276,7 +318,7 @@ s.setAttribute('data-timestamp', +new Date());
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash; Daniel Sobrado &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="https://www.danielsobrado.com/tags/probability/">#probability</a></h3>
+        <h3 class="read-next-card-header-title"><a href="https://www.danielsobrado.com/tags/tensorflow/">#Tensorflow</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -284,20 +326,18 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+        
           <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
-        
-                      
         
           <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="https://www.danielsobrado.com/tags/probability/">See all related posts →</a>
+        <a href="https://www.danielsobrado.com/tags/tensorflow/">See all related posts →</a>
     </footer>
 </article>
 
@@ -305,24 +345,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/5O23Ebp.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #probability 
-              #bayesian  </span>
+              #Tensorflow 
+              #Pytorch  </span>
               
-              <h2 class="post-card-title">Prior and Posterior distributions</h2>
+              <h2 class="post-card-title">Tensorflow vs Pytorch: Basics</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
-The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account.</p>
+                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
               
           </section>
       </a>
@@ -337,24 +376,22 @@ The posterior probability distribution, is the revised probability of an event o
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/uPDsoHX.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/isyQF4V.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Python 
-              #Pandas 
-              #Datasets  </span>
+              #Loss Functions  </span>
               
-              <h2 class="post-card-title">Worldbank datasets: Jobs and economic indicators</h2>
+              <h2 class="post-card-title">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>World Bank Open Data contains multiple datasets covering demographics, as well as a large number of economic and development indicators from across the world. Let´s start looking at jobs and economic indicators dating from 1990. While we show how to read csvs and excel files using the Pandas library.</p>
+                <p>In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases&hellip; MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences&hellip;</p>
               
           </section>
       </a>
@@ -378,17 +415,17 @@ The posterior probability distribution, is the revised probability of an event o
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Basic probability concepts</div>
+  <div class="floating-header-title">Tensorflow vs Pytorch: Linear Regression</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Basic%20probability%20concepts&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fbasic-probability-concepts%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Tensorflow%20vs%20Pytorch%3a%20Linear%20Regression&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fpost%2ftensorflow-vs-pytorch-linear-regression%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fbasic-probability-concepts%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fpost%2ftensorflow-vs-pytorch-linear-regression%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>

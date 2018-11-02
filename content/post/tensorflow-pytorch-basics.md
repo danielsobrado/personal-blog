@@ -84,6 +84,39 @@ To start with we can consider that Tensor a tensor is a matrix of any order, zer
 * Complex 64/128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)
 * Quantized Ops 8/32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).
 
+#### Create tensor with zeros
+
+We can initialize tensors with zeros or ones using ghe following methods `tf.zeros()` and `tf.ones()`.
+
+<pre class="prettyprint lang-py linenums">
+tf.zeros(3)
+
+<span class="nocode" style="color:white">
+Output:
+$ <tf.Tensor 'zeros:0' shape=(3,) dtype=float32>
+</span>
+</pre>
+
+#### Evaluate the value of a tensor
+
+Using `tf.Tensor.eval()` we'll get the value of a tensor evaluated and returned as a numpy array `numpy.ndarray`.
+
+<pre class="prettyprint lang-py linenums">
+a = tf.zeros(3)
+a.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([ 0., 0., 0.], dtype=float32)
+</span>
+</pre>
+
+Note: we need to initialize `tf.InteractiveSession()` to get the values returned to us during the session.
+
+### Constants
+
+
+
 ### Placeholders
 
 Placeholders are use to feed external data into a graph, we don't need to initialize them.
