@@ -328,7 +328,7 @@ $ conda install pytorch cuda90
 $ conda install pytorch-cpu
 ```
 
-Since PyTorch 0.4.0, there is official Window Support.
+Since PyTorch 0.4.0, there is official Windows Support.
 
 ### Tensors and Variables
 Pytorch provides two data abstractions Tensors and Variables.
