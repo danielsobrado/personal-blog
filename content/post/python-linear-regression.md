@@ -27,6 +27,20 @@ We need to understand that Linear Regression won´t help us with non linear rela
 
 ![](https://imgur.com/sEceQfk)
 
+When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
+
+This is different from correlation analysis, because the model allows us to infer on new inputs.
+
+## Types of regressions
+
+Depending on our target variable(s) we can have different types of regressions and approaches:
+
+* **Linear**: We predict a continuous numeric variable. (How much would I weight if...)
+* **Logistic**: We predict a categorical variable. (Will I be thin, normal, overweight or obesse, if ...)
+* **Poisson**: We predict counts, only positive integer numbers. (how many visits will I make to the doctor?)
+
+In this case we are going to discuss Linear Regression.
+
 <div id="el"><span>$$ y_i = h(\mathbf{x}_i, \mathbf{w}) = \mathbf{w}^T\mathbf{x}_i $$</span></div>
 
 <div id="el"><span>$$ L(\mathbf{w}) = \sum_i \left(h(\mathbf{x}_i, \mathbf{w}) - y_i\right)^2 $$</span></div>
