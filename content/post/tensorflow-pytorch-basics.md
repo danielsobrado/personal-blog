@@ -320,9 +320,13 @@ Pytorch is known for its simplicity. It uses Dynamic computation for greater fle
 
 ### Installation
 
+It is recommended to install Pytorch using Anaconda on its GPU version:
+
 ```
 $ conda install pytorch cuda90 
 ```
+
+Or CPU one:
 
 ```
 $ conda install pytorch-cpu
