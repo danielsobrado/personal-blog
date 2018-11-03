@@ -34,6 +34,7 @@ For this series we are going to install Tensorflow and Pytorch using Anaconda:
 $ conda create --name ml tensorflow jupyter scikit-learn matplotlib python=3
 $ activate ml
 $ conda install -c pytorch pytorch
+$ pip install jupyter-tensorboard
 $ jupyter notebook
 ```
 
@@ -298,6 +299,18 @@ Output:
 $ [5]
 </span>
 </pre>
+
+### Tensorboard
+
+Tensorboard is a visualization tool, that will help us understanding, visualizing and debugging our code. 
+
+There is handy pupyter extension that we´ll be using to quickly start our tensorboard, it is installed with:
+
+```
+$ pip install jupyter-tensorboard
+```
+
+We can see our graph with its variables and operations:
 
 ## Introduction to Pytorch
 
