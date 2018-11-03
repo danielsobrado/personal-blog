@@ -40,3 +40,4 @@ Simple linear regression: Is a linear model using a single predictor variable.
 Dataset: [Economic and employment data.](http://people.sc.fsu.edu/~jburkardt/datasets/regression/x22.txt)
 
 
+See: https://medium.freecodecamp.org/data-science-with-python-8-ways-to-do-linear-regression-and-measure-their-speed-b5577d75f8b
