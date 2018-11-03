@@ -33,6 +33,7 @@ For this series we are going to install Tensorflow and Pytorch using Anaconda:
 ```
 $ conda create --name ml tensorflow jupyter scikit-learn matplotlib python=3
 $ activate ml
+$ conda install -c pytorch pytorch
 $ jupyter notebook
 ```
 
@@ -244,17 +245,35 @@ A graph defines the computation. It doesn’t compute anything by itself, it doe
 
 Tensorflow uses lazy evaluation (also called call-by-need), in other words, Tensorflow will generate a computational graph that gets executed inside a session.
 
-There is eager execution from TensorFlow v1.5 onwards.
-
 <pre class="prettyprint lang-py linenums">
-x = [[2.]]
-m = tf.matmul(x, x)
+x = tf.constant([1,2,3,4])
+y = tf.constant([5,6,7,8])
 
-print(m)
+result = tf.multiply(x,y)
+session = tf.Session()
+print(session.run(result))
+session.close()
 
 <span class="nocode" style="color:white">
 Output:
-$ Tensorflow version: 1.10.0
+$ [ 5 12 21 32]
+</span>
+</pre>
+
+We´ve seen that we define the session with ´tf.Session´, executed it with ´session.run´ and closed it with ´session.close´.
+
+From TensorFlow v1.5 onwards it is possible to use eager execution.
+
+<pre class="prettyprint lang-py linenums">
+x = tf.constant([1,2,3,4])
+y = tf.constant([5,6,7,8])
+z = tf.mutiply(x, y)
+
+print(z.eval())
+
+<span class="nocode" style="color:white">
+Output:
+$ [ 5 12 21 32]
 </span>
 </pre>
 
@@ -368,7 +387,7 @@ def rmse(y, y_hat):
 The implementation of Tensorflow doesn't look too different to the one in scikit-learn, but in this case we are running it into a graph and session and this can be distributed and take advantage of the GPU:
 
 <pre class="prettyprint lang-py linenums">
-import torch
+import tensorflow as tf
 
 def rmse(y, y_hat):
     return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
@@ -379,7 +398,7 @@ def rmse(y, y_hat):
 Pretty much the same with Pytorch:
 
 <pre class="prettyprint lang-py linenums">
-import tensorflow as tf
+import torch
 
 def rmse(y, y_hat):
     return torch.sqrt(torch.mean((y - y_hat).pow(2)))
