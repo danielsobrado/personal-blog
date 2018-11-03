@@ -28,7 +28,7 @@ Both heavily oriented towards machine learning and especially deep learning are 
 
 The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters. 
 
-For this series we are going to install Tensorflow and Pytorch using Anaconda:
+For this series we are going to install Tensorflow and Pytorch using Anaconda in Windows together with Jupyter Notebooks:
 
 ```
 $ conda create --name ml tensorflow jupyter scikit-learn matplotlib python=3
@@ -44,7 +44,7 @@ Tensorflow is Google´s open source solution for computing large amounts of data
 
 ### Installation
 
-You can install Tensorflow using pip or using your favourite virtual environments and package managers like Anaconda or VirtualEnv.
+You can install Tensorflow using pip or using your favorite virtual environments and package managers like Anaconda or VirtualEnv.
 
 Let´s start with plain pip:
 
@@ -85,14 +85,14 @@ $ Tensorflow version: 1.11.0
 
 To start with we can consider that Tensor a tensor is a matrix of any order, zero for a sigle value, one for a venctor, two for a matrix...
 
-* Boolean:  Boolean (tf.bool).
-* String:   Variable length (tf.string).
-* 8 bits:	Signed Integer (tf.int8) and Unsigned Integer (tf.uint8).
-* 16 bits:	Integer (tf.int16).
-* 32 bits:	Floating (tf.float32) and Integer (tf.int32).
-* 64 bits:	Floating (tf.float64) and Integer (tf.int64).
-* Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)
-* Quantized Ops 8 and 32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).
+* Boolean:  Boolean (`tf.bool`).
+* String:   Variable length (`tf.string`).
+* 8 bits:	Signed Integer (tf.int8) and Unsigned Integer (`tf.uint8`).
+* 16 bits:	Integer (`tf.int16`).
+* 32 bits:	Floating (`tf.float32`) and Integer (`tf.int32`).
+* 64 bits:	Floating (`tf.float64`) and Integer (`tf.int64`).
+* Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (`tf.complex64` and `tf.complex128`)
+* Quantized Ops 8 and 32 bits: Signed Integer (`tf.qint8` and `tf.qint32`) and Unsigned Integer (`tf.quint8`).
 
 It’s possible to change the type of a tensor by using casting functions such as `tf.to_double()`, `tf.to_float()`, `tf.to_int32()`,
 `tf.to_int64()`...
@@ -131,7 +131,7 @@ Note: we need to initialize `tf.InteractiveSession()` to get the values returned
 
 #### Filling a tensor with other values
 
-Using `tf.fill`
+Using `tf.fill` you can create a tensor filled with any value:
 
 <pre class="prettyprint lang-py linenums">
 all_threes = tf.fill((3, 3), value=3.)
@@ -337,12 +337,12 @@ Tensors are similar to numpy arrays but they have GPU support and methods to swi
 
 We can slice tensors using the notation 'tensor[:slice index]'.
 
-Types of tensors supported:
+Tensors can contain elements of a single data type, the types supported are:
 
-* 32 bits: Float and Int
-* 64 bits: Float and Int
-* 16 bits: Float and Int
-* 8 bits: Signed and Unsigned
+* 64 bits: Floating (`torch.float64` or `torch.double`) and Integer (`torch.int64` or `torch.long`)
+* 32 bits: Floating (`torch.float32` or `torch.float`) and Integer (`torch.int32` or `torch.int`)
+* 16 bits: Floating (`torch.float16` or `torch.half`) and Integer (`torch.int16` or `torch.short`)
+* 8 bits: Integer Signed (`torch.int8`) and Unsigned (`torch.uint8`)
 
 ### 
 <pre class="prettyprint lang-py linenums">
