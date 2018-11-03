@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear Regression on </title>
+    <link>https://www.danielsobrado.com/tags/linear-regression/</link>
+    <description>Recent content in Linear Regression on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://www.danielsobrado.com/tags/linear-regression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
+ We need to understand that Linear Regression won´t help us with non linear relationships.
+$$ y_i = h(\mathbf{x}_i, \mathbf{w}) = \mathbf{w}^T\mathbf{x}_i $$ $$ L(\mathbf{w}) = \sum_i \left(h(\mathbf{x}_i, \mathbf{w}) - y_i\right)^2 $$ $$ L(\mathbf{w}) $$ Concepts:
+Simple linear regression: Is a linear model using a single predictor variable.</description>
+    </item>
+    
+  </channel>
+</rss>

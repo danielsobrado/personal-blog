@@ -6,7 +6,7 @@
     <description>Recent content in Data Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 25 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Sep 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,21 +14,10 @@
     <item>
       <title>Tensorflow vs Pytorch: Basics</title>
       <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</guid>
       <description>Introduction The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
-Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
-    </item>
-    
-    <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
 Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
 Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
     </item>
@@ -44,6 +33,70 @@ There are multiple loss functions for regression and classification pourposes:
 All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliersd impact the final outcome.
 MAE MAPE Mean Squared Error (MSE) Incorporates both the variance and the bias of the predictor.
 RMSE RMSLE When the differences from predicted and actuals are large the log function helps normalizing this.</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description> Introduction Qualitative feature encoding Dummy enconding with Pandas DictVectorizer One-hot encoding $ pip install tensorflow  Hashing trick Eager execution in TensorFlow v1.5
+x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+    </item>
+    
+    <item>
+      <title>Analysis of residuals</title>
+      <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
+      <pubDate>Mon, 27 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
+      <description> Introduction Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
+x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description> Introduction Data Preparation Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
+x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
+ We need to understand that Linear Regression won´t help us with non linear relationships.
+$$ y_i = h(\mathbf{x}_i, \mathbf{w}) = \mathbf{w}^T\mathbf{x}_i $$ $$ L(\mathbf{w}) = \sum_i \left(h(\mathbf{x}_i, \mathbf{w}) - y_i\right)^2 $$ $$ L(\mathbf{w}) $$ Concepts:
+Simple linear regression: Is a linear model using a single predictor variable.</description>
     </item>
     
     <item>
@@ -69,18 +122,6 @@ Follow the following steps:
       <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Data Science: Concepts</title>
-      <link>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</link>
-      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</guid>
-      <description> So many new concepts for the beginner data scentist, let´s start one by one:
-Tensor A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.
-See: What’s the difference between a matrix and a tensor?
-Features </description>
     </item>
     
     <item>
@@ -111,6 +152,18 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Data Science: Concepts</title>
+      <link>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</guid>
+      <description>So many new concepts for the beginner data scientist, let´s start one by one:
+Tensor A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.
+See: What’s the difference between a matrix and a tensor?
+Features Terms for Simple Linear Regression  Response, dependent variable, Y-variable, target, outcome: This is the variable we are trying to predict.</description>
     </item>
     
   </channel>

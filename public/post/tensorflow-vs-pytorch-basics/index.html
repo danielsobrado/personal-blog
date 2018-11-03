@@ -33,7 +33,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&#39;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras." />
 
-    <meta property="article:published_time" content="2018-09-25T00:00:00Z" />
+    <meta property="article:published_time" content="2016-09-25T00:00:00Z" />
     <meta property="article:tag" content="Tensorflow" /><meta property="article:tag" content="Pytorch" />
 
     <meta property="og:image" content="https://i.imgur.com/k3fRAC4.jpg"/>
@@ -132,7 +132,7 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2018-09-25">25 September 2018</time>
+            <time class="post-full-meta-date" datetime="2016-09-25">25 September 2016</time>
                 <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/tensorflow/">#Tensorflow</a>&nbsp;<a href="https://www.danielsobrado.com/tags/pytorch/">#Pytorch</a>&nbsp;
         </section>
         <h1 class="post-full-title">Tensorflow vs Pytorch: Basics</h1>
@@ -154,6 +154,13 @@
 <p>Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</p>
 
 <p>The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters.</p>
+
+<p>For this series we are going to install Tensorflow and Pytorch using Anaconda:</p>
+
+<pre><code>$ conda create --name ml tensorflow jupyter scikit-learn matplotlib python=3
+$ activate ml
+$ jupyter notebook
+</code></pre>
 
 <h2 id="introduction-to-tensorflow">Introduction to Tensorflow</h2>
 
@@ -191,7 +198,7 @@ print("Tensorflow version: {}".format(tf.__version__))
 
 <span class="nocode" style="color:white">
 Output:
-$ Tensorflow version: 1.10.0
+$ Tensorflow version: 1.11.0
 </span>
 </pre>
 
@@ -233,8 +240,9 @@ $ <tf.Tensor 'zeros:0' shape=(3,) dtype=float32>
 <p>Using <code>tf.Tensor.eval()</code> we&rsquo;ll get the value of a tensor evaluated and returned as a numpy array <code>numpy.ndarray</code>.</p>
 
 <pre class="prettyprint lang-py linenums">
-a = tf.ones(3)
-a.eval()
+tf.InteractiveSession()
+all_ones = tf.ones(3)
+all_ones.eval()
 
 <span class="nocode" style="color:white">
 Output:
@@ -249,13 +257,14 @@ $ array([ 1., 1., 1.], dtype=float32)
 <p>Using <code>tf.fill</code></p>
 
 <pre class="prettyprint lang-py linenums">
-a = tf.fill((2, 2), value=3.)
-a.eval()
+all_threes = tf.fill((3, 3), value=3.)
+all_threes.eval()
 
 <span class="nocode" style="color:white">
 Output:
-$ array([[ 3., 3.],
-$        [ 3., 3.]], dtype=float32)
+$ array([[3., 3., 3.],
+$        [3., 3., 3.],
+$        [3., 3., 3.]], dtype=float32)
 </span>
 </pre>
 
@@ -266,13 +275,15 @@ $        [ 3., 3.]], dtype=float32)
 <p><code>tf.truncated_normal()</code></p>
 
 <pre class="prettyprint lang-py linenums">
-a = tf.random_normal((2, 2), mean=0, stddev=1)
-a.eval()
+normal_distribution = tf.random_normal((3, 5), mean=0, stddev=1)
+normal_distribution.eval()
 
 <span class="nocode" style="color:white">
 Output:
-$ array([[-0.73437649, -0.77678096],
-$ [ 0.51697761, 1.15063596]], dtype=float32)
+$ array([[ 2.0141907 ,  0.5739892 ,  0.35740602,  0.21828577,  1.5545886 ],
+$        [-1.4343542 ,  0.8118261 , -0.5939968 , -0.7263036 ,  0.8720175 ],
+$        [ 0.16085641, -0.0033439 , -0.45639333, -0.5825363 , -1.1458815 ]],
+$       dtype=float32)
 </span>
 </pre>
 
@@ -280,9 +291,24 @@ $ [ 0.51697761, 1.15063596]], dtype=float32)
 
 <h4 id="tensor-operations">Tensor operations</h4>
 
-<p>Adding, substracting, multiplying and dividing is done with simple operations
-Creating an identity matrix by using <code>tf.eye</code>
-Matrix transpose <code>tf.matrix_transpose</code> and matrix multiplication <code>tf.matmul</code></p>
+<p>We can perform multiple operations in our tensors:</p>
+
+<ul>
+<li>Adding, substracting, multiplying and dividing is done with simple operations</li>
+<li>Creating an identity matrix by using <code>tf.eye</code>, this matrix has all its values as zeros except the diagonal that are ones.</li>
+<li>Matrix transpose <code>tf.matrix_transpose</code> and matrix multiplication <code>tf.matmul</code>.</li>
+</ul>
+
+<pre class="prettyprint lang-py linenums">
+normal_distribution = tf.random_normal((2, 2), mean=0, stddev=1)
+normal_distribution.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([[-0.73437649, -0.77678096],
+$ [ 0.51697761, 1.15063596]], dtype=float32)
+</span>
+</pre>
 
 <h3 id="constants">Constants</h3>
 
@@ -567,11 +593,11 @@ s.setAttribute('data-timestamp', +new Date());
         <ul>
           <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -614,23 +640,22 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/isyQF4V.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Tensorflow 
-              #Pytorch  </span>
+              #Loss Functions  </span>
               
-              <h2 class="post-card-title">Tensorflow vs Pytorch: Linear Regression</h2>
+              <h2 class="post-card-title">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
+                <p>In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases&hellip; MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences&hellip;</p>
               
           </section>
       </a>

@@ -9,17 +9,41 @@
   
   <url>
     <loc>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</loc>
-    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</loc>
-    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</loc>
+    <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/analysis-of-residuals/</loc>
+    <lastmod>2014-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</loc>
+    <lastmod>2014-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</loc>
+    <lastmod>2012-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</loc>
+    <lastmod>2012-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/linear-regression/</loc>
   </url>
   
   <url>
@@ -30,11 +54,6 @@
   <url>
     <loc>https://www.danielsobrado.com/post/fast-fourier-transform/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</loc>
-    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -88,6 +107,11 @@
   </url>
   
   <url>
+    <loc>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</loc>
+    <lastmod>2014-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -119,7 +143,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
-    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -158,6 +182,11 @@
   <url>
     <loc>https://www.danielsobrado.com/tags/kaggle/</loc>
     <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/linear-regression/</loc>
     <priority>0</priority>
   </url>
   
@@ -217,13 +246,19 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/python/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2014-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.danielsobrado.com/tags/pytorch/</loc>
-    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/scikit-learn/</loc>
+    <lastmod>2014-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -247,7 +282,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/tensorflow/</loc>
-    <lastmod>2018-09-25T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

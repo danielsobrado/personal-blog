@@ -28,6 +28,14 @@ Both heavily oriented towards machine learning and especially deep learning are 
 
 The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters. 
 
+For this series we are going to install Tensorflow and Pytorch using Anaconda:
+
+```
+$ conda create --name ml tensorflow jupyter scikit-learn matplotlib python=3
+$ activate ml
+$ jupyter notebook
+```
+
 ## Introduction to Tensorflow
 
 Tensorflow is Google´s open source solution for computing large amounts of data, it is a symbolic math library based on data-flow programming. 
@@ -67,7 +75,7 @@ print("Tensorflow version: {}".format(tf.__version__))
 
 <span class="nocode" style="color:white">
 Output:
-$ Tensorflow version: 1.10.0
+$ Tensorflow version: 1.11.0
 </span>
 </pre>
 
@@ -107,8 +115,9 @@ It is possile to define the type of the values stored in your tensor by using `d
 Using `tf.Tensor.eval()` we'll get the value of a tensor evaluated and returned as a numpy array `numpy.ndarray`.
 
 <pre class="prettyprint lang-py linenums">
-a = tf.ones(3)
-a.eval()
+tf.InteractiveSession()
+all_ones = tf.ones(3)
+all_ones.eval()
 
 <span class="nocode" style="color:white">
 Output:
@@ -123,13 +132,14 @@ Note: we need to initialize `tf.InteractiveSession()` to get the values returned
 Using `tf.fill`
 
 <pre class="prettyprint lang-py linenums">
-a = tf.fill((2, 2), value=3.)
-a.eval()
+all_threes = tf.fill((3, 3), value=3.)
+all_threes.eval()
 
 <span class="nocode" style="color:white">
 Output:
-$ array([[ 3., 3.],
-$        [ 3., 3.]], dtype=float32)
+$ array([[3., 3., 3.],
+$        [3., 3., 3.],
+$        [3., 3., 3.]], dtype=float32)
 </span>
 </pre>
 
@@ -140,13 +150,15 @@ Using `tf.random_normal()`
 `tf.truncated_normal()`
 
 <pre class="prettyprint lang-py linenums">
-a = tf.random_normal((2, 2), mean=0, stddev=1)
-a.eval()
+normal_distribution = tf.random_normal((3, 5), mean=0, stddev=1)
+normal_distribution.eval()
 
 <span class="nocode" style="color:white">
 Output:
-$ array([[-0.73437649, -0.77678096],
-$ [ 0.51697761, 1.15063596]], dtype=float32)
+$ array([[ 2.0141907 ,  0.5739892 ,  0.35740602,  0.21828577,  1.5545886 ],
+$        [-1.4343542 ,  0.8118261 , -0.5939968 , -0.7263036 ,  0.8720175 ],
+$        [ 0.16085641, -0.0033439 , -0.45639333, -0.5825363 , -1.1458815 ]],
+$       dtype=float32)
 </span>
 </pre>
 
@@ -154,9 +166,22 @@ You can also use `tf.random_uniform()`
 
 #### Tensor operations
 
-Adding, substracting, multiplying and dividing is done with simple operations
-Creating an identity matrix by using `tf.eye`
-Matrix transpose `tf.matrix_transpose` and matrix multiplication `tf.matmul`
+We can perform multiple operations in our tensors:
+
+* Adding, substracting, multiplying and dividing is done with simple operations
+* Creating an identity matrix by using `tf.eye`, this matrix has all its values as zeros except the diagonal that are ones.
+* Matrix transpose `tf.matrix_transpose` and matrix multiplication `tf.matmul`.
+
+<pre class="prettyprint lang-py linenums">
+normal_distribution = tf.random_normal((2, 2), mean=0, stddev=1)
+normal_distribution.eval()
+
+<span class="nocode" style="color:white">
+Output:
+$ array([[-0.73437649, -0.77678096],
+$ [ 0.51697761, 1.15063596]], dtype=float32)
+</span>
+</pre>
 
 ### Constants
 

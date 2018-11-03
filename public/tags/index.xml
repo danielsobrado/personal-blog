@@ -84,6 +84,15 @@
     </item>
     
     <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/tags/linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/linear-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Loss Functions</title>
       <link>https://www.danielsobrado.com/tags/loss-functions/</link>
       <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
@@ -140,7 +149,7 @@
     <item>
       <title>Python</title>
       <link>https://www.danielsobrado.com/tags/python/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/python/</guid>
       <description></description>
@@ -149,9 +158,18 @@
     <item>
       <title>Pytorch</title>
       <link>https://www.danielsobrado.com/tags/pytorch/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scikit Learn</title>
+      <link>https://www.danielsobrado.com/tags/scikit-learn/</link>
+      <pubDate>Mon, 27 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/scikit-learn/</guid>
       <description></description>
     </item>
     
@@ -176,7 +194,7 @@
     <item>
       <title>Tensorflow</title>
       <link>https://www.danielsobrado.com/tags/tensorflow/</link>
-      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/tensorflow/</guid>
       <description></description>
