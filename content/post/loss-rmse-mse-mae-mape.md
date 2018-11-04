@@ -35,12 +35,13 @@ Gives less weight to the outliers, when you are sure that they are outliers pref
 
 ### Mean Absolute Percentage Error (MAPE)
 
-Also known as mean absolute percentage deviation (MAPD)
+Also known as mean absolute percentage deviation (MAPD), it measures the size of the error in percentage tems.
 
 <div id="el"><span>$$ MAPE = {100}* \Sigma_{i=1}^{n}\frac{(\hat{y_i} - y_i)^2}{y_i} $$</span></div>
 
-MAPE is
+Lower numbers are better than large ones.
 
+The main issues with MAPE are that near zero and zero predicted figures will yield infinite or non valid results due to the *y_hat* denominator.
 
 ### Mean Squared Error (MSE)
 
@@ -88,7 +89,7 @@ Note: Squared root of variance is the Standard Deviation.
 | Regression Loss Function | Advantages | Disadvantages |
 |--------------------------|------------|--------------|
 | MAE                      |            |              |
-| MAPE                     | Trend estimation           |              |
+| MAPE                     | Scale-independency and interpretability           | Infinite values or undefined for zero or close to zero actual values              |
 | MSE                      |            |              |
 | RMSE                     |            | Is an absolute measure, difficult to compare with other metrics.             |
 | RMSLE                    |            | Penalizes an under-predicted estimate greater than an over-predicted estimate.             |
