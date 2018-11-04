@@ -29,15 +29,15 @@ Each metric has its own strenghts and weakness and its fit for a different use c
 
 Measures average/mean squared error of our predictions.
 
-<div id="el"><span>$$ MAE = \Sigma_{i=1}^{n}\frac{|y_i - \hat{y}_i|}{n} $$</span></div>
+<div id="el"><span>$$ MAE = \Sigma_{i=1}^{n}\frac{|\hat{y}_i - y_i|}{n} $$</span></div>
 
 Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
 
 ### Mean Absolute Percentage Error (MAPE)
 
-...
+Also known as mean absolute percentage deviation (MAPD)
 
-<div id="el"><span>$$ MAPE = \frac{100}{n} \Sigma_{i=1}^{n}{(\hat{y_i} - y_i)^2} $$</span></div>
+<div id="el"><span>$$ MAPE = {100}* \Sigma_{i=1}^{n}\frac{(\hat{y_i} - y_i)^2}{y_i} $$</span></div>
 
 MAPE is
 
@@ -88,7 +88,7 @@ Note: Squared root of variance is the Standard Deviation.
 | Regression Loss Function | Advantages | Disadvantages |
 |--------------------------|------------|--------------|
 | MAE                      |            |              |
-| MAPE                     |            |              |
+| MAPE                     | Trend estimation           |              |
 | MSE                      |            |              |
 | RMSE                     |            | Is an absolute measure, difficult to compare with other metrics.             |
 | RMSLE                    |            | Penalizes an under-predicted estimate greater than an over-predicted estimate.             |
