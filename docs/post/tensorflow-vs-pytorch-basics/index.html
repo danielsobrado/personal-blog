@@ -155,10 +155,12 @@
 
 <p>The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters.</p>
 
-<p>For this series we are going to install Tensorflow and Pytorch using Anaconda:</p>
+<p>For this series we are going to install Tensorflow and Pytorch using Anaconda in Windows together with Jupyter Notebooks:</p>
 
 <pre><code>$ conda create --name ml tensorflow jupyter scikit-learn matplotlib python=3
 $ activate ml
+$ conda install -c pytorch pytorch
+$ pip install jupyter-tensorboard
 $ jupyter notebook
 </code></pre>
 
@@ -168,7 +170,7 @@ $ jupyter notebook
 
 <h3 id="installation">Installation</h3>
 
-<p>You can install Tensorflow using pip or using your favourite virtual environments and package managers like Anaconda or VirtualEnv.</p>
+<p>You can install Tensorflow using pip or using your favorite virtual environments and package managers like Anaconda or VirtualEnv.</p>
 
 <p>Let´s start with plain pip:</p>
 
@@ -207,14 +209,14 @@ $ Tensorflow version: 1.11.0
 <p>To start with we can consider that Tensor a tensor is a matrix of any order, zero for a sigle value, one for a venctor, two for a matrix&hellip;</p>
 
 <ul>
-<li>Boolean:  Boolean (tf.bool).</li>
-<li>String:   Variable length (tf.string).</li>
-<li>8 bits:   Signed Integer (tf.int8) and Unsigned Integer (tf.uint8).</li>
-<li>16 bits:  Integer (tf.int16).</li>
-<li>32 bits:  Floating (tf.float32) and Integer (tf.int32).</li>
-<li>64 bits:  Floating (tf.float64) and Integer (tf.int64).</li>
-<li>Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (tf.complex64/tf.complex128)</li>
-<li>Quantized Ops 8 and 32 bits: Signed Integer (tf.qint8/tf.qint32) and Unsigned Integer (tf.quint8).</li>
+<li>Boolean:  Boolean (<code>tf.bool</code>).</li>
+<li>String:   Variable length (<code>tf.string</code>).</li>
+<li>8 bits:   Signed Integer (tf.int8) and Unsigned Integer (<code>tf.uint8</code>).</li>
+<li>16 bits:  Integer (<code>tf.int16</code>).</li>
+<li>32 bits:  Floating (<code>tf.float32</code>) and Integer (<code>tf.int32</code>).</li>
+<li>64 bits:  Floating (<code>tf.float64</code>) and Integer (<code>tf.int64</code>).</li>
+<li>Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (<code>tf.complex64</code> and <code>tf.complex128</code>)</li>
+<li>Quantized Ops 8 and 32 bits: Signed Integer (<code>tf.qint8</code> and <code>tf.qint32</code>) and Unsigned Integer (<code>tf.quint8</code>).</li>
 </ul>
 
 <p>It’s possible to change the type of a tensor by using casting functions such as <code>tf.to_double()</code>, <code>tf.to_float()</code>, <code>tf.to_int32()</code>,
@@ -254,7 +256,7 @@ $ array([ 1., 1., 1.], dtype=float32)
 
 <h4 id="filling-a-tensor-with-other-values">Filling a tensor with other values</h4>
 
-<p>Using <code>tf.fill</code></p>
+<p>Using <code>tf.fill</code> you can create a tensor filled with any value:</p>
 
 <pre class="prettyprint lang-py linenums">
 all_threes = tf.fill((3, 3), value=3.)
@@ -375,17 +377,35 @@ $
 
 <p>Tensorflow uses lazy evaluation (also called call-by-need), in other words, Tensorflow will generate a computational graph that gets executed inside a session.</p>
 
-<p>There is eager execution from TensorFlow v1.5 onwards.</p>
-
 <pre class="prettyprint lang-py linenums">
-x = [[2.]]
-m = tf.matmul(x, x)
+x = tf.constant([1,2,3,4])
+y = tf.constant([5,6,7,8])
 
-print(m)
+result = tf.multiply(x,y)
+session = tf.Session()
+print(session.run(result))
+session.close()
 
 <span class="nocode" style="color:white">
 Output:
-$ Tensorflow version: 1.10.0
+$ [ 5 12 21 32]
+</span>
+</pre>
+
+<p>We´ve seen that we define the session with ´tf.Session´, executed it with ´session.run´ and closed it with ´session.close´.</p>
+
+<p>From TensorFlow v1.5 onwards it is possible to use eager execution.</p>
+
+<pre class="prettyprint lang-py linenums">
+x = tf.constant([1,2,3,4])
+y = tf.constant([5,6,7,8])
+z = tf.mutiply(x, y)
+
+print(z.eval())
+
+<span class="nocode" style="color:white">
+Output:
+$ [ 5 12 21 32]
 </span>
 </pre>
 
@@ -411,6 +431,17 @@ $ [5]
 </span>
 </pre>
 
+<h3 id="tensorboard">Tensorboard</h3>
+
+<p>Tensorboard is a visualization tool, that will help us understanding, visualizing and debugging our code.</p>
+
+<p>There is handy pupyter extension that we´ll be using to quickly start our tensorboard, it is installed with:</p>
+
+<pre><code>$ pip install jupyter-tensorboard
+</code></pre>
+
+<p>We can see our graph with its variables and operations:</p>
+
 <h2 id="introduction-to-pytorch">Introduction to Pytorch</h2>
 
 <p>Pytorch is Facebook&rsquo;s solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.</p>
@@ -419,13 +450,17 @@ $ [5]
 
 <h3 id="installation-1">Installation</h3>
 
+<p>It is recommended to install Pytorch using Anaconda on its GPU version:</p>
+
 <pre><code>$ conda install pytorch cuda90 
 </code></pre>
+
+<p>Or CPU one:</p>
 
 <pre><code>$ conda install pytorch-cpu
 </code></pre>
 
-<p>Since PyTorch 0.4.0, there is official Window Support.</p>
+<p>Since PyTorch 0.4.0, there is official Windows Support.</p>
 
 <h3 id="tensors-and-variables">Tensors and Variables</h3>
 
@@ -435,13 +470,13 @@ $ [5]
 
 <p>We can slice tensors using the notation &lsquo;tensor[:slice index]&lsquo;.</p>
 
-<p>Types of tensors supported:</p>
+<p>Tensors can contain elements of a single data type, the types supported are:</p>
 
 <ul>
-<li>32 bits: Float and Int</li>
-<li>64 bits: Float and Int</li>
-<li>16 bits: Float and Int</li>
-<li>8 bits: Signed and Unsigned</li>
+<li>64 bits: Floating (<code>torch.float64</code> or <code>torch.double</code>) and Integer (<code>torch.int64</code> or <code>torch.long</code>)</li>
+<li>32 bits: Floating (<code>torch.float32</code> or <code>torch.float</code>) and Integer (<code>torch.int32</code> or <code>torch.int</code>)</li>
+<li>16 bits: Floating (<code>torch.float16</code> or <code>torch.half</code>) and Integer (<code>torch.int16</code> or <code>torch.short</code>)</li>
+<li>8 bits: Integer Signed (<code>torch.int8</code>) and Unsigned (<code>torch.uint8</code>)</li>
 </ul>
 
 <pre class="prettyprint lang-py linenums">
@@ -499,7 +534,7 @@ def rmse(y, y_hat):
 <p>The implementation of Tensorflow doesn&rsquo;t look too different to the one in scikit-learn, but in this case we are running it into a graph and session and this can be distributed and take advantage of the GPU:</p>
 
 <pre class="prettyprint lang-py linenums">
-import torch
+import tensorflow as tf
 
 def rmse(y, y_hat):
     return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
@@ -510,7 +545,7 @@ def rmse(y, y_hat):
 <p>Pretty much the same with Pytorch:</p>
 
 <pre class="prettyprint lang-py linenums">
-import tensorflow as tf
+import torch
 
 def rmse(y, y_hat):
     return torch.sqrt(torch.mean((y - y_hat).pow(2)))
@@ -591,13 +626,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+        
           <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/analysis-of-residuals/">Analysis of residuals</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

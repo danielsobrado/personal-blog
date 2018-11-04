@@ -18,8 +18,8 @@
       <guid>https://www.danielsobrado.com/post/linear-regression/</guid>
       <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
  We need to understand that Linear Regression won´t help us with non linear relationships.
-$$ y_i = h(\mathbf{x}_i, \mathbf{w}) = \mathbf{w}^T\mathbf{x}_i $$ $$ L(\mathbf{w}) = \sum_i \left(h(\mathbf{x}_i, \mathbf{w}) - y_i\right)^2 $$ $$ L(\mathbf{w}) $$ Concepts:
-Simple linear regression: Is a linear model using a single predictor variable.</description>
+When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
+This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
     </item>
     
   </channel>

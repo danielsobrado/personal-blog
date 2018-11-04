@@ -155,17 +155,33 @@
 
 <h1 id="mae">MAE</h1>
 
+<div id="el"><span>$$ \frac{1}{n} \sum1^n |yi - \hat{y}_i| $$</span></div>
+
+<p>Gives less weight to the outliers.</p>
+
 <h1 id="mape">MAPE</h1>
 
-<h1 id="mean-squared-error-mse">Mean Squared Error (MSE)</h1>
+<div id="el">$$ \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$<span>
 
-<p>Incorporates both the variance and the bias of the predictor.</p>
+# Mean Squared Error (MSE)
+
+Incorporates both the variance and the bias of the predictor.
+
+<div id="el"><span>$$ \frac{1}{n} \sumi^n (yi - \hat{y}_i)^2 $$</span></div>
 
 <h1 id="rmse">RMSE</h1>
 
+<div id="el"><span></span></div>
+
+<p>By Squaring the errors we can get more accurate results as the negative and positive errors don&rsquo;t cancel each other.</p>
+
 <h1 id="rmsle">RMSLE</h1>
 
+<div id="el"><span></span></div>
+
 <p>When the differences from predicted and actuals are large the log function helps normalizing this.</p>
+
+<p>By applying logarithms to both prediction and actual numbers, we&rsquo;ll get smoother results by reducing the impact of larger x, while emphasize of smaller x.</p>
 
 <p>log(pi+1)−log(ai+1)</p>
 
@@ -232,13 +248,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -251,23 +267,22 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/isyQF4V.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Tensorflow 
-              #Pytorch  </span>
+              #Loss Functions  </span>
               
-              <h2 class="post-card-title">Tensorflow vs Pytorch: Basics</h2>
+              <h2 class="post-card-title">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
+                <p>In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases&hellip; MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences&hellip;</p>
               
           </section>
       </a>

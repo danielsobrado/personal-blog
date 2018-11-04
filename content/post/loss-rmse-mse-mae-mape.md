@@ -25,35 +25,48 @@ There are multiple loss functions for regression and classification pourposes:
 
 All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliersd impact the final outcome.
 
-# Mean Absolute Error (MAE)
+### Mean Absolute Error (MAE)
 
 Measures average/mean squared error of our predictions.
 
-<div id="el"><span>$$ MAE = \frac{1}{n} \sum1^n |yi - \hat{y}_i| $$</span></div>
+<div id="el"><span>$$ MAE = \frac{1}{n} \sum |yi - \hat{y}_i| $$</span></div>
 
-Gives less weight to the outliers.
+Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
 
-# Mean Absolute Percentage Error (MAPE)
+### Mean Absolute Percentage Error (MAPE)
+
+...
 
 <div id="el"><span>$$ MAPE = \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$</span></div>
 
-# Mean Squared Error (MSE)
+MAPE is
+
+
+### Mean Squared Error (MSE)
 
 Incorporates both the variance and the bias of the predictor.
 
-<div id="el"><span>$$ MSE = $$</span></div>
+<div id="el"><span>$$ MSE = \frac{1}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$</span></div>
 
-# Root Mean Square Error (RMSE)
+When you have unexpected values that you should take into account use MSE instead of MAE.
 
-<div id="el"><span>$$ RMSLE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
+### Root Mean Square Error (RMSE)
 
-By Squaring the errors we can get more accurate results as the negative and positive errors don't cancel each other.
+RMSE is an **absolute measure** of fit. Lower values of RMSE are indicative of a better fit
 
-# Root Mean Square Logarithmic Error (RMSLE)
+> RMSE can be interpreted as the standard deviation of the unexplained variance.
+
+RMSE is in the same units as the predicted variable.
+
+<div id="el"><span>$$ RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
+
+By squaring the errors we can get more accurate results as the negative and positive errors don't cancel each other.
+
+### Root Mean Square Logarithmic Error (RMSLE)
 
 > RMSLE penalizes an under-predicted estimate greater than an over-predicted estimate.
 
-<div id="el"><span>$$ RMSLE = $$</span></div>
+<div id="el"><span>$$ RMSLE = \sqrt{\Sigma_{i=1}^{n}{\frac{(log(y_i+1)) - (log(\hat{y_i}+1))^2}{n}}}$$</span></div>
 
 When the differences from predicted and actuals are large the log function helps normalizing this.
 
