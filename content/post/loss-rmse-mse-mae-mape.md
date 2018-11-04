@@ -29,7 +29,7 @@ Each metric has its own strenghts and weakness and its fit for a different use c
 
 Measures average/mean squared error of our predictions.
 
-<div id="el"><span>$$ MAE = \frac{1}{n} \sum |yi - \hat{y}_i| $$</span></div>
+<div id="el"><span>$$ MAE = \Sigma_{i=1}^{n}\frac{|y_i - \hat{y}_i|}{n} $$</span></div>
 
 Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
 
@@ -37,7 +37,7 @@ Gives less weight to the outliers, when you are sure that they are outliers pref
 
 ...
 
-<div id="el"><span>$$ MAPE = \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$</span></div>
+<div id="el"><span>$$ MAPE = \frac{100}{n} \Sigma_{i=1}^{n}{(\hat{y_i} - y_i)^2} $$</span></div>
 
 MAPE is
 
@@ -46,7 +46,7 @@ MAPE is
 
 Incorporates both the variance and the bias of the predictor.
 
-<div id="el"><span>$$ MSE = \frac{1}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$</span></div>
+<div id="el"><span>$$ MSE = \Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}} $$</span></div>
 
 When you have unexpected values that you should take into account use MSE instead of MAE.
 
@@ -85,7 +85,7 @@ Note: Squared root of variance is the Standard Deviation.
 # Summary
 
 
-| Regression Loss Function | Advantages | Disadantages |
+| Regression Loss Function | Advantages | Disadvantages |
 |--------------------------|------------|--------------|
 | MAE                      |            |              |
 | MAPE                     |            |              |
