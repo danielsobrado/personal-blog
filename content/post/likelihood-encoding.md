@@ -1,11 +1,11 @@
 ---
-description: "In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases... MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences..."
+description: "Likelihood encoding of categorical features"
 author: "Daniel Sobrado"
-date: 2016-07-23
-linktitle: "Loss functions: MAE, MAPE, MSE, RMSE and RMSLE"
+date: 2016-09-12
+linktitle: "Likelihood encoding"
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
-title: "Loss functions: MAE, MAPE, MSE, RMSE and RMSLE"
+title: "Likelihood encoding"
 weight: 10
 image: https://i.imgur.com/isyQF4V.jpg
 tags : [
@@ -17,13 +17,9 @@ categories : [
 ---
 
 
-# Loss Functions
+# Introduction
 
-The loss function calculates the difference between the output of your model and the "Ground Truth" or actual values.
-
-All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliers impact the final outcome.
-
-Each metric has its own strenghts and weakness and its fit for a different use case, we need to understand how these metrics impact our results, and how to interpret them, if they give us a relative or absulute value, the unit being used by the metric and how to use multiple metrics to understand where the loss/error is coming from.
+Also known as mean encoding, impact encoding or target encoding, it is a technique 
 
 ### Mean Absolute Error (MAE)
 
@@ -81,18 +77,5 @@ RMSLE measures the ratio between actual and predicted.
 There is a larger delta of y correspoding to an equivalent delta of x when x is small.
 
 Note: Squared root of variance is the Standard Deviation.
-
-# Summary
-
-
-| Regression Loss Function | Advantages | Disadantages |
-|--------------------------|------------|--------------|
-| MAE                      |            |              |
-| MAPE                     |            |              |
-| MSE                      |            |              |
-| RMSE                     |            | Is an absolute measure, difficult to compare with other metrics.             |
-| RMSLE                    |            | Penalizes an under-predicted estimate greater than an over-predicted estimate.             |
-
-
 
 See: https://www.quora.com/What-is-the-difference-between-an-RMSE-and-RMSLE-logarithmic-error-and-does-a-high-RMSE-imply-low-RMSLE
