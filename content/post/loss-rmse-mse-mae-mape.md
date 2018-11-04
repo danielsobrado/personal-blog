@@ -35,7 +35,7 @@ Gives less weight to the outliers, when you are sure that they are outliers pref
 
 ### Mean Absolute Percentage Error (MAPE)
 
-Also known as mean absolute percentage deviation (MAPD), it measures the size of the error in percentage tems.
+Also known as mean absolute percentage deviation (MAPD), it measures the size of the error in percentage tems. It is calculated by taking the absolute deviation and dividing it by the data to get the error percentage.
 
 <div id="el"><span>$$ MAPE = {100}* \Sigma_{i=1}^{n}\frac{(\hat{y_i} - y_i)^2}{y_i} $$</span></div>
 
