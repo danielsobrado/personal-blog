@@ -326,15 +326,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/analysis-of-residuals/">Analysis of residuals</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
         
                       
         
-          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -559,21 +559,6 @@ $(document).ready(function () {
         } else {
             header.classList.remove('floating-active');
         }
-
-        progressBar.setAttribute('max', progressMax);
-        progressBar.setAttribute('value', lastScrollY);
-
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', onScroll, {passive: true});
-    window.addEventListener('resize', onResize, false);
-
-    update();
-});
-</script>
-</body></html>
- }
 
         progressBar.setAttribute('max', progressMax);
         progressBar.setAttribute('value', lastScrollY);
