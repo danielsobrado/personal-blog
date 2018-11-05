@@ -69,13 +69,13 @@ x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   <
     </item>
     
     <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <title>Data Preparation: Numeric</title>
+      <link>https://www.danielsobrado.com/post/data-preparation-numeric/</link>
       <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description> Introduction Data Preparation Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
-x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+      <guid>https://www.danielsobrado.com/post/data-preparation-numeric/</guid>
+      <description> Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
+Normalization </description>
     </item>
     
     <item>
@@ -212,8 +212,8 @@ I love solving issues for my business partners and I immediately started rolling
       <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
-      <description> Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
-MultiNomial Naive Bayes Bernoulli Naive Bayes Advantages and Disadvantages Advantages Disadvantages </description>
+      <description>Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$ sklearn.</description>
     </item>
     
     <item>

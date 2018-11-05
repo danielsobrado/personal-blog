@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <title>Data Preparation: Numeric</title>
+      <link>https://www.danielsobrado.com/post/data-preparation-numeric/</link>
       <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description> Introduction Data Preparation Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
-x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+      <guid>https://www.danielsobrado.com/post/data-preparation-numeric/</guid>
+      <description> Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
+Normalization </description>
     </item>
     
     <item>

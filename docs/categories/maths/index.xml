@@ -40,8 +40,8 @@ This is different from correlation analysis, because the model allows us to infe
       <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
-      <description> Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
-MultiNomial Naive Bayes Bernoulli Naive Bayes Advantages and Disadvantages Advantages Disadvantages </description>
+      <description>Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$ sklearn.</description>
     </item>
     
     <item>
