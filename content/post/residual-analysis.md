@@ -1,7 +1,7 @@
 ---
 description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
 author: "Daniel Sobrado"
-date: 2014-10-27
+date: 2014-01-11
 linktitle: Analysis of residuals
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
@@ -20,26 +20,19 @@ categories : [
 
 # Introduction 
 
-# Mean Centering
+# Plotting residuals
 
+# Interpreting residuals
 
-# Standardization
+# Common issues
 
-```
-$ pip install tensorflow
-```
+## Heteroscedasticity
 
-# Normalization
+## Non-linearity
 
-Eager execution in TensorFlow v1.5
+## Outliers
 
-<pre class="prettyprint lang-py">
-x = [[2.]]
-m = tf.matmul(x, x)
+## Long Y-axis datapoints
 
-print(m)
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
+## X-axis unbalanced
+
