@@ -83,6 +83,8 @@ There is a larger delta of y correspoding to an equivalent delta of x when x is 
 
 Note: Squared root of variance is the Standard Deviation.
 
+### R Squared
+
 # Summary
 
 
