@@ -32,6 +32,8 @@ We assume that each class has continuos Normal/Gaussian distributed values.
 
 <div id="el"><span>$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$</span></div>
 
+sklearn.naive_bayes.GaussianNB
+
 ### MultiNomial Naive Bayes
 
 ### Bernoulli Naive Bayes
