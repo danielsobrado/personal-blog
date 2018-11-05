@@ -8,3 +8,4 @@ robocopy /move /e E:\Documents\GitHub\personal-blog\public E:\Documents\GitHub\p
 rmdir public /s /q
 mkdir public
 git commit -am "publish"
+cd ..

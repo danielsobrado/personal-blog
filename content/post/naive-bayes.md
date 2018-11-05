@@ -9,7 +9,7 @@ nomenu:
 prev: /tutorials/mathjax
 title: Naive Bayes
 noweight: 10
-image: https://i.imgur.com/IenFUVF.jpg
+image: https://i.imgur.com/8FsWJTc.png
 tags : [
     "probability",
     "bayesian"
@@ -29,6 +29,8 @@ categories : [
 ### Gaussian Naive Bayes
 
 We assume that each class has continuos Normal/Gaussian distributed values.
+
+<div id="el"><span>$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$</span></div>
 
 ### MultiNomial Naive Bayes
 
