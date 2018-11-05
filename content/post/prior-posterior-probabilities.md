@@ -6,6 +6,7 @@ author: "Daniel Sobrado"
 date: 2014-03-15
 linktitle: Prior and Posterior distributions
 prev: /basic-probability-concepts
+next: /naive-bayes
 title: Prior and Posterior distributions
 noweight: 10
 image: https://i.imgur.com/5O23Ebp.jpg
