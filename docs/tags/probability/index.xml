@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Probability on </title>
+    <link>https://www.danielsobrado.com/tags/probability/</link>
+    <description>Recent content in Probability on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 07 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.danielsobrado.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Naive Bayes</title>
+      <link>https://www.danielsobrado.com/post/naive-bayes/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
+      <description> Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+MultiNomial Naive Bayes Bernoulli Naive Bayes Advantages and Disadvantages Advantages Disadvantages </description>
+    </item>
+    
+    <item>
+      <title>Prior and Posterior distributions</title>
+      <link>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</guid>
+      <description>Introduction Let´s suppose that we know all the possible causes for an outcome, for example:
+**
+Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
+Here, P(movie|Sci-fi) is called Posterior, P(Sci-fi|Movie) is Likelihood, P(movie) is Prior, P(Sci-fi) is Evidence.
+Prior: How probable was our hypothesis before observing the evidence? Posterior: How probable is our hypothesis given the observed evidence? Evidence: How probable is the new evidence under all possible hypotheses?</description>
+    </item>
+    
+    <item>
+      <title>Basic probability concepts</title>
+      <link>https://www.danielsobrado.com/post/basic-probability-concepts/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/basic-probability-concepts/</guid>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
+The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
+TL;DR Let´s take the following poker cards as an example:
+Our experiment is to take two cards for the deck, one at a time, each card extraction is an event. We define as outcomes that a card is of a defined</description>
+    </item>
+    
+  </channel>
+</rss>

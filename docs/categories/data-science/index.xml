@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science on </title>
+    <link>https://www.danielsobrado.com/categories/data-science/</link>
+    <description>Recent content in Data Science on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 25 Sep 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Basics</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</link>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</guid>
+      <description>Introduction The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+    </item>
+    
+    <item>
+      <title>Likelihood encoding</title>
+      <link>https://www.danielsobrado.com/post/likelihood-encoding/</link>
+      <pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/likelihood-encoding/</guid>
+      <description>Introduction Also known as mean encoding, impact encoding or target encoding, it is a technique
+Mean Absolute Error (MAE) Measures average/mean squared error of our predictions.
+$$ MAE = \frac{1}{n} \sum |yi - \hat{y}_i| $$ Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
+Mean Absolute Percentage Error (MAPE) &amp;hellip;
+$$ MAPE = \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$ MAPE is</description>
+    </item>
+    
+    <item>
+      <title>Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</title>
+      <link>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</link>
+      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</guid>
+      <description>Loss Functions The loss function calculates the difference between the output of your model and the &amp;ldquo;Ground Truth&amp;rdquo; or actual values.
+All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliers impact the final outcome.
+Each metric has its own strenghts and weakness and its fit for a different use case, we need to understand how these metrics impact our results, and how to interpret them, if they give us a relative or absulute value, the unit being used by the metric and how to use multiple metrics to understand where the loss/error is coming from.</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description> Introduction Qualitative feature encoding Dummy enconding with Pandas DictVectorizer One-hot encoding $ pip install tensorflow  Hashing trick Eager execution in TensorFlow v1.5
+x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description> Introduction Data Preparation Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
+x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+    </item>
+    
+    <item>
+      <title>Analysis of residuals</title>
+      <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
+      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
+      <description> Introduction Plotting residuals Interpreting residuals Common issues Heteroscedasticity Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow vs Pytorch: Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
+      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
+      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/post/linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
+ We need to understand that Linear Regression won´t help us with non linear relationships.
+When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
+This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
+    </item>
+    
+    <item>
+      <title>Kaggle: Mercari competition</title>
+      <link>https://www.danielsobrado.com/post/kaggle-mercari-competition/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/kaggle-mercari-competition/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Fast Fourier Transform</title>
+      <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/fast-fourier-transform/</guid>
+      <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Scipy: Introduction</title>
+      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
+      <description> Introduction </description>
+    </item>
+    
+    <item>
+      <title>Numpy: Introduction</title>
+      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
+      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Naive Bayes</title>
+      <link>https://www.danielsobrado.com/post/naive-bayes/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
+      <description> Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+MultiNomial Naive Bayes Bernoulli Naive Bayes Advantages and Disadvantages Advantages Disadvantages </description>
+    </item>
+    
+    <item>
+      <title>Worldbank datasets: Jobs and economic indicators</title>
+      <link>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</link>
+      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
+      <description> Introduction </description>
+    </item>
+    
+    <item>
+      <title>Introduction to Data Science: Concepts</title>
+      <link>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</guid>
+      <description>So many new concepts for the beginner data scientist, let´s start one by one:
+Tensor A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.
+See: What’s the difference between a matrix and a tensor?
+Features Terms for Simple Linear Regression  Response, dependent variable, Y-variable, target, outcome: This is the variable we are trying to predict.</description>
+    </item>
+    
+  </channel>
+</rss>
