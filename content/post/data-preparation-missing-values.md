@@ -7,7 +7,7 @@ next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
 title: "Data Preparation: Missing Records"
 weight: 10
-image: https://i.imgur.com/k3fRAC4.jpg
+image: https://i.imgur.com/aRz1ymI.png
 tags : [
     "Data Preparation",
     "Python"
