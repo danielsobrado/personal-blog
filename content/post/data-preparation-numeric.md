@@ -1,5 +1,5 @@
 ---
-description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
+description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted, standardized, normalized, combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results."
 author: "Daniel Sobrado"
 date: 2014-10-17
 linktitle: Numeric Data Preparation
