@@ -1,5 +1,5 @@
 ---
-description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing techniques, like One Hot Encoding."
+description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing techniques, like One Hot Encoding and the Hashing trick."
 author: "Daniel Sobrado"
 date: 2014-12-25
 linktitle: Categorrical Data Preparation
