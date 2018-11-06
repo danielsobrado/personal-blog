@@ -10,7 +10,8 @@ weight: 10
 image: https://i.imgur.com/w99yd6y.jpg
 tags : [
     "scikit-learn",
-    "python"
+    "python",
+    "Data Preparation"
 ]
 categories : [
     "Data-Science"

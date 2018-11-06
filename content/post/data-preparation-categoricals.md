@@ -9,8 +9,8 @@ title: "Data Preparation: Categorical"
 weight: 10
 image: https://i.imgur.com/6ssWIOo.png
 tags : [
-    "Tensorflow",
-    "Pytorch"
+    "Data Preparation",
+    "Python"
 ]
 categories : [
     "Data-Science"
