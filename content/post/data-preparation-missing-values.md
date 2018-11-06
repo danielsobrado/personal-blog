@@ -15,8 +15,17 @@ tags : [
 categories : [
     "Data-Science"
 ]
+draft: True
 ---
 
 
-## Introduction to Linear Regression
+# Missing Values
 
+import missingno as msno
+msno.matrix(census_data)
+
+import pandas as pd
+census_data.isnull().sum()
+
+
+https://towardsdatascience.com/working-with-missing-data-in-machine-learning-9c0a430df4ce
