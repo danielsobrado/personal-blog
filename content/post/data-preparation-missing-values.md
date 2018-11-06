@@ -30,6 +30,11 @@ census_data.isnull().sum()
 
 https://towardsdatascience.com/working-with-missing-data-in-machine-learning-9c0a430df4ce
 
-# Imputting numerical values
+# Inputting numerical values
 
-# Imputting categorical values
+# Inputting categorical values
+
+## Average inputation
+## Regression Substitution
+## Multiple inputation
+https://measuringu.com/handle-missing-data/
