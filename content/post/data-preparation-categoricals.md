@@ -15,6 +15,7 @@ tags : [
 categories : [
     "Data-Science"
 ]
+draft: true
 ---
 
 # Introduction Qualitative feature encoding
