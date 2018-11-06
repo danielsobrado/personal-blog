@@ -1,5 +1,5 @@
 ---
-description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted, standardized, normalized, combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results."
+description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing methods like mean centering, standardization and normalization."
 author: "Daniel Sobrado"
 date: 2014-10-17
 linktitle: Numeric Data Preparation
