@@ -30,6 +30,20 @@ census_data.isnull().sum()
 
 https://towardsdatascience.com/working-with-missing-data-in-machine-learning-9c0a430df4ce
 
+
+df.dropna(subset = ['column1_name', 'column2_name', 'column3_name'])
+df.dropna(how='all')
+
+Drop row if it does not have at least ten values that are **not** NaN
+df.dropna(thresh=10)
+
+Take
+
+df = df[np.isfinite(df['column1_name'])]
+
+pandas.notnull
+
+
 # Inputting numerical values
 
 # Inputting categorical values
