@@ -51,4 +51,6 @@ filtered_df = df[df['EPS'].notnull()]
 ## Average inputation
 ## Regression Substitution
 ## Multiple inputation
+
+https://people.hofstra.edu/Jeffrey_J_Froh/webpage%20update_june%26july08/wayman_multimp_aera2003.pdf
 https://measuringu.com/handle-missing-data/
