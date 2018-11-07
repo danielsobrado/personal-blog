@@ -22,7 +22,7 @@ draft: true
 # Visualizing missing Values
 
 import missingno as msno
-msno.matrix(census_data)
+msno.matrix(target_DF)
 
 import pandas as pd
 census_data.isnull().sum()
@@ -37,11 +37,13 @@ df.dropna(how='all')
 Drop row if it does not have at least ten values that are **not** NaN
 df.dropna(thresh=10)
 
-Take
+Take only the finite numbers:
 
 df = df[np.isfinite(df['column1_name'])]
 
-filtered_df = df[df['EPS'].notnull()]
+pandas notnull is preferred to isfinite:
+
+filtered_df = df[df['column1_name'].notnull()]
 
 
 # Inputting numerical values
