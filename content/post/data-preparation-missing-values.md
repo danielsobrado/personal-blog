@@ -41,7 +41,7 @@ Take
 
 df = df[np.isfinite(df['column1_name'])]
 
-pandas.notnull
+filtered_df = df[df['EPS'].notnull()]
 
 
 # Inputting numerical values
