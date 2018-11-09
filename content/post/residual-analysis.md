@@ -20,26 +20,24 @@ categories : [
 
 # Introduction 
 
-# Mean Centering
+conda install statsmodels seaborn
+
+# Plotting residuals
+
+# Regression assumptions
+
+Linearity and equal variance
+Normality
+
+# Heteroscedasticity 
+
+## Identify heteroscedasticity
+
+### Breusch-Pagan Lagrange Multiplier test
+
+Using StatsModels we have `statsmodels.stats.diagnostic.het_breuschpagan`
+
+# Non-linearity
 
 
-# Standardization
 
-```
-$ pip install tensorflow
-```
-
-# Normalization
-
-Eager execution in TensorFlow v1.5
-
-<pre class="prettyprint lang-py">
-x = [[2.]]
-m = tf.matmul(x, x)
-
-print(m)
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
