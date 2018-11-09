@@ -91,7 +91,8 @@ To start with we can consider that Tensor a tensor is a matrix of any order, zer
 * 16 bits:	Integer (`tf.int16`).
 * 32 bits:	Floating (`tf.float32`) and Integer (`tf.int32`).
 * 64 bits:	Floating (`tf.float64`) and Integer (`tf.int64`).
-* Complex 64 and 128 bits: Real and Imaginary parts, two parts of the same size. (`tf.complex64` and `tf.complex128`)
+* Complex 64 and 128 bits: Complex number with real and Imaginary parts, represented by two 64-bit floats (real &
+imag. (`tf.complex64` and `tf.complex128`)
 * Quantized Ops 8 and 32 bits: Signed Integer (`tf.qint8` and `tf.qint32`) and Unsigned Integer (`tf.quint8`).
 
 It’s possible to change the type of a tensor by using casting functions such as `tf.to_double()`, `tf.to_float()`, `tf.to_int32()`,

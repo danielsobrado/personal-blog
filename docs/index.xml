@@ -69,23 +69,22 @@ x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   <
     </item>
     
     <item>
-      <title>Analysis of residuals</title>
-      <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
-      <pubDate>Mon, 27 Oct 2014 00:00:00 +0000</pubDate>
+      <title>Data Preparation: Numeric</title>
+      <link>https://www.danielsobrado.com/post/data-preparation-numeric/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
-      <description> Introduction Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
-x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+      <guid>https://www.danielsobrado.com/post/data-preparation-numeric/</guid>
+      <description> Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
+Normalization </description>
     </item>
     
     <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
+      <title>Analysis of residuals</title>
+      <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
+      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description> Introduction Data Preparation Mean Centering Standardization $ pip install tensorflow  Normalization Eager execution in TensorFlow v1.5
-x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
+      <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
+      <description> Introduction Plotting residuals Interpreting residuals Common issues Heteroscedasticity Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
     </item>
     
     <item>
@@ -153,8 +152,7 @@ Follow the following steps:
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <description> Introduction </description>
     </item>
     
     <item>
@@ -209,6 +207,16 @@ I love solving issues for my business partners and I immediately started rolling
     </item>
     
     <item>
+      <title>Naive Bayes</title>
+      <link>https://www.danielsobrado.com/post/naive-bayes/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
+      <description>Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$ sklearn.</description>
+    </item>
+    
+    <item>
       <title>Prior and Posterior distributions</title>
       <link>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
@@ -239,8 +247,7 @@ Our experiment is to take two cards for the deck, one at a time, each card extra
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <description> Introduction </description>
     </item>
     
     <item>

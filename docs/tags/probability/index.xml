@@ -6,10 +6,20 @@
     <description>Recent content in Probability on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Apr 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Naive Bayes</title>
+      <link>https://www.danielsobrado.com/post/naive-bayes/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
+      <description>Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$ sklearn.</description>
+    </item>
     
     <item>
       <title>Prior and Posterior distributions</title>

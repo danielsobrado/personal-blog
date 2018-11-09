@@ -1,20 +1,22 @@
 ---
-description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
+description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing methods like mean centering, standardization and normalization."
 author: "Daniel Sobrado"
-date: 2014-10-17
-linktitle: Tensorflow Pytorch Linear Regression
+date: 2014-12-26
+linktitle: Numeric Data Preparation
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
-title: "Tensorflow vs Pytorch: Linear Regression"
+title: "Data Preparation: Numeric"
 weight: 10
-image: https://i.imgur.com/k3fRAC4.jpg
+image: https://i.imgur.com/w99yd6y.jpg
 tags : [
     "scikit-learn",
-    "python"
+    "python",
+    "Data Preparation"
 ]
 categories : [
     "Data-Science"
 ]
+draft: true
 ---
 
 
@@ -25,21 +27,6 @@ categories : [
 
 # Standardization
 
-```
-$ pip install tensorflow
-```
+See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
 
 # Normalization
-
-Eager execution in TensorFlow v1.5
-
-<pre class="prettyprint lang-py">
-x = [[2.]]
-m = tf.matmul(x, x)
-
-print(m)
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>

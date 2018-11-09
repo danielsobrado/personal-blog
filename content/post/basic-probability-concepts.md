@@ -7,6 +7,7 @@ nomenu:
   main:
     parent: tutorials
 prev: /tutorials/mathjax
+next: /prior-posterior-probabilities
 title: Basic probability concepts
 noweight: 10
 image: https://i.imgur.com/IenFUVF.jpg
@@ -21,7 +22,7 @@ categories : [
 
 # Introduction
 
-In this series of articles, We'll dig deep into understanding `Bayesian inference`, starting from the basics.
+In this series of articles, We'll dig deep into understanding **Bayesian inference**, starting from the basics.
 
 The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
 

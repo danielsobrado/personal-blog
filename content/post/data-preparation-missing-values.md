@@ -1,145 +1,58 @@
 ---
-description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
+description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results.."
 author: "Daniel Sobrado"
-date: 2012-12-25
-linktitle: Tensorflow Pytorch Linear Regression
+date: 2014-12-27
+linktitle: Missing Records in Data Preparation
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
-title: "Tensorflow vs Pytorch: Linear Regression"
+title: "Data Preparation: Missing Records"
 weight: 10
-image: https://i.imgur.com/k3fRAC4.jpg
+image: https://i.imgur.com/aRz1ymI.png
 tags : [
-    "Tensorflow",
-    "Pytorch"
+    "Data Preparation",
+    "Python"
 ]
 categories : [
     "Data-Science"
 ]
+draft: true
 ---
 
 
-## Introduction to Linear Regression
+# Visualizing missing Values
 
-The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
+import missingno as msno
+msno.matrix(target_DF)
 
-Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
+import pandas as pd
+census_data.isnull().sum()
 
-Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).
 
-The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters. 
+https://towardsdatascience.com/working-with-missing-data-in-machine-learning-9c0a430df4ce
 
-## Introduction to Tensorflow
 
-Tensorflow is Google´s open source solution for computing large amounts of data, it is a symbolic math library based on data-flow programming. 
+df.dropna(subset = ['column1_name', 'column2_name', 'column3_name'])
+df.dropna(how='all')
 
-### Installation
+Drop row if it does not have at least ten values that are **not** NaN
+df.dropna(thresh=10)
 
-You can install Tensorflow using pip or using your favourite virtual environments and package managers like Anaconda or VirtualEnv.
+Take only the finite numbers:
 
-Let´s start with plain pip:
+df = df[np.isfinite(df['column1_name'])]
 
-```
-$ pip install tensorflow
-```
+pandas notnull is preferred to isfinite:
 
-or the GPU version: (Usually you´ll require CUDA installed)
+filtered_df = df[df['column1_name'].notnull()]
 
-```
-$ pip install tensorflow-gpu
-```
 
-Let´s verify the installation:
+# Inputting numerical values
 
-<pre class="prettyprint lang-py">
-import tensorflow as tf
-print("Tensorflow version: {}".format(tf.__version__))
+# Inputting categorical values
 
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
+## Average inputation
+## Regression Substitution
+## Multiple inputation
 
-### Tensors
-
-The home page, or landing page, is the first page that many visitors to a site see. It is the index.html file in the root directory of the website. Since Hugo writes files to the public/ directory, our home page is public/index.html.
-
-### Graphs in Tensorflow
-
-Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.
-
-Eager execution in TensorFlow v1.5
-
-<pre class="prettyprint lang-py">
-x = [[2.]]
-m = tf.matmul(x, x)
-
-print(m)
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
-
-### Placeholders
-
-### Variables
-
-### Mathematical Operations
-
-### The Session
-
-<pre class="prettyprint lang-py">
-import tensorflow as tf
-x = tf.constant([3])
-y = tf.constant([4])
-z = tf.add(x,y)
-session = tf.Session()
-result = session.run(z)
-print(result)
-
-<span class="nocode" style="color:white">
-Output:
-$ [5]
-</span>
-</pre>
-
-## Introduction to Pytorch
-
-Pytorch is Facebook's solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.
-
-Pytorch is known for its simplicity. It uses Dynamic computation for greater flexibility.
-
-### Installation
-
-```
-$ conda install pytorch cuda90 
-```
-
-```
-$ conda install pytorch-cpu
-```
-
-Since PyTorch 0.4.0, there is official Window Support.
-
-### Tensors and Variables
-Pytorch provides two data abstractions Tensors and Variables.
-
-Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.
-
-We can slice tensors using the notation 'tensor[:slice index]'
-
-### 
-<pre class="prettyprint lang-py">
-import torch
-x = torch.Tensor([3])
-y = torch.Tensor([4])
-z = x+y
-print(z)  
-
-<span class="nocode" style="color:white">
-Output:
- 7
-[torch.FloatTensor of size 1]
-</span>
-</pre>
+https://people.hofstra.edu/Jeffrey_J_Froh/webpage%20update_june%26july08/wayman_multimp_aera2003.pdf
+https://measuringu.com/handle-missing-data/

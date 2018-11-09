@@ -1,7 +1,7 @@
 ---
 description: "Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber's pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras."
 author: "Daniel Sobrado"
-date: 2014-10-27
+date: 2014-01-11
 linktitle: Analysis of residuals
 next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
@@ -20,6 +20,7 @@ categories : [
 
 # Introduction 
 
+<<<<<<< HEAD
 conda install statsmodels seaborn
 
 # Plotting residuals
@@ -40,4 +41,21 @@ Using StatsModels we have `statsmodels.stats.diagnostic.het_breuschpagan`
 # Non-linearity
 
 
+=======
+# Plotting residuals
+
+# Interpreting residuals
+
+# Common issues
+
+## Heteroscedasticity
+
+## Non-linearity
+
+## Outliers
+
+## Long Y-axis datapoints
+
+## X-axis unbalanced
+>>>>>>> ce795c4e2a58080f5ee9fd0facaa7eaddc8211ea
 
