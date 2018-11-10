@@ -20,7 +20,6 @@ categories : [
 
 # Introduction 
 
-<<<<<<< HEAD
 conda install statsmodels seaborn
 
 # Plotting residuals
@@ -29,6 +28,10 @@ conda install statsmodels seaborn
 
 Linearity and equal variance
 Normality
+
+# Interpreting residuals
+
+# Common issues
 
 # Heteroscedasticity 
 
@@ -40,22 +43,9 @@ Using StatsModels we have `statsmodels.stats.diagnostic.het_breuschpagan`
 
 # Non-linearity
 
-
-=======
-# Plotting residuals
-
-# Interpreting residuals
-
-# Common issues
-
-## Heteroscedasticity
-
-## Non-linearity
-
 ## Outliers
 
 ## Long Y-axis datapoints
 
 ## X-axis unbalanced
->>>>>>> ce795c4e2a58080f5ee9fd0facaa7eaddc8211ea
 
