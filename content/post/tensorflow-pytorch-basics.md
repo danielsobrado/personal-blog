@@ -335,12 +335,51 @@ $ conda install pytorch-cpu
 
 Since PyTorch 0.4.0, there is official Windows Support.
 
-### Tensors and Variables
-Pytorch provides two data abstractions Tensors and Variables.
+### Tensors 
+Pytorch provides multiple data abstractions for Tensors:
+
+* Variables: `tf.Variable`
+* Constants: `tf.constant`
+* Placeholders: `tf.placeholder`
+* Sparse Tensors: `tf.SparseTensor`
 
 Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.
 
 We can slice tensors using the notation 'tensor[:slice index]'.
+
+We can find the shape of a Tensor using `tf.shape()` and change it using `tf.reshape()`:
+
+<pre class="prettyprint lang-py linenums">
+import tesorflow as tf 
+a = tf.Variable("String Tensor", tf.string)
+print(tf.shape(a))
+
+<span class="nocode" style="color:white">
+Output:
+$ <tf.Tensor 'Shape:0' shape=(0,) dtype=int32>
+</span>
+
+b = tf.Variable([1,2], tf.int32)
+print(tf.shape(b))
+
+<span class="nocode" style="color:white">
+Output:
+$ Tensor("Shape_1:0", shape=(1,), dtype=int32)
+</span>
+
+c = tf.Variable([[1,2], [3.1, 4]])
+print(tf.shape(c))
+<span class="nocode" style="color:white">
+Output:
+$ Tensor("Shape_3:0", shape=(2,), dtype=int32)
+</span>
+d = tf.reshape(c,[1,4])
+print(d)
+<span class="nocode" style="color:white">
+Output:
+$ Tensor("Reshape_3:0", shape=(1, 4), dtype=float32)
+</span>
+</pre>
 
 Tensors can contain elements of a single data type, the types supported are:
 
@@ -361,6 +400,33 @@ print(z)
 Output:
  7
 [torch.FloatTensor of size 1]
+</span>
+</pre>
+
+# Hello world!
+
+Let´s do the typical hello world program in Tensorflow:
+
+<pre class="prettyprint lang-py linenums">
+import tensorflow as tf
+hello = tf.constant("Hello world!")
+session = tf.Session()
+print(session.run(hello))
+<span class="nocode" style="color:white">
+Output:
+b'Hello world!'
+</span>
+</pre>
+
+And now in Pytorch, uppps! We don´t have String tensors in Pytorch, should we do 2+2 instead?
+
+<pre class="prettyprint lang-py linenums">
+import torch
+a = torch.Tensor([2])
+print(a+a)
+<span class="nocode" style="color:white">
+Output:
+tensor([4.])
 </span>
 </pre>
 
