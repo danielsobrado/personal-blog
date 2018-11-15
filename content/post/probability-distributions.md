@@ -10,7 +10,7 @@ prev: /tutorials/mathjax
 next: /prior-posterior-probabilities
 title: Probability distributions
 noweight: 10
-image: https://i.imgur.com/IenFUVF.jpg
+image: https://i.imgur.com/WLrOv2Q.png
 tags : [
     "probability"
 ]
