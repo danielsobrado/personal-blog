@@ -147,15 +147,28 @@
 
 <h1 id="introduction">Introduction</h1>
 
+<p>conda install statsmodels seaborn</p>
+
 <h1 id="plotting-residuals">Plotting residuals</h1>
+
+<h1 id="regression-assumptions">Regression assumptions</h1>
+
+<p>Linearity and equal variance
+Normality</p>
 
 <h1 id="interpreting-residuals">Interpreting residuals</h1>
 
 <h1 id="common-issues">Common issues</h1>
 
-<h2 id="heteroscedasticity">Heteroscedasticity</h2>
+<h1 id="heteroscedasticity">Heteroscedasticity</h1>
 
-<h2 id="non-linearity">Non-linearity</h2>
+<h2 id="identify-heteroscedasticity">Identify heteroscedasticity</h2>
+
+<h3 id="breusch-pagan-lagrange-multiplier-test">Breusch-Pagan Lagrange Multiplier test</h3>
+
+<p>Using StatsModels we have <code>statsmodels.stats.diagnostic.het_breuschpagan</code></p>
+
+<h1 id="non-linearity">Non-linearity</h1>
 
 <h2 id="outliers">Outliers</h2>
 
@@ -222,13 +235,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/kaggle-mercari-competition/">Kaggle: Mercari competition</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -241,23 +254,22 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/data-preparation-numeric/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/w99yd6y.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/isyQF4V.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/data-preparation-numeric/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #scikit-learn 
-              #python  </span>
+              #Loss Functions  </span>
               
-              <h2 class="post-card-title">Data Preparation: Numeric</h2>
+              <h2 class="post-card-title">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
+                <p>In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases&hellip; MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences&hellip;</p>
               
           </section>
       </a>

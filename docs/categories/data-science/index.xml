@@ -47,43 +47,15 @@ Each metric has its own strenghts and weakness and its fit for a different use c
     </item>
     
     <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description> Introduction Qualitative feature encoding Dummy enconding with Pandas DictVectorizer One-hot encoding $ pip install tensorflow  Hashing trick Eager execution in TensorFlow v1.5
-x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
-    </item>
-    
-    <item>
-      <title>Data Preparation: Numeric</title>
-      <link>https://www.danielsobrado.com/post/data-preparation-numeric/</link>
-      <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/data-preparation-numeric/</guid>
-      <description> Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
-Normalization </description>
-    </item>
-    
-    <item>
       <title>Analysis of residuals</title>
       <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
       <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
-      <description> Introduction Plotting residuals Interpreting residuals Common issues Heteroscedasticity Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
-    </item>
-    
-    <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
-Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+      <description> Introduction conda install statsmodels seaborn
+Plotting residuals Regression assumptions Linearity and equal variance Normality
+Interpreting residuals Common issues Heteroscedasticity Identify heteroscedasticity Breusch-Pagan Lagrange Multiplier test Using StatsModels we have statsmodels.stats.diagnostic.het_breuschpagan
+Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
     </item>
     
     <item>

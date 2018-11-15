@@ -69,5 +69,14 @@ TL;DR Let´s take the following poker cards as an example:
 Our experiment is to take two cards for the deck, one at a time, each card extraction is an event. We define as outcomes that a card is of a defined</description>
     </item>
     
+    <item>
+      <title>Probability distributions</title>
+      <link>https://www.danielsobrado.com/post/probability-distributions/</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/probability-distributions/</guid>
+      <description> Introduction Normal Binomial Bernoulli Poisson </description>
+    </item>
+    
   </channel>
 </rss>

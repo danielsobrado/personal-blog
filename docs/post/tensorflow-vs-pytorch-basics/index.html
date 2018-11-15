@@ -463,13 +463,54 @@ $ [5]
 
 <p>Since PyTorch 0.4.0, there is official Windows Support.</p>
 
-<h3 id="tensors-and-variables">Tensors and Variables</h3>
+<h3 id="tensors-1">Tensors</h3>
 
-<p>Pytorch provides two data abstractions Tensors and Variables.</p>
+<p>Pytorch provides multiple data abstractions for Tensors:</p>
+
+<ul>
+<li>Variables: <code>tf.Variable</code></li>
+<li>Constants: <code>tf.constant</code></li>
+<li>Placeholders: <code>tf.placeholder</code></li>
+<li>Sparse Tensors: <code>tf.SparseTensor</code></li>
+</ul>
 
 <p>Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.</p>
 
 <p>We can slice tensors using the notation &lsquo;tensor[:slice index]&lsquo;.</p>
+
+<p>We can find the shape of a Tensor using <code>tf.shape()</code> and change it using <code>tf.reshape()</code>:</p>
+
+<pre class="prettyprint lang-py linenums">
+import tesorflow as tf 
+a = tf.Variable("String Tensor", tf.string)
+print(tf.shape(a))
+
+<span class="nocode" style="color:white">
+Output:
+$ <tf.Tensor 'Shape:0' shape=(0,) dtype=int32>
+</span>
+
+b = tf.Variable([1,2], tf.int32)
+print(tf.shape(b))
+
+<span class="nocode" style="color:white">
+Output:
+$ Tensor("Shape_1:0", shape=(1,), dtype=int32)
+</span>
+
+c = tf.Variable([[1,2], [3.1, 4]])
+print(tf.shape(c))
+<span class="nocode" style="color:white">
+Output:
+$ Tensor("Shape_3:0", shape=(2,), dtype=int32)
+</span>
+d = tf.reshape(c,[1,4])
+print(d)
+<span class="nocode" style="color:white">
+Output:
+$ Tensor("Reshape_3:0", shape=(1, 4), dtype=float32)
+</span>
+</pre>
 
 <p>Tensors can contain elements of a single data type, the types supported are:</p>
 
@@ -491,6 +532,33 @@ print(z)
 Output:
  7
 [torch.FloatTensor of size 1]
+</span>
+</pre>
+
+<h1 id="hello-world">Hello world!</h1>
+
+<p>Let´s do the typical hello world program in Tensorflow:</p>
+
+<pre class="prettyprint lang-py linenums">
+import tensorflow as tf
+hello = tf.constant("Hello world!")
+session = tf.Session()
+print(session.run(hello))
+<span class="nocode" style="color:white">
+Output:
+b'Hello world!'
+</span>
+</pre>
+
+<p>And now in Pytorch, uppps! We don´t have String tensors in Pytorch, should we do 2+2 instead?</p>
+
+<pre class="prettyprint lang-py linenums">
+import torch
+a = torch.Tensor([2])
+print(a+a)
+<span class="nocode" style="color:white">
+Output:
+tensor([4.])
 </span>
 </pre>
 
@@ -627,13 +695,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
+        
           <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

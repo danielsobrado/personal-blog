@@ -25,27 +25,6 @@ Both heavily oriented towards machine learning and especially deep learning are 
     <item>
       <title>Tensorflow vs Pytorch: Linear Regression</title>
       <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description> Introduction Qualitative feature encoding Dummy enconding with Pandas DictVectorizer One-hot encoding $ pip install tensorflow  Hashing trick Eager execution in TensorFlow v1.5
-x = [[2.]] m = tf.matmul(x, x) print(m) Output: $ Tensorflow version: 1.10.0   </description>
-    </item>
-    
-    <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
-Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
-    </item>
-    
-    <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
       <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
