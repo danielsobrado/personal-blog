@@ -20,19 +20,40 @@ categories : [
 
 ## Introduction
 
-This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I'll explain how Hugo uses templates and how you can organize your templates to create a theme. I won't cover using CSS to style your theme.
+Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
 
-We'll start with creating a new site with a very basic template. Then we'll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.
-
-In this tutorial, commands that you enter will start with the "$" prompt. The output will follow. Lines that start with "#" are comments that I've added to explain a point. When I show updates to a file, the ":wq" on the last line means to save the file.
+There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
 
 ## Installing Numpy
 
-There are a few concepts that you need to understand before creating a theme.
+For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
+
+```
+$ pip install numpy
+```
 
 ## Numpy Arrays
 
 ndarray is the earth of NumPy, it's the main data storage object of the framework.
+
+We can get Numpy vector and a matrix rapidly from a Python list:
+
+<pre class="prettyprint lang-py linenums">
+vector = np.array([1,2,3,4])
+vector
+<span class="nocode" style="color:white">
+Output:
+$ array([1, 2, 3, 4])
+
+</span>
+matrix = vector.reshape((2,2))
+matrix
+<span class="nocode" style="color:white">
+Output:
+$ array([[1, 2],
+         [3, 4]])
+</span>
+</pre>
 
 ### Why do we need other arrays?
 
@@ -41,6 +62,34 @@ We have Python lists and dictionaries,
 #### ndarrays are fast!
 
 #### Creating ndarrays
+
+We can quickly create matrices of ones and zeros: 
+
+<pre class="prettyprint lang-py linenums">
+all_zeros = np.zeros((3,3))
+all_zeros
+<span class="nocode" style="color:white">
+Output:
+$ array([[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]])
+</span>
+all_ones = np.ones((3,3))
+all_ones
+<span class="nocode" style="color:white">
+Output:
+$ array([[1., 1., 1.],
+         [1., 1., 1.],
+         [1., 1., 1.]])
+</span>
+</pre>
+
+We can observe some attributes from an ndarray, with the following operations, for an array defined as `np.array([(2,4,6)])`:
+
+* itemsize: Will return 4, that is the number of bytes used by the array. 
+* dtype: int32 is the result, that is the type of the elements in the array.
+* ndim: 
+
 
 #### Slice and dice
 
