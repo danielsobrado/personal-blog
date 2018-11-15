@@ -194,6 +194,8 @@ Output: 472 ms ± 43.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 
 </pre>
 
+<p>We can see that the multiplication in Numpy is around 40 times faster than the solution in pure Python.</p>
+
 <h4 id="creating-ndarrays">Creating ndarrays</h4>
 
 <p>We can get Numpy vector and a matrix rapidly from a Python list:</p>
@@ -236,11 +238,27 @@ $ array([[1., 1., 1.],
 </span>
 </pre>
 
+<p>We can create ndarrays initialized</p>
+
+<h1 id="or-10-to-100">Or 10 to 100?</h1>
+
+<p>arr = np.arange(10,100)</p>
+
+<h1 id="if-you-want-100-steps-from-0-to-1">If you want 100 steps from 0 to 1&hellip;</h1>
+
+<p>arr = np.linspace(0, 1, 100)</p>
+
+<h1 id="or-if-you-want-to-generate-an-array-from-1-to-10">Or if you want to generate an array from 1 to 10</h1>
+
+<h1 id="in-log10-space-in-100-steps">in log10 space in 100 steps&hellip;</h1>
+
+<p>arr = np.logspace(0, 1, 100, base=10.0)</p>
+
 <p>We can observe some attributes from an ndarray, with the following operations, for an array defined as <code>np.array([(2,4,6)])</code>:</p>
 
 <ul>
 <li>itemsize: Will return <code>4</code>, that is the number of bytes used by the array.</li>
-<li>dtype: <code>int32</code> is the result, that is the type of the elements in the array.</li>
+<li>dtype: <code>int32</code> is the result, that is the type of the elements in the array. (we can have int32, numpy.float16, numpy.float32, or numpy.float64)</li>
 <li>ndim:</li>
 </ul>
 
@@ -249,6 +267,10 @@ $ array([[1., 1., 1.],
 <h2 id="maths">Maths</h2>
 
 <h3 id="linear-algrebra">Linear Algrebra</h3>
+
+<h4 id="matrix-object">Matrix object</h4>
+
+<p>This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.</p>
 
 <h3 id="statistics">Statistics</h3>
 
@@ -313,11 +335,11 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+        
           <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
         
                       
-        
-          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
         

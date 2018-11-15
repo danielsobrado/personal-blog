@@ -158,5 +158,15 @@ See: What’s the difference between a matrix and a tensor?
 Features Terms for Simple Linear Regression  Response, dependent variable, Y-variable, target, outcome: This is the variable we are trying to predict.</description>
     </item>
     
+    <item>
+      <title>Numpy: Doing some maths</title>
+      <link>https://www.danielsobrado.com/post/numpy-doing-some-maths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
+      <description> Linear Algrebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
+Statistics Reading and writing </description>
+    </item>
+    
   </channel>
 </rss>

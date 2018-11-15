@@ -68,6 +68,8 @@ Output: 472 ms ± 43.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 
 </pre>
 
+We can see that the multiplication in Numpy is around 40 times faster than the solution in pure Python.
+
 #### Creating ndarrays
 
 We can get Numpy vector and a matrix rapidly from a Python list:
@@ -110,10 +112,20 @@ $ array([[1., 1., 1.],
 </span>
 </pre>
 
+We can create ndarrays initialized 
+
+# Or 10 to 100?
+arr = np.arange(10,100)
+# If you want 100 steps from 0 to 1...
+arr = np.linspace(0, 1, 100)
+# Or if you want to generate an array from 1 to 10
+# in log10 space in 100 steps...
+arr = np.logspace(0, 1, 100, base=10.0)
+
 We can observe some attributes from an ndarray, with the following operations, for an array defined as `np.array([(2,4,6)])`:
 
 * itemsize: Will return `4`, that is the number of bytes used by the array. 
-* dtype: `int32` is the result, that is the type of the elements in the array.
+* dtype: `int32` is the result, that is the type of the elements in the array. (we can have int32, numpy.float16, numpy.float32, or numpy.float64)
 * ndim: 
 
 
@@ -122,6 +134,10 @@ We can observe some attributes from an ndarray, with the following operations, f
 ## Maths
 
 ### Linear Algrebra
+
+#### Matrix object
+
+This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
 
 ### Statistics
 
