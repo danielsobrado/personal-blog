@@ -147,15 +147,16 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
+<p>Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</p>
 
-<p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
-
-<p>In this tutorial, commands that you enter will start with the &ldquo;$&rdquo; prompt. The output will follow. Lines that start with &ldquo;#&rdquo; are comments that I&rsquo;ve added to explain a point. When I show updates to a file, the &ldquo;:wq&rdquo; on the last line means to save the file.</p>
+<p>There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.</p>
 
 <h2 id="installing-numpy">Installing Numpy</h2>
 
-<p>There are a few concepts that you need to understand before creating a theme.</p>
+<p>For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:</p>
+
+<pre><code>$ pip install numpy
+</code></pre>
 
 <h2 id="numpy-arrays">Numpy Arrays</h2>
 
@@ -167,7 +168,81 @@
 
 <h4 id="ndarrays-are-fast">ndarrays are fast!</h4>
 
+<p>We are going to do a quick test using a juyter notebook and the magic command <code>%timeit</code> to compare the performance:</p>
+
+<pre class="prettyprint lang-py linenums">
+array = np.arange(1e8)
+list = array.tolist()
+<span class="nocode" style="color:white">
+Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+
+%%timeit
+for i, val in enumerate(array_list):
+    array_list[i] = val * 1.5
+
+<span class="nocode" style="color:white">
+Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+
+%%timeit
+array * 1.5
+
+<span class="nocode" style="color:white">
+Output: 472 ms ± 43.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+
+</pre>
+
 <h4 id="creating-ndarrays">Creating ndarrays</h4>
+
+<p>We can get Numpy vector and a matrix rapidly from a Python list:</p>
+
+<pre class="prettyprint lang-py linenums">
+vector = np.array([1,2,3,4])
+vector
+<span class="nocode" style="color:white">
+Output:
+$ array([1, 2, 3, 4])
+
+</span>
+matrix = vector.reshape((2,2))
+matrix
+<span class="nocode" style="color:white">
+Output:
+$ array([[1, 2],
+         [3, 4]])
+</span>
+</pre>
+
+<p>We can quickly create matrices of ones and zeros:</p>
+
+<pre class="prettyprint lang-py linenums">
+all_zeros = np.zeros((3,3))
+all_zeros
+<span class="nocode" style="color:white">
+Output:
+$ array([[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]])
+</span>
+all_ones = np.ones((3,3))
+all_ones
+<span class="nocode" style="color:white">
+Output:
+$ array([[1., 1., 1.],
+         [1., 1., 1.],
+         [1., 1., 1.]])
+</span>
+</pre>
+
+<p>We can observe some attributes from an ndarray, with the following operations, for an array defined as <code>np.array([(2,4,6)])</code>:</p>
+
+<ul>
+<li>itemsize: Will return <code>4</code>, that is the number of bytes used by the array.</li>
+<li>dtype: <code>int32</code> is the result, that is the type of the elements in the array.</li>
+<li>ndim:</li>
+</ul>
 
 <h4 id="slice-and-dice">Slice and dice</h4>
 
@@ -238,13 +313,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
+                      
         
-          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/naive-bayes/">Naive Bayes</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

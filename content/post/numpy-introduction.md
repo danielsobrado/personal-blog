@@ -36,6 +36,40 @@ $ pip install numpy
 
 ndarray is the earth of NumPy, it's the main data storage object of the framework.
 
+### Why do we need other arrays?
+
+We have Python lists and dictionaries, 
+
+#### ndarrays are fast!
+
+We are going to do a quick test using a juyter notebook and the magic command `%timeit` to compare the performance:
+
+<pre class="prettyprint lang-py linenums">
+array = np.arange(1e8)
+list = array.tolist()
+<span class="nocode" style="color:white">
+Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+
+%%timeit
+for i, val in enumerate(array_list):
+    array_list[i] = val * 1.5
+
+<span class="nocode" style="color:white">
+Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+
+%%timeit
+array * 1.5
+
+<span class="nocode" style="color:white">
+Output: 472 ms ± 43.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+
+</pre>
+
+#### Creating ndarrays
+
 We can get Numpy vector and a matrix rapidly from a Python list:
 
 <pre class="prettyprint lang-py linenums">
@@ -54,14 +88,6 @@ $ array([[1, 2],
          [3, 4]])
 </span>
 </pre>
-
-### Why do we need other arrays?
-
-We have Python lists and dictionaries, 
-
-#### ndarrays are fast!
-
-#### Creating ndarrays
 
 We can quickly create matrices of ones and zeros: 
 
@@ -86,8 +112,8 @@ $ array([[1., 1., 1.],
 
 We can observe some attributes from an ndarray, with the following operations, for an array defined as `np.array([(2,4,6)])`:
 
-* itemsize: Will return 4, that is the number of bytes used by the array. 
-* dtype: int32 is the result, that is the type of the elements in the array.
+* itemsize: Will return `4`, that is the number of bytes used by the array. 
+* dtype: `int32` is the result, that is the type of the elements in the array.
 * ndim: 
 
 
