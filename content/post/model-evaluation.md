@@ -7,9 +7,9 @@ next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
 title: "Model evaluation"
 weight: 10
-image: https://i.imgur.com/w99yd6y.jpg
+image: https://i.imgur.com/iOMQB1V.png
 tags : [
-    "Models"
+    "Modelling"
 ]
 categories : [
     "Data-Science"
@@ -38,6 +38,8 @@ The first step is to train on the training dataset and validate on the validatio
 Different models have multiple parameters to tune, this means that we need to train and test multiple times to find the best parameters for our use case, the issue we have is that we could overfit against the validation dataset after multiple parameter tuning iterations.
 
 To mitigate this risk, we create another test set to test the final model and make sure that there is no overfitting.
+
+![](https://i.imgur.com/GEujj1s.png)
 
 ##### What happens when your test set says that you are overfitting against your validation set?
 
