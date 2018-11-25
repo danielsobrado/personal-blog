@@ -27,17 +27,21 @@ When we are dealing with **time series**, we have the opposite problem, if we sh
 
 **Repeated data points** can be another issue, our data is not always clean and perfect, if we have repeated data points and they appear in the train and test datasets we´ll also have *data leakage*.
 
-# Test set
+# Validation set
 
-If we train in a datasret only we have the risk of over-fitting our model, memorizing versus generalizing, to avoid this we use a test set that we never use for testing.
+If we train in a datasret only we have the risk of over-fitting our model, memorizing versus generalizing, to avoid this we use a validation set that we never use for testing.
 
 The first step is to train on the training dataset and validate on the validation dataset.
 
-# Validation set
+# Test set
 
 Different models have multiple parameters to tune, this means that we need to train and test multiple times to find the best parameters for our use case, the issue we have is that we could overfit against the validation dataset after multiple parameter tuning iterations.
 
-To mitigate this risk, we create another test set to validate the final model and make sure that there is no overfitting.
+To mitigate this risk, we create another test set to test the final model and make sure that there is no overfitting.
+
+##### What happens when your test set says that you are overfitting against your validation set?
+
+Simple, you need to find more data, if not you´ll be risking overfitting against the test set.
 
 # K-fold validation
 
