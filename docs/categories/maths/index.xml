@@ -85,6 +85,9 @@ Our experiment is to take two cards for the deck, one at a time, each card extra
       
       <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
       <description> Linear Algrebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
+We can create an identity matrix using np.eye:
+identity = np.eye(3) identity Output: $ array([[ 1., 0., 0.], $ [ 0., 1., 0.], $ [ 0., 0., 1.]]) 
+array([[ 1., 0., 0.], [ 0., 1., 0.], [ 0., 0., 1.]])
 Statistics Reading and writing </description>
     </item>
     
