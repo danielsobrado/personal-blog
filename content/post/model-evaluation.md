@@ -55,6 +55,16 @@ Shuffling the data after each K-fold partition is speacially useful when you hav
 
 We need to take into consideration that shuffling and cross-validation can be expensive operations in terms of processing.
 
+We can use `KFold` from *scikit-learn* with `shuffle` as true:
+```
+from sklearn.cross_validation import KFold
+kfold = KFold(4, n_folds=2, shuffle = True)
+```
+
+We can also look at: `sklearn.model_selection.ShuffleSplit` in *scikit-learn*.
+
 ## Stratified K-fold validation
 
 When calculating the amount of data that we are going to put in each of our datasets, we need to remember that we want to have relevant information, if we have customers from 20 different countries and we consider that the country is an important feature, we might want to make sure that in all our datasets we have enough data from each country to have a relevant significance for each country. 
+
+See: `sklearn.model_selection.StratifiedShuffleSplit` in *scikit-learn*.
