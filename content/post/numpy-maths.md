@@ -24,6 +24,23 @@ categories : [
 
 This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
 
+We can create an identity matrix using np.eye:
+
+<pre class="prettyprint lang-py linenums">
+identity = np.eye(3)
+identity
+<span class="nocode" style="color:white">
+Output: 
+$ array([[ 1.,  0.,  0.],
+$        [ 0.,  1.,  0.],
+$        [ 0.,  0.,  1.]])
+</span>
+
+
+array([[ 1.,  0.,  0.],
+       [ 0.,  1.,  0.],
+       [ 0.,  0.,  1.]])
+
 # Statistics
 
 # Reading and writing

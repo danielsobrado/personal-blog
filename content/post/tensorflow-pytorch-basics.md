@@ -98,6 +98,13 @@ imag. (`tf.complex64` and `tf.complex128`)
 It’s possible to change the type of a tensor by using casting functions such as `tf.to_double()`, `tf.to_float()`, `tf.to_int32()`,
 `tf.to_int64()`...
 
+Tensors have 3 attributes:
+
+* rank: Number of axes, 0 for a scalar, 1 for a vector, 2 for a matrix...
+* shape: The lenght of each axes, for example for a matrix we can have a shape of (2,2).
+* type: Similar to dtype in Numpy, this is the data type, like uint8, float32, float64 ...
+
+
 #### Create tensor with zeros
 
 We can initialize tensors with zeros or ones using the following methods `tf.zeros()` and `tf.ones()`:
