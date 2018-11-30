@@ -31,7 +31,9 @@ The law of large numbers states that the more samples we collect the more close 
 
 >  The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.
 
-We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect random samples from any distribution we'll finish with a Normal distribution in our sample dataset.
+We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect **random** samples from any distribution we'll finish with a Normal distribution in our sample dataset.
+
+The underlying distribution needs to have always a defined mean for the Central Limit Theorem to be valid.
 
 # Normal
 
