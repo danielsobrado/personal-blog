@@ -1,5 +1,5 @@
 ---
-description: "Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We'll start with essential concepts like an outcome, conditional probability, joint probability etc. "
+description: "Distributions a laws governing these are a must know for every data scientist."
 author: "Daniel Sobrado"
 date: 2014-02-08
 linktitle: Probability distributions
@@ -20,6 +20,18 @@ categories : [
 ---
 
 # Introduction
+
+Distributions a laws governing these are a must know for every data scientist.
+
+# The law of large numbers
+
+The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.
+
+# Central Limit Theorem
+
+>  The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.
+
+We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect random samples from any distribution we'll finish with a Normal distribution in our sample dataset.
 
 # Normal
 
