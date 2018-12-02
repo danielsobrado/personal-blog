@@ -1,7 +1,5 @@
 ---
-description: "The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
-
-The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account."
+description: "The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account. The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account."
 author: "Daniel Sobrado"
 date: 2014-03-15
 linktitle: Prior and Posterior distributions
@@ -18,8 +16,6 @@ categories : [
     "Maths"
 ]
 ---
-
-# Introduction
 
 Let´s suppose that we know all the possible causes for an outcome, for example:
 
@@ -41,9 +37,23 @@ Likelihood: How probable is the evidence give that our hypotheses is true?
 
 <div id="el"><span>$$P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) }$$</span></div>
 
+We know that in pur favourite TV channel they show 40% of the times drama movies, 50% action and 10% horror movies, we´d like to know the probability that tonight there will be an horror movie P(A = Horror) = 0.1, this is our prior probability.
+
+We check the Calendar and today is Hallowing´s night, in Hallowing the channels in general they show horror movies at least 75% of them P()
+
 # Distributions
 
-# Density Functions
+Discrete: They have only values based on a list of possible values, like the day of the month, number of persons...
+Continuous: They take arbitrarily exact values, for example prices, weights, distances...
+Mixed: A Combination of both categories.
+
+# Mass and Density Functions
+
+Discrete distributions have probability mass functions while contonuous distributions have probability density functions.
+
+## Probability Mass Function
+
+## Probability Density Function
 
 # Next 
 
