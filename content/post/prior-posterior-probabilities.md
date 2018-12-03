@@ -49,11 +49,21 @@ Mixed: A Combination of both categories.
 
 # Mass and Density Functions
 
-Discrete distributions have probability mass functions while contonuous distributions have probability density functions.
+Discrete distributions have probability mass functions while continuous distributions have probability density functions.
 
 ## Probability Mass Function
 
+The mass function for the Poisson distribution is:
+
+<div id="el"><span>P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots</span></div>
+
 ## Probability Density Function
+
+The density function for an exponential random variable:
+
+<div id="el"><span>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0</span></div>
+
+Th exponential variable can be continuous not only integers, still only positive numbers.
 
 # Next 
 
