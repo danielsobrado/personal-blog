@@ -22,13 +22,15 @@ categories : [
 
 # Introduction
 
+In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.  
+
 # Naive Bayes
 
 ## Types of Naive Bayes Algorithms
 
 ### Gaussian Naive Bayes
 
-We assume that each class has continuos Normal/Gaussian distributed values.
+We assume that each class has continuous Normal/Gaussian distributed values.
 
 <div id="el"><span>$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$</span></div>
 

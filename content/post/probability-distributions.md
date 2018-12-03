@@ -39,7 +39,26 @@ The underlying distribution needs to have always a defined mean for the Central 
 
 # Binomial
 
+This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad...
+
+Our binomial distribution looks like:
+
+<div id="el"><span>$$P ( x ) = \left( \begin{array} { l } { n } \\ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }</span></div>
+
+* n = number of events
+* x = number of successes
+* p = probability of getting a success in one event.
+* q = (1-p) or the probability of getting a failure.
+* There are only two possible outcomes at each trial.
+* These events are independent.
+* The events happen at a constant rate.
+
 # Bernoulli
 
 # Poisson
 
+> The Poisson distribution is useful to model the number of times an event occurs in an interval of time or space.
+
+* k is a positive integer that represents the number of times that an event occurs in an interval.
+* These events are independent.
+* The events happen at a constant rate.
