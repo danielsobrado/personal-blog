@@ -31,13 +31,13 @@ The law of large numbers states that the more samples we collect the more close 
 
 >  The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.
 
-We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect **random** samples from any distribution we'll finish with a Normal distribution in our sample dataset.
+We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect **random** samples from any distribution we'll finish with a Normal distribution in our sample data-set.
 
 The underlying distribution needs to have always a defined mean for the Central Limit Theorem to be valid.
 
-# Normal
+# Normal Distribution
 
-# Binomial
+# Binomial Distribution
 
 This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad...
 
@@ -53,9 +53,30 @@ Our binomial distribution looks like:
 * These events are independent.
 * The events happen at a constant rate.
 
-# Bernoulli
+# Multinomial Distribution
 
-# Poisson
+A multinomial distribution is an extension of a binomial distribution where we can have multiple outcomes.
+
+* k is the number of outcomes.
+* n is the number of events
+* p is a vector of probabilities for each of the events.
+* In the multinomial distribution the parameter vector is a Dirichlet distribution, this is the prior distribution for the parameter.
+
+See: https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815
+See: https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html
+
+# Dirichlet Distribution
+
+<div id="el"><span>$$P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</span></div>
+
+* k is the number of outcomes.
+* Alpha is a vector is positive real values called the concentration parameter and is used as a hyper-parameter. 
+    * Alpha can be a distribution itself, it will be a hyper-prior, and might have hyper-hyper-parameters.
+    * We can define alpha as a vector of prior beliefs like alpha=[2,4,1]
+
+# Bernoulli Distribution
+
+# Poisson Distribution
 
 > The Poisson distribution is useful to model the number of times an event occurs in an interval of time or space.
 
