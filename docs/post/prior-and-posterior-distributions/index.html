@@ -12,8 +12,7 @@
     <link rel="shortcut icon" href="https://www.danielsobrado.com/favicon.ico" />
     <link rel="canonical" href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/" />
 
-     <meta name="description" content="The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
-The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account." /> 
+     <meta name="description" content="The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account. The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account." /> 
 
      
     
@@ -22,8 +21,7 @@ The posterior probability distribution, is the revised probability of an event o
     
  
     <meta name="twitter:title" content="Prior and Posterior distributions"/>
-    <meta name="twitter:description" content="The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
-The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account."/>
+    <meta name="twitter:description" content="The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account. The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account."/>
     <meta name="twitter:url" content="https://www.danielsobrado.com/post/prior-and-posterior-distributions/" />
     <meta name="twitter:site" content="@DalamarBlog"/>
 
@@ -33,8 +31,7 @@ The posterior probability distribution, is the revised probability of an event o
     <meta property="article:publisher" content="https://www.facebook.com/j.daniel.sobrado" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account.
-The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account." />
+    <meta property="og:description" content="The prior probability distribution, is ones beliefs about its quantity before some evidence is taken into account. The posterior probability distribution, is the revised probability of an event occurring after some evidence has been taken into account." />
 
     <meta property="article:published_time" content="2014-03-15T00:00:00Z" />
     <meta property="article:tag" content="probability" /><meta property="article:tag" content="bayesian" />
@@ -148,8 +145,6 @@ The posterior probability distribution, is the revised probability of an event o
         <div class="kg-card-markdown">
         
 
-<h1 id="introduction">Introduction</h1>
-
 <p>Let´s suppose that we know all the possible causes for an outcome, for example:</p>
 
 <p>**</p>
@@ -170,9 +165,33 @@ Likelihood: How probable is the evidence give that our hypotheses is true?</p>
 
 <div id="el"><span>$$P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) }$$</span></div>
 
+<p>We know that in pur favourite TV channel they show 40% of the times drama movies, 50% action and 10% horror movies, we´d like to know the probability that tonight there will be an horror movie P(A = Horror) = 0.1, this is our prior probability.</p>
+
+<p>We check the Calendar and today is Hallowing´s night, in Hallowing the channels in general they show horror movies at least 75% of them P()</p>
+
 <h1 id="distributions">Distributions</h1>
 
-<h1 id="density-functions">Density Functions</h1>
+<p>Discrete: They have only values based on a list of possible values, like the day of the month, number of persons&hellip;
+Continuous: They take arbitrarily exact values, for example prices, weights, distances&hellip;
+Mixed: A Combination of both categories.</p>
+
+<h1 id="mass-and-density-functions">Mass and Density Functions</h1>
+
+<p>Discrete distributions have probability mass functions while continuous distributions have probability density functions.</p>
+
+<h2 id="probability-mass-function">Probability Mass Function</h2>
+
+<p>The mass function for the Poisson distribution is:</p>
+
+<div id="el"><span>P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots</span></div>
+
+<h2 id="probability-density-function">Probability Density Function</h2>
+
+<p>The density function for an exponential random variable:</p>
+
+<div id="el"><span>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0</span></div>
+
+<p>Th exponential variable can be continuous not only integers, still only positive numbers.</p>
 
 <h1 id="next">Next</h1>
 
@@ -239,15 +258,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/numpy-doing-some-maths/">Numpy: Doing some maths</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
         
-                      
+          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/analysis-of-residuals/">Analysis of residuals</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="https://www.danielsobrado.com/favicon.ico" />
     <link rel="canonical" href="https://www.danielsobrado.com/post/probability-distributions/" />
 
-     <meta name="description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. " /> 
+     <meta name="description" content="Distributions a laws governing these are a must know for every data scientist." /> 
 
      
     
@@ -21,7 +21,7 @@
     
  
     <meta name="twitter:title" content="Probability distributions"/>
-    <meta name="twitter:description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. "/>
+    <meta name="twitter:description" content="Distributions a laws governing these are a must know for every data scientist."/>
     <meta name="twitter:url" content="https://www.danielsobrado.com/post/probability-distributions/" />
     <meta name="twitter:site" content="@DalamarBlog"/>
 
@@ -31,7 +31,7 @@
     <meta property="article:publisher" content="https://www.facebook.com/j.daniel.sobrado" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Probability is a fundamental domain of data science, having sound foundations on this topic will help us climb the ladder to master Bayesian inference and other machine learning methods that have their roots in probability theory. We&#39;ll start with essential concepts like an outcome, conditional probability, joint probability etc. " />
+    <meta property="og:description" content="Distributions a laws governing these are a must know for every data scientist." />
 
     <meta property="article:published_time" content="2014-02-08T00:00:00Z" />
     <meta property="article:tag" content="probability" />
@@ -147,13 +147,83 @@
 
 <h1 id="introduction">Introduction</h1>
 
-<h1 id="normal">Normal</h1>
+<p>Distributions a laws governing these are a must know for every data scientist.</p>
 
-<h1 id="binomial">Binomial</h1>
+<h1 id="the-law-of-large-numbers">The law of large numbers</h1>
 
-<h1 id="bernoulli">Bernoulli</h1>
+<p>The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.</p>
 
-<h1 id="poisson">Poisson</h1>
+<h1 id="central-limit-theorem">Central Limit Theorem</h1>
+
+<blockquote>
+<p>The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.</p>
+</blockquote>
+
+<p>We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect <strong>random</strong> samples from any distribution we&rsquo;ll finish with a Normal distribution in our sample data-set.</p>
+
+<p>The underlying distribution needs to have always a defined mean for the Central Limit Theorem to be valid.</p>
+
+<h1 id="normal-distribution">Normal Distribution</h1>
+
+<h1 id="binomial-distribution">Binomial Distribution</h1>
+
+<p>This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad&hellip;</p>
+
+<p>Our binomial distribution looks like:</p>
+
+<div id="el"><span>$$P ( x ) = \left( \begin{array} { l } { n } \\ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }</span></div>
+
+<ul>
+<li>n = number of events</li>
+<li>x = number of successes</li>
+<li>p = probability of getting a success in one event.</li>
+<li>q = (1-p) or the probability of getting a failure.</li>
+<li>There are only two possible outcomes at each trial.</li>
+<li>These events are independent.</li>
+<li>The events happen at a constant rate.</li>
+</ul>
+
+<h1 id="multinomial-distribution">Multinomial Distribution</h1>
+
+<p>A multinomial distribution is an extension of a binomial distribution where we can have multiple outcomes.</p>
+
+<ul>
+<li>k is the number of outcomes.</li>
+<li>n is the number of events</li>
+<li>p is a vector of probabilities for each of the events.</li>
+<li>In the multinomial distribution the parameter vector is a Dirichlet distribution, this is the prior distribution for the parameter.</li>
+</ul>
+
+<p>See: <a href="https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815">https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815</a>
+See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html">https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html</a></p>
+
+<h1 id="dirichlet-distribution">Dirichlet Distribution</h1>
+
+<div id="el"><span>$$P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</span></div>
+
+<ul>
+<li>k is the number of outcomes.</li>
+<li>Alpha is a vector is positive real values called the concentration parameter and is used as a hyper-parameter.
+
+<ul>
+<li>Alpha can be a distribution itself, it will be a hyper-prior, and might have hyper-hyper-parameters.</li>
+<li>We can define alpha as a vector of prior beliefs like alpha=[2,4,1]</li>
+</ul></li>
+</ul>
+
+<h1 id="bernoulli-distribution">Bernoulli Distribution</h1>
+
+<h1 id="poisson-distribution">Poisson Distribution</h1>
+
+<blockquote>
+<p>The Poisson distribution is useful to model the number of times an event occurs in an interval of time or space.</p>
+</blockquote>
+
+<ul>
+<li>k is a positive integer that represents the number of times that an event occurs in an interval.</li>
+<li>These events are independent.</li>
+<li>The events happen at a constant rate.</li>
+</ul>
     
         </div>
     </section>
@@ -214,13 +284,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

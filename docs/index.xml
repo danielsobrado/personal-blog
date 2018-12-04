@@ -186,7 +186,8 @@ I love solving issues for my business partners and I immediately started rolling
       <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
-      <description>Introduction Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuos Normal/Gaussian distributed values.
+      <description>Introduction In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.
+Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuous Normal/Gaussian distributed values.
 $$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$ sklearn.</description>
     </item>
     
@@ -196,7 +197,7 @@ $$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</guid>
-      <description>Introduction Let´s suppose that we know all the possible causes for an outcome, for example:
+      <description>Let´s suppose that we know all the possible causes for an outcome, for example:
 **
 Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
 Here, P(movie|Sci-fi) is called Posterior, P(Sci-fi|Movie) is Likelihood, P(movie) is Prior, P(Sci-fi) is Evidence.
@@ -230,7 +231,9 @@ Our experiment is to take two cards for the deck, one at a time, each card extra
       <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/probability-distributions/</guid>
-      <description> Introduction Normal Binomial Bernoulli Poisson </description>
+      <description>Introduction Distributions a laws governing these are a must know for every data scientist.
+The law of large numbers The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.
+Central Limit Theorem  The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.</description>
     </item>
     
     <item>
