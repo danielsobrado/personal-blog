@@ -60,7 +60,7 @@ A multinomial distribution is an extension of a binomial distribution where we c
 * k is the number of outcomes.
 * n is the number of events
 * p is a vector of probabilities for each of the events.
-* In the multinomial distribution the parameter vector is a Dirichlet distribution, this is the prior distribution for the parameter.
+* In the multinomial distribution the parameter vector is a Dirichlet distribution, this is the prior distribution for the parameter or conjugate prior.
 
 See: https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815
 See: https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html
