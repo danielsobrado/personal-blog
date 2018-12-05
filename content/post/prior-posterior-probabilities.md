@@ -35,7 +35,9 @@ Posterior: How probable is our hypothesis given the observed evidence?
 Evidence: How probable is the new evidence under all possible hypotheses?
 Likelihood: How probable is the evidence give that our hypotheses is true?
 
-<div id="el"><span>$$P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) }$$</span></div>
+> The expected value is the mean of the posterior distribution.
+
+<div id="el"><span>$$ P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) } $$</span></div>
 
 We know that in pur favourite TV channel they show 40% of the times drama movies, 50% action and 10% horror movies, we´d like to know the probability that tonight there will be an horror movie P(A = Horror) = 0.1, this is our prior probability.
 
@@ -55,13 +57,13 @@ Discrete distributions have probability mass functions while continuous distribu
 
 The mass function for the Poisson distribution is:
 
-<div id="el"><span>P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots</span></div>
+<div id="el"><span>$$ P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots $$/span></div>
 
 ## Probability Density Function
 
 The density function for an exponential random variable:
 
-<div id="el"><span>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0</span></div>
+<div id="el"><span>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0 $$</span></div>
 
 Th exponential variable can be continuous not only integers, still only positive numbers.
 
