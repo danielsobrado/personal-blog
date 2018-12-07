@@ -1,13 +1,12 @@
 ---
-description: "ndarray is the earth of NumPy, it's the main data storage object of the framework. It is a homogeneus array, all the components share the same data-type. 
-."
+description: "ndarray is the earth of NumPy, it's the main data storage object of the framework. It is a homogeneus array, all the components share the same data-type."
 author: "Daniel Sobrado"
 date: 2016-02-29
 linktitle: Numpy ndarrays
 next: /numpy-maths
 prev: /numpy-introduction
 title: "Numpy: ndarrays"
-image: https://i.imgur.com/CnEM5JF.png
+image: https://i.imgur.com/itRkuba.png
 tags : [
     "Python",
 	"Numpy"

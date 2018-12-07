@@ -306,11 +306,9 @@ Target type: The type expected by a lambda expression.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description> Linear Algrebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
+      <description> Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
 We can create an identity matrix using np.eye:
-identity = np.eye(3) identity Output: $ array([[ 1., 0., 0.], $ [ 0., 1., 0.], $ [ 0., 0., 1.]]) 
-array([[ 1., 0., 0.], [ 0., 1., 0.], [ 0., 0., 1.]])
-Statistics Reading and writing </description>
+identity = np.eye(3) identity Output: $ array([[ 1., 0., 0.], $ [ 0., 1., 0.], $ [ 0., 0., 1.]])  array([[ 1., 0., 0.], [ 0., 1., 0.], [ 0., 0., 1.]])  Statistics Reading and writing </description>
     </item>
     
   </channel>
