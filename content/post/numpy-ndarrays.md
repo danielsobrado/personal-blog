@@ -107,6 +107,8 @@ We can observe some attributes from an ndarray, with the following operations, f
 
 # Slice and dice
 
+Let´s create a 5x5 simple matrix and start slicing it!
+
 <pre class="prettyprint lang-py linenums">
 A = np.arange(25)
 A = A.reshape(5,5)
@@ -120,6 +122,8 @@ $ array([[ 0,  1,  2,  3,  4],
          [20, 21, 22, 23, 24]])
 </span>
 </pre>
+
+The logic can be seen in the following highlighted image:
 
 ![](https://i.imgur.com/cng9d6r.png)
 
