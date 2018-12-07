@@ -21,18 +21,6 @@
     </item>
     
     <item>
-      <title>Numpy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
-      <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
-      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
-There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
-Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
-    </item>
-    
-    <item>
       <title>Let&#39;s discuss Microservices</title>
       <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
       <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
@@ -50,6 +38,29 @@ Add extra services provide some advantages but there are also disadvantages, hav
       
       <guid>https://www.danielsobrado.com/post/crud-vs-cqrs/</guid>
       <description> Introduction </description>
+    </item>
+    
+    <item>
+      <title>Numpy: ndarrays</title>
+      <link>https://www.danielsobrado.com/post/numpy-ndarrays/</link>
+      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
+      <description>Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
+vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vector.reshape((2,2)) matrix Output: $ array([[1, 2], [3, 4]])   We can quickly create matrices of ones and zeros:
+all_zeros = np.zeros((3,3)) all_zeros Output: $ array([[0., 0., 0.], [0., 0., 0.], [0., 0., 0.]])  all_ones = np.ones((3,3)) all_ones Output: $ array([[1.</description>
+    </item>
+    
+    <item>
+      <title>Numpy: Introduction</title>
+      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
+      <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
+There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
+Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
+$ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
     </item>
     
     <item>

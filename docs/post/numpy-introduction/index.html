@@ -33,7 +33,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Numpy is a fundamental library to perform numerical operations in Python. This package is about multi-dimensional arrays and performance. It allows us to work in a more powerful and simplified way with matrix algebra, emphasizing matrix methods that are extensively used in statistics, mathematics and machine learning algorithms." />
 
-    <meta property="article:published_time" content="2018-02-28T00:00:00Z" />
+    <meta property="article:published_time" content="2016-02-28T00:00:00Z" />
     <meta property="article:tag" content="Python" /><meta property="article:tag" content="Numpy" />
 
     <meta property="og:image" content="https://i.imgur.com/oQNt9Gt.jpg"/>
@@ -132,7 +132,7 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2018-02-28">28 February 2018</time>
+            <time class="post-full-meta-date" datetime="2016-02-28">28 February 2016</time>
                 <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/python/">#Python</a>&nbsp;<a href="https://www.danielsobrado.com/tags/numpy/">#Numpy</a>&nbsp;
         </section>
         <h1 class="post-full-title">Numpy: Introduction</h1>
@@ -162,9 +162,16 @@
 
 <p>ndarray is the earth of NumPy, it&rsquo;s the main data storage object of the framework.</p>
 
+<p>It is a homogeneus array, all the components share the same data-type.</p>
+
 <h3 id="why-do-we-need-other-arrays">Why do we need other arrays?</h3>
 
-<p>We have Python lists and dictionaries,</p>
+<p>We have Python lists and dictionaries, why do we need to have another package?</p>
+
+<ul>
+<li>Fast: It is developed in C and it´s very fast, in the background numpy uses parallel computation to perform the operations.</li>
+<li>Compact: It requires less storage compared to the python implementation, it is designed store data in a more efficient way.</li>
+</ul>
 
 <h4 id="ndarrays-are-fast">ndarrays are fast!</h4>
 
@@ -196,173 +203,15 @@ Output: 472 ms ± 43.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 
 <p>We can see that the multiplication in Numpy is around 40 times faster than the solution in pure Python.</p>
 
-<h4 id="creating-ndarrays">Creating ndarrays</h4>
+<h4 id="ndarrays-are-compact">ndarrays are compact!</h4>
 
-<p>We can get Numpy vector and a matrix rapidly from a Python list:</p>
+<p>Python lists are arrays of pointers to Python pointers while NumPy ndarrays are blocks of data, that are less flexible due to their nature, they need to be homogeneus, but they require less space.</p>
 
-<pre class="prettyprint lang-py linenums">
-vector = np.array([1,2,3,4])
-vector
-<span class="nocode" style="color:white">
-Output:
-$ array([1, 2, 3, 4])
+<p>The smallest Python object will require 4 bytes per pointer plus 16 bytes for the object itself. (4 for type pointer, 4 for reference count, 4 for value and the memory allocators)</p>
 
-</span>
-matrix = vector.reshape((2,2))
-matrix
-<span class="nocode" style="color:white">
-Output:
-$ array([[1, 2],
-         [3, 4]])
-</span>
-</pre>
+<p>You cannot use <code>sys.getsizeof()</code> to verify the amount of memory consumed as per the documentation <em>&ldquo;Only the memory consumption directly attributed to the object is accounted for, not the memory consumption of objects it refers to.&rdquo;</em></p>
 
-<p>We can quickly create matrices of ones and zeros:</p>
-
-<pre class="prettyprint lang-py linenums">
-all_zeros = np.zeros((3,3))
-all_zeros
-<span class="nocode" style="color:white">
-Output:
-$ array([[0., 0., 0.],
-         [0., 0., 0.],
-         [0., 0., 0.]])
-</span>
-all_ones = np.ones((3,3))
-all_ones
-<span class="nocode" style="color:white">
-Output:
-$ array([[1., 1., 1.],
-         [1., 1., 1.],
-         [1., 1., 1.]])
-</span>
-</pre>
-
-<p>We can create ndarrays initialized</p>
-
-<h1 id="or-10-to-100">Or 10 to 100?</h1>
-
-<p>arr = np.arange(10,100)</p>
-
-<h1 id="if-you-want-100-steps-from-0-to-1">If you want 100 steps from 0 to 1&hellip;</h1>
-
-<p>arr = np.linspace(0, 1, 100)</p>
-
-<h1 id="or-if-you-want-to-generate-an-array-from-1-to-10">Or if you want to generate an array from 1 to 10</h1>
-
-<h1 id="in-log10-space-in-100-steps">in log10 space in 100 steps&hellip;</h1>
-
-<p>arr = np.logspace(0, 1, 100, base=10.0)</p>
-
-<p>We can observe some attributes from an ndarray, with the following operations, for an array defined as <code>np.array([(2,4,6)])</code>:</p>
-
-<ul>
-<li>itemsize: Will return <code>4</code>, that is the number of bytes used by the array.</li>
-<li>dtype: <code>int32</code> is the result, that is the type of the elements in the array. (we can have np.int32, np.float16, np.float32, or np.float64)</li>
-<li>ndim:</li>
-</ul>
-
-<table>
-<thead>
-<tr>
-<th>Data type Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>bool_ Boolean stored as a byte</td>
-</tr>
-
-<tr>
-<td>int_  Default integer type (either int64 or int32)</td>
-</tr>
-
-<tr>
-<td>intc  C int (either int32 or int64)</td>
-</tr>
-
-<tr>
-<td>intp  C ssize_t (either int32 or int64)</td>
-</tr>
-
-<tr>
-<td>int8  Byte (-128 to 127)</td>
-</tr>
-
-<tr>
-<td>int16 Integer (-32768 to 32767)</td>
-</tr>
-
-<tr>
-<td>int32 Integer (-2147483648 to 2147483647)</td>
-</tr>
-
-<tr>
-<td>int64 Integer (-9223372036854775808 to 9223372036854775807)</td>
-</tr>
-
-<tr>
-<td>uint8 Unsigned integer (0 to 255)</td>
-</tr>
-
-<tr>
-<td>uint16    Unsigned integer (0 to 65535)</td>
-</tr>
-
-<tr>
-<td>uint32    Unsigned integer (0 to 4294967295)</td>
-</tr>
-
-<tr>
-<td>uint64    Unsigned integer (0 to 18446744073709551615)</td>
-</tr>
-
-<tr>
-<td>float_    Shorthand for float64.</td>
-</tr>
-
-<tr>
-<td>float16   Half precision float: sign bit, 5 bits exponent, 10 bits mantissa</td>
-</tr>
-
-<tr>
-<td>float32   Single precision float: sign bit, 8 bits exponent, 23 bits mantissa</td>
-</tr>
-
-<tr>
-<td>float64   Double precision float: sign bit, 11 bits exponent, 52 bits mantissa</td>
-</tr>
-
-<tr>
-<td>complex_  Shorthand for complex128.</td>
-</tr>
-
-<tr>
-<td>complex64 Complex number, represented by two 32-bit floats</td>
-</tr>
-
-<tr>
-<td>complex128    Complex number, represented by two 64-bit floats</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="structured-arrays">Structured arrays</h3>
-
-<h3 id="slice-and-dice">Slice and dice</h3>
-
-<h3 id="broadcasting">Broadcasting</h3>
-
-<p>When there is no ambiguity the smaller array will be expanded to match the shape of the bigger array.</p>
-
-<pre class="prettyprint lang-py linenums">
-array = np.arange(1e8)
-list = array.tolist()
-<span class="nocode" style="color:white">
-Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</span>
-</pre>
+<p>Let´s move on creating some ndarrays!</p>
     
         </div>
     </section>
@@ -423,13 +272,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/numpy-doing-some-maths/">Numpy: Doing some maths</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -442,23 +291,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/scipy-introduction/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/71DPO8N.png)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/numpy-ndarrays/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/oQNt9Gt.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/scipy-introduction/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/numpy-ndarrays/">
           <header class="post-card-header">
               <span class="post-card-tags">
               #Python 
-              #Scipy  </span>
+              #Numpy  </span>
               
-              <h2 class="post-card-title">Scipy: Introduction</h2>
+              <h2 class="post-card-title">Numpy: ndarrays</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>A well known python library for numerical computations widely used in the scientific and engeneering community. This package contains algorithms to manipulate Numpy objects, including Linear Algebra, Numerical Analysis, Signal Processing, Data Mining and Computational Geometry.</p>
+                <p>ndarray is the earth of NumPy, it&rsquo;s the main data storage object of the framework. It is a homogeneus array, all the components share the same data-type. .</p>
               
           </section>
       </a>
@@ -473,22 +322,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/lets-discuss-microservices/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/cGYyp2K.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/angularjs-introduction/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/ewEDGca.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/lets-discuss-microservices/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/angularjs-introduction/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Microservices  </span>
+              #AngularJS 
+              #Javascript  </span>
               
-              <h2 class="post-card-title">Let&#39;s discuss Microservices</h2>
+              <h2 class="post-card-title">AngularJS: Introduction</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!.</p>
+                <p>AngularJS is a Java script based front end development framwork maintained by Google. Very mature and stable is one of the preferred choices for Single Page Applications.</p>
               
           </section>
       </a>

@@ -4,39 +4,39 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Probability distributions &middot; </title>
+    <title>Numpy: ndarrays &middot; </title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="https://www.danielsobrado.com/favicon.ico" />
-    <link rel="canonical" href="https://www.danielsobrado.com/post/probability-distributions/" />
+    <link rel="canonical" href="https://www.danielsobrado.com/post/numpy-ndarrays/" />
 
-     <meta name="description" content="Distributions a laws governing these are a must know for every data scientist." /> 
+     <meta name="description" content="ndarray is the earth of NumPy, it&#39;s the main data storage object of the framework. It is a homogeneus array, all the components share the same data-type. ." /> 
 
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="https://i.imgur.com/WLrOv2Q.png"/>
+    <meta name="twitter:image" content="https://i.imgur.com/oQNt9Gt.jpg"/>
     
  
-    <meta name="twitter:title" content="Probability distributions"/>
-    <meta name="twitter:description" content="Distributions a laws governing these are a must know for every data scientist."/>
-    <meta name="twitter:url" content="https://www.danielsobrado.com/post/probability-distributions/" />
+    <meta name="twitter:title" content="Numpy: ndarrays"/>
+    <meta name="twitter:description" content="ndarray is the earth of NumPy, it&#39;s the main data storage object of the framework. It is a homogeneus array, all the components share the same data-type. ."/>
+    <meta name="twitter:url" content="https://www.danielsobrado.com/post/numpy-ndarrays/" />
     <meta name="twitter:site" content="@DalamarBlog"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Probability distributions &middot; Daniel Sobrado" />
-    <meta property="og:url" content="https://www.danielsobrado.com/post/probability-distributions/" />
+    <meta property="og:title" content="Numpy: ndarrays &middot; Daniel Sobrado" />
+    <meta property="og:url" content="https://www.danielsobrado.com/post/numpy-ndarrays/" />
     <meta property="article:publisher" content="https://www.facebook.com/j.daniel.sobrado" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Distributions a laws governing these are a must know for every data scientist." />
+    <meta property="og:description" content="ndarray is the earth of NumPy, it&#39;s the main data storage object of the framework. It is a homogeneus array, all the components share the same data-type. ." />
 
-    <meta property="article:published_time" content="2014-02-08T00:00:00Z" />
-    <meta property="article:tag" content="probability" />
+    <meta property="article:published_time" content="2016-02-29T00:00:00Z" />
+    <meta property="article:tag" content="Python" /><meta property="article:tag" content="Numpy" />
 
-    <meta property="og:image" content="https://i.imgur.com/WLrOv2Q.png"/>
+    <meta property="og:image" content="https://i.imgur.com/oQNt9Gt.jpg"/>
 
 
     <meta name="generator" content="Hugo 0.48" />
@@ -132,98 +132,186 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2014-02-08">8 February 2014</time>
-                <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/probability/">#probability</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2016-02-29">29 February 2016</time>
+                <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/python/">#Python</a>&nbsp;<a href="https://www.danielsobrado.com/tags/numpy/">#Numpy</a>&nbsp;
         </section>
-        <h1 class="post-full-title">Probability distributions</h1>
+        <h1 class="post-full-title">Numpy: ndarrays</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/WLrOv2Q.png)">
+    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/oQNt9Gt.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<h1 id="introduction">Introduction</h1>
+<h1 id="creating-ndarrays">Creating ndarrays</h1>
 
-<p>Distributions a laws governing these are a must know for every data scientist.</p>
+<p>We can get Numpy vector and a matrix rapidly from a Python list:</p>
 
-<h1 id="the-law-of-large-numbers">The law of large numbers</h1>
+<pre class="prettyprint lang-py linenums">
+vector = np.array([1,2,3,4])
+vector
+<span class="nocode" style="color:white">
+Output:
+$ array([1, 2, 3, 4])
 
-<p>The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.</p>
+</span>
+matrix = vector.reshape((2,2))
+matrix
+<span class="nocode" style="color:white">
+Output:
+$ array([[1, 2],
+         [3, 4]])
+</span>
+</pre>
 
-<h1 id="central-limit-theorem">Central Limit Theorem</h1>
+<p>We can quickly create matrices of ones and zeros:</p>
 
-<blockquote>
-<p>The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.</p>
-</blockquote>
+<pre class="prettyprint lang-py linenums">
+all_zeros = np.zeros((3,3))
+all_zeros
+<span class="nocode" style="color:white">
+Output:
+$ array([[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]])
+</span>
+all_ones = np.ones((3,3))
+all_ones
+<span class="nocode" style="color:white">
+Output:
+$ array([[1., 1., 1.],
+         [1., 1., 1.],
+         [1., 1., 1.]])
+</span>
+</pre>
 
-<p>We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect <strong>random</strong> samples from any distribution we&rsquo;ll finish with a Normal distribution in our sample data-set.</p>
+<p>We can create ndarrays initialized</p>
 
-<p>The underlying distribution needs to have always a defined mean for the Central Limit Theorem to be valid.</p>
+<h1 id="or-10-to-100">Or 10 to 100?</h1>
 
-<h1 id="normal-distribution">Normal Distribution</h1>
+<p>arr = np.arange(10,100)</p>
 
-<h1 id="binomial-distribution">Binomial Distribution</h1>
+<h1 id="if-you-want-100-steps-from-0-to-1">If you want 100 steps from 0 to 1&hellip;</h1>
 
-<p>This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad&hellip;</p>
+<p>arr = np.linspace(0, 1, 100)</p>
 
-<p>Our binomial distribution looks like:</p>
+<h1 id="or-if-you-want-to-generate-an-array-from-1-to-10">Or if you want to generate an array from 1 to 10</h1>
 
-<div id="el"><span>$$P ( x ) = \left( \begin{array} { l } { n } \\ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }</span></div>
+<h1 id="in-log10-space-in-100-steps">in log10 space in 100 steps&hellip;</h1>
+
+<p>arr = np.logspace(0, 1, 100, base=10.0)</p>
+
+<p>We can observe some attributes from an ndarray, with the following operations, for an array defined as <code>np.array([(2,4,6)])</code>:</p>
 
 <ul>
-<li>n = number of events</li>
-<li>x = number of successes</li>
-<li>p = probability of getting a success in one event.</li>
-<li>q = (1-p) or the probability of getting a failure.</li>
-<li>There are only two possible outcomes at each trial.</li>
-<li>These events are independent.</li>
-<li>The events happen at a constant rate.</li>
+<li>itemsize: Will return <code>4</code>, that is the number of bytes used by the array.</li>
+<li>dtype: <code>int32</code> is the result, that is the type of the elements in the array. (we can have np.int32, np.float16, np.float32, or np.float64)</li>
+<li>ndim:</li>
 </ul>
 
-<h1 id="multinomial-distribution">Multinomial Distribution</h1>
+<table>
+<thead>
+<tr>
+<th>Data type Description</th>
+</tr>
+</thead>
 
-<p>A multinomial distribution is an extension of a binomial distribution where we can have multiple outcomes.</p>
+<tbody>
+<tr>
+<td>bool_ Boolean stored as a byte</td>
+</tr>
 
-<ul>
-<li>k is the number of outcomes.</li>
-<li>n is the number of events</li>
-<li>p is a vector of probabilities for each of the events.</li>
-<li>In the multinomial distribution the parameter vector is a Dirichlet distribution, this is the prior distribution for the parameter or conjugate prior.</li>
-</ul>
+<tr>
+<td>int_  Default integer type (either int64 or int32)</td>
+</tr>
 
-<p>See: <a href="https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815">https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815</a>
-See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html">https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html</a></p>
+<tr>
+<td>intc  C int (either int32 or int64)</td>
+</tr>
 
-<h1 id="dirichlet-distribution">Dirichlet Distribution</h1>
+<tr>
+<td>intp  C ssize_t (either int32 or int64)</td>
+</tr>
 
-<div id="el"><span>$$P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</span></div>
+<tr>
+<td>int8  Byte (-128 to 127)</td>
+</tr>
 
-<ul>
-<li>k is the number of outcomes.</li>
-<li>Alpha is a vector is positive real values called the concentration parameter and is used as a hyper-parameter.
+<tr>
+<td>int16 Integer (-32768 to 32767)</td>
+</tr>
 
-<ul>
-<li>Alpha can be a distribution itself, it will be a hyper-prior, and might have hyper-hyper-parameters.</li>
-<li>We can define alpha as a vector of prior beliefs like alpha=[2,4,1]</li>
-</ul></li>
-</ul>
+<tr>
+<td>int32 Integer (-2147483648 to 2147483647)</td>
+</tr>
 
-<h1 id="bernoulli-distribution">Bernoulli Distribution</h1>
+<tr>
+<td>int64 Integer (-9223372036854775808 to 9223372036854775807)</td>
+</tr>
 
-<h1 id="poisson-distribution">Poisson Distribution</h1>
+<tr>
+<td>uint8 Unsigned integer (0 to 255)</td>
+</tr>
 
-<blockquote>
-<p>The Poisson distribution is useful to model the number of times an event occurs in an interval of time or space.</p>
-</blockquote>
+<tr>
+<td>uint16    Unsigned integer (0 to 65535)</td>
+</tr>
 
-<ul>
-<li>k is a positive integer that represents the number of times that an event occurs in an interval.</li>
-<li>These events are independent.</li>
-<li>The events happen at a constant rate.</li>
-</ul>
+<tr>
+<td>uint32    Unsigned integer (0 to 4294967295)</td>
+</tr>
+
+<tr>
+<td>uint64    Unsigned integer (0 to 18446744073709551615)</td>
+</tr>
+
+<tr>
+<td>float_    Shorthand for float64.</td>
+</tr>
+
+<tr>
+<td>float16   Half precision float: sign bit, 5 bits exponent, 10 bits mantissa</td>
+</tr>
+
+<tr>
+<td>float32   Single precision float: sign bit, 8 bits exponent, 23 bits mantissa</td>
+</tr>
+
+<tr>
+<td>float64   Double precision float: sign bit, 11 bits exponent, 52 bits mantissa</td>
+</tr>
+
+<tr>
+<td>complex_  Shorthand for complex128.</td>
+</tr>
+
+<tr>
+<td>complex64 Complex number, represented by two 32-bit floats</td>
+</tr>
+
+<tr>
+<td>complex128    Complex number, represented by two 64-bit floats</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="structured-arrays">Structured arrays</h1>
+
+<h1 id="slice-and-dice">Slice and dice</h1>
+
+<h1 id="broadcasting">Broadcasting</h1>
+
+<p>When there is no ambiguity the smaller array will be expanded to match the shape of the bigger array.</p>
+
+<pre class="prettyprint lang-py linenums">
+array = np.arange(1e8)
+list = array.tolist()
+<span class="nocode" style="color:white">
+Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</span>
+</pre>
     
         </div>
     </section>
@@ -249,8 +337,8 @@ See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.htm
 
 
 var disqus_config = function () {
-this.page.url = "https:\/\/www.danielsobrado.com\/post\/probability-distributions\/";  
-this.page.identifier = "https:\/\/www.danielsobrado.com\/post\/probability-distributions\/"; 
+this.page.url = "https:\/\/www.danielsobrado.com\/post\/numpy-ndarrays\/";  
+this.page.identifier = "https:\/\/www.danielsobrado.com\/post\/numpy-ndarrays\/"; 
 };
 
 (function() { 
@@ -276,7 +364,7 @@ s.setAttribute('data-timestamp', +new Date());
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash; Daniel Sobrado &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="https://www.danielsobrado.com/tags/probability/">#probability</a></h3>
+        <h3 class="read-next-card-header-title"><a href="https://www.danielsobrado.com/tags/python/">#Python</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -284,18 +372,20 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
+        
+                      
+        
+          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="https://www.danielsobrado.com/tags/probability/">See all related posts →</a>
+        <a href="https://www.danielsobrado.com/tags/python/">See all related posts →</a>
     </footer>
 </article>
 
@@ -303,24 +393,22 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/uPDsoHX.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/crud-vs-cqrs/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/9juUrvZ.png)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/crud-vs-cqrs/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Python 
-              #Pandas 
-              #Datasets  </span>
+              #Design Patterns  </span>
               
-              <h2 class="post-card-title">Worldbank datasets: Jobs and economic indicators</h2>
+              <h2 class="post-card-title">CRUD vs CQRS</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>World Bank Open Data contains multiple datasets covering demographics, as well as a large number of economic and development indicators from across the world. Let´s start looking at jobs and economic indicators dating from 1990. While we show how to read csvs and excel files using the Pandas library.</p>
+                <p>Command and Query Responsibility Segregation (CQRS) is a pattern that assumes that reading and writing are two different things. EventSourcing is related to CQRS and by persisting events rather than domain objects, helps to avoid the object-relational mismatch problem.</p>
               
           </section>
       </a>
@@ -335,23 +423,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/ewEDGca.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/numpy-introduction/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/oQNt9Gt.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/numpy-introduction/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #AngularJS 
-              #Javascript  </span>
+              #Python 
+              #Numpy  </span>
               
-              <h2 class="post-card-title">Functional Programming Basic Concepts</h2>
+              <h2 class="post-card-title">Numpy: Introduction</h2>
           </header>
           <section class="post-card-excerpt">
-              
-                <p> Introduction  </p>
+               
+                <p>Numpy is a fundamental library to perform numerical operations in Python. This package is about multi-dimensional arrays and performance. It allows us to work in a more powerful and simplified way with matrix algebra, emphasizing matrix methods that are extensively used in statistics, mathematics and machine learning algorithms.</p>
               
           </section>
       </a>
@@ -375,17 +463,17 @@ s.setAttribute('data-timestamp', +new Date());
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Probability distributions</div>
+  <div class="floating-header-title">Numpy: ndarrays</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Probability%20distributions&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fprobability-distributions%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Numpy%3a%20ndarrays&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fnumpy-ndarrays%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fprobability-distributions%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fnumpy-ndarrays%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>
