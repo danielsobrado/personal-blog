@@ -1,7 +1,7 @@
 ---
 description: "Numpy is a fundamental library to perform numerical operations in Python. This package is about multi-dimensional arrays and performance. It allows us to work in a more powerful and simplified way with matrix algebra, emphasizing matrix methods that are extensively used in statistics, mathematics and machine learning algorithms."
 author: "Daniel Sobrado"
-date: 2018-02-29
+date: 2016-02-30
 linktitle: Numpy Maths
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
@@ -12,7 +12,7 @@ tags : [
 	"Numpy"
 ]
 categories : [
-    "Data-Science",
+    "Data Science",
 	"Programming",
 	"Maths"
 ]
