@@ -4,7 +4,7 @@ description: "ndarray is the earth of NumPy, it's the main data storage object o
 author: "Daniel Sobrado"
 date: 2016-02-29
 linktitle: Numpy ndarrays
-next: /numpy-introduction
+next: /numpy-maths
 prev: /numpy-introduction
 title: "Numpy: ndarrays"
 image: https://i.imgur.com/oQNt9Gt.jpg
