@@ -36,9 +36,14 @@ $ pip install numpy
 
 ndarray is the earth of NumPy, it's the main data storage object of the framework.
 
+It is a homogeneus array, all the components share the same data-type. 
+
 ### Why do we need other arrays?
 
-We have Python lists and dictionaries, 
+We have Python lists and dictionaries, why do we need to have another package?
+
+* Fast: It is developed in C and it´s very fast, in the background numpy uses parallel computation to perform the operations.
+* Compact: It requires less storage compared to the python implementation, it is designed store data in a more efficient way. 
 
 #### ndarrays are fast!
 
