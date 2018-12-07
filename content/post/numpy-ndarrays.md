@@ -7,7 +7,7 @@ linktitle: Numpy ndarrays
 next: /numpy-maths
 prev: /numpy-introduction
 title: "Numpy: ndarrays"
-image: https://i.imgur.com/oQNt9Gt.jpg
+image: https://i.imgur.com/CnEM5JF.png
 tags : [
     "Python",
 	"Numpy"
@@ -125,7 +125,7 @@ $ array([[ 0,  1,  2,  3,  4],
 
 The logic can be seen in the following highlighted image:
 
-![](https://https://i.imgur.com/gELiGwA.png)
+![](https://i.imgur.com/CnEM5JF.png)
 
 # Broadcasting
 
