@@ -4,7 +4,7 @@ author: "Daniel Sobrado"
 date: 2016-02-30
 linktitle: Numpy Maths
 next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
+prev: /numpy-ndarrays
 title: "Numpy: Doing some maths"
 image: https://i.imgur.com/KxesLIK.png
 tags : [
