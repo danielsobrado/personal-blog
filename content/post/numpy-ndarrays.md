@@ -62,6 +62,7 @@ $ array([[1., 1., 1.],
 
 We can create ndarrays initialized 
 
+<pre class="prettyprint lang-py linenums">
 # Or 10 to 100?
 arr = np.arange(10,100)
 # If you want 100 steps from 0 to 1...
@@ -69,6 +70,8 @@ arr = np.linspace(0, 1, 100)
 # Or if you want to generate an array from 1 to 10
 # in log10 space in 100 steps...
 arr = np.logspace(0, 1, 100, base=10.0)
+</span>
+</pre>
 
 We can observe some attributes from an ndarray, with the following operations, for an array defined as `np.array([(2,4,6)])`:
 
@@ -103,6 +106,22 @@ We can observe some attributes from an ndarray, with the following operations, f
 # Structured arrays
 
 # Slice and dice
+
+<pre class="prettyprint lang-py linenums">
+A = np.arange(25)
+A = A.reshape(5,5)
+A
+<span class="nocode" style="color:white">
+Output:
+$ array([[ 0,  1,  2,  3,  4],
+         [ 5,  6,  7,  8,  9],
+         [10, 11, 12, 13, 14],
+         [15, 16, 17, 18, 19],
+         [20, 21, 22, 23, 24]])
+</span>
+</pre>
+
+![](https://i.imgur.com/cng9d6r.png)
 
 # Broadcasting
 
