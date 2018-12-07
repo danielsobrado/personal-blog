@@ -112,6 +112,16 @@
   </url>
   
   <url>
+    <loc>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</loc>
+    <lastmod>2013-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/introduction-to-machine-data/</loc>
+    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -193,6 +203,12 @@
   <url>
     <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
     <lastmod>2016-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/machine-data/</loc>
+    <lastmod>2013-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

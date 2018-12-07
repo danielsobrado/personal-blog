@@ -258,6 +258,27 @@ Features Terms for Simple Linear Regression  Response, dependent variable, Y-var
     </item>
     
     <item>
+      <title>The machine data ecosystem</title>
+      <link>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</guid>
+      <description>Machine Data Platforms There are two known platforms for machine data, Splunk and Elastic Stack, let&amp;rsquo;s do some research&amp;hellip;
+The cost of the platforms Splunk is great but the price tag is not that great, Elastic Stack is Open Source but some of the Enterprise features and Advanced Analytics capabilities are licensed on X-Pack under a paywall, can we get around some of these capabilities, like security using other Open Source solutions?</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Machine Data</title>
+      <link>https://www.danielsobrado.com/post/introduction-to-machine-data/</link>
+      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/introduction-to-machine-data/</guid>
+      <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.
+Any type of data produced by programs and processes is useful for us, we can use logs, network packets, any type of metrics and performance clues.
+This means a large amount of unstructured data that is ready for our consumption and use.</description>
+    </item>
+    
+    <item>
       <title>Functional programming in Java: Lambdas</title>
       <link>https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
