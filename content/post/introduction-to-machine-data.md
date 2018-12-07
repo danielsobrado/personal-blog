@@ -39,3 +39,4 @@ Database performance is always a great concern, hitting logs and not databases i
 
 Relying on data being spilt away from the processes is a risky matter, it can change at any time without notice, this is not part of the core features of the platform.
 
+You can easily leak confidential data if you are not careful, logs are less controlled than databases.

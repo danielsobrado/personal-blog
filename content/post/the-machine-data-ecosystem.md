@@ -10,7 +10,7 @@ prev: /tutorials/mathjax
 next: /prior-posterior-probabilities
 title: The machine data ecosystem
 noweight: 10
-image: https://i.imgur.com/UwxfyJ9.png
+image: https://i.imgur.com/zTFm6h3.png
 tags : [
     "Machine Data"
 ]
