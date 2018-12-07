@@ -3,10 +3,10 @@ description: "ndarray is the earth of NumPy, it's the main data storage object o
 ."
 author: "Daniel Sobrado"
 date: 2016-02-29
-linktitle: Numpy Introduction
+linktitle: Numpy ndarrays
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: "Numpy: Introduction"
+title: "Numpy: ndarrays"
 image: https://i.imgur.com/oQNt9Gt.jpg
 tags : [
     "Python",
@@ -17,7 +17,6 @@ categories : [
 	"Programming"
 ]
 ---
-
 
 # Creating ndarrays
 
