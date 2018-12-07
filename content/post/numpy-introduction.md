@@ -83,3 +83,4 @@ The smallest Python object will require 4 bytes per pointer plus 16 bytes for th
 
 You cannot use `sys.getsizeof()` to verify the amount of memory consumed as per the documentation *"Only the memory consumption directly attributed to the object is accounted for, not the memory consumption of objects it refers to."*
 
+Let´s move on creating some ndarrays! 
