@@ -17,6 +17,8 @@ categories : [
 ]
 ---
 
+We have 
+
 # Creating ndarrays
 
 We can get Numpy vector and a matrix rapidly from a Python list:
@@ -135,6 +137,21 @@ We can observe some attributes from an ndarray, with the following operations, f
 
 
 # Structured arrays
+
+We mentioned that numpy and ndarrays are fast and compact because they have homogeneus data on them, but htey might be cases when we need heterogeneous data on them, we can do this using Panda's Dataframes, but can we do it using just Numpy? 
+
+Yes, we have structured arrays that can include multipe data types:
+
+<pre class="prettyprint lang-py linenums">
+data = np.zeros(4, dtype={'names':('name', 'age', 'weight'),
+                          'formats':('U10', 'i4', 'f8')})
+print(data.dtype)
+<span class="nocode" style="color:white">
+Output:
+$ [('name', '<U10'), ('age', '<i4'), ('weight', '<f8')]
+</span>
+</pre>
+
 
 # Slice and dice
 

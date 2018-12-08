@@ -145,6 +145,8 @@
         <div class="kg-card-markdown">
         
 
+<p>We have</p>
+
 <h1 id="creating-ndarrays">Creating ndarrays</h1>
 
 <p>We can get Numpy vector and a matrix rapidly from a Python list:</p>
@@ -185,18 +187,50 @@ $ array([[1., 1., 1.],
          [1., 1., 1.],
          [1., 1., 1.]])
 </span>
+diagonal = np.eye(3)
+diagonal
+<span class="nocode" style="color:white">
+Output:
+$ array([[1., 0., 0.],
+         [0., 1., 0.],
+         [0., 0., 1.]])
+</span>
 </pre>
 
-<p>We can create ndarrays initialized</p>
+<p>Or any other value:</p>
 
 <pre class="prettyprint lang-py linenums">
-# Or 10 to 100?
-arr = np.arange(10,100)
-# If you want 100 steps from 0 to 1...
-arr = np.linspace(0, 1, 100)
-# Or if you want to generate an array from 1 to 10
-# in log10 space in 100 steps...
-arr = np.logspace(0, 1, 100, base=10.0)
+all_three = np.full((3,3),3)
+all_three
+<span class="nocode" style="color:white">
+Output:
+$ array([[3., 3., 3.],
+         [3., 3., 3.],
+         [3., 3., 3.]])
+</span>
+</pre>
+
+<p>We can create ndarrays initialized with values:</p>
+
+<pre class="prettyprint lang-py linenums">
+# 10 to 15
+array1 = np.arange(10,20)
+# 10 to 20. 2 by 2
+array2 = np.arange(10,20,2)
+# 5 steps from 0 to 1...
+array3 = np.linspace(0, 1, 5)
+# Generate an array from 1 to 10, in log10 space in 10 steps...
+array4 = np.logspace(0, 1, 10, base=10.0)
+<span class="nocode" style="color:white">
+Output array1:
+$ array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
+Output array2:
+$ array([10, 12, 14, 16, 18])
+Output array3:
+$ array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+Output array4:
+$ array([ 1.        ,  1.29154967,  1.66810054,  2.15443469,  2.7825594 ,
+        3.59381366,  4.64158883,  5.9948425 ,  7.74263683, 10.        ])
 </span>
 </pre>
 
@@ -296,6 +330,20 @@ arr = np.logspace(0, 1, 100, base=10.0)
 
 <h1 id="structured-arrays">Structured arrays</h1>
 
+<p>We mentioned that numpy and ndarrays are fast and compact because they have homogeneus data on them, but htey might be cases when we need heterogeneous data on them, we can do this using Panda&rsquo;s Dataframes, but can we do it using just Numpy?</p>
+
+<p>Yes, we have structured arrays that can include multipe data types:</p>
+
+<pre class="prettyprint lang-py linenums">
+data = np.zeros(4, dtype={'names':('name', 'age', 'weight'),
+                          'formats':('U10', 'i4', 'f8')})
+print(data.dtype)
+<span class="nocode" style="color:white">
+Output:
+$ [('name', '<U10'), ('age', '<i4'), ('weight', '<f8')]
+</span>
+</pre>
+
 <h1 id="slice-and-dice">Slice and dice</h1>
 
 <p>Let´s create a 5x5 simple matrix and start slicing it!</p>
@@ -391,11 +439,11 @@ s.setAttribute('data-timestamp', +new Date());
         <ul>
           <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/analysis-of-residuals/">Analysis of residuals</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
