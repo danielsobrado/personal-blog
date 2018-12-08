@@ -59,16 +59,40 @@ $ array([[1., 1., 1.],
 </span>
 </pre>
 
-We can create ndarrays initialized 
+Or any other value:
 
 <pre class="prettyprint lang-py linenums">
-# Or 10 to 100?
-arr = np.arange(10,100)
-# If you want 100 steps from 0 to 1...
-arr = np.linspace(0, 1, 100)
-# Or if you want to generate an array from 1 to 10
-# in log10 space in 100 steps...
-arr = np.logspace(0, 1, 100, base=10.0)
+all_three = np.full((3,3),3)
+all_three
+<span class="nocode" style="color:white">
+Output:
+$ array([[3., 3., 3.],
+         [3., 3., 3.],
+         [3., 3., 3.]])
+</span>
+</pre>
+
+We can create ndarrays initialized with values:
+
+<pre class="prettyprint lang-py linenums">
+# 10 to 15
+array1 = np.arange(10,20)
+# 10 to 20. 2 by 2
+array2 = np.arange(10,20,2)
+# 5 steps from 0 to 1...
+array3 = np.linspace(0, 1, 5)
+# Generate an array from 1 to 10, in log10 space in 10 steps...
+array4 = np.logspace(0, 1, 10, base=10.0)
+<span class="nocode" style="color:white">
+Output array1:
+$ array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
+Output array2:
+$ array([10, 12, 14, 16, 18])
+Output array3:
+$ array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+Output array4:
+$ array([ 1.        ,  1.29154967,  1.66810054,  2.15443469,  2.7825594 ,
+        3.59381366,  4.64158883,  5.9948425 ,  7.74263683, 10.        ])
 </span>
 </pre>
 
