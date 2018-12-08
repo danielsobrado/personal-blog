@@ -57,6 +57,14 @@ $ array([[1., 1., 1.],
          [1., 1., 1.],
          [1., 1., 1.]])
 </span>
+diagonal = np.eye(3)
+diagonal
+<span class="nocode" style="color:white">
+Output:
+$ array([[1., 0., 0.],
+         [0., 1., 0.],
+         [0., 0., 1.]])
+</span>
 </pre>
 
 Or any other value:
