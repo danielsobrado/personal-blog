@@ -154,7 +154,7 @@ We can observe some attributes from an ndarray, with the following operations, f
 
 * itemsize: Will return `4`, that is the number of bytes used by the array. 
 * dtype: `int32` is the result, that is the type of the elements in the array. (we can have np.int32, np.float16, np.float32, or np.float64)
-* ndim: 
+* ndim: Number if dimensions of de array, 1 for vector, 2 for matrix etc..
 
 These are the data types we can use in numpy:
 
