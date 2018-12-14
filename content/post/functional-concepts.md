@@ -8,8 +8,7 @@ prev: /tutorials/automated-deployments
 title: "Functional Programming Basic Concepts"
 image: https://i.imgur.com/ewEDGca.jpg
 tags : [
-    "AngularJS",
-	"Javascript"
+    "Functional Programming"
 ]
 categories : [
 	"Programming"
@@ -17,3 +16,8 @@ categories : [
 ---
 
 ## Introduction
+
+$$
+
+$$
+
