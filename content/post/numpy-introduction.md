@@ -16,8 +16,6 @@ categories : [
 	"Programming"
 ]
 ---
-
-
 ## Introduction
 
 Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.

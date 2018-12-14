@@ -197,9 +197,9 @@ $ [('name', 'U10'), ('age', 'i4'), ('weight', 'f8')]
 </span>
 </pre>
 
-U10 means: Unicode string of maximum length 10 .
-i4 means: 4-byte (i.e., 32 bit) integer
-f8 means: 8-byte (i.e., 64 bit) float.
+* U10 means: Unicode string of maximum length 10 .
+* i4 means: 4-byte (i.e., 32 bit) integer
+* f8 means: 8-byte (i.e., 64 bit) float.
 
 # Slice and dice
 
