@@ -4,7 +4,7 @@ description = "Let's review the basics concepts to get familiar with data scienc
 title = "Introduction to Data Science: Concepts"
 date = "2014-01-03"
 categories = [
-​    "Data Science"
+	"Data Science"
 ]
 nomenu = "main"
 image= "https://i.imgur.com/hRInlsC.jpg"

@@ -43,7 +43,7 @@ This a discrete distribution, that models problems like tossing a coin and getti
 
 Our binomial distribution looks like:
 
-<div id="el"><span>$$P ( x ) = \left( \begin{array} { l } { n } \\ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }</span></div>
+$$ P ( x ) = \left( \begin{array} { l } { n } \\ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x } $$
 
 * n = number of events
 * x = number of successes
@@ -67,7 +67,7 @@ See: https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html
 
 # Dirichlet Distribution
 
-<div id="el"><span>$$P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</span></div>
+$$ P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 } $$
 
 * k is the number of outcomes.
 * Alpha is a vector is positive real values called the concentration parameter and is used as a hyper-parameter. 

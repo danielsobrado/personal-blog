@@ -16,4 +16,21 @@ categories : [
 ]
 ---
 
-## Introduction
+# 1. Introduction
+
+Functional programming is a programming paradigm, based on some principles
+
+# 2. Advantages
+
+# 3. Concepts
+
+Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
+
+## 3.1 Pure functions
+## 3.2 Function composition
+## 3.3. Avoid shared state
+## 3.4 Avoid mutating state / Immutability
+## 3.5 Avoid side effects
+
+### 3.5.1 Monads
+
