@@ -8,8 +8,7 @@ prev: /tutorials/automated-deployments
 title: "Functional Programming Basic Concepts"
 image: https://i.imgur.com/ewEDGca.jpg
 tags : [
-    "AngularJS",
-	"Javascript"
+    "Functional Programming"
 ]
 categories : [
 	"Programming"
@@ -33,4 +32,3 @@ Let´s enumerate and describe the main pillars of functional programming, each o
 ## 3.5 Avoid side effects
 
 ### 3.5.1 Monads
-
