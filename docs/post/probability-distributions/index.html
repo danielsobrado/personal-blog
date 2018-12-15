@@ -171,7 +171,7 @@
 
 <p>Our binomial distribution looks like:</p>
 
-<div id="el"><span>$$P ( x ) = \left( \begin{array} { l } { n } \\ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }</span></div>
+<p>$$ P ( x ) = \left( \begin{array} { l } { n } \ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x } $$</p>
 
 <ul>
 <li>n = number of events</li>
@@ -199,7 +199,7 @@ See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.htm
 
 <h1 id="dirichlet-distribution">Dirichlet Distribution</h1>
 
-<div id="el"><span>$$P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</span></div>
+<p>$$ P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 } $$</p>
 
 <ul>
 <li>k is the number of outcomes.</li>
@@ -284,13 +284,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/naive-bayes/">Naive Bayes</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -351,7 +351,9 @@ s.setAttribute('data-timestamp', +new Date());
           </header>
           <section class="post-card-excerpt">
               
-                <p> Introduction  </p>
+                <p> 1. Introduction Functional programming is a programming paradigm, based on some principles
+2. Advantages 3. Concepts Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
+3.1 Pure functions 3.2 Function composition 3.3. Avoid shared state 3.4 Avoid mutating state / Immutability 3.5 Avoid side effects 3.5.1 Monads  </p>
               
           </section>
       </a>
@@ -419,42 +421,10 @@ s.setAttribute('data-timestamp', +new Date());
         <a href="https://www.facebook.com/j.daniel.sobrado" target="_blank" rel="noopener">Facebook</a>
     </nav>  
   </div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-	
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-	<script>
-	  renderMathInElement(document.body,
-		{
-			delimiters: [
-				{left: "$$", right: "$$", display: true},
-				{left: "$", right: "$", display: false},
-			]
-		}
-	  );
-
-	  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
-	  for (var i = 0; i < inlineMathArray.length; i++) {
-		var inlineMath = inlineMathArray[i];
-		var tex = inlineMath.innerText || inlineMath.textContent;
-		var replaced = document.createElement("span");
-		replaced.innerHTML = katex.renderToString(tex, {displayMode: false});
-		inlineMath.parentNode.replaceChild(replaced, inlineMath);
-	  }
-
-	  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
-	  for (var i = 0; i < displayMathArray.length; i++) {
-		var displayMath = displayMathArray[i];
-		var tex = displayMath.innerHTML;
-		var replaced = document.createElement("span");
-		replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-		displayMath.parentNode.replaceChild(replaced, displayMath);
-	  }
-	</script>
-</footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script></footer>
 
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>

@@ -147,7 +147,7 @@ $ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s 
       <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
       <description>Introduction In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.
 Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuous Normal/Gaussian distributed values.
-$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$ sklearn.</description>
+$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$</description>
     </item>
     
     <item>
@@ -168,7 +168,7 @@ $$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^
       <description>So many new concepts for the beginner data scientist, let´s start one by one:
 Tensor A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.
 See: What’s the difference between a matrix and a tensor?
-Features Terms for Simple Linear Regression  Response, dependent variable, Y-variable, target, outcome: This is the variable we are trying to predict.</description>
+Features Data Splits  Training set: This is the biggest set where we run our learning algorithm on.</description>
     </item>
     
     <item>

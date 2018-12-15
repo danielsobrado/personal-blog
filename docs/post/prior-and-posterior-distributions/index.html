@@ -167,7 +167,7 @@ Likelihood: How probable is the evidence give that our hypotheses is true?</p>
 <p>The expected value is the mean of the posterior distribution.</p>
 </blockquote>
 
-<div id="el"><span>$$ P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) } $$</span></div>
+<p>$$ P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) } $$</p>
 
 <p>We know that in pur favourite TV channel they show 40% of the times drama movies, 50% action and 10% horror movies, we´d like to know the probability that tonight there will be an horror movie P(A = Horror) = 0.1, this is our prior probability.</p>
 
@@ -187,13 +187,13 @@ Mixed: A Combination of both categories.</p>
 
 <p>The mass function for the Poisson distribution is:</p>
 
-<div id="el"><span>$$ P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots $$/span></div>
+<p>$$ P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots $$</p>
 
 <h2 id="probability-density-function">Probability Density Function</h2>
 
 <p>The density function for an exponential random variable:</p>
 
-<div id="el"><span>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0 $$</span></div>
+<p>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0 $$</p>
 
 <p>Th exponential variable can be continuous not only integers, still only positive numbers.</p>
 
@@ -262,13 +262,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
+        
+                      
+        
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/numpy-ndarrays/">Numpy: ndarrays</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -396,42 +398,10 @@ s.setAttribute('data-timestamp', +new Date());
         <a href="https://www.facebook.com/j.daniel.sobrado" target="_blank" rel="noopener">Facebook</a>
     </nav>  
   </div>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
-	
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-	<script>
-	  renderMathInElement(document.body,
-		{
-			delimiters: [
-				{left: "$$", right: "$$", display: true},
-				{left: "$", right: "$", display: false},
-			]
-		}
-	  );
-
-	  var inlineMathArray = document.querySelectorAll("script[type='math/tex']");
-	  for (var i = 0; i < inlineMathArray.length; i++) {
-		var inlineMath = inlineMathArray[i];
-		var tex = inlineMath.innerText || inlineMath.textContent;
-		var replaced = document.createElement("span");
-		replaced.innerHTML = katex.renderToString(tex, {displayMode: false});
-		inlineMath.parentNode.replaceChild(replaced, inlineMath);
-	  }
-
-	  var displayMathArray = document.querySelectorAll("script[type='math/tex; mode=display']");
-	  for (var i = 0; i < displayMathArray.length; i++) {
-		var displayMath = displayMathArray[i];
-		var tex = displayMath.innerHTML;
-		var replaced = document.createElement("span");
-		replaced.innerHTML = katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-		displayMath.parentNode.replaceChild(replaced, displayMath);
-	  }
-	</script>
-</footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script></footer>
 
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
