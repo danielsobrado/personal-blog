@@ -120,6 +120,19 @@ Follow the following steps:
     </item>
     
     <item>
+      <title>Variational Autoencoders</title>
+      <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
+      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/variational-autoencoders/</guid>
+      <description>Autoencoders An autoencoder takes data with a large amount of parameters and tries to compress it into a smaller representation.
+ Encoder:
+ Bottleneck
+ Decoder:
+  Variational Autoencoders Variational Autoencoders is a technique to compress data</description>
+    </item>
+    
+    <item>
       <title>Fast Fourier Transform</title>
       <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
@@ -190,6 +203,16 @@ $ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s 
       <guid>https://www.danielsobrado.com/post/angularjs-introduction/</guid>
       <description>Introduction All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &amp;ldquo;Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!
 I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</description>
+    </item>
+    
+    <item>
+      <title>Entropy, Cross-Entropy and Kullback-Leibler Divergence</title>
+      <link>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1. In Information theory, receiving a bit reduces our uncertainty by half, or a factor of 2.
+If our clients in the bank are likely to repay a loan or not, and we have our risk manager to tell us if a certain client repaid or not his loan, if the chance of the client being good or bad is 50%, our risk manager is reducing our uncertainty about the client by a factor of 2.</description>
     </item>
     
     <item>
@@ -292,16 +315,6 @@ The cost of the platforms Splunk is great but the price tag is not that great, E
       <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.
 Any type of data produced by programs and processes is useful for us, we can use logs, network packets, any type of metrics and performance clues.
 This means a large amount of unstructured data that is ready for our consumption and use.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.danielsobrado.com/post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/</guid>
-      <description>description: &amp;ldquo;In Information Theory that receiving a bit reduces our uncertainty by half, or a factor of 2. &amp;ldquo; author: &amp;ldquo;Daniel Sobrado&amp;rdquo; date: 2014-05-20 linktitle: Entropy, Cross-Entropy and KL-Divergence nomenu: main: ​ parent: tutorials prev: /tutorials/mathjax next: /prior-posterior-probabilities title: Entropy, Cross-Entropy and Kullback-Leibler Divergence noweight: 10 image: https://i.imgur.com/IenFUVF.jpg tags : [ ​ &amp;ldquo;kl-divergence&amp;rdquo; ] categories : [ ​ &amp;ldquo;Maths&amp;rdquo; ]
-A bit is a number that is equal to 0 or 1, this in Information Theory that receiving a bit reduces our uncertainty by half, or a factor of 2.</description>
     </item>
     
     <item>

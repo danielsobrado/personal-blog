@@ -108,6 +108,19 @@ Follow the following steps:
     </item>
     
     <item>
+      <title>Variational Autoencoders</title>
+      <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
+      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/variational-autoencoders/</guid>
+      <description>Autoencoders An autoencoder takes data with a large amount of parameters and tries to compress it into a smaller representation.
+ Encoder:
+ Bottleneck
+ Decoder:
+  Variational Autoencoders Variational Autoencoders is a technique to compress data</description>
+    </item>
+    
+    <item>
       <title>Fast Fourier Transform</title>
       <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>

@@ -36,6 +36,19 @@ This is different from correlation analysis, because the model allows us to infe
     </item>
     
     <item>
+      <title>Variational Autoencoders</title>
+      <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
+      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/variational-autoencoders/</guid>
+      <description>Autoencoders An autoencoder takes data with a large amount of parameters and tries to compress it into a smaller representation.
+ Encoder:
+ Bottleneck
+ Decoder:
+  Variational Autoencoders Variational Autoencoders is a technique to compress data</description>
+    </item>
+    
+    <item>
       <title>Fast Fourier Transform</title>
       <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
@@ -44,6 +57,16 @@ This is different from correlation analysis, because the model allows us to infe
       <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Entropy, Cross-Entropy and Kullback-Leibler Divergence</title>
+      <link>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1. In Information theory, receiving a bit reduces our uncertainty by half, or a factor of 2.
+If our clients in the bank are likely to repay a loan or not, and we have our risk manager to tell us if a certain client repaid or not his loan, if the chance of the client being good or bad is 50%, our risk manager is reducing our uncertainty about the client by a factor of 2.</description>
     </item>
     
     <item>
