@@ -1,4 +1,4 @@
-description: "In Information Theory that receiving a bit reduces our uncertainty by half, or a factor of 2. "
+description: "In Information Theory receiving a bit reduces our uncertainty by half, or a factor of 2. "
 author: "Daniel Sobrado"
 date: 2014-05-20
 linktitle: Entropy, Cross-Entropy and KL-Divergence
@@ -9,7 +9,7 @@ prev: /tutorials/mathjax
 next: /prior-posterior-probabilities
 title: Entropy, Cross-Entropy and Kullback-Leibler Divergence
 noweight: 10
-image: https://i.imgur.com/IenFUVF.jpg
+image: https://i.imgur.com/MGDmDqr.png
 tags : [
 ​    "kl-divergence"
 ]
