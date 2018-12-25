@@ -10,11 +10,12 @@ prev: /tutorials/mathjax
 next: /prior-posterior-probabilities
 title: Entropy, Cross-Entropy and Kullback-Leibler Divergence
 noweight: 10
-image: https://i.imgur.com/MGDmDqr.png
+image: https://i.imgur.com/EG7uO7w.png
 tags : [
     "entropy",
     "cross-entropy",
     "kl-divergence"
+]
 categories : [
     "Maths"
 ]
@@ -52,7 +53,8 @@ We've just measured how uncertain the events are, to do that we've used the **En
 $$
 H\left( p \right) = - \sum _ { i = 1 } ^ { n } p _ { i } \cdot \log _ { 2 \left( p _ { i } \right) }
 $$
-> This equations tells us about the uncertainty of our probability distribution.
+
+> This equation tells us about the uncertainty of our probability distribution.
 
 If we have very few clients that don't repay loans, the information provided by the risk manager in general is quite certain, but if the delinquency increases and half of the clients don't repay on average our risk manager is going to reduce a lot our uncertainty, it is going to provide more bits of information.
 
