@@ -26,15 +26,19 @@ A bit is a number that is equal to 0 or 1. In [Information theory](https://en.wi
 
 If our clients in the bank are likely to repay a loan or not, and we have our risk manager to tell us if a certain client repaid or not his loan, if the chance of the client being good or bad is 50%, our risk manager is reducing our uncertainty about the client by a factor of 2.
 
+# Entropy
+
 Now let's suppose that the risk manager can give us a score of the client from 1 to 8, ranking how much the client did repay, from nothing to everything, and these are equally likely.
 
 When we get the report from the risk manager he is dividing our uncertainty by a factor of 8, that is 2<sup>3</sup>, he can send us 3 bits to communicate this.
 
 He might send a larger text messages with many bits explaining the ranking with a label, but the real information we receive that reduces our uncertainty is 3 bits long. 
 
-In this case we have a *uncertainty reduction factor* of 8 and we´ll be able to compute the number of bits required to transmit this information using the logarithm: log(8) = 3
+In this case we have a *uncertainty reduction factor* of 8 and we'll be able to compute the number of bits required to transmit this information using the logarithm: log<sub>2</sub>(8) = 3
 
-In real life the possibilities are not always equal, let´s say that we have a 95% chance of having a good customer and 5% to have a bad one that doesn´t repay the loan.
+In real life the possibilities are not always equal, let´s say that we have a 95% chance of having a good customer and 5% to have a bad one that doesn't repay the loan.
+
+
 
 Entropy equation:
 $$
