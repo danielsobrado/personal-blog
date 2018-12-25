@@ -17,7 +17,7 @@
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="https://i.imgur.com/itRkuba.png"/>
+    <meta name="twitter:image" content="https://i.imgur.com/vhMJdwJ.png"/>
     
  
     <meta name="twitter:title" content="Numpy: ndarrays"/>
@@ -36,7 +36,7 @@
     <meta property="article:published_time" content="2016-02-29T00:00:00Z" />
     <meta property="article:tag" content="Python" /><meta property="article:tag" content="Numpy" />
 
-    <meta property="og:image" content="https://i.imgur.com/itRkuba.png"/>
+    <meta property="og:image" content="https://i.imgur.com/vhMJdwJ.png"/>
 
 
     <meta name="generator" content="Hugo 0.48" />
@@ -138,14 +138,14 @@
         <h1 class="post-full-title">Numpy: ndarrays</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/itRkuba.png)">
+    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/vhMJdwJ.png)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<p>We have</p>
+<p>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</p>
 
 <h1 id="creating-ndarrays">Creating ndarrays</h1>
 
@@ -223,58 +223,196 @@ $ array([[1, 0, 0],
 <pre class="prettyprint lang-py linenums">
 # 10 to 15
 array1 = np.arange(10,20)
-# 10 to 20. 2 by 2
-array2 = np.arange(10,20,2)
-# 5 steps from 0 to 1...
-array3 = np.linspace(0, 1, 5)
-# Generate an array from 1 to 10, in log10 space in 10 steps...
-array4 = np.logspace(0, 1, 10, base=10.0)
 <span class="nocode" style="color:white">
 
 Output array1:
 $ array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19])
+</span>
 
-Output array2:
+<span class="nocode" style="color:white">
+# 10 to 20. 2 by 2
+array2 = np.arange(10,20,2)
+
+Output:
 $ array([10, 12, 14, 16, 18])
+</span>
 
-Output array3:
+# 5 steps from 0 to 1...
+array3 = np.linspace(0, 1, 5)
+<span class="nocode" style="color:white">
+
+Output:
 $ array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+</span>
 
-Output array4:
+# Generate an array from 1 to 10, in log10 space in 10 steps...
+array4 = np.logspace(0, 1, 10, base=10.0)
+<span class="nocode" style="color:white">
+Output:
 $ array([ 1.        ,  1.29154967,  1.66810054,  2.15443469,  2.7825594 ,
         3.59381366,  4.64158883,  5.9948425 ,  7.74263683, 10.        ])
 </span>
 </pre>
+
+<p>Or generate ndarrays of random values:
+<pre class="prettyprint lang-py linenums">
+random_array1 = np.random.random()
+<span class="nocode" style="color:white">
+Output:
+$ 0.18678749557026275</p>
+
+<p></span>
+random_array2 = np.random.random(2)
+<span class="nocode" style="color:white">
+Output:
+$ array([0.35725608, 0.85339947])
+</span></p>
+
+<p>random_array3 = np.random.random([3,2])
+<span class="nocode" style="color:white"></p>
+
+<p>Output:
+$ array([[0.80038398, 0.56725183],
+         [0.76462484, 0.44012246],
+         [0.5956858 , 0.1327121 ]])
+</span>
+</pre></p>
 
 <p>We can observe some attributes from an ndarray, with the following operations, for an array defined as <code>np.array([(2,4,6)])</code>:</p>
 
 <ul>
 <li>itemsize: Will return <code>4</code>, that is the number of bytes used by the array.</li>
 <li>dtype: <code>int32</code> is the result, that is the type of the elements in the array. (we can have np.int32, np.float16, np.float32, or np.float64)</li>
-<li>ndim:</li>
+<li>ndim: Number if dimensions of de array, 1 for vector, 2 for matrix etc..</li>
 </ul>
 
-<p>| Data |type    |Description                    |
-|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|
-| bool_ |Boolean |stored as a byte           |
-| int_  |Default integer type |(either int64 or int32) |
-| intc  |C int| (either int32 or int64) |
-| intp  |C ssize<em>t |(either int32 or int64) |
-| int8  |Byte |(-128 to 127)                  |
-| int16 |Integer |(-32768 to 32767)          |
-| int32 |Integer |(-2147483648 to 2147483647) |
-| int64 |Integer |(-9223372036854775808 to 9223372036854775807) |
-| uint8 |Unsigned integer |(0 to 255)        |
-| uint16    |Unsigned integer |(0 to 65535)     |
-| uint32    |Unsigned integer |(0 to 4294967295) |
-| uint64    |Unsigned integer |(0 to 18446744073709551615) |
-| float</em>    |float64|Shorthand for float64.            |
-| float16   |Half precision float| sign bit, 5 bits exponent, 10 bits mantissa |
-| float32   |Single precision float| sign bit, 8 bits exponent, 23 bits mantissa |
-| float64   |Double precision float| sign bit, 11 bits exponent, 52 bits mantissa |
-| complex_  |complex128|Shorthand for complex128.       |
-| complex64 |Complex |number, represented by two 32-bit floats |
-| complex128    |Complex |number, represented by two 64-bit floats |</p>
+<p>These are the data types we can use in numpy:</p>
+
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>bool_</td>
+<td>Boolean</td>
+<td>Stored as a byte</td>
+</tr>
+
+<tr>
+<td>int_</td>
+<td>Default integer type</td>
+<td>either int64 or int32</td>
+</tr>
+
+<tr>
+<td>intc</td>
+<td>C int</td>
+<td>Either int32 or int64</td>
+</tr>
+
+<tr>
+<td>intp</td>
+<td>C ssize_t</td>
+<td>Either int32 or int64</td>
+</tr>
+
+<tr>
+<td>int8</td>
+<td>Byte</td>
+<td>-128 to 127</td>
+</tr>
+
+<tr>
+<td>int16</td>
+<td>Integer</td>
+<td>-32768 to 32767</td>
+</tr>
+
+<tr>
+<td>int32</td>
+<td>Integer</td>
+<td>-2147483648 to 2147483647</td>
+</tr>
+
+<tr>
+<td>int64</td>
+<td>Integer</td>
+<td>-9223372036854775808 to 9223372036854775807</td>
+</tr>
+
+<tr>
+<td>uint8</td>
+<td>Unsigned integer</td>
+<td>0 to 255</td>
+</tr>
+
+<tr>
+<td>uint16</td>
+<td>Unsigned integer</td>
+<td>0 to 65535</td>
+</tr>
+
+<tr>
+<td>uint32</td>
+<td>Unsigned integer</td>
+<td>0 to 4294967295</td>
+</tr>
+
+<tr>
+<td>uint64</td>
+<td>Unsigned integer</td>
+<td>0 to 18446744073709551615</td>
+</tr>
+
+<tr>
+<td>float_</td>
+<td>float64</td>
+<td>Shorthand for float64.</td>
+</tr>
+
+<tr>
+<td>float16</td>
+<td>Half precision float</td>
+<td>Sign bit, 5 bits exponent, 10 bits mantissa</td>
+</tr>
+
+<tr>
+<td>float32</td>
+<td>Single precision float</td>
+<td>Sign bit, 8 bits exponent, 23 bits mantissa</td>
+</tr>
+
+<tr>
+<td>float64</td>
+<td>Double precision float</td>
+<td>Sign bit, 11 bits exponent, 52 bits mantissa</td>
+</tr>
+
+<tr>
+<td>complex_</td>
+<td>complex128</td>
+<td>Shorthand for complex128.</td>
+</tr>
+
+<tr>
+<td>complex64</td>
+<td>Complex number</td>
+<td>Represented by two 32-bit floats</td>
+</tr>
+
+<tr>
+<td>complex128</td>
+<td>Complex number</td>
+<td>Represented by two 64-bit floats</td>
+</tr>
+</tbody>
+</table>
 
 <h1 id="structured-arrays">Structured arrays</h1>
 
@@ -288,7 +426,7 @@ data = np.zeros(4, dtype={'names':('name', 'age', 'weight'),
 print(data.dtype)
 <span class="nocode" style="color:white">
 Output:
-$ [('name', '"<U10"'), ('age', '<i4'), ('weight', '<f8')]
+$ [('name', 'U10'), ('age', 'i4'), ('weight', 'f8')]
 </span>
 </pre>
 
@@ -319,6 +457,28 @@ $ array([[ 0,  1,  2,  3,  4],
 <p>The logic can be seen in the following highlighted image:</p>
 
 <p><img src="https://i.imgur.com/CnEM5JF.png" alt="" /></p>
+
+<h2 id="stacking-and-tiling">Stacking and tiling</h2>
+
+<p>Sometimes we&rsquo;ll need to copy horitontally or vertically our matrix or vector, numpy can do this for us:</p>
+
+<pre class="prettyprint lang-py linenums">
+# Create a simple vector
+array_stack = np.array([1,2,3])
+<span class="nocode" style="color:white">
+Output:
+$ array([1, 2, 3])
+</span>
+
+# Repeat 2 times horizontally and 3 vertically
+np.tile(array_stack, [3,2])
+<span class="nocode" style="color:white">
+Output:
+$ array([[1, 2, 3, 1, 2, 3],
+         [1, 2, 3, 1, 2, 3],
+         [1, 2, 3, 1, 2, 3]])
+</span>
+</pre>
 
 <h1 id="broadcasting">Broadcasting</h1>
 
@@ -391,13 +551,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
+        
           <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-basic-concepts/">Functional Programming Basic Concepts</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/fast-fourier-transform/">Fast Fourier Transform</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-data-science-concepts/">Introduction to Data Science: Concepts</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

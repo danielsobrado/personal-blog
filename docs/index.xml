@@ -153,10 +153,9 @@ Add extra services provide some advantages but there are also disadvantages, hav
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
-      <description>We have
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
 Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vector.reshape((2,2)) matrix Output: $ array([[1, 2], [3, 4]])   We can quickly create matrices of ones and zeros:
-all_zeros = np.zeros((3,3)) all_zeros Output: $ array([[0., 0., 0.], [0., 0., 0.], [0., 0., 0.]])  all_ones = np.ones((3,3)) all_ones Output: $ array([[1.</description>
+vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vector.reshape((2,2)) matrix Output: $ array([[1, 2], [3, 4]])   We can quickly create matrices of ones and zeros:</description>
     </item>
     
     <item>
@@ -290,6 +289,16 @@ The cost of the platforms Splunk is great but the price tag is not that great, E
       <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.
 Any type of data produced by programs and processes is useful for us, we can use logs, network packets, any type of metrics and performance clues.
 This means a large amount of unstructured data that is ready for our consumption and use.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/</guid>
+      <description>description: &amp;ldquo;In Information Theory that receiving a bit reduces our uncertainty by half, or a factor of 2. &amp;ldquo; author: &amp;ldquo;Daniel Sobrado&amp;rdquo; date: 2014-05-20 linktitle: Entropy, Cross-Entropy and KL-Divergence nomenu: main: ​ parent: tutorials prev: /tutorials/mathjax next: /prior-posterior-probabilities title: Entropy, Cross-Entropy and Kullback-Leibler Divergence noweight: 10 image: https://i.imgur.com/IenFUVF.jpg tags : [ ​ &amp;ldquo;kl-divergence&amp;rdquo; ] categories : [ ​ &amp;ldquo;Maths&amp;rdquo; ]
+A bit is a number that is equal to 0 or 1, this in Information Theory that receiving a bit reduces our uncertainty by half, or a factor of 2.</description>
     </item>
     
     <item>

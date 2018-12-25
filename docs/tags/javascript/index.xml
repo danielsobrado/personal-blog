@@ -21,16 +21,5 @@
 I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</description>
     </item>
     
-    <item>
-      <title>Functional Programming Basic Concepts</title>
-      <link>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</link>
-      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</guid>
-      <description> 1. Introduction Functional programming is a programming paradigm, based on some principles
-2. Advantages 3. Concepts Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
-3.1 Pure functions 3.2 Function composition 3.3. Avoid shared state 3.4 Avoid mutating state / Immutability 3.5 Avoid side effects 3.5.1 Monads </description>
-    </item>
-    
   </channel>
 </rss>

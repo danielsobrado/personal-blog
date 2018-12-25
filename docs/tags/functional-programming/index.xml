@@ -6,9 +6,21 @@
     <description>Recent content in Functional Programming on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Wed, 08 Jan 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/tags/functional-programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Functional Programming Basic Concepts</title>
+      <link>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</link>
+      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</guid>
+      <description> 1. Introduction Functional programming is a programming paradigm, based on some principles
+2. Advantages 3. Concepts Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
+3.1 Pure functions 3.2 Function composition 3.3. Avoid shared state 3.4 Avoid mutating state / Immutability 3.5 Avoid side effects 3.5.1 Monads </description>
+    </item>
     
     <item>
       <title>Functional programming in Java: Lambdas</title>
