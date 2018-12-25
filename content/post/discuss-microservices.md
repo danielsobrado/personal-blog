@@ -30,7 +30,7 @@ Add extra services provide some advantages but there are also disadvantages, hav
 **Microservices**: A collection of small, isolated services that each owns their data. They are scalable and resilient to failure.
 
 **Isolation**: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.
-**Aotonomicity**
+**Autonomicity**
 **Single Responsibility**
 **Exclusive state**
 **Mobility**
@@ -59,4 +59,4 @@ Moving away from REST, we need an asynchronous intra-service communication chann
 
 We can optimize for reading or for writing, not for both. We need to consider this at the microservice level.
 
-My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Jenkins, SBT and Ansible. (And Graphite for monitoring.)
+My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Jenkins, SBT and Ansible. (And Elastic Stack for monitoring.)
