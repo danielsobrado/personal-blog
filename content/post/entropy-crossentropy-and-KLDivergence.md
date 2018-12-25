@@ -27,6 +27,10 @@ When we get the report from the risk manager he is dividing our uncertainty by a
 
 He might send a larger text messages with many bits explaining the ranking with a label, but the real information we receive that reduces our uncertainty is 3 bits long. 
 
+In this case we have a *uncertainty reduction factor* of 8 and we´ll be able to compute the number of bits required to transmit this information using the logarithm: log(8) = 3
+
+In real life the possibilities are not always equal, let´s say that we have a 95% chance of having a good customer and 5% to have a bad one that doesn´t repay the loan.
+
 Entropy equation:
 $$
 H\left( p \right) = - \sum _ { i = 1 } ^ { n } p _ { i } \cdot \log _ { 2 \left( p _ { i } \right) }
