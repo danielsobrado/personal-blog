@@ -9,7 +9,7 @@ nomenu:
 prev: /tutorials/mathjax
 title: Variational Autoencoders 
 noweight: 10
-image: https://i.imgur.com/rgOZmTh.png
+image: https://i.imgur.com/ewvcaP8.png
 tags : [
     "autoencoders"
 ]
