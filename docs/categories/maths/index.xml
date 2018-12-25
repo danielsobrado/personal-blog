@@ -6,10 +6,22 @@
     <description>Recent content in Maths on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/categories/maths/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Logistic Regression</title>
+      <link>https://www.danielsobrado.com/post/logistic-regression/</link>
+      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/logistic-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
+ We need to understand that Linear Regression won´t help us with non linear relationships.
+When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
+This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
+    </item>
     
     <item>
       <title>Linear Regression</title>

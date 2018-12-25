@@ -59,6 +59,18 @@ Each metric has its own strenghts and weakness and its fit for a different use c
     </item>
     
     <item>
+      <title>Logistic Regression</title>
+      <link>https://www.danielsobrado.com/post/logistic-regression/</link>
+      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/logistic-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
+ We need to understand that Linear Regression won´t help us with non linear relationships.
+When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
+This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
+    </item>
+    
+    <item>
       <title>Analysis of residuals</title>
       <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
       <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
@@ -242,9 +254,11 @@ Central Limit Theorem  The sampling distribution of the mean of any independent,
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</guid>
-      <description> 1. Introduction Functional programming is a programming paradigm, based on some principles
+      <description>1. Introduction Functional programming is a programming paradigm, based on some principles
 2. Advantages 3. Concepts Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
-3.1 Pure functions 3.2 Function composition 3.3. Avoid shared state 3.4 Avoid mutating state / Immutability 3.5 Avoid side effects 3.5.1 Monads </description>
+3.1 Pure functions and Referential Transparency We want to make sure that a function will perform the same actions and give the same results for the same inputs.
+We call these functions stateless functions.
+ An expression is referentially transparent if it can be replaced with its value without changing the program behavior.</description>
     </item>
     
     <item>
