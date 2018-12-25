@@ -12,8 +12,9 @@ title: Entropy, Cross-Entropy and Kullback-Leibler Divergence
 noweight: 10
 image: https://i.imgur.com/MGDmDqr.png
 tags : [
+    "entropy",
+    "cross-entropy",
     "kl-divergence"
-]
 categories : [
     "Maths"
 ]
