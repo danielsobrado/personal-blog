@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cross Entropy on </title>
+    <link>https://www.danielsobrado.com/tags/cross-entropy/</link>
+    <description>Recent content in Cross Entropy on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.danielsobrado.com/tags/cross-entropy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Entropy, Cross-Entropy and Kullback-Leibler Divergence</title>
+      <link>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1. In Information theory, receiving a bit reduces our uncertainty by half, or a factor of 2.
+If our clients in the bank are likely to repay a loan or not, and we have our risk manager to tell us if a certain client repaid or not his loan, if the chance of the client being good or bad is 50%, our risk manager is reducing our uncertainty about the client by a factor of 2.</description>
+    </item>
+    
+  </channel>
+</rss>
