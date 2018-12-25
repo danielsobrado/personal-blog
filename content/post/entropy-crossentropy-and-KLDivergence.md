@@ -1,21 +1,26 @@
+---
 description: "In Information Theory receiving a bit reduces our uncertainty by half, or a factor of 2. "
 author: "Daniel Sobrado"
 date: 2014-05-20
 linktitle: Entropy, Cross-Entropy and KL-Divergence
 nomenu:
   main:
-​    parent: tutorials
+    parent: tutorials
 prev: /tutorials/mathjax
 next: /prior-posterior-probabilities
 title: Entropy, Cross-Entropy and Kullback-Leibler Divergence
 noweight: 10
 image: https://i.imgur.com/MGDmDqr.png
 tags : [
-​    "kl-divergence"
-]
+    "entropy",
+    "cross-entropy",
+    "kl-divergence"
 categories : [
-​    "Maths"
+    "Maths"
 ]
+---
+
+# Information theory
 
 A bit is a number that is equal to 0 or 1. In [Information theory](https://en.wikipedia.org/wiki/Information_theory), receiving a bit reduces our uncertainty by half, or a factor of 2.
 
