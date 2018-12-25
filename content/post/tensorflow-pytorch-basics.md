@@ -443,7 +443,7 @@ Root Mean Square Error (RMSE) is one of the most used loss functions in Deep Lea
 
 Where Y is the true or reference sample and Y_hat is the predicted result:
 
-<div id="el"><span>$$RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
+$$ RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}} $$
 
 #### RMSE using numpy
 
@@ -451,14 +451,13 @@ We can use plain python with numpy, to calculate RMSE, we can see it is complete
 
 <pre class="prettyprint lang-py linenums">
 import numpy as np
-
 def rmse(y, y_hat):
-    y_actual=np.array(y)
-    y_pred=np.array(y_hat)
-    error=(y_actual-y_pred)**2
-    error_mean=round(np.mean(error))
-    error_sqrt=sqrt(error_mean)
-    return error_sqrt
+​    y_actual=np.array(y)
+​    y_pred=np.array(y_hat)
+​    error=(y_actual-y_pred)**2
+​    error_mean=round(np.mean(error))
+​    error_sqrt=sqrt(error_mean)
+​    return error_sqrt
 </pre>
 
 #### RMSE using scikit-learn
@@ -470,7 +469,7 @@ import numpy as np
 from sklearn import metrics
 
 def rmse(y, y_hat):
-    return np.sqrt(metrics.mean_squared_error(y, y_hat))
+​    return np.sqrt(metrics.mean_squared_error(y, y_hat))
 </pre>
 
 #### RMSE using Tensorflow
@@ -479,9 +478,8 @@ The implementation of Tensorflow doesn't look too different to the one in scikit
 
 <pre class="prettyprint lang-py linenums">
 import tensorflow as tf
-
 def rmse(y, y_hat):
-    return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
+​    return tf.sqrt(tf.reduce_mean(tf.square((y - y_hat))))
 </pre>
 
 #### RMSE using Pytorch
@@ -490,14 +488,15 @@ Pretty much the same with Pytorch:
 
 <pre class="prettyprint lang-py linenums">
 import torch
-
 def rmse(y, y_hat):
-    return torch.sqrt(torch.mean((y - y_hat).pow(2)))
+​    return torch.sqrt(torch.mean((y - y_hat).pow(2)))
 </pre>
 
 #### Comparison
 
-We've seen the basics of Tensorflow and Pytorch and apart for the syntaxis they don't look so difference, the main differences will come later, these are the fundations to start playing with them.
+We've seen the basics of Tensorflow and Pytorch and apart for the syntaxes they don't look so different, the main differences will come later, these are the foundations to start playing with them.
+
+Tensorflow uses *static graphs* that means you define the graphs and runs them, PyTorch is popular because you can define the graph during the execution, this is called *dynamic graphs*, we'll see this later in detail.
 
 We've also implemented one common loss function in several ways.
 
