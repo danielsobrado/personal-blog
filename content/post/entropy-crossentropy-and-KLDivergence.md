@@ -2,13 +2,13 @@
 description: "In Information Theory receiving a bit reduces our uncertainty by half, or by a factor of 2. Our uncertainty reduction is the inverse of the probability of the event occurring."
 author: "Daniel Sobrado"
 date: 2014-05-20
-linktitle: Entropy, Cross-Entropy and KL-Divergence
+linktitle: Explaining Entropy
 nomenu:
   main:
     parent: tutorials
 prev: /tutorials/mathjax
 next: /prior-posterior-probabilities
-title: Entropy, Cross-Entropy and Kullback-Leibler Divergence
+title: Explaining Entropy
 noweight: 10
 image: https://i.imgur.com/EG7uO7w.png
 tags : [
@@ -58,15 +58,50 @@ $$
 
 If we have very few clients that don't repay loans, the information provided by the risk manager in general is quite certain, but if the delinquency increases and half of the clients don't repay on average our risk manager is going to reduce a lot our uncertainty, it is going to provide more bits of information.
 
-# Cross-Entropy
+Let's code an example in Python using   [scipy.stats.entropy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.entropy.html):
 
+<pre class="prettyprint lang-py linenums">
+from scipy import stats
+print(stats.entropy(pk=[0.95, 0.05]))
+<span class="nocode" style="color:white">
+Output: 0.1985152433458726
+</span>
+</pre>
 
+This figure doesn't match, what happened? By default this functions takes the logs in base 10, our example is in bits, we need to use base 2:
 
-Let's do an example in Python:
+<pre class="prettyprint lang-py linenums">
+from scipy import stats
+print(stats.entropy(pk=[0.95, 0.05],base=2))
+<span class="nocode" style="color:white">
+Output: 0.2863969571159562
+</span>
+</pre>
 
+Yes! this does match our calculation. 
 
+Let's validate it using the formula, we need to remember that:
 
-```python
-from` `scipy ``import` `stats
-print` `stats.entropy(pk``=``[``0.2``, ``0.8``], qk``=``[``0.4``, ``0.6``])
-```
+$$
+\log _ { b } ( a ) = \frac { \log ( a ) } { \log ( b ) }
+$$
+
+<pre class="prettyprint lang-py linenums">
+from scipy import stats
+import numpy as np
+print(-np.sum(pk * np.log(pk)/np.log(2), axis=0))
+<span class="nocode" style="color:white">
+Output: 0.2863969571159562
+</span>
+</pre>
+
+We can also use math.log that takes an additional argument to specify the base, in this case we won't be able to take advantage of the vectorization from NumPy arrays:
+
+<pre class="prettyprint lang-py linenums">
+import math
+print(-0.95 * math.log(0.95,2) + -0.05 * math.log(0.05,2))
+<span class="nocode" style="color:white">
+Output: 0.28639695711595625
+</span>
+</pre>
+
