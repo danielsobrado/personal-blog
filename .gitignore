@@ -2,3 +2,4 @@
 /public/*.*
 *.bak
 publish.bat
+public/CNAME
