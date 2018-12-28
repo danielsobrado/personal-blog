@@ -7,7 +7,7 @@ next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
 title: "Likelihood encoding"
 weight: 10
-image: https://i.imgur.com/isyQF4V.jpg
+image: https://i.imgur.com/MDlo1LF.png
 tags : [
     "Loss Functions"
 ]

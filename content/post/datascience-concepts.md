@@ -1,15 +1,16 @@
-+++
-author = "Daniel Sobrado"
-description = "Let's review the basics concepts to get familiar with data science. Simple definitions for beginners that will allow them to deep dive into the theory and practice of Data Science and Machine Learning."
-title = "Introduction to Data Science: Concepts"
-date = "2014-01-03"
-categories = [
+
+---
+author : "Daniel Sobrado"
+description : "Let's review the basics concepts to get familiar with data science. Simple definitions for beginners that will allow them to deep dive into the theory and practice of Data Science and Machine Learning."
+title : "Introduction to Data Science: Concepts"
+date : "2014-01-03"
+categories : [
 	"Data Science"
 ]
-nomenu = "main"
-image= "https://i.imgur.com/hRInlsC.jpg"
-
-+++
+nomenu : "main"
+image : "https://i.imgur.com/hRInlsC.jpg"
+draft : true
+---
 
 So many new concepts for the beginner data scientist, let´s start one by one:
 
