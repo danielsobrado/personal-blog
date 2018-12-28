@@ -34,11 +34,11 @@ Let´s take the following poker cards as an example:
 
 Our `experiment` is to take two cards for the deck, one at a time, each card extraction is an `event`. We define as outcomes that a card is of a defined 
 
-If we introduce the card in the deck again before extracting the next one, we´ll have `indepedent` events, if we don´t the events will be `dependent`, due to the fact that the fact of removing one card from the deck will alter the probabilities of the next event.
+If we introduce the card in the deck again before extracting the next one, we'll have `indepedent` events, if we don't the events will be `dependent`, due to the fact that the fact of removing one card from the deck will alter the probabilities of the next event.
 
 ## Concepts
 
-Let´s illustrate these concepts with poker cards and rolling dices:
+Let's illustrate these concepts with poker cards and rolling dices:
 
 * An **experiment** is a well-defined action, that might result in a number of outcomes.
 * **Outcome**: Possible result of an `experiment`. Each outcome is unique, and different outcomes are `mutually exclusive`.
