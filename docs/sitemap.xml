@@ -92,7 +92,12 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/</loc>
+    <loc>https://www.danielsobrado.com/post/cross-entropy-and-kullback-leibler-divergence/</loc>
+    <lastmod>2014-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/explaining-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -179,7 +184,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/cross-entropy/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+    <lastmod>2014-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,7 +241,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/kl-divergence/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+    <lastmod>2014-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

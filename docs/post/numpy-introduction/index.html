@@ -272,13 +272,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/entropy-cross-entropy-and-kullback-leibler-divergence/">Entropy, Cross-Entropy and Kullback-Leibler Divergence</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/logistic-regression/">Logistic Regression</a></li>            
+                      
         
-          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -407,10 +409,15 @@ s.setAttribute('data-timestamp', +new Date());
     </nav>  
   </div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script></footer>
-
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script></footer>
+<script>renderMathInElement(document.body,{delimiters:
+  [{left: "$", right: "$", display: false},
+  {left: "$$", right: "$$", display: true},
+  {left: "\\(", right: "\\)", display: false},
+  {left: "\\[", right: "\\]", display: true}
+  ]
+});</script>
 </div>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
