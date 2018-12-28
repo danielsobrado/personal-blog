@@ -105,8 +105,9 @@ $$
 \mathrm { P } ( \mathrm { A } \text { and } \mathrm { B } ) = \mathrm { P } ( \mathrm { A } ) \times \mathrm { P } ( \mathrm { B } | \mathrm { A } )
 $$
 
-#### Prior and Posterior distributions
+![](https://i.imgur.com/SM3ph2R.png)
 
+#### Prior and Posterior distributions
 
 
 The **prior probability distribution** (prior), is ones beliefs about its quantity before some evidence is taken into account.
