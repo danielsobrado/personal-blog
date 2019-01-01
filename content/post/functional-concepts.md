@@ -15,17 +15,19 @@ categories : [
 ]
 ---
 
-# 1. Introduction
+## Introduction
 
 Functional programming is a programming paradigm, based on some principles
 
-# 2. Advantages
+## Advantages
 
-# 3. Concepts
+## Concepts
 
 Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
 
-## 3.1 Pure functions and Referential Transparency
+
+
+### Pure functions and Referential Transparency
 
 We want to make sure that a function will perform the same actions and give the same results for the same inputs.
 
@@ -33,9 +35,9 @@ We call these functions *stateless functions*.
 
 > An expression is referentially transparent if it can be replaced with its value without changing the program behavior.
 
-This is the same as saying, no side effects!
+This is the same as saying, no side effects! It is a function that depends only on its input parameters.
 
-Allows us to read the code knowing that the result will be always the same, 
+They allows us to read the code knowing that the result will be always the same, 
 
 > Functions that are referentially transparent are called “*pure functions*”.
 
@@ -43,9 +45,9 @@ We can allow some exceptions to this, like printing details to the standard outp
 
 What we cannot do, is to access global variables that are not constant, or write to disk, network etc..
 
-## 3.2 Function composition
-## 3.3. Avoid shared state
-## 3.4 Avoid mutating state / Immutability
-## 3.5 Avoid side effects
+### Function composition
+### Avoid shared state
+### Avoid mutating state / Immutability
+### Avoid side effects
 
-### 3.5.1 Monads
+#### Monads
