@@ -21,9 +21,19 @@ Functional programming is a programming paradigm, based on some principles
 
 ## Advantages
 
+**Concurrency**: Pure functions are Thread-Safe, this makes parallel implementations much simpler.
+
+**Maintenance**: Functions that don't have side effects have less errors and are easier to debug.
+
+**Brevity**: Functional code is usually shorter.
+
+**Testability**: State-less functions are easier to test, as we don't have to worry about external interactions, only about inputs and outputs.
+
+**Modularity**: Pure functions allows us to build more modular code, which is coupled with reusability.
+
 ## Concepts
 
-Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
+Let's enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
 
 
 
@@ -48,6 +58,23 @@ What we cannot do, is to access global variables that are not constant, or write
 ### Function composition
 ### Avoid shared state
 ### Avoid mutating state / Immutability
+
 ### Avoid side effects
 
-#### Monads
+### Monads
+
+## Functional Toolkit in Python
+
+## Functional Toolkit in Java
+
+## Scala as a functional programming language
+
+## Pure functional programming languages
+
+Funtional programming is being all the rage during the last few years, every programming language wants to have his "functional way of doing things", you can do functional programming in Javascript.
+
+But not every programming language was conceived from inception to be purely functional, like:
+
+Lisp
+
+Clojure
