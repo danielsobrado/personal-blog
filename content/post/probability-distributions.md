@@ -37,6 +37,14 @@ The underlying distribution needs to have always a defined mean for the Central 
 
 ## Normal Distribution
 
+Properties:
+
+* **Unimodal**: Only one mode.
+* **Symmetrical**: Left and right of the mean are mirrored.
+* **Bell-shaped**: The highest point is at the mean.
+* **Centered**:  Mean, mode and median are all located in the centre.
+* **Asymptotic**: Tends to a value when it becomes very large.
+
 ## Binomial Distribution
 
 This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad...
