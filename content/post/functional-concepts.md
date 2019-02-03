@@ -21,6 +21,8 @@ Functional programming is a programming paradigm, based on some principles
 
 ## Advantages
 
+In short functional programming will allow you to be more confident with the quality of your code because you'll be able to write code with less bugs in less time. Your code will be easier to understand and will be more reusable.
+
 **Concurrency**: Pure functions are Thread-Safe, this makes parallel implementations much simpler.
 
 **Maintenance**: Functions that don't have side effects have less errors and are easier to debug.
@@ -35,7 +37,9 @@ Functional programming is a programming paradigm, based on some principles
 
 Let's enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
 
+### Higher-order functions
 
+Functions are values and can be passed to other functions.
 
 ### Pure functions and Referential Transparency
 
@@ -56,10 +60,15 @@ We can allow some exceptions to this, like printing details to the standard outp
 What we cannot do, is to access global variables that are not constant, or write to disk, network etc..
 
 ### Function composition
+
+Passing a function to another function allows us to 
+
 ### Avoid shared state
 ### Avoid mutating state / Immutability
 
 ### Avoid side effects
+
+### Functors
 
 ### Monads
 
