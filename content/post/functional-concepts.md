@@ -17,7 +17,9 @@ categories : [
 
 ## Introduction
 
-Functional programming is a programming paradigm, based on some principles
+Functional programming is a programming paradigm, based on mathematical principles. The principles of functional programming are to avoid changing the state and to avoid mutating data.
+
+Functional programming is declarative, we use expressions instead of statements.
 
 ## Advantages
 
@@ -77,6 +79,25 @@ Passing a function to another function allows us to
 ## Functional Toolkit in Java
 
 ## Scala as a functional programming language
+
+Features of Scala:
+
+**Type Inference**:
+
+**Immutability**:
+
+**Lazy Evaluation**:
+
+**String Interpolation**:
+
+**Case Classes**:
+
+**Pattern Matching**:
+
+**Companion Object**:
+
+Scala has **functional programming capabilities** like: Anonymous functions, higher order functions, function composition, function currying,
+nested functions, and functions with variable length parameters.
 
 ## Pure functional programming languages
 
