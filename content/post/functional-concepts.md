@@ -21,6 +21,8 @@ Functional programming is a programming paradigm, based on mathematical principl
 
 Functional programming is declarative, we use expressions instead of statements.
 
+We are going to discuss Functional Programming in the context of Scala, with Java and Python examples and comparisons, none of these languages are purely functional but they have functional capabilities and are widely used in the industry.
+
 ## Advantages
 
 In short functional programming will allow you to be more confident with the quality of your code because you'll be able to write code with less bugs in less time. Your code will be easier to understand and will be more reusable.
