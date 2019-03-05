@@ -17,7 +17,7 @@ categories : [
 
 
 ### Introduction
-Microservices are based on the principle "divide and conquer".
+Microservices are based on the principle "divide and conquer", usually to achieve scalability both horizontally and vertically.
 
 There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
 
@@ -30,16 +30,19 @@ Add extra services provide some advantages but there are also disadvantages, hav
 **Microservices**: A collection of small, isolated services that each owns their data. They are scalable and resilient to failure.
 
 **Isolation**: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.
-**Autonomicity**
-**Single Responsibility**
-**Exclusive state**
-**Mobility**
+
+**Autonomicity**:
+**Single Responsibility**:
+**Exclusive state**:
+**Mobility**:
 
 #### Why do we want to use microservices?
 
 To build flexible and resilient services, to split the work between multiple teams and resources, decouple deployments, development speed, faster time-to-market and continuous delivery.
 
 Smaller subprojects allow for quicker restart and quicker execution of unit tests which impacts the productivity and morale of the developers.
+
+While Technology keeps evolving our monolithic application lags behind, having multiple teams working on multiple microservices allows us to experiment and gain expertise with the fittest technology, microservices are not dependent on particular technologies.
 
 #### What can go wrong?
 
@@ -59,4 +62,4 @@ Moving away from REST, we need an asynchronous intra-service communication chann
 
 We can optimize for reading or for writing, not for both. We need to consider this at the microservice level.
 
-My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Jenkins, SBT and Ansible. (And Elastic Stack for monitoring.)
+My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Kafka, Jenkins, SBT and Ansible. (And Elastic Stack for monitoring.)
