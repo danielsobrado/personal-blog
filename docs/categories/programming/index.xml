@@ -69,8 +69,8 @@ Add extra services provide some advantages but there are also disadvantages, hav
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
-      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writting some SQL is fast, I can do that!
-The problem comes when you have multiple applications and services accesing databases, and the schema of a table in the database changes, things get broken!
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!
+The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!
 Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
     </item>
     
