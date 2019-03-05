@@ -106,20 +106,6 @@ This is different from correlation analysis, because the model allows us to infe
     </item>
     
     <item>
-      <title>Kaggle: Mercari competition</title>
-      <link>https://www.danielsobrado.com/post/kaggle-mercari-competition/</link>
-      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/kaggle-mercari-competition/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
       <title>Variational Autoencoders</title>
       <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
       <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
@@ -133,42 +119,20 @@ Follow the following steps:
     </item>
     
     <item>
-      <title>Fast Fourier Transform</title>
-      <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/fast-fourier-transform/</guid>
-      <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Scipy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
-      <description> Introduction </description>
-    </item>
-    
-    <item>
-      <title>Let&#39;s discuss Microservices</title>
-      <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
-      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
-      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;.
-There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
-Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</description>
-    </item>
-    
-    <item>
       <title>CRUD vs CQRS</title>
       <link>https://www.danielsobrado.com/post/crud-vs-cqrs/</link>
       <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/crud-vs-cqrs/</guid>
+      <description> Introduction </description>
+    </item>
+    
+    <item>
+      <title>Scipy: Introduction</title>
+      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
+      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
       <description> Introduction </description>
     </item>
     
@@ -193,6 +157,28 @@ vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vect
 There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
 Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
 $ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s discuss Microservices</title>
+      <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;.
+There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
+Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</description>
+    </item>
+    
+    <item>
+      <title>The shared database problem</title>
+      <link>https://www.danielsobrado.com/post/the-shared-database-problem/</link>
+      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writting some SQL is fast, I can do that!
+The problem comes when you have multiple applications and services accesing databases, and the schema of a table in the database changes, things get broken!
+Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
     </item>
     
     <item>
@@ -299,23 +285,9 @@ Central Limit Theorem  The sampling distribution of the mean of any independent,
       <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</guid>
-      <description>1. Introduction Functional programming is a programming paradigm, based on some principles
-2. Advantages 3. Concepts Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
-3.1 Pure functions and Referential Transparency We want to make sure that a function will perform the same actions and give the same results for the same inputs.
-We call these functions stateless functions.
- An expression is referentially transparent if it can be replaced with its value without changing the program behavior.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Data Science: Concepts</title>
-      <link>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</link>
-      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</guid>
-      <description>So many new concepts for the beginner data scientist, let´s start one by one:
-Tensor A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.
-See: What’s the difference between a matrix and a tensor?
-Features Data Splits  Training set: This is the biggest set where we run our learning algorithm on.</description>
+      <description>Introduction Functional programming is a programming paradigm, based on mathematical principles. The principles of functional programming are to avoid changing the state and to avoid mutating data.
+Functional programming is declarative, we use expressions instead of statements.
+We are going to discuss Functional Programming in the context of Scala, with Java and Python examples and comparisons, none of these languages are purely functional but they have functional capabilities and are widely used in the industry.</description>
     </item>
     
     <item>
@@ -337,6 +309,27 @@ The cost of the platforms Splunk is great but the price tag is not that great, E
       <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.
 Any type of data produced by programs and processes is useful for us, we can use logs, network packets, any type of metrics and performance clues.
 This means a large amount of unstructured data that is ready for our consumption and use.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/</guid>
+      <description> Introduction  Categories are mathematical contexts where construction is possible.
+ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/</guid>
+      <description>Basic concepts A set is a collection of stuff, items, things&amp;hellip; We&amp;rsquo;ll call them elements.
+We can have a set called A that contains some numbers $ A \=\ {1,2,3,9} $ and a set called B than contains names $ A \=\ {Daniel, Alfredo, Vikas, Praveen, Bjorn} $ .
+We can say that an element is part of a set: $ 3 \in A $ We can also say that 5 is not an element of A: $ 5 \notinA $</description>
     </item>
     
     <item>

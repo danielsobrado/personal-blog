@@ -94,20 +94,6 @@ This is different from correlation analysis, because the model allows us to infe
     </item>
     
     <item>
-      <title>Kaggle: Mercari competition</title>
-      <link>https://www.danielsobrado.com/post/kaggle-mercari-competition/</link>
-      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/kaggle-mercari-competition/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
       <title>Variational Autoencoders</title>
       <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
       <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
@@ -121,20 +107,9 @@ Follow the following steps:
     </item>
     
     <item>
-      <title>Fast Fourier Transform</title>
-      <link>https://www.danielsobrado.com/post/fast-fourier-transform/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/fast-fourier-transform/</guid>
-      <description>Move static content to static asdsdswd Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
       <title>Scipy: Introduction</title>
       <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
       <description> Introduction </description>
@@ -181,18 +156,6 @@ $$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^
       
       <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
       <description> Introduction </description>
-    </item>
-    
-    <item>
-      <title>Introduction to Data Science: Concepts</title>
-      <link>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</link>
-      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</guid>
-      <description>So many new concepts for the beginner data scientist, let´s start one by one:
-Tensor A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.
-See: What’s the difference between a matrix and a tensor?
-Features Data Splits  Training set: This is the biggest set where we run our learning algorithm on.</description>
     </item>
     
     <item>

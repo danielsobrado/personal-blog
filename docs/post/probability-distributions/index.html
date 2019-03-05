@@ -145,15 +145,15 @@
         <div class="kg-card-markdown">
         
 
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction">Introduction</h2>
 
 <p>Distributions a laws governing these are a must know for every data scientist.</p>
 
-<h1 id="the-law-of-large-numbers">The law of large numbers</h1>
+<h2 id="the-law-of-large-numbers">The law of large numbers</h2>
 
 <p>The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.</p>
 
-<h1 id="central-limit-theorem">Central Limit Theorem</h1>
+<h2 id="central-limit-theorem">Central Limit Theorem</h2>
 
 <blockquote>
 <p>The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.</p>
@@ -163,15 +163,27 @@
 
 <p>The underlying distribution needs to have always a defined mean for the Central Limit Theorem to be valid.</p>
 
-<h1 id="normal-distribution">Normal Distribution</h1>
+<h2 id="normal-distribution">Normal Distribution</h2>
 
-<h1 id="binomial-distribution">Binomial Distribution</h1>
+<p>Properties:</p>
+
+<ul>
+<li><strong>Unimodal</strong>: Only one mode.</li>
+<li><strong>Symmetrical</strong>: Left and right of the mean are mirrored.</li>
+<li><strong>Bell-shaped</strong>: The highest point is at the mean.</li>
+<li><strong>Centered</strong>:  Mean, mode and median are all located in the centre.</li>
+<li><strong>Asymptotic</strong>: Tends to a value when it becomes very large.</li>
+</ul>
+
+<h2 id="binomial-distribution">Binomial Distribution</h2>
 
 <p>This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad&hellip;</p>
 
 <p>Our binomial distribution looks like:</p>
 
-<p>$$ P ( x ) = \left( \begin{array} { l } { n } \ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x } $$</p>
+<p>$$
+P ( x ) = \left( \begin{array} { l } { n } \ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }
+$$</p>
 
 <ul>
 <li>n = number of events</li>
@@ -183,7 +195,7 @@
 <li>The events happen at a constant rate.</li>
 </ul>
 
-<h1 id="multinomial-distribution">Multinomial Distribution</h1>
+<h2 id="multinomial-distribution">Multinomial Distribution</h2>
 
 <p>A multinomial distribution is an extension of a binomial distribution where we can have multiple outcomes.</p>
 
@@ -197,9 +209,13 @@
 <p>See: <a href="https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815">https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815</a>
 See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html">https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html</a></p>
 
-<h1 id="dirichlet-distribution">Dirichlet Distribution</h1>
+<h2 id="dirichlet-distribution">Dirichlet Distribution</h2>
 
-<p>$$ P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 } $$</p>
+<p>$$
+P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</p>
+
+<p>$
+$$</p>
 
 <ul>
 <li>k is the number of outcomes.</li>
@@ -211,9 +227,9 @@ See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.htm
 </ul></li>
 </ul>
 
-<h1 id="bernoulli-distribution">Bernoulli Distribution</h1>
+<h2 id="bernoulli-distribution">Bernoulli Distribution</h2>
 
-<h1 id="poisson-distribution">Poisson Distribution</h1>
+<h2 id="poisson-distribution">Poisson Distribution</h2>
 
 <blockquote>
 <p>The Poisson distribution is useful to model the number of times an event occurs in an interval of time or space.</p>
@@ -284,13 +300,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/naive-bayes/">Naive Bayes</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-doing-some-maths/">Numpy: Doing some maths</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
@@ -350,11 +366,9 @@ s.setAttribute('data-timestamp', +new Date());
           </header>
           <section class="post-card-excerpt">
               
-                <p>1. Introduction Functional programming is a programming paradigm, based on some principles
-2. Advantages 3. Concepts Let´s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:
-3.1 Pure functions and Referential Transparency We want to make sure that a function will perform the same actions and give the same results for the same inputs.
-We call these functions stateless functions.
- An expression is referentially transparent if it can be replaced with its value without changing the program behavior. ...  </p>
+                <p>Introduction Functional programming is a programming paradigm, based on mathematical principles. The principles of functional programming are to avoid changing the state and to avoid mutating data.
+Functional programming is declarative, we use expressions instead of statements.
+We are going to discuss Functional Programming in the context of Scala, with Java and Python examples and comparisons, none of these languages are purely functional but they have functional capabilities and are widely used in the industry. ...  </p>
               
           </section>
       </a>

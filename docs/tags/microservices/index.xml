@@ -6,7 +6,7 @@
     <description>Recent content in Microservices on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 28 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,12 +14,23 @@
     <item>
       <title>Let&#39;s discuss Microservices</title>
       <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
-      <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
       <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;.
 There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
 Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</description>
+    </item>
+    
+    <item>
+      <title>The shared database problem</title>
+      <link>https://www.danielsobrado.com/post/the-shared-database-problem/</link>
+      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writting some SQL is fast, I can do that!
+The problem comes when you have multiple applications and services accesing databases, and the schema of a table in the database changes, things get broken!
+Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
     </item>
     
   </channel>

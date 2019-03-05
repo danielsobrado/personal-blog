@@ -4,39 +4,39 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Logistic Regression &middot; </title>
+    <title>The shared database problem &middot; </title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="https://www.danielsobrado.com/favicon.ico" />
-    <link rel="canonical" href="https://www.danielsobrado.com/post/logistic-regression/" />
+    <link rel="canonical" href="https://www.danielsobrado.com/post/the-shared-database-problem/" />
 
-     <meta name="description" content="A neural in a neural network is a Linear Regression by itself, understanding linear regressions and its regularization techniques will help us understanding more advanced models." /> 
+     <meta name="description" content="Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!." /> 
 
      
     
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:image" content="https://i.imgur.com/FXrKBsK.png"/>
+    <meta name="twitter:image" content="https://i.imgur.com/OSv3WF6.png"/>
     
  
-    <meta name="twitter:title" content="Logistic Regression"/>
-    <meta name="twitter:description" content="A neural in a neural network is a Linear Regression by itself, understanding linear regressions and its regularization techniques will help us understanding more advanced models."/>
-    <meta name="twitter:url" content="https://www.danielsobrado.com/post/logistic-regression/" />
+    <meta name="twitter:title" content="The shared database problem"/>
+    <meta name="twitter:description" content="Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!."/>
+    <meta name="twitter:url" content="https://www.danielsobrado.com/post/the-shared-database-problem/" />
     <meta name="twitter:site" content="@DalamarBlog"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Logistic Regression &middot; Daniel Sobrado" />
-    <meta property="og:url" content="https://www.danielsobrado.com/post/logistic-regression/" />
+    <meta property="og:title" content="The shared database problem &middot; Daniel Sobrado" />
+    <meta property="og:url" content="https://www.danielsobrado.com/post/the-shared-database-problem/" />
     <meta property="article:publisher" content="https://www.facebook.com/j.daniel.sobrado" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="A neural in a neural network is a Linear Regression by itself, understanding linear regressions and its regularization techniques will help us understanding more advanced models." />
+    <meta property="og:description" content="Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!." />
 
-    <meta property="article:published_time" content="2016-01-03T00:00:00Z" />
-    <meta property="article:tag" content="Logistic Regression" />
+    <meta property="article:published_time" content="2016-01-25T00:00:00Z" />
+    <meta property="article:tag" content="Microservices" /><meta property="article:tag" content="SOA" />
 
-    <meta property="og:image" content="https://i.imgur.com/FXrKBsK.png"/>
+    <meta property="og:image" content="https://i.imgur.com/OSv3WF6.png"/>
 
 
     <meta name="generator" content="Hugo 0.48" />
@@ -132,58 +132,64 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2016-01-03">3 January 2016</time>
-                <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/logistic-regression/">#Logistic Regression</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2016-01-25">25 January 2016</time>
+                <span class="date-divider">/</span> <a href="https://www.danielsobrado.com/tags/microservices/">#Microservices</a>&nbsp;<a href="https://www.danielsobrado.com/tags/soa/">#SOA</a>&nbsp;
         </section>
-        <h1 class="post-full-title">Logistic Regression</h1>
+        <h1 class="post-full-title">The shared database problem</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/FXrKBsK.png)">
+    <figure class="post-full-image" style="background-image: url(https://i.imgur.com/OSv3WF6.png)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
         
 
-<h1 id="introduction-to-linear-regression">Introduction to Linear Regression</h1>
+<h3 id="the-problem">The Problem</h3>
+
+<p>You&rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writting some SQL is fast, I can do that!</p>
+
+<p>The problem comes when you have multiple applications and services accesing databases, and the schema of a table in the database changes, things get broken!</p>
+
+<p>Have you seen a place where nobody wants to change a table in the data warehouse because they don&rsquo;t know what will fail? Too often&hellip; What they do?</p>
+
+<p>Duplication! Create a new table with the changes in the schema for the new requirement, if this is possible, sometimes it is not even possible, the source might force you to make changes in the schemas, it can be a external vendor upgrading the product.</p>
+
+<h3 id="interfaces-to-services-as-a-solution">Interfaces to services as a solution</h3>
+
+<p>Use interfaces, every application will expose its data using an interface, each interface by itself will define the logic to access the underlaying data and any other application or service will need to access through the interface, nobody will access the database directly.</p>
+
+<p>If the underlaying schema changes, the logic in the interface will adapt to provide the same output for the same queries, this is something that we can easily test, and it is a contract that we have with our contract needs to change?</p>
+
+<p>Not to mention, that having no control over whom is hitting the database and how often is a recipe for performance issues.</p>
+
+<p>The goods news are that we can implement a lot of logic inside our services to handle load balancing and make use of service registries and service repositories, to build our logic based on contracts.</p>
+
+<p>What happens when we have a bunch of applications accessing multiple services and a weak service goes down? Ouch, there are all interconnected and dependent, we are introducing serius points of failure that can cascade easily.</p>
+
+<h3 id="finally">Finally</h3>
+
+<p>Amazon introduced back in 2002 the API Mandate and banned any intersystem communication that wasn&rsquo;t using a service interface.</p>
+
+<p>Amazon CEO Jeff Bezos, communicated:</p>
 
 <blockquote>
-<p>A linear regression tries to estimate a linear relationship that best fits a given set of data.</p>
+<p>All teams will henceforth expose their data and functionality through service interfaces.</p>
+
+<p>Teams must communicate with each other through these interfaces.</p>
+
+<p>There will be no other form of inter-process communication allowed: no direct linking, no direct reads of another team’s data store, no shared-memory model, no back-doors whatsoever. The only communication allowed is via service interface calls over the network.</p>
+
+<p>It doesn’t matter what technology you use.</p>
+
+<p>All service interfaces, without exception, must be designed from the ground up to be externalize-able. That is to say, the team must plan and design to be able to expose the interface to developers in the outside world. No exceptions.</p>
+
+<p>Anyone who doesn’t do this will be fired. Thank you; have a nice day!</p>
 </blockquote>
 
-<p>We need to understand that Linear Regression won´t help us with non linear relationships.</p>
+<p>Later in 2009 Netflix moved to Microservices&hellip; However the term microservices was coined in a architects wokshops near Venice in May 2011.</p>
 
-<p><img src="https://imgur.com/sEceQfk" alt="" /></p>
-
-<p>When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.</p>
-
-<p>This is different from correlation analysis, because the model allows us to infer on new inputs.</p>
-
-<h2 id="types-of-regressions">Types of regressions</h2>
-
-<p>Depending on our target variable(s) we can have different types of regressions and approaches:</p>
-
-<ul>
-<li><strong>Linear</strong>: We predict a continuous numeric variable. (How much would I weight if&hellip;)</li>
-<li><strong>Logistic</strong>: We predict a categorical variable. (Will I be thin, normal, overweight or obesse, if &hellip;)</li>
-<li><strong>Poisson</strong>: We predict counts, only positive integer numbers. (how many visits will I make to the doctor?)</li>
-</ul>
-
-<p>In this case we are going to discuss Linear Regression.</p>
-
-<div id="el"><span>$$ y_i = h(\mathbf{x}_i, \mathbf{w}) = \mathbf{w}^T\mathbf{x}_i $$</span></div>
-
-<div id="el"><span>$$ L(\mathbf{w}) = \sum_i \left(h(\mathbf{x}_i, \mathbf{w}) - y_i\right)^2 $$</span></div>
-
-<div id="el"><span>$$ L(\mathbf{w}) $$</span></div>
-
-<p>Concepts:</p>
-
-<p>Simple linear regression: Is a linear model using a single predictor variable.</p>
-
-<p>Dataset: <a href="http://people.sc.fsu.edu/~jburkardt/datasets/regression/x22.txt">Economic and employment data.</a></p>
-
-<p>See: <a href="https://medium.freecodecamp.org/data-science-with-python-8-ways-to-do-linear-regression-and-measure-their-speed-b5577d75f8b">https://medium.freecodecamp.org/data-science-with-python-8-ways-to-do-linear-regression-and-measure-their-speed-b5577d75f8b</a></p>
+<p>Netflix, LinkedIn, Uber, Twitter etc&hellip; They all use an Event Driven Architecture and Apache Kafka for inter-service communication..)</p>
     
         </div>
     </section>
@@ -209,8 +215,8 @@
 
 
 var disqus_config = function () {
-this.page.url = "https:\/\/www.danielsobrado.com\/post\/logistic-regression\/";  
-this.page.identifier = "https:\/\/www.danielsobrado.com\/post\/logistic-regression\/"; 
+this.page.url = "https:\/\/www.danielsobrado.com\/post\/the-shared-database-problem\/";  
+this.page.identifier = "https:\/\/www.danielsobrado.com\/post\/the-shared-database-problem\/"; 
 };
 
 (function() { 
@@ -236,7 +242,7 @@ s.setAttribute('data-timestamp', +new Date());
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash; Daniel Sobrado &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="https://www.danielsobrado.com/tags/logistic-regression/">#Logistic Regression</a></h3>
+        <h3 class="read-next-card-header-title"><a href="https://www.danielsobrado.com/tags/microservices/">#Microservices</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -244,18 +250,18 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-ndarrays/">Numpy: ndarrays</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/logistic-regression/">Logistic Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/crud-vs-cqrs/">CRUD vs CQRS</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/"></a></li>            
+          <li><a href="https://www.danielsobrado.com/post/explaining-entropy/">Explaining Entropy</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="https://www.danielsobrado.com/tags/logistic-regression/">See all related posts →</a>
+        <a href="https://www.danielsobrado.com/tags/microservices/">See all related posts →</a>
     </footer>
 </article>
 
@@ -263,22 +269,22 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/isyQF4V.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/lets-discuss-microservices/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/cGYyp2K.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/lets-discuss-microservices/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #Loss Functions  </span>
+              #Microservices  </span>
               
-              <h2 class="post-card-title">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</h2>
+              <h2 class="post-card-title">Let&#39;s discuss Microservices</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>In the case of regression problems one common loss function is RMSE, this isn´t a good choice for classification use cases&hellip; MSE is arguaby the most common loss fuction for regression problems. Lets understand the differences&hellip;</p>
+                <p>Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!.</p>
               
           </section>
       </a>
@@ -293,23 +299,23 @@ s.setAttribute('data-timestamp', +new Date());
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/analysis-of-residuals/">
-      <div class="post-card-image" style="background-image: url(https://i.imgur.com/k3fRAC4.jpg)"></div>
+    <a class="post-card-image-link" href="https://www.danielsobrado.com/post/angularjs-introduction/">
+      <div class="post-card-image" style="background-image: url(https://i.imgur.com/ewEDGca.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/analysis-of-residuals/">
+      <a class="post-card-content-link" href="https://www.danielsobrado.com/post/angularjs-introduction/">
           <header class="post-card-header">
               <span class="post-card-tags">
-              #scikit-learn 
-              #python  </span>
+              #AngularJS 
+              #Javascript  </span>
               
-              <h2 class="post-card-title">Analysis of residuals</h2>
+              <h2 class="post-card-title">AngularJS: Introduction</h2>
           </header>
           <section class="post-card-excerpt">
                
-                <p>Arguably the most famous machine learning low-level frameworks. Pytorch created by Facebook and used as the foundation in projects like Uber&rsquo;s pyro and Tensorflow created by Google and widely used. Both frameworks are used by the research community and for advanced models that are not readily available in high-level libraries like Keras.</p>
+                <p>AngularJS is a Java script based front end development framwork maintained by Google. Very mature and stable is one of the preferred choices for Single Page Applications.</p>
               
           </section>
       </a>
@@ -333,17 +339,17 @@ s.setAttribute('data-timestamp', +new Date());
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">Logistic Regression</div>
+  <div class="floating-header-title">The shared database problem</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Logistic%20Regression&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fpost%2flogistic-regression%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=The%20shared%20database%20problem&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fthe-shared-database-problem%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fpost%2flogistic-regression%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fpost%2fthe-shared-database-problem%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>

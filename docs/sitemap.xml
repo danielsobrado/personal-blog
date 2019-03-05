@@ -42,33 +42,18 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/post/kaggle-mercari-competition/</loc>
-    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.danielsobrado.com/post/variational-autoencoders/</loc>
     <lastmod>2018-04-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/post/fast-fourier-transform/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/post/crud-vs-cqrs/</loc>
+    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.danielsobrado.com/post/scipy-introduction/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/post/lets-discuss-microservices/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/post/crud-vs-cqrs/</loc>
-    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
+    <lastmod>2016-03-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -79,6 +64,16 @@
   <url>
     <loc>https://www.danielsobrado.com/post/numpy-introduction/</loc>
     <lastmod>2016-02-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/lets-discuss-microservices/</loc>
+    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/the-shared-database-problem/</loc>
+    <lastmod>2016-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -132,11 +127,6 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/post/introduction-to-data-science-concepts/</loc>
-    <lastmod>2014-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</loc>
     <lastmod>2013-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -150,6 +140,14 @@
     <loc>https://www.danielsobrado.com/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/</loc>
   </url>
   
   <url>
@@ -234,12 +232,6 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/tags/kaggle/</loc>
-    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.danielsobrado.com/tags/kl-divergence/</loc>
     <lastmod>2014-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -276,13 +268,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/microservices/</loc>
-    <lastmod>2018-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/tags/nlp/</loc>
-    <lastmod>2018-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -316,7 +302,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/categories/programming/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -340,7 +326,13 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/scipy/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+    <lastmod>2016-03-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/soa/</loc>
+    <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -359,12 +351,6 @@
   <url>
     <loc>https://www.danielsobrado.com/tags/tensorflow/</loc>
     <lastmod>2016-09-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/tags/time-series/</loc>
-    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
