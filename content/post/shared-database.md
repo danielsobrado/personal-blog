@@ -1,5 +1,5 @@
 ---
-description: "Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!."
+description: "You've been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that! The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!"
 author: "Daniel Sobrado"
 date: 2016-01-25
 linktitle: The shared database problem
@@ -18,9 +18,9 @@ categories : [
 
 ### The Problem
 
-You've been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writting some SQL is fast, I can do that!
+You've been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!
 
-The problem comes when you have multiple applications and services accesing databases, and the schema of a table in the database changes, things get broken!
+The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!
 
 Have you seen a place where nobody wants to change a table in the data warehouse because they don't know what will fail? Too often... What they do? 
 
