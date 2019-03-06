@@ -19,6 +19,8 @@ categories : [
 ### Introduction
 Microservices are based on the principle "divide and conquer", usually to achieve scalability both horizontally and vertically.
 
+To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.
+
 There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
 
 Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.
@@ -27,7 +29,7 @@ Add extra services provide some advantages but there are also disadvantages, hav
 
 **Monoliths**: Large applications that are difficult to understand, to scale and to maintain, they tend towards chaos as they grow.
 
-**Microservices**: A collection of small, isolated services that each owns their data. They are scalable and resilient to failure.
+**Microservices**: A collection of small, isolated services. Each one owns his data, does only one thing and does it well. A microservice is developed in isolation, and deployed independently, it can be replaced easily.
 
 **Isolation**: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.
 
