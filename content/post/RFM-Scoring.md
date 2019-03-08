@@ -1,12 +1,12 @@
 ---
 description: "Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time. We'll find insights about our customer base, groups of clients that share common traits and deserve special attention from the relationship managers, to build tailored strategies for the most attractive segments."
 author: "Daniel Sobrado"
-date: 2017-07-22
-linktitle: Customer Segmentation
+date: 2017-10-13
+linktitle: RFM Scoring
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: "Customer Segmentation"
-image: https://i.imgur.com/Qu69JjM.png
+title: "RFM Scoring"
+image: https://i.imgur.com/iOBWo19.png
 tags : [
     "Clustering"
 ]
