@@ -54,8 +54,6 @@ But your problem comes from changing your variables programmatically.
 
 The problem of defining variables programmatically is that some of them need to be defined at startup time if not precedence rules will take over and your changes after the initiation of the job will be ignored.
 
-Edit:
-
 > The amount of memory per executor is looked up when SparkContext is created.
 
 And
@@ -72,6 +70,8 @@ You need to change the property before the `SparkContext` is created, then runni
     val sc = new SparkContext(conf)
     ...
     sc.stop()
+    val conf2 = new SparkConf().set("spark.executor.memory", "24g")
+    val sc2 = new SparkContext(conf2)
 
 You can debug your configuration using: `sc.getConf.toDebugString`
 
