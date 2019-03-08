@@ -1,14 +1,14 @@
 ---
 author: "Daniel Sobrado"
 date: 2019-02-10
-linktitle: "Apache Spark: Order of Property Precedence"
+linktitle: "Apache Spark: Precedence of properties"
 description : "When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties. When your codebase  grows and you need some tools and you write some decent amount of code, you are probably going to use a proper. You might find that your properties are not being taken into account."
 nomenu:
   main:
     parent: post
 next: /post/github-pages-blog
 prev: /post/automated-deployments
-title: "Apache Spark: Order of Property Precedence"
+title: "Apache Spark: Precedence of properties"
 weight: 10
 image: https://i.imgur.com/HXoTjv8.png
 categories : [
