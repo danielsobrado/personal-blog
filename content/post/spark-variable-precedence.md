@@ -1,14 +1,14 @@
 ---
 author: "Daniel Sobrado"
 date: 2019-02-10
-linktitle: "Apache Spark: Properties precedence"
+linktitle: "Apache Spark: Order of Property Precedence"
 description : "When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties. When your codebase  grows and you need some tools and you write some decent amount of code, you are probably going to use a proper. You might find that your properties are not being taken into account."
 nomenu:
   main:
     parent: post
 next: /post/github-pages-blog
 prev: /post/automated-deployments
-title: "Apache Spark: Properties precedence"
+title: "Apache Spark: Order of Property Precedence"
 weight: 10
 image: https://i.imgur.com/HXoTjv8.png
 categories : [
@@ -34,7 +34,7 @@ You are probably going to use a proper IDE like Eclipse-Scala or IntelliJ and yo
 
 You might find that your properties are not being taken into account.
 
-## Property precedence
+## **Order of Property Precedence**
 
 You can set some environment variables for standalone execution by using: (e.g. in `spark-env.sh`)
 
