@@ -87,6 +87,8 @@ You need to understand the precedence order:
 * --conf or -c - the command-line option used by spark-submit 
 * SparkConf
 
+Just make sure that your properties are all setup before creating the SparkContext, there are some SparkSQL properties that you can change at run-time, lets discuss that in another post.
+
 
 [1]: https://spark.apache.org/docs/latest/api/scala/#org.apache.spark.SparkConf
 [2]: https://spark.apache.org/docs/latest/configuration.html
