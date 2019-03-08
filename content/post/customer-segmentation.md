@@ -39,3 +39,6 @@ Use interfaces, every application will expose its data using an interface, each 
 
 ### Techniques
 
+
+
+
