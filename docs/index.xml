@@ -6,10 +6,21 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apache Spark: Properties precedence</title>
+      <link>https://www.danielsobrado.com/post/apache-spark-properties-precedence/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/apache-spark-properties-precedence/</guid>
+      <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.
+It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don&amp;rsquo;t want to be too greedy with the resources of your cluster, some might complain!
+The problem When your codebase grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.</description>
+    </item>
     
     <item>
       <title>Apache Spark: Introduction to project Tungsten</title>
@@ -119,6 +130,50 @@ This is different from correlation analysis, because the model allows us to infe
     </item>
     
     <item>
+      <title>Customer Segmentation</title>
+      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
+      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
+It customer cluster needs to be treated in a different way from multiple angles:
+ Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+    </item>
+    
+    <item>
+      <title>Customer Segmentation</title>
+      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
+      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
+It customer cluster needs to be treated in a different way from multiple angles:
+ Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+    </item>
+    
+    <item>
+      <title>Customer Segmentation</title>
+      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
+      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
+It customer cluster needs to be treated in a different way from multiple angles:
+ Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+    </item>
+    
+    <item>
+      <title>Customer Segmentation</title>
+      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
+      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
+It customer cluster needs to be treated in a different way from multiple angles:
+ Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+    </item>
+    
+    <item>
       <title>CRUD vs CQRS</title>
       <link>https://www.danielsobrado.com/post/crud-vs-cqrs/</link>
       <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
@@ -165,9 +220,8 @@ $ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s 
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
-      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;.
-There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
-Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</description>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.
+To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</description>
     </item>
     
     <item>

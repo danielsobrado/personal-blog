@@ -6,10 +6,21 @@
     <description>Recent content in Spark on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 28 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/tags/spark/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apache Spark: Properties precedence</title>
+      <link>https://www.danielsobrado.com/post/apache-spark-properties-precedence/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/apache-spark-properties-precedence/</guid>
+      <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.
+It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don&amp;rsquo;t want to be too greedy with the resources of your cluster, some might complain!
+The problem When your codebase grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.</description>
+    </item>
     
     <item>
       <title>Apache Spark: Introduction to project Tungsten</title>

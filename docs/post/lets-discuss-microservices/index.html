@@ -147,7 +147,9 @@
 
 <h3 id="introduction">Introduction</h3>
 
-<p>Microservices are based on the principle &ldquo;divide and conquer&rdquo;.</p>
+<p>Microservices are based on the principle &ldquo;divide and conquer&rdquo;, usually to achieve scalability both horizontally and vertically.</p>
+
+<p>To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</p>
 
 <p>There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.</p>
 
@@ -157,19 +159,22 @@
 
 <p><strong>Monoliths</strong>: Large applications that are difficult to understand, to scale and to maintain, they tend towards chaos as they grow.</p>
 
-<p><strong>Microservices</strong>: A collection of small, isolated services that each owns their data. They are scalable and resilient to failure.</p>
+<p><strong>Microservices</strong>: A collection of small, isolated services. Each one owns his data, does only one thing and does it well. A microservice is developed in isolation, and deployed independently, it can be replaced easily.</p>
 
-<p><strong>Isolation</strong>: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.
-<strong>Autonomicity</strong>
-<strong>Single Responsibility</strong>
-<strong>Exclusive state</strong>
-<strong>Mobility</strong></p>
+<p><strong>Isolation</strong>: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.</p>
+
+<p><strong>Autonomicity</strong>:
+<strong>Single Responsibility</strong>:
+<strong>Exclusive state</strong>:
+<strong>Mobility</strong>:</p>
 
 <h4 id="why-do-we-want-to-use-microservices">Why do we want to use microservices?</h4>
 
 <p>To build flexible and resilient services, to split the work between multiple teams and resources, decouple deployments, development speed, faster time-to-market and continuous delivery.</p>
 
 <p>Smaller subprojects allow for quicker restart and quicker execution of unit tests which impacts the productivity and morale of the developers.</p>
+
+<p>While Technology keeps evolving our monolithic application lags behind, having multiple teams working on multiple microservices allows us to experiment and gain expertise with the fittest technology, microservices are not dependent on particular technologies.</p>
 
 <h4 id="what-can-go-wrong">What can go wrong?</h4>
 
@@ -190,7 +195,7 @@
 
 <p>We can optimize for reading or for writing, not for both. We need to consider this at the microservice level.</p>
 
-<p>My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Jenkins, SBT and Ansible. (And Elastic Stack for monitoring.)</p>
+<p>My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Kafka, Jenkins, SBT and Ansible. (And Elastic Stack for monitoring.)</p>
     
         </div>
     </section>
@@ -251,13 +256,15 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/naive-bayes/">Naive Bayes</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-doing-some-maths/">Numpy: Doing some maths</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/the-shared-database-problem/">The shared database problem</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/apache-spark-properties-precedence/">Apache Spark: Properties precedence</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
+                      
+        
+          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

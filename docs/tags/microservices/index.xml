@@ -17,9 +17,8 @@
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
-      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;.
-There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.
-Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</description>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.
+To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</description>
     </item>
     
     <item>

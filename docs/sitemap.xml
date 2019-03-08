@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.danielsobrado.com/post/apache-spark-properties-precedence/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/</loc>
     <lastmod>2018-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -44,6 +49,26 @@
   <url>
     <loc>https://www.danielsobrado.com/post/variational-autoencoders/</loc>
     <lastmod>2018-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/customer-segmentation/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/customer-segmentation/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/customer-segmentation/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/post/customer-segmentation/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -138,7 +163,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -170,13 +195,19 @@
   
   <url>
     <loc>https://www.danielsobrado.com/categories/big-data/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/clustering/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -290,7 +321,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/post/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -338,7 +369,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/tags/spark/</loc>
-    <lastmod>2018-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
