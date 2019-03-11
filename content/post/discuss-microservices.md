@@ -50,6 +50,8 @@ While Technology keeps evolving our monolithic application lags behind, having m
 
 We can introduce additional complexity and slow down the entire project. New services require more packaging, releasing, latency, network traffic, and a proper orchestration service like Zookeeper.
 
+Versioning microservices is an anti-pattern, they should be treated as living entities that evolve, not as static releases.
+
 ### The endpoints
 
 We need to communicate with our microservices, and we call endpoints to these API calls that allows us to interact with them.
