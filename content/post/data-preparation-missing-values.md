@@ -1,5 +1,5 @@
 ---
-description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results.."
+description: "Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results.. Missing values are one of the first things we need to deal with."
 author: "Daniel Sobrado"
 date: 2014-12-27
 linktitle: Missing Records in Data Preparation
@@ -18,6 +18,12 @@ categories : [
 draft: true
 ---
 
+Missing Values are part of our data cleaning and pre-processing tasks, we are going to face features with missing values and we need to take a decision about what to do with those.
+
+* Ignore the feature if there are too many missing values.
+* Drop the rows that are  missing.
+* Apply a calculation to fill the, like the mean or the mode, we can do this on a stratified manner.
+* Create a new column to reflect that these values are missing.
 
 # Visualizing missing Values
 
