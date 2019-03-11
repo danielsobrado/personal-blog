@@ -50,6 +50,24 @@ While Technology keeps evolving our monolithic application lags behind, having m
 
 We can introduce additional complexity and slow down the entire project. New services require more packaging, releasing, latency, network traffic, and a proper orchestration service like Zookeeper.
 
+### The endpoints
+
+We need to communicate with our microservices, and we call endpoints to these API calls that allows us to interact with them.
+
+We need static endpoints to communicate with the front-end and intra-service, a well designed and standardized API is required to effectively communicate, we can do this in different ways:
+
+* **REST**: Usually over HTTP, allows to expose your API as URLs.
+
+* **Thrift**: Generates RPC code for cross-language scalable interfaces, it is very popular in Hadoop ecosystems.
+
+* **GraphQL**: A query language for the API, involves sending request over HTTP with the flexibility of a query language.
+
+* **Kafka**:  Quick messaging queues ideal for low latency communications.
+
+These are just some example, there are other options like SOAP, gRPC... Each with its own advantages and disadvantages, the right choice for the endpoint technology in the context of your use-case it deserves an article by itself.
+
+Having multiple type of endpoints in the same architecture is possible, but the monitoring becomes more complicated.
+
 ### Concepts
 
 * Reactive Systems
