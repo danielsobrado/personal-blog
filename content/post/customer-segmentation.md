@@ -42,8 +42,8 @@ It is not the same to build clusters for a team that is working on :
 * **Increase market share**: If we are trying to capture new clients, we need to understand what is driving the clients.
 * **Introduce a new product**: 
 * **Increase sales among existing customers**:
-* **Retain customers**:
-* **Optimize costs**:
+* **Retain customers**: Customer might be incentivised by multiple reasons and we should know this before our competitors do, some customers are more prone to changing than others and we need to know where our focus should be.
+* **Optimize costs**: Checking the balance online is cheaper for the bank than doing it using an ATM, way cheaper than calling a customer representative and much cheaper than going to a branch and asking a teller.
 
 There can be many more uses cases, and each one will have a different approach, and more important a different story line.
 
