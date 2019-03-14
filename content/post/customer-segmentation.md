@@ -31,7 +31,33 @@ It customer cluster needs to be treated in a different way from multiple angles:
 
 We'll find insights about our customer base, groups of clients that share common traits and deserve special attention from the relationship managers, to build tailored strategies for the most attractive segments.
 
-### Approaches and benefits
+### Data Collection
+
+We want to collect as much information as possible about our customers to understand which features are more relevant to identify meaningful clusters.
+
+We need to identify who will be the business user for our clusters, or even better the need for these culsters should come from the business themselves.
+
+It is not the same to build clusters for a team that is working on :
+
+* **Increase market share**: If we are trying to capture new clients, we need to understand what is driving the clients.
+* **Introduce a new product**: 
+* **Increase sales among existing customers**:
+* **Retain customers**:
+* **Optimize costs**:
+
+There can be many more uses cases, and each one will have a different approach, and more important a different story line.
+
+#### Demographics
+
+#### Products 
+
+#### Transactions
+
+#### Channels
+
+
+
+### Challenges
 
 Use interfaces, every application will expose its data using an interface, each interface by itself will define the logic to access the underlaying data and any other application or service will need to access through the interface, nobody will access the database directly.
 
