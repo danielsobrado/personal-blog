@@ -157,16 +157,23 @@
 
 <h3 id="monolith-vs-microservices">Monolith vs Microservices</h3>
 
+<p>Let&rsquo;s define the concept or microservice and its goal, we don&rsquo;t want want to split the monolith in smaller chunks arbitrarily, we want to make sense and achieve some amazing capabilities, like resilience and scalability.</p>
+
+<p>The right size of a microservice is the size that allows us to build autonomous services, that can <em>do one thing and do it well</em>:</p>
+
 <p><strong>Monoliths</strong>: Large applications that are difficult to understand, to scale and to maintain, they tend towards chaos as they grow.</p>
 
 <p><strong>Microservices</strong>: A collection of small, isolated services. Each one owns his data, does only one thing and does it well. A microservice is developed in isolation, and deployed independently, it can be replaced easily.</p>
 
 <p><strong>Isolation</strong>: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.</p>
 
-<p><strong>Autonomicity</strong>:
-<strong>Single Responsibility</strong>:
-<strong>Exclusive state</strong>:
-<strong>Mobility</strong>:</p>
+<p><strong>Autonomy</strong>: When services are isolated they can take decision independently, they can only make promises about their own behaviour.</p>
+
+<p><strong>Resilience</strong>: Capability to self-heal. An autonomous service has all the information required to resolve a conflict or repair a failure scenario, it doesn&rsquo;t have external dependencies.</p>
+
+<p><strong>Single Responsibility</strong>: A service should <em>“only have one reason to change”</em>. A service should provide a single piece of functionality in the domain making it easier to scale, understand, maintain and extend.</p>
+
+<p><strong>Exclusive state</strong>: You can ask for a service state, but you cannot read it, a service is responsible for its own state and its persistence, modelling each service as a <em>Bounded Context</em> can be helpful, this will drive us to Domain-Driven Design (DDD).</p>
 
 <h4 id="why-do-we-want-to-use-microservices">Why do we want to use microservices?</h4>
 
@@ -180,7 +187,54 @@
 
 <p>We can introduce additional complexity and slow down the entire project. New services require more packaging, releasing, latency, network traffic, and a proper orchestration service like Zookeeper.</p>
 
-<h3 id="concepts">Concepts</h3>
+<p>Versioning microservices is an anti-pattern, they should be treated as living entities that evolve, not as static releases.</p>
+
+<h3 id="resources-around-microservices">Resources around microservices</h3>
+
+<p>There are a number of decisions you need to take before starting to code your first microservice:</p>
+
+<ul>
+<li><strong>Physical servers vs Cloud</strong>: Does your company has restriction regarding data confidentiality? Most banks do.</li>
+<li><strong>Databases</strong>: Dedicated, shared, RDBMS, NOSQL&hellip;</li>
+<li><strong>OS</strong>: Windows vs Linux, any special flavour? Are you going to use GPUs? .Net?</li>
+<li><strong>Resource Isolation</strong>: Docker? Mesos?</li>
+<li><strong>Configuration management</strong>: Ansible, Chef, Puppet..</li>
+<li><strong>Monitoring</strong>: Naggios,? Kibana?</li>
+<li><strong>Logging</strong>: You need to centralize your logs, Elastic Stack? Splunk?</li>
+</ul>
+
+<h3 id="the-endpoints">The endpoints</h3>
+
+<p>We need to communicate with our microservices, and we call endpoints to these API calls that allows us to interact with them.</p>
+
+<p>We need static endpoints to communicate with the front-end and intra-service, a well designed and standardized API is required to effectively communicate, we can do this in different ways:</p>
+
+<ul>
+<li><strong>REST</strong>: Usually over HTTP, allows to expose your API as URLs. (Simple but Synchronous/Blocking)</li>
+<li><strong>Thrift</strong>: Generates RPC code for cross-language scalable interfaces, it is very popular in Hadoop ecosystems.</li>
+<li><strong>GraphQL</strong>: A query language for the API, involves sending request over HTTP with the flexibility of a query language.</li>
+<li><strong>Messaging</strong>:  Kafka or Celery with RabbitMQ are examples of quick messaging queues that are ideal for low latency communications. (Asynchronous but queues and brokers can become points of failure and messaging can lead to race conditions)</li>
+</ul>
+
+<p>These are just some examples, there are other options like SOAP, gRPC&hellip; Each with its own advantages and disadvantages, the right choice for the endpoint technology in the context of your use-case it deserves an article by itself.</p>
+
+<p>Having multiple type of endpoints in the same architecture is possible, but the monitoring becomes more complicated.</p>
+
+<h3 id="service-discovery-service-registry-and-load-balancing">Service discovery, Service registry and Load balancing</h3>
+
+<p>In general we need to know the IPs of each other microservices to communicate with them, and we are going to have several instances of the same microservice, that is the purpose of it, to have resilience and scalability and to be able to scale particular functionalities on demand.</p>
+
+<p>We need to route request to the right services, we need to know where they are and that they are healthy, to do this use use the <em>service discovery</em>, in the Hadoop ecosystem, Zookeeper is used for this purpose.</p>
+
+<p>The service discovery keeps track of all the IPs and Ports available in the ecosystem by using a database called the <em>service registry</em>.</p>
+
+<p>Once we start receiving request we need to understand which services are busy and which ones can take more load, we&rsquo;ll do this with a Load Balancer, common load balancers are: Amazon Web Services Elastic Load Balancer, Netflix Eureka, HAProxy, and Nginx.</p>
+
+<h3 id="other-concepts">Other concepts</h3>
+
+<p>One of the advantages of working with microservices is that we can optimize each microservice to do one task very well.</p>
+
+<p>If we are optimizing for latency and scalability we know that we can optimize for reading or for writing, not for both. We need to consider this at the microservice level.</p>
 
 <ul>
 <li>Reactive Systems</li>
@@ -188,14 +242,10 @@
 <li>Event-driven Programming</li>
 <li>Events-first domain-driven Design</li>
 <li>Event Sourcing</li>
-<li>Command Query responsibility segregation</li>
+<li>Command Query Responsibility Segregation</li>
 </ul>
 
-<p>Moving away from REST, we need an asynchronous intra-service communication channel.</p>
-
-<p>We can optimize for reading or for writing, not for both. We need to consider this at the microservice level.</p>
-
-<p>My stack for Microservices: Lagom/Akka/Play, Spray, Haproxy, Swagger, Kafka, Jenkins, SBT and Ansible. (And Elastic Stack for monitoring.)</p>
+<p>We&rsquo;ll discuss these concepts and many more in the next articles of this series.</p>
     
         </div>
     </section>
@@ -256,11 +306,11 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/naive-bayes/">Naive Bayes</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/">Tensorflow vs Pytorch: Linear Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/logistic-regression/">Logistic Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/apache-spark-precedence-of-properties/">Apache Spark: Precedence of properties</a></li>            
         </ul>

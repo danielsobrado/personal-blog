@@ -27,16 +27,23 @@ Add extra services provide some advantages but there are also disadvantages, hav
 
 ### Monolith vs Microservices
 
+Let's define the concept or microservice and its goal, we don't want want to split the monolith in smaller chunks arbitrarily, we want to make sense and achieve some amazing capabilities, like resilience and scalability.
+
+The right size of a microservice is the size that allows us to build autonomous services, that can *do one thing and do it well*:
+
 **Monoliths**: Large applications that are difficult to understand, to scale and to maintain, they tend towards chaos as they grow.
 
 **Microservices**: A collection of small, isolated services. Each one owns his data, does only one thing and does it well. A microservice is developed in isolation, and deployed independently, it can be replaced easily.
 
 **Isolation**: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.
 
-**Autonomicity**:
-**Single Responsibility**:
-**Exclusive state**:
-**Mobility**:
+**Autonomy**: When services are isolated they can take decision independently, they can only make promises about their own behaviour.
+
+**Resilience**: Capability to self-heal. An autonomous service has all the information required to resolve a conflict or repair a failure scenario, it doesn't have external dependencies.
+
+**Single Responsibility**: A service should *“only have one reason to change”*. A service should provide a single piece of functionality in the domain making it easier to scale, understand, maintain and extend.
+
+**Exclusive state**: You can ask for a service state, but you cannot read it, a service is responsible for its own state and its persistence, modelling each service as a *Bounded Context* can be helpful, this will drive us to Domain-Driven Design (DDD).
 
 #### Why do we want to use microservices?
 
@@ -89,7 +96,7 @@ The service discovery keeps track of all the IPs and Ports available in the ecos
 
 Once we start receiving request we need to understand which services are busy and which ones can take more load, we'll do this with a Load Balancer, common load balancers are: Amazon Web Services Elastic Load Balancer, Netflix Eureka, HAProxy, and Nginx.
 
-### Concepts
+### Other concepts
 
 One of the advantages of working with microservices is that we can optimize each microservice to do one task very well.
 
@@ -102,3 +109,4 @@ If we are optimizing for latency and scalability we know that we can optimize fo
 * Event Sourcing
 * Command Query Responsibility Segregation
 
+We'll discuss these concepts and many more in the next articles of this series.
