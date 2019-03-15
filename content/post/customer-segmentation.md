@@ -49,9 +49,13 @@ There can be many more uses cases, and each one will have a different approach, 
 
 #### Demographics
 
+Nationality, salary, gender, age bracket they are all attributes that are highly important.
+
 #### Products 
 
 #### Transactions
+
+Transaction types
 
 #### Channels
 
@@ -59,7 +63,9 @@ There can be many more uses cases, and each one will have a different approach, 
 
 ### Challenges
 
-Use interfaces, every application will expose its data using an interface, each interface by itself will define the logic to access the underlaying data and any other application or service will need to access through the interface, nobody will access the database directly.
+Categorical data
+
+Too many variables
 
 
 
