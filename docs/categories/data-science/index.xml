@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science on </title>
+    <title>Data-Science on </title>
     <link>https://www.danielsobrado.com/categories/data-science/</link>
-    <description>Recent content in Data Science on </description>
+    <description>Recent content in Data-Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 25 Sep 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,9 +30,11 @@ Both heavily oriented towards machine learning and especially deep learning are 
       <guid>https://www.danielsobrado.com/post/likelihood-encoding/</guid>
       <description>Introduction Also known as mean encoding, impact encoding or target encoding, it is a technique
 Mean Absolute Error (MAE) Measures average/mean squared error of our predictions.
-$$ MAE = \frac{1}{n} \sum |yi - \hat{y}_i| $$ Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
+Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
 Mean Absolute Percentage Error (MAPE) &amp;hellip;
-$$ MAPE = \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$ MAPE is</description>
+MAPE is
+Mean Squared Error (MSE) Incorporates both the variance and the bias of the predictor.
+When you have unexpected values that you should take into account use MSE instead of MAE.</description>
     </item>
     
     <item>
@@ -64,7 +66,7 @@ This is different from correlation analysis, because the model allows us to infe
       <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
-      <description> Introduction conda install statsmodels seaborn
+      <description>Introduction conda install statsmodels seaborn
 Plotting residuals Regression assumptions Linearity and equal variance Normality
 Interpreting residuals Common issues Heteroscedasticity Identify heteroscedasticity Breusch-Pagan Lagrange Multiplier test Using StatsModels we have statsmodels.stats.diagnostic.het_breuschpagan
 Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
@@ -94,15 +96,24 @@ This is different from correlation analysis, because the model allows us to infe
     </item>
     
     <item>
+      <title>Clustering with Categorical Features</title>
+      <link>https://www.danielsobrado.com/post/clustering-with-categorical-features/</link>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/post/clustering-with-categorical-features/</guid>
+      <description>Categorical variables Customer segmentation</description>
+    </item>
+    
+    <item>
       <title>Variational Autoencoders</title>
       <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
       <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/variational-autoencoders/</guid>
       <description>Autoencoders An autoencoder takes data with a large amount of parameters and tries to compress it into a smaller representation.
- Encoder:
- Bottleneck
- Decoder:
+  Encoder:
+  Bottleneck
+  Decoder:
   Variational Autoencoders Variational Autoencoders is a technique to compress data</description>
     </item>
     
@@ -114,7 +125,7 @@ This is different from correlation analysis, because the model allows us to infe
       <guid>https://www.danielsobrado.com/post/rfm-scoring/</guid>
       <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
 It customer cluster needs to be treated in a different way from multiple angles:
- Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
     </item>
     
     <item>
@@ -125,7 +136,7 @@ It customer cluster needs to be treated in a different way from multiple angles:
       <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
       <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
 It customer cluster needs to be treated in a different way from multiple angles:
- Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
     </item>
     
     <item>
@@ -136,7 +147,7 @@ It customer cluster needs to be treated in a different way from multiple angles:
       <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
       <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
 It customer cluster needs to be treated in a different way from multiple angles:
- Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
     </item>
     
     <item>
@@ -147,7 +158,7 @@ It customer cluster needs to be treated in a different way from multiple angles:
       <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
       <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
 It customer cluster needs to be treated in a different way from multiple angles:
- Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
     </item>
     
     <item>
@@ -156,7 +167,7 @@ It customer cluster needs to be treated in a different way from multiple angles:
       <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
-      <description> Introduction </description>
+      <description>Introduction </description>
     </item>
     
     <item>
@@ -167,7 +178,11 @@ It customer cluster needs to be treated in a different way from multiple angles:
       <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
       <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
 Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vector.reshape((2,2)) matrix Output: $ array([[1, 2], [3, 4]])   We can quickly create matrices of ones and zeros:</description>
+We can quickly create matrices of ones and zeros:
+Or any other value:
+We can create ndarrays initialized with values:
+Or generate ndarrays of random values:
+We can observe some attributes from an ndarray, with the following operations, for an array defined as np.</description>
     </item>
     
     <item>
@@ -179,7 +194,7 @@ vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vect
       <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
 There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
 Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
+$ pip install numpyNumpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
     </item>
     
     <item>
@@ -199,7 +214,7 @@ $$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
-      <description> Introduction </description>
+      <description>Introduction </description>
     </item>
     
     <item>
@@ -208,9 +223,9 @@ $$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description> Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
+      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
 We can create an identity matrix using np.eye:
-identity = np.eye(3) identity Output: $ array([[ 1., 0., 0.], $ [ 0., 1., 0.], $ [ 0., 0., 1.]])  array([[ 1., 0., 0.], [ 0., 1., 0.], [ 0., 0., 1.]])  Statistics Reading and writing </description>
+Statistics Reading and writing </description>
     </item>
     
   </channel>

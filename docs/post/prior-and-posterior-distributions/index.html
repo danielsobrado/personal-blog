@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/5O23Ebp.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,65 +143,43 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<p>Let´s suppose that we know all the possible causes for an outcome, for example:</p>
-
+        <p>Let´s suppose that we know all the possible causes for an outcome, for example:</p>
 <p>**</p>
-
 <h1 id="bayes-theorem">Bayes theorem</h1>
-
 <p>Posterior = ( Likelihood * Prior ) /  Evidence</p>
-
 <p>Here, P(movie|Sci-fi) is called Posterior,
 P(Sci-fi|Movie) is Likelihood,
 P(movie) is Prior,
 P(Sci-fi) is Evidence.</p>
-
 <p>Prior: How probable was our hypothesis before observing the evidence?
 Posterior: How probable is our hypothesis given the observed evidence?
 Evidence: How probable is the new evidence under all possible hypotheses?
 Likelihood: How probable is the evidence give that our hypotheses is true?</p>
-
 <blockquote>
 <p>The expected value is the mean of the posterior distribution.</p>
 </blockquote>
-
 <p>$$ P ( A | B ) = \frac { P ( B | A ) P ( A ) } { P ( B ) } $$</p>
-
 <p>We know that in pur favourite TV channel they show 40% of the times drama movies, 50% action and 10% horror movies, we´d like to know the probability that tonight there will be an horror movie P(A = Horror) = 0.1, this is our prior probability.</p>
-
 <p>We check the Calendar and today is Hallowing´s night, in Hallowing the channels in general they show horror movies at least 75% of them P()</p>
-
 <h1 id="distributions">Distributions</h1>
-
 <p>Discrete: They have only values based on a list of possible values, like the day of the month, number of persons&hellip;
 Continuous: They take arbitrarily exact values, for example prices, weights, distances&hellip;
 Mixed: A Combination of both categories.</p>
-
 <h1 id="mass-and-density-functions">Mass and Density Functions</h1>
-
 <p>Discrete distributions have probability mass functions while continuous distributions have probability density functions.</p>
-
 <h2 id="probability-mass-function">Probability Mass Function</h2>
-
 <p>The mass function for the Poisson distribution is:</p>
-
 <p>$$ P ( Z = k ) = \frac { \lambda ^ { k } e ^ { - \lambda } } { k ! } , k = 0,1,2 , \ldots $$</p>
-
 <h2 id="probability-density-function">Probability Density Function</h2>
-
 <p>The density function for an exponential random variable:</p>
-
 <p>$$ f _ { Z } ( z | \lambda ) = \lambda e ^ { - \lambda z } , \quad z \geq 0 $$</p>
-
 <p>Th exponential variable can be continuous not only integers, still only positive numbers.</p>
-
 <h1 id="next">Next</h1>
-
-<p>We&rsquo;ll be using the following python packages:
-* <a href="https://github.com/pymc-devs/pymc3">pymc3</a>
-* <a href="https://github.com/uber/pyro">pyro</a></p>
+<p>We&rsquo;ll be using the following python packages:</p>
+<ul>
+<li><a href="https://github.com/pymc-devs/pymc3">pymc3</a></li>
+<li><a href="https://github.com/uber/pyro">pyro</a></li>
+</ul>
     
         </div>
     </section>
@@ -262,13 +240,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/explaining-entropy/">Explaining Entropy</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/clustering-with-categorical-features/">Clustering with Categorical Features</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/customer-segmentation/">Customer Segmentation</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/apache-spark-precedence-of-properties/">Apache Spark: Precedence of properties</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/numpy-introduction/">Numpy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

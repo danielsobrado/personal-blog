@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/ewEDGca.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,92 +143,49 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="introduction">Introduction</h2>
-
+        <h2 id="introduction">Introduction</h2>
 <p>All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &ldquo;<em>Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!</em></p>
-
 <p>I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</p>
-
 <p>I had the need to build a front end where the users can log in, and I was building all in-house, sometimes the quickest solution is the one you can build yourself without vendors, support SLAs etc&hellip; This was one of these situations, but&hellip;</p>
-
 <p>I haven´t touched any front-end from ages, hiring a Front-end/Javascript developer looked overkill, so I took one of these nice looking open source single page administration pages that are nowadays so common.</p>
-
 <p>This was built in AngularJS so I decided that it was a good opportunity to get some skills, anyway I &ldquo;<em>only</em>&rdquo; had to write some controllers on top of the main project, right?</p>
-
 <h2 id="angularjs-basic-concepts">AngularJS basic concepts</h2>
-
 <p>The basic concepts inAngularJS are models, views and controllers, as in the MVC design pattern, if you know essential javascript and HTML/CSS you can start playing straight away.</p>
-
 <p>There are many other topics that are complementary like bootstrap, jquery, web pack etc.. You don´t need to know them all to start doing some work.</p>
-
 <p>We´ll use Karma and Protractor for testing and to do that we´ll require to know the basics on nodejs and npm.</p>
-
 <p>Of course, this is only front-end development, this needs to be tied up with a back-end, we´ll discuss that in future articles.</p>
-
 <h2 id="1-bootstrapping">1. Bootstrapping</h2>
-
 <p>The <code>ng-app</code> directive starts the bootstrap the angularJS application, this is the first step in the lifecycle and the initializations happen at this point.</p>
-
-<pre><code class="language-css">
-    <html ng-app="ourApp">
-    ...
-    </html>
-</code></pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="2-modules">2. Modules</h2>
-
-<pre><code class="language-javascript">
-var app = angular.module('ourApp', ['ngRoute', 'ngResource']);
-</code></pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <blockquote>
 <p>This is our entry point in the application.</p>
 </blockquote>
-
 <h2 id="3-dependency-injection">3. Dependency injection</h2>
-
 <h2 id="4-routes">4. Routes</h2>
-
 <h2 id="5-templates">5. Templates</h2>
-
 <p>Also known as partials, they are defined with <code>&lt;div ng-view&gt;</code>,</p>
-
 <h2 id="6-views">6. Views</h2>
-
 <p>The view shows the data from the models, the logic for the view is available on the controller.</p>
-
 <blockquote>
 <p>The presentation logic should be placed in the views, not in the controllers.</p>
 </blockquote>
-
 <h2 id="7-expressions">7. Expressions</h2>
-
 <h2 id="8-models">8. Models</h2>
-
 <h2 id="9-data-binding">9. Data binding</h2>
-
 <h2 id="10-controllers">10. Controllers</h2>
-
 <p>Controllers have two main functions, to initiate the model and to execute the business logic associated with that view.</p>
-
 <p>Controllers will call REST API functionality for the business logic implemented in the back-end, there is a tradeoff between implementing business logic in the front-end and back-end.</p>
-
 <p>The logic in the front-end it is fast to execute and doesn´t need network communication, but it can be hacked, syntactic validations are usually done at both levels.</p>
-
 <p>In the back-end we´ll secure the logic that we don´t want to be exposed, always taking into consideration that the response time should be sensible.</p>
-
 <h2 id="11-services">11. Services</h2>
-
 <p>Services are singleton objects that provide generic functionality, they are not specifically tied to a view.</p>
-
 <h2 id="12-scope">12. Scope</h2>
-
 <h2 id="conclusion">Conclusion</h2>
-
 <p>We´ve reviewed the very basic blocks of AngularJS, we´ll spend more time with each topic.</p>
-
 <p>In this case, I decided to build the backend using Java and Spring MVC for the REST calls, we´ll see all this in the following articles.</p>
     
         </div>
@@ -290,13 +247,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/customer-segmentation/">Customer Segmentation</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/analysis-of-residuals/">Analysis of residuals</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/explaining-entropy/">Explaining Entropy</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/rfm-scoring/">RFM Scoring</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/clustering-with-categorical-features/">Clustering with Categorical Features</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

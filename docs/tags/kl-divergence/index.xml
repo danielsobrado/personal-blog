@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kl Divergence on </title>
+    <title>kl-divergence on </title>
     <link>https://www.danielsobrado.com/tags/kl-divergence/</link>
-    <description>Recent content in Kl Divergence on </description>
+    <description>Recent content in kl-divergence on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 21 Jun 2014 00:00:00 +0000</lastBuildDate>
@@ -19,7 +19,8 @@
       <guid>https://www.danielsobrado.com/post/cross-entropy-and-kullback-leibler-divergence/</guid>
       <description>Cross-Entropy I our last post we&amp;rsquo;ve seen that entropy tells us the minimum number of bits that we need to encode our ground truth distribution.
  We cannot encode our correct distribution with less information than the entropy.
- What if we don&amp;rsquo;t know the correct or ground truth distribution? In real life we have a approximated view of the reality, we cannot observe all events in most cases.</description>
+ What if we don&amp;rsquo;t know the correct or ground truth distribution? In real life we have a approximated view of the reality, we cannot observe all events in most cases.
+Let´s call $ y $ to the ground truth and $ y_hat $ to our incorrect or approximated distribution.</description>
     </item>
     
     <item>

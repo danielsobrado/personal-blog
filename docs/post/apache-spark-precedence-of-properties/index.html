@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/HXoTjv8.png"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,59 +143,35 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="proper-properties">Proper Properties</h2>
-
+        <h2 id="proper-properties">Proper Properties</h2>
 <p>When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties.</p>
-
 <p>It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don&rsquo;t want to be too greedy with the resources of your cluster, some might complain!</p>
-
 <h2 id="the-problem">The problem</h2>
-
 <p>When your codebase  grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.</p>
-
 <p>You are probably going to use a proper IDE like Eclipse-Scala or IntelliJ and you are used to hit the run key combination to launch your script.</p>
-
 <p>You might find that your properties are not being taken into account.</p>
-
 <h2 id="order-of-property-precedence"><strong>Order of Property Precedence</strong></h2>
-
 <p>You can set some environment variables for standalone execution by using: (e.g. in <code>spark-env.sh</code>)</p>
-
 <pre><code>SPARK_EXECUTOR_MEMORY=16g
 </code></pre>
-
 <p>You can also set the <code>spark-defaults.conf</code>:</p>
-
 <pre><code>spark.executor.memory=16g
 </code></pre>
-
 <p>But these solutions are hardcoded and pretty much static, and you want to have different parameters for different jobs, however, you might want to set up some defaults.</p>
-
 <p>The best approach is to use <code>spark-submit</code>:</p>
-
 <pre><code>spark-submit --executor-memory 16G 
 </code></pre>
-
 <p>But your problem comes from changing your variables programmatically.</p>
-
 <p>The problem of defining variables programmatically is that some of them need to be defined at startup time if not precedence rules will take over and your changes after the initiation of the job will be ignored.</p>
-
 <blockquote>
 <p>The amount of memory per executor is looked up when SparkContext is created.</p>
 </blockquote>
-
 <p>And</p>
-
 <blockquote>
 <p>once a SparkConf object is passed to Spark, it is cloned and can no longer be modified by the user. Spark does not support modifying the configuration at runtime.</p>
 </blockquote>
-
 <p>See: <a href="https://spark.apache.org/docs/latest/api/scala/#org.apache.spark.SparkConf">SparkConf Documentation</a></p>
-
 <p>You need to change the property before the <code>SparkContext</code> is created, then running your iteration, stopping your <code>SparkContext</code> and changing your variable to iterate again?</p>
-
 <pre><code>import org.apache.spark.{SparkContext, SparkConf}
 
 val conf = new SparkConf.set(&quot;spark.executor.memory&quot;, &quot;16g&quot;)
@@ -205,25 +181,18 @@ sc.stop()
 val conf2 = new SparkConf().set(&quot;spark.executor.memory&quot;, &quot;24g&quot;)
 val sc2 = new SparkContext(conf2)
 </code></pre>
-
 <p>You can debug your configuration using: <code>sc.getConf.toDebugString</code></p>
-
 <p>See: <a href="https://spark.apache.org/docs/latest/configuration.html">Spark Configuration</a></p>
-
 <blockquote>
 <p>Any values specified as flags or in the properties file will be passed on to the application and merged with those specified through SparkConf. Properties set directly on the SparkConf take highest precedence, then flags passed to spark-submit or spark-shell, then options in the spark-defaults.conf file.</p>
 </blockquote>
-
 <p>You&rsquo;ll need to make sure that your variable is not defined with higher precedence.</p>
-
 <p>You need to understand the precedence order:</p>
-
 <ul>
 <li>conf/spark-defaults.conf</li>
 <li>&ndash;conf or -c - the command-line option used by spark-submit</li>
 <li>SparkConf</li>
 </ul>
-
 <p>Just make sure that your properties are all setup before creating the SparkContext, there are some SparkSQL properties that you can change at run-time, lets discuss that in another post.</p>
     
         </div>
@@ -285,13 +254,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/clustering-with-categorical-features/">Clustering with Categorical Features</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/">Worldbank datasets: Jobs and economic indicators</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/cross-entropy-and-kullback-leibler-divergence/">Cross-Entropy and Kullback-Leibler Divergence</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

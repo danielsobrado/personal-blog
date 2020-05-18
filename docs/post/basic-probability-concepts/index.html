@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/IenFUVF.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,28 +143,16 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="introduction">Introduction</h2>
-
+        <h2 id="introduction">Introduction</h2>
 <p>In this series of articles, We&rsquo;ll dig deep into understanding <strong>Bayesian inference</strong>, starting from the basics.</p>
-
 <p>The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.</p>
-
-<h2 id="tl-dr">TL;DR</h2>
-
+<h2 id="tldr">TL;DR</h2>
 <p>Let´s take the following poker cards as an example:</p>
-
-<p><img src="https://i.imgur.com/rypTeme.jpg" alt="" /></p>
-
+<p><img src="https://i.imgur.com/rypTeme.jpg" alt=""></p>
 <p>Our <code>experiment</code> is to take two cards for the deck, one at a time, each card extraction is an <code>event</code>. We define as outcomes that a card is of a defined</p>
-
 <p>If we introduce the card in the deck again before extracting the next one, we&rsquo;ll have <code>indepedent</code> events, if we don&rsquo;t the events will be <code>dependent</code>, due to the fact that the fact of removing one card from the deck will alter the probabilities of the next event.</p>
-
 <h2 id="concepts">Concepts</h2>
-
 <p>Let&rsquo;s illustrate these concepts with poker cards and rolling dices:</p>
-
 <ul>
 <li>An <strong>experiment</strong> is a well-defined action, that might result in a number of outcomes.</li>
 <li><strong>Outcome</strong>: Possible result of an <code>experiment</code>. Each outcome is unique, and different outcomes are <code>mutually exclusive</code>.</li>
@@ -172,77 +160,56 @@
 <li>An <strong>event</strong> is a collection of outcomes.</li>
 <li>A <strong>probability</strong> is a number between 0 and 1, both included, that describes the degree of confidence that we have in a prediction, 0 is none or false and 1 is all or true.</li>
 </ul>
-
 <p>$$
 P ( hearts ) = 0.25
 $$</p>
-
-<p>The probability of an event $ E $ is  $ P(E) $ is the number of possible outcomes of event $ E $ is $ n(E) $ divided by the number of outcomes of the sample space $ n(S) $.
+<p>The probability of an event $ E $ is  $ P(E) $ is the number of possible outcomes of event $ E $ is $ n(E) $ divided by the number of outcomes of the sample space $ n(S) $. 
 $$
 \mathrm { P } ( \mathrm { E } ) = \frac { \mathrm { n } ( \mathrm { E } ) } { \mathrm { n } ( \mathrm { S } ) }
 $$</p>
-
 <h4 id="mutually-exclusive-events">Mutually exclusive events</h4>
-
 <p>We call <strong>mutually exclusive events</strong>, to two or more events that cannot happen simultaneously. For example in Poker cards we cannot draw a card that is hearts and diamonds at the same time, but we can have a card that is 2 and diamonds.
 $$
 P ( hearts \cup diamonds ) = P ( hearts ) + P ( diamonds )
 $$</p>
-
 <h4 id="conditional-probability">Conditional probability</h4>
-
 <p>A <strong>conditional probability</strong> is a probability based on some premise. I know that in my city there is a 5% chance of rain, but given that is autumn the probability raises to 25%, the premise is that it is autumn, this premise gives us additional information that allows us to have a more accurate prediction.
 $$
 P ( A \cap B ) = P ( A ) * P ( B )
 $$</p>
-
 <blockquote>
-<p>We roll a six-sided dice, this is an experiment, we have 6 possible outcomes. If we get the number <em>3</em> by rolling the dice, we&rsquo;ll say that from this event of rolling the dice we observed the outcome <em>3</em>, that has a prior probability of <sup>1</sup>&frasl;<sub>6</sub>.</p>
+<p>We roll a six-sided dice, this is an experiment, we have 6 possible outcomes. If we get the number <em>3</em> by rolling the dice, we&rsquo;ll say that from this event of rolling the dice we observed the outcome <em>3</em>, that has a prior probability of 1/6.</p>
 </blockquote>
-
 <h4 id="independent-events">Independent Events</h4>
-
 <p>We&rsquo;ll say that 2 events are <em>independent</em> if one event doesn&rsquo;t give any information about another event.</p>
-
-<p>We have the following outcomes that we want to analyse:
-A = Outcome 3 in the first dice.
+<p>We have the following outcomes that we want to analyse: 
+A = Outcome 3 in the first dice. 
 B = Outcome 3 in the second dice.
 $$
 P ( A | B ) = P ( A )
 $$
-We&rsquo;ll read &ldquo;<em>The probability of observing 3 in the first dice given that we got 3 in the second dice is the observing of getting 3 in the first dice.</em>&ldquo;</p>
-
+We&rsquo;ll read &ldquo;<em>The probability of observing 3 in the first dice given that we got 3 in the second dice is the observing of getting 3 in the first dice.</em>&rdquo;</p>
 <blockquote>
 <p>Rolling a second dice doesn&rsquo;t give us any information about the first dice.</p>
 </blockquote>
-
 <p>When two events are <em>independent</em> the probability of both of them occurring is:</p>
-
 <p>$$
 P ( A \cap B ) = P ( A ) * P ( B )
 $$
 We can generalize this to multiple events:</p>
-
 <p>$$
 P \left[ \bigcap _ { i = 1 } ^ { n } A _ { i } \right] = \prod _ { i = 1 } ^ { n } P \left( A _ { i } \right)
 $$
 Here A means rolling a dice, it can be the same dice or different dices.</p>
-
 <h4 id="dependent-events">Dependent Events</h4>
-
 <p>When two events are <em>dependent</em> the probability of both of them occurring is:
 $$
 \mathrm { P } ( \mathrm { A } \text { and } \mathrm { B } ) = \mathrm { P } ( \mathrm { A } ) \times \mathrm { P } ( \mathrm { B } | \mathrm { A } )
 $$</p>
-
-<p><img src="https://i.imgur.com/SM3ph2R.png" alt="" /></p>
-
+<p><img src="https://i.imgur.com/SM3ph2R.png" alt=""></p>
 <h4 id="prior-and-posterior-distributions">Prior and Posterior distributions</h4>
-
 <p>The <strong>prior probability distribution</strong> (prior), is ones beliefs about its quantity before some evidence is taken into account.</p>
-
 <p>The <strong>posterior probability distribution</strong> (posterior), is the revised probability of an event occurring after some evidence has been taken into account.</p>
-
 <p>We´ll see in the <a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">next article</a> more about these probability distributions.</p>
     
         </div>
@@ -304,13 +271,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/customer-segmentation/">Customer Segmentation</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/explaining-entropy/">Explaining Entropy</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

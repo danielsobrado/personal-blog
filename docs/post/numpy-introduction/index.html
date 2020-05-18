@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/oQNt9Gt.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,74 +143,30 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="introduction">Introduction</h2>
-
+        <h2 id="introduction">Introduction</h2>
 <p>Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</p>
-
 <p>There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.</p>
-
 <h2 id="installing-numpy">Installing Numpy</h2>
-
 <p>For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:</p>
-
 <pre><code>$ pip install numpy
-</code></pre>
-
-<h2 id="numpy-arrays">Numpy Arrays</h2>
-
+</code></pre><h2 id="numpy-arrays">Numpy Arrays</h2>
 <p>ndarray is the earth of NumPy, it&rsquo;s the main data storage object of the framework.</p>
-
 <p>It is a homogeneus array, all the components share the same data-type.</p>
-
 <h3 id="why-do-we-need-other-arrays">Why do we need other arrays?</h3>
-
 <p>We have Python lists and dictionaries, why do we need to have another package?</p>
-
 <ul>
 <li>Fast: It is developed in C and it´s very fast, in the background numpy uses parallel computation to perform the operations.</li>
 <li>Compact: It requires less storage compared to the python implementation, it is designed store data in a more efficient way.</li>
 </ul>
-
 <h4 id="ndarrays-are-fast">ndarrays are fast!</h4>
-
 <p>We are going to do a quick test using a juyter notebook and the magic command <code>%timeit</code> to compare the performance:</p>
-
-<pre class="prettyprint lang-py linenums">
-array = np.arange(1e8)
-list = array.tolist()
-<span class="nocode" style="color:white">
-Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</span>
-
-%%timeit
-for i, val in enumerate(array_list):
-    array_list[i] = val * 1.5
-
-<span class="nocode" style="color:white">
-Output: 17.2 s ± 785 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</span>
-
-%%timeit
-array * 1.5
-
-<span class="nocode" style="color:white">
-Output: 472 ms ± 43.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
-</span>
-
-</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>We can see that the multiplication in Numpy is around 40 times faster than the solution in pure Python.</p>
-
 <h4 id="ndarrays-are-compact">ndarrays are compact!</h4>
-
 <p>Python lists are arrays of pointers to Python pointers while NumPy ndarrays are blocks of data, that are less flexible due to their nature, they need to be homogeneus, but they require less space.</p>
-
 <p>The smallest Python object will require 4 bytes per pointer plus 16 bytes for the object itself. (4 for type pointer, 4 for reference count, 4 for value and the memory allocators)</p>
-
-<p>You cannot use <code>sys.getsizeof()</code> to verify the amount of memory consumed as per the documentation <em>&ldquo;Only the memory consumption directly attributed to the object is accounted for, not the memory consumption of objects it refers to.&rdquo;</em></p>
-
+<p>You cannot use <code>sys.getsizeof()</code> to verify the amount of memory consumed as per the documentation <em>&ldquo;Only the memory consumption directly attributed to the object is accounted for, not the memory consumption of objects it refers to.&quot;</em></p>
 <p>Let´s move on creating some ndarrays!</p>
     
         </div>
@@ -272,13 +228,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/">Tensorflow vs Pytorch: Basics</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/"></a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/rfm-scoring/">RFM Scoring</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/probability-distributions/">Probability distributions</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-doing-some-maths/">Numpy: Doing some maths</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/isyQF4V.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,82 +143,45 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h1 id="loss-functions">Loss Functions</h1>
-
+        <h1 id="loss-functions">Loss Functions</h1>
 <p>The loss function calculates the difference between the output of your model and the &ldquo;Ground Truth&rdquo; or actual values.</p>
-
 <p>All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliers impact the final outcome.</p>
-
 <p>Each metric has its own strenghts and weakness and its fit for a different use case, we need to understand how these metrics impact our results, and how to interpret them, if they give us a relative or absulute value, the unit being used by the metric and how to use multiple metrics to understand where the loss/error is coming from.</p>
-
 <h3 id="mean-absolute-error-mae">Mean Absolute Error (MAE)</h3>
-
 <p>Measures average/mean squared error of our predictions.</p>
-
-<div id="el"><span>$$ MAE = \Sigma_{i=1}^{n}\frac{|\hat{y}_i - y_i|}{n} $$</span></div>
-
+<!-- raw HTML omitted -->
 <p>Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.</p>
-
 <h3 id="mean-absolute-percentage-error-mape">Mean Absolute Percentage Error (MAPE)</h3>
-
 <p>Also known as mean absolute percentage deviation (MAPD), it measures the size of the error in percentage tems. It is calculated by taking the absolute deviation and dividing it by the data to get the error percentage.</p>
-
-<div id="el"><span>$$ MAPE = {100}* \Sigma_{i=1}^{n}\frac{(\hat{y_i} - y_i)^2}{y_i} $$</span></div>
-
+<!-- raw HTML omitted -->
 <p>Lower numbers are better than large ones.</p>
-
 <p>The main issues with MAPE are that near zero and zero predicted figures will yield infinite or non valid results due to the <em>y_hat</em> denominator.</p>
-
 <h3 id="mean-squared-error-mse">Mean Squared Error (MSE)</h3>
-
 <p>Incorporates both the variance and the bias of the predictor.</p>
-
-<div id="el"><span>$$ MSE = \Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}} $$</span></div>
-
+<!-- raw HTML omitted -->
 <p>When you have unexpected values that you should take into account use MSE instead of MAE.</p>
-
 <h3 id="root-mean-square-error-rmse">Root Mean Square Error (RMSE)</h3>
-
 <p>RMSE is an <strong>absolute measure</strong> of fit. Lower values of RMSE are indicative of a better fit</p>
-
 <blockquote>
 <p>RMSE can be interpreted as the standard deviation of the unexplained variance.</p>
 </blockquote>
-
 <p>RMSE is in the same units as the predicted variable.</p>
-
-<div id="el"><span>$$ RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
-
+<!-- raw HTML omitted -->
 <p>By squaring the errors we can get more accurate results as the negative and positive errors don&rsquo;t cancel each other.</p>
-
 <h3 id="root-mean-square-logarithmic-error-rmsle">Root Mean Square Logarithmic Error (RMSLE)</h3>
-
 <blockquote>
 <p>RMSLE penalizes an under-predicted estimate greater than an over-predicted estimate.</p>
 </blockquote>
-
-<div id="el"><span>$$ RMSLE = \sqrt{\Sigma_{i=1}^{n}{\frac{(log(y_i+1)) - (log(\hat{y_i}+1))^2}{n}}}$$</span></div>
-
+<!-- raw HTML omitted -->
 <p>When the differences from predicted and actuals are large the log function helps normalizing this.</p>
-
 <p>By applying logarithms to both prediction and actual numbers, we&rsquo;ll get smoother results by reducing the impact of larger x, while emphasize of smaller x.</p>
-
 <p>RMSLE measures the ratio between actual and predicted.</p>
-
-<div id="el"><span>$$ log(pi+1)−log(ai+1) $$</span></div>
-
-<p><img src="https://i.imgur.com/1d5fJZR.png" alt="" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="https://i.imgur.com/1d5fJZR.png" alt=""></p>
 <p>There is a larger delta of y correspoding to an equivalent delta of x when x is small.</p>
-
 <p>Note: Squared root of variance is the Standard Deviation.</p>
-
 <h3 id="r-squared">R Squared</h3>
-
 <h1 id="summary">Summary</h1>
-
 <table>
 <thead>
 <tr>
@@ -227,32 +190,27 @@
 <th>Disadvantages</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>MAE</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>MAPE</td>
 <td>Scale-independency and interpretability</td>
 <td>Infinite values or undefined for zero or close to zero actual values</td>
 </tr>
-
 <tr>
 <td>MSE</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>RMSE</td>
 <td></td>
 <td>Is an absolute measure, difficult to compare with other metrics.</td>
 </tr>
-
 <tr>
 <td>RMSLE</td>
 <td></td>
@@ -260,7 +218,6 @@
 </tr>
 </tbody>
 </table>
-
 <p>See: <a href="https://www.quora.com/What-is-the-difference-between-an-RMSE-and-RMSLE-logarithmic-error-and-does-a-high-RMSE-imply-low-RMSLE">https://www.quora.com/What-is-the-difference-between-an-RMSE-and-RMSLE-logarithmic-error-and-does-a-high-RMSE-imply-low-RMSLE</a></p>
     
         </div>
@@ -322,13 +279,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/logistic-regression/">Logistic Regression</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/rfm-scoring/">RFM Scoring</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-ndarrays/">Numpy: ndarrays</a></li>            
         
           <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/"></a></li>            
+        
+          <li><a href="https://www.danielsobrado.com/post/angularjs-introduction/">AngularJS: Introduction</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

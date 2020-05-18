@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/ewEDGca.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,107 +143,58 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="introduction">Introduction</h2>
-
+        <h2 id="introduction">Introduction</h2>
 <p>Functional programming is a programming paradigm, based on mathematical principles. The principles of functional programming are to avoid changing the state and to avoid mutating data.</p>
-
 <p>Functional programming is declarative, we use expressions instead of statements.</p>
-
 <p>We are going to discuss Functional Programming in the context of Scala, with Java and Python examples and comparisons, none of these languages are purely functional but they have functional capabilities and are widely used in the industry.</p>
-
 <h2 id="advantages">Advantages</h2>
-
 <p>In short functional programming will allow you to be more confident with the quality of your code because you&rsquo;ll be able to write code with less bugs in less time. Your code will be easier to understand and will be more reusable.</p>
-
 <p><strong>Concurrency</strong>: Pure functions are Thread-Safe, this makes parallel implementations much simpler.</p>
-
 <p><strong>Maintenance</strong>: Functions that don&rsquo;t have side effects have less errors and are easier to debug.</p>
-
 <p><strong>Brevity</strong>: Functional code is usually shorter.</p>
-
 <p><strong>Testability</strong>: State-less functions are easier to test, as we don&rsquo;t have to worry about external interactions, only about inputs and outputs.</p>
-
 <p><strong>Modularity</strong>: Pure functions allows us to build more modular code, which is coupled with reusability.</p>
-
 <h2 id="concepts">Concepts</h2>
-
 <p>Let&rsquo;s enumerate and describe the main pillars of functional programming, each one deserves several separated articles:</p>
-
 <h3 id="higher-order-functions">Higher-order functions</h3>
-
 <p>Functions are values and can be passed to other functions.</p>
-
 <h3 id="pure-functions-and-referential-transparency">Pure functions and Referential Transparency</h3>
-
 <p>We want to make sure that a function will perform the same actions and give the same results for the same inputs.</p>
-
 <p>We call these functions <em>stateless functions</em>.</p>
-
 <blockquote>
 <p>An expression is referentially transparent if it can be replaced with its value without changing the program behavior.</p>
 </blockquote>
-
 <p>This is the same as saying, no side effects! It is a function that depends only on its input parameters.</p>
-
 <p>They allows us to read the code knowing that the result will be always the same,</p>
-
 <blockquote>
-<p>Functions that are referentially transparent are called “*pure functions*”.</p>
+<p>Functions that are referentially transparent are called “<em>pure functions</em>”.</p>
 </blockquote>
-
 <p>We can allow some exceptions to this, like printing details to the standard output or logs depending on the type of application and use case.</p>
-
 <p>What we cannot do, is to access global variables that are not constant, or write to disk, network etc..</p>
-
 <h3 id="function-composition">Function composition</h3>
-
 <p>Passing a function to another function allows us to</p>
-
 <h3 id="avoid-shared-state">Avoid shared state</h3>
-
-<h3 id="avoid-mutating-state-immutability">Avoid mutating state / Immutability</h3>
-
+<h3 id="avoid-mutating-state--immutability">Avoid mutating state / Immutability</h3>
 <h3 id="avoid-side-effects">Avoid side effects</h3>
-
 <h3 id="functors">Functors</h3>
-
 <h3 id="monads">Monads</h3>
-
 <h2 id="functional-toolkit-in-python">Functional Toolkit in Python</h2>
-
 <h2 id="functional-toolkit-in-java">Functional Toolkit in Java</h2>
-
 <h2 id="scala-as-a-functional-programming-language">Scala as a functional programming language</h2>
-
 <p>Features of Scala:</p>
-
 <p><strong>Type Inference</strong>:</p>
-
 <p><strong>Immutability</strong>:</p>
-
 <p><strong>Lazy Evaluation</strong>:</p>
-
 <p><strong>String Interpolation</strong>:</p>
-
 <p><strong>Case Classes</strong>:</p>
-
 <p><strong>Pattern Matching</strong>:</p>
-
 <p><strong>Companion Object</strong>:</p>
-
 <p>Scala has <strong>functional programming capabilities</strong> like: Anonymous functions, higher order functions, function composition, function currying,
 nested functions, and functions with variable length parameters.</p>
-
 <h2 id="pure-functional-programming-languages">Pure functional programming languages</h2>
-
 <p>Funtional programming is being all the rage during the last few years, every programming language wants to have his &ldquo;functional way of doing things&rdquo;, you can do functional programming in Javascript.</p>
-
 <p>But not every programming language was conceived from inception to be purely functional, like:</p>
-
 <p>Lisp</p>
-
 <p>Clojure</p>
     
         </div>
@@ -305,15 +256,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/basic-probability-concepts/">Basic probability concepts</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/prior-and-posterior-distributions/">Prior and Posterior distributions</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/">Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/likelihood-encoding/">Likelihood encoding</a></li>            
         
-                      
-        
-          <li><a href="https://www.danielsobrado.com/post/customer-segmentation/">Customer Segmentation</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

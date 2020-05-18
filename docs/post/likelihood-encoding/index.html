@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/MDlo1LF.png"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,72 +143,40 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h1 id="introduction">Introduction</h1>
-
+        <h1 id="introduction">Introduction</h1>
 <p>Also known as mean encoding, impact encoding or target encoding, it is a technique</p>
-
 <h3 id="mean-absolute-error-mae">Mean Absolute Error (MAE)</h3>
-
 <p>Measures average/mean squared error of our predictions.</p>
-
-<div id="el"><span>$$ MAE = \frac{1}{n} \sum |yi - \hat{y}_i| $$</span></div>
-
+<!-- raw HTML omitted -->
 <p>Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.</p>
-
 <h3 id="mean-absolute-percentage-error-mape">Mean Absolute Percentage Error (MAPE)</h3>
-
 <p>&hellip;</p>
-
-<div id="el"><span>$$ MAPE = \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$</span></div>
-
+<!-- raw HTML omitted -->
 <p>MAPE is</p>
-
 <h3 id="mean-squared-error-mse">Mean Squared Error (MSE)</h3>
-
 <p>Incorporates both the variance and the bias of the predictor.</p>
-
-<div id="el"><span>$$ MSE = \frac{1}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$</span></div>
-
+<!-- raw HTML omitted -->
 <p>When you have unexpected values that you should take into account use MSE instead of MAE.</p>
-
 <h3 id="root-mean-square-error-rmse">Root Mean Square Error (RMSE)</h3>
-
 <p>RMSE is an <strong>absolute measure</strong> of fit. Lower values of RMSE are indicative of a better fit</p>
-
 <blockquote>
 <p>RMSE can be interpreted as the standard deviation of the unexplained variance.</p>
 </blockquote>
-
 <p>RMSE is in the same units as the predicted variable.</p>
-
-<div id="el"><span>$$ RMSE = \sqrt{\Sigma_{i=1}^{n}{\frac{(\hat{y_i} - y_i)^2}{n}}}$$</span></div>
-
+<!-- raw HTML omitted -->
 <p>By squaring the errors we can get more accurate results as the negative and positive errors don&rsquo;t cancel each other.</p>
-
 <h3 id="root-mean-square-logarithmic-error-rmsle">Root Mean Square Logarithmic Error (RMSLE)</h3>
-
 <blockquote>
 <p>RMSLE penalizes an under-predicted estimate greater than an over-predicted estimate.</p>
 </blockquote>
-
-<div id="el"><span>$$ RMSLE = \sqrt{\Sigma_{i=1}^{n}{\frac{(log(y_i+1)) - (log(\hat{y_i}+1))^2}{n}}}$$</span></div>
-
+<!-- raw HTML omitted -->
 <p>When the differences from predicted and actuals are large the log function helps normalizing this.</p>
-
 <p>By applying logarithms to both prediction and actual numbers, we&rsquo;ll get smoother results by reducing the impact of larger x, while emphasize of smaller x.</p>
-
 <p>RMSLE measures the ratio between actual and predicted.</p>
-
-<div id="el"><span>$$ log(pi+1)−log(ai+1) $$</span></div>
-
-<p><img src="https://i.imgur.com/1d5fJZR.png" alt="" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="https://i.imgur.com/1d5fJZR.png" alt=""></p>
 <p>There is a larger delta of y correspoding to an equivalent delta of x when x is small.</p>
-
 <p>Note: Squared root of variance is the Standard Deviation.</p>
-
 <p>See: <a href="https://www.quora.com/What-is-the-difference-between-an-RMSE-and-RMSLE-logarithmic-error-and-does-a-high-RMSE-imply-low-RMSLE">https://www.quora.com/What-is-the-difference-between-an-RMSE-and-RMSLE-logarithmic-error-and-does-a-high-RMSE-imply-low-RMSLE</a></p>
     
         </div>
@@ -270,13 +238,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/logistic-regression/">Logistic Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-ndarrays/">Numpy: ndarrays</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/">Apache Spark: Introduction to project Tungsten</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/apache-spark-precedence-of-properties/">Apache Spark: Precedence of properties</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/rfm-scoring/">RFM Scoring</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/customer-segmentation/">Customer Segmentation</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

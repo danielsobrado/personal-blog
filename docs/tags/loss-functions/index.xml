@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Loss Functions on </title>
@@ -19,9 +19,11 @@
       <guid>https://www.danielsobrado.com/post/likelihood-encoding/</guid>
       <description>Introduction Also known as mean encoding, impact encoding or target encoding, it is a technique
 Mean Absolute Error (MAE) Measures average/mean squared error of our predictions.
-$$ MAE = \frac{1}{n} \sum |yi - \hat{y}_i| $$ Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
+Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
 Mean Absolute Percentage Error (MAPE) &amp;hellip;
-$$ MAPE = \frac{100}{n} \sumi^n \frac{yi - \hat{y}i}{yi} $$ MAPE is</description>
+MAPE is
+Mean Squared Error (MSE) Incorporates both the variance and the bias of the predictor.
+When you have unexpected values that you should take into account use MSE instead of MAE.</description>
     </item>
     
     <item>

@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/Ous3FT6.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,44 +143,24 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="introduction">Introduction</h2>
-
+        <h2 id="introduction">Introduction</h2>
 <p>Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second generation of the Tungsten engine.</p>
-
 <p>Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.</p>
-
 <blockquote>
 <p>Tungsten compiles your queries/stages into single bytecode JVM function that improve CPU efficiency and gain performance.</p>
 </blockquote>
-
 <p>This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.</p>
-
 <p>You never know if you&rsquo;ll find tugnsten useful for your next project!</p>
-
 <h2 id="using-tungsten">Using Tungsten</h2>
-
 <p>Tungsten is enabled by default, you can disable it if you want to compare the performance impact:</p>
-
 <pre><code>$ spark-shell --conf spark.sql.tungsten.enabled=false
-</code></pre>
-
-<p>And enable it again:</p>
-
+</code></pre><p>And enable it again:</p>
 <pre><code>$ spark-shell --conf spark.sql.tungsten.enabled=true
-</code></pre>
-
-<h2 id="thomas-neumann-s-seminal-vldb-2011-paper">Thomas Neumann’s seminal VLDB 2011 paper</h2>
-
-<p>See: <a href="https://blog.acolyer.org/2016/05/23/efficiently-compiling-efficient-query-plans-for-modern-hardware/" target="_blank">Efficiently compiling efficient query plans for modern hardware</a></p>
-
+</code></pre><h2 id="thomas-neumanns-seminal-vldb-2011-paper">Thomas Neumann’s seminal VLDB 2011 paper</h2>
+<p>See: <!-- raw HTML omitted -->Efficiently compiling efficient query plans for modern hardware<!-- raw HTML omitted --></p>
 <h2 id="eliminating-virtual-function-dispatches">Eliminating virtual function dispatches</h2>
-
 <h2 id="intermediate-data-in-cpu-registers">Intermediate data in CPU registers</h2>
-
 <h2 id="simd">SIMD</h2>
-
 <h2 id="whole-stage-code-generation">Whole Stage Code Generation</h2>
     
         </div>
@@ -242,13 +222,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="https://www.danielsobrado.com/post/customer-segmentation/">Customer Segmentation</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/apache-spark-precedence-of-properties/">Apache Spark: Precedence of properties</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/explaining-entropy/">Explaining Entropy</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/lets-discuss-microservices/">Let&#39;s discuss Microservices</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/">Functional programming in Java: Lambdas</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/linear-regression/">Linear Regression</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/variational-autoencoders/">Variational Autoencoders</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/cross-entropy-and-kullback-leibler-divergence/">Cross-Entropy and Kullback-Leibler Divergence</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">

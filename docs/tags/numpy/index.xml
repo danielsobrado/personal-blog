@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Numpy on </title>
@@ -19,7 +19,11 @@
       <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
       <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
 Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vector.reshape((2,2)) matrix Output: $ array([[1, 2], [3, 4]])   We can quickly create matrices of ones and zeros:</description>
+We can quickly create matrices of ones and zeros:
+Or any other value:
+We can create ndarrays initialized with values:
+Or generate ndarrays of random values:
+We can observe some attributes from an ndarray, with the following operations, for an array defined as np.</description>
     </item>
     
     <item>
@@ -31,7 +35,7 @@ vector = np.array([1,2,3,4]) vector Output: $ array([1, 2, 3, 4])  matrix = vect
       <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
 There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
 Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
+$ pip install numpyNumpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
     </item>
     
     <item>
@@ -40,9 +44,9 @@ $ pip install numpy  Numpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description> Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
+      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
 We can create an identity matrix using np.eye:
-identity = np.eye(3) identity Output: $ array([[ 1., 0., 0.], $ [ 0., 1., 0.], $ [ 0., 0., 1.]])  array([[ 1., 0., 0.], [ 0., 1., 0.], [ 0., 0., 1.]])  Statistics Reading and writing </description>
+Statistics Reading and writing </description>
     </item>
     
   </channel>

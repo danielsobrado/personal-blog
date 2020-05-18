@@ -39,7 +39,7 @@
     <meta property="og:image" content="https://i.imgur.com/k3fRAC4.jpg"/>
 
 
-    <meta name="generator" content="Hugo 0.48" />
+    <meta name="generator" content="Hugo 0.70.0" />
 
     <!-- Stylesheets -->
     
@@ -143,129 +143,49 @@
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        
-
-<h2 id="introduction-to-linear-regression">Introduction to Linear Regression</h2>
-
+        <h2 id="introduction-to-linear-regression">Introduction to Linear Regression</h2>
 <p>The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.</p>
-
 <p>Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.</p>
-
 <p>Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</p>
-
 <p>The beginner data scientist, he usually looks at the higher level APIs and libraries that provide out-of-the-box algorithms ready to apply with the only effort of setting up some hyper-parameters.</p>
-
 <h2 id="introduction-to-tensorflow">Introduction to Tensorflow</h2>
-
 <p>Tensorflow is Google´s open source solution for computing large amounts of data, it is a symbolic math library based on data-flow programming.</p>
-
 <h3 id="installation">Installation</h3>
-
 <p>You can install Tensorflow using pip or using your favourite virtual environments and package managers like Anaconda or VirtualEnv.</p>
-
 <p>Let´s start with plain pip:</p>
-
 <pre><code>$ pip install tensorflow
-</code></pre>
-
-<p>or the GPU version: (Usually you´ll require CUDA installed)</p>
-
+</code></pre><p>or the GPU version: (Usually you´ll require CUDA installed)</p>
 <pre><code>$ pip install tensorflow-gpu
-</code></pre>
-
-<p>Let´s verify the installation:</p>
-
-<pre class="prettyprint lang-py">
-import tensorflow as tf
-print("Tensorflow version: {}".format(tf.__version__))
-
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
-
+</code></pre><p>Let´s verify the installation:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="tensors">Tensors</h3>
-
 <p>The home page, or landing page, is the first page that many visitors to a site see. It is the index.html file in the root directory of the website. Since Hugo writes files to the public/ directory, our home page is public/index.html.</p>
-
 <h3 id="graphs-in-tensorflow">Graphs in Tensorflow</h3>
-
 <p>Any Tensorflow program is going to be a Graph, each operation is a function that will be evaluated at that point of the graph.</p>
-
 <p>Eager execution in TensorFlow v1.5</p>
-
-<pre class="prettyprint lang-py">
-x = [[2.]]
-m = tf.matmul(x, x)
-
-print(m)
-<span class="nocode" style="color:white">
-Output:
-$ Tensorflow version: 1.10.0
-</span>
-</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="placeholders">Placeholders</h3>
-
 <h3 id="variables">Variables</h3>
-
 <h3 id="mathematical-operations">Mathematical Operations</h3>
-
 <h3 id="the-session">The Session</h3>
-
-<pre class="prettyprint lang-py">
-import tensorflow as tf
-x = tf.constant([3])
-y = tf.constant([4])
-z = tf.add(x,y)
-session = tf.Session()
-result = session.run(z)
-print(result)
-
-<span class="nocode" style="color:white">
-Output:
-$ [5]
-</span>
-</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="introduction-to-pytorch">Introduction to Pytorch</h2>
-
 <p>Pytorch is Facebook&rsquo;s solution for the same problem, a framework to handle large amounts of matricial-like data and leverage on the use of GPUs.</p>
-
 <p>Pytorch is known for its simplicity. It uses Dynamic computation for greater flexibility.</p>
-
 <h3 id="installation-1">Installation</h3>
-
 <pre><code>$ conda install pytorch cuda90 
-</code></pre>
-
-<pre><code>$ conda install pytorch-cpu
-</code></pre>
-
-<p>Since PyTorch 0.4.0, there is official Window Support.</p>
-
+</code></pre><pre><code>$ conda install pytorch-cpu
+</code></pre><p>Since PyTorch 0.4.0, there is official Window Support.</p>
 <h3 id="tensors-and-variables">Tensors and Variables</h3>
-
 <p>Pytorch provides two data abstractions Tensors and Variables.</p>
-
 <p>Tensors are similar to numpy arrays but they have GPU support and methods to switch between CPU and GPU.</p>
-
 <p>We can slice tensors using the notation &lsquo;tensor[:slice index]&rsquo;</p>
-
-<pre class="prettyprint lang-py">
-import torch
-x = torch.Tensor([3])
-y = torch.Tensor([4])
-z = x+y
-print(z)  
-
-<span class="nocode" style="color:white">
-Output:
- 7
-[torch.FloatTensor of size 1]
-</span>
-</pre>
+<h3 id="heading"></h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
     
         </div>
     </section>
@@ -326,13 +246,13 @@ s.setAttribute('data-timestamp', +new Date());
     <div class="read-next-card-content">
       
         <ul>
+          <li><a href="https://www.danielsobrado.com/post/the-machine-data-ecosystem/">The machine data ecosystem</a></li>            
+        
           <li><a href="https://www.danielsobrado.com/post/"></a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/numpy-doing-some-maths/">Numpy: Doing some maths</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/introduction-to-machine-data/">Introduction to Machine Data</a></li>            
         
-          <li><a href="https://www.danielsobrado.com/post/scipy-introduction/">Scipy: Introduction</a></li>            
-        
-          <li><a href="https://www.danielsobrado.com/post/logistic-regression/">Logistic Regression</a></li>            
+          <li><a href="https://www.danielsobrado.com/post/numpy-ndarrays/">Numpy: ndarrays</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
