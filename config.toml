@@ -1,5 +1,5 @@
 baseurl         = "https://www.danielsobrado.com/"
-theme           = "casper-two"
+theme = "casper3"
 languageCode    = "en-US"
 disqusShortname = "dalamarsblog"
 paginate        = 6
@@ -9,10 +9,10 @@ canonifyurls    = true
 [params]
   title       = "Daniel Sobrado"
   subtitle    = ""
-  copyright   = "© 2018"
+  copyright   = "© 2021"
 
   cover       = "img/blog-cover.jpg"
-  description = "Personal Blog on Data Science, Big Data and Software Development."
+  description = "Personal Blog on Software Engineering, Data Engineering and Machine Learning."
   metaDescription = ""
   googleAnalytics = ""
   customCSS = ["atelier-heath-light.css", "prettify.css"]
@@ -33,7 +33,7 @@ canonifyurls    = true
   logo = "/img/daniel-logo.png"
   orgName = "Daniel Sobrado"
   orgWebsite = "https://www.danielsobrado.com"
-  orgDescription = "Personal Blog on Data Science, Big Data and Software Development."
+  orgDescription = "Personal Blog on Software Engineering, Data Engineering and Machine Learning."
 
   showSupport = true
 
