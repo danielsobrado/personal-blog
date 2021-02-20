@@ -18,6 +18,7 @@ categories : [
     "Programming",
     "Big Data"
 ]
+draft: true
 ---
 
 # Machine Data Platforms

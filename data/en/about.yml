@@ -1,0 +1,50 @@
+###################################### philosophy ####################################
+philosophy:
+  enable : true
+  subtitle : Know About
+  title : About me
+  content1 : "Hi!, I´m Daniel, originally from northern Spain and currently residing in Abu Dhabi where I take care of my little family: my beautiful wife and our 2 kids..."
+  content2 : "I enjoy traveling. Each and every time, I find something magical about having a new stamp on my passport. Apart from experiencing the beauty of a new place, I enjoy the experience wherein I get to meet new people, learn about their culture and traditions, and thus expand my level of awareness to level higher. Learning through travel changes you. It’s like you unravel and completely emerge to a different person. "
+  image : "https://i.imgur.com/KJiIflg.png"
+
+###################################### ceo ########################################
+ceo:
+  enable : true
+  bg_image : images/about/ceo.jpg
+  title : Writing and learning
+  content1 : I'm using this site as a tool of self-development, they say that you never completely understand a subject until you are able to explain it. I think that each one may view things at different angles. A view that may be contrasting but is something that’s worth sharing. I write about topics I'm passionate about.
+  content2 : The opinions expressed herein are my own personal opinions and do not represent my employer’ s view in anyway. Thanks for visiting my page!
+  signature : "https://i.imgur.com/vZdQM3e.png"
+  name : J. Daniel Sobrado
+  designation : IT Consultant
+
+########################################### Mission ###################################
+mission:
+  enable : false
+  # mission content comes from "data/*/homepage.yml" file
+
+###################################### funfacts ####################################
+funfacts: 
+  enable : false
+  bg_image : images/background/cta.jpg
+  counter:
+    - title : Projects Done
+      icon : ti-server # themify icon pack : https://themify.me/themify-icons
+      count : 230
+      
+    - title : Satisfied Clients
+      icon : ti-face-smile # themify icon pack : https://themify.me/themify-icons
+      count : 789
+      
+    - title : Cup Of Coffee
+      icon : ti-thumb-up # themify icon pack : https://themify.me/themify-icons
+      count : 580
+      
+    - title : Awards Win
+      icon : ti-cup # themify icon pack : https://themify.me/themify-icons
+      count : 130
+
+########################################### skill ###################################
+skill:
+  enable : true
+  # skill content comes from "data/*/homepage.yml" file

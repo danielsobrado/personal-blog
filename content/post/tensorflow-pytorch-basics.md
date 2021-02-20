@@ -7,7 +7,8 @@ next: /tutorials/GitHub-pages-blog
 prev: /tutorials/automated-deployments
 title: "Tensorflow vs Pytorch: Basics"
 weight: 10
-image: https://i.imgur.com/k3fRAC4.jpg
+image: "https://i.imgur.com/k3fRAC4.jpg"
+feature_image: https://i.imgur.com/k3fRAC4.jpg
 tags : [
     "Tensorflow",
     "Pytorch"

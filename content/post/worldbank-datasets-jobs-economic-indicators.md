@@ -7,6 +7,7 @@ next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
 title: "Worldbank datasets: Jobs and economic indicators"
 image: https://i.imgur.com/uPDsoHX.jpg
+feature_image: https://i.imgur.com/uPDsoHX.jpg
 tags : [
     "Python",
 	"Pandas",
@@ -16,6 +17,7 @@ categories : [
     "Data-Science",
 	"Programming"
 ]
+draft: true
 ---
 
 
