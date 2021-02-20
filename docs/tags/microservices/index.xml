@@ -5,31 +5,24 @@
     <link>https://www.danielsobrado.com/tags/microservices/</link>
     <description>Recent content in Microservices on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Thu, 28 Jan 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Let&#39;s discuss Microservices</title>
-      <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
+      <link>https://www.danielsobrado.com/blog/discuss-microservices/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
-      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.
-To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</description>
+      <guid>https://www.danielsobrado.com/blog/discuss-microservices/</guid>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.</description>
     </item>
     
     <item>
       <title>The shared database problem</title>
-      <link>https://www.danielsobrado.com/post/the-shared-database-problem/</link>
+      <link>https://www.danielsobrado.com/blog/shared-database/</link>
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
-      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!
-The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!
-Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
+      <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
     </item>
     
   </channel>

@@ -5,149 +5,42 @@
     <link>https://www.danielsobrado.com/categories/programming/</link>
     <description>Recent content in Programming on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Thu, 12 May 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>CRUD vs CQRS</title>
-      <link>https://www.danielsobrado.com/post/crud-vs-cqrs/</link>
-      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/crud-vs-cqrs/</guid>
-      <description>Introduction </description>
-    </item>
-    
-    <item>
-      <title>Scipy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
-      <description>Introduction </description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Numpy: ndarrays</title>
-      <link>https://www.danielsobrado.com/post/numpy-ndarrays/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
-      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
-Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-We can quickly create matrices of ones and zeros:
-Or any other value:
-We can create ndarrays initialized with values:
-Or generate ndarrays of random values:
-We can observe some attributes from an ndarray, with the following operations, for an array defined as np.</description>
+      <guid>https://www.danielsobrado.com/blog/numpy-ndarrays/</guid>
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</description>
     </item>
     
     <item>
       <title>Numpy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-introduction/</link>
       <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
-      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
-There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
-Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpyNumpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
+      <guid>https://www.danielsobrado.com/blog/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
     </item>
     
     <item>
       <title>Let&#39;s discuss Microservices</title>
-      <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
+      <link>https://www.danielsobrado.com/blog/discuss-microservices/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
-      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.
-To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</description>
+      <guid>https://www.danielsobrado.com/blog/discuss-microservices/</guid>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.</description>
     </item>
     
     <item>
       <title>The shared database problem</title>
-      <link>https://www.danielsobrado.com/post/the-shared-database-problem/</link>
+      <link>https://www.danielsobrado.com/blog/shared-database/</link>
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
-      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!
-The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!
-Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
-    </item>
-    
-    <item>
-      <title>AngularJS: Introduction</title>
-      <link>https://www.danielsobrado.com/post/angularjs-introduction/</link>
-      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/angularjs-introduction/</guid>
-      <description>Introduction All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &amp;ldquo;Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!
-I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</description>
-    </item>
-    
-    <item>
-      <title>Worldbank datasets: Jobs and economic indicators</title>
-      <link>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</link>
-      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
-      <description>Introduction </description>
-    </item>
-    
-    <item>
-      <title>Functional Programming Basic Concepts</title>
-      <link>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</link>
-      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</guid>
-      <description>Introduction Functional programming is a programming paradigm, based on mathematical principles. The principles of functional programming are to avoid changing the state and to avoid mutating data.
-Functional programming is declarative, we use expressions instead of statements.
-We are going to discuss Functional Programming in the context of Scala, with Java and Python examples and comparisons, none of these languages are purely functional but they have functional capabilities and are widely used in the industry.</description>
-    </item>
-    
-    <item>
-      <title>The machine data ecosystem</title>
-      <link>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</link>
-      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</guid>
-      <description>Machine Data Platforms There are two known platforms for machine data, Splunk and Elastic Stack, let&amp;rsquo;s do some research&amp;hellip;
-The cost of the platforms Splunk is great but the price tag is not that great, Elastic Stack is Open Source but some of the Enterprise features and Advanced Analytics capabilities are licensed on X-Pack under a paywall, can we get around some of these capabilities, like security using other Open Source solutions?</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Machine Data</title>
-      <link>https://www.danielsobrado.com/post/introduction-to-machine-data/</link>
-      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/introduction-to-machine-data/</guid>
-      <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.
-Any type of data produced by programs and processes is useful for us, we can use logs, network packets, any type of metrics and performance clues.
-This means a large amount of unstructured data that is ready for our consumption and use.</description>
-    </item>
-    
-    <item>
-      <title>Functional programming in Java: Lambdas</title>
-      <link>https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/</guid>
-      <description>Introduction A lambda expression in
-Concepts Functional interface: Is an interface that declares one abstract method.
-Target type: The type expected by a lambda expression.</description>
-    </item>
-    
-    <item>
-      <title>Numpy: Doing some maths</title>
-      <link>https://www.danielsobrado.com/post/numpy-doing-some-maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
-We can create an identity matrix using np.eye:
-Statistics Reading and writing </description>
+      <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
     </item>
     
   </channel>

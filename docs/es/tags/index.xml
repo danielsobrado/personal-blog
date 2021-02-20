@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>https://www.danielsobrado.com/es/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spark</title>
+      <link>https://www.danielsobrado.com/es/tags/spark/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/spark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Loss Functions</title>
+      <link>https://www.danielsobrado.com/es/tags/loss-functions/</link>
+      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/loss-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Numpy</title>
+      <link>https://www.danielsobrado.com/es/tags/numpy/</link>
+      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.danielsobrado.com/es/tags/python/</link>
+      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microservices</title>
+      <link>https://www.danielsobrado.com/es/tags/microservices/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SOA</title>
+      <link>https://www.danielsobrado.com/es/tags/soa/</link>
+      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/soa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cross-entropy</title>
+      <link>https://www.danielsobrado.com/es/tags/cross-entropy/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/cross-entropy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>entropy</title>
+      <link>https://www.danielsobrado.com/es/tags/entropy/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/entropy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kl-divergence</title>
+      <link>https://www.danielsobrado.com/es/tags/kl-divergence/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/kl-divergence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bayesian</title>
+      <link>https://www.danielsobrado.com/es/tags/bayesian/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probability</title>
+      <link>https://www.danielsobrado.com/es/tags/probability/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/es/tags/linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/linear-regression/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

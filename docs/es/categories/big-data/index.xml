@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big-Data on </title>
+    <link>https://www.danielsobrado.com/es/categories/big-data/</link>
+    <description>Recent content in Big-Data on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Precedence of properties</title>
+      <link>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</guid>
+      <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.</description>
+    </item>
+    
+  </channel>
+</rss>

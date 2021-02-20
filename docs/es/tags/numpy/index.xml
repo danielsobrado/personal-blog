@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Numpy on </title>
+    <link>https://www.danielsobrado.com/es/tags/numpy/</link>
+    <description>Recent content in Numpy on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Numpy: ndarrays</title>
+      <link>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</link>
+      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</guid>
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</description>
+    </item>
+    
+    <item>
+      <title>Numpy: Introduction</title>
+      <link>https://www.danielsobrado.com/es/blog/numpy-introduction/</link>
+      <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es-es"><head>
+    <meta charset="utf-8">
+    <title>Let&#39;s discuss Microservices</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Our code is growing and becoming unmanageable, we need to split it in pieces! Microservices to the rescue!.">
+    <meta name="author" content="Daniel Sobrado">
+    <meta name="generator" content="Hugo 0.80.0" />
+
+    <!-- plugins -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick-theme.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/themify-icons/themify-icons.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/animate/animate.css ">
+    
+
+    <!-- Main Stylesheet -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/css/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+
+</head><body><!-- navigation -->
+<header>
+  <!-- top header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline text-lg-right text-center">
+            <li class="list-inline-item">
+               <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
+            </li>
+            <li class="list-inline-item">
+               <a href="https://t.me/drusniel">Let's talk:
+                <span class="ml-2">Ping me on Telegram</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nav bar -->
+  <div class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.danielsobrado.com/es">
+          <img src="https://www.danielsobrado.com/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/es">Inicio</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/es/categories/programming/">Programming</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/es/categories/big-data/">Big Data</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/es/categories/data-science/">Data Science</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/es/categories/others/">Others</a>
+            </li>
+            
+            
+          </ul>
+          
+        
+          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
+            
+            
+            
+            
+            
+            
+            
+            
+            <option id="en" value="https://www.danielsobrado.com/blog/discuss-microservices/">En</option>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <option id="es" value="https://www.danielsobrado.com/es/blog/discuss-microservices/" selected>Es</option>
+            
+            
+            
+            
+          </select>
+          
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header><!-- preloader start -->
+	
+	<!-- preloader start -->
+	<div class="preloader">
+		
+		<img src="https://www.danielsobrado.com/images/preloader.gif" alt="preloader">
+		
+	</div>
+	<!-- preloader end -->
+	
+	<!-- preloader end -->
+	<div id="content">
+
+<!-- page title -->
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="text-white font-weight-bold">Let&#39;s discuss Microservices</h2>
+				<ol class="breadcrumb">
+					<li><a href="https://www.danielsobrado.com/">Inicio</a></li>
+					<li>Let&#39;s discuss Microservices</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /page title -->
+
+<!-- blog single -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="border rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/cGYyp2K.jpg" alt="blog-image">
+          <div class="p-4">
+            <h3>Let&rsquo;s discuss Microservices</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/es/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 28 Jan</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/es/categories/programming"> Programming</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h3 id="introduction">Introduction</h3>
+<p>Microservices are based on the principle &ldquo;divide and conquer&rdquo;, usually to achieve scalability both horizontally and vertically.</p>
+<p>To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</p>
+<p>There is a trade-off between having too many services and too few or only one, and this depends on the scope of your project.</p>
+<p>Add extra services provide some advantages but there are also disadvantages, having too many services is extreme, having only one service (Monolith pattern) is also extreme (Nano-services antipattern), the right balance is where we want to be.</p>
+<h3 id="monolith-vs-microservices">Monolith vs Microservices</h3>
+<p>Let&rsquo;s define the concept or microservice and its goal, we don&rsquo;t want want to split the monolith in smaller chunks arbitrarily, we want to make sense and achieve some amazing capabilities, like resilience and scalability.</p>
+<p>The right size of a microservice is the size that allows us to build autonomous services, that can <em>do one thing and do it well</em>:</p>
+<p><strong>Monoliths</strong>: Large applications that are difficult to understand, to scale and to maintain, they tend towards chaos as they grow.</p>
+<p><strong>Microservices</strong>: A collection of small, isolated services. Each one owns his data, does only one thing and does it well. A microservice is developed in isolation, and deployed independently, it can be replaced easily.</p>
+<p><strong>Isolation</strong>: Isolated services can be monitored, tested and debugged individually, this is the first step to adopt continuous delivery. It influences how you arrange your teams and distribute responsibilities. Isolation requires asynchronous communication.</p>
+<p><strong>Autonomy</strong>: When services are isolated they can take decision independently, they can only make promises about their own behaviour.</p>
+<p><strong>Resilience</strong>: Capability to self-heal. An autonomous service has all the information required to resolve a conflict or repair a failure scenario, it doesn&rsquo;t have external dependencies.</p>
+<p><strong>Single Responsibility</strong>: A service should <em>“only have one reason to change”</em>. A service should provide a single piece of functionality in the domain making it easier to scale, understand, maintain and extend.</p>
+<p><strong>Exclusive state</strong>: You can ask for a service state, but you cannot read it, a service is responsible for its own state and its persistence, modelling each service as a <em>Bounded Context</em> can be helpful, this will drive us to Domain-Driven Design (DDD).</p>
+<h4 id="why-do-we-want-to-use-microservices">Why do we want to use microservices?</h4>
+<p>To build flexible and resilient services, to split the work between multiple teams and resources, decouple deployments, development speed, faster time-to-market and continuous delivery.</p>
+<p>Smaller subprojects allow for quicker restart and quicker execution of unit tests which impacts the productivity and morale of the developers.</p>
+<p>While Technology keeps evolving our monolithic application lags behind, having multiple teams working on multiple microservices allows us to experiment and gain expertise with the fittest technology, microservices are not dependent on particular technologies.</p>
+<h4 id="what-can-go-wrong">What can go wrong?</h4>
+<p>We can introduce additional complexity and slow down the entire project. New services require more packaging, releasing, latency, network traffic, and a proper orchestration service like Zookeeper.</p>
+<p>Versioning microservices is an anti-pattern, they should be treated as living entities that evolve, not as static releases.</p>
+<h3 id="resources-around-microservices">Resources around microservices</h3>
+<p>There are a number of decisions you need to take before starting to code your first microservice:</p>
+<ul>
+<li><strong>Physical servers vs Cloud</strong>: Does your company has restriction regarding data confidentiality? Most banks do.</li>
+<li><strong>Databases</strong>: Dedicated, shared, RDBMS, NOSQL&hellip;</li>
+<li><strong>OS</strong>: Windows vs Linux, any special flavour? Are you going to use GPUs? .Net?</li>
+<li><strong>Resource Isolation</strong>: Docker? Mesos?</li>
+<li><strong>Configuration management</strong>: Ansible, Chef, Puppet..</li>
+<li><strong>Monitoring</strong>: Naggios,? Kibana?</li>
+<li><strong>Logging</strong>: You need to centralize your logs, Elastic Stack? Splunk?</li>
+</ul>
+<h3 id="the-endpoints">The endpoints</h3>
+<p>We need to communicate with our microservices, and we call endpoints to these API calls that allows us to interact with them.</p>
+<p>We need static endpoints to communicate with the front-end and intra-service, a well designed and standardized API is required to effectively communicate, we can do this in different ways:</p>
+<ul>
+<li><strong>REST</strong>: Usually over HTTP, allows to expose your API as URLs. (Simple but Synchronous/Blocking)</li>
+<li><strong>Thrift</strong>: Generates RPC code for cross-language scalable interfaces, it is very popular in Hadoop ecosystems.</li>
+<li><strong>GraphQL</strong>: A query language for the API, involves sending request over HTTP with the flexibility of a query language.</li>
+<li><strong>Messaging</strong>:  Kafka or Celery with RabbitMQ are examples of quick messaging queues that are ideal for low latency communications. (Asynchronous but queues and brokers can become points of failure and messaging can lead to race conditions)</li>
+</ul>
+<p>These are just some examples, there are other options like SOAP, gRPC&hellip; Each with its own advantages and disadvantages, the right choice for the endpoint technology in the context of your use-case it deserves an article by itself.</p>
+<p>Having multiple type of endpoints in the same architecture is possible, but the monitoring becomes more complicated.</p>
+<h3 id="service-discovery-service-registry-and-load-balancing">Service discovery, Service registry and Load balancing</h3>
+<p>In general we need to know the IPs of each other microservices to communicate with them, and we are going to have several instances of the same microservice, that is the purpose of it, to have resilience and scalability and to be able to scale particular functionalities on demand.</p>
+<p>We need to route request to the right services, we need to know where they are and that they are healthy, to do this use use the <em>service discovery</em>, in the Hadoop ecosystem, Zookeeper is used for this purpose.</p>
+<p>The service discovery keeps track of all the IPs and Ports available in the ecosystem by using a database called the <em>service registry</em>.</p>
+<p>Once we start receiving request we need to understand which services are busy and which ones can take more load, we&rsquo;ll do this with a Load Balancer, common load balancers are: Amazon Web Services Elastic Load Balancer, Netflix Eureka, HAProxy, and Nginx.</p>
+<h3 id="other-concepts">Other concepts</h3>
+<p>One of the advantages of working with microservices is that we can optimize each microservice to do one task very well.</p>
+<p>If we are optimizing for latency and scalability we know that we can optimize for reading or for writing, not for both. We need to consider this at the microservice level.</p>
+<ul>
+<li>Reactive Systems</li>
+<li>Reactive Programming</li>
+<li>Event-driven Programming</li>
+<li>Events-first domain-driven Design</li>
+<li>Event Sourcing</li>
+<li>Command Query Responsibility Segregation</li>
+</ul>
+<p>We&rsquo;ll discuss these concepts and many more in the next articles of this series.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fes%2fblog%2fdiscuss-microservices%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Let%27s%20discuss%20Microservices&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fes%2fblog%2fdiscuss-microservices%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fes%2fblog%2fdiscuss-microservices%2f&amp;resubmit=true&amp;title=Let%27s%20discuss%20Microservices"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Let%27s%20discuss%20Microservices&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fes%2fblog%2fdiscuss-microservices%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/es/categories/microservices">Microservices</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+      </div>
+      <!-- Sidebar -->
+<div class="col-lg-4">
+	<div class="bg-white px-4 py-100 sidebar-box-shadow">
+		<!-- categories -->
+		<div class="mb-50">
+			<h4 class="mb-3">Categories</h4>
+			<ul class="list-unstyled mb-0">
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/es/categories/big-data"
+						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/es/categories/data-science"
+						class="d-block text-color py-10">Data science</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/es/categories/maths"
+						class="d-block text-color py-10">Maths</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/es/categories/programming"
+						class="d-block text-color py-10">Programming</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Widget Recent Post -->
+		<div class="mb-50">
+			<h4 class="mb-3">Top Articles</h4>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/es/blog/spark-variable-precedence/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/HXoTjv8.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/spark-variable-precedence/">Precedence of properties</a>
+					</h6>
+					<p class="meta">10 Feb 2019</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
+					</h6>
+					<p class="meta">23 Jul 2016</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/es/blog/python-linear-regression/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/FXrKBsK.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/python-linear-regression/">Linear Regression</a>
+					</h6>
+					<p class="meta">01 Jan 0001</p>
+				</div>
+			</div>
+			
+		</div>
+		<!-- tags -->
+		<div class="mb-50">
+			<h4 class="mb-3">Tags</h4>
+			<ul class="list-inline tag-list">
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/cross-entropy">Cross entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/entropy">Entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/kl-divergence">Kl divergence</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/linear-regression">Linear regression</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/loss-functions">Loss functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/microservices">Microservices</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/probability">Probability</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/python">Python</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/soa">Soa</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/es/tags/spark">Spark</a></li>
+			</ul>
+		</div>
+
+		<!-- Widget Newsletter -->
+		<div class="newsletter">
+			<h4 class="mb-3">Stay Updated</h4>
+			<div id="mc_embed_signup">
+				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							</label>
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="FNAME" id="mce-FNAME" placeholder="First Name">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+								name="" tabindex="-1"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+								class="button"></div>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /blog-single -->
+
+
+	</div><!-- footer -->
+<footer class="bg-secondary">
+	<div class="py-100 border-bottom" style="border-color: #000000 !important">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="mb-5 mb-md-0 text-center text-md-left">
+						<!-- logo -->
+						<img class="mb-30" src="https://www.danielsobrado.com/images/logo-footer.png" alt="logo">
+						 <p class="text-white mb-30"> Personal Blog on Software Engineering, Data Engineering and Machine Learning.</p> 
+						<!-- social icon -->
+						<ul class="list-inline">
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://stackoverflow.com/users/2507462/daniel-sobrado">
+									<i class="ti-stack-overflow"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://github.com/danielsobrado">
+									<i class="ti-github"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.linkedin.com/in/dsobrado/">
+									<i class="ti-linkedin"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.instagram.com/daniel.sobrado/">
+									<i class="ti-instagram"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://twitter.com/danielinvest1">
+									<i class="ti-twitter-alt"></i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Investing</h4>
+					<ul class="footer-links">
+						
+					</ul>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Quick Links</h4>
+					<ul class="footer-links">
+						
+						
+						<li><a href="https://www.danielsobrado.com/es/categories/programming/">Programming</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/es/categories/big-data/">Big Data</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/es/categories/data-science/">Data Science</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/es/categories/others/">Others</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- subscribe form -->
+				<div class="col-lg-3 col-md-12 offset-lg-1">
+					<div class="mt-5 mt-lg-0 text-center text-md-left">
+						 <h4 class="mb-4 text-white">Subscribete</h4> 
+						 <p class="text-white mb-4">Estamos en contacto y no te olvides de saludar!</p> 
+						<div id="mc_embed_signup">
+							<form action="" method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll" class="position-relative">
+									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
+										placeholder="Enter Your Email">
+									<button class="btn-subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe-">
+										<i class="ti-arrow-right"></i>
+									</button>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="" tabindex="-1">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="pt-4 pb-3 position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-5">
+					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+				</div>
+				<div class="col-lg-6 col-md-7">
+					<ul class="list-inline text-center text-md-right">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- back to top -->
+		<button class="back-to-top">
+			<i class="ti-angle-up"></i>
+		</button>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Essential Scripts -->
+<!-- Google Map API -->
+
+<!-- JS Plugins -->
+
+<script src="https://www.danielsobrado.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://www.danielsobrado.com/js/script.min.js"></script>
+<!-- google analitycs -->
+
+
+</body>
+
+</html></body>
+
+</html>

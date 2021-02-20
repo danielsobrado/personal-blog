@@ -5,46 +5,24 @@
     <link>https://www.danielsobrado.com/tags/bayesian/</link>
     <description>Recent content in bayesian on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 07 Apr 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Naive Bayes</title>
-      <link>https://www.danielsobrado.com/post/naive-bayes/</link>
-      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
-      <description>Introduction In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.
-Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuous Normal/Gaussian distributed values.
-$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$</description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prior and Posterior distributions</title>
-      <link>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</link>
+      <link>https://www.danielsobrado.com/blog/prior-posterior-probabilities/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</guid>
-      <description>Let´s suppose that we know all the possible causes for an outcome, for example:
-**
-Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
-Here, P(movie|Sci-fi) is called Posterior, P(Sci-fi|Movie) is Likelihood, P(movie) is Prior, P(Sci-fi) is Evidence.
-Prior: How probable was our hypothesis before observing the evidence? Posterior: How probable is our hypothesis given the observed evidence? Evidence: How probable is the new evidence under all possible hypotheses?</description>
+      <guid>https://www.danielsobrado.com/blog/prior-posterior-probabilities/</guid>
+      <description>Let´s suppose that we know all the possible causes for an outcome, for example:</description>
     </item>
     
     <item>
       <title>Basic probability concepts</title>
-      <link>https://www.danielsobrado.com/post/basic-probability-concepts/</link>
+      <link>https://www.danielsobrado.com/blog/basic-probability-concepts/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/basic-probability-concepts/</guid>
-      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
-The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
-TL;DR Let´s take the following poker cards as an example:
-Our experiment is to take two cards for the deck, one at a time, each card extraction is an event. We define as outcomes that a card is of a defined</description>
+      <guid>https://www.danielsobrado.com/blog/basic-probability-concepts/</guid>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
     </item>
     
   </channel>

@@ -5,423 +5,159 @@
     <link>https://www.danielsobrado.com/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Tue, 14 Apr 2015 22:17:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache Spark: Precedence of properties</title>
-      <link>https://www.danielsobrado.com/post/apache-spark-precedence-of-properties/</link>
+      <title>Precedence of properties</title>
+      <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
       <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/apache-spark-precedence-of-properties/</guid>
-      <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.
-It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don&amp;rsquo;t want to be too greedy with the resources of your cluster, some might complain!
-The problem When your codebase grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.</description>
+      <guid>https://www.danielsobrado.com/blog/spark-variable-precedence/</guid>
+      <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.</description>
     </item>
     
     <item>
-      <title>Apache Spark: Introduction to project Tungsten</title>
-      <link>https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/apache-spark-introduction-to-project-tungsten/</guid>
-      <description>Introduction Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second generation of the Tungsten engine.
-Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.
- Tungsten compiles your queries/stages into single bytecode JVM function that improve CPU efficiency and gain performance.
- This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.</description>
-    </item>
-    
-    <item>
-      <title>Tensorflow vs Pytorch: Basics</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-basics/</guid>
-      <description>Introduction The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
-Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
-    </item>
-    
-    <item>
-      <title>Likelihood encoding</title>
-      <link>https://www.danielsobrado.com/post/likelihood-encoding/</link>
-      <pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/likelihood-encoding/</guid>
-      <description>Introduction Also known as mean encoding, impact encoding or target encoding, it is a technique
-Mean Absolute Error (MAE) Measures average/mean squared error of our predictions.
-Gives less weight to the outliers, when you are sure that they are outliers prefer MAE to MSE.
-Mean Absolute Percentage Error (MAPE) &amp;hellip;
-MAPE is
-Mean Squared Error (MSE) Incorporates both the variance and the bias of the predictor.
-When you have unexpected values that you should take into account use MSE instead of MAE.</description>
-    </item>
-    
-    <item>
-      <title>Loss functions: MAE, MAPE, MSE, RMSE and RMSLE</title>
-      <link>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</link>
+      <title>Loss functions</title>
+      <link>https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/</link>
       <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/loss-functions-mae-mape-mse-rmse-and-rmsle/</guid>
-      <description>Loss Functions The loss function calculates the difference between the output of your model and the &amp;ldquo;Ground Truth&amp;rdquo; or actual values.
-All this functiones measure the ratio between actual/reference and predicted, the differences are in how the outliers impact the final outcome.
-Each metric has its own strenghts and weakness and its fit for a different use case, we need to understand how these metrics impact our results, and how to interpret them, if they give us a relative or absulute value, the unit being used by the metric and how to use multiple metrics to understand where the loss/error is coming from.</description>
-    </item>
-    
-    <item>
-      <title>Logistic Regression</title>
-      <link>https://www.danielsobrado.com/post/logistic-regression/</link>
-      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/logistic-regression/</guid>
-      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
- We need to understand that Linear Regression won´t help us with non linear relationships.
-When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
-This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
-    </item>
-    
-    <item>
-      <title>Analysis of residuals</title>
-      <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
-      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
-      <description>Introduction conda install statsmodels seaborn
-Plotting residuals Regression assumptions Linearity and equal variance Normality
-Interpreting residuals Common issues Heteroscedasticity Identify heteroscedasticity Breusch-Pagan Lagrange Multiplier test Using StatsModels we have statsmodels.stats.diagnostic.het_breuschpagan
-Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
-    </item>
-    
-    <item>
-      <title>Tensorflow vs Pytorch: Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</link>
-      <pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/tensorflow-vs-pytorch-linear-regression/</guid>
-      <description>Introduction to Linear Regression The best way to learn a framework is to learn two at the same time and compare how things are being achieved in different ways, understanding the advantages and disadvantages.
-Tensorflow and Pytorch are frameworks for fast tensor manipulation that is what is required for deep learning and some other machine learning methods.
-Both heavily oriented towards machine learning and especially deep learning are low-level libraries to operate on tensors (n-dimensional arrays).</description>
+      <guid>https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/</guid>
+      <description>Loss Functions The loss function calculates the difference between the output of your model and the &amp;ldquo;Ground Truth&amp;rdquo; or actual values.</description>
     </item>
     
     <item>
       <title>Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/linear-regression/</link>
+      <link>https://www.danielsobrado.com/blog/python-linear-regression/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/linear-regression/</guid>
-      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
- We need to understand that Linear Regression won´t help us with non linear relationships.
-When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
-This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
+      <guid>https://www.danielsobrado.com/blog/python-linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
     </item>
     
     <item>
-      <title>Clustering with Categorical Features</title>
-      <link>https://www.danielsobrado.com/post/clustering-with-categorical-features/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Asset Allocation</title>
+      <link>https://www.danielsobrado.com/investing/asset_allocation/</link>
+      <pubDate>Sat, 29 Sep 2018 11:54:02 +0600</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/clustering-with-categorical-features/</guid>
-      <description>Categorical variables Customer segmentation</description>
+      <guid>https://www.danielsobrado.com/investing/asset_allocation/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
-      <title>Variational Autoencoders</title>
-      <link>https://www.danielsobrado.com/post/variational-autoencoders/</link>
-      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
+      <title>Insiders</title>
+      <link>https://www.danielsobrado.com/investing/insiders/</link>
+      <pubDate>Sat, 29 Sep 2018 11:54:02 +0600</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/variational-autoencoders/</guid>
-      <description>Autoencoders An autoencoder takes data with a large amount of parameters and tries to compress it into a smaller representation.
-  Encoder:
-  Bottleneck
-  Decoder:
-  Variational Autoencoders Variational Autoencoders is a technique to compress data</description>
+      <guid>https://www.danielsobrado.com/investing/insiders/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
-      <title>RFM Scoring</title>
-      <link>https://www.danielsobrado.com/post/rfm-scoring/</link>
-      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      <title>Momentum</title>
+      <link>https://www.danielsobrado.com/investing/momentum/</link>
+      <pubDate>Sat, 29 Sep 2018 11:51:17 +0600</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/rfm-scoring/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
-It customer cluster needs to be treated in a different way from multiple angles:
-  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+      <guid>https://www.danielsobrado.com/investing/momentum/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
-      <title>Customer Segmentation</title>
-      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      <title>My investing philosophy</title>
+      <link>https://www.danielsobrado.com/investing/my-investing-philosophy/</link>
+      <pubDate>Sat, 29 Sep 2018 11:51:17 +0600</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
-It customer cluster needs to be treated in a different way from multiple angles:
-  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+      <guid>https://www.danielsobrado.com/investing/my-investing-philosophy/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
-      <title>Customer Segmentation</title>
-      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      <title>Backtesting</title>
+      <link>https://www.danielsobrado.com/investing/backtesting/</link>
+      <pubDate>Tue, 25 Sep 2018 15:51:35 +0600</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
-It customer cluster needs to be treated in a different way from multiple angles:
-  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
+      <guid>https://www.danielsobrado.com/investing/backtesting/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
-      <title>Customer Segmentation</title>
-      <link>https://www.danielsobrado.com/post/customer-segmentation/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      <title>Value Investing</title>
+      <link>https://www.danielsobrado.com/investing/value-investing/</link>
+      <pubDate>Tue, 25 Sep 2018 15:51:35 +0600</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/customer-segmentation/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.
-It customer cluster needs to be treated in a different way from multiple angles:
-  Channels: Is a tech savvy customer? Or it is easier to call him? Is he suing tech but still going to the branch and we should advise him on more efficient ways to do his transactions?</description>
-    </item>
-    
-    <item>
-      <title>CRUD vs CQRS</title>
-      <link>https://www.danielsobrado.com/post/crud-vs-cqrs/</link>
-      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/crud-vs-cqrs/</guid>
-      <description>Introduction </description>
-    </item>
-    
-    <item>
-      <title>Scipy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
-      <description>Introduction </description>
+      <guid>https://www.danielsobrado.com/investing/value-investing/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
       <title>Numpy: ndarrays</title>
-      <link>https://www.danielsobrado.com/post/numpy-ndarrays/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
-      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
-Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-We can quickly create matrices of ones and zeros:
-Or any other value:
-We can create ndarrays initialized with values:
-Or generate ndarrays of random values:
-We can observe some attributes from an ndarray, with the following operations, for an array defined as np.</description>
+      <guid>https://www.danielsobrado.com/blog/numpy-ndarrays/</guid>
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</description>
     </item>
     
     <item>
       <title>Numpy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-introduction/</link>
       <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
-      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
-There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
-Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpyNumpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
+      <guid>https://www.danielsobrado.com/blog/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
     </item>
     
     <item>
       <title>Let&#39;s discuss Microservices</title>
-      <link>https://www.danielsobrado.com/post/lets-discuss-microservices/</link>
+      <link>https://www.danielsobrado.com/blog/discuss-microservices/</link>
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/lets-discuss-microservices/</guid>
-      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.
-To achieve true scalability we need to have some kind of concurrency and partitioning, meaning that we need to be able to split each task in pieces and be able to process them in parallel, this is difficult to achieve with one single application deployed over multiple servers with a growing list of features.</description>
+      <guid>https://www.danielsobrado.com/blog/discuss-microservices/</guid>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.</description>
     </item>
     
     <item>
       <title>The shared database problem</title>
-      <link>https://www.danielsobrado.com/post/the-shared-database-problem/</link>
+      <link>https://www.danielsobrado.com/blog/shared-database/</link>
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
-      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!
-The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!
-Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://www.danielsobrado.com/about/</link>
-      <pubDate>Tue, 14 Apr 2015 22:17:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/about/</guid>
-      <description>Hi!, I´m Daniel, originally from northern Spain and currently residing in Abu Dhabi.
-I enjoy traveling. Each and every time, I find something magical about having a new stamp on my passport. Apart from experiencing the beauty of a new place, I enjoy the experience wherein I get to meet new people, learn about their culture and traditions, and thus expand my level of awareness to level higher.
-Learning through travel changes you.</description>
-    </item>
-    
-    <item>
-      <title>AngularJS: Introduction</title>
-      <link>https://www.danielsobrado.com/post/angularjs-introduction/</link>
-      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/angularjs-introduction/</guid>
-      <description>Introduction All started when I started developing some quick reconciliation tool for the bank´s Product Control team, someone said: &amp;ldquo;Hey Daniel, can you help us with this? Take this and that and apply this rules and give us the results on something we can visualize, it is too much data for excel!
-I love solving issues for my business partners and I immediately started rolling my sleeves, things look simple and easy at the beginning but the reality sometimes is different, I had a to use a large database to transform the data, this triggered a proper project and many governance procedures, like authentication, authorization, Chinese walls, user management etc.</description>
-    </item>
-    
-    <item>
-      <title>Cross-Entropy and Kullback-Leibler Divergence</title>
-      <link>https://www.danielsobrado.com/post/cross-entropy-and-kullback-leibler-divergence/</link>
-      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/cross-entropy-and-kullback-leibler-divergence/</guid>
-      <description>Cross-Entropy I our last post we&amp;rsquo;ve seen that entropy tells us the minimum number of bits that we need to encode our ground truth distribution.
- We cannot encode our correct distribution with less information than the entropy.
- What if we don&amp;rsquo;t know the correct or ground truth distribution? In real life we have a approximated view of the reality, we cannot observe all events in most cases.
-Let´s call $ y $ to the ground truth and $ y_hat $ to our incorrect or approximated distribution.</description>
+      <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
     </item>
     
     <item>
       <title>Explaining Entropy</title>
-      <link>https://www.danielsobrado.com/post/explaining-entropy/</link>
+      <link>https://www.danielsobrado.com/blog/explaining-entropy/</link>
       <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/explaining-entropy/</guid>
-      <description>Information theory A bit is a number that is equal to 0 or 1. In Information theory, receiving a bit reduces our uncertainty by half, or a factor of 2.
-If our clients in the bank are likely to repay a loan or not, and we have our risk manager to tell us if a certain client repaid or not his loan, if the chance of the client being good or bad is 50%, our risk manager is reducing our uncertainty about the client by a factor of 2.</description>
-    </item>
-    
-    <item>
-      <title>Naive Bayes</title>
-      <link>https://www.danielsobrado.com/post/naive-bayes/</link>
-      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/naive-bayes/</guid>
-      <description>Introduction In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.
-Naive Bayes Types of Naive Bayes Algorithms Gaussian Naive Bayes We assume that each class has continuous Normal/Gaussian distributed values.
-$$ P \left( x _ { i } | y \right) = \frac { 1 } { \sqrt { 2 \pi \sigma _ { y } ^ { 2 } } } \exp \left( - \frac { \left( x _ { i } - \mu _ { y } \right) ^ { 2 } } { 2 \sigma _ { y } ^ { 2 } } \right) $$</description>
+      <guid>https://www.danielsobrado.com/blog/explaining-entropy/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1.</description>
     </item>
     
     <item>
       <title>Prior and Posterior distributions</title>
-      <link>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</link>
+      <link>https://www.danielsobrado.com/blog/prior-posterior-probabilities/</link>
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/prior-and-posterior-distributions/</guid>
-      <description>Let´s suppose that we know all the possible causes for an outcome, for example:
-**
-Bayes theorem Posterior = ( Likelihood * Prior ) / Evidence
-Here, P(movie|Sci-fi) is called Posterior, P(Sci-fi|Movie) is Likelihood, P(movie) is Prior, P(Sci-fi) is Evidence.
-Prior: How probable was our hypothesis before observing the evidence? Posterior: How probable is our hypothesis given the observed evidence? Evidence: How probable is the new evidence under all possible hypotheses?</description>
+      <guid>https://www.danielsobrado.com/blog/prior-posterior-probabilities/</guid>
+      <description>Let´s suppose that we know all the possible causes for an outcome, for example:</description>
     </item>
     
     <item>
       <title>Basic probability concepts</title>
-      <link>https://www.danielsobrado.com/post/basic-probability-concepts/</link>
+      <link>https://www.danielsobrado.com/blog/basic-probability-concepts/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/basic-probability-concepts/</guid>
-      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.
-The main idea behind Bayesian statistics is the Bayes theorem, we need to understand some concepts first.
-TL;DR Let´s take the following poker cards as an example:
-Our experiment is to take two cards for the deck, one at a time, each card extraction is an event. We define as outcomes that a card is of a defined</description>
+      <guid>https://www.danielsobrado.com/blog/basic-probability-concepts/</guid>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
     </item>
     
     <item>
-      <title>Worldbank datasets: Jobs and economic indicators</title>
-      <link>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</link>
-      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
-      <description>Introduction </description>
-    </item>
-    
-    <item>
-      <title>Probability distributions</title>
-      <link>https://www.danielsobrado.com/post/probability-distributions/</link>
-      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/probability-distributions/</guid>
-      <description>Introduction Distributions a laws governing these are a must know for every data scientist.
-The law of large numbers The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.
-Central Limit Theorem  The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.</description>
-    </item>
-    
-    <item>
-      <title>Functional Programming Basic Concepts</title>
-      <link>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</link>
-      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/functional-programming-basic-concepts/</guid>
-      <description>Introduction Functional programming is a programming paradigm, based on mathematical principles. The principles of functional programming are to avoid changing the state and to avoid mutating data.
-Functional programming is declarative, we use expressions instead of statements.
-We are going to discuss Functional Programming in the context of Scala, with Java and Python examples and comparisons, none of these languages are purely functional but they have functional capabilities and are widely used in the industry.</description>
-    </item>
-    
-    <item>
-      <title>The machine data ecosystem</title>
-      <link>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</link>
-      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/the-machine-data-ecosystem/</guid>
-      <description>Machine Data Platforms There are two known platforms for machine data, Splunk and Elastic Stack, let&amp;rsquo;s do some research&amp;hellip;
-The cost of the platforms Splunk is great but the price tag is not that great, Elastic Stack is Open Source but some of the Enterprise features and Advanced Analytics capabilities are licensed on X-Pack under a paywall, can we get around some of these capabilities, like security using other Open Source solutions?</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Machine Data</title>
-      <link>https://www.danielsobrado.com/post/introduction-to-machine-data/</link>
-      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/introduction-to-machine-data/</guid>
-      <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.
-Any type of data produced by programs and processes is useful for us, we can use logs, network packets, any type of metrics and performance clues.
-This means a large amount of unstructured data that is ready for our consumption and use.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.danielsobrado.com/post/</link>
+      <title>John Doe</title>
+      <link>https://www.danielsobrado.com/author/daniel-sobrado/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/</guid>
-      <description>Introduction  Categories are mathematical contexts where construction is possible.
- </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.danielsobrado.com/post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/</guid>
-      <description>Basic concepts A set is a collection of stuff, items, things&amp;hellip; We&amp;rsquo;ll call them elements.
-We can have a set called A that contains some numbers $ A =\ {1,2,3,9} $ and a set called B than contains names $ A =\ {Daniel, Alfredo, Vikas, Praveen, Bjorn} $ .
-We can say that an element is part of a set: $ 3 \in A $ We can also say that 5 is not an element of A: $ 5 \notinA $</description>
-    </item>
-    
-    <item>
-      <title>Functional programming in Java: Lambdas</title>
-      <link>https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/functional-programming-in-java-lambdas/</guid>
-      <description>Introduction A lambda expression in
-Concepts Functional interface: Is an interface that declares one abstract method.
-Target type: The type expected by a lambda expression.</description>
-    </item>
-    
-    <item>
-      <title>Numpy: Doing some maths</title>
-      <link>https://www.danielsobrado.com/post/numpy-doing-some-maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
-We can create an identity matrix using np.eye:
-Statistics Reading and writing </description>
+      <guid>https://www.danielsobrado.com/author/daniel-sobrado/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue.</description>
     </item>
     
   </channel>

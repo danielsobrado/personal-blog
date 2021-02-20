@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://www.danielsobrado.com/es/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Precedence of properties</title>
+      <link>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</link>
+      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</guid>
+      <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.</description>
+    </item>
+    
+    <item>
+      <title>Loss functions</title>
+      <link>https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/</link>
+      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/</guid>
+      <description>Loss Functions The loss function calculates the difference between the output of your model and the &amp;ldquo;Ground Truth&amp;rdquo; or actual values.</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/es/blog/python-linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/python-linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
+    </item>
+    
+    <item>
+      <title>Market Strategy</title>
+      <link>https://www.danielsobrado.com/es/investing/market-strategy/</link>
+      <pubDate>Sat, 29 Sep 2018 11:54:02 +0600</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/investing/market-strategy/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Market Strategy</title>
+      <link>https://www.danielsobrado.com/es/investing/market-strategy1/</link>
+      <pubDate>Sat, 29 Sep 2018 11:54:02 +0600</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/investing/market-strategy1/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Valuable Idea</title>
+      <link>https://www.danielsobrado.com/es/investing/valuable-idea/</link>
+      <pubDate>Sat, 29 Sep 2018 11:51:17 +0600</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/investing/valuable-idea/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Valuable Idea</title>
+      <link>https://www.danielsobrado.com/es/investing/valuable-idea1/</link>
+      <pubDate>Sat, 29 Sep 2018 11:51:17 +0600</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/investing/valuable-idea1/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Business Consulting</title>
+      <link>https://www.danielsobrado.com/es/investing/business-consulting/</link>
+      <pubDate>Tue, 25 Sep 2018 15:51:35 +0600</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/investing/business-consulting/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Business Consulting</title>
+      <link>https://www.danielsobrado.com/es/investing/business-consulting1/</link>
+      <pubDate>Tue, 25 Sep 2018 15:51:35 +0600</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/investing/business-consulting1/</guid>
+      <description>Marketing Oriented To The Targated Customers Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Numpy: ndarrays</title>
+      <link>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</link>
+      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</guid>
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</description>
+    </item>
+    
+    <item>
+      <title>Numpy: Introduction</title>
+      <link>https://www.danielsobrado.com/es/blog/numpy-introduction/</link>
+      <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s discuss Microservices</title>
+      <link>https://www.danielsobrado.com/es/blog/discuss-microservices/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/discuss-microservices/</guid>
+      <description>Introduction Microservices are based on the principle &amp;ldquo;divide and conquer&amp;rdquo;, usually to achieve scalability both horizontally and vertically.</description>
+    </item>
+    
+    <item>
+      <title>The shared database problem</title>
+      <link>https://www.danielsobrado.com/es/blog/shared-database/</link>
+      <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/shared-database/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
+    </item>
+    
+    <item>
+      <title>Explaining Entropy</title>
+      <link>https://www.danielsobrado.com/es/blog/explaining-entropy/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/explaining-entropy/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1.</description>
+    </item>
+    
+    <item>
+      <title>Prior and Posterior distributions</title>
+      <link>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</guid>
+      <description>Let´s suppose that we know all the possible causes for an outcome, for example:</description>
+    </item>
+    
+    <item>
+      <title>Basic probability concepts</title>
+      <link>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</guid>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
+    </item>
+    
+    <item>
+      <title>John Doe</title>
+      <link>https://www.danielsobrado.com/es/author/daniel-sobrado/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/author/daniel-sobrado/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue.</description>
+    </item>
+    
+  </channel>
+</rss>

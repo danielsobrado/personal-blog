@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on </title>
+    <link>https://www.danielsobrado.com/es/categories/maths/</link>
+    <description>Recent content in Maths on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/maths/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linear Regression</title>
+      <link>https://www.danielsobrado.com/es/blog/python-linear-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/python-linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
+    </item>
+    
+    <item>
+      <title>Explaining Entropy</title>
+      <link>https://www.danielsobrado.com/es/blog/explaining-entropy/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/explaining-entropy/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1.</description>
+    </item>
+    
+    <item>
+      <title>Prior and Posterior distributions</title>
+      <link>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</guid>
+      <description>Let´s suppose that we know all the possible causes for an outcome, for example:</description>
+    </item>
+    
+    <item>
+      <title>Basic probability concepts</title>
+      <link>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</guid>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
+    </item>
+    
+  </channel>
+</rss>

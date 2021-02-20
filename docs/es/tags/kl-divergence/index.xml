@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kl-divergence on </title>
+    <link>https://www.danielsobrado.com/es/tags/kl-divergence/</link>
+    <description>Recent content in kl-divergence on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/kl-divergence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Explaining Entropy</title>
+      <link>https://www.danielsobrado.com/es/blog/explaining-entropy/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/explaining-entropy/</guid>
+      <description>Information theory A bit is a number that is equal to 0 or 1.</description>
+    </item>
+    
+  </channel>
+</rss>

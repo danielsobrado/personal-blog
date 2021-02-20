@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bayesian on </title>
+    <link>https://www.danielsobrado.com/es/tags/bayesian/</link>
+    <description>Recent content in bayesian on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prior and Posterior distributions</title>
+      <link>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</link>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</guid>
+      <description>Let´s suppose that we know all the possible causes for an outcome, for example:</description>
+    </item>
+    
+    <item>
+      <title>Basic probability concepts</title>
+      <link>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</guid>
+      <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
+    </item>
+    
+  </channel>
+</rss>

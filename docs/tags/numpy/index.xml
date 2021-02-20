@@ -5,48 +5,24 @@
     <link>https://www.danielsobrado.com/tags/numpy/</link>
     <description>Recent content in Numpy on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Numpy: ndarrays</title>
-      <link>https://www.danielsobrado.com/post/numpy-ndarrays/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
-      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
-Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-We can quickly create matrices of ones and zeros:
-Or any other value:
-We can create ndarrays initialized with values:
-Or generate ndarrays of random values:
-We can observe some attributes from an ndarray, with the following operations, for an array defined as np.</description>
+      <guid>https://www.danielsobrado.com/blog/numpy-ndarrays/</guid>
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</description>
     </item>
     
     <item>
       <title>Numpy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-introduction/</link>
       <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
-      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
-There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
-Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpyNumpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
-    </item>
-    
-    <item>
-      <title>Numpy: Doing some maths</title>
-      <link>https://www.danielsobrado.com/post/numpy-doing-some-maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
-We can create an identity matrix using np.eye:
-Statistics Reading and writing </description>
+      <guid>https://www.danielsobrado.com/blog/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
     </item>
     
   </channel>

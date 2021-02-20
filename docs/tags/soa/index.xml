@@ -5,21 +5,15 @@
     <link>https://www.danielsobrado.com/tags/soa/</link>
     <description>Recent content in SOA on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 25 Jan 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/tags/soa/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/soa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The shared database problem</title>
-      <link>https://www.danielsobrado.com/post/the-shared-database-problem/</link>
+      <link>https://www.danielsobrado.com/blog/shared-database/</link>
       <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/the-shared-database-problem/</guid>
-      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!
-The problem comes when you have multiple applications and services accessing databases, and the schema of a table in the database changes, things get broken!
-Have you seen a place where nobody wants to change a table in the data warehouse because they don&amp;rsquo;t know what will fail?</description>
+      <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
+      <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
     </item>
     
   </channel>

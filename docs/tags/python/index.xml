@@ -5,90 +5,33 @@
     <link>https://www.danielsobrado.com/tags/python/</link>
     <description>Recent content in Python on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Mon, 28 Mar 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Analysis of residuals</title>
-      <link>https://www.danielsobrado.com/post/analysis-of-residuals/</link>
-      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/analysis-of-residuals/</guid>
-      <description>Introduction conda install statsmodels seaborn
-Plotting residuals Regression assumptions Linearity and equal variance Normality
-Interpreting residuals Common issues Heteroscedasticity Identify heteroscedasticity Breusch-Pagan Lagrange Multiplier test Using StatsModels we have statsmodels.stats.diagnostic.het_breuschpagan
-Non-linearity Outliers Long Y-axis datapoints X-axis unbalanced </description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linear Regression</title>
-      <link>https://www.danielsobrado.com/post/linear-regression/</link>
+      <link>https://www.danielsobrado.com/blog/python-linear-regression/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/linear-regression/</guid>
-      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.
- We need to understand that Linear Regression won´t help us with non linear relationships.
-When we do a regression we are trying to understand the strength and direction of the relationship between two or more variables.
-This is different from correlation analysis, because the model allows us to infer on new inputs.</description>
-    </item>
-    
-    <item>
-      <title>Scipy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/scipy-introduction/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/scipy-introduction/</guid>
-      <description>Introduction </description>
+      <guid>https://www.danielsobrado.com/blog/python-linear-regression/</guid>
+      <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
     </item>
     
     <item>
       <title>Numpy: ndarrays</title>
-      <link>https://www.danielsobrado.com/post/numpy-ndarrays/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-ndarrays/</guid>
-      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.
-Creating ndarrays We can get Numpy vector and a matrix rapidly from a Python list:
-We can quickly create matrices of ones and zeros:
-Or any other value:
-We can create ndarrays initialized with values:
-Or generate ndarrays of random values:
-We can observe some attributes from an ndarray, with the following operations, for an array defined as np.</description>
+      <guid>https://www.danielsobrado.com/blog/numpy-ndarrays/</guid>
+      <description>Numpy lets us create arrays in multiple ways, most of the time in consonancy with core Python and other libraries like Pandas.</description>
     </item>
     
     <item>
       <title>Numpy: Introduction</title>
-      <link>https://www.danielsobrado.com/post/numpy-introduction/</link>
+      <link>https://www.danielsobrado.com/blog/numpy-introduction/</link>
       <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/post/numpy-introduction/</guid>
-      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.
-There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.
-Installing Numpy For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:
-$ pip install numpyNumpy Arrays ndarray is the earth of NumPy, it&amp;rsquo;s the main data storage object of the framework.</description>
-    </item>
-    
-    <item>
-      <title>Worldbank datasets: Jobs and economic indicators</title>
-      <link>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</link>
-      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/worldbank-datasets-jobs-and-economic-indicators/</guid>
-      <description>Introduction </description>
-    </item>
-    
-    <item>
-      <title>Numpy: Doing some maths</title>
-      <link>https://www.danielsobrado.com/post/numpy-doing-some-maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/post/numpy-doing-some-maths/</guid>
-      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.
-We can create an identity matrix using np.eye:
-Statistics Reading and writing </description>
+      <guid>https://www.danielsobrado.com/blog/numpy-introduction/</guid>
+      <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
     </item>
     
   </channel>

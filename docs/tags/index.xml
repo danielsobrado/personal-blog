@@ -5,21 +5,8 @@
     <link>https://www.danielsobrado.com/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.danielsobrado.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Clustering</title>
-      <link>https://www.danielsobrado.com/tags/clustering/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/clustering/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spark</title>
       <link>https://www.danielsobrado.com/tags/spark/</link>
@@ -30,65 +17,11 @@
     </item>
     
     <item>
-      <title>autoencoders</title>
-      <link>https://www.danielsobrado.com/tags/autoencoders/</link>
-      <pubDate>Sun, 15 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/autoencoders/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pytorch</title>
-      <link>https://www.danielsobrado.com/tags/pytorch/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/pytorch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tensorflow</title>
-      <link>https://www.danielsobrado.com/tags/tensorflow/</link>
-      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Loss Functions</title>
       <link>https://www.danielsobrado.com/tags/loss-functions/</link>
-      <pubDate>Mon, 12 Sep 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/loss-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design Patterns</title>
-      <link>https://www.danielsobrado.com/tags/design-patterns/</link>
-      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/design-patterns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.danielsobrado.com/tags/python/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scipy</title>
-      <link>https://www.danielsobrado.com/tags/scipy/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/scipy/</guid>
       <description></description>
     </item>
     
@@ -98,6 +31,15 @@
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/numpy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.danielsobrado.com/tags/python/</link>
+      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/python/</guid>
       <description></description>
     </item>
     
@@ -120,56 +62,11 @@
     </item>
     
     <item>
-      <title>Logistic Regression</title>
-      <link>https://www.danielsobrado.com/tags/logistic-regression/</link>
-      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/logistic-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AngularJS</title>
-      <link>https://www.danielsobrado.com/tags/angularjs/</link>
-      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/angularjs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://www.danielsobrado.com/tags/java/</link>
-      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://www.danielsobrado.com/tags/javascript/</link>
-      <pubDate>Sat, 28 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>cross-entropy</title>
       <link>https://www.danielsobrado.com/tags/cross-entropy/</link>
-      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/cross-entropy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kl-divergence</title>
-      <link>https://www.danielsobrado.com/tags/kl-divergence/</link>
-      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/kl-divergence/</guid>
       <description></description>
     </item>
     
@@ -183,9 +80,18 @@
     </item>
     
     <item>
+      <title>kl-divergence</title>
+      <link>https://www.danielsobrado.com/tags/kl-divergence/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/kl-divergence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>bayesian</title>
       <link>https://www.danielsobrado.com/tags/bayesian/</link>
-      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/bayesian/</guid>
       <description></description>
@@ -194,54 +100,9 @@
     <item>
       <title>probability</title>
       <link>https://www.danielsobrado.com/tags/probability/</link>
-      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/probability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Datasets</title>
-      <link>https://www.danielsobrado.com/tags/datasets/</link>
-      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/datasets/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pandas</title>
-      <link>https://www.danielsobrado.com/tags/pandas/</link>
-      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/pandas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scikit-learn</title>
-      <link>https://www.danielsobrado.com/tags/scikit-learn/</link>
-      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/scikit-learn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Functional Programming</title>
-      <link>https://www.danielsobrado.com/tags/functional-programming/</link>
-      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/functional-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Data</title>
-      <link>https://www.danielsobrado.com/tags/machine-data/</link>
-      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/machine-data/</guid>
       <description></description>
     </item>
     
