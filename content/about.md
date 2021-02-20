@@ -23,7 +23,7 @@ Naturally curious about how any new technology works and why, I enjoy spending t
 
 Join me on my journey in my search for new tools, frameworks,  and datasets. Together let us explore and broaden our horizon in the world of continuous learning. Together let us find the answers to questions we have been all seeking about. 
 
-I have been working in the banking industry for a quite some time, in banks like UBS, BNP, JP Morgan, Mitsubishi/Morgan Stanley, National Bank of Abu Dhabi, and several locations around the globe like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
+I have been working in the banking industry for a quite some time, in banks like UBS, BNP, JP Morgan, Mitsubishi/Morgan Stanley, First Abu Dhabi Bank, and several locations around the globe like New York, Tokyo, London, Madrid, and Abu Dhabi. I wear many hats and maintain my involvement in virtually every facet of the project lifecycle.
 
 Some days, I'm a big data engineer, onboarding new data sources and/or architecting our technology stack. 
 
