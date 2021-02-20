@@ -1,7 +1,7 @@
 ---
 title: "My investing philosophy"
 date: 2018-09-29T11:51:17+06:00
-description : "This is meta description"
+description : "Personal blog of J. Daniel Sobrado"
 image: images/service/service-2.jpg
 bg_image: images/background/page-title.jpg
 icon: ti-thought

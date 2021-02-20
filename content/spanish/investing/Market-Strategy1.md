@@ -1,7 +1,7 @@
 ---
 title: "Market Strategy"
 date: 2018-09-29T11:54:02+06:00
-description : "This is meta description"
+description : "Personal blog of J. Daniel Sobrado"
 image: images/service/service-5.jpg
 bg_image: images/background/page-title.jpg
 icon: ti-server
