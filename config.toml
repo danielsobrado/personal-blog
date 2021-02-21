@@ -68,13 +68,13 @@ disableLanguages = [] # disable language from here
 
 ########################### default parameters #################################
 [params]
-  title       = "Daniel Sobrado"
+  title       = "J Daniel Sobrado"
   subtitle    = ""
   copyright   = "© 2021"
 
   cover       = "img/blog-cover.jpg"
   description = "Personal Blog on Software Engineering, Data Engineering and Machine Learning."
-  metaDescription = ""
+  metaDescription = "Personal Blog on Software Engineering, Data Engineering and Machine Learning."
   googleAnalytics = ""
   #customCSS = ["atelier-heath-light.css", "prettify.css"]
   RSSLink = ""
