@@ -2,7 +2,7 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 {{ with $data.homepage.about }}
 <section class="about section-sm overlay" style="background-image: url('{{ .bg_image | absURL }}');">
-	<div class="container">
+	<div class="container container d-sm-none d-none d-md-block">
 		<div class="row">
 			<div class="col-lg-9 ml-auto">
 				<div class="rounded p-sm-5 px-3 py-5 bg-secondary">
