@@ -158,9 +158,10 @@
 <li><strong>Atomicity</strong>: Within a transaction, every step must succeed or fail.</li>
 <li><strong>Consistency</strong>: Once a transaction completes, all rules or constraints must be consistent.</li>
 <li><strong>Isolation</strong>: Transactions cannot see the intermediate state of other transactions.</li>
-<li><strong>Durability</strong>: Once a transaction completes, it is persisted. The data cannot be lost or undone from memory.</li>
+<li><strong>Durability</strong>: Once a transaction completes, it is persisted. The data cannot be lost or undone from memory.
+<!-- raw HTML omitted -->
+There are different ways of achieving this, one is called &ldquo;<em>Pessimistic concurrency</em>&rdquo;, when you need to acquire a lock to access the data.</li>
 </ul>
-<p>There are different ways of achieving this, one is called &ldquo;<em>Pessimistic concurrency</em>&rdquo;, when you need to acquire a lock to access the data.</p>
 <p>Another one is called &ldquo;<em>Optimistic concurrency</em>&rdquo;, everyone gets a copy of the data and does with it, whatever they want. If there are conflicts we can rollback the transactions or apply rules for the resolution.</p>
 <p>Optimistic concurrency uses timestamps to know when was the last time the data was in a stable state, ACID compliant.</p>
 
