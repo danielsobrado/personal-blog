@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Explaining Entropy</title>
+    <title>Data</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="In Information Theory receiving a bit reduces our uncertainty by half, or by a factor of 2. Our uncertainty reduction is the inverse of the probability of the event occurring.">
+    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.80.0" />
 
@@ -98,36 +98,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/explaining-entropy/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/explaining-entropy/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -153,10 +123,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Explaining Entropy</h2>
+				<h2 class="text-white font-weight-bold">Data</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Explaining Entropy</li>
+					<li>Data</li>
 				</ol>
 			</div>
 		</div>
@@ -164,151 +134,50 @@
 </section>
 <!-- /page title -->
 
-<!-- blog single -->
+<!-- blog -->
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/EG7uO7w.png" alt="blog-image">
-          <div class="p-4">
-            <h3>Explaining Entropy</h3>
-            <ul class="list-inline d-block pb-4 border-bottom mb-3">
-              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 20 May</li>
-              <li class="list-inline-item text-color">Category:
-                
-                <a class="text-primary" href="https://www.danielsobrado.com/categories/maths"> Maths</a>
-                
-              </li>
-            </ul>
-            <div class="post-content">
-              <h1 id="information-theory">Information theory</h1>
-<p>A bit is a number that is equal to 0 or 1. In <a href="https://en.wikipedia.org/wiki/Information_theory">Information theory</a>, receiving a bit reduces our uncertainty by half, or a factor of 2.</p>
-<p>If our clients in the bank are likely to repay a loan or not, and we have our risk manager to tell us if a certain client repaid or not his loan, if the chance of the client being good or bad is 50%, our risk manager is reducing our uncertainty about the client by a factor of 2.</p>
-<h1 id="entropy">Entropy</h1>
-<blockquote>
-<p>&quot; <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Entropy</a> is a measure of information produced by a probabilistic stochastic process. If you have a stream of information and want to encode it as densely as possible, it helps to encode the more common elements with fewer bits than the less common elements. &quot;</p>
-</blockquote>
-<p>Now let&rsquo;s suppose that the risk manager can give us a score of the client from 1 to 8, ranking how much the client did repay, from nothing to everything, and these are equally likely.</p>
-<p>When we get the report from the risk manager he is dividing our uncertainty by a factor of 8, that is 2<!-- raw HTML omitted -->3<!-- raw HTML omitted -->, he can send us 3 bits to communicate this.</p>
-<p>He might send a larger text messages with many bits explaining the ranking with a label, but the real information we receive that reduces our uncertainty is 3 bits long.</p>
-<p>In this case we have a <em>uncertainty reduction factor</em> of 8 and we&rsquo;ll be able to compute the number of bits required to transmit this information using the logarithm:</p>
-<p>log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(8) = 3</p>
-<p>In real life the possibilities are not always equal, let´s say that we have a 95% chance of having a good customer and 5% to have a bad one that doesn&rsquo;t repay the loan.</p>
-<blockquote>
-<p>Our uncertainty reduction is the inverse of the probability of the event occurring.</p>
-</blockquote>
-<p>In this the number of bits we need to transmit this information case it&rsquo;s:</p>
-<p>​	log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(1/0.05)=4.322</p>
-<p>We need at least 4.322 bits to communicate that the client is not repaying the loan.</p>
-<p>We know from the properties of logarithms, that log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(1/0.05) is the same as -log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->(0.05).</p>
-<p>If the risk mangers tells us that the client is a good client, our uncertainty doesn&rsquo;t drop that much:</p>
-<p>​	-log(0.95)=-0.074</p>
-<p>On average a Risk Manager is going to provide on 95% of the cases 0.074 bits of information and in 5% of the cases 4.322 bits of information, in total:</p>
-<p>​	0.95 * 0.074 + 0.05 * 4.322 = 0.2864</p>
-<p>We&rsquo;ve just measured how uncertain the events are, to do that we&rsquo;ve used the <strong>Entropy equation</strong>:
-$$
-H\left( p \right) = - \sum _ { i = 1 } ^ { n } p _ { i } \cdot \log _ { 2 \left( p _ { i } \right) }
-$$</p>
-<blockquote>
-<p>This equation tells us about the uncertainty of our probability distribution.</p>
-</blockquote>
-<p>If we have very few clients that don&rsquo;t repay loans, the information provided by the risk manager in general is quite certain, but if the delinquency increases and half of the clients don&rsquo;t repay on average our risk manager is going to reduce a lot our uncertainty, it is going to provide more bits of information.</p>
-<p>Let&rsquo;s code an example in Python using   <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.entropy.html">scipy.stats.entropy</a>:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>This figure doesn&rsquo;t match, what happened? By default this functions takes the logs in base 10, our example is in bits, we need to use base 2:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Yes! this does matches our calculation.</p>
-<p>Let&rsquo;s validate it using the formula, we need to remember that:</p>
-<p>$$
-\log _ { b } ( a ) = \frac { \log ( a ) } { \log ( b ) }
-$$</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>We can also use math.log that takes an additional argument to specify the base, in this case we won&rsquo;t be able to take advantage of the vectorization from NumPy arrays:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>We&rsquo;ve calculated the entropy in binary terms and base 10, using scipy, numpy and the base math library! It&rsquo;s time to understand the cross-entropy that is so common in Data Science.</p>
-
-            </div>
-          </div>
-        </div>
-        <div class="py-4 border-bottom mb-100">
-          <div class="row">
-            <div class="col-lg-5 mb-4 mb-lg-0">
-              <!-- share-icon -->
-              <div class="d-flex">
-                <span class="font-weight-light mt-2 mr-3">Share:</span>
-                <ul class="list-inline d-inline-block">
-                  
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fexplaining-entropy%2f"><i class="ti-facebook"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Explaining%20Entropy&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fexplaining-entropy%2f"><i class="ti-twitter-alt"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fexplaining-entropy%2f&amp;resubmit=true&amp;title=Explaining%20Entropy"><i class="ti-reddit"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Explaining%20Entropy&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fexplaining-entropy%2f"><i class="ti-email"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- tags -->
-            <div class="col-lg-7">
-              <div class="d-flex">
-                <span class="font-weight-light mt-2 mr-3">Tags:</span>
-                <ul class="list-inline tag-list">
-                  
-                  <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/entropy">Entropy</a>
-                  </li>
-                  
-                  <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/cross-entropy">Cross entropy</a>
-                  </li>
-                  
-                  <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/kl-divergence">Kl divergence</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="mt-5">
-          <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </div>
-        
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 py-100">
+				<div class="row">
+					
+					
+					<!-- blog-item -->
+					<div class="col-sm-6 mb-4">
+						<article class="card">
+  <div class="card-img-wrapper overlay-rounded-top">
+    <img class="card-img-top" src="https://i.imgur.com/2tRFBca.png" alt="ACID">
+  </div>
+  <div class="card-body p-0">
+    <div class="d-flex">
+      <div class="py-3 px-4 border-right text-center">
+        <h3 class="text-primary mb-0">15</h3>
+        <p class="mb-0">May</p>
       </div>
-      <!-- Sidebar -->
+      <div class="p-3">
+        <a href="https://www.danielsobrado.com/blog/acid/" class="h4 font-primary text-dark">ACID</a>
+        <p>by Daniel Sobrado</p>
+      </div>
+    </div>
+  </div>
+</article>
+					</div>
+					
+				</div>
+				<!-- pagination -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -452,10 +321,10 @@ $$</p>
 		</div>
 	</div>
 </div>
-    </div>
-  </div>
+		</div>
+	</div>
 </section>
-<!-- /blog-single -->
+<!-- /blog -->
 
 
 	</div><!-- footer -->

@@ -1,9 +1,10 @@
+
 ---
 author: "Daniel Sobrado"
 title: "ACID"
 date: 2016-05-15
-draft: true
-image: https://i.imgur.com/BAKNmf6.png
+draft: false
+image: https://i.imgur.com/2tRFBca.png
 tags : [
     "Data"
 ]
