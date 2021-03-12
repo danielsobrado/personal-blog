@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Precedence of properties</title>
+    <title>Installing Kerberos</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties. When your codebase  grows and you need some tools and you write some decent amount of code, you are probably going to use a proper. You might find that your properties are not being taken into account.">
+    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.80.0" />
 
@@ -98,36 +98,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/spark-variable-precedence/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/spark-variable-precedence/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -149,14 +119,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/keyboard.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Precedence of properties</h2>
+				<h2 class="text-white font-weight-bold">Installing Kerberos</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Precedence of properties</li>
+					<li>Installing Kerberos</li>
 				</ol>
 			</div>
 		</div>
@@ -170,70 +140,53 @@
     <div class="row">
       <div class="col-lg-8 py-100">
         <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/HXoTjv8.png" alt="blog-image">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/BAKNmf6.png" alt="blog-image">
           <div class="p-4">
-            <h3>Precedence of properties</h3>
+            <h3>Installing Kerberos</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 10 Feb</li>
+              <li class="list-inline-item text-color">On 12 Jan</li>
               <li class="list-inline-item text-color">Category:
                 
-                <a class="text-primary" href="https://www.danielsobrado.com/categories/big-data"> Big data</a>
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
                 
               </li>
             </ul>
             <div class="post-content">
-              <h2 id="proper-properties">Proper Properties</h2>
-<p>When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties.</p>
-<p>It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don&rsquo;t want to be too greedy with the resources of your cluster, some might complain!</p>
-<h2 id="the-problem">The problem</h2>
-<p>When your codebase  grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.</p>
-<p>You are probably going to use a proper IDE like Eclipse-Scala or IntelliJ and you are used to hit the run key combination to launch your script.</p>
-<p>You might find that your properties are not being taken into account.</p>
-<h3 id="order-of-property-precedence"><strong>Order of Property Precedence</strong></h3>
-<p>You can set some environment variables for standalone execution by using: (e.g. in <code>spark-env.sh</code>)</p>
-<pre><code>SPARK_EXECUTOR_MEMORY=16g
-</code></pre>
-<p>You can also set the <code>spark-defaults.conf</code>:</p>
-<pre><code>spark.executor.memory=16g
-</code></pre>
-<p>But these solutions are hardcoded and pretty much static, and you want to have different parameters for different jobs, however, you might want to set up some defaults.</p>
-<p>The best approach is to use <code>spark-submit</code>:</p>
-<pre><code>spark-submit --executor-memory 16G 
-</code></pre>
-<p>But your problem comes from changing your variables programmatically.</p>
-<p>The problem of defining variables programmatically is that some of them need to be defined at startup time if not precedence rules will take over and your changes after the initiation of the job will be ignored.</p>
-<blockquote>
-<p>The amount of memory per executor is looked up when SparkContext is created.</p>
+              <blockquote>
+<p>Kerberos is a ticket-based authentication protocol that allows us to communicate with each other.</p>
 </blockquote>
-<p>And</p>
-<blockquote>
-<p>once a SparkConf object is passed to Spark, it is cloned and can no longer be modified by the user. Spark does not support modifying the configuration at runtime.</p>
-</blockquote>
-<p>See: <a href="https://spark.apache.org/docs/latest/api/scala/#org.apache.spark.SparkConf">SparkConf Documentation</a></p>
-<p>You need to change the property before the <code>SparkContext</code> is created, then running your iteration, stopping your <code>SparkContext</code> and changing your variable to iterate again?</p>
-<pre><code>import org.apache.spark.{SparkContext, SparkConf}
-
-val conf = new SparkConf.set(&quot;spark.executor.memory&quot;, &quot;16g&quot;)
-val sc = new SparkContext(conf)
-...
-sc.stop()
-val conf2 = new SparkConf().set(&quot;spark.executor.memory&quot;, &quot;24g&quot;)
-val sc2 = new SparkContext(conf2)
-</code></pre>
-<p>You can debug your configuration using: <code>sc.getConf.toDebugString</code></p>
-<p>See: <a href="https://spark.apache.org/docs/latest/configuration.html">Spark Configuration</a></p>
-<blockquote>
-<p>Any values specified as flags or in the properties file will be passed on to the application and merged with those specified through SparkConf. Properties set directly on the SparkConf take highest precedence, then flags passed to spark-submit or spark-shell, then options in the spark-defaults.conf file.</p>
-</blockquote>
-<p>You&rsquo;ll need to make sure that your variable is not defined with higher precedence.</p>
-<p>You need to understand the precedence order:</p>
-<ul>
-<li>conf/spark-defaults.conf</li>
-<li>&ndash;conf or -c - the command-line option used by spark-submit</li>
-<li>SparkConf</li>
-</ul>
-<p>Just make sure that your properties are all setup before creating the SparkContext, there are some SparkSQL properties that you can change at run-time, lets discuss that in another post.</p>
+<p>There is a third party actor called Key Distribution Centre (KDC); it is a trusted node in the network.</p>
+<p>There are some points to take into consideration:</p>
+<p>Let&rsquo;s install a test Kerberos docker:
+<code>docker pull godatadriven/krb5-kdc-server</code></p>
+<p>Or you can install it in your centos/Red Hat by using:
+<code>yum install krb5-workstation</code></p>
+<p>If you don&rsquo;t have an external connection in your machine and you need to install it offline, you might find that downloading the RPMs is not enough and that you need to find additional dependencies for this you can:</p>
+<ol>
+<li>Download an ISO of the repository and create a local repo.</li>
+<li>Connect to an internal repo in your organization.</li>
+<li>Use yumdownloader in another server to download all the dependencies.
+<code>yumdownloader krb5-workstation --downloadonly --resolve</code></li>
+</ol>
+<p>Ok, we&rsquo;ve installed Kerberos and now what?</p>
+<h4 id="kerberos-configuration-file">Kerberos configuration file</h4>
+<p>The main configuration file for Kerberos is krb5.conf, it is usually found on /etc in Linux and contains the main details of the realms and other parameters.</p>
+<h4 id="using-keytabs">Using Keytabs</h4>
+<p>A keytab is a file holding pairs of Kerberos principals and encrypted keys. You can use a keytab file to authenticate without entering a password.</p>
+<p>However, when you change your Kerberos password, you will require to recreate all your keytabs.</p>
+<h4 id="authentication">Authentication</h4>
+<p>You can use a keytab provided by your target administrator:</p>
+<p><code>kinit -k -t &quot;mykeytab&quot; &lt;someprincipal&gt;</code></p>
+<p>And you can check if you are holding a valid ticket with:</p>
+<p><code>klist -v</code></p>
+<p>If you get a valid ticket, you are all set up!</p>
+<h4 id="is-kerberos-secure">Is Kerberos secure?</h4>
+<p>With strong encryption and third-party verification, Kerberos is very secure. However, it is a very well known protocol, and there are many ways of hacking it.</p>
+<p>Some examples are Pass-the-ticket, Golden Ticket, Silver Ticket, Encryption downgrade with Skeleton Key Malware, DCShadow attack Credential stuffing or Brute force; these are out of the scope of this article.</p>
+<h4 id="kerberos-vs-ssh">Kerberos vs SSH</h4>
+<p>SSH doesn&rsquo;t need tickets; it works with certificates. The drawback is when removing a user, you&rsquo;ll need to revoke the certificate.
+In Kerberos, you only need to remove the principal.</p>
 
             </div>
           </div>
@@ -247,16 +200,16 @@ val sc2 = new SparkContext(conf2)
                 <ul class="list-inline d-inline-block">
                   
                   <li class="list-inline-item">
-                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f"><i class="ti-facebook"></i></a>
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2finstalling-kerberos%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Precedence%20of%20properties&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Installing%20Kerberos&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2finstalling-kerberos%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f&amp;resubmit=true&amp;title=Precedence%20of%20properties"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2finstalling-kerberos%2f&amp;resubmit=true&amp;title=Installing%20Kerberos"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Precedence%20of%20properties&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=Installing%20Kerberos&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2finstalling-kerberos%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -268,7 +221,7 @@ val sc2 = new SparkContext(conf2)
                 <ul class="list-inline tag-list">
                   
                   <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/spark">Spark</a>
+                    <a href="https://www.danielsobrado.com/categories/security">Security</a>
                   </li>
                   
                 </ul>

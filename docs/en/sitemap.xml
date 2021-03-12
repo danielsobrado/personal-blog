@@ -48,7 +48,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-12T14:31:02+04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -58,6 +58,61 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.danielsobrado.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/categories/</loc>
+    <lastmod>2021-01-12T14:31:02+04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/blog/installing-kerberos/</loc>
+    <lastmod>2021-01-12T14:31:02+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/categories/programming/</loc>
+    <lastmod>2021-01-12T14:31:02+04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/categories/programming/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/security/</loc>
+    <lastmod>2021-01-12T14:31:02+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/</loc>
+    <lastmod>2021-01-12T14:31:02+04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/tags/"
                 />
   </url>
   
@@ -77,21 +132,6 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.danielsobrado.com/tags/spark/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -103,21 +143,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.danielsobrado.com/tags/spark/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/tags/"
                 />
   </url>
   
@@ -268,21 +293,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.danielsobrado.com/blog/numpy-ndarrays/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/categories/programming/</loc>
-    <lastmod>2016-02-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/categories/programming/"
                 />
   </url>
   

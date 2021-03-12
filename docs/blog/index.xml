@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Installing Kerberos</title>
+      <link>https://www.danielsobrado.com/blog/installing-kerberos/</link>
+      <pubDate>Tue, 12 Jan 2021 14:31:02 +0400</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/installing-kerberos/</guid>
+      <description>Kerberos is a ticket-based authentication protocol that allows us to communicate with each other.</description>
+    </item>
+    
+    <item>
       <title>Numpy: ndarrays</title>
       <link>https://www.danielsobrado.com/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>

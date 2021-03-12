@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Precedence of properties</title>
+    <title>Security</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties. When your codebase  grows and you need some tools and you write some decent amount of code, you are probably going to use a proper. You might find that your properties are not being taken into account.">
+    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.80.0" />
 
@@ -98,36 +98,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/spark-variable-precedence/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/spark-variable-precedence/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -149,14 +119,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/keyboard.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Precedence of properties</h2>
+				<h2 class="text-white font-weight-bold">Security</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Precedence of properties</li>
+					<li>Security</li>
 				</ol>
 			</div>
 		</div>
@@ -164,145 +134,50 @@
 </section>
 <!-- /page title -->
 
-<!-- blog single -->
+<!-- blog -->
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/HXoTjv8.png" alt="blog-image">
-          <div class="p-4">
-            <h3>Precedence of properties</h3>
-            <ul class="list-inline d-block pb-4 border-bottom mb-3">
-              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 10 Feb</li>
-              <li class="list-inline-item text-color">Category:
-                
-                <a class="text-primary" href="https://www.danielsobrado.com/categories/big-data"> Big data</a>
-                
-              </li>
-            </ul>
-            <div class="post-content">
-              <h2 id="proper-properties">Proper Properties</h2>
-<p>When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties.</p>
-<p>It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don&rsquo;t want to be too greedy with the resources of your cluster, some might complain!</p>
-<h2 id="the-problem">The problem</h2>
-<p>When your codebase  grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.</p>
-<p>You are probably going to use a proper IDE like Eclipse-Scala or IntelliJ and you are used to hit the run key combination to launch your script.</p>
-<p>You might find that your properties are not being taken into account.</p>
-<h3 id="order-of-property-precedence"><strong>Order of Property Precedence</strong></h3>
-<p>You can set some environment variables for standalone execution by using: (e.g. in <code>spark-env.sh</code>)</p>
-<pre><code>SPARK_EXECUTOR_MEMORY=16g
-</code></pre>
-<p>You can also set the <code>spark-defaults.conf</code>:</p>
-<pre><code>spark.executor.memory=16g
-</code></pre>
-<p>But these solutions are hardcoded and pretty much static, and you want to have different parameters for different jobs, however, you might want to set up some defaults.</p>
-<p>The best approach is to use <code>spark-submit</code>:</p>
-<pre><code>spark-submit --executor-memory 16G 
-</code></pre>
-<p>But your problem comes from changing your variables programmatically.</p>
-<p>The problem of defining variables programmatically is that some of them need to be defined at startup time if not precedence rules will take over and your changes after the initiation of the job will be ignored.</p>
-<blockquote>
-<p>The amount of memory per executor is looked up when SparkContext is created.</p>
-</blockquote>
-<p>And</p>
-<blockquote>
-<p>once a SparkConf object is passed to Spark, it is cloned and can no longer be modified by the user. Spark does not support modifying the configuration at runtime.</p>
-</blockquote>
-<p>See: <a href="https://spark.apache.org/docs/latest/api/scala/#org.apache.spark.SparkConf">SparkConf Documentation</a></p>
-<p>You need to change the property before the <code>SparkContext</code> is created, then running your iteration, stopping your <code>SparkContext</code> and changing your variable to iterate again?</p>
-<pre><code>import org.apache.spark.{SparkContext, SparkConf}
-
-val conf = new SparkConf.set(&quot;spark.executor.memory&quot;, &quot;16g&quot;)
-val sc = new SparkContext(conf)
-...
-sc.stop()
-val conf2 = new SparkConf().set(&quot;spark.executor.memory&quot;, &quot;24g&quot;)
-val sc2 = new SparkContext(conf2)
-</code></pre>
-<p>You can debug your configuration using: <code>sc.getConf.toDebugString</code></p>
-<p>See: <a href="https://spark.apache.org/docs/latest/configuration.html">Spark Configuration</a></p>
-<blockquote>
-<p>Any values specified as flags or in the properties file will be passed on to the application and merged with those specified through SparkConf. Properties set directly on the SparkConf take highest precedence, then flags passed to spark-submit or spark-shell, then options in the spark-defaults.conf file.</p>
-</blockquote>
-<p>You&rsquo;ll need to make sure that your variable is not defined with higher precedence.</p>
-<p>You need to understand the precedence order:</p>
-<ul>
-<li>conf/spark-defaults.conf</li>
-<li>&ndash;conf or -c - the command-line option used by spark-submit</li>
-<li>SparkConf</li>
-</ul>
-<p>Just make sure that your properties are all setup before creating the SparkContext, there are some SparkSQL properties that you can change at run-time, lets discuss that in another post.</p>
-
-            </div>
-          </div>
-        </div>
-        <div class="py-4 border-bottom mb-100">
-          <div class="row">
-            <div class="col-lg-5 mb-4 mb-lg-0">
-              <!-- share-icon -->
-              <div class="d-flex">
-                <span class="font-weight-light mt-2 mr-3">Share:</span>
-                <ul class="list-inline d-inline-block">
-                  
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f"><i class="ti-facebook"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Precedence%20of%20properties&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f"><i class="ti-twitter-alt"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f&amp;resubmit=true&amp;title=Precedence%20of%20properties"><i class="ti-reddit"></i></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Precedence%20of%20properties&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fspark-variable-precedence%2f"><i class="ti-email"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- tags -->
-            <div class="col-lg-7">
-              <div class="d-flex">
-                <span class="font-weight-light mt-2 mr-3">Tags:</span>
-                <ul class="list-inline tag-list">
-                  
-                  <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/spark">Spark</a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="mt-5">
-          <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </div>
-        
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 py-100">
+				<div class="row">
+					
+					
+					<!-- blog-item -->
+					<div class="col-sm-6 mb-4">
+						<article class="card">
+  <div class="card-img-wrapper overlay-rounded-top">
+    <img class="card-img-top" src="https://i.imgur.com/BAKNmf6.png" alt="Installing Kerberos">
+  </div>
+  <div class="card-body p-0">
+    <div class="d-flex">
+      <div class="py-3 px-4 border-right text-center">
+        <h3 class="text-primary mb-0">12</h3>
+        <p class="mb-0">Jan</p>
       </div>
-      <!-- Sidebar -->
+      <div class="p-3">
+        <a href="https://www.danielsobrado.com/blog/installing-kerberos/" class="h4 font-primary text-dark">Installing Kerberos</a>
+        <p>by Daniel Sobrado</p>
+      </div>
+    </div>
+  </div>
+</article>
+					</div>
+					
+				</div>
+				<!-- pagination -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -444,10 +319,10 @@ val sc2 = new SparkContext(conf2)
 		</div>
 	</div>
 </div>
-    </div>
-  </div>
+		</div>
+	</div>
 </section>
-<!-- /blog-single -->
+<!-- /blog -->
 
 
 	</div><!-- footer -->
