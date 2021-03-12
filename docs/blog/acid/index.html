@@ -154,13 +154,15 @@
             </ul>
             <div class="post-content">
               <p>In 1983, Andreas Reuter and Theo Härder published the paper “Principles of Transaction-Oriented Database Recovery”, and minted the term ACID.</p>
-<p>All changes to data are performed as if they are a single operation:</p>
 <ul>
 <li><strong>Atomicity</strong>: Within a transaction, every step must succeed or fail.</li>
 <li><strong>Consistency</strong>: Once a transaction completes, all rules or constraints must be consistent.</li>
 <li><strong>Isolation</strong>: Transactions cannot see the intermediate state of other transactions.</li>
 <li><strong>Durability</strong>: Once a transaction completes, it is persisted. The data cannot be lost or undone from memory.</li>
 </ul>
+<blockquote>
+<p>All changes to data are performed as if they are a single operation:</p>
+</blockquote>
 <!-- raw HTML omitted -->
 <p>Another one is called &ldquo;<em>Optimistic concurrency</em>&rdquo;, everyone gets a copy of the data and does with it, whatever they want. If there are conflicts we can rollback the transactions or apply rules for the resolution.</p>
 <p>Optimistic concurrency uses timestamps to know when was the last time the data was in a stable state, ACID compliant.</p>
