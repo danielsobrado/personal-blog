@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>ACID</title>
+    <title>ACID Properties</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -123,10 +123,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">ACID</h2>
+				<h2 class="text-white font-weight-bold">ACID Properties</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>ACID</li>
+					<li>ACID Properties</li>
 				</ol>
 			</div>
 		</div>
@@ -142,7 +142,7 @@
         <div class="border rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/2tRFBca.png" alt="blog-image">
           <div class="p-4">
-            <h3>ACID</h3>
+            <h3>ACID Properties</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
               <li class="list-inline-item text-color">On 15 May</li>
@@ -154,14 +154,14 @@
             </ul>
             <div class="post-content">
               <p>In 1983, Andreas Reuter and Theo Härder published the paper “Principles of Transaction-Oriented Database Recovery”, and minted the term ACID.</p>
+<p>All changes to data are performed as if they are a single operation:</p>
 <ul>
 <li><strong>Atomicity</strong>: Within a transaction, every step must succeed or fail.</li>
 <li><strong>Consistency</strong>: Once a transaction completes, all rules or constraints must be consistent.</li>
 <li><strong>Isolation</strong>: Transactions cannot see the intermediate state of other transactions.</li>
-<li><strong>Durability</strong>: Once a transaction completes, it is persisted. The data cannot be lost or undone from memory.
-<!-- raw HTML omitted -->
-There are different ways of achieving this, one is called &ldquo;<em>Pessimistic concurrency</em>&rdquo;, when you need to acquire a lock to access the data.</li>
+<li><strong>Durability</strong>: Once a transaction completes, it is persisted. The data cannot be lost or undone from memory.</li>
 </ul>
+<!-- raw HTML omitted -->
 <p>Another one is called &ldquo;<em>Optimistic concurrency</em>&rdquo;, everyone gets a copy of the data and does with it, whatever they want. If there are conflicts we can rollback the transactions or apply rules for the resolution.</p>
 <p>Optimistic concurrency uses timestamps to know when was the last time the data was in a stable state, ACID compliant.</p>
 
@@ -180,13 +180,13 @@ There are different ways of achieving this, one is called &ldquo;<em>Pessimistic
                     <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=ACID&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=ACID%20Properties&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f&amp;resubmit=true&amp;title=ACID"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f&amp;resubmit=true&amp;title=ACID%20Properties"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=ACID&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=ACID%20Properties&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2facid%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
