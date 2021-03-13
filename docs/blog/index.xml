@@ -115,5 +115,14 @@
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
     </item>
     
+    <item>
+      <title>Introducing Ray</title>
+      <link>https://www.danielsobrado.com/blog/introducing-ray/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introducing-ray/</guid>
+      <description>Recently I had a request to match some counterparty names from different files.</description>
+    </item>
+    
   </channel>
 </rss>

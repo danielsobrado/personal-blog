@@ -154,17 +154,32 @@
             </ul>
             <div class="post-content">
               <p>In 1983, Andreas Reuter and Theo Härder published the paper “Principles of Transaction-Oriented Database Recovery”, and minted the term ACID.</p>
+<p>All changes to data are performed as if they are a single operation:</p>
 <ul>
 <li><strong>Atomicity</strong>: Within a transaction, every step must succeed or fail.</li>
 <li><strong>Consistency</strong>: Once a transaction completes, all rules or constraints must be consistent.</li>
 <li><strong>Isolation</strong>: Transactions cannot see the intermediate state of other transactions.</li>
 <li><strong>Durability</strong>: Once a transaction completes, it is persisted. The data cannot be lost or undone from memory.</li>
 </ul>
-<blockquote>
-<p>All changes to data are performed as if they are a single operation:</p>
-</blockquote>
 <!-- raw HTML omitted -->
+<p>Most conventional models in RDBMS have a base on locking.</p>
+<p>There are variants of locking:</p>
+<ul>
+<li><strong>Dirty Write</strong> (P0): This happens when two different transactions modify the same data point before the transactions commit or rollback.</li>
+<li><strong>Dirty Read</strong> (P1): Read an uncommitted data point from a transaction that will rollback after.</li>
+<li><strong>Non-repeatable read</strong> (P2): Read a data point from an uncommitted transaction that will change or be deleted with the final commit.</li>
+<li><strong>Phantom</strong> (P3): One transaction performs a search on some conditions; another transaction generates data that meet these conditions; the first transaction executes the same query again, it&rsquo;s not getting the same results.</li>
+<li><strong>Lost Update</strong> (P4): A transaction reads a data point that it plans to update; another transaction updates the same datapoint before the initial transaction commits its update; one update gets lost.</li>
+</ul>
+<p>The database will perform much more agile if you do not protect yourself from these problems.</p>
+<p>You can limit any of the P1, P2 and P3 issues by introducing the transaction isolation levels:</p>
+<p>Serializable: (P1, P2 and P3 cannot happen)
+Repeatable Read:(P1 and P2 cannot happen)
+Read Comitted: (P1 cannot happen)
+Read Uncommited: Can see any row not committed. (P1, P2 and P3 can happen)</p>
+<p>P0 and P4 <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf">are not part of the original ANSI models</a> and there are custom propietary isolation levels for this.</p>
 <p>Another one is called &ldquo;<em>Optimistic concurrency</em>&rdquo;, everyone gets a copy of the data and does with it, whatever they want. If there are conflicts we can rollback the transactions or apply rules for the resolution.</p>
+<p>You assume that reads are much more common than writes, and conflicts are exceptional when there are database modifications.</p>
 <p>Optimistic concurrency uses timestamps to know when was the last time the data was in a stable state, ACID compliant.</p>
 
             </div>

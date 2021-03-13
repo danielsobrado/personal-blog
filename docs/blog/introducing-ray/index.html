@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Introducing Ray</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.80.0" />
 
@@ -98,36 +98,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -149,14 +119,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Introducing Ray</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Introducing Ray</li>
 				</ol>
 			</div>
 		</div>
@@ -164,216 +134,124 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/oQNt9Gt.jpg" alt="Numpy: Introduction">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">28</h3>
-        <p class="mb-0">Feb</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="border rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/Fob7myA.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Introducing Ray</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 01 Jan</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>Recently I had a request to match some counterparty names from different files.</p>
+<p>I decided to script it quickly in a python notebook to validate the approach.</p>
+<p>I created some test data with <a href="https://www.mockaroo.com/">mockaroo</a> to simulate the use-case.</p>
+<p>As one of the files had around 500K entries, the Levenshtein Distance algorithm, which I initially tried quite successfully, took nearly 5 minutes per record on my laptop.</p>
+<blockquote>
+<p>The Levenshtein distance is a string metric for ranking the difference between two sequences. Informally, the Levenshtein distance between two strings is the minimum amount of single-character modifications.</p>
+</blockquote>
+<p>I had to do the same for several thousands of counterparty names. It could take weeks to execute.</p>
+<p>We all know that Python is not the best language for out-of-the-box performance and multithreading.</p>
+<p>And I matched it against some random combinations of names and surnames taken from <a href="https://github.com/smashew/NameDatabases">NameDatabases</a> .</p>
+<p>I decided to try ray and go full multithread! And also spread the workload over a cluster.</p>
+<p>Install it with pip:</p>
+<p><code>pip install ray</code></p>
+<p>It has a simple API:</p>
+<ul>
+<li>ray.init(): Used to initialize the context, you can specify the number of CPUs to use.</li>
+<li>@ray.remote: Is a decorator that makes your class or function a ray actor.</li>
+<li>.remote: Invokes an asynchronous remote call to a method.</li>
+<li>ray.put(): Passes an object to a remote function synchronously. It returns its ID.</li>
+<li>ray.get(ids): Also synchronous returns and object or list of objects from the ID or IDs.</li>
+<li>ray.wait(ids): Returns the lists of objects that are ready and not ready.</li>
+</ul>
+<p>It is a simple example of how to use ray to parallelize tasks; it easily can be expanded to many other use cases.</p>
+<p>The obvious one is hyper-parameter optimization; it will allow you to spread the workload across multiple GPUs.</p>
+<p>If you want to dig deeper into this topic, I suggest you review the <a href="https://docs.google.com/document/d/167rnnDFIVRhHhK4mznEIemOtj63IOhtIPvSYaPgI4Fg/edit#">design patters for ray</a>.</p>
+<p>There are many integrations with ray, for example spacy:</p>
+<p><code>pip install spacy-ray</code></p>
+<p>You have a list of integrations <a href="https://docs.ray.io/en/master/ray-libraries.html">here</a>.</p>
+<p>As a bonus, you can also use ray on the JVM; find some Java examples in the <a href="https://docs.ray.io/en/master/walkthrough.html">documentation</a>.
+Not only that, you can create cross-language execution with Python calling Java actors and vice-versa.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroducing-ray%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Introducing%20Ray&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroducing-ray%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroducing-ray%2f&amp;resubmit=true&amp;title=Introducing%20Ray"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Introducing%20Ray&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroducing-ray%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/python">Python</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/numpy-introduction/" class="h4 font-primary text-dark">Numpy: Introduction</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/cGYyp2K.jpg" alt="Let&#39;s discuss Microservices">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">28</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/discuss-microservices/" class="h4 font-primary text-dark">Let&#39;s discuss Microservices</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/OSv3WF6.png" alt="The shared database problem">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">25</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/shared-database/" class="h4 font-primary text-dark">The shared database problem</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/EG7uO7w.png" alt="Explaining Entropy">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">20</h3>
-        <p class="mb-0">May</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/explaining-entropy/" class="h4 font-primary text-dark">Explaining Entropy</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/5O23Ebp.jpg" alt="Prior and Posterior distributions">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Mar</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/prior-posterior-probabilities/" class="h4 font-primary text-dark">Prior and Posterior distributions</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/IenFUVF.jpg" alt="Basic probability concepts">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">10</h3>
-        <p class="mb-0">Mar</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/basic-probability-concepts/" class="h4 font-primary text-dark">Basic probability concepts</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">
-							<a href="https://www.danielsobrado.com/blog/" class="page-link">Prev</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/" class="page-link">
-								1
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">
-								2
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/3/" class="page-link">
-								3
-							</a>
-						</li>
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/3/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -517,10 +395,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->
