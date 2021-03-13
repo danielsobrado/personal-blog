@@ -49,7 +49,7 @@ It is a simple example of how to use ray to parallelize tasks; it easily can be 
 
 The obvious one is hyper-parameter optimization; it will allow you to spread the workload across multiple GPUs.
 
-If you want to dig deeper into this topic, I suggest you review the [design patters for ray](https://docs.google.com/document/d/167rnnDFIVRhHhK4mznEIemOtj63IOhtIPvSYaPgI4Fg/edit#). 
+If you want to dig deeper into this topic, I suggest you review the [design patterns for ray](https://docs.google.com/document/d/167rnnDFIVRhHhK4mznEIemOtj63IOhtIPvSYaPgI4Fg/edit#). 
 
 There are many integrations with ray, for example spacy:
 

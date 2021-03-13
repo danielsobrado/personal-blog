@@ -6,7 +6,16 @@
     <description>Recent content in Programming on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jan 2021 14:31:02 +0400</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 15:30:02 +0400</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Ray</title>
+      <link>https://www.danielsobrado.com/blog/introducing-ray/</link>
+      <pubDate>Sat, 20 Feb 2021 15:30:02 +0400</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introducing-ray/</guid>
+      <description>Recently I had a request to match some counterparty names from different files.</description>
+    </item>
+    
     <item>
       <title>Installing Kerberos</title>
       <link>https://www.danielsobrado.com/blog/installing-kerberos/</link>
@@ -59,15 +68,6 @@
       
       <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
       <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
-    </item>
-    
-    <item>
-      <title>Introducing Ray</title>
-      <link>https://www.danielsobrado.com/blog/introducing-ray/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/introducing-ray/</guid>
-      <description>Recently I had a request to match some counterparty names from different files.</description>
     </item>
     
   </channel>
