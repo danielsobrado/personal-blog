@@ -173,10 +173,12 @@
 </ul>
 <p>The database will perform much more agile if you do not protect yourself from these problems.</p>
 <p>You can limit any of the P1, P2 and P3 issues by introducing the transaction isolation levels:</p>
-<p>Serializable: (P1, P2 and P3 cannot happen)
-Repeatable Read:(P1 and P2 cannot happen)
-Read Comitted: (P1 cannot happen)
-Read Uncommited: Can see any row not committed. (P1, P2 and P3 can happen)</p>
+<ul>
+<li><strong>Serializable</strong>: Isolation is guaranteed, the results are the same as if they&rsquo;ve done in a serial manner. (P1, P2 and P3 cannot happen)</li>
+<li><strong>Repeatable Read</strong>: Isolation guaranteed to the user during his session. (P1 and P2 cannot happen)</li>
+<li><strong>Read Committed</strong>: It will let see data from other transactions during the session. (P1 cannot happen)</li>
+<li><strong>Read Uncommitted</strong>: Can see any row not committed. (P1, P2 and P3 can happen)</li>
+</ul>
 <p>P0 and P4 <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf">are not part of the original ANSI models</a> and there are custom propietary isolation levels for this.</p>
 <p>Another one is called &ldquo;<em>Optimistic concurrency</em>&rdquo;, everyone gets a copy of the data and does with it, whatever they want. If there are conflicts we can rollback the transactions or apply rules for the resolution.</p>
 <p>You assume that reads are much more common than writes, and conflicts are exceptional when there are database modifications.</p>
