@@ -26,22 +26,23 @@ All changes to data are performed as if they are a single operation:
 <br> 
 There are different ways of achieving this, one is called "*Pessimistic concurrency*", when you need to acquire a lock to access the data.
 
-Conventional models in RDBMS have been based on locking.
+Most conventional models in RDBMS have a base on locking.
 
 There are variants of locking:
-Dirty Write (P0): 
-Dirty Read (P1): 
-Non-repeatable read (P2):
-Phantom (P3):
-Lost Update (P4): 
+* **Dirty Write** (P0): This happens when two different transactions modify the same data point before the transactions commit or rollback.
+* **Dirty Read** (P1): Read an uncommitted data point from a transaction that will rollback after.
+* **Non-repeatable read** (P2): Read a data point from an uncommitted transaction that will change or be deleted with the final commit.
+* **Phantom** (P3): One transaction performs a search on some conditions; another transaction generates data that meet these conditions; the first transaction executes the same query again, it's not getting the same results.
+* **Lost Update** (P4): A transaction reads a data point that it plans to update; another transaction updates the same datapoint before the initial transaction commits its update; one update gets lost.
 
 The database will perform much more agile if you do not protect yourself from these problems.
 
 You can limit any of the P1, P2 and P3 issues by introducing the transaction isolation levels:
+
 Serializable: (P1, P2 and P3 cannot happen)
 Repeatable Read:(P1 and P2 cannot happen)
 Read Comitted: (P1 cannot happen)
-Read Uncommited: Can see any row not commited. (P1, P2 and P3 can happen)
+Read Uncommited: Can see any row not committed. (P1, P2 and P3 can happen)
 
 P0 and P4 [are not part of the original ANSI models](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-95-51.pdf) and there are custom propietary isolation levels for this.
 
