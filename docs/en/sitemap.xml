@@ -267,6 +267,16 @@
   </url>
   
   <url>
+    <loc>https://www.danielsobrado.com/blog/commodities/</loc>
+    <lastmod>2017-04-22T15:30:02+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/categories/investing/</loc>
+    <lastmod>2017-04-22T15:30:02+04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -298,11 +308,6 @@
   
   <url>
     <loc>https://www.danielsobrado.com/blog/introduction-derivatives/</loc>
-    <lastmod>2016-07-20T15:30:02+04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/categories/investing/</loc>
     <lastmod>2016-07-20T15:30:02+04:00</lastmod>
   </url>
   

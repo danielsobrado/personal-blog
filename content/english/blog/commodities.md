@@ -4,7 +4,7 @@
 author: "Daniel Sobrado"
 title: "Commodities"
 date: 2017-04-22T15:30:02+04:00
-draft: true
+draft: false
 image: https://i.imgur.com/mVbGpYW.png
 categories : [
 	"Investing"

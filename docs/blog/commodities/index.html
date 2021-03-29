@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Commodities</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.80.0" />
 
@@ -101,36 +101,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -152,14 +122,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Commodities</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Commodities</li>
 				</ol>
 			</div>
 		</div>
@@ -167,214 +137,120 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/HXoTjv8.png" alt="Precedence of properties">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">10</h3>
-        <p class="mb-0">Feb</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="border rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/mVbGpYW.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Commodities</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 22 Apr</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/investing"> Investing</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h4 id="introduction-to-commodities">Introduction to commodities</h4>
+<p>Commodities are type of assets that are assets use in the industry as inputs of productions or goods, they are multiple type of commodities like precious metals, construction materials, food, energy etc&hellip;</p>
+<p>Some commodities are seasonal, other commodities cannot be stored easily like electricity and most of them they have a cost of storage.</p>
+<h4 id="non-storable-commodities">Non-storable commodities</h4>
+<p>Commodities like electricity, cannot be stored, at least for common market pricing purposes.</p>
+<blockquote>
+<p>Its derivatives cannot be hedged, by holding the underlying commodity.</p>
+</blockquote>
+<p>The pricing of these commodities depends on demand and supply fundamentals, we can assume that this is a Markovian process.</p>
+<p>There is successful research on the study of electricity markets, that takes into consideration; the demand for electricity, the available capacity and fuel price, assuming that these factors evolve in a Markovian way.</p>
+<p>When the load is low, the prices are fairly constant, but when they approach the capacity threshold prices spike.</p>
+<h4 id="storable-commodities">Storable commodities</h4>
+<p>Commodities that need to be stored are more complex to price.</p>
+<ul>
+<li>There are intertemporal dependencies.</li>
+<li>Storage involves an opportunity cost.</li>
+</ul>
+<p>They require to solve recursively a dynamic programming problem, to determine efficient  allocation of resources, and to determine the equilibrium evolution of prices.</p>
+<p>If I own a commodity like oil, I can sell it today for consumption or store it for consumption tomorrow or later.</p>
+<p>The opportunity cost of consumption today is the value of the crude tomorrow.</p>
+<p>I must also pay a storage cost; and include the interest I could earn on that money.  (Net Present Value)</p>
+<p>The value of the commodity in the future is uncertain.</p>
+<p>The price tomorrow depends on how much I consume then, which depends on how much I store tomorrow, which depends on my estimate of the value of the commodity the day after tomorrow, which depends on my estimate of its price the day after the day after tomorrow, and so on.</p>
+<p>This requires an article on its own.</p>
+<h4 id="contango-and-backwardation">Contango and Backwardation</h4>
+<p>Oil prices usually are in Contango or Backwardation, which means that Contango futures prices with longer maturities are more expensive than those maturing earlier.</p>
+<p>It depends on multiple factors like inventory levels, storage costs, transportation, political issues and expectations.</p>
+<p>Having understood this, we can move and derive the concept of &ldquo;convenience yield&rdquo;, which is the benefit of holding the physical commodities over the futures contracts.</p>
+<h4 id="spark-spread">Spark Spread</h4>
+<p>The Spark spread is related to the difference between the price of electricity and the fuel utilised to produce it, usually natural gas.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommodities%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Commodities&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommodities%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommodities%2f&amp;resubmit=true&amp;title=Commodities"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Commodities&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommodities%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/spark-variable-precedence/" class="h4 font-primary text-dark">Precedence of properties</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/isyQF4V.jpg" alt="Loss functions">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">23</h3>
-        <p class="mb-0">Jul</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/" class="h4 font-primary text-dark">Loss functions</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/FXrKBsK.png" alt="Linear Regression">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/python-linear-regression/" class="h4 font-primary text-dark">Linear Regression</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/Fob7myA.png" alt="Introducing Ray">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">20</h3>
-        <p class="mb-0">Feb</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/introducing-ray/" class="h4 font-primary text-dark">Introducing Ray</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/BAKNmf6.png" alt="Installing Kerberos">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">12</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/installing-kerberos/" class="h4 font-primary text-dark">Installing Kerberos</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/mVbGpYW.png" alt="Commodities">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">22</h3>
-        <p class="mb-0">Apr</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/commodities/" class="h4 font-primary text-dark">Commodities</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">Prev</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/" class="page-link">
-								1
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">
-								2
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/3/" class="page-link">
-								3
-							</a>
-						</li>
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -528,10 +404,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->
