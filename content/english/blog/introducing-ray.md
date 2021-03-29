@@ -7,7 +7,8 @@ date: 2021-02-20T15:30:02+04:00
 draft: false
 image: https://i.imgur.com/Fob7myA.png
 tags : [
-    "Python"
+    "Python",
+    "Concurrency"
 ]
 categories : [
 	"Programming"

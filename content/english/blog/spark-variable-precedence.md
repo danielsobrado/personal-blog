@@ -7,7 +7,7 @@ weight: 10
 bg_image: images/background/keyboard.jpg
 image: https://i.imgur.com/HXoTjv8.png
 categories : [
-    "Big-Data"
+    "Big Data"
 ]
 tags : [
     "Spark"

@@ -8,7 +8,8 @@ tags : [
     "Security"
 ]
 categories : [
-	"Programming"
+	"Programming",
+	"Others"
 ]
 type: post
 ---

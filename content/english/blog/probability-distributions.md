@@ -1,13 +1,6 @@
 ---
-description: "Distributions a laws governing these are a must know for every data scientist."
 author: "Daniel Sobrado"
 date: 2014-02-08
-linktitle: Probability distributions
-nomenu:
-  main:
-    parent: tutorials
-prev: /tutorials/mathjax
-next: /prior-posterior-probabilities
 title: Probability distributions
 noweight: 10
 image: https://i.imgur.com/WLrOv2Q.png
@@ -102,3 +95,5 @@ $$
 * These events are independent.
 * The events happen at a constant rate.
 
+
+https://towardsdatascience.com/getting-to-know-probability-distributions-cc1dd1e2f22b
