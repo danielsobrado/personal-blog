@@ -147,6 +147,26 @@
   </url>
   
   <url>
+    <loc>https://www.danielsobrado.com/categories/data-science/</loc>
+    <lastmod>2020-08-02T15:30:02+04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/categories/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/categories/data-science/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/blog/introduction-outlier-detection/</loc>
+    <lastmod>2020-08-02T15:30:02+04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/categories/big-data/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -274,21 +294,6 @@
   <url>
     <loc>https://www.danielsobrado.com/categories/investing/</loc>
     <lastmod>2017-04-22T15:30:02+04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/categories/data-science/</loc>
-    <lastmod>2016-07-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/categories/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/categories/data-science/"
-                />
   </url>
   
   <url>

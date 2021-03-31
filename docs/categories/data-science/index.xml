@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data-Science on </title>
+    <title>Data Science on </title>
     <link>https://www.danielsobrado.com/categories/data-science/</link>
-    <description>Recent content in Data-Science on </description>
+    <description>Recent content in Data Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Aug 2020 15:30:02 +0400</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loss functions</title>
       <link>https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://www.danielsobrado.com/blog/python-linear-regression/</guid>
       <description>Introduction to Linear Regression  A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Outlier detection</title>
+      <link>https://www.danielsobrado.com/blog/introduction-outlier-detection/</link>
+      <pubDate>Sun, 02 Aug 2020 15:30:02 +0400</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-outlier-detection/</guid>
+      <description>As the enterprise moves to real-time and streaming, it gets more important to identify issues fast, ideally, before the final user gets impacted.</description>
     </item>
     
     <item>
