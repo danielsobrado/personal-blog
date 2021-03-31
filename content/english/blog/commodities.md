@@ -24,7 +24,7 @@ Commodities like electricity, cannot be stored, at least for common market prici
 
 > Its derivatives cannot be hedged, by holding the underlying commodity.
 
-The pricing of these commodities depends on demand and supply fundamentals, we can assume that this is a Markovian process.
+The pricing of these commodities depends on demand and supply fundamentals, we can assume that this is a Markovian process (The probability of the event depends only on the previous state).
 
 There is successful research on the study of electricity markets, that takes into consideration; the demand for electricity, the available capacity and fuel price, assuming that these factors evolve in a Markovian way.
 
