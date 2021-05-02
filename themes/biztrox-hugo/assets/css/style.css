@@ -1916,12 +1916,41 @@ ul.tag-list li a:hover {
   top: 0;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 blockquote{
-  background: #d1d1d1;
-  padding: 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  color: #000;
+  font-size: 1.4em;
+  width:95%;
+  margin:10px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1.0em 20px 0.5em 75px;
+  border-left:8px solid #66330098 ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#5f350aad;
+  font-size:4em;
+  position: absolute;
+  left: 5px;
+  top:-5px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }
 
 .recent-post-thumb{
