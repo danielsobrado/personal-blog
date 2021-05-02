@@ -16,6 +16,7 @@ categories : [
     "Data-Science",
     "Maths"
 ]
+draft: true
 type: post
 ---
 

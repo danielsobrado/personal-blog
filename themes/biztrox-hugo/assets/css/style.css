@@ -1,7 +1,7 @@
 /* 1.1 typography */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600,700|Work+Sans:400,500,600");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
@@ -12,13 +12,13 @@ p, .paragraph {
   color: #666;
   font-size: 14px;
   line-height: 25px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 h1, .h1 {
@@ -54,7 +54,7 @@ h6, .h6 {
 /* 1.3 Button style */
 .btn {
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 35px;
@@ -176,6 +176,7 @@ a:focus {
 }
 
 a {
+  color: #116ac8;
   transition: .2s ease;
 }
 
@@ -240,7 +241,7 @@ button {
 
 .section-title-sm {
   margin-bottom: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   color: #666;
 }
@@ -444,7 +445,7 @@ button {
 .breadcrumb li,
 .breadcrumb a {
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",sans-serif;
   font-weight: 600;
   font-size: 12px;
   margin: 0 10px;
@@ -614,11 +615,11 @@ button {
 }
 
 .font-primary {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 .font-secondary {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .mb-10 {
@@ -708,13 +709,21 @@ button {
   }
 }
 
+pre code {
+  font-family: "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  border-radius: .8rem;
+  padding: 1rem;
+  font-size: .875rem;
+  margin: 1.5rem 0;
+}
+
 code{
-  padding: 16px;
+  color: #920d0d;
+  padding: 6px;
   overflow: auto;
-  font-size: 90%;
   background-color: #f6f8fa;
   border-radius: 3px;
-  display: block;
+  font-family: "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
 .translateY-25 {
@@ -831,7 +840,7 @@ code{
 
 .navigation .navbar .nav-item .nav-link {
   padding: 15px 10px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto",sans-serif;
   font-weight: 600;
   color: #222;
   text-transform: uppercase;
@@ -1221,7 +1230,7 @@ code{
 /* 5. progrgess bar start */
 .progressbar-title {
   font-size: 17px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 7px;
   color: #222 !important;
 }
@@ -1240,7 +1249,7 @@ code{
 }
 
 .progress-bar-value {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   color: #fff;
   background: #303032;
@@ -1488,7 +1497,7 @@ code{
   text-align: center;
   background: #fff;
   box-shadow: -5px 0px 40px 0px rgba(0, 0, 0, 0.1);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: #222;
@@ -1754,7 +1763,7 @@ img.arrow-bottom {
 }
 
 .project-content h6{
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 14px;
   color: #222;
@@ -1778,7 +1787,7 @@ img.arrow-bottom {
   background: transparent;
   border: none;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   transition: .3s ease;
 }
@@ -1900,7 +1909,7 @@ ul.tag-list li a:hover {
 }
 
 .post-content ol li{
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   margin-bottom: 5px;
 }
@@ -1965,7 +1974,7 @@ blockquote span{
   height: 40px;
   margin-bottom: 15px;
   border: 1px solid #e5e5e5;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 14px;
   color: #666;
@@ -2000,7 +2009,7 @@ blockquote span{
   height: 40px !important;
   margin-bottom: 15px !important;
   border: 1px solid #e5e5e5 !important;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   color: #666 !important;
@@ -2009,7 +2018,7 @@ blockquote span{
 
 #mc-embedded-subscribe{
   font-size: 14px !important;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   text-transform: capitalize !important;
   padding: 13px 40px !important;
   border-radius: 35px !important;
@@ -2371,7 +2380,7 @@ blockquote span{
 
 .footer-links li a {
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   transition: .2s ease;
   display: block;

@@ -15,13 +15,13 @@ tags : [
 type: post
 ---
 
-## Proper Properties
+#### Proper Properties
 
 When starting with Spark jobs, one of  the most common tasks is to understand how to finetune properties.
 
 It is critical to define the right properties for your job, to avoid it to fail, or to take too long, at the same time you don't want to be too greedy with the resources of your cluster, some might complain!
 
-## The problem
+#### The problem
 
 When your codebase  grows and you need some tools and you write some decent amount of code, you cannot just rely on an editor to edit the code and launch the job from the command line.
 
@@ -29,7 +29,7 @@ You are probably going to use a proper IDE like Eclipse-Scala or IntelliJ and yo
 
 You might find that your properties are not being taken into account.
 
-### **Order of Property Precedence**
+##### Order of Property Precedence
 
 You can set some environment variables for standalone execution by using: (e.g. in `spark-env.sh`)
 
