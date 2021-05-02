@@ -567,7 +567,7 @@ button {
 }
 
 .bg-primary {
-  background-color: #e84444 !important;
+  background-color: #a82e2e !important;
 }
 
 .bg-secondary {
@@ -575,7 +575,7 @@ button {
 }
 
 .text-primary {
-  color: #e84444 !important;
+  color: #a82e2e !important;
 }
 
 .bg-facebook {
@@ -2027,7 +2027,7 @@ blockquote span{
   position: relative;
   z-index: 1;
   transition: .2s ease !important;
-  background-color: #e84444 !important;
+  background-color: #a82e2e !important;
   color: #fff !important;
   height: unset !important;
 }
@@ -2043,7 +2043,7 @@ blockquote span{
 }
 
 #mc-embedded-subscribe:active {
-  background-color: #e84444 !important;
+  background-color: #a82e2e !important;
 }
 
 #mc-embedded-subscribe:hover {
