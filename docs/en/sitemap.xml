@@ -33,20 +33,6 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/blog/python-linear-regression/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/blog/python-linear-regression/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/blog/python-linear-regression/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.danielsobrado.com/</loc>
     <lastmod>2021-02-20T15:30:02+04:00</lastmod>
     <xhtml:link
@@ -581,6 +567,18 @@
   </url>
   
   <url>
+    <loc>https://www.danielsobrado.com/tags/functional-programming/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/java/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/author/daniel-sobrado/</loc>
     <xhtml:link
                 rel="alternate"
@@ -591,20 +589,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.danielsobrado.com/author/daniel-sobrado/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/tags/linear-regression/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/tags/linear-regression/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/tags/linear-regression/"
                 />
   </url>
   

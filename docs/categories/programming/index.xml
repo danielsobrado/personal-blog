@@ -70,5 +70,14 @@
       <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
     </item>
     
+    <item>
+      <title>Functional programming in Java: Functional Interfaces</title>
+      <link>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</guid>
+      <description>Introduction With Java 8, Oracle introduced functional programming in the language, this is achieved by using Functional Interfaces.</description>
+    </item>
+    
   </channel>
 </rss>

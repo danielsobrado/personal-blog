@@ -34,16 +34,6 @@
   
   <url>
     <loc>https://www.danielsobrado.com/es/blog/python-linear-regression/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/blog/python-linear-regression/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/blog/python-linear-regression/"
-                />
   </url>
   
   <url>
@@ -541,16 +531,6 @@
   
   <url>
     <loc>https://www.danielsobrado.com/es/tags/linear-regression/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/tags/linear-regression/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/tags/linear-regression/"
-                />
   </url>
   
 </urlset>
