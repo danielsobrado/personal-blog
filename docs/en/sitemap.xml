@@ -34,7 +34,7 @@
   
   <url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
+    <lastmod>2021-07-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -48,8 +48,23 @@
   </url>
   
   <url>
+    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
+    <lastmod>2021-07-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/categories/big-data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/categories/big-data/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
+    <lastmod>2021-07-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -63,18 +78,43 @@
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/tags/concurrency/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
+    <loc>https://www.danielsobrado.com/tags/spark/</loc>
+    <lastmod>2021-07-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/tags/spark/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/tags/spark/"
+                />
   </url>
   
   <url>
-    <loc>https://www.danielsobrado.com/blog/introducing-ray/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/spark-create-cluster/</loc>
+    <lastmod>2021-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/</loc>
+    <lastmod>2021-07-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://www.danielsobrado.com/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.danielsobrado.com/tags/"
+                />
   </url>
   
   <url>
     <loc>https://www.danielsobrado.com/categories/programming/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
+    <lastmod>2021-04-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -85,6 +125,26 @@
                 hreflang="en"
                 href="https://www.danielsobrado.com/categories/programming/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/typescript/</loc>
+    <lastmod>2021-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/blog/typescript-essentials-1/</loc>
+    <lastmod>2021-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/tags/concurrency/</loc>
+    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/blog/introducing-ray/</loc>
+    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
   </url>
   
   <url>
@@ -99,21 +159,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.danielsobrado.com/tags/python/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/tags/"
                 />
   </url>
   
@@ -150,36 +195,6 @@
   <url>
     <loc>https://www.danielsobrado.com/blog/introduction-outlier-detection/</loc>
     <lastmod>2020-08-02T15:30:02+04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/categories/big-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/categories/big-data/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.danielsobrado.com/tags/spark/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://www.danielsobrado.com/es/tags/spark/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.danielsobrado.com/tags/spark/"
-                />
   </url>
   
   <url>
@@ -550,6 +565,10 @@
                 hreflang="en"
                 href="https://www.danielsobrado.com/blog/basic-probability-concepts/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://www.danielsobrado.com/blog/azure-concepts/</loc>
   </url>
   
   <url>
