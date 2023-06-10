@@ -57,20 +57,33 @@
     <loc>https://www.danielsobrado.com/tags/data/</loc>
     <lastmod>2023-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/dot-product/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/programming/</loc>
+    <loc>https://www.danielsobrado.com/categories/data-science/</loc>
     <lastmod>2023-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/programming/"
+                href="https://www.danielsobrado.com/es/categories/data-science/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/programming/"
+                href="https://www.danielsobrado.com/categories/data-science/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/dot-product/</loc>
+    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/maths/</loc>
+    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/maths/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/maths/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/</loc>
@@ -84,6 +97,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/programming/</loc>
+    <lastmod>2021-04-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/programming/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/typescript/</loc>
@@ -119,19 +145,6 @@
   </url><url>
     <loc>https://www.danielsobrado.com/tags/security/</loc>
     <lastmod>2021-01-12T14:31:02+04:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/data-science/</loc>
-    <lastmod>2020-08-02T15:30:02+04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/data-science/"
-                />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/introduction-outlier-detection/</loc>
     <lastmod>2020-08-02T15:30:02+04:00</lastmod>
@@ -398,19 +411,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/kl-divergence/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/maths/</loc>
-    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/maths/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/maths/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/bayesian/</loc>
