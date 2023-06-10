@@ -25,5 +25,14 @@
       <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
     </item>
     
+    <item>
+      <title>Numpy: Doing some maths</title>
+      <link>https://www.danielsobrado.com/blog/numpy-maths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/numpy-maths/</guid>
+      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.</description>
+    </item>
+    
   </channel>
 </rss>

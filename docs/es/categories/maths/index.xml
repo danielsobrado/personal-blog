@@ -6,7 +6,16 @@
     <description>Recent content in Maths on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/maths/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/maths/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logistic Regression</title>
+      <link>https://www.danielsobrado.com/es/blog/logistic-regression/</link>
+      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/logistic-regression/</guid>
+      <description>Introduction to Linear Regression A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
+    </item>
+    
     <item>
       <title>Linear Regression</title>
       <link>https://www.danielsobrado.com/es/blog/python-linear-regression/</link>
@@ -17,12 +26,39 @@
     </item>
     
     <item>
+      <title>Fast Fourier Transform</title>
+      <link>https://www.danielsobrado.com/es/blog/fast-fourier-transform/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/fast-fourier-transform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cross-Entropy and Kullback-Leibler Divergence</title>
+      <link>https://www.danielsobrado.com/es/blog/crossentropy-and-kldivergence/</link>
+      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/crossentropy-and-kldivergence/</guid>
+      <description>Cross-Entropy I our last post we&amp;rsquo;ve seen that entropy tells us the minimum number of bits that we need to encode our ground truth distribution.</description>
+    </item>
+    
+    <item>
       <title>Explaining Entropy</title>
       <link>https://www.danielsobrado.com/es/blog/explaining-entropy/</link>
       <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/blog/explaining-entropy/</guid>
       <description>Information theory A bit is a number that is equal to 0 or 1.</description>
+    </item>
+    
+    <item>
+      <title>Naive Bayes</title>
+      <link>https://www.danielsobrado.com/es/blog/naive-bayes/</link>
+      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/naive-bayes/</guid>
+      <description>Introduction In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.</description>
     </item>
     
     <item>
@@ -41,6 +77,24 @@
       
       <guid>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
+    </item>
+    
+    <item>
+      <title>Probability distributions</title>
+      <link>https://www.danielsobrado.com/es/blog/probability-distributions/</link>
+      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/probability-distributions/</guid>
+      <description>Introduction Distributions a laws governing these are a must know for every data scientist.</description>
+    </item>
+    
+    <item>
+      <title>Numpy: Doing some maths</title>
+      <link>https://www.danielsobrado.com/es/blog/numpy-maths/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/numpy-maths/</guid>
+      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.</description>
     </item>
     
   </channel>

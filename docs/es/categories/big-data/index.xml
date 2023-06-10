@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Big-Data on </title>
+    <title>Big Data on </title>
     <link>https://www.danielsobrado.com/es/categories/big-data/</link>
-    <description>Recent content in Big-Data on </description>
+    <description>Recent content in Big Data on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
     <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
@@ -14,6 +14,24 @@
       
       <guid>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</guid>
       <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.</description>
+    </item>
+    
+    <item>
+      <title>Apache Spark: Introduction to project Tungsten</title>
+      <link>https://www.danielsobrado.com/es/blog/spark-introduction-tungsten/</link>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/spark-introduction-tungsten/</guid>
+      <description>Introduction Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second generation of the Tungsten engine.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Machine Data</title>
+      <link>https://www.danielsobrado.com/es/blog/introduction-to-machine-data/</link>
+      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/introduction-to-machine-data/</guid>
+      <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.</description>
     </item>
     
   </channel>

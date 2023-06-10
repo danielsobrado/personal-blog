@@ -6,7 +6,16 @@
     <description>Recent content in kl-divergence on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Tue, 20 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/kl-divergence/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/kl-divergence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cross-Entropy and Kullback-Leibler Divergence</title>
+      <link>https://www.danielsobrado.com/es/blog/crossentropy-and-kldivergence/</link>
+      <pubDate>Sat, 21 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/crossentropy-and-kldivergence/</guid>
+      <description>Cross-Entropy I our last post we&amp;rsquo;ve seen that entropy tells us the minimum number of bits that we need to encode our ground truth distribution.</description>
+    </item>
+    
     <item>
       <title>Explaining Entropy</title>
       <link>https://www.danielsobrado.com/es/blog/explaining-entropy/</link>
