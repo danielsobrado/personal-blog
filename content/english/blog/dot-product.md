@@ -23,3 +23,17 @@ If the two vectors are perpendicular to each other, the dot product will be zero
 
 If the two vectors are in opposite directions, the dot product will be negative. This is because the product of any two vectors in opposite directions will always be negative.
 
+# What is a Dot Product?
+
+# Interpreting the Dot Product
+
+# Practical Examples
+
+# Visualizing the Dot Product
+
+# Cons
+
+* Limited to Euclidean Space: The standard dot product is applicable only in Euclidean space.
+* Dependent on Magnitude: The dot product is affected not just by the angle between two vectors, but also by the magnitude of the vectors. This means that two vector pairs with the same orientation but different lengths will have distinct dot products. This can be a disadvantage in some circumstances, such as when you're just concerned in the direction of the vectors.
+* Limited Contextual Information: In text analysis, two documents may have a high dot product because they use similar words, but those words might be used in entirely different contexts, leading to potential misinterpretation of the similarity.
+* No Cross-Dimensional Information: In 3D space, the dot product won't tell you if two vectors are twisting around each other. This information can only be obtained using a different operation known as the cross product.
