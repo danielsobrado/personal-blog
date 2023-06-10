@@ -6,7 +6,7 @@
     <description>Recent content in Big Data on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precedence of properties</title>
       <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://www.danielsobrado.com/blog/spark-variable-precedence/</guid>
       <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.</description>
-    </item>
-    
-    <item>
-      <title>Spark: Creating the cluster with Docker</title>
-      <link>https://www.danielsobrado.com/blog/spark-create-cluster/</link>
-      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/spark-create-cluster/</guid>
-      <description>Creating a development cluster using docker in a single machine Let&amp;rsquo;s start testing Spark 3 with Docker, including shared volumes and different flavours of jupyter notebooks.</description>
     </item>
     
   </channel>
