@@ -6,16 +6,7 @@
     <description>Recent content in probability on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 07 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/probability/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Naive Bayes</title>
-      <link>https://www.danielsobrado.com/es/blog/naive-bayes/</link>
-      <pubDate>Mon, 07 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/naive-bayes/</guid>
-      <description>Introduction In Bayesian statistics there are two important concepts, we use probabilities to measure the uncertainty about the parameters used by the probability distributions, and we use the Bayes´ theorem to update those probabilities.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prior and Posterior distributions</title>
       <link>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</link>
@@ -32,15 +23,6 @@
       
       <guid>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
-    </item>
-    
-    <item>
-      <title>Probability distributions</title>
-      <link>https://www.danielsobrado.com/es/blog/probability-distributions/</link>
-      <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/probability-distributions/</guid>
-      <description>Introduction Distributions a laws governing these are a must know for every data scientist.</description>
     </item>
     
   </channel>

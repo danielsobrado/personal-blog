@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Data-Science</title>
+      <title>Data Science</title>
       <link>https://www.danielsobrado.com/categories/data-science/</link>
       <pubDate>Sun, 02 Aug 2020 15:30:02 +0400</pubDate>
       
@@ -44,20 +44,20 @@
     </item>
     
     <item>
-      <title>Maths</title>
-      <link>https://www.danielsobrado.com/categories/maths/</link>
-      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/categories/maths/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Investing</title>
       <link>https://www.danielsobrado.com/categories/investing/</link>
       <pubDate>Sat, 22 Apr 2017 15:30:02 +0400</pubDate>
       
       <guid>https://www.danielsobrado.com/categories/investing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maths</title>
+      <link>https://www.danielsobrado.com/categories/maths/</link>
+      <pubDate>Tue, 20 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/categories/maths/</guid>
       <description></description>
     </item>
     

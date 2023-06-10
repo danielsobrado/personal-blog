@@ -17,24 +17,6 @@
     </item>
     
     <item>
-      <title>Typescript Essentials - 2</title>
-      <link>https://www.danielsobrado.com/blog/typescript-essentials-2/</link>
-      <pubDate>Sat, 05 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/typescript-essentials-2/</guid>
-      <description>We discussed what is Typescript and how to install it in the previous post, let&amp;rsquo;s understand the basics, now!</description>
-    </item>
-    
-    <item>
-      <title>Scala LDAP and SSL Integration</title>
-      <link>https://www.danielsobrado.com/blog/scala-ldap/</link>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/scala-ldap/</guid>
-      <description>LDAP OpenLDAP Docker Image Create Users in LDAP Search in LDAP SSL The KeyStore Generate SSL Certificates Redirecting HTTP requests to HTTPS https://sysgears.</description>
-    </item>
-    
-    <item>
       <title>Typescript Essentials - 1</title>
       <link>https://www.danielsobrado.com/blog/typescript-essentials-1/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
@@ -62,48 +44,12 @@
     </item>
     
     <item>
-      <title>CAPE</title>
-      <link>https://www.danielsobrado.com/blog/cape/</link>
-      <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/cape/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Concepts</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-concepts/</link>
-      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-concepts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ACID Properties</title>
       <link>https://www.danielsobrado.com/blog/acid/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/acid/</guid>
       <description>In 1983, Andreas Reuter and Theo Härder published the paper “Principles of Transaction-Oriented Database Recovery”, and minted the term ACID.</description>
-    </item>
-    
-    <item>
-      <title>CRUD vs CQRS</title>
-      <link>https://www.danielsobrado.com/blog/crud-cqrs/</link>
-      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/crud-cqrs/</guid>
-      <description>Introduction </description>
-    </item>
-    
-    <item>
-      <title>Scipy: Introduction</title>
-      <link>https://www.danielsobrado.com/blog/scipy-introduction/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/scipy-introduction/</guid>
-      <description>Introduction </description>
     </item>
     
     <item>
@@ -143,96 +89,12 @@
     </item>
     
     <item>
-      <title>Concepts on Concurrency</title>
-      <link>https://www.danielsobrado.com/blog/angularjs-introduction/</link>
-      <pubDate>Sun, 15 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/angularjs-introduction/</guid>
-      <description>Introduction Let&amp;rsquo;s take a look to some concepts on distributed systems and concurrency.</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/blog/category-theory/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/category-theory/</guid>
-      <description>Introduction Categories are mathematical contexts where construction is possible.</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/blog/indexing-financial-news-part-with-elastic/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/indexing-financial-news-part-with-elastic/</guid>
-      <description>Introduction Scrapy Installing Scrapy conda install scrapy
-conda install lxml=3.8.0</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/blog/scraping-financial-news-part-1/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/scraping-financial-news-part-1/</guid>
-      <description>Introduction Scrapy Installing Scrapy conda install scrapy
-conda install lxml=3.8.0</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/blog/set-theory/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/set-theory/</guid>
-      <description>Basic concepts A set is a collection of stuff, items, things&amp;hellip; We&amp;rsquo;ll call them elements.</description>
-    </item>
-    
-    <item>
-      <title>Functional Programming Basic Concepts</title>
-      <link>https://www.danielsobrado.com/blog/functional-concepts/</link>
-      <pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/functional-concepts/</guid>
-      <description>Introduction Functional programming is a programming paradigm, based on mathematical principles.</description>
-    </item>
-    
-    <item>
-      <title>Introduction to Machine Data</title>
-      <link>https://www.danielsobrado.com/blog/introduction-to-machine-data/</link>
-      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/introduction-to-machine-data/</guid>
-      <description>What is Machine Data With the rise of cheap storage and processing, we are in a better position to extract and process any type of data that can help with insights.</description>
-    </item>
-    
-    <item>
       <title>Functional programming in Java: Functional Interfaces</title>
       <link>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</guid>
       <description>Introduction With Java 8, Oracle introduced functional programming in the language, this is achieved by using Functional Interfaces.</description>
-    </item>
-    
-    <item>
-      <title>Functional programming in Java: Lambdas</title>
-      <link>https://www.danielsobrado.com/blog/functional-java-lambda/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/functional-java-lambda/</guid>
-      <description>Introduction A lambda expression in
-Concepts Functional interface: Is an interface that declares one abstract method.</description>
-    </item>
-    
-    <item>
-      <title>Numpy: Doing some maths</title>
-      <link>https://www.danielsobrado.com/blog/numpy-maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/numpy-maths/</guid>
-      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.</description>
     </item>
     
   </channel>

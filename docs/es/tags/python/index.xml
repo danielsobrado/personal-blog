@@ -6,45 +6,7 @@
     <description>Recent content in Python on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 28 Mar 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Data Preparation: Missing Records</title>
-      <link>https://www.danielsobrado.com/es/blog/data-preparation-missing-values/</link>
-      <pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/data-preparation-missing-values/</guid>
-      <description>Missing Values are part of our data cleaning and pre-processing tasks, we are going to face features with missing values and we need to take a decision about what to do with those.</description>
-    </item>
-    
-    <item>
-      <title>Data Preparation: Numeric</title>
-      <link>https://www.danielsobrado.com/es/blog/data-preparation-numeric/</link>
-      <pubDate>Fri, 26 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/data-preparation-numeric/</guid>
-      <description>Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
-Normalization </description>
-    </item>
-    
-    <item>
-      <title>Data Preparation: Categorical</title>
-      <link>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</link>
-      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</guid>
-      <description>Introduction Qualitative feature encoding Dummy enconding with Pandas DictVectorizer One-hot encoding Hashing trick </description>
-    </item>
-    
-    <item>
-      <title>Analysis of residuals</title>
-      <link>https://www.danielsobrado.com/es/blog/residual-analysis/</link>
-      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/residual-analysis/</guid>
-      <description>Introduction conda install statsmodels seaborn
-Plotting residuals Regression assumptions Linearity and equal variance Normality</description>
-    </item>
-    
+    <lastBuildDate>Mon, 29 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linear Regression</title>
       <link>https://www.danielsobrado.com/es/blog/python-linear-regression/</link>
@@ -52,15 +14,6 @@ Plotting residuals Regression assumptions Linearity and equal variance Normality
       
       <guid>https://www.danielsobrado.com/es/blog/python-linear-regression/</guid>
       <description>Introduction to Linear Regression A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
-    </item>
-    
-    <item>
-      <title>Scipy: Introduction</title>
-      <link>https://www.danielsobrado.com/es/blog/scipy-introduction/</link>
-      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/scipy-introduction/</guid>
-      <description>Introduction </description>
     </item>
     
     <item>
@@ -79,53 +32,6 @@ Plotting residuals Regression assumptions Linearity and equal variance Normality
       
       <guid>https://www.danielsobrado.com/es/blog/numpy-introduction/</guid>
       <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/es/blog/category-theory/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/category-theory/</guid>
-      <description>Introduction Categories are mathematical contexts where construction is possible.</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/es/blog/indexing-financial-news-part-with-elastic/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/indexing-financial-news-part-with-elastic/</guid>
-      <description>Introduction Scrapy Installing Scrapy conda install scrapy
-conda install lxml=3.8.0</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/es/blog/scraping-financial-news-part-1/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/scraping-financial-news-part-1/</guid>
-      <description>Introduction Scrapy Installing Scrapy conda install scrapy
-conda install lxml=3.8.0</description>
-    </item>
-    
-    <item>
-      <title>Scraping financial news - Part 1</title>
-      <link>https://www.danielsobrado.com/es/blog/set-theory/</link>
-      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/set-theory/</guid>
-      <description>Basic concepts A set is a collection of stuff, items, things&amp;hellip; We&amp;rsquo;ll call them elements.</description>
-    </item>
-    
-    <item>
-      <title>Numpy: Doing some maths</title>
-      <link>https://www.danielsobrado.com/es/blog/numpy-maths/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/numpy-maths/</guid>
-      <description>Linear Algebra Matrix object This object is always two dimensional, and it doesn´t use the default broadcasting from ndarray.</description>
     </item>
     
   </channel>
