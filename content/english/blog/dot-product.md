@@ -13,7 +13,7 @@ categories : [
 type: post
 ---
 
-# What is a Dot Product?
+### What is a Dot Product?
 
 The dot product is a way of multiplying two vectors together. It is calculated by multiplying the corresponding elements of the two vectors and then adding the products together. The result of the dot product is a single number.
 
@@ -25,15 +25,15 @@ If the two vectors are perpendicular to each other, the dot product will be zero
 
 If the two vectors are in opposite directions, the dot product will be negative. This is because the product of any two vectors in opposite directions will always be negative.
 
-# Interpreting the Dot Product
+### Interpreting the Dot Product
 
-# Practical Examples
+### Practical Examples
 
-# Visualizing the Dot Product
+### Visualizing the Dot Product
 
 NoteBook:  [Dot Product](https://github.com/danielsobrado/llm_notebooks/blob/main/Notebooks/Dot%20Product.ipynb)
 
-# Cons
+### Cons
 
 * **Limited to Euclidean Space**: The standard dot product is applicable only in Euclidean space.
 * **Dependent on Magnitude**: The dot product is affected not just by the angle between two vectors, but also by the magnitude of the vectors. This means that two vector pairs with the same orientation but different lengths will have distinct dot products. This can be a disadvantage in some circumstances, such as when you're just concerned in the direction of the vectors.
