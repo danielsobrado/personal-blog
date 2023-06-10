@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.80.0" />
 
     <!-- plugins -->
     
@@ -162,25 +162,26 @@
 <p>The main difference between a Functional Interface (Also called SAM interface) and an ordinary interface is that it can only have one abstract method, while and ordinary one can have many.</p>
 <h4 id="how-to-create-a-functional-interface">How to create a Functional Interface</h4>
 <p>If we create an Inteface with only one abstract method Java will consider it as a Functional Interface:</p>
-<pre tabindex="0"><code>public interface FunctionalInterfaceTest
+<pre><code>public interface FunctionalInterfaceTest
 {
     public int function1(int a);
 }
+
 </code></pre><p>But if we add additional abstract Methods it will lose its status of Functional Interface:</p>
-<pre tabindex="0"><code>public interface NonFunctionalInterfaceTest
+<pre><code>public interface NonFunctionalInterfaceTest
 {
     public int function1(int a);
     public int function2(int a);
 }
 </code></pre><p>To avoid doing this by mistake we can use the optional @FunctionalInterface annotation that is available since Java 8.</p>
-<pre tabindex="0"><code>@FunctionalInterface
+<pre><code>@FunctionalInterface
 public interface AnnotatedFunctionalInterfaceTest
 {
     public int function1(int a);
 }
 </code></pre><p>If you try to call your Interface &ldquo;FunctionalInterface&rdquo;, you&rsquo;ll annotation will give an error.</p>
 <p>You can test this Functional Interface:</p>
-<pre tabindex="0"><code>public class TestFunctionalInterface {
+<pre><code>public class TestFunctionalInterface {
 	
     public static void main(String args[])
     {
@@ -195,30 +196,30 @@ public interface AnnotatedFunctionalInterfaceTest
 </code></pre><h4 id="builtin-functional-interfaces">Builtin Functional Interfaces</h4>
 <p>The java.util.function package in Java 8 contains various builtin functional interface, some examples are:</p>
 <p><strong>Predicate</strong>: The Predicate interface has an abstract method test that gives a Boolean value, as a result of the specified argument:</p>
-<pre tabindex="0"><code>public interface Predicate
+<pre><code>public interface Predicate
 {
    public boolean test(T  t);
 }
 </code></pre><p><strong>BinaryOperator</strong>: The BinaryOperator interface has an abstract method apply which takes two arguments and returns a result of the same type:</p>
-<pre tabindex="0"><code>public interface BinaryOperator 
+<pre><code>public interface BinaryOperator 
 {
      public T apply(T x, T y);
 } 
 </code></pre><p><strong>Function</strong>: The Function interface has an abstract method apply which accepts an argument of type T and returns a result of type R.</p>
-<pre tabindex="0"><code>public interface Function 
+<pre><code>public interface Function 
 {
    public R apply(T t);
 }
 </code></pre><p>You can see how to to use the predicate Functional Interface:</p>
-<pre tabindex="0"><code>public class TestPredicateInterface {
+<pre><code>public class TestPredicateInterface {
 	
 	    public static void main(String args[])
 	    {
 	  
 	        List&lt;String&gt; hello =
-	            Arrays.asList(&#34;Hello&#34;,&#34;world&#34;, &#34;my&#34;, &#34;friend!&#34;);
+	            Arrays.asList(&quot;Hello&quot;,&quot;world&quot;, &quot;my&quot;, &quot;friend!&quot;);
 	  
-	        Predicate&lt;String&gt; p = (s)-&gt;s.contains(&#34;l&#34;);
+	        Predicate&lt;String&gt; p = (s)-&gt;s.contains(&quot;l&quot;);
 	  
 	        for (String st:hello)
 	        {
@@ -282,7 +283,7 @@ public interface AnnotatedFunctionalInterfaceTest
         <div class="mt-5">
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    window.disqus_config = function () {
+    var disqus_config = function () {
     
     
     
@@ -374,15 +375,15 @@ public interface AnnotatedFunctionalInterfaceTest
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/dot-product/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/2tRFBca.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/spark-create-cluster/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/xjM25XU.png" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/dot-product/">Dot Product</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-create-cluster/">Spark: Creating the cluster with Docker</a>
 					</h6>
-					<p class="meta">15 May 2023</p>
+					<p class="meta">02 Jul 2021</p>
 				</div>
 			</div>
 			
