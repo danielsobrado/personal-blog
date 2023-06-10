@@ -17,7 +17,7 @@
 			</div>
 			{{end}}
 			<div class="row">
-				{{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") 6 }}
+				{{ $paginator := .Paginate (where (.Site.RegularPages.ByDate.Reverse) "Type" "post") 6 }}
 				{{ range $index, $element:= where $paginator.Pages "Type" "post" }}
 				
 				{{ "<!-- blog-item -->" | safeHTML }}
