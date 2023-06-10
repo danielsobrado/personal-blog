@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modelling on </title>
+    <link>https://www.danielsobrado.com/es/tags/modelling/</link>
+    <description>Recent content in Modelling on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Mon, 29 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/modelling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Model evaluation</title>
+      <link>https://www.danielsobrado.com/es/blog/model-evaluation/</link>
+      <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/model-evaluation/</guid>
+      <description>Introduction to Model Evaluation We need to test how well our model performs with data it has never seen before, to do this we can use multiple strategies depending on the amount of data we have, and the type of problem we are facing, we won´t approach on the same way, image recognition and structured time series problems.</description>
+    </item>
+    
+  </channel>
+</rss>

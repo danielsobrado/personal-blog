@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logistic Regression on </title>
+    <link>https://www.danielsobrado.com/es/tags/logistic-regression/</link>
+    <description>Recent content in Logistic Regression on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 03 Jan 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/logistic-regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logistic Regression</title>
+      <link>https://www.danielsobrado.com/es/blog/logistic-regression/</link>
+      <pubDate>Sun, 03 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/logistic-regression/</guid>
+      <description>Introduction to Linear Regression A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
+    </item>
+    
+  </channel>
+</rss>

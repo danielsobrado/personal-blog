@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AngularJS on </title>
+    <link>https://www.danielsobrado.com/es/tags/angularjs/</link>
+    <description>Recent content in AngularJS on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 15 Mar 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concepts on Concurrency</title>
+      <link>https://www.danielsobrado.com/es/blog/angularjs-introduction/</link>
+      <pubDate>Sun, 15 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/angularjs-introduction/</guid>
+      <description>Introduction Let&amp;rsquo;s take a look to some concepts on distributed systems and concurrency.</description>
+    </item>
+    
+  </channel>
+</rss>

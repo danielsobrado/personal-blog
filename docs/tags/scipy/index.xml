@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scipy on </title>
+    <link>https://www.danielsobrado.com/tags/scipy/</link>
+    <description>Recent content in scipy on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/scipy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fast Fourier Transform</title>
+      <link>https://www.danielsobrado.com/blog/fast-fourier-transform/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fast-fourier-transform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scipy: Introduction</title>
+      <link>https://www.danielsobrado.com/blog/scipy-introduction/</link>
+      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/scipy-introduction/</guid>
+      <description>Introduction </description>
+    </item>
+    
+  </channel>
+</rss>
