@@ -26,12 +26,12 @@
     </item>
     
     <item>
-      <title>Spark: Creating the cluster with Docker</title>
-      <link>https://www.danielsobrado.com/blog/spark-create-cluster/</link>
-      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      <title>Dot Product</title>
+      <link>https://www.danielsobrado.com/blog/dot-product/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/blog/spark-create-cluster/</guid>
-      <description>Creating a development cluster using docker in a single machine Let&amp;rsquo;s start testing Spark 3 with Docker, including shared volumes and different flavours of jupyter notebooks.</description>
+      <guid>https://www.danielsobrado.com/blog/dot-product/</guid>
+      <description>Test</description>
     </item>
     
     <item>
@@ -158,16 +158,6 @@
       
       <guid>https://www.danielsobrado.com/blog/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.danielsobrado.com/blog/azure-concepts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/azure-concepts/</guid>
-      <description>Azure Monitoring Tools
- Azure Monitor &amp;ndash; Free, Needs Storage, Azure Advisor &amp;ndash; Recommendations Azure Service Health &amp;ndash; Regional Incidents, Alerts Azure Security Manager/Center &amp;ndash; Free/Paid, Non-Azure-Servers/Hybrid Azure Cost Management &amp;ndash; Recommendations  Storage</description>
     </item>
     
     <item>

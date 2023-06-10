@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Numpy is a fundamental library to perform numerical operations in Python. This package is about multi-dimensional arrays and performance. It allows us to work in a more powerful and simplified way with matrix algebra, emphasizing matrix methods that are extensively used in statistics, mathematics and machine learning algorithms.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.113.0">
 
     <!-- plugins -->
     
@@ -193,7 +193,7 @@
 <p>There are multiple other well known packages in data science that rely on Numpy like Pandas and Scipy.</p>
 <h2 id="installing-numpy">Installing Numpy</h2>
 <p>For the examples we´ll just use pip to install Numpy, ideally it will be inside a container like Anaconda:</p>
-<pre><code>$ pip install numpy
+<pre tabindex="0"><code>$ pip install numpy
 </code></pre><h2 id="numpy-arrays">Numpy Arrays</h2>
 <p>ndarray is the earth of NumPy, it&rsquo;s the main data storage object of the framework.</p>
 <p>It is a homogeneus array, all the components share the same data-type.</p>
@@ -211,7 +211,7 @@
 <h4 id="ndarrays-are-compact">ndarrays are compact!</h4>
 <p>Python lists are arrays of pointers to Python pointers while NumPy ndarrays are blocks of data, that are less flexible due to their nature, they need to be homogeneus, but they require less space.</p>
 <p>The smallest Python object will require 4 bytes per pointer plus 16 bytes for the object itself. (4 for type pointer, 4 for reference count, 4 for value and the memory allocators)</p>
-<p>You cannot use <code>sys.getsizeof()</code> to verify the amount of memory consumed as per the documentation <em>&ldquo;Only the memory consumption directly attributed to the object is accounted for, not the memory consumption of objects it refers to.&quot;</em></p>
+<p>You cannot use <code>sys.getsizeof()</code> to verify the amount of memory consumed as per the documentation <em>&ldquo;Only the memory consumption directly attributed to the object is accounted for, not the memory consumption of objects it refers to.&rdquo;</em></p>
 <p>Let´s move on creating some ndarrays!</p>
 
             </div>
@@ -264,7 +264,7 @@
         <div class="mt-5">
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -356,15 +356,15 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/spark-create-cluster/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/xjM25XU.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/dot-product/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/2tRFBca.png" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-create-cluster/">Spark: Creating the cluster with Docker</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/dot-product/">Dot Product</a>
 					</h6>
-					<p class="meta">02 Jul 2021</p>
+					<p class="meta">15 May 2023</p>
 				</div>
 			</div>
 			

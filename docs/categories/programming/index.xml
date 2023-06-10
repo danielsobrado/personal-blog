@@ -6,7 +6,16 @@
     <description>Recent content in Programming on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dot Product</title>
+      <link>https://www.danielsobrado.com/blog/dot-product/</link>
+      <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/dot-product/</guid>
+      <description>Test</description>
+    </item>
+    
     <item>
       <title>Typescript Essentials - 1</title>
       <link>https://www.danielsobrado.com/blog/typescript-essentials-1/</link>

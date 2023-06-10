@@ -1,536 +1,454 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/spark-variable-precedence/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/spark-variable-precedence/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/python-linear-regression/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/categories/big-data/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/big-data/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/categories/big-data/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/categories/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/spark/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/spark/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/spark/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/market-strategy/</loc>
     <lastmod>2018-09-29T11:54:02+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/market-strategy1/</loc>
     <lastmod>2018-09-29T11:54:02+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/valuable-idea/</loc>
     <lastmod>2018-09-29T11:51:17+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/valuable-idea1/</loc>
     <lastmod>2018-09-29T11:51:17+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/business-consulting/</loc>
     <lastmod>2018-09-25T15:51:35+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/business-consulting1/</loc>
     <lastmod>2018-09-25T15:51:35+06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/about/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/contact/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/contact/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/contact/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/investing/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/investing/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/investing/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/categories/data-science/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/data-science/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/categories/data-science/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/loss-functions/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/loss-functions/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/loss-functions/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/numpy/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/numpy/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/numpy/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/numpy-ndarrays/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/numpy-ndarrays/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/categories/programming/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/programming/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/categories/programming/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/python/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/python/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/python/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/numpy-introduction/</loc>
     <lastmod>2016-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/numpy-introduction/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/numpy-introduction/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/discuss-microservices/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/discuss-microservices/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/discuss-microservices/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/microservices/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/microservices/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/microservices/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/soa/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/soa/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/soa/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/shared-database/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/shared-database/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/shared-database/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/cross-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/cross-entropy/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/cross-entropy/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/entropy/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/entropy/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/explaining-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/explaining-entropy/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/explaining-entropy/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/kl-divergence/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/kl-divergence/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/kl-divergence/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/categories/maths/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/maths/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/categories/maths/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/bayesian/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/bayesian/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/bayesian/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/prior-posterior-probabilities/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/probability/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/probability/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/tags/probability/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/basic-probability-concepts/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/basic-probability-concepts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/author/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/author/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/author/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/author/daniel-sobrado/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://www.danielsobrado.com/author/daniel-sobrado/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
+                hreflang="es-es"
                 href="https://www.danielsobrado.com/es/author/daniel-sobrado/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/tags/linear-regression/</loc>
   </url>
-  
 </urlset>
