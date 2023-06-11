@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Kubernetes Concepts</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-concepts/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-concepts/</guid>
+      <description>In this blog article, we will go over some fundamental Kubernetes ideas.</description>
+    </item>
+    
+    <item>
       <title>ACID Properties</title>
       <link>https://www.danielsobrado.com/blog/acid/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>

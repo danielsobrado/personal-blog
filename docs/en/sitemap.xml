@@ -267,6 +267,28 @@
     <loc>https://www.danielsobrado.com/categories/investing/</loc>
     <lastmod>2017-04-22T15:30:02+04:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/tags/concepts/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/concepts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/concepts/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/devops/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-concepts/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -495,19 +517,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/basic-probability-concepts/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/concepts/</loc>
-    <lastmod>2014-01-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/concepts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/concepts/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/datascience-concepts/</loc>

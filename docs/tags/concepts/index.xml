@@ -6,7 +6,16 @@
     <description>Recent content in Concepts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/concepts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Oct 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/concepts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Concepts</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-concepts/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-concepts/</guid>
+      <description>In this blog article, we will go over some fundamental Kubernetes ideas.</description>
+    </item>
+    
     <item>
       <title>Introduction to Data Science: Concepts</title>
       <link>https://www.danielsobrado.com/blog/datascience-concepts/</link>

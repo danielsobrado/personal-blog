@@ -98,6 +98,15 @@
     </item>
     
     <item>
+      <title>Kubernetes Concepts</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-concepts/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-concepts/</guid>
+      <description>In this blog article, we will go over some fundamental Kubernetes ideas.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Derivatives</title>
       <link>https://www.danielsobrado.com/blog/introduction-derivatives/</link>
       <pubDate>Wed, 20 Jul 2016 15:30:02 +0400</pubDate>

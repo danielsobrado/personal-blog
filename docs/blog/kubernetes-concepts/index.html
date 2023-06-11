@@ -156,7 +156,49 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <p>In this blog article, we will go over some fundamental Kubernetes ideas. Kubernetes is an extremely capable framework for managing containerized applications in a clustered environment. It intends to improve the handling of connected, distributed components across various infrastructure. These ideas will help you comprehend what Kubernetes is capable of.</p>
+<h3 id="pods">Pods</h3>
+<p>A pod is the basic unit of work in Kubernetes. It is a group of one or more containers that are scheduled together on the same node. Pods share resources such as CPU, memory, and storage.</p>
+<p>The reason for using pods rather than single containers is because there may be instances where numerous containers are closely related and it makes sense to operate them on the same machine. Pods are intended to provide co-located (on the same node), co-scheduled (start/stop at the same time) containers, much like a single virtual machine.</p>
+<h3 id="nodes">Nodes:</h3>
+<p>A node is a physical or virtual machine that runs Kubernetes. Nodes are responsible for running pods and providing resources to pods.</p>
+<p>Nodes are in charge of running pods and supplying resources to pods. They are managed by the control plane and can be thought of as Kubernetes cluster workers.</p>
+<h3 id="cluster">Cluster:</h3>
+<p>A cluster is a group of nodes that are managed by Kubernetes. A cluster can be made up of a single node or multiple nodes.</p>
+<p>The power of Kubernetes comes from the fact that it can manage clusters of machines and make them act like one big machine.</p>
+<h3 id="control-plane">Control plane:</h3>
+<p>The control plane is the brains of Kubernetes. It is responsible for scheduling pods, managing resources, and monitoring the cluster.</p>
+<p>It includes components like the kube-apiserver, etcd, kube-scheduler, kube-controller-manager, and cloud-controller-manager.</p>
+<h3 id="services">Services:</h3>
+<p>A service is a logical grouping of pods that are exposed to the outside world. Services provide a single point of access to pods, even if the pods are running on different nodes.</p>
+<p>Services are essentially a way to define policies for how traffic should be directed to pods.</p>
+<h3 id="labels">Labels:</h3>
+<p>Labels are used to identify and group pods. Labels can be used to select pods for scheduling, routing, and other operations.</p>
+<p>They are a versatile tool for dealing with pod sets and can be used in a variety of ways.</p>
+<h3 id="deployments">Deployments:</h3>
+<p>A deployment is a way to manage the lifecycle of pods. Deployments can be used to create, update, and delete pods.</p>
+<p>They specify the expected state of pods and can update them automatically using a rolling update technique, assuring pod availability and scalability.</p>
+<h3 id="daemonsets">DaemonSets:</h3>
+<p>A daemonset ensures that a pod is running on every node in the cluster. DaemonSets are often used to run services that need to be available on all nodes, such as logging and monitoring services.</p>
+<h3 id="ingresses">Ingresses:</h3>
+<p>An ingress is a way to expose services to the outside world. Ingresses can be used to route traffic to different services, balance traffic, and provide SSL/TLS termination.</p>
+<h3 id="advanced-techniques">Advanced Techniques</h3>
+<p>While the basic Kubernetes concepts introduced above can handle a majority of use-cases, some advanced features further enhance the capabilities of Kubernetes:</p>
+<ul>
+<li>
+<p><strong>StatefulSets</strong>: While deployments are perfect for stateless applications, StatefulSets provide guarantees about the ordering and uniqueness of Pods, ideal for stateful applications like databases.</p>
+</li>
+<li>
+<p><strong>Jobs and CronJobs</strong>: Jobs are used when work needs to be done once, while CronJobs are for tasks that need to be done periodically.</p>
+</li>
+<li>
+<p><strong>ConfigMaps and Secrets</strong>: These are used to manage the configuration of your applications separate from your container image, enhancing the portability and security of your applications.</p>
+</li>
+</ul>
+<p>Horizontal Pod Autoscaling: This feature allows Kubernetes to automatically add or remove Pods from a deployment or replica set based on the CPU usage or other select metrics.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Kubernetes has revolutionized the way we build and deploy our applications, providing us with the ability to orchestrate and manage containers at scale. With a thorough understanding of its core concepts, we can design systems that are resilient, scalable, and efficient.</p>
+
             </div>
           </div>
         </div>
@@ -191,6 +233,14 @@
                   
                   <li class="list-inline-item">
                     <a href="https://www.danielsobrado.com/categories/devops">Dev ops</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kubernetes">Kubernetes</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/concepts">Concepts</a>
                   </li>
                   
                 </ul>
@@ -280,30 +330,30 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">28 Sep 2018</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -313,11 +363,7 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
@@ -329,11 +375,9 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -341,23 +385,13 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
@@ -365,21 +399,11 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
