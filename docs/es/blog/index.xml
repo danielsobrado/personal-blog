@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>Conceptos de Kubernetes</title>
+      <link>https://www.danielsobrado.com/es/blog/kubernetes-concepts/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/kubernetes-concepts/</guid>
+      <description>En esta entrada de blog, nos adentramos en el mundo de Kubernetes, un sistema extremadamente eficiente diseñado para optimizar la gestión de aplicaciones contenerizadas en un entorno de cluster.</description>
+    </item>
+    
+    <item>
       <title>Numpy: ndarrays</title>
       <link>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>

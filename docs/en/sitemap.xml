@@ -282,12 +282,42 @@
   </url><url>
     <loc>https://www.danielsobrado.com/tags/devops/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/devops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/devops/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/kubernetes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-concepts/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-concepts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-concepts/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>

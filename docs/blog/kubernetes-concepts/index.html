@@ -101,6 +101,36 @@
           </ul>
           
         
+          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
+            
+            
+            
+            
+            
+            
+            
+            
+            <option id="en" value="https://www.danielsobrado.com/blog/kubernetes-concepts/" selected>En</option>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <option id="es" value="https://www.danielsobrado.com/es/blog/kubernetes-concepts/">Es</option>
+            
+            
+            
+            
+          </select>
+          
 
           
           
@@ -156,48 +186,44 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>In this blog article, we will go over some fundamental Kubernetes ideas. Kubernetes is an extremely capable framework for managing containerized applications in a clustered environment. It intends to improve the handling of connected, distributed components across various infrastructure. These ideas will help you comprehend what Kubernetes is capable of.</p>
+              <p>In this blog piece, we&rsquo;re delving into the world of Kubernetes, an exceedingly proficient system designed to streamline the management of containerized applications in a cluster environment. Our journey will be centered around understanding the essential concepts that underpin Kubernetes and exploring its vast capabilities.</p>
 <h3 id="pods">Pods</h3>
-<p>A pod is the basic unit of work in Kubernetes. It is a group of one or more containers that are scheduled together on the same node. Pods share resources such as CPU, memory, and storage.</p>
-<p>The reason for using pods rather than single containers is because there may be instances where numerous containers are closely related and it makes sense to operate them on the same machine. Pods are intended to provide co-located (on the same node), co-scheduled (start/stop at the same time) containers, much like a single virtual machine.</p>
-<h3 id="nodes">Nodes:</h3>
-<p>A node is a physical or virtual machine that runs Kubernetes. Nodes are responsible for running pods and providing resources to pods.</p>
-<p>Nodes are in charge of running pods and supplying resources to pods. They are managed by the control plane and can be thought of as Kubernetes cluster workers.</p>
-<h3 id="cluster">Cluster:</h3>
-<p>A cluster is a group of nodes that are managed by Kubernetes. A cluster can be made up of a single node or multiple nodes.</p>
-<p>The power of Kubernetes comes from the fact that it can manage clusters of machines and make them act like one big machine.</p>
-<h3 id="control-plane">Control plane:</h3>
-<p>The control plane is the brains of Kubernetes. It is responsible for scheduling pods, managing resources, and monitoring the cluster.</p>
-<p>It includes components like the kube-apiserver, etcd, kube-scheduler, kube-controller-manager, and cloud-controller-manager.</p>
-<h3 id="services">Services:</h3>
-<p>A service is a logical grouping of pods that are exposed to the outside world. Services provide a single point of access to pods, even if the pods are running on different nodes.</p>
-<p>Services are essentially a way to define policies for how traffic should be directed to pods.</p>
-<h3 id="labels">Labels:</h3>
-<p>Labels are used to identify and group pods. Labels can be used to select pods for scheduling, routing, and other operations.</p>
-<p>They are a versatile tool for dealing with pod sets and can be used in a variety of ways.</p>
-<h3 id="deployments">Deployments:</h3>
-<p>A deployment is a way to manage the lifecycle of pods. Deployments can be used to create, update, and delete pods.</p>
-<p>They specify the expected state of pods and can update them automatically using a rolling update technique, assuring pod availability and scalability.</p>
-<h3 id="daemonsets">DaemonSets:</h3>
-<p>A daemonset ensures that a pod is running on every node in the cluster. DaemonSets are often used to run services that need to be available on all nodes, such as logging and monitoring services.</p>
-<h3 id="ingresses">Ingresses:</h3>
-<p>An ingress is a way to expose services to the outside world. Ingresses can be used to route traffic to different services, balance traffic, and provide SSL/TLS termination.</p>
+<p>In the realm of Kubernetes, a Pod represents the primary building block. It&rsquo;s a cluster of one or more containers programmed to run in unison on a single node. Each pod is allocated a shared pool of resources such as CPU, memory, and storage.</p>
+<p>Deploying pods instead of individual containers is a strategic move designed to handle scenarios where various containers are interdependent and need to function on a single machine. Pods are architected to facilitate co-located (on the same node) and co-scheduled (starting/stopping simultaneously) containers, functioning much like a standalone virtual machine.</p>
+<h3 id="nodes">Nodes</h3>
+<p>Nodes in Kubernetes are either physical or virtual machines, responsible for the execution of pods and allocation of resources. Acting as the worker bees of the Kubernetes cluster, nodes execute the instructions of the control plane.</p>
+<h3 id="cluster">Cluster</h3>
+<p>The Cluster, a collection of nodes supervised by Kubernetes, forms the backbone of the system. It is this cluster mechanism that endows Kubernetes with its superpower – the ability to manage multiple machines as a unified entity.</p>
+<h3 id="control-plane">Control Plane</h3>
+<p>Deemed the brain of Kubernetes, the Control Plane oversees pod scheduling, resource allocation, and cluster monitoring. It constitutes components like the kube-apiserver, etcd, kube-scheduler, kube-controller-manager, and cloud-controller-manager.</p>
+<h3 id="services">Services</h3>
+<p>Services are logically assembled pods rendered accessible to external users. By offering a singular point of access to pods operating on different nodes, services shape traffic rules for pod interactions.</p>
+<h3 id="labels">Labels</h3>
+<p>Labels function as identifiers to categorize and group pods, playing a pivotal role in pod selection for tasks such as scheduling, routing, and other operations.</p>
+<h3 id="deployments">Deployments</h3>
+<p>Deployment stands as the mechanism to regulate the life cycle of pods. It can help to create, update, and delete pods. These deployments define the anticipated state of pods and facilitate automatic updates through a rolling update technique, ensuring pod availability and scalability.</p>
+<h3 id="daemonsets">DaemonSets</h3>
+<p>DaemonSets serve to guarantee the execution of a pod on each node within the cluster. This feature is particularly advantageous for services such as logging and monitoring, which need to be omnipresent across all nodes.</p>
+<h3 id="ingresses">Ingresses</h3>
+<p>An Ingress is a pathway to expose services to external users. It is primarily leveraged to direct traffic to distinct services, distribute traffic, and provide SSL/TLS termination.</p>
 <h3 id="advanced-techniques">Advanced Techniques</h3>
-<p>While the basic Kubernetes concepts introduced above can handle a majority of use-cases, some advanced features further enhance the capabilities of Kubernetes:</p>
+<p>Apart from the primary Kubernetes concepts delineated above, there are advanced features that further augment the potential of Kubernetes:</p>
 <ul>
 <li>
-<p><strong>StatefulSets</strong>: While deployments are perfect for stateless applications, StatefulSets provide guarantees about the ordering and uniqueness of Pods, ideal for stateful applications like databases.</p>
+<p><strong>StatefulSets</strong>: Ideally suited for stateful applications like databases, StatefulSets assure the order and uniqueness of Pods. This is in contrast to Deployments, which are tailored for stateless applications.</p>
 </li>
 <li>
-<p><strong>Jobs and CronJobs</strong>: Jobs are used when work needs to be done once, while CronJobs are for tasks that need to be done periodically.</p>
+<p><strong>Jobs and CronJobs</strong>: While Jobs are employed for tasks that need a one-time execution, CronJobs cater to tasks that necessitate periodic execution.</p>
 </li>
 <li>
-<p><strong>ConfigMaps and Secrets</strong>: These are used to manage the configuration of your applications separate from your container image, enhancing the portability and security of your applications.</p>
+<p><strong>ConfigMaps and Secrets</strong>: These mechanisms manage your applications&rsquo; configuration independent of your container image, thereby enhancing portability and security.</p>
+</li>
+<li>
+<p><strong>Horizontal Pod Autoscaling</strong>: This functionality enables Kubernetes to automatically scale the number of Pods in a Deployment or Replica Set based on CPU utilization or other specified metrics.</p>
 </li>
 </ul>
-<p>Horizontal Pod Autoscaling: This feature allows Kubernetes to automatically add or remove Pods from a deployment or replica set based on the CPU usage or other select metrics.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>Kubernetes has revolutionized the way we build and deploy our applications, providing us with the ability to orchestrate and manage containers at scale. With a thorough understanding of its core concepts, we can design systems that are resilient, scalable, and efficient.</p>
+<h3 id="wrapping-up">Wrapping Up</h3>
+<p>Kubernetes has revolutionized the way we develop and deploy applications. It equips us with the tools to orchestrate and manage containers on a massive scale. With a comprehensive grasp of its core concepts, we can design robust, scalable, and efficient systems.</p>
 
             </div>
           </div>

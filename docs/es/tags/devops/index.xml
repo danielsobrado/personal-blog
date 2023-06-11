@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on </title>
+    <link>https://www.danielsobrado.com/es/tags/devops/</link>
+    <description>Recent content in DevOps on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Mon, 10 Oct 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conceptos de Kubernetes</title>
+      <link>https://www.danielsobrado.com/es/blog/kubernetes-concepts/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/kubernetes-concepts/</guid>
+      <description>En esta entrada de blog, nos adentramos en el mundo de Kubernetes, un sistema extremadamente eficiente diseñado para optimizar la gestión de aplicaciones contenerizadas en un entorno de cluster.</description>
+    </item>
+    
+  </channel>
+</rss>
