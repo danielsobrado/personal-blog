@@ -5,7 +5,7 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Let&#39;s review the basics concepts to get familiar with data science. Simple definitions for beginners that will allow them to deep dive into the theory and practice of Data Science and Machine Learning.">
+    <meta name="description" content="Let&#39;s review the basic concepts to get familiar with data science. Simple definitions for beginners that will allow them to deep dive into the theory and practice of Data Science and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -101,36 +101,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/datascience-concepts/">En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/datascience-concepts/" selected>Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -187,23 +157,63 @@
             </ul>
             <div class="post-content">
               <p>So many new concepts for the beginner data scientist, let´s start one by one:</p>
-<h1 id="tensor">Tensor</h1>
-<p>A tensor is a generalized matrix, it is defined by his rank, a rank zero tensor, is just a number, while a rank two tensor is a two dimensional matrix or array.</p>
-<p>See: <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">What’s the difference between a matrix and a tensor?</a></p>
-<h1 id="features">Features</h1>
-<h1 id="data-splits">Data Splits</h1>
+<h3 id="tensor">Tensor</h3>
+<p>A tensor is a generalized matrix, it is defined by its rank. A rank zero tensor is just a number, while a rank two tensor is a two-dimensional matrix or array.</p>
+<p>For more details: <a href="https://medium.com/@quantumsteinke/whats-the-difference-between-a-matrix-and-a-tensor-4505fbdc576c">What’s the difference between a matrix and a tensor?</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Here is a simple example in Python</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A scalar (rank-0 tensor)</span>
+</span></span><span style="display:flex;"><span>scalar <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A vector (rank-1 tensor)</span>
+</span></span><span style="display:flex;"><span>vector <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A matrix (rank-2 tensor)</span>
+</span></span><span style="display:flex;"><span>matrix <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>],[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>]])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Higher order tensor (rank-3 tensor)</span>
+</span></span><span style="display:flex;"><span>tensor <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array([[[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>],[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>]], [[<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>],[<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">11</span>,<span style="color:#ae81ff">12</span>]]])
+</span></span></code></pre></div><h3 id="features">Features</h3>
+<p>In Machine Learning, features are individual measurable properties or characteristics of a phenomenon being observed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># For example, considering the phenomenon is a dataset of houses for sale, the features might include:</span>
+</span></span><span style="display:flex;"><span>features <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Area&#34;</span>, <span style="color:#e6db74">&#34;Bedrooms&#34;</span>, <span style="color:#e6db74">&#34;Bathrooms&#34;</span>, <span style="color:#e6db74">&#34;Location&#34;</span>]
+</span></span></code></pre></div><h3 id="data-splits">Data Splits</h3>
 <ul>
 <li><strong>Training set</strong>: This is the biggest set where we run our learning algorithm on.</li>
 <li><strong>Development set</strong>: Also called <strong>Hold-out set</strong>, we use this set to tune hyper-parameter, select features etc.</li>
 <li><strong>Test set</strong>: We evaluate the final performance of our algorithm with this set, we don´t re-use it, if we realized that we need to validate again against the test set, we should collect more data.</li>
 </ul>
-<h1 id="terms-for-simple-linear-regression">Terms for Simple Linear Regression</h1>
+<h3 id="terms-for-simple-linear-regression">Terms for Simple Linear Regression</h3>
 <ul>
 <li>Response, dependent variable, Y-variable, target, outcome: This is the variable we are trying to predict.</li>
-<li>Independent variable</li>
+<li>Independent variable, features, predictors: These are the variables we use to predict the response.</li>
 </ul>
-<h1 id="regression-vs-classification">Regression vs Classification</h1>
-<h1 id="supervised-non-supervised-and-reinforcement">Supervised, non-supervised and reinforcement</h1>
+<h3 id="regression-vs-classification">Regression vs Classification</h3>
+<p>Classification and regression are two types of supervised machine learning methods.</p>
+<p>Based on the input variables, regression predicts a continuous output variable, whereas classification predicts a categorical output.</p>
+<h3 id="categorical-vs-continuous-variables">Categorical vs Continuous Variables</h3>
+<p>The data in the field of data science can be broadly categorized as categorical or continuous.</p>
+<ul>
+<li><strong>Categorical Variables</strong>: These are variables that can be divided into multiple categories but having a numerical value may not make sense. For example, a variable like &lsquo;color&rsquo; might have categories such as &lsquo;red&rsquo;, &lsquo;blue&rsquo;, &lsquo;green&rsquo; etc. But assigning a numerical value like &lsquo;red&rsquo; = 1, &lsquo;blue&rsquo; = 2 would not make sense as there is no order or value to these colors.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># An example of categorical variable</span>
+</span></span><span style="display:flex;"><span>car_colors <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Red&#39;</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>, <span style="color:#e6db74">&#39;Green&#39;</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>, <span style="color:#e6db74">&#39;Red&#39;</span>, <span style="color:#e6db74">&#39;Green&#39;</span>, <span style="color:#e6db74">&#39;Green&#39;</span>, <span style="color:#e6db74">&#39;Red&#39;</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>]
+</span></span></code></pre></div><p>There are also ordinal categorical variables where the categories have an inherent order, such as a variable like &lsquo;satisfaction&rsquo; with categories like &rsquo;not at all&rsquo;, &lsquo;somewhat&rsquo;, &lsquo;very&rsquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># An example of ordinal categorical variable</span>
+</span></span><span style="display:flex;"><span>customer_satisfaction <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;not at all&#39;</span>, <span style="color:#e6db74">&#39;somewhat&#39;</span>, <span style="color:#e6db74">&#39;somewhat&#39;</span>, <span style="color:#e6db74">&#39;very&#39;</span>, <span style="color:#e6db74">&#39;not at all&#39;</span>, <span style="color:#e6db74">&#39;very&#39;</span>]
+</span></span></code></pre></div><ul>
+<li><strong>Continuous Variables</strong>: These are variables that can take on any value within a range. For example, the height of a person, temperature of a day, the price of a stock; these can be any number within a certain range and are thus continuous variables.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># An example of continuous variable</span>
+</span></span><span style="display:flex;"><span>temperatures <span style="color:#f92672">=</span> [<span style="color:#ae81ff">20.5</span>, <span style="color:#ae81ff">25.3</span>, <span style="color:#ae81ff">23.1</span>, <span style="color:#ae81ff">26.7</span>, <span style="color:#ae81ff">22.5</span>, <span style="color:#ae81ff">24.2</span>]
+</span></span></code></pre></div><h3 id="supervised-non-supervised-and-reinforcement">Supervised, non-supervised and reinforcement</h3>
+<p>These are three types of machine learning:</p>
+<ul>
+<li><strong>Supervised learning</strong>: The model learns from labeled training data, and aims to predict labels for new, unseen data.</li>
+<li><strong>Unsupervised learning</strong>: The model learns from unlabeled data and discovers patterns or structures in the input data.</li>
+<li><strong>Reinforcement learning</strong>: The model learns to perform an action from experience. It decides the action to perform based on the environment to maximize some notion of cumulative reward.</li>
+</ul>
 
             </div>
           </div>
@@ -316,30 +326,30 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/es/blog/spark-introduction-tungsten/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">28 Sep 2018</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/es/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/es/blog/data-preparation-categoricals/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/6ssWIOo.png" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/es/blog/data-preparation-categoricals/">Data Preparation: Categorical</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">25 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -349,45 +359,21 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/bayesian">Bayesian</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/clustering">Clustering</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/deep-learning">Deep learning</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/entropy">Entropy</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/functional-programming">Functional programming</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/java">Java</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/kaggle">Kaggle</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/linear-regression">Linear regression</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/logistic-regression">Logistic regression</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/machine-data">Machine data</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/microservices">Microservices</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/modelling">Modelling</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
@@ -395,17 +381,9 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/scikit-learn">Scikit learn</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/scipy">Scipy</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/soa">Soa</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/es/tags/spark">Spark</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/es/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
