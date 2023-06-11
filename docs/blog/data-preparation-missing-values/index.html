@@ -5,7 +5,7 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results.. Missing values are one of the first things we need to deal with.">
+    <meta name="description" content="Data cleaning and preprocessing are crucial steps in any Data Science project. One of the most common problems we encounter is the issue of missing values. In this post, we will discuss various strategies to handle missing values effectively.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -101,36 +101,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/data-preparation-missing-values/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/data-preparation-missing-values/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -186,34 +156,63 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Missing Values are part of our data cleaning and pre-processing tasks, we are going to face features with missing values and we need to take a decision about what to do with those.</p>
-<ul>
-<li>Ignore the feature if there are too many missing values.</li>
-<li>Drop the rows that are  missing.</li>
-<li>Apply a calculation to fill the, like the mean or the mode, we can do this on a stratified manner.</li>
-<li>Create a new column to reflect that these values are missing.</li>
-</ul>
-<h1 id="visualizing-missing-values">Visualizing missing Values</h1>
-<p>import missingno as msno
-msno.matrix(target_DF)</p>
-<p>import pandas as pd
-census_data.isnull().sum()</p>
-<p><a href="https://towardsdatascience.com/working-with-missing-data-in-machine-learning-9c0a430df4ce">https://towardsdatascience.com/working-with-missing-data-in-machine-learning-9c0a430df4ce</a></p>
-<p>df.dropna(subset = [&lsquo;column1_name&rsquo;, &lsquo;column2_name&rsquo;, &lsquo;column3_name&rsquo;])
-df.dropna(how=&lsquo;all&rsquo;)</p>
-<p>Drop row if it does not have at least ten values that are <strong>not</strong> NaN
-df.dropna(thresh=10)</p>
-<p>Take only the finite numbers:</p>
-<p>df = df[np.isfinite(df[&lsquo;column1_name&rsquo;])]</p>
-<p>pandas notnull is preferred to isfinite:</p>
-<p>filtered_df = df[df[&lsquo;column1_name&rsquo;].notnull()]</p>
-<h1 id="inputting-numerical-values">Inputting numerical values</h1>
-<h1 id="inputting-categorical-values">Inputting categorical values</h1>
-<h2 id="average-inputation">Average inputation</h2>
-<h2 id="regression-substitution">Regression Substitution</h2>
-<h2 id="multiple-inputation">Multiple inputation</h2>
-<p><a href="https://people.hofstra.edu/Jeffrey_J_Froh/webpage%20update_june%26july08/wayman_multimp_aera2003.pdf">https://people.hofstra.edu/Jeffrey_J_Froh/webpage%20update_june%26july08/wayman_multimp_aera2003.pdf</a>
-<a href="https://measuringu.com/handle-missing-data/">https://measuringu.com/handle-missing-data/</a></p>
+              <p>Raw data is often messy and missing values are a common issue that data scientists have to deal with. Ignoring these missing values or handling them improperly may lead to biased or incorrect results. Therefore, understanding and correctly handling missing data is a critical step in the data preparation process.</p>
+<h3 id="strategies-for-handling-missing-values">Strategies for Handling Missing Values</h3>
+<p>There are several strategies to handle missing values. Each strategy has its own advantages and disadvantages and the choice of strategy depends on the problem at hand. Here are some of the most common strategies:</p>
+<ol>
+<li><strong>Ignore the feature</strong>: If a feature has too many missing values, it might be best to drop the feature altogether.</li>
+<li><strong>Drop the rows</strong>: If only a few rows have missing values, it might be best to drop those rows.</li>
+<li><strong>Apply a calculation</strong>: For numerical features, you might replace the missing values with the mean, median or mode. For categorical features, you might replace the missing values with the most common category. If there is a relationship between rows, you might use stratified imputation methods.</li>
+<li><strong>Create a new column</strong>: Create a new binary feature that indicates whether or not the value was missing. This might be useful if the fact that the value is missing is informative.</li>
+</ol>
+<h3 id="visualizing-missing-values">Visualizing Missing Values</h3>
+<p>It&rsquo;s often useful to visualize missing data to understand the extent and pattern of missing data. We can use libraries like <code>missingno</code> to visualize missing data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> missingno <span style="color:#66d9ef">as</span> msno
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Assuming df is your DataFrame</span>
+</span></span><span style="display:flex;"><span>msno<span style="color:#f92672">.</span>matrix(df)
+</span></span></code></pre></div><h3 id="inputting-numerical-values">Inputting Numerical Values</h3>
+<p>For numerical values, you can use the mean, median or mode to replace missing values. You might also consider more sophisticated methods, like regression imputation or multiple imputation.</p>
+<p>Here is an example using pandas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Imputing with the mean</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;column_name&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;column_name&#39;</span>]<span style="color:#f92672">.</span>mean(), inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Imputing with the median</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;column_name&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;column_name&#39;</span>]<span style="color:#f92672">.</span>median(), inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="inputting-categorical-values">Inputting Categorical Values</h3>
+<p>For categorical values, you can replace missing values with the most common category. You can also consider using a placeholder value that indicates a missing value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Imputing with the most common category</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;column_name&#39;</span>]<span style="color:#f92672">.</span>fillna(df[<span style="color:#e6db74">&#39;column_name&#39;</span>]<span style="color:#f92672">.</span>mode()[<span style="color:#ae81ff">0</span>], inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h3 id="advanced-imputation-methods">Advanced Imputation Methods</h3>
+<p>More sophisticated imputation methods take into account the relationship between the feature with missing values and other features.</p>
+<ol>
+<li><strong>Regression Imputation</strong>: In this method, we use a regression model to predict the missing values based on other data.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.linear_model <span style="color:#f92672">import</span> LinearRegression
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Assuming that &#39;column_with_missing_values&#39; is the column with missing values and &#39;other_columns&#39; are the other columns</span>
+</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> LinearRegression()
+</span></span><span style="display:flex;"><span>lr<span style="color:#f92672">.</span>fit(df[df[<span style="color:#e6db74">&#39;column_with_missing_values&#39;</span>]<span style="color:#f92672">.</span>notnull()][<span style="color:#e6db74">&#39;other_columns&#39;</span>], df[df[<span style="color:#e6db74">&#39;column_with_missing_values&#39;</span>]<span style="color:#f92672">.</span>notnull()][<span style="color:#e6db74">&#39;column_with_missing_values&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>missing_values_prediction <span style="color:#f92672">=</span> lr<span style="color:#f92672">.</span>predict(df[df[<span style="color:#e6db74">&#39;column_with_missing_values&#39;</span>]<span style="color:#f92672">.</span>isnull()][<span style="color:#e6db74">&#39;other_columns&#39;</span>])
+</span></span><span style="display:flex;"><span>df<span style="color:#f92672">.</span>loc[df[<span style="color:#e6db74">&#39;column_with_missing_values&#39;</span>]<span style="color:#f92672">.</span>isnull(), <span style="color:#e6db74">&#39;column_with_missing_values&#39;</span>] <span style="color:#f92672">=</span> missing_values_prediction
+</span></span></code></pre></div><ol start="2">
+<li><strong>Multiple Imputation</strong>: This method is similar to regression imputation but instead of filling in one value, multiple imputations fill in the missing value multiple times. The analysis is then done on all the different datasets and the results are pooled. This method gives a more realistic estimation of the uncertainty caused by missing values.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.experimental <span style="color:#f92672">import</span> enable_iterative_imputer
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.impute <span style="color:#f92672">import</span> IterativeImputer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>imputer <span style="color:#f92672">=</span> IterativeImputer(max_iter<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>df_imputed <span style="color:#f92672">=</span> imputer<span style="color:#f92672">.</span>fit_transform(df)
+</span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Handling missing data is an important step in the data preparation process. In this post, we have reviewed various strategies to handle missing data. The choice of strategy depends on the problem at hand, the amount of missing data and the nature of the data.</p>
+<p>To further improve your skills in handling missing data, I recommend the following resources:</p>
+<ol>
+<li><a href="https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4">How to Handle Missing Data</a> by Towards Data Science</li>
+<li><a href="https://campus.datacamp.com/courses/dealing-with-missing-data-in-python">Dealing with Missing Data in Python</a> course by DataCamp</li>
+<li><a href="https://stefvanbuuren.name/fimd/">Flexible Imputation of Missing Data</a> book by Stef van Buuren</li>
+</ol>
 
             </div>
           </div>
@@ -342,30 +341,30 @@ df.dropna(thresh=10)</p>
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">28 Sep 2018</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -375,11 +374,7 @@ df.dropna(thresh=10)</p>
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
@@ -391,11 +386,7 @@ df.dropna(thresh=10)</p>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -403,23 +394,11 @@ df.dropna(thresh=10)</p>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
@@ -427,21 +406,11 @@ df.dropna(thresh=10)</p>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
