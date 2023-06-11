@@ -197,15 +197,6 @@
     </item>
     
     <item>
-      <title>Introduction to Machine Data</title>
-      <link>https://www.danielsobrado.com/blog/introduction-to-machine-data/</link>
-      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/introduction-to-machine-data/</guid>
-      <description>What is Machine Data The advent of affordable storage and processing capabilities has given us the ability to extract and process all kinds of data that can provide valuable insights.</description>
-    </item>
-    
-    <item>
       <title>Functional programming in Java: Functional Interfaces</title>
       <link>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
