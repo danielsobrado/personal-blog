@@ -30,6 +30,16 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</loc>
     <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/data-preparation-categoricals/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/data-preparation-categoricals/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/python-linear-regression/</loc>
   </url><url>
@@ -313,6 +323,16 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/data-preparation/</loc>
     <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/data-preparation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/data-preparation/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/cross-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
@@ -433,9 +453,29 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/concepts/</loc>
     <lastmod>2014-01-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/concepts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/concepts/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/datascience-concepts/</loc>
     <lastmod>2014-01-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/datascience-concepts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/datascience-concepts/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/author/</loc>
     <xhtml:link

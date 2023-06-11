@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science on </title>
+    <title>Data-Science on </title>
     <link>https://www.danielsobrado.com/categories/data-science/</link>
-    <description>Recent content in Data Science on </description>
+    <description>Recent content in Data-Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
@@ -14,6 +14,15 @@
       
       <guid>https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/</guid>
       <description>Loss Functions The loss function calculates the difference between the output of your model and the &amp;ldquo;Ground Truth&amp;rdquo; or actual values.</description>
+    </item>
+    
+    <item>
+      <title>Data Preparation: Categorical</title>
+      <link>https://www.danielsobrado.com/blog/data-preparation-categoricals/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
+      <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
     </item>
     
     <item>
@@ -50,6 +59,15 @@
       
       <guid>https://www.danielsobrado.com/blog/numpy-introduction/</guid>
       <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Data Science: Concepts</title>
+      <link>https://www.danielsobrado.com/blog/datascience-concepts/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/datascience-concepts/</guid>
+      <description>Navigating the world of data science can be a complex task, especially for those just beginning their journey.</description>
     </item>
     
   </channel>

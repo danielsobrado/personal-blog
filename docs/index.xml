@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Data Preparation: Categorical</title>
+      <link>https://www.danielsobrado.com/blog/data-preparation-categoricals/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
+      <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
+    </item>
+    
+    <item>
       <title>Dot Product</title>
       <link>https://www.danielsobrado.com/blog/dot-product/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
@@ -212,6 +221,15 @@
       
       <guid>https://www.danielsobrado.com/blog/basic-probability-concepts/</guid>
       <description>Introduction In this series of articles, We&amp;rsquo;ll dig deep into understanding Bayesian inference, starting from the basics.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Data Science: Concepts</title>
+      <link>https://www.danielsobrado.com/blog/datascience-concepts/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/datascience-concepts/</guid>
+      <description>Navigating the world of data science can be a complex task, especially for those just beginning their journey.</description>
     </item>
     
     <item>

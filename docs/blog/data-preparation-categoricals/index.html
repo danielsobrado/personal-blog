@@ -5,7 +5,7 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted,  combined, enriched, corrected and consolidated. Feeding our models with good quality data is a essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing techniques, like Dummy variables, One Hot Encoding and the Hashing trick.">
+    <meta name="description" content="Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted, combined, enriched, corrected and consolidated. Feeding our models with good quality data is essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing techniques, like Dummy variables, One Hot Encoding and the Hashing trick.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -186,11 +186,75 @@
               </li>
             </ul>
             <div class="post-content">
-              <h1 id="introduction-qualitative-feature-encoding">Introduction Qualitative feature encoding</h1>
-<h1 id="dummy-enconding-with-pandas">Dummy enconding with Pandas</h1>
-<h1 id="dictvectorizer">DictVectorizer</h1>
-<h1 id="one-hot-encoding">One-hot encoding</h1>
-<h1 id="hashing-trick">Hashing trick</h1>
+              <h3 id="introduction-qualitative-feature-encoding">Introduction Qualitative feature encoding</h3>
+<p>When dealing with machine learning algorithms, the format and quality of the input data are important to model performance. Categorical data, which is common in datasets, must be translated into a numerical representation for machine learning algorithms to understand and exploit. This is known as encoding.</p>
+<h3 id="dummy-encoding-with-pandas">Dummy encoding with Pandas</h3>
+<p>Pandas&rsquo; &lsquo;get_dummies&rsquo; method is an easy and convenient way to convert categorical variable(s) into dummy/indicator variables. It creates a binary column for each category and returns a sparse matrix.</p>
+<p>But, it has a drawback - if the categorical variable has many categories, the data space required can increase dramatically.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample data</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>]}
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Using get_dummies</span>
+</span></span><span style="display:flex;"><span>df_dummies <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>get_dummies(df, columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;color&#39;</span>], drop_first<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(df_dummies)
+</span></span></code></pre></div><h3 id="dictvectorizer">DictVectorizer</h3>
+<p>DictVectorizer is a helper function that converts a dict&rsquo;s feature array into vectors. It is useful when feature extraction generates a data dictionary and we want to convert it to feature vectors.</p>
+<p>DictVectorizer, like get_dummies, may require more memory if the categorical variable contains more categories.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.feature_extraction <span style="color:#f92672">import</span> DictVectorizer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample data</span>
+</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">4</span>}, 
+</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">3</span>}, 
+</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}, 
+</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create the DictVectorizer object: dv</span>
+</span></span><span style="display:flex;"><span>dv <span style="color:#f92672">=</span> DictVectorizer(sparse<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Apply dv on df: df_encoded</span>
+</span></span><span style="display:flex;"><span>df_encoded <span style="color:#f92672">=</span> dv<span style="color:#f92672">.</span>fit_transform(data_dict)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(df_encoded)
+</span></span></code></pre></div><h3 id="one-hot-encoding">One-hot encoding</h3>
+<p>One-shot encoding generates new (binary) columns that indicate the presence of each potential value in the original data. While it is a strong tool, if the categorical variable contains several categories, it might result in a large dimensionality.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OneHotEncoder
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#### Sample data</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;blue&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>], [<span style="color:#e6db74">&#39;red&#39;</span>]]
+</span></span><span style="display:flex;"><span>onehot_encoder <span style="color:#f92672">=</span> OneHotEncoder(sparse<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>onehot_encoded <span style="color:#f92672">=</span> onehot_encoder<span style="color:#f92672">.</span>fit_transform(data)
+</span></span><span style="display:flex;"><span>print(onehot_encoded)
+</span></span></code></pre></div><h3 id="hashing-trick">Hashing trick</h3>
+<p>The Hashing method is useful when we have a high number of categories in a categorical feature and want to minimize the dimension. It lets you provide an arbitrary number of characteristics in the output. It may, however, cause conflicts when various strings map to the same feature index.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.feature_extraction <span style="color:#f92672">import</span> FeatureHasher
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample data</span>
+</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">4</span>}, 
+</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">3</span>}, 
+</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}, 
+</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a FeatureHasher object: hasher</span>
+</span></span><span style="display:flex;"><span>hasher <span style="color:#f92672">=</span> FeatureHasher(n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Apply hasher to data_dict: hashed_features</span>
+</span></span><span style="display:flex;"><span>hashed_features <span style="color:#f92672">=</span> hasher<span style="color:#f92672">.</span>transform(data_dict)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(hashed_features<span style="color:#f92672">.</span>toarray())
+</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
+<p>Choosing the best encoding approach for your categorical data can boost the performance of your machine learning models dramatically. It is determined by several parameters, including the number of categories, the relevance of the categories, and the type of machine learning method utilized.</p>
+<h3 id="further-reading">Further Reading</h3>
+<p>Here are some resources to help you learn more about categorical feature encoding techniques:</p>
+<ol>
+<li><a href="https://scikit-learn.org/stable/modules/preprocessing.html">Scikit-Learn&rsquo;s Preprocessing Guide</a></li>
+<li><a href="https://www.kaggle.com/learn/intermediate-machine-learning">Kaggle&rsquo;s Intermediate Machine Learning Course</a></li>
+<li><a href="https://keras.io/guides/preprocessing_layers/">An Overview of Categorical Input Handling for Neural Networks by Keras</a></li>
+</ol>
 
             </div>
           </div>
@@ -319,30 +383,30 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">28 Sep 2018</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/data-preparation-categoricals/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/6ssWIOo.png" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-categoricals/">Data Preparation: Categorical</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">25 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -352,11 +416,7 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
@@ -368,11 +428,7 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -380,23 +436,11 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
@@ -404,21 +448,11 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>

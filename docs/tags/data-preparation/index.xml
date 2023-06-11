@@ -6,33 +6,14 @@
     <description>Recent content in Data Preparation on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/data-preparation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Data Preparation: Missing Records</title>
-      <link>https://www.danielsobrado.com/blog/data-preparation-missing-values/</link>
-      <pubDate>Sat, 27 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/data-preparation-missing-values/</guid>
-      <description>Missing Values are part of our data cleaning and pre-processing tasks, we are going to face features with missing values and we need to take a decision about what to do with those.</description>
-    </item>
-    
-    <item>
-      <title>Data Preparation: Numeric</title>
-      <link>https://www.danielsobrado.com/blog/data-preparation-numeric/</link>
-      <pubDate>Fri, 26 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/data-preparation-numeric/</guid>
-      <description>Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
-Normalization </description>
-    </item>
-    
+    <lastBuildDate>Thu, 25 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/data-preparation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Preparation: Categorical</title>
       <link>https://www.danielsobrado.com/blog/data-preparation-categoricals/</link>
       <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
-      <description>Introduction Qualitative feature encoding Dummy enconding with Pandas DictVectorizer One-hot encoding Hashing trick </description>
+      <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
     </item>
     
   </channel>
