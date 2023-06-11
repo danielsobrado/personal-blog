@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 15 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data</title>
-      <link>https://www.danielsobrado.com/tags/data/</link>
+      <title>Dot Product</title>
+      <link>https://www.danielsobrado.com/tags/dot-product/</link>
       <pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/tags/data/</guid>
+      <guid>https://www.danielsobrado.com/tags/dot-product/</guid>
       <description></description>
     </item>
     
@@ -67,6 +67,15 @@
       <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/loss-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>https://www.danielsobrado.com/tags/data/</link>
+      <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/data/</guid>
       <description></description>
     </item>
     

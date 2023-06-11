@@ -54,9 +54,6 @@
                 href="https://www.danielsobrado.com/categories/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/data/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
     <lastmod>2023-05-15T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -69,6 +66,9 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/data-science/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/dot-product/</loc>
+    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/dot-product/</loc>
     <lastmod>2023-05-15T00:00:00+00:00</lastmod>
@@ -268,6 +268,9 @@
     <lastmod>2016-07-20T15:30:02+04:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/acid/</loc>
+    <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/data/</loc>
     <lastmod>2016-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/numpy/</loc>
@@ -477,12 +480,6 @@
                 href="https://www.danielsobrado.com/author/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/functional-programming/</loc>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/java/</loc>
-  </url><url>
     <loc>https://www.danielsobrado.com/author/daniel-sobrado/</loc>
     <xhtml:link
                 rel="alternate"
@@ -494,5 +491,11 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/author/daniel-sobrado/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/functional-programming/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/java/</loc>
   </url>
 </urlset>
