@@ -28,6 +28,9 @@
                 href="https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</loc>
+    <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/python-linear-regression/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/</loc>
@@ -307,6 +310,9 @@
                 hreflang="es-es"
                 href="https://www.danielsobrado.com/es/blog/shared-database/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/es/tags/data-preparation/</loc>
+    <lastmod>2014-12-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/cross-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>

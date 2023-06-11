@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Data Preparation: Categorical</title>
+      <link>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</guid>
+      <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
+    </item>
+    
+    <item>
       <title>Linear Regression</title>
       <link>https://www.danielsobrado.com/es/blog/python-linear-regression/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
