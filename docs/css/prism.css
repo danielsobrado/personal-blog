@@ -34,6 +34,7 @@ pre[class*="language-"] {
 	margin: .5em 0;
 	overflow: visible;
 	padding: 0;
+	border-radius: 10px;  /* Added for rounded corners */
 }
 pre[class*="language-"]>code {
 	position: relative;
@@ -44,6 +45,7 @@ pre[class*="language-"]>code {
 	background-size: 3em 3em;
 	background-origin: content-box;
 	background-attachment: local;
+	border-radius: 10px;
 }
 
 code[class*="language"] {
@@ -228,7 +230,7 @@ pre .line-highlight {
 
 pre[data-line] {
 	position: relative;
-	padding: 1em 0 1em 3em;
+	padding: 0 0 0 3em; 
 }
 
 .line-highlight {
