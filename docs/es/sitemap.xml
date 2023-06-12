@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</loc>
-    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/blog/spark-variable-precedence/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/blog/spark-variable-precedence/"
-                />
-  </url><url>
     <loc>https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -80,6 +67,19 @@
                 rel="alternate"
                 hreflang="es-es"
                 href="https://www.danielsobrado.com/es/categories/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</loc>
+    <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/spark-variable-precedence/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/spark-variable-precedence/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/spark/</loc>
