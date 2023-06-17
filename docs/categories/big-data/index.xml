@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Big Data on </title>
+    <title>Big-Data on </title>
     <link>https://www.danielsobrado.com/categories/big-data/</link>
-    <description>Recent content in Big Data on </description>
+    <description>Recent content in Big-Data on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precedence of properties</title>
       <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://www.danielsobrado.com/blog/spark-variable-precedence/</guid>
       <description>Proper Properties When starting with Spark jobs, one of the most common tasks is to understand how to finetune properties.</description>
+    </item>
+    
+    <item>
+      <title>Installing ELK Stack on Windows</title>
+      <link>https://www.danielsobrado.com/blog/elk-installation/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/elk-installation/</guid>
+      <description>Introduction The ELK Stack (Elasticsearch, Logstash, and Kibana) has matured into a robust data management and analysis platform.</description>
     </item>
     
     <item>

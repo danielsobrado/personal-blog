@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>Installing ELK Stack on Windows</title>
+      <link>https://www.danielsobrado.com/blog/elk-installation/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/elk-installation/</guid>
+      <description>Introduction The ELK Stack (Elasticsearch, Logstash, and Kibana) has matured into a robust data management and analysis platform.</description>
+    </item>
+    
+    <item>
       <title>Typescript Essentials - 1</title>
       <link>https://www.danielsobrado.com/blog/typescript-essentials-1/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
