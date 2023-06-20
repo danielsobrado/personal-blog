@@ -6,7 +6,7 @@
     <description>Recent content in Python on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Feb 2021 15:30:02 +0400</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Preparation: Missing Records</title>
       <link>https://www.danielsobrado.com/blog/data-preparation-missing-values/</link>
@@ -23,6 +23,15 @@
       
       <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
       <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
+    </item>
+    
+    <item>
+      <title>Euclidean Space vs Manifold</title>
+      <link>https://www.danielsobrado.com/blog/euclidean-manifold/</link>
+      <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/euclidean-manifold/</guid>
+      <description>Understanding Euclidean Spaces In mathematics and science, Euclidean space is a fundamental concept.</description>
     </item>
     
     <item>

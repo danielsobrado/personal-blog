@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Euclidean Space vs Manifold</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="Exploring the concepts of Euclidean spaces and manifolds, their visualizations, pros, and cons with Python code examples.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -101,36 +101,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -152,14 +122,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Euclidean Space vs Manifold</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Euclidean Space vs Manifold</li>
 				</ol>
 			</div>
 		</div>
@@ -167,244 +137,170 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/FfQ6wEF.png" alt="Kubernetes Concepts">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">10</h3>
-        <p class="mb-0">Oct</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="border rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/EJwUNtM.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Euclidean Space vs Manifold</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 17 May</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/data%20science"> Data science</a>
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/maths"> Maths</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h3 id="understanding-euclidean-spaces">Understanding Euclidean Spaces</h3>
+<p>In mathematics and science, Euclidean space is a fundamental concept. Is a sort of space characterized by its flat geometry. This means that regardless of where they are in space, all distances and angles are measured the same manner. In mathematics and physics, Euclidean space is the most frequent type of space.</p>
+<blockquote>
+<p>We can think of it as a straight line in a 1-dimensional Euclidean space. It becomes a plane in a 2-dimensional Euclidean space, the common canvas of our high-school geometry. However, when we progress into higher dimensions, visual intuition can become difficult.</p>
+</blockquote>
+<p>Let&rsquo;s create an easy-to-understand graphic depiction of 2D Euclidean space.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate points</span>
+</span></span><span style="display:flex;"><span>x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>X, Y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>meshgrid(x, y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Plot</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>plot(X, Y, marker<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>, linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;none&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;2D Euclidean space&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;x&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;y&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h4 id="pros-and-cons-of-euclidean-spaces">Pros and Cons of Euclidean Spaces</h4>
+<ul>
+<li>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Simple and intuitive: We live in a 3-dimensional Euclidean world, and it&rsquo;s quite natural for us to understand it.</li>
+<li>Mathematically tractable: Many mathematical concepts are easy to handle in Euclidean spaces.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong></p>
+<ul>
+<li>Doesn&rsquo;t cover all cases: Euclidean geometry can&rsquo;t explain some phenomena in modern physics. The geometry of spacetime according to the general relativity, for instance, is non-Euclidean.</li>
+</ul>
+</li>
+</ul>
+<h3 id="understanding-manifolds">Understanding Manifolds</h3>
+<p>A space that is not flat is called a manifold. This implies that measurements of angles and distances can vary depending on where you are in the space. Curved surfaces like the surface of a sphere or a doughnut are frequently modeled using manifolds.</p>
+<p>A space that is locally equivalent to Euclidean space is known as a manifold. In other words, a manifold begins to resemble Euclidean space as you zoom in on any particular point on it.</p>
+<p>The surface of a sphere, which is a 2-dimensional manifold, is another well-known illustration of a manifold. Any point on the sphere begins to resemble a two-dimensional plane when you zoom closer on it.</p>
+<p>Let&rsquo;s create a 3D model of the 2D manifold. (the surface of a sphere).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> mpl_toolkits.mplot3d <span style="color:#f92672">import</span> Axes3D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate data</span>
+</span></span><span style="display:flex;"><span>phi <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, np<span style="color:#f92672">.</span>pi, <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>theta <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>pi, <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>phi, theta <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>meshgrid(phi, theta)
+</span></span><span style="display:flex;"><span>X <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sin(phi) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>cos(theta)
+</span></span><span style="display:flex;"><span>Y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sin(phi) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>sin(theta)
+</span></span><span style="display:flex;"><span>Z <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>cos(phi)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Plot</span>
+</span></span><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>, projection<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;3d&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>plot_surface(X, Y, Z, rstride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, cstride<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;c&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.6</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;2D Manifold (Surface of a Sphere)&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h4 id="pros-and-cons-of-manifolds">Pros and Cons of Manifolds</h4>
+<ul>
+<li>
+<p><strong>Pros</strong></p>
+<ul>
+<li>Very flexible: They can describe a wide variety of geometric and topological properties.</li>
+<li>Applicable to advanced physics: The concepts of manifolds are used in advanced fields such as relativity and string theory.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong></p>
+<ul>
+<li>Can be difficult to understand: Visualizing and understanding higher-dimensional manifolds can be non-trivial.</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2feuclidean-manifold%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Euclidean%20Space%20vs%20Manifold&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2feuclidean-manifold%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2feuclidean-manifold%2f&amp;resubmit=true&amp;title=Euclidean%20Space%20vs%20Manifold"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Euclidean%20Space%20vs%20Manifold&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2feuclidean-manifold%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/python">Python</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kubernetes-concepts/" class="h4 font-primary text-dark">Kubernetes Concepts</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/9yUCzHn.png" alt="Introduction to Derivatives">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">20</h3>
-        <p class="mb-0">Jul</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/introduction-derivatives/" class="h4 font-primary text-dark">Introduction to Derivatives</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/2tRFBca.png" alt="ACID Properties">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">May</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/acid/" class="h4 font-primary text-dark">ACID Properties</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/vhMJdwJ.png" alt="Numpy: ndarrays">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">29</h3>
-        <p class="mb-0">Feb</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/numpy-ndarrays/" class="h4 font-primary text-dark">Numpy: ndarrays</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/oQNt9Gt.jpg" alt="Numpy: Introduction">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">28</h3>
-        <p class="mb-0">Feb</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/numpy-introduction/" class="h4 font-primary text-dark">Numpy: Introduction</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/cGYyp2K.jpg" alt="Let&#39;s discuss Microservices">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">28</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/discuss-microservices/" class="h4 font-primary text-dark">Let&#39;s discuss Microservices</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">Prev</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/" class="page-link">
-								1
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">
-								2
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/page/3/" class="page-link">
-								3
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/4/" class="page-link">
-								4
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/5/" class="page-link">
-								5
-							</a>
-						</li>
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/4/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -576,10 +472,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->

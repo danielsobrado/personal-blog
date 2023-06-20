@@ -45,7 +45,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -58,7 +58,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -71,7 +71,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -83,14 +83,11 @@
                 href="https://www.danielsobrado.com/categories/data-science/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/dot-product/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/dot-product/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/euclidean-manifold/</loc>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/categories/maths/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -102,8 +99,21 @@
                 href="https://www.danielsobrado.com/categories/maths/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/tags/python/</loc>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/python/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -114,6 +124,12 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/dot-product/</loc>
+    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/dot-product/</loc>
+    <lastmod>2023-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/categories/big-data/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
@@ -158,19 +174,6 @@
   </url><url>
     <loc>https://www.danielsobrado.com/blog/introducing-ray/</loc>
     <lastmod>2021-02-20T15:30:02+04:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/python/</loc>
-    <lastmod>2021-02-20T15:30:02+04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/python/"
-                />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/installing-kerberos/</loc>
     <lastmod>2021-01-12T14:31:02+04:00</lastmod>
