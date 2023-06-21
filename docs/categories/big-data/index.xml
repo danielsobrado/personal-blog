@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Kafka Introduction</title>
+      <link>https://www.danielsobrado.com/blog/kafkas-introduction/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kafkas-introduction/</guid>
+      <description>I hope you like these articles explaining all you need to know to get the Confluent Kafka Developer Certification.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Machine Data</title>
       <link>https://www.danielsobrado.com/blog/introduction-to-machine-data/</link>
       <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>

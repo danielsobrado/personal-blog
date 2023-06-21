@@ -71,6 +71,15 @@
     </item>
     
     <item>
+      <title>Kafka Introduction</title>
+      <link>https://www.danielsobrado.com/blog/kafkas-introduction/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kafkas-introduction/</guid>
+      <description>I hope you like these articles explaining all you need to know to get the Confluent Kafka Developer Certification.</description>
+    </item>
+    
+    <item>
       <title>Typescript Essentials - 1</title>
       <link>https://www.danielsobrado.com/blog/typescript-essentials-1/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>

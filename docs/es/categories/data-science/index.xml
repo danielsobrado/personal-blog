@@ -6,7 +6,7 @@
     <description>Recent content in Data-Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sat, 23 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loss functions</title>
       <link>https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/</link>
@@ -32,6 +32,15 @@
       
       <guid>https://www.danielsobrado.com/es/blog/python-linear-regression/</guid>
       <description>Introduction to Linear Regression A linear regression tries to estimate a linear relationship that best fits a given set of data.</description>
+    </item>
+    
+    <item>
+      <title>Euclidean Space vs Manifold</title>
+      <link>https://www.danielsobrado.com/es/blog/euclidean-manifold/</link>
+      <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/euclidean-manifold/</guid>
+      <description>Understanding Euclidean Spaces In mathematics and science, Euclidean space is a fundamental concept.</description>
     </item>
     
     <item>

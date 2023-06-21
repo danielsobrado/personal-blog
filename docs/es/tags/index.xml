@@ -6,7 +6,16 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Sun, 10 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://www.danielsobrado.com/es/tags/python/</link>
+      <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/tags/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Spark</title>
       <link>https://www.danielsobrado.com/es/tags/spark/</link>
@@ -58,15 +67,6 @@
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/tags/numpy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.danielsobrado.com/es/tags/python/</link>
-      <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/tags/python/</guid>
       <description></description>
     </item>
     
