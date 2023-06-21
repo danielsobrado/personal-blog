@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Kafka</title>
+    <title>Kafka Consumer Groups and replications factor</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -126,10 +126,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Kafka</h2>
+				<h2 class="text-white font-weight-bold">Kafka Consumer Groups and replications factor</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Kafka</li>
+					<li>Kafka Consumer Groups and replications factor</li>
 				</ol>
 			</div>
 		</div>
@@ -137,71 +137,121 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/8iUqwv8.png" alt="Kafka Consumer Groups and replications factor">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">16</h3>
-        <p class="mb-0">Oct</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="border rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/8iUqwv8.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Kafka Consumer Groups and replications factor</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 16 Oct</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/big-data"> Big data</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h3 id="kafka-consumer-group-a-brief-explanation">Kafka Consumer Group: A Brief Explanation</h3>
+<p>In your journey to understand the Kafka universe, understanding Consumer Groups is indispensable. Let&rsquo;s plunge into this concept.</p>
+<p>A Kafka Consumer Group is, at its core, a way of allowing a pool of consumers to divide the processing of data over multiple consumer instances, each of which is called a consumer. It might be easier to visualize this.</p>
+<p><img src="https://i.imgur.com/1lbbdpy.png" alt="Consumer Group"></p>
+<p>As depicted, a consumer group consists of several consumers. Here are the key aspects:</p>
+<ol>
+<li>Each consumer within a group will read from a unique set of partitions of the topics they are subscribed to. This way, the records within these partitions can be consumed in parallel, thus providing scalability and fault tolerance.</li>
+<li>Kafka ensures that a partition is only consumed by a single consumer within the group to maintain the order of the records. If a consumer fails, Kafka will reassign its partitions to other consumers in the group.</li>
+</ol>
+<p>But, what happens if the number of consumers changes, you might wonder? Let&rsquo;s see.</p>
+<p>If a new consumer joins a group, Kafka will trigger a rebalance. This implies that the assignment of partitions to consumers might change to accommodate the new consumer.</p>
+<p>Let&rsquo;s illustrate this with another image:</p>
+<p><img src="https://i.imgur.com/MPFbUg0.png" alt="Consumer Group Rebalance"></p>
+<p>Similarly, if a consumer leaves a group (either because of failure or shutdown), another rebalance will take place to redistribute the partitions of the leaving consumer to the remaining ones.</p>
+<h3 id="kafkas-replication-factor-an-overview">Kafka&rsquo;s Replication Factor: An Overview</h3>
+<p>Kafka&rsquo;s replication factor refers to the number of replicas of a Kafka partition within a Kafka cluster. It&rsquo;s a form of redundancy intended to provide resilience and fault-tolerance. To better illustrate this, let&rsquo;s consider an example.</p>
+<p><img src="https://i.imgur.com/1tRvgJN.png" alt="Replication Factor"></p>
+<p>In this example, each partition of the Kafka Topic has three replicas. Now, let&rsquo;s delve into some key points:</p>
+<ol>
+<li>Among the replicas, one is designated as the &ldquo;leader,&rdquo; while the others are &ldquo;followers.&rdquo; All read and write operations for a partition go through the leader, and then the changes get propagated to the followers.</li>
+<li>The leader and follower roles are not static. In case the leader fails, one of the followers will be elected as the new leader, which ensures high availability of the Kafka Topic.</li>
+</ol>
+<p>Now, what does this mean in terms of resilience and fault-tolerance?</p>
+<p>Essentially, a replication factor of N allows the system to tolerate up to N-1 broker failures without losing any data. However, a higher replication factor comes at the cost of more storage and network traffic due to the increased number of replicas.</p>
+<p>Let&rsquo;s consider another illustration:</p>
+<p><img src="https://i.imgur.com/PLCejV2.png" alt="Replication Factor"></p>
+<p>This image illustrates how, despite a broker failure, the Kafka Topic remains available thanks to its replicas.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-consumer-group-replication%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Kafka%20Consumer%20Groups%20and%20replications%20factor&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-consumer-group-replication%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-consumer-group-replication%2f&amp;resubmit=true&amp;title=Kafka%20Consumer%20Groups%20and%20replications%20factor"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Kafka%20Consumer%20Groups%20and%20replications%20factor&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-consumer-group-replication%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kafka">Kafka</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kafka-consumer-group-replication/" class="h4 font-primary text-dark">Kafka Consumer Groups and replications factor</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/qnDD1DQ.png" alt="Kafka Introduction">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Oct</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kafka-introduction/" class="h4 font-primary text-dark">Kafka Introduction</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -375,10 +425,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->

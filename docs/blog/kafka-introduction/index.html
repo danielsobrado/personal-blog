@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
     <meta charset="utf-8">
-    <title>Kafka</title>
+    <title>Kafka Introduction</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -126,10 +126,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Kafka</h2>
+				<h2 class="text-white font-weight-bold">Kafka Introduction</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Kafka</li>
+					<li>Kafka Introduction</li>
 				</ol>
 			</div>
 		</div>
@@ -137,71 +137,197 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/8iUqwv8.png" alt="Kafka Consumer Groups and replications factor">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">16</h3>
-        <p class="mb-0">Oct</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="border rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/qnDD1DQ.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Kafka Introduction</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 15 Oct</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/big-data"> Big data</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>I hope you like these articles explaining all you need to know to get the Confluent Kafka Developer Certification. I&rsquo;ll share  images of a Kafkaesque robotic girl that I generated using Stable Diffusion, I hope you enjoy it.</p>
+<h3 id="what-is-apache-kafka">What is Apache Kafka?</h3>
+<p>Apache Kafka, at its essence, is a distributed, open-source platform designed to efficiently process streams of records in real time. Let&rsquo;s delve into this concept.</p>
+<h3 id="key-concepts-and-functions">Key Concepts and Functions</h3>
+<p>We can envision Apache Kafka as an intermediary, something akin to a post office for the digital age, facilitating data exchanges between the producer, the entity generating the data, and the consumer, the one who needs it.</p>
+<p>Now, here are the principal ideas that shape Apache Kafka:</p>
+<ul>
+<li><strong>Producer</strong>: The source of the data. It could be anything from a user interface, a database, or even a weather station producing temperature readings.</li>
+<li><strong>Consumer</strong>: The recipient of the data, which uses it for various purposes such as analytics, processing, or forwarding to other systems.</li>
+<li><strong>Topic</strong>: The category or feed name where records are stored and published. Each producer can publish records to one or many Kafka topics.</li>
+<li><strong>Broker</strong>: A Kafka server that stores the records for a set amount of time.</li>
+<li><strong>Cluster</strong>: A set of Kafka brokers. Kafka stores copies of records across multiple brokers for fault tolerance.</li>
+</ul>
+<h3 id="main-advantages">Main Advantages</h3>
+<ol>
+<li><strong>Scalability</strong>: Kafka can handle high volumes of real-time data efficiently, making it highly scalable.</li>
+<li><strong>Fault-Tolerance</strong>: It ensures no data loss by replicating data across the cluster.</li>
+<li><strong>Low Latency</strong>: Kafka ensures fast data transmission, hence enabling real-time applications.</li>
+</ol>
+<h3 id="uses-and-applications">Uses and Applications</h3>
+<p>Apache Kafka finds its uses in a variety of scenarios. It&rsquo;s instrumental in real-time streaming data architectures to provide real-time analytics. Another use is in event sourcing, where state changes in an application are logged and ordered.</p>
+<p>On the other hand, Apache Kafka is used for website activity tracking, metrics, log aggregation, and in scenarios where a traditional message broker could be used.</p>
+<p>In summary, Apache Kafka is a robust, high-performing solution designed to handle real-time data pipeline needs.</p>
+<h3 id="the-role-of-a-kafka-producer">The Role of a Kafka Producer</h3>
+<p>The Kafka Producer, in the ecosystem of Apache Kafka, is the entity responsible for the creation and publication of data to the Kafka topics. The main role and operations of a Kafka Producer can be outlined as follows:</p>
+<ol>
+<li>
+<p><strong>Data Generation</strong>: The first and foremost role of a Kafka Producer is to generate data that needs to be sent. The data can originate from various sources such as a user interface, a sensor, a database, or any other data-producing entity.</p>
+</li>
+<li>
+<p><strong>Publishing Records</strong>: The Kafka Producer pushes, or &lsquo;publishes&rsquo;, the data (also known as &lsquo;records&rsquo;) to one or many Kafka topics. The topics act as feeds or categories where these records are stored and classified.</p>
+</li>
+<li>
+<p><strong>Serialization</strong>: Kafka Producers typically serialize the data before it is sent to the Kafka brokers. Serialization is the process of converting the data into bytes, making it suitable for network transmission and storage.</p>
+</li>
+<li>
+<p><strong>Partitioning</strong>: The Kafka Producer also plays a role in determining to which partition of the topic the data should be written. This can be done either manually or through a partitioner function.</p>
+</li>
+</ol>
+<h3 id="key-characteristics-of-kafka-producers">Key Characteristics of Kafka Producers</h3>
+<p>The Kafka Producer is designed with features that allow it to handle high volumes of data and ensure reliability:</p>
+<ul>
+<li>
+<p><strong>Asynchronous and Synchronous Sending</strong>: Kafka Producers can send messages asynchronously, which means the producer can send multiple records without waiting for acknowledgments from the broker. On the other hand, synchronous sending ensures that the producer receives an acknowledgment from the broker after each sent message, thus adding an extra layer of reliability.</p>
+</li>
+<li>
+<p><strong>Fault Tolerance</strong>: The Kafka Producer uses a feature called &lsquo;retention&rsquo; to handle temporary failures. Retention keeps sent records in a buffer, and if the broker does not acknowledge the receipt of the data, the producer can resend the data.</p>
+</li>
+</ul>
+<p>In a nutshell, the Kafka Producer plays a critical role in the Kafka system. It initiates the data pipeline by creating and sending data to the Kafka topics, thus enabling the real-time processing and streaming capabilities of Apache Kafka.</p>
+<h3 id="the-function-of-a-kafka-consumer">The Function of a Kafka Consumer</h3>
+<p>In the ecosystem of Apache Kafka, the Kafka Consumer is the entity that consumes or retrieves the data from the Kafka topics. Let&rsquo;s explore the main functions and operations of a Kafka Consumer:</p>
+<ol>
+<li>
+<p><strong>Data Retrieval</strong>: The primary function of a Kafka Consumer is to pull data from one or many Kafka topics. Unlike traditional message systems, data in Kafka is not pushed to the consumers. Instead, consumers pull data from the Kafka brokers at their own pace.</p>
+</li>
+<li>
+<p><strong>Deserialization</strong>: After fetching the data, Kafka Consumers typically deserialize it. Deserialization is the process of converting byte-form data back into its original form for further processing or analysis.</p>
+</li>
+<li>
+<p><strong>Grouping</strong>: Kafka Consumers can be grouped to consume data from the topic in a load-balanced manner. In a consumer group, each consumer is assigned a set of partitions from the topic, ensuring that each message is delivered to one consumer in the group. If a single consumer fails, others in the group can take over its partitions, thus providing fault tolerance.</p>
+</li>
+</ol>
+<h3 id="key-characteristics-of-kafka-consumers">Key Characteristics of Kafka Consumers</h3>
+<p>The Kafka Consumer is designed with features that help in effectively consuming data and ensuring reliability:</p>
+<ul>
+<li>
+<p><strong>Offsets</strong>: Kafka Consumers use a mechanism called &lsquo;offset&rsquo; to track the position of the next record they need to read. The offset is a unique identifier of each record in a Kafka topic&rsquo;s partition. Consumers commit their offset position in a topic, and if a consumer fails, it can restart processing from its last committed offset, thus ensuring no data loss.</p>
+</li>
+<li>
+<p><strong>At-Least-Once and At-Most-Once Delivery</strong>: Kafka Consumers support two types of message deliveries. In &lsquo;At-Least-Once&rsquo; delivery, messages are ensured to be delivered to the consumer but there may be duplicates. In &lsquo;At-Most-Once&rsquo; delivery, messages are delivered to the consumer only once without any duplication, but there is a risk of message loss if a consumer fails before committing the offset.</p>
+</li>
+</ul>
+<p>In a nutshell, the Kafka Consumer acts as the recipient in the Kafka system, fetching and processing data from Kafka topics. It&rsquo;s a key component enabling Apache Kafka&rsquo;s capabilities of real-time data processing and streaming.</p>
+<h3 id="kafka-brokers-and-their-role-in-a-cluster">Kafka Brokers and Their Role in a Cluster</h3>
+<p>In the universe of Apache Kafka, a Kafka Broker acts as a conduit for data storage and distribution. It is a critical component in the Kafka ecosystem and its function becomes even more vital when multiple brokers are combined to form a Kafka Cluster.</p>
+<h3 id="defining-kafka-brokers">Defining Kafka Brokers</h3>
+<p>A Kafka Broker is essentially a Kafka server that runs in a Kafka environment. It performs a set of pivotal roles:</p>
+<ol>
+<li>
+<p><strong>Storing Records</strong>: Kafka Brokers act as the resting place for the records, or data, that are produced by the Kafka Producers. Each record is stored for a predefined amount of time, irrespective of whether the data has been consumed or not.</p>
+</li>
+<li>
+<p><strong>Distributing Data</strong>: Kafka Brokers facilitate the flow of data between producers and consumers. They accept data from the producers, assign offsets to them, and serve them to the consumers when requested.</p>
+</li>
+</ol>
+<h3 id="understanding-kafka-clusters">Understanding Kafka Clusters</h3>
+<p>A Kafka Cluster is a system that comprises multiple Kafka Brokers. When grouped together in a cluster, these brokers can serve a series of functions that greatly enhance the capabilities of Kafka:</p>
+<ol>
+<li>
+<p><strong>Data Replication</strong>: Kafka Clusters ensure fault tolerance by replicating data across multiple brokers. This means that even if one broker fails, the data will not be lost as it is stored on other brokers.</p>
+</li>
+<li>
+<p><strong>Load Balancing</strong>: Kafka Clusters distribute the data load across multiple brokers. This helps to optimize data processing, as it prevents any single broker from becoming a bottleneck.</p>
+</li>
+<li>
+<p><strong>Scalability</strong>: Kafka Clusters can easily be scaled up or down. New brokers can be added to increase data handling capacity, and if necessary, brokers can be removed without causing system disruption.</p>
+</li>
+<li>
+<p><strong>Leader and Follower</strong>: For each Kafka topic, the cluster elects a broker as a &rsquo;leader&rsquo;, while the rest of the brokers act as &lsquo;followers&rsquo;. The leader handles all read and write requests for the topic, while the followers replicate the leader&rsquo;s data. If the leader fails, one of the followers can take up the leadership role, thus ensuring high availability.</p>
+</li>
+</ol>
+<p>In summary, a Kafka Broker is an indispensable node in a Kafka Cluster that facilitates data storage and transfer. When multiple brokers work in concert as a Kafka Cluster, they ensure high availability, fault tolerance, and scalability, thus underpinning the robustness and performance of Apache Kafka.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-introduction%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Kafka%20Introduction&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-introduction%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-introduction%2f&amp;resubmit=true&amp;title=Kafka%20Introduction"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Kafka%20Introduction&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkafka-introduction%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kafka">Kafka</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kafka-consumer-group-replication/" class="h4 font-primary text-dark">Kafka Consumer Groups and replications factor</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/qnDD1DQ.png" alt="Kafka Introduction">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Oct</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kafka-introduction/" class="h4 font-primary text-dark">Kafka Introduction</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -375,10 +501,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->

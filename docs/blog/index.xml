@@ -71,11 +71,20 @@
     </item>
     
     <item>
+      <title>Kafka Consumer Groups and replications factor</title>
+      <link>https://www.danielsobrado.com/blog/kafka-consumer-group-replication/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kafka-consumer-group-replication/</guid>
+      <description>Kafka Consumer Group: A Brief Explanation In your journey to understand the Kafka universe, understanding Consumer Groups is indispensable.</description>
+    </item>
+    
+    <item>
       <title>Kafka Introduction</title>
-      <link>https://www.danielsobrado.com/blog/kafkas-introduction/</link>
+      <link>https://www.danielsobrado.com/blog/kafka-introduction/</link>
       <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.danielsobrado.com/blog/kafkas-introduction/</guid>
+      <guid>https://www.danielsobrado.com/blog/kafka-introduction/</guid>
       <description>I hope you like these articles explaining all you need to know to get the Confluent Kafka Developer Certification.</description>
     </item>
     
