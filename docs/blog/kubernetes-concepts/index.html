@@ -187,25 +187,36 @@
             </ul>
             <div class="post-content">
               <p>In this article, we&rsquo;re introduzing the world of Kubernetes, an exceedingly proficient system designed to streamline the management of containerized applications in a cluster environment. Our journey will be centered around understanding the essential concepts that underpin Kubernetes and exploring its vast capabilities.</p>
-<h3 id="pods">Pods</h3>
-<p>In the realm of Kubernetes, a Pod represents the primary building block. It&rsquo;s a cluster of one or more containers programmed to run in unison on a single node. Each pod is allocated a shared pool of resources such as CPU, memory, and storage.</p>
-<p>Deploying pods instead of individual containers is a strategic move designed to handle scenarios where various containers are interdependent and need to function on a single machine. Pods are architected to facilitate co-located (on the same node) and co-scheduled (starting/stopping simultaneously) containers, functioning much like a standalone virtual machine.</p>
-<h3 id="nodes">Nodes</h3>
-<p>Nodes in Kubernetes are either physical or virtual machines, responsible for the execution of pods and allocation of resources. Acting as the worker bees of the Kubernetes cluster, nodes execute the instructions of the control plane.</p>
-<h3 id="cluster">Cluster</h3>
-<p>The Cluster, a collection of nodes supervised by Kubernetes, forms the backbone of the system. It is this cluster mechanism that endows Kubernetes with its superpower – the ability to manage multiple machines as a unified entity.</p>
-<h3 id="control-plane">Control Plane</h3>
-<p>Deemed the brain of Kubernetes, the Control Plane oversees pod scheduling, resource allocation, and cluster monitoring. It constitutes components like the kube-apiserver, etcd, kube-scheduler, kube-controller-manager, and cloud-controller-manager.</p>
-<h3 id="services">Services</h3>
-<p>Services are logically assembled pods rendered accessible to external users. By offering a singular point of access to pods operating on different nodes, services shape traffic rules for pod interactions.</p>
-<h3 id="labels">Labels</h3>
-<p>Labels function as identifiers to categorize and group pods, playing a pivotal role in pod selection for tasks such as scheduling, routing, and other operations.</p>
-<h3 id="deployments">Deployments</h3>
-<p>Deployment stands as the mechanism to regulate the life cycle of pods. It can help to create, update, and delete pods. These deployments define the anticipated state of pods and facilitate automatic updates through a rolling update technique, ensuring pod availability and scalability.</p>
-<h3 id="daemonsets">DaemonSets</h3>
-<p>DaemonSets serve to guarantee the execution of a pod on each node within the cluster. This feature is particularly advantageous for services such as logging and monitoring, which need to be omnipresent across all nodes.</p>
-<h3 id="ingresses">Ingresses</h3>
-<p>An Ingress is a pathway to expose services to external users. It is primarily leveraged to direct traffic to distinct services, distribute traffic, and provide SSL/TLS termination.</p>
+<h3 id="understanding-kubernetes-architecture">Understanding Kubernetes Architecture</h3>
+<p>This architecture includes many parts, each of which has a defined role. Its main elements are the Control Plane, Worker Nodes, and a networking solution connecting them.</p>
+<h4 id="control-plane">Control Plane</h4>
+<p>The Control Plane is the core of K8s. It&rsquo;s the central authority that maintains and monitors the cluster, ensuring that it&rsquo;s in the desired state.</p>
+<h4 id="worker-nodes">Worker Nodes</h4>
+<p>A Kubernetes cluster consists of one or more worker nodes. These nodes are the virtual or physical machines where your applications (packed in containers) live.</p>
+<h4 id="networking">Networking</h4>
+<p>Kubernetes uses a flat network structure, meaning that all pods can communicate with one another. This is typically achieved using a networking solution like Calico or Weave.</p>
+<h3 id="the-building-blocks-of-kubernetes">The Building Blocks of Kubernetes</h3>
+<h4 id="nodes">Nodes</h4>
+<p>Nodes are the basic unit in the Kubernetes architecture, essentially a machine (physical or virtual) that runs K8s.</p>
+<h4 id="pods">Pods</h4>
+<p>A pod is the smallest deployable unit in the K8s environment. It usually encapsulates an application container (like Docker), but it can contain multiple containers if they are tightly coupled.</p>
+<h4 id="services">Services</h4>
+<p>Services are a stable interface to a set of pods, usually providing load balancing and network access to these pods.</p>
+<h3 id="deep-dive-into-nodes-pods-and-services">Deep Dive into Nodes, Pods, and Services</h3>
+<h4 id="nodes-1">Nodes</h4>
+<p>A node is a worker machine in Kubernetes. The node might be a VM or physical machine, each of which contains the necessary services to run Pods.</p>
+<h4 id="pods-1">Pods</h4>
+<p>In Kubernetes, Pods represent and manage a set of one or more containers. They also include shared storage/network, and a specification for how to run the containers.</p>
+<h4 id="services-1">Services</h4>
+<p>Kubernetes Service is an abstraction which groups a logical set of Pods that provide the same functionality.</p>
+<h3 id="understanding-the-kubernetes-control-plane">Understanding the Kubernetes Control Plane</h3>
+<p>The Control Plane refers to the collection of processes that together manage the state of the Kubernetes cluster. This includes the API server, etcd storage, scheduler, and controller manager.</p>
+<h3 id="the-role-of-the-kubelet-and-the-kubernetes-api-server">The Role of the Kubelet and the Kubernetes API Server</h3>
+<p>The Kubelet is an agent that runs on each node in the cluster. It ensures that containers are running in a pod.</p>
+<p>The API Server serves as a connection point to the Kubernetes control plane. It provides the Kubernetes API, which helps cluster interaction and oversees cluster orchestration and operation.</p>
+<h3 id="how-kubernetes-components-interact">How Kubernetes Components Interact</h3>
+<p>When you submit a request (like creating a Pod), the API server processes it and records the state of the cluster in the etcd database. The scheduler then assigns the pod to a suitable node. The kubelet on that node interacts with the container runtime to start the pod&rsquo;s containers and then continually monitors the state of those containers.</p>
+<p><img src="https://i.imgur.com/Y1kbKfk.png" alt="Kubernetes"></p>
 <h3 id="advanced-techniques">Advanced Techniques</h3>
 <p>Apart from the primary Kubernetes concepts delineated above, there are advanced features that further augment the potential of Kubernetes:</p>
 <ul>
@@ -222,8 +233,6 @@
 <p><strong>Horizontal Pod Autoscaling</strong>: This functionality enables Kubernetes to automatically scale the number of Pods in a Deployment or Replica Set based on CPU utilization or other specified metrics.</p>
 </li>
 </ul>
-<h3 id="wrapping-up">Wrapping Up</h3>
-<p>Kubernetes has revolutionized the way we develop and deploy applications. It equips us with the tools to orchestrate and manage containers on a massive scale. With a comprehensive grasp of its core concepts, we can design robust, scalable, and efficient systems.</p>
 
             </div>
           </div>

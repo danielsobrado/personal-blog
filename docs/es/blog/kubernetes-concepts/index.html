@@ -5,7 +5,7 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
+    <meta name="description" content="Una breve introducción a Kubernetes">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -181,29 +181,58 @@
               <li class="list-inline-item text-color">On 10 Oct</li>
               <li class="list-inline-item text-color">Category:
                 
-                <a class="text-primary" href="https://www.danielsobrado.com/es/categories/programaci%c3%b3n"> Programación</a>
+                <a class="text-primary" href="https://www.danielsobrado.com/es/categories/programming"> Programming</a>
                 
               </li>
             </ul>
             <div class="post-content">
-              <p>En esta entrada de blog, nos adentramos en el mundo de Kubernetes, un sistema extremadamente eficiente diseñado para optimizar la gestión de aplicaciones contenerizadas en un entorno de cluster. Nuestro viaje estará centrado en comprender los conceptos esenciales que sustentan Kubernetes y explorar sus vastas capacidades.</p>
-<h3 id="pods">Pods</h3>
-<p>En el ámbito de Kubernetes, un Pod representa el bloque de construcción primario. Es un cluster de uno o más contenedores programados para funcionar en unisono en un solo nodo. A cada pod se le asigna un pool compartido de recursos como CPU, memoria y almacenamiento.</p>
-<p>Desplegar pods en lugar de contenedores individuales es una estrategia diseñada para manejar escenarios donde varios contenedores son interdependientes y necesitan funcionar en una sola máquina. Los pods están arquitecturados para facilitar contenedores co-ubicados (en el mismo nodo) y co-programados (iniciando/deteniendo simultáneamente), funcionando como una máquina virtual independiente.</p>
-<h3 id="nodos">Nodos</h3>
-<p>Los nodos en Kubernetes son máquinas físicas o virtuales, responsables de la ejecución de pods y la asignación de recursos. Actuando como las abejas trabajadoras de la colmena de Kubernetes, los nodos ejecutan las instrucciones del plano de control.</p>
-<h3 id="cluster">Cluster</h3>
-<p>El Cluster, una colección de nodos supervisados por Kubernetes, forma la columna vertebral del sistema. Es este mecanismo de cluster el que dota a Kubernetes con su superpoder: la capacidad de gestionar múltiples máquinas como una entidad unificada.</p>
-<h3 id="plano-de-control">Plano de Control</h3>
-<p>Considerado el cerebro de Kubernetes, el Plano de Control supervisa la programación de pods, la asignación de recursos y el monitoreo del cluster. Constituye componentes como el kube-apiserver, etcd, kube-scheduler, kube-controller-manager y cloud-controller-manager.</p>
-<h3 id="servicios">Servicios</h3>
-<p>Los servicios son pods ensamblados lógicamente y accesibles para los usuarios externos. Al ofrecer un punto único de acceso a pods que operan en diferentes nodos, los servicios forman las reglas de tráfico para las interacciones de pods.</p>
-<h3 id="etiquetas">Etiquetas</h3>
-<p>Las etiquetas funcionan como identificadores para categorizar y agrupar pods, desempeñando un papel fundamental en la selección de pods para tareas como programación, enrutamiento y otras operaciones.</p>
-<h3 id="despliegues">Despliegues</h3>
-<p>El despliegue es el mecanismo para regular el ciclo de vida de los pods. Puede ayudar a crear, actualizar y eliminar pods. Estos despliegues definen el estado anticipado de los pods y facilitan actualizaciones automáticas a través de una técnica de actualización en cascada, asegurando la disponibilidad y escalabilidad de los pods.</p>
-<h3 id="daemonsets">DaemonSets</h3>
-<p>Los DaemonSets sirven para garantizar la ejecución de un pod en cada nodo dentro del cluster. Esta característica es particularmente ventajosa para servicios como registro y monitoreo, que necesitan estar omnipresentes en todos los nodos.</p>
+              <p>En este artículo, estamos introduciendo el mundo de Kubernetes, un sistema extremadamente eficiente diseñado para agilizar la gestión de aplicaciones contenerizadas en un entorno de cluster. Nuestro viaje se centrará en entender los conceptos esenciales que sustentan a Kubernetes y explorar sus vastas capacidades.</p>
+<h3 id="entendiendo-la-arquitectura-de-kubernetes">Entendiendo la arquitectura de Kubernetes</h3>
+<p>Esta arquitectura incluye muchas partes, cada una de las cuales tiene un rol definido. Sus elementos principales son el Control Plane, los Worker Nodes y una solución de red que los conecta.</p>
+<h4 id="control-plane">Control Plane</h4>
+<p>El Control Plane es el núcleo de K8s. Es la autoridad central que mantiene y supervisa el cluster, asegurando que esté en el estado deseado.</p>
+<h4 id="worker-nodes">Worker Nodes</h4>
+<p>Un cluster de Kubernetes consta de uno o más worker nodes. Estos nodos son las máquinas virtuales o físicas donde viven tus aplicaciones (empaquetadas en contenedores).</p>
+<h4 id="redes">Redes</h4>
+<p>Kubernetes utiliza una estructura de red plana, lo que significa que todos los pods pueden comunicarse entre sí. Esto se logra generalmente utilizando una solución de red como Calico o Weave.</p>
+<h3 id="los-bloques-de-construcción-de-kubernetes">Los bloques de construcción de Kubernetes</h3>
+<h4 id="nodos">Nodos</h4>
+<p>Los nodos son la unidad básica en la arquitectura de Kubernetes, esencialmente una máquina (física o virtual) que ejecuta K8s.</p>
+<h4 id="pods">Pods</h4>
+<p>Un pod es la unidad desplegable más pequeña en el entorno de K8s. Generalmente encapsula un contenedor de aplicación (como Docker), pero puede contener varios contenedores si están estrechamente acoplados.</p>
+<h4 id="servicios">Servicios</h4>
+<p>Los servicios son una interfaz estable a un conjunto de pods, generalmente proporcionando balanceo de carga y acceso a la red a estos pods.</p>
+<h3 id="profundización-en-los-nodos-pods-y-servicios">Profundización en los Nodos, Pods y Servicios</h3>
+<h4 id="nodos-1">Nodos</h4>
+<p>Un nodo es una máquina trabajadora en Kubernetes. El nodo puede ser una máquina virtual o física, cada una de las cuales contiene los servicios necesarios para ejecutar Pods.</p>
+<h4 id="pods-1">Pods</h4>
+<p>En Kubernetes, los Pods representan y gestionan un conjunto de uno o más contenedores. También incluyen almacenamiento/red compartidos, y una especificación de cómo ejecutar los contenedores.</p>
+<h4 id="servicios-1">Servicios</h4>
+<p>El Servicio de Kubernetes es una abstracción que agrupa un conjunto lógico de Pods que proporcionan la misma funcionalidad.</p>
+<h3 id="entendiendo-el-control-plane-de-kubernetes">Entendiendo el Control Plane de Kubernetes</h3>
+<p>El Control Plane se refiere a la colección de procesos que juntos gestionan el estado del cluster de Kubernetes. Esto incluye el servidor API, el almacenamiento etcd, el planificador y el controlador de gestión.</p>
+<h3 id="el-papel-del-kubelet-y-el-servidor-api-de-kubernetes">El papel del Kubelet y el servidor API de Kubernetes</h3>
+<p>El Kubelet es un agente que se ejecuta en cada nodo del cluster. Asegura que los contenedores se están ejecutando en un pod.</p>
+<p>El servidor API sirve como punto de conexión al Control Plane de Kubernetes. Proporciona la API de Kubernetes, que ayuda a la interacción del cluster y supervisa la orquestación y operación del cluster.</p>
+<h3 id="cómo-interactúan-los-componentes-de-kubernetes">Cómo interactúan los componentes de Kubernetes</h3>
+<p>Cuando envías una solicitud (como crear un Pod), el servidor API la procesa y registra el estado del cluster en la base de datos etcd. Luego, el planificador asigna el pod a un nodo adecuado. El kubelet en ese nodo interactúa con el entorno de ejecución del contenedor para iniciar los contenedores del pod y luego supervisa continuamente el estado de esos contenedores.</p>
+<p><img src="https://i.imgur.com/Y1kbKfk.png" alt="Kubernetes"></p>
+<h3 id="técnicas-avanzadas">Técnicas avanzadas</h3>
+<p>Aparte de los conceptos primarios de Kubernetes delineados arriba, existen características avanzadas que aumentan aún más el potencial de Kubernetes:</p>
+<ul>
+<li>
+<p><strong>StatefulSets</strong>: Idealmente adaptados para aplicaciones con estado como las bases de datos, los StatefulSets aseguran el orden y la unicidad de los Pods. Esto contrasta con los Deployments, que están diseñados para aplicaciones sin estado.</p>
+</li>
+<li>
+<p><strong>Jobs y CronJobs</strong>: Mientras que los Jobs se emplean para tareas que necesitan una ejecución única, los CronJobs atienden a tareas que necesitan una ejecución periódica.</p>
+</li>
+<li>
+<p><strong>ConfigMaps y Secrets</strong>: Estos mecanismos gestionan la configuración de tus aplicaciones independientemente de tu imagen de contenedor, mejorando así la portabilidad y la seguridad.</p>
+</li>
+<li>
+<p><strong>Escalamiento automático de Pods</strong>: Esta funcionalidad permite a Kubernetes escalar automáticamente el número de Pods en un Deployment o Replica Set basado en la utilización de la CPU u otras métricas especificadas.</p>
+</li>
+</ul>
 
             </div>
           </div>
@@ -298,10 +327,6 @@
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/es/categories/maths"
 						class="d-block text-color py-10">Maths</a>
-				</li>
-				<li class="border-bottom">
-					<a href="https://www.danielsobrado.com/es/categories/programaci%c3%b3n"
-						class="d-block text-color py-10">Programación</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/es/categories/programming"
