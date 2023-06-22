@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pattern on </title>
+    <link>https://www.danielsobrado.com/tags/pattern/</link>
+    <description>Recent content in Pattern on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ambassador Pattern in Kubernetes Explained</title>
+      <link>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Implementing the Adapter Pattern in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sidecar Pattern in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
