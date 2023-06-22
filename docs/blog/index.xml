@@ -62,15 +62,6 @@
     </item>
     
     <item>
-      <title>An In-depth Guide to Kubernetes Labels and Selectors</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-labels-and-selectors/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-labels-and-selectors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>An Overview of Kubernetes Networking</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-networking-overview/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
@@ -89,38 +80,11 @@
     </item>
     
     <item>
-      <title>Configuring Applications in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/configuring-applications-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/configuring-applications-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Creating and Managing Kubernetes Jobs</title>
-      <link>https://www.danielsobrado.com/blog/managing-kubernetes-jobs/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/managing-kubernetes-jobs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Creating and Managing Kubernetes Pods</title>
       <link>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Implementing Kubernetes Services</title>
-      <link>https://www.danielsobrado.com/blog/implementing-kubernetes-services/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/implementing-kubernetes-services/</guid>
       <description></description>
     </item>
     
@@ -143,38 +107,11 @@
     </item>
     
     <item>
-      <title>Kubernetes Liveness and Readiness Probes</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-liveness-readiness-probes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-liveness-readiness-probes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Liveness and Readiness Probes</title>
-      <link>https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Kubernetes Namespaces: An Overview</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Network Policies Explained</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-network-policies/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-network-policies/</guid>
       <description></description>
     </item>
     
@@ -251,47 +188,11 @@
     </item>
     
     <item>
-      <title>Managing Kubernetes State with Persistent Volumes</title>
-      <link>https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mastering Multi-Container Pods in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Schedule Tasks in Kubernetes with CronJobs</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-cronjobs/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-cronjobs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Securing Kubernetes Clusters</title>
       <link>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Securing Kubernetes Secrets</title>
-      <link>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</guid>
       <description></description>
     </item>
     
@@ -314,56 +215,11 @@
     </item>
     
     <item>
-      <title>Understanding and Using Kubernetes Deployments</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-deployments/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-deployments/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Understanding and Using Kubernetes Ingress</title>
       <link>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Understanding Kubernetes ConfigMaps</title>
-      <link>https://www.danielsobrado.com/blog/understanding-kubernetes-configmaps/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/understanding-kubernetes-configmaps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Understanding Kubernetes Events</title>
-      <link>https://www.danielsobrado.com/blog/understanding-kubernetes-events/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/understanding-kubernetes-events/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Understanding Kubernetes Services</title>
-      <link>https://www.danielsobrado.com/blog/understanding-kubernetes-services/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/understanding-kubernetes-services/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Using Annotations in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</guid>
       <description></description>
     </item>
     
