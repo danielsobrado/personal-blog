@@ -6,16 +6,7 @@
     <description>Recent content in Concepts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 10 Oct 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/concepts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Conceptos de Kubernetes</title>
-      <link>https://www.danielsobrado.com/es/blog/kubernetes-concepts/</link>
-      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/es/blog/kubernetes-concepts/</guid>
-      <description>En este artículo, estamos introduciendo el mundo de Kubernetes, un sistema extremadamente eficiente diseñado para agilizar la gestión de aplicaciones contenerizadas en un entorno de cluster.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 03 Jan 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/es/tags/concepts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Data Science: Concepts</title>
       <link>https://www.danielsobrado.com/es/blog/datascience-concepts/</link>

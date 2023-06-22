@@ -44,51 +44,6 @@
     </item>
     
     <item>
-      <title>Ambassador Pattern in Kubernetes Explained</title>
-      <link>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>An Overview of Kubernetes Networking</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-networking-overview/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-networking-overview/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Creating and Managing Kubernetes Pods</title>
-      <link>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Implementing the Adapter Pattern in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sidecar Pattern in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Euclidean Space vs Manifold</title>
       <link>https://www.danielsobrado.com/blog/euclidean-manifold/</link>
       <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>

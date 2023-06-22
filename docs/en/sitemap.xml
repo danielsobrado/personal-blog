@@ -45,7 +45,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -57,24 +57,8 @@
                 href="https://www.danielsobrado.com/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/kubernetes-networking-overview/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/blog/kubernetes-networking-overview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/blog/kubernetes-networking-overview/"
-                />
-  </url><url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -84,73 +68,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/devops/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/kubernetes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/kubernetes/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/networking/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/pattern/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/pods/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/blog/sidecar-pattern-in-kubernetes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
@@ -203,6 +120,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/python/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/</loc>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/dot-product/</loc>
@@ -372,18 +302,14 @@
     <loc>https://www.danielsobrado.com/categories/investing/</loc>
     <lastmod>2017-04-22T15:30:02+04:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/categories/devops/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-concepts/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/blog/kubernetes-concepts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/blog/kubernetes-concepts/"
-                />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
