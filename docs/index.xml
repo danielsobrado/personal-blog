@@ -44,15 +44,6 @@
     </item>
     
     <item>
-      <title>Advanced Troubleshooting in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ambassador Pattern in Kubernetes Explained</title>
       <link>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
@@ -67,15 +58,6 @@
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-networking-overview/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Automating Deployments with Kubernetes Operators</title>
-      <link>https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/</guid>
       <description></description>
     </item>
     
@@ -98,137 +80,11 @@
     </item>
     
     <item>
-      <title>Kubernetes Custom Resource Definitions (CRDs)</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Namespaces: An Overview</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Persistent Volume Claims Explained</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Resource Quotas and Limits</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Role-Based Access Control (RBAC)</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Security Best Practices</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-security-best-practices/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-security-best-practices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes Service Accounts</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-service-accounts/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-service-accounts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes StatefulSets Explained</title>
-      <link>https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Managing Configurations with Kubernetes Kustomize</title>
-      <link>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Managing Kubernetes Secrets using Sealed Secrets</title>
-      <link>https://www.danielsobrado.com/blog/managing-kubernetes-secrets-using-sealed-secrets/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/managing-kubernetes-secrets-using-sealed-secrets/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Securing Kubernetes Clusters</title>
-      <link>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Sidecar Pattern in Kubernetes</title>
       <link>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Understanding and Using Helm in Kubernetes</title>
-      <link>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Understanding and Using Kubernetes Ingress</title>
-      <link>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Working with Kubernetes Volumes</title>
-      <link>https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/</guid>
       <description></description>
     </item>
     
