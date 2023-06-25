@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
+<html lang="en-us">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.8/medium-zoom.min.js" integrity="sha512-J3G1KdOKUuj92x5w2mV/7AmPckHbiTQdoPXd6qaeHemfcNOsuwFVQm851m+lLuJR33sGuz9TAzWtccXZOsFE0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><head>
     <meta charset="utf-8">
     <title>Kubernetes Concepts</title>
 
@@ -192,7 +193,7 @@
 <p>The API Server serves as a connection point to the Kubernetes control plane. It provides the Kubernetes API, which helps cluster interaction and oversees cluster orchestration and operation.</p>
 <h3 id="how-kubernetes-components-interact">How Kubernetes Components Interact</h3>
 <p>When you submit a request (like creating a Pod), the API server processes it and records the state of the cluster in the etcd database. The scheduler then assigns the pod to a suitable node. The kubelet on that node interacts with the container runtime to start the pod&rsquo;s containers and then continually monitors the state of those containers.</p>
-<p><a href="https://i.imgur.com/Y1kbKfk.png">![Kubernetes](https://i.imgur.com/Y1kbKfk.png)</a></p>
+<p><img src="https://i.imgur.com/Y1kbKfk.png" alt="Kubernetes"></p>
 <h3 id="advanced-techniques">Advanced Techniques</h3>
 <p>Apart from the primary Kubernetes concepts delineated above, there are advanced features that further augment the potential of Kubernetes:</p>
 <ul>
