@@ -153,6 +153,15 @@
     
     <item>
       <title></title>
+      <link>https://www.danielsobrado.com/es/blog/application-deployment-choices-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/application-deployment-choices-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.danielsobrado.com/es/blog/automating-deployments-with-kubernetes-operators/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -171,10 +180,100 @@
     
     <item>
       <title></title>
+      <link>https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/confluent-certified-developer-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/confluent-certified-developer-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/data-retention-strategies-and-implications-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/data-retention-strategies-and-implications-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/diving-into-kafka-architecture-and-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/diving-into-kafka-architecture-and-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/exploring-kafka-configurations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/exploring-kafka-configurations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/exploring-kafka-streams/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/exploring-kafka-streams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/exploring-topic-co-partitioning-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/exploring-topic-co-partitioning-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/getting-started-with-confluent-rest-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/getting-started-with-confluent-rest-proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/getting-started-with-kafka-command-line-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/getting-started-with-kafka-command-line-tools/</guid>
       <description></description>
     </item>
     
@@ -193,6 +292,42 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/blog/implementing-the-adapter-pattern-in-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/introduction-to-kafka-clients/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/introduction-to-kafka-clients/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/introduction-to-kafka-connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/introduction-to-kafka-connect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/introduction-to-ksql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/introduction-to-ksql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/kafka-operations-deep-dive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/kafka-operations-deep-dive/</guid>
       <description></description>
     </item>
     
@@ -342,6 +477,15 @@
     
     <item>
       <title></title>
+      <link>https://www.danielsobrado.com/es/blog/managing-schemas-with-confluent-schema-registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/managing-schemas-with-confluent-schema-registry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.danielsobrado.com/es/blog/mastering-multi-container-pods-in-kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -351,10 +495,55 @@
     
     <item>
       <title></title>
+      <link>https://www.danielsobrado.com/es/blog/message-ordering-and-delivery-guarantees-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/message-ordering-and-delivery-guarantees-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/monitoring-and-metrics-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/monitoring-and-metrics-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.danielsobrado.com/es/blog/monitoring-and-observability-in-kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/blog/monitoring-and-observability-in-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/performance-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/performance-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/schema-management-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/schema-management-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/securing-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/securing-kafka/</guid>
       <description></description>
     </item>
     
@@ -378,10 +567,37 @@
     
     <item>
       <title></title>
+      <link>https://www.danielsobrado.com/es/blog/serialization-and-deserialization-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/serialization-and-deserialization-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.danielsobrado.com/es/blog/sidecar-pattern-in-kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/blog/sidecar-pattern-in-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/system-metrics-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/system-metrics-in-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/troubleshooting-and-debugging-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/troubleshooting-and-debugging-in-kafka/</guid>
       <description></description>
     </item>
     
@@ -423,6 +639,51 @@
     
     <item>
       <title></title>
+      <link>https://www.danielsobrado.com/es/blog/understanding-apache-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/understanding-apache-kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/understanding-confluent-ksql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/understanding-confluent-ksql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/understanding-consumer-groups-partition-assignments-and-rebalances/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/understanding-consumer-groups-partition-assignments-and-rebalances/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/understanding-kafka-apis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/understanding-kafka-apis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/understanding-kafka-message-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/understanding-kafka-message-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.danielsobrado.com/es/blog/understanding-kubernetes-configmaps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -445,6 +706,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/es/blog/understanding-kubernetes-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/es/blog/understanding-producer-partition-selection-in-kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/es/blog/understanding-producer-partition-selection-in-kafka/</guid>
       <description></description>
     </item>
     

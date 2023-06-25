@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Introduction to embeddings</title>
+      <link>https://www.danielsobrado.com/blog/introduction-embeddings/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-embeddings/</guid>
+      <description>Embeddings are a powerful tool provided by AI models, enabling semantic comparison of strings.</description>
+    </item>
+    
+    <item>
       <title>Introducing Ray</title>
       <link>https://www.danielsobrado.com/blog/introducing-ray/</link>
       <pubDate>Sat, 20 Feb 2021 15:30:02 +0400</pubDate>

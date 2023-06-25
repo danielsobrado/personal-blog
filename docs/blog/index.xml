@@ -62,6 +62,15 @@
     </item>
     
     <item>
+      <title>Introduction to embeddings</title>
+      <link>https://www.danielsobrado.com/blog/introduction-embeddings/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-embeddings/</guid>
+      <description>Embeddings are a powerful tool provided by AI models, enabling semantic comparison of strings.</description>
+    </item>
+    
+    <item>
       <title>Installing ELK Stack on Windows</title>
       <link>https://www.danielsobrado.com/blog/elk-installation/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
