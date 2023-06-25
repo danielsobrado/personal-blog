@@ -194,7 +194,11 @@
             <div class="post-content">
               <p>Embeddings are a powerful tool provided by AI models, enabling semantic comparison of strings. This can be used for numerous applications, such as search, clustering, recommendations, anomaly detection, diversity measurement, and classification.</p>
 <h3 id="understanding-embeddings">Understanding Embeddings</h3>
-<p>In essence, an embedding is a list of numbers that describes a text, given a specific model. For example, OpenAI&rsquo;s model produces a 1,536-element-long array of numbers, where each number captures some aspect of the text. Two arrays are considered similar to the extent that they have similar values for each element. This similarity can be calculated even without understanding what each individual value represents, which is both the beauty and the mystery of embeddings. It is essential to note that arrays should only be compared if they come from the same model, as different models can produce vastly different arrays.</p>
+<blockquote>
+<p>In essence, an embedding is a list of numbers that describes a text, given a specific model.</p>
+</blockquote>
+<p>For example, OpenAI&rsquo;s model produces a 1,536-element-long array of numbers, where each number captures some aspect of the text. Two arrays are considered similar to the extent that they have similar values for each element.</p>
+<p>This similarity can be calculated even without understanding what each individual value represents, which is both the beauty and the mystery of embeddings. It is essential to note that arrays should only be compared if they come from the same model, as different models can produce vastly different arrays.</p>
 <h3 id="generating-embeddings">Generating Embeddings</h3>
 <p>To convert text into an embedding, several models can be used. Here is an example of using an open-source library, <code>sentence-transformers</code>, to generate embeddings in Python:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sentence_transformers <span style="color:#f92672">import</span> SentenceTransformer
@@ -207,7 +211,7 @@
 <p>Once the embeddings are generated, they can be compared using various similarity measures such as cosine similarity or Euclidean distance. Here&rsquo;s an example of comparing embeddings using cosine similarity in Python:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.metrics.pairwise <span style="color:#f92672">import</span> cosine_similarity
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># assuming embeddings is a 2D array with each row being an embedding</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Assuming embeddings is a 2D array with each row being an embedding</span>
 </span></span><span style="display:flex;"><span>similarity_matrix <span style="color:#f92672">=</span> cosine_similarity(embeddings)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># The similarity between the first and second sentence is:</span>
