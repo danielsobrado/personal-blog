@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Apache Spark: Introduction to project Tungsten</title>
+      <link>https://www.danielsobrado.com/blog/spark-introduction-tungsten/</link>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/spark-introduction-tungsten/</guid>
+      <description>Introduction Project Tungsten, first introduced with Spark 1.4 and further optimized in Spark 2.</description>
+    </item>
+    
+    <item>
       <title>Installing ELK Stack on Windows</title>
       <link>https://www.danielsobrado.com/blog/elk-installation/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>

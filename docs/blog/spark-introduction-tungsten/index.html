@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Apache Spark: Introduction to project Tungsten</title>
 
@@ -33,7 +43,7 @@
     <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
 
     <!-- MathJax -->
-    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 </head><body><!-- navigation -->
 <header>
@@ -47,8 +57,8 @@
                <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
             </li>
             <li class="list-inline-item">
-               <a href="https://t.me/drusniel">Let's talk:
-                <span class="ml-2">Ping me on Telegram</span> 
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
               </a>
             </li>
           </ul>
@@ -82,6 +92,12 @@
             
             
             <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
               <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
             </li>
             
@@ -101,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/spark-introduction-tungsten/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/spark-introduction-tungsten/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -169,10 +155,10 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
+        <div class="rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/Ous3FT6.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Apache Spark: Introduction to project Tungsten</h3>
@@ -186,25 +172,28 @@
               </li>
             </ul>
             <div class="post-content">
-              <h2 id="introduction">Introduction</h2>
-<p>Project Tungsten is available from Spark 1.4, Spark 2.x comes with the second generation of the Tungsten engine.</p>
-<p>Tungsten is a compiler that applies to queries and generates optimized bytecode at runtime.</p>
+              <h3 id="introduction">Introduction</h3>
+<p>Project Tungsten, first introduced with Spark 1.4 and further optimized in Spark 2.x, represents a second-generation engine engineered for significant performance enhancements. Tungsten, serving as a specialized compiler, transforms queries into optimized bytecode during runtime.</p>
 <blockquote>
-<p>Tungsten compiles your queries/stages into single bytecode JVM function that improve CPU efficiency and gain performance.</p>
+<p>Tungsten&rsquo;s magic lies in its ability to compile your queries or stages into a singular JVM bytecode function, thus increasing CPU efficiency and consequently enhancing overall performance.</p>
 </blockquote>
-<p>This is one of those things that you could live without knowing about it and still do fine in Spark programming, but is extremely interesting and can be useful for advanced optimizations and to understand the insides of Spark.</p>
-<p>You never know if you&rsquo;ll find tugnsten useful for your next project!</p>
-<h2 id="using-tungsten">Using Tungsten</h2>
-<p>Tungsten is enabled by default, you can disable it if you want to compare the performance impact:</p>
-<pre tabindex="0"><code>$ spark-shell --conf spark.sql.tungsten.enabled=false
-</code></pre><p>And enable it again:</p>
-<pre tabindex="0"><code>$ spark-shell --conf spark.sql.tungsten.enabled=true
-</code></pre><h2 id="thomas-neumanns-seminal-vldb-2011-paper">Thomas Neumann’s seminal VLDB 2011 paper</h2>
-<p>See: <!-- raw HTML omitted -->Efficiently compiling efficient query plans for modern hardware<!-- raw HTML omitted --></p>
-<h2 id="eliminating-virtual-function-dispatches">Eliminating virtual function dispatches</h2>
-<h2 id="intermediate-data-in-cpu-registers">Intermediate data in CPU registers</h2>
-<h2 id="simd">SIMD</h2>
-<h2 id="whole-stage-code-generation">Whole Stage Code Generation</h2>
+<p>While it is not necessary to understand Tungsten for efficient Spark programming, the underlying mechanisms and potential for advanced optimizations make Tungsten an intriguing and potentially invaluable component for those seeking to delve deeper into Spark.</p>
+<p>After all, you never know when Tungsten might be the key factor that propels your next project to success!</p>
+<h3 id="using-tungsten">Using Tungsten</h3>
+<p>By default, Tungsten is enabled. However, if you&rsquo;re curious about the performance impact and wish to compare, you can disable it with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ spark-shell --conf spark.sql.tungsten.enabled<span style="color:#f92672">=</span>false
+</span></span></code></pre></div><p>And to re-enable it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ spark-shell --conf spark.sql.tungsten.enabled<span style="color:#f92672">=</span>true
+</span></span></code></pre></div><h3 id="thomas-neumanns-seminal-vldb-2011-paper">Thomas Neumann’s Seminal VLDB 2011 Paper</h3>
+<p>For those who want to dive into efficient query plans for modern hardware, Thomas Neumann&rsquo;s 2011 paper is an essential read. Available here: <a href="https://blog.acolyer.org/2016/05/23/efficiently-compiling-efficient-query-plans-for-modern-hardware/">Efficiently compiling efficient query plans for modern hardware</a>.</p>
+<h3 id="eliminating-virtual-function-dispatches">Eliminating Virtual Function Dispatches</h3>
+<p>Tungsten helps to eliminate virtual function dispatches, which can often be a bottleneck in runtime performance. By eliminating these, Tungsten contributes to creating a more streamlined execution process, enhancing efficiency.</p>
+<h3 id="intermediate-data-in-cpu-registers">Intermediate Data in CPU Registers</h3>
+<p>One of the innovative aspects of Tungsten is its ability to store intermediate data in CPU registers. This approach drastically reduces the need for memory access, which often proves to be a limiting factor in data processing tasks, thus enhancing overall performance.</p>
+<h3 id="simd">SIMD</h3>
+<p>Tungsten supports Single Instruction, Multiple Data (SIMD) processing. SIMD is a type of parallel computing involving a single instruction stream and multiple data streams. Tungsten&rsquo;s support for SIMD operations can provide a significant performance boost for certain types of data-parallel tasks.</p>
+<h3 id="whole-stage-code-generation">Whole Stage Code Generation</h3>
+<p>Whole stage code generation is another key aspect of Tungsten. Instead of executing one operation at a time, this approach generates code for a whole &ldquo;stage&rdquo; of multiple operations. By doing so, Tungsten can better optimize the execution, reduce function calls, and keep more data in CPU registers, thereby improving performance.</p>
 
             </div>
           </div>
@@ -289,6 +278,10 @@
 						class="d-block text-color py-10">Data science</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/investing"
 						class="d-block text-color py-10">Investing</a>
 				</li>
@@ -344,15 +337,15 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
@@ -362,11 +355,7 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
@@ -378,11 +367,9 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -390,13 +377,11 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
@@ -404,33 +389,15 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
 		</div>
 
@@ -438,7 +405,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -457,7 +424,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -548,6 +515,10 @@
 						
 						
 						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
 						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
 						
 						
@@ -567,7 +538,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -576,7 +547,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -591,7 +562,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-5">
-					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
 				</div>
 				<div class="col-lg-6 col-md-7">
 					<ul class="list-inline text-center text-md-right">
@@ -608,15 +579,15 @@
 </footer>
 <!-- /footer -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
 <script>hljs.highlightAll();</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
 
 <!-- Essential Scripts -->
 <!-- Google Map API -->
@@ -635,12 +606,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>
