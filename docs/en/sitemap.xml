@@ -312,6 +312,15 @@
                 href="https://www.danielsobrado.com/investing/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/fast-fourier-transform/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/scipy/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/time-series/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/commodities/</loc>
     <lastmod>2017-04-22T15:30:02+04:00</lastmod>
   </url><url>
@@ -426,6 +435,15 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/shared-database/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/nlp/</loc>
+    <lastmod>2014-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/tf-idf-word2vec/</loc>
+    <lastmod>2014-12-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/</loc>
+    <lastmod>2014-12-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/data-preparation/</loc>
     <lastmod>2014-12-27T00:00:00+00:00</lastmod>

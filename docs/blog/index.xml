@@ -134,6 +134,15 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/blog/fast-fourier-transform/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fast-fourier-transform/</guid>
+      <description>Let&amp;rsquo;s discuss about Fast Fourier Transformations (FFT), an important concept in signal processing and data analysis.</description>
+    </item>
+    
+    <item>
       <title>Commodities</title>
       <link>https://www.danielsobrado.com/blog/commodities/</link>
       <pubDate>Sat, 22 Apr 2017 15:30:02 +0400</pubDate>
@@ -203,6 +212,24 @@
       
       <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
       <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
+    </item>
+    
+    <item>
+      <title>NLP: TF-IDF and Word2Vec</title>
+      <link>https://www.danielsobrado.com/blog/tf-idf-word2vec/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/tf-idf-word2vec/</guid>
+      <description>In this follow-up to our earlier post on N-Grams and Bag of Words, we&amp;rsquo;ll deconstruct two more fundamental Natural Language Processing (NLP) concepts: TF-IDF and Word2Vec.</description>
+    </item>
+    
+    <item>
+      <title>NLP: N-Grams and bag of words</title>
+      <link>https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/</link>
+      <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/</guid>
+      <description>Welcome to this blog post where we&amp;rsquo;ll unravel the concepts of N-Grams and Bag of Words, fundamental notions for natural language processing tasks.</description>
     </item>
     
     <item>

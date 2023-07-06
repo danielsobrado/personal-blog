@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>NLP: N-Grams and bag of words</title>
 
@@ -33,7 +43,7 @@
     <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
 
     <!-- MathJax -->
-    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 </head><body><!-- navigation -->
 <header>
@@ -47,8 +57,8 @@
                <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
             </li>
             <li class="list-inline-item">
-               <a href="https://t.me/drusniel">Let's talk:
-                <span class="ml-2">Ping me on Telegram</span> 
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
               </a>
             </li>
           </ul>
@@ -82,6 +92,12 @@
             
             
             <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
               <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
             </li>
             
@@ -101,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/n-grams-and-bag-of-words/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -169,10 +155,10 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
+        <div class="rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/iOMQB1V.png" alt="blog-image">
           <div class="p-4">
             <h3>NLP: N-Grams and bag of words</h3>
@@ -186,8 +172,36 @@
               </li>
             </ul>
             <div class="post-content">
-              <h1 id="introduction-to-n-grams">Introduction to N-Grams</h1>
-<h1 id="introduction-to-bag-of-words">Introduction to Bag of Words</h1>
+              <p>Welcome to this blog post where we&rsquo;ll unravel the concepts of N-Grams and Bag of Words, fundamental notions for natural language processing tasks. Along the way, I&rsquo;m going to introduce some diagrams generated using Mermaid. I hope they&rsquo;re helpful for you.</p>
+<p>To kick things off, let&rsquo;s first understand what N-Grams and Bag of Words are, and why they&rsquo;re pivotal in the field of language processing.</p>
+<p><img src="https://i.imgur.com/1lbbdpy.png" alt="N-Gram and Bag of Words"></p>
+<h3 id="what-are-n-grams">What are N-Grams?</h3>
+<p>N-Grams are simply sequences of &rsquo;n&rsquo; items from a given text or speech. This &lsquo;item&rsquo; can be anything such as characters, syllables, or words.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_ngrams</span>(text, n):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Split the text into words</span>
+</span></span><span style="display:flex;"><span>    words <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>split()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Use a list comprehension to create the ngrams</span>
+</span></span><span style="display:flex;"><span>    ngrams <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join(words[i:i<span style="color:#f92672">+</span>n]) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(words)<span style="color:#f92672">-</span>(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ngrams
+</span></span></code></pre></div><p>Consider the sentence &ldquo;I love to play football&rdquo;. If we apply a bi-gram (2-gram) to this sentence, we&rsquo;ll get: [&lsquo;I love&rsquo;, &rsquo;love to&rsquo;, &rsquo;to play&rsquo;, &lsquo;play football&rsquo;].</p>
+<h3 id="bag-of-words-bow">Bag of Words (BoW)</h3>
+<p>On the other side of the spectrum, we have the Bag of Words. The Bag of Words (BoW) model is the simplest form of text representation in numbers. Like the term itself, we can represent a sentence as a bag of its words, disregarding grammar and word order but keeping information about multiplicity.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.feature_extraction.text <span style="color:#f92672">import</span> CountVectorizer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vectorizer <span style="color:#f92672">=</span> CountVectorizer()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Suppose we have the following texts</span>
+</span></span><span style="display:flex;"><span>texts <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;I love to play football&#34;</span>, <span style="color:#e6db74">&#34;He loves to play basketball&#34;</span>, <span style="color:#e6db74">&#34;Basketball is his favorite&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This step will convert text into tokens </span>
+</span></span><span style="display:flex;"><span>vectorizer<span style="color:#f92672">.</span>fit(texts)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vectorizer<span style="color:#f92672">.</span>transform([<span style="color:#e6db74">&#34;I love to play basketball&#34;</span>])<span style="color:#f92672">.</span>toarray()
+</span></span></code></pre></div><p>In the above piece of code, we first import the CountVectorizer from sklearn library, fit our corpus (texts) into it, and then transform any text into a numerical vector based on the BoW model.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>In conclusion, both N-Grams and Bag of Words provide a simplistic yet effective approach to understand and represent human language numerically, making it easier for a machine to understand and learn from. This understanding forms the basis of many NLP tasks, including sentiment analysis, text classification, and language modeling.
+Remember, these techniques form the bedrock of language modeling and their correct application will yield outstanding results in your NLP tasks.</p>
+<p>In our next article, we will go deeper into other text representation methods. Stay tuned!</p>
 
             </div>
           </div>
@@ -272,6 +286,10 @@
 						class="d-block text-color py-10">Data science</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/investing"
 						class="d-block text-color py-10">Investing</a>
 				</li>
@@ -327,15 +345,15 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
@@ -345,11 +363,7 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
@@ -361,11 +375,9 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -373,21 +385,17 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
@@ -397,23 +405,13 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
 		</div>
 
@@ -421,7 +419,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -440,7 +438,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -531,6 +529,10 @@
 						
 						
 						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
 						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
 						
 						
@@ -550,7 +552,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -559,7 +561,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -574,7 +576,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-5">
-					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
 				</div>
 				<div class="col-lg-6 col-md-7">
 					<ul class="list-inline text-center text-md-right">
@@ -591,15 +593,15 @@
 </footer>
 <!-- /footer -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
 <script>hljs.highlightAll();</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
 
 <!-- Essential Scripts -->
 <!-- Google Map API -->
@@ -618,12 +620,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

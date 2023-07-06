@@ -71,6 +71,15 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://www.danielsobrado.com/blog/fast-fourier-transform/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fast-fourier-transform/</guid>
+      <description>Let&amp;rsquo;s discuss about Fast Fourier Transformations (FFT), an important concept in signal processing and data analysis.</description>
+    </item>
+    
+    <item>
       <title>Numpy: ndarrays</title>
       <link>https://www.danielsobrado.com/blog/numpy-ndarrays/</link>
       <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
@@ -86,6 +95,24 @@
       
       <guid>https://www.danielsobrado.com/blog/numpy-introduction/</guid>
       <description>Introduction Numpy is the core package for scientific computing, it has capabilities for fast processing of n-dimensional arrays and in general linear algebra.</description>
+    </item>
+    
+    <item>
+      <title>NLP: TF-IDF and Word2Vec</title>
+      <link>https://www.danielsobrado.com/blog/tf-idf-word2vec/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/tf-idf-word2vec/</guid>
+      <description>In this follow-up to our earlier post on N-Grams and Bag of Words, we&amp;rsquo;ll deconstruct two more fundamental Natural Language Processing (NLP) concepts: TF-IDF and Word2Vec.</description>
+    </item>
+    
+    <item>
+      <title>NLP: N-Grams and bag of words</title>
+      <link>https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/</link>
+      <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/</guid>
+      <description>Welcome to this blog post where we&amp;rsquo;ll unravel the concepts of N-Grams and Bag of Words, fundamental notions for natural language processing tasks.</description>
     </item>
     
     <item>

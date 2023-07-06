@@ -80,6 +80,24 @@
     </item>
     
     <item>
+      <title>scipy</title>
+      <link>https://www.danielsobrado.com/tags/scipy/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/scipy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time series</title>
+      <link>https://www.danielsobrado.com/tags/time-series/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/time-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Kubernetes</title>
       <link>https://www.danielsobrado.com/tags/kubernetes/</link>
       <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
@@ -121,6 +139,15 @@
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://www.danielsobrado.com/tags/nlp/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/nlp/</guid>
       <description></description>
     </item>
     

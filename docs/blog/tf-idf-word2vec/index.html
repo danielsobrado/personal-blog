@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Data Preparation: Categorical</title>
+    <title>NLP: TF-IDF and Word2Vec</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Raw data is often in need of a good clean up, needs to pre-processed, cleaned, re-formatted, combined, enriched, corrected and consolidated. Feeding our models with good quality data is essential to ensure that we get good results. Numeric data due to his nature has unique pre-processing techniques, like Dummy variables, One Hot Encoding and the Hashing trick.">
+    <meta name="description" content="TF-IDF and Word2Vec explained">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -117,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/data-preparation-categoricals/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/data-preparation-categoricals/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -172,10 +142,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Data Preparation: Categorical</h2>
+				<h2 class="text-white font-weight-bold">NLP: TF-IDF and Word2Vec</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Data Preparation: Categorical</li>
+					<li>NLP: TF-IDF and Word2Vec</li>
 				</ol>
 			</div>
 		</div>
@@ -189,12 +159,12 @@
     <div class="row">
       <div class="col-lg-8 py-100">
         <div class="rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/6ssWIOo.png" alt="blog-image">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/BTU18cC.png" alt="blog-image">
           <div class="p-4">
-            <h3>Data Preparation: Categorical</h3>
+            <h3>NLP: TF-IDF and Word2Vec</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 25 Dec</li>
+              <li class="list-inline-item text-color">On 30 Dec</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/data-science"> Data science</a>
@@ -202,75 +172,70 @@
               </li>
             </ul>
             <div class="post-content">
-              <h3 id="introduction-qualitative-feature-encoding">Introduction Qualitative feature encoding</h3>
-<p>When dealing with machine learning algorithms, the format and quality of the input data are important to model performance. Categorical data, which is common in datasets, must be translated into a numerical representation for machine learning algorithms to understand and exploit. This is known as encoding.</p>
-<h3 id="dummy-encoding-with-pandas">Dummy encoding with Pandas</h3>
-<p>Pandas&rsquo; &lsquo;get_dummies&rsquo; method is an easy and convenient way to convert categorical variable(s) into dummy/indicator variables. It creates a binary column for each category and returns a sparse matrix.</p>
-<p>But, it has a drawback - if the categorical variable has many categories, the data space required can increase dramatically.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+              <p>In this follow-up to our earlier post on N-Grams and Bag of Words, we&rsquo;ll deconstruct two more fundamental Natural Language Processing (NLP) concepts: TF-IDF and Word2Vec.</p>
+<h3 id="what-is-tf-idf">What is TF-IDF?</h3>
+<p>Term Frequency-Inverse Document Frequency (TF-IDF) is a numerical statistic that reflects how important a word is to a document in a corpus. Unlike the Bag of Words technique, which merely keeps a record of words present in a document, TF-IDF provides a weightage to words. This weightage helps identify important words in a document out of a corpus.</p>
+<p>In TF-IDF, TF represents &lsquo;Term Frequency&rsquo;, i.e., how frequently a term appears in a document, while IDF represents &lsquo;Inverse Document Frequency&rsquo;, i.e., it diminishes the weight of terms that appear very frequently and increases the weight of terms that appear rarely.</p>
+<p>Here is a simple example of how you can calculate TF-IDF from scratch in Python.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.feature_extraction.text <span style="color:#f92672">import</span> TfidfVectorizer
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample data</span>
-</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;color&#39;</span>: [<span style="color:#e6db74">&#39;blue&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;green&#39;</span>, <span style="color:#e6db74">&#39;red&#39;</span>]}
-</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(data)
+</span></span><span style="display:flex;"><span>vectorizer <span style="color:#f92672">=</span> TfidfVectorizer()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Using get_dummies</span>
-</span></span><span style="display:flex;"><span>df_dummies <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>get_dummies(df, columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;color&#39;</span>], drop_first<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Suppose we have the following texts</span>
+</span></span><span style="display:flex;"><span>texts <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;I love to play football&#34;</span>, <span style="color:#e6db74">&#34;He loves to play basketball&#34;</span>, <span style="color:#e6db74">&#34;Basketball is his favorite&#34;</span>]
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(df_dummies)
-</span></span></code></pre></div><h3 id="dictvectorizer">DictVectorizer</h3>
-<p>DictVectorizer is a helper function that converts a dict&rsquo;s feature array into vectors. It is useful when feature extraction generates a data dictionary and we want to convert it to feature vectors.</p>
-<p>DictVectorizer, like get_dummies, may require more memory if the categorical variable contains more categories.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.feature_extraction <span style="color:#f92672">import</span> DictVectorizer
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This step will convert text into tokens </span>
+</span></span><span style="display:flex;"><span>vectorizer<span style="color:#f92672">.</span>fit(texts)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample data</span>
-</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">4</span>}, 
-</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">3</span>}, 
-</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}, 
-</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create the DictVectorizer object: dv</span>
-</span></span><span style="display:flex;"><span>dv <span style="color:#f92672">=</span> DictVectorizer(sparse<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Apply dv on df: df_encoded</span>
-</span></span><span style="display:flex;"><span>df_encoded <span style="color:#f92672">=</span> dv<span style="color:#f92672">.</span>fit_transform(data_dict)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(df_encoded)
-</span></span></code></pre></div><h3 id="one-hot-encoding">One-hot encoding</h3>
-<p>One-shot encoding generates new (binary) columns that indicate the presence of each potential value in the original data. While it is a strong tool, if the categorical variable contains several categories, it might result in a large dimensionality.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> OneHotEncoder
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#### Sample data</span>
-</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;blue&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>], [<span style="color:#e6db74">&#39;green&#39;</span>], [<span style="color:#e6db74">&#39;red&#39;</span>]]
-</span></span><span style="display:flex;"><span>onehot_encoder <span style="color:#f92672">=</span> OneHotEncoder(sparse<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>onehot_encoded <span style="color:#f92672">=</span> onehot_encoder<span style="color:#f92672">.</span>fit_transform(data)
-</span></span><span style="display:flex;"><span>print(onehot_encoded)
-</span></span></code></pre></div><h3 id="hashing-trick">Hashing trick</h3>
-<p>The Hashing method is useful when we have a high number of categories in a categorical feature and want to minimize the dimension. It lets you provide an arbitrary number of characteristics in the output. It may, however, cause conflicts when various strings map to the same feature index.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.feature_extraction <span style="color:#f92672">import</span> FeatureHasher
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample data</span>
-</span></span><span style="display:flex;"><span>data_dict <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">4</span>}, 
-</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;Blue&#39;</span>: <span style="color:#ae81ff">3</span>}, 
-</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}, 
-</span></span><span style="display:flex;"><span>             {<span style="color:#e6db74">&#39;Red&#39;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Yellow&#39;</span>: <span style="color:#ae81ff">2</span>}]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a FeatureHasher object: hasher</span>
-</span></span><span style="display:flex;"><span>hasher <span style="color:#f92672">=</span> FeatureHasher(n_features<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Apply hasher to data_dict: hashed_features</span>
-</span></span><span style="display:flex;"><span>hashed_features <span style="color:#f92672">=</span> hasher<span style="color:#f92672">.</span>transform(data_dict)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(hashed_features<span style="color:#f92672">.</span>toarray())
-</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
-<p>Choosing the best encoding approach for your categorical data can boost the performance of your machine learning models dramatically. It is determined by several parameters, including the number of categories, the relevance of the categories, and the type of machine learning method utilized.</p>
-<h3 id="further-reading">Further Reading</h3>
-<p>Here are some resources to help you learn more about categorical feature encoding techniques:</p>
+</span></span><span style="display:flex;"><span>vectorizer<span style="color:#f92672">.</span>transform([<span style="color:#e6db74">&#34;I love to play basketball&#34;</span>])<span style="color:#f92672">.</span>toarray()
+</span></span></code></pre></div><h3 id="understanding-the-tf-idf-formula">Understanding the TF-IDF Formula</h3>
+<p>TF-IDF stands for Term Frequency - Inverse Document Frequency. It consists of two components:</p>
 <ol>
-<li><a href="https://scikit-learn.org/stable/modules/preprocessing.html">Scikit-Learn&rsquo;s Preprocessing Guide</a></li>
-<li><a href="https://www.kaggle.com/learn/intermediate-machine-learning">Kaggle&rsquo;s Intermediate Machine Learning Course</a></li>
-<li><a href="https://keras.io/guides/preprocessing_layers/">An Overview of Categorical Input Handling for Neural Networks by Keras</a></li>
+<li>Term Frequency (TF)</li>
+<li>Inverse Document Frequency (IDF)</li>
 </ol>
+<p>Before we move forward, let&rsquo;s understand these components in detail:</p>
+<h3 id="term-frequency-tf">Term Frequency (TF)</h3>
+<p>This calculates the number of times a word appears in a document divided by the total number of words in that document. Every document has its own term frequency. The formula is:</p>
+<p>$$TF(t) = \frac{{\text{{Number of times term t appears in a document}}}}{{\text{{Total number of terms in the document}}}}$$</p>
+<p>Let&rsquo;s say we have a document containing 100 words where the word &lsquo;cat&rsquo; appears 3 times. The term frequency for &lsquo;cat&rsquo; is then (3 / 100) = 0.03.</p>
+<h3 id="inverse-document-frequency-idf">Inverse Document Frequency (IDF)</h3>
+<p>This measures how important a term is. While computing TF, all terms are considered equally important. However, it is known that certain terms, such as &ldquo;is&rdquo;, &ldquo;of&rdquo;, and &ldquo;that&rdquo;, may appear a lot of times but have little importance. Thus we need to weigh down the frequent terms while scaling up the rare ones, by computing the following:</p>
+<p>$$IDF(t) = \log_{e}\left(\frac{{\text{{Total number of documents}}}}{{\text{{Number of documents with term t in it}}}}\right)$$</p>
+<p>For example, let&rsquo;s assume we have 10,000 documents and the word &lsquo;cat&rsquo; appears in 100 of these. Then, the Inverse Document Frequency, i.e., IDF, of &lsquo;cat&rsquo; is log(10,000 / 100) = 2.</p>
+<h3 id="combining-these-together">Combining these together</h3>
+<p>The TF-IDF weight is the product of these quantities:</p>
+<p>$$TF-IDF(t) = TF(t) \times IDF(t)$$</p>
+<p>So, for a term &rsquo;t&rsquo; in a document, the TF-IDF score is the product of its term frequency in the document and its inverse document frequency across the entire document corpus.</p>
+<p>This numeric score is used to reflect how important a word is to a document in the corpus. The higher the TF*IDF score, the more important that term is to that document.</p>
+<h3 id="what-is-word2vec">What is Word2Vec?</h3>
+<p>Word2Vec is a method to construct such an embedding. It can be obtained using two methods (both involving Neural Networks): Skip Gram and Common Bag Of Words (CBOW).</p>
+<p>Word2Vec represents words in a vector space where similar words are grouped together. This means words sharing similar contexts are located close to each other in the space. The beauty of Word2Vec is that it captures the semantic relationship between words.</p>
+<p>Word2Vec models require a lot of text, so we&rsquo;ll use the pre-trained Word2Vec model which Google trained on Google News dataset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> gensim.models <span style="color:#f92672">import</span> Word2Vec
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.decomposition <span style="color:#f92672">import</span> PCA
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sentences <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;I&#39;</span>, <span style="color:#e6db74">&#39;love&#39;</span>, <span style="color:#e6db74">&#39;to&#39;</span>, <span style="color:#e6db74">&#39;play&#39;</span>, <span style="color:#e6db74">&#39;football&#39;</span>], 
+</span></span><span style="display:flex;"><span>             [<span style="color:#e6db74">&#39;He&#39;</span>, <span style="color:#e6db74">&#39;loves&#39;</span>, <span style="color:#e6db74">&#39;to&#39;</span>, <span style="color:#e6db74">&#39;play&#39;</span>, <span style="color:#e6db74">&#39;basketball&#39;</span>], 
+</span></span><span style="display:flex;"><span>             [<span style="color:#e6db74">&#39;Basketball&#39;</span>, <span style="color:#e6db74">&#39;is&#39;</span>, <span style="color:#e6db74">&#39;his&#39;</span>, <span style="color:#e6db74">&#39;favorite&#39;</span>]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># train model</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> Word2Vec(sentences, min_count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fit a 2d PCA model to the vectors</span>
+</span></span><span style="display:flex;"><span>X <span style="color:#f92672">=</span> model[model<span style="color:#f92672">.</span>wv<span style="color:#f92672">.</span>vocab]
+</span></span><span style="display:flex;"><span>pca <span style="color:#f92672">=</span> PCA(n_components<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>result <span style="color:#f92672">=</span> pca<span style="color:#f92672">.</span>fit_transform(X)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create a scatter plot of the projection</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>scatter(result[:, <span style="color:#ae81ff">0</span>], result[:, <span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>words <span style="color:#f92672">=</span> list(model<span style="color:#f92672">.</span>wv<span style="color:#f92672">.</span>vocab)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i, word <span style="color:#f92672">in</span> enumerate(words):
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>annotate(word, xy<span style="color:#f92672">=</span>(result[i, <span style="color:#ae81ff">0</span>], result[i, <span style="color:#ae81ff">1</span>]))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
+<p>In summary, both TF-IDF and Word2Vec provide robust and more sophisticated ways to represent human language numerically. By recognizing the significance of words (TF-IDF) or by understanding the context and semantic relationships between words (Word2Vec), these techniques offer more than just a simple bag of words. They form the backbone of various advanced NLP tasks such as semantic search, sentiment analysis, and even dialogue systems for conversational AI.</p>
 
             </div>
           </div>
@@ -284,16 +249,16 @@
                 <ul class="list-inline d-inline-block">
                   
                   <li class="list-inline-item">
-                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdata-preparation-categoricals%2f"><i class="ti-facebook"></i></a>
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ftf-idf-word2vec%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Data%20Preparation%3a%20Categorical&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdata-preparation-categoricals%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=NLP%3a%20TF-IDF%20and%20Word2Vec&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ftf-idf-word2vec%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdata-preparation-categoricals%2f&amp;resubmit=true&amp;title=Data%20Preparation%3a%20Categorical"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ftf-idf-word2vec%2f&amp;resubmit=true&amp;title=NLP%3a%20TF-IDF%20and%20Word2Vec"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Data%20Preparation%3a%20Categorical&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdata-preparation-categoricals%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=NLP%3a%20TF-IDF%20and%20Word2Vec&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ftf-idf-word2vec%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -305,11 +270,7 @@
                 <ul class="list-inline tag-list">
                   
                   <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/data%20preparation">Data preparation</a>
-                  </li>
-                  
-                  <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/python">Python</a>
+                    <a href="https://www.danielsobrado.com/categories/nlp">Nlp</a>
                   </li>
                   
                 </ul>
