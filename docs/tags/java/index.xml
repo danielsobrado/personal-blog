@@ -5,7 +5,17 @@
     <link>https://www.danielsobrado.com/tags/java/</link>
     <description>Recent content in Java on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.danielsobrado.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to REST API</title>
+      <link>https://www.danielsobrado.com/blog/introduction-rest-api/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-rest-api/</guid>
+      <description>Introduction to REST API REST (Representational State Transfer) is an architectural style for building web services.</description>
+    </item>
+    
     <item>
       <title>Functional programming in Java: Functional Interfaces</title>
       <link>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</link>

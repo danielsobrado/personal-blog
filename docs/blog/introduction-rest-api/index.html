@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Value Investing</title>
+    <title>Introduction to REST API</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -138,14 +138,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Value Investing</h2>
+				<h2 class="text-white font-weight-bold">Introduction to REST API</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Value Investing</li>
+					<li>Introduction to REST API</li>
 				</ol>
 			</div>
 		</div>
@@ -159,29 +159,144 @@
     <div class="row">
       <div class="col-lg-8 py-100">
         <div class="rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://www.danielsobrado.com/images/service/service-1.jpg" alt="blog-image">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/WLrOv2Q.png" alt="blog-image">
           <div class="p-4">
-            <h3>Value Investing</h3>
+            <h3>Introduction to REST API</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
-              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/"></a></li>
-              <li class="list-inline-item text-color">On 25 Sep</li>
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 09 Jan</li>
               <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
                 
               </li>
             </ul>
             <div class="post-content">
-              <h3 id="marketing-oriented-to-the-targated-customers">Marketing Oriented To The Targated Customers</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<blockquote>
-<p>Excepteur sint occaecat cupidatat non proident sunt culpa officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis.</p>
-</blockquote>
+              <h3 id="introduction-to-rest-api">Introduction to REST API</h3>
+<p>REST (Representational State Transfer) is an architectural style for building web services. It leverages standard HTTP protocols and is stateless, which means that each HTTP request happens in complete isolation.</p>
+<h3 id="url-naming-conventions-in-rest-api">URL Naming Conventions in REST API</h3>
+<p>By following best practices for naming URLs in REST APIs, you can speed up your project&rsquo;s preparation and make the code easier to read. Here are some recommendations:</p>
 <ol>
-<li>Business Services</li>
-<li>Audit &amp; Assurance</li>
-<li>IT Control Solutions</li>
+<li>
+<p>Use plural nouns: RESTful URLs should use plural nouns when referring to collections. For example, <code>/orders</code> instead of <code>/order</code>.</p>
+</li>
+<li>
+<p>Avoid verbs: The HTTP methods should represent the actions, so it&rsquo;s better to avoid verbs in your URLs. For example, <code>POST /orders</code> instead of <code>POST /createOrder</code>.</p>
+</li>
+<li>
+<p>Keep it simple and predictable: URLs should be straightforward and consistent to make them easy for the client to understand.</p>
+</li>
+<li>
+<p>Use hyphens (-) to improve readability: <code>/customer-orders</code>.</p>
+</li>
+<li>
+<p>Use lower case letters: URLs should be case-insensitive, but conventionally, they&rsquo;re written in lower case.</p>
+</li>
 </ol>
-<h4 id="marketing-improvement-strategy">Marketing Improvement Strategy</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+<h3 id="restful-api-http-methods">RESTful API HTTP Methods</h3>
+<p>When working with REST APIs, different HTTP methods are used to perform actions on the resources. Each method typically requires specific parameters or body content to function correctly.</p>
+<ol>
+<li>
+<p><strong>GET</strong>: Retrieve a specific resource (by id) or a collection of resources. There&rsquo;s no body content for GET. The URL itself identifies the resource. You can use request parameters to fine-tune your queries. For example, <code>GET /orders?status=delivered</code> might get all the delivered orders.</p>
+</li>
+<li>
+<p><strong>POST</strong>: This method creates new resources. The information for the new resource (like the details of a new order) should be included in the body of the request, often in JSON format. The URL indicates the collection where the new resource will be added. For example, <code>POST /orders</code>.</p>
+</li>
+<li>
+<p><strong>PUT</strong>: This method updates a resource completely. Similar to POST, the updated details of the resource should be included in the body of the request. The URL should point to the specific resource that needs to be updated. For example, <code>PUT /orders/{id}</code>.</p>
+</li>
+<li>
+<p><strong>PATCH</strong>: This method is used for partial updates. Instead of sending the complete resource, you only send the specific fields that you want to update. For example, <code>PATCH /orders/{id}</code>.</p>
+</li>
+<li>
+<p><strong>DELETE</strong>: This method removes a resource. The URL points to the specific resource to delete. Like GET, DELETE requests usually don&rsquo;t have a body.</p>
+</li>
+</ol>
+<h3 id="best-practices">Best Practices</h3>
+<ol>
+<li>
+<p>Use <strong>query parameters</strong> for optional parameters. Query parameters also can be used to filter, sort, or paginate collections.</p>
+</li>
+<li>
+<p>Ensure <strong>idempotence</strong> of PUT and DELETE requests. This means that multiple identical requests should have the same effect as a single request.</p>
+</li>
+<li>
+<p>Use <strong>status codes</strong> to show how the request played out. For example, &ldquo;200 OK&rdquo; means that a GET request was successful, &ldquo;201 Created&rdquo; means that a POST request was successful, and &ldquo;204 No Content&rdquo; means that a DELETE request was successful.</p>
+</li>
+<li>
+<p>Implement <strong>error handling</strong> and provide clear error messages.</p>
+</li>
+</ol>
+<h3 id="java-and-spring-boot">Java and Spring Boot</h3>
+<p>Spring Boot makes it simpler for Java developers to build and use REST APIs. Here&rsquo;s how to use the GET, POST, PUT, and DELETE methods:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/api/orders&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrderController</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> OrderService orderService<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// GET Method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@GetMapping</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>List<span style="color:#f92672">&lt;</span>Order<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">getAllOrders</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>Order<span style="color:#f92672">&gt;</span> orders <span style="color:#f92672">=</span> orderService<span style="color:#f92672">.</span><span style="color:#a6e22e">findAllOrders</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>orders<span style="color:#f92672">,</span> HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">OK</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// POST Method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@PostMapping</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>Order<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">createOrder</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@RequestBody</span> Order order<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Order newOrder <span style="color:#f92672">=</span> orderService<span style="color:#f92672">.</span><span style="color:#a6e22e">createOrder</span><span style="color:#f92672">(</span>order<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>newOrder<span style="color:#f92672">,</span> HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">CREATED</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// PUT Method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@PutMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/{id}&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>Order<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">updateOrder</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@PathVariable</span> Long id<span style="color:#f92672">,</span> <span style="color:#a6e22e">@RequestBody</span> Order order<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Order updatedOrder <span style="color:#f92672">=</span> orderService<span style="color:#f92672">.</span><span style="color:#a6e22e">updateOrder</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> order<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>updatedOrder<span style="color:#f92672">,</span> HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">OK</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// DELETE Method
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@DeleteMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/{id}&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;?&gt;</span> deleteOrder<span style="color:#f92672">(</span><span style="color:#a6e22e">@PathVariable</span> Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        orderService<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteOrder</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">NO_CONTENT</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>In the above example, <code>@RequestMapping(&quot;/api/orders&quot;)</code> maps the HTTP operations to the URI <code>/api/orders</code>. Each method is tagged with the corresponding HTTP method annotation (<code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PutMapping</code>, <code>@DeleteMapping</code>). The <code>@RequestBody</code> annotation binds the HTTP request body to the domain object. The <code>@PathVariable</code> annotation is used to extract the values from the URI.</p>
+<h3 id="handling-unexpected-errors-in-rest-apis">Handling Unexpected Errors in REST APIs</h3>
+<p>When designing a REST API, it&rsquo;s essential to anticipate not just expected exceptions, but also unexpected ones. This means preparing for cases where unanticipated issues (like NullPointerException or database connection errors) may arise.</p>
+<p>A good practice is to create a global error handler that catches all types of exceptions. This can be done in Spring Boot using the <code>@ControllerAdvice</code> annotation. Here&rsquo;s an example of how you could enhance the Java code above to deal with unexpected errors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.http.ResponseEntity<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.context.request.WebRequest<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.http.HttpStatus<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.springframework.web.bind.annotation.ExceptionHandler<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ControllerAdvice</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GlobalExceptionHandler</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// handling specific exception
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@ExceptionHandler</span><span style="color:#f92672">(</span>OrderNotFoundException<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;?&gt;</span> handleOrderNotFound<span style="color:#f92672">(</span>OrderNotFoundException ex<span style="color:#f92672">,</span> WebRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ErrorDetails errorDetails <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorDetails<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(),</span> ex<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">(),</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getDescription</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>errorDetails<span style="color:#f92672">,</span> HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">NOT_FOUND</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// handling global exception
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@ExceptionHandler</span><span style="color:#f92672">(</span>Exception<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;?&gt;</span> handleGlobalException<span style="color:#f92672">(</span>Exception ex<span style="color:#f92672">,</span> WebRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ErrorDetails errorDetails <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ErrorDetails<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(),</span> ex<span style="color:#f92672">.</span><span style="color:#a6e22e">getMessage</span><span style="color:#f92672">(),</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getDescription</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">));</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>errorDetails<span style="color:#f92672">,</span> HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">INTERNAL_SERVER_ERROR</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>In this code, <code>GlobalExceptionHandler</code> is a separate class marked with the<code> @ControllerAdvice</code> annotation, which makes it applicable across all controllers. It has two methods:</p>
+<ul>
+<li><code>handleOrderNotFound()</code>, which is specific to the <code>OrderNotFoundException</code> and returns a 404 status.</li>
+<li><code>handleGlobalException()</code>, which catches all other types of Exception and returns a 500 status.</li>
+</ul>
+<p>Each method builds a <code>ErrorDetails</code> object (a custom class that you would need to define) that contains details about the error, and returns it in the response body. This provides useful debug information to the client while keeping your API robust and reliable.</p>
 
             </div>
           </div>
@@ -195,16 +310,16 @@
                 <ul class="list-inline d-inline-block">
                   
                   <li class="list-inline-item">
-                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2finvesting%2fvalue-investing%2f"><i class="ti-facebook"></i></a>
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-rest-api%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Value%20Investing&amp;url=https%3a%2f%2fwww.danielsobrado.com%2finvesting%2fvalue-investing%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Introduction%20to%20REST%20API&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-rest-api%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2finvesting%2fvalue-investing%2f&amp;resubmit=true&amp;title=Value%20Investing"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-rest-api%2f&amp;resubmit=true&amp;title=Introduction%20to%20REST%20API"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Value%20Investing&amp;body=https%3a%2f%2fwww.danielsobrado.com%2finvesting%2fvalue-investing%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=Introduction%20to%20REST%20API&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-rest-api%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -214,6 +329,14 @@
               <div class="d-flex">
                 <span class="font-weight-light mt-2 mr-3">Tags:</span>
                 <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/rest-api">Rest API</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/java">Java</a>
+                  </li>
                   
                 </ul>
               </div>

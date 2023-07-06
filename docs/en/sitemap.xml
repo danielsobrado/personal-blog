@@ -242,6 +242,15 @@
                 href="https://www.danielsobrado.com/tags/spark/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/introduction-rest-api/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/java/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/rest-api/</loc>
+    <lastmod>2019-01-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/investing/asset_allocation/</loc>
     <lastmod>2018-09-29T11:54:02+06:00</lastmod>
   </url><url>
@@ -620,7 +629,5 @@
     <loc>https://www.danielsobrado.com/tags/functional-programming/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/java/</loc>
   </url>
 </urlset>

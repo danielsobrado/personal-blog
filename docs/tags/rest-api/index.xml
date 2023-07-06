@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>REST-API on </title>
+    <link>https://www.danielsobrado.com/tags/rest-api/</link>
+    <description>Recent content in REST-API on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/rest-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to REST API</title>
+      <link>https://www.danielsobrado.com/blog/introduction-rest-api/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-rest-api/</guid>
+      <description>Introduction to REST API REST (Representational State Transfer) is an architectural style for building web services.</description>
+    </item>
+    
+  </channel>
+</rss>

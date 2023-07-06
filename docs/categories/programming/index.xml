@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Introduction to REST API</title>
+      <link>https://www.danielsobrado.com/blog/introduction-rest-api/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-rest-api/</guid>
+      <description>Introduction to REST API REST (Representational State Transfer) is an architectural style for building web services.</description>
+    </item>
+    
+    <item>
       <title>ACID Properties</title>
       <link>https://www.danielsobrado.com/blog/acid/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
