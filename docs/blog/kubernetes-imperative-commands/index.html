@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Tags</title>
+    <title>Kubernetes Imperative Commands</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
+    <meta name="description" content="Kubernetes Imperative Commands Explained.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.113.0">
 
@@ -117,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/tags/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/tags/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -172,10 +142,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Tags</h2>
+				<h2 class="text-white font-weight-bold">Kubernetes Imperative Commands</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Tags</li>
+					<li>Kubernetes Imperative Commands</li>
 				</ol>
 			</div>
 		</div>
@@ -183,242 +153,169 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://www.danielsobrado.com/" alt="Python">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Kubernetes Imperative Commands</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 10 Feb</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>Kubernetes, the most popular container management system, includes many commands. Imperative commands directly create, modify, and remove Kubernetes objects. Today, we&rsquo;ll break down these imperative commands and use them with examples, assignments, and questions to prepare for examinations.</p>
+<h3 id="kubernetes-command-types">Kubernetes Command Types</h3>
+<p>Imperative commands, declarative object configuration, and imperative object configuration are the main approaches to control resources and applications in Kubernetes. Each strategy has advantages and drawbacks. Let&rsquo;s compare these types.</p>
+<ol>
+<li>
+<p><strong>Imperative Commands</strong>: Kubernetes imperative commands directly manipulate live objects. For novices, they are the simplest. They aren&rsquo;t good for complex procedures and don&rsquo;t make tracking system changes easier.</p>
+</li>
+<li>
+<p><strong>Imperative Object Configuration</strong>: Command-line parameters or local configuration files generate and modify Kubernetes objects. This method gives you more control than imperative instructions and simplifies tracking changes. It&rsquo;s complicated for complex systems and doesn&rsquo;t automatically manage live system changes.</p>
+<p>Example: <code>bash kubectl create -f nginx.yaml</code>
+This command generates a <code>Nginx.yaml</code> defined Kubernetes object.</p>
+</li>
+<li>
+<p><strong>Declarative Object Configuration</strong>: This method uses version-controlled object configuration files. Modifying an object&rsquo;s configuration and forcing the changes are required. This is the most flexible way, allowing complex procedures and easy change tracking. It demands extensive knowledge of Kubernetes object structures.</p>
+<p>Example: <code>bash kubectl apply -f nginx.yaml</code>
+This command updates the Kubernetes object in the <code>nginx.yaml</code> file with any modifications.</p>
+</li>
+</ol>
+<h3 id="commonly-used-imperative-commands">Commonly Used Imperative Commands</h3>
+<p>Here are some of the most commonly used Kubernetes imperative commands:</p>
+<ol>
+<li>
+<p><strong><code>kubectl run</code></strong>: This command is used to create a new Deployment.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run nginx --image<span style="color:#f92672">=</span>nginx
+</span></span></code></pre></div></li>
+<li>
+<p><strong><code>kubectl expose</code></strong>: This command is used to expose Kubernetes objects, such as Deployments, as new Services.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl expose deployment nginx --port<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span> --target-port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong><code>kubectl delete</code></strong>: This command is used to delete resources, either by filenames, stdin, resources, names, or by resources and label selector.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl delete deployment nginx
+</span></span></code></pre></div></li>
+<li>
+<p><strong><code>kubectl get</code></strong>: This command is used to display one or many resources.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="exercises-and-tricky-exam-questions">Exercises and Tricky Exam Questions</h3>
+<p>Execute those instructions and examine the results:</p>
+<ol>
+<li><strong>Exercise</strong>: Create a deployment using <code>kubectl run</code>, expose it with <code>kubectl expose</code>, list it with <code>kubectl get</code>, and finally delete it with <code>kubectl delete</code>.</li>
+<li><strong>Question 1</strong>: What happens if you run <code>kubectl run</code> command without specifying the <code>--image</code> flag?</li>
+<li><strong>Question 2</strong>: How can you delete multiple deployments at once using <code>kubectl delete</code>?</li>
+</ol>
+<h3 id="solutions-and-explanations">Solutions and Explanations</h3>
+<p>Now, let&rsquo;s discuss the solutions and explanations to the exercises and tricky questions we proposed earlier.</p>
+<ol>
+<li>
+<p><strong>Exercise Solution</strong>:</p>
+<p>Step 1: Create a deployment using <code>kubectl run</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run nginx --image<span style="color:#f92672">=</span>nginx
+</span></span></code></pre></div><p>This command creates a new Deployment named <code>nginx</code>, running the <code>nginx</code> image.</p>
+<p>Step 2: Expose it with <code>kubectl expose</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl expose deployment nginx --port<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span> --target-port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><p>This command exposes the <code>nginx</code> Deployment as a new Service that listens on port 80 and forwards requests to port 8080 of the pods selected by the deployment.</p>
+<p>Step 3: List it with <code>kubectl get</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get services
+</span></span></code></pre></div><p>This command displays all the Services in the current namespace, including the newly created Service.</p>
+<p>Step 4: Delete it with <code>kubectl delete</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl delete service nginx
+</span></span><span style="display:flex;"><span>kubectl delete deployment nginx
+</span></span></code></pre></div><p>These commands delete the <code>nginx</code> Service and the <code>nginx</code> Deployment.</p>
+</li>
+<li>
+<p><strong>Question 1 Solution</strong>: If you run the <code>kubectl run</code> command without specifying the <code>--image</code> flag, it will throw an error. The <code>--image</code> flag is required to specify the Docker image to run in the containers.</p>
+</li>
+<li>
+<p><strong>Question 2 Solution</strong>: You can delete multiple deployments at once using <code>kubectl delete</code> by separating the deployment names with a space. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl delete deployments deployment1 deployment2 deployment3
+</span></span></code></pre></div><p>This command deletes the deployments named <code>deployment1</code>, <code>deployment2</code>, and <code>deployment3</code>.</p>
+</li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>Kubernetes imperative instructions directly manipulate objects. Kubernetes management requires understanding and using them.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkubernetes-imperative-commands%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Kubernetes%20Imperative%20Commands&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkubernetes-imperative-commands%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkubernetes-imperative-commands%2f&amp;resubmit=true&amp;title=Kubernetes%20Imperative%20Commands"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Kubernetes%20Imperative%20Commands&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fkubernetes-imperative-commands%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kubernetes">Kubernetes</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/tags/python/" class="h4 font-primary text-dark">Python</a>
-        <p>by </p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://www.danielsobrado.com/" alt="Dot Product">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/tags/dot-product/" class="h4 font-primary text-dark">Dot Product</a>
-        <p>by </p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://www.danielsobrado.com/" alt="Kubernetes">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/tags/kubernetes/" class="h4 font-primary text-dark">Kubernetes</a>
-        <p>by </p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://www.danielsobrado.com/" alt="Elasticsearch">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/tags/elasticsearch/" class="h4 font-primary text-dark">Elasticsearch</a>
-        <p>by </p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://www.danielsobrado.com/" alt="Concepts">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/tags/concepts/" class="h4 font-primary text-dark">Concepts</a>
-        <p>by </p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://www.danielsobrado.com/" alt="Kafka">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/tags/kafka/" class="h4 font-primary text-dark">Kafka</a>
-        <p>by </p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">Prev</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/tags/" class="page-link">
-								1
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/tags/page/2/" class="page-link">
-								2
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/tags/page/3/" class="page-link">
-								3
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/tags/page/4/" class="page-link">
-								4
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/tags/page/5/" class="page-link">
-								5
-							</a>
-						</li>
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/tags/page/2/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -598,10 +495,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->

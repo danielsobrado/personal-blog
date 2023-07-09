@@ -6,7 +6,16 @@
     <description>Recent content in Devops on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Imperative Commands</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</guid>
+      <description>Kubernetes, the most popular container management system, includes many commands. Imperative commands directly create, modify, and remove Kubernetes objects.</description>
+    </item>
+    
     <item>
       <title>Kubernetes Concepts</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-concepts/</link>

@@ -80,6 +80,15 @@
     </item>
     
     <item>
+      <title>Kubernetes Imperative Commands</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</guid>
+      <description>Kubernetes, the most popular container management system, includes many commands. Imperative commands directly create, modify, and remove Kubernetes objects.</description>
+    </item>
+    
+    <item>
       <title>Installing ELK Stack on Windows</title>
       <link>https://www.danielsobrado.com/blog/elk-installation/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
