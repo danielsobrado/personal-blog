@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precedence of properties</title>
       <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>Implementing the Adapter Pattern in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</guid>
+      <description>Adapter Pattern: A Brief Look at the Adapter Pattern The Adapter Pattern assembles incompatible systems.</description>
+    </item>
+    
+    <item>
       <title>Euclidean Space vs Manifold</title>
       <link>https://www.danielsobrado.com/blog/euclidean-manifold/</link>
       <pubDate>Wed, 17 May 2023 00:00:00 +0000</pubDate>
@@ -68,6 +77,15 @@
       
       <guid>https://www.danielsobrado.com/blog/dot-product/</guid>
       <description>What is a Dot Product? The dot product is a way of multiplying two vectors together.</description>
+    </item>
+    
+    <item>
+      <title>Ambassador Pattern in Kubernetes Explained</title>
+      <link>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</guid>
+      <description>Ambassador Pattern: A Quick Start With the Ambassador Pattern, a helper (called an &amp;ldquo;ambassador&amp;rdquo;) container is put in the same Pod as the main program container.</description>
     </item>
     
     <item>
@@ -355,7 +373,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/monitoring-and-observability-in-kubernetes/</guid>
-      <description></description>
+      <description>https://i.imgur.com/FjgFVkz.jpg</description>
     </item>
     
     <item>
