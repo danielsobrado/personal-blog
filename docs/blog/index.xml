@@ -58,7 +58,7 @@
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-deployments/</guid>
-      <description>kubernetes-deployments.md Deployment Overview Deployment is a higher-level Kubernetes object designed to manage stateless applications.</description>
+      <description>Deployment Overview Deployment is a higher-level Kubernetes object designed to manage stateless applications.</description>
     </item>
     
     <item>
