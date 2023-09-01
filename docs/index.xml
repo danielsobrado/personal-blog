@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precedence of properties</title>
       <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
@@ -50,6 +50,15 @@
       
       <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
       <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
+    </item>
+    
+    <item>
+      <title>Understanding and Using Kubernetes Deployments</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-deployments/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-deployments/</guid>
+      <description>kubernetes-deployments.md Deployment Overview Deployment is a higher-level Kubernetes object designed to manage stateless applications.</description>
     </item>
     
     <item>

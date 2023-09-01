@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>Understanding and Using Kubernetes Deployments</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-deployments/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-deployments/</guid>
+      <description>kubernetes-deployments.md Deployment Overview Deployment is a higher-level Kubernetes object designed to manage stateless applications.</description>
+    </item>
+    
+    <item>
       <title>Implementing the Adapter Pattern in Kubernetes</title>
       <link>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>

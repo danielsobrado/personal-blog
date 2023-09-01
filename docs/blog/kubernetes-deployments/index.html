@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Understanding and Using Kubernetes Deployments</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Learn how to manage your applications using Kubernetes Deployments. Gain insights into rolling updates, rollbacks, and scaling.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -145,16 +155,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/3PIONRY.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Understanding and Using Kubernetes Deployments</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 05 Jul</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Devops</a>
@@ -162,7 +172,159 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h2 id="kubernetes-deploymentsmd">kubernetes-deployments.md</h2>
+<h3 id="deployment-overview">Deployment Overview</h3>
+<ul>
+<li><strong>Deployment</strong> is a higher-level Kubernetes object designed to manage stateless applications.</li>
+<li>Ensures desired number of replicas for your app are maintained, updating them as needed.</li>
+<li>Supersedes the ReplicationController for deploying stateless apps.</li>
+</ul>
+<h3 id="creating-and-managing-deployments">Creating and Managing Deployments</h3>
+<ol>
+<li><strong>Creating Deployments</strong>: Use <code>kubectl create deployment</code> or apply a deployment YAML file using <code>kubectl apply -f &lt;filename.yaml&gt;</code>.</li>
+</ol>
+<pre tabindex="0"><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: my-image:v1
+</code></pre><ol start="2">
+<li>
+<p><strong>Listing Deployments</strong>: Use <code>kubectl get deployments</code>.</p>
+</li>
+<li>
+<p><strong>Updating Deployments</strong>: Modify the deployment YAML and use <code>kubectl apply -f &lt;filename.yaml&gt;</code> or use imperative commands like <code>kubectl set image</code>.</p>
+</li>
+<li>
+<p><strong>Deleting Deployments</strong>: Use <code>kubectl delete deployment &lt;deployment-name&gt;</code>.</p>
+</li>
+</ol>
+<h3 id="rolling-updates-and-rollbacks">Rolling Updates and Rollbacks</h3>
+<ul>
+<li>
+<p><strong>Rolling Update</strong>: Default strategy for updates. One replica is updated at a time.</p>
+<ul>
+<li>Use: <code>kubectl set image deployment/my-deployment my-container=my-image:v2</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Rollback</strong>: Undo an update and revert to a previous version.</p>
+<ul>
+<li>Use: <code>kubectl rollout undo deployment/my-deployment</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>History</strong>: View rollout history with <code>kubectl rollout history deployment/my-deployment</code>.</p>
+</li>
+</ul>
+<h3 id="deployment-strategies-blue-green-canary">Deployment Strategies: Blue-Green, Canary</h3>
+<ol>
+<li>
+<p><strong>Blue-Green Deployment</strong>:</p>
+<ul>
+<li>Two environments: Blue (current) and Green (new).</li>
+<li>Switch traffic from Blue to Green once Green is tested and ready.</li>
+<li>Implemented using two separate deployments and service selectors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Canary Deployment</strong>:</p>
+<ul>
+<li>Release new version to a subset of users.</li>
+<li>If successful, gradually increase the number of users seeing the new version.</li>
+<li>Can be done using multiple deployments and managing replicas or with service mesh solutions like Istio.</li>
+</ul>
+</li>
+</ol>
+<h3 id="scaling-deployments">Scaling Deployments</h3>
+<ul>
+<li>
+<p><strong>Manual Scaling</strong>: Adjust the <code>replicas</code> field in the deployment YAML or use <code>kubectl scale deployment/my-deployment --replicas=5</code>.</p>
+</li>
+<li>
+<p><strong>Auto-scaling</strong>: Use Horizontal Pod Autoscaler (HPA) to adjust replicas based on CPU or memory usage.</p>
+<ul>
+<li>Example: <code>kubectl autoscale deployment my-deployment --min=2 --max=10 --cpu-percent=80</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="imperative-commands-for-deployments">Imperative Commands for Deployments</h2>
+<p>When you need to directly perform actions without using configuration files, you&rsquo;d rely on imperative commands. Here are some of the common imperative commands related to deployments:</p>
+<ol>
+<li><strong>Create a New Deployment</strong>:   <code>kubectl create deployment &lt;deployment-name&gt; --image=&lt;image-name&gt;</code></li>
+<li><strong>Update Existing Deployment Image</strong>:   <code>kubectl set image deployment/&lt;deployment-name&gt; &lt;container-name&gt;=&lt;new-image&gt;</code></li>
+<li><strong>Scale a Deployment</strong>:   <code>kubectl scale deployment/&lt;deployment-name&gt; --replicas=&lt;number-of-replicas&gt;</code></li>
+<li><strong>Expose a Deployment</strong>:   <code>kubectl expose deployment &lt;deployment-name&gt; --port=&lt;port&gt; --target-port=&lt;target-port&gt; --name=&lt;service-name&gt; --type=&lt;service-type&gt;</code></li>
+</ol>
+<h2 id="exercise---deployment-troubleshooting">Exercise - Deployment Troubleshooting</h2>
+<h3 id="setup">Setup:</h3>
+<ol>
+<li>
+<p>Create a new deployment using:</p>
+<pre tabindex="0"><code>kubectl create deployment ckad-app --image=nginx:1.17
+</code></pre></li>
+<li>
+<p>Expose the deployment on port 80:</p>
+<pre tabindex="0"><code>kubectl expose deployment ckad-app --port=80 --type=NodePort
+</code></pre></li>
+</ol>
+<h3 id="exercise-task">Exercise Task:</h3>
+<p>You&rsquo;ve been informed that the <code>ckad-app</code> is not accessible. Troubleshoot and fix the issue.</p>
+<h3 id="steps">Steps:</h3>
+<ol>
+<li>
+<p><strong>Check Deployment</strong>: Confirm if the desired number of replicas matches the current number.</p>
+<pre tabindex="0"><code>kubectl get deployments
+</code></pre></li>
+<li>
+<p><strong>Check Pods</strong>: Ensure pods are in a RUNNING state.</p>
+<pre tabindex="0"><code>kubectl get pods -l app=ckad-app
+</code></pre></li>
+<li>
+<p><strong>Check Service</strong>: Verify if the service is correctly set up and note the node port assigned.</p>
+<pre tabindex="0"><code>kubectl get svc ckad-app
+</code></pre></li>
+<li>
+<p><strong>Access the Application</strong>: Use <code>curl</code> or browser to access the app using the node&rsquo;s IP and the noted node port.</p>
+</li>
+<li>
+<p><strong>Check Pod Logs</strong>: If there&rsquo;s an issue with the app itself.</p>
+<pre tabindex="0"><code>kubectl logs &lt;pod-name&gt;
+</code></pre></li>
+<li>
+<p><strong>Describe Resources</strong>: This provides detailed information which often includes errors or issues.</p>
+<pre tabindex="0"><code>kubectl describe deployment ckad-app
+kubectl describe pod &lt;pod-name&gt;
+</code></pre></li>
+</ol>
+<h3 id="tips-for-ckad---deployments">Tips for CKAD - Deployments</h3>
+<ol>
+<li>
+<p><strong>Practice Imperative Commands</strong>: CKAD is time-constrained. Imperative commands can save a lot of time versus writing YAML files from scratch.</p>
+</li>
+<li>
+<p><strong>Always Monitor Rollouts</strong>: After making changes to a deployment, use <code>kubectl rollout status</code> to ensure changes are being applied correctly.</p>
+</li>
+<li>
+<p><strong>Know How to Rollback</strong>: Mistakes happen. Be comfortable using the <code>kubectl rollout undo</code> command.</p>
+</li>
+<li>
+<p><strong>Use Dry-Run</strong>: Before applying a change, use <code>--dry-run=client</code> with <code>kubectl</code> commands to see what changes would occur without actually applying them.</p>
+</li>
+</ol>
+
             </div>
           </div>
         </div>
@@ -290,6 +452,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -299,21 +476,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -357,23 +519,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -381,7 +545,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -400,7 +564,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -514,7 +678,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -523,7 +687,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -582,12 +746,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>
