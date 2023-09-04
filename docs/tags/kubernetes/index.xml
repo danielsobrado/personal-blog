@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>Mastering Multi-Container Pods in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/</guid>
+      <description>Multi-container Pod Basics In Kubernetes, a Pod can hold more than one container.</description>
+    </item>
+    
+    <item>
       <title>Kubernetes Imperative Commands</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</link>
       <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>

@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Mastering Multi-Container Pods in Kubernetes</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Explore the concept of Multi-Container Pods. Learn about patterns like sidecar, adapter, and ambassador.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/X9TxpcX.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Mastering Multi-Container Pods in Kubernetes</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 11 May</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Devops</a>
@@ -192,7 +202,155 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="multi-container-pod-basics">Multi-container Pod Basics</h3>
+<p>In Kubernetes, a Pod can hold more than one container.</p>
+<p>Because these containers share the same network IP, port space, and storage, they can easily talk to each other and share info. Each container in the Pod has its own purpose and works closely with the other containers in the same Pod.</p>
+<h4 id="example-a-simple-multi-container-pod">Example: A Simple Multi-container Pod</h4>
+<p>Here&rsquo;s a YAML file to define a multi-container Pod with a web server and a data filler container:</p>
+<pre tabindex="0"><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: my-multi-container-pod
+spec:
+  containers:
+  - name: web-server
+    image: nginx
+  - name: data-filler
+    image: busybox
+    command: [&#39;sh&#39;, &#39;-c&#39;, &#39;echo Hello &gt; /usr/share/nginx/html/index.html&#39;]
+</code></pre><p>To create the Pod, run:</p>
+<pre tabindex="0"><code>kubectl apply -f my-multi-container-pod.yaml
+</code></pre><h3 id="use-cases-for-multi-container-pods">Use Cases for Multi-container Pods</h3>
+<ol>
+<li>
+<p><strong>Single Responsibility Principle</strong>: Each container can focus on a single task, making it easier to manage and scale each component.</p>
+</li>
+<li>
+<p><strong>Resource Sharing</strong>: Containers in the same Pod can share storage volumes, reducing data duplication.</p>
+</li>
+<li>
+<p><strong>Network Efficiency</strong>: Being on the same local network, the containers can efficiently communicate with each other.</p>
+</li>
+</ol>
+<h4 id="example-shared-volume">Example: Shared Volume</h4>
+<p>You could have an HTML filler container that populates an HTML file which the web-server serves. They can share a volume:</p>
+<pre tabindex="0"><code>spec:
+  containers:
+  - name: web-server
+    image: nginx
+    volumeMounts:
+    - name: shared-data
+      mountPath: /usr/share/nginx/html
+  - name: html-filler
+    image: busybox
+    command: [&#39;sh&#39;, &#39;-c&#39;, &#39;echo Hello &gt; /html/index.html&#39;]
+    volumeMounts:
+    - name: shared-data
+      mountPath: /html
+  volumes:
+  - name: shared-data
+    emptyDir: {}
+</code></pre><h3 id="design-patterns">Design Patterns</h3>
+<ol>
+<li>
+<p><strong>Sidecar</strong>: Enhances or extends the main container&rsquo;s functionality. For example, a logging sidecar can handle logging for the main application.</p>
+</li>
+<li>
+<p><strong>Ambassador</strong>: Used for proxying local connections to the world outside the Pod. This pattern can expose a database running in the Pod to other services.</p>
+</li>
+<li>
+<p><strong>Adapter</strong>: Transforms the output of one container to make it understandable by another. Useful when integrating software components that expect different formats or data schemas.</p>
+</li>
+</ol>
+<h4 id="example-sidecar-pattern">Example: Sidecar Pattern</h4>
+<p>Using the Sidecar pattern, you can have a logging sidecar along with your application:</p>
+<pre tabindex="0"><code>spec:
+  containers:
+  - name: app
+    image: my-app
+  - name: logging-sidecar
+    image: my-logger
+</code></pre><h3 id="communication-between-containers">Communication between Containers</h3>
+<ol>
+<li>
+<p><strong>Inter-process Communication (IPC)</strong>: Containers in the same Pod can communicate via IPC like shared memory or semaphores.</p>
+</li>
+<li>
+<p><strong>Localhost Networking</strong>: Containers can reach each other through <code>localhost</code> as they share the network namespace.</p>
+</li>
+<li>
+<p><strong>File Sharing</strong>: Containers in the same Pod can read and write to the same storage volumes.</p>
+</li>
+</ol>
+<h4 id="example-localhost-networking">Example: Localhost Networking</h4>
+<p>You could use curl inside one container to access another:</p>
+<pre tabindex="0"><code>kubectl exec -it my-multi-container-pod -c data-filler -- curl localhost
+</code></pre><h3 id="best-practices-and-considerations">Best Practices and Considerations</h3>
+<ol>
+<li>
+<p><strong>Tight Coupling</strong>: Only group containers that are tightly coupled in functionality.</p>
+</li>
+<li>
+<p><strong>Resource Allocation</strong>: Be cautious when allocating resources; one container should not starve others in the same Pod.</p>
+</li>
+<li>
+<p><strong>Logging and Monitoring</strong>: Ensure logging and monitoring are configured to track the performance and errors of each container separately.</p>
+</li>
+<li>
+<p><strong>Start-up Order</strong>: Use init containers if you need to ensure that certain containers start before others.</p>
+</li>
+<li>
+<p><strong>Security</strong>: Containers in the same Pod share the security context, so ensure that your security policies account for this.</p>
+</li>
+</ol>
+<h4 id="example-resource-allocation">Example: Resource Allocation</h4>
+<p>Here&rsquo;s how you could allocate CPU and memory to each container:</p>
+<pre tabindex="0"><code>spec:
+  containers:
+  - name: web-server
+    image: nginx
+    resources:
+      limits:
+        cpu: &#34;0.5&#34;
+        memory: &#34;128Mi&#34;
+  - name: data-filler
+    image: busybox
+    resources:
+      limits:
+        cpu: &#34;0.2&#34;
+        memory: &#34;64Mi&#34;
+</code></pre><hr>
+<h3 id="troubleshooting-exercise">Troubleshooting Exercise</h3>
+<h4 id="setup">Setup</h4>
+<p>We have a multi-container Pod with two containers: <code>main-app</code> and <code>helper</code>. <code>main-app</code> writes data to a shared volume, and <code>helper</code> is supposed to read this data and send it somewhere.</p>
+<h4 id="issue">Issue</h4>
+<p><code>main-app</code> is writing data, but <code>helper</code> is not able to read it.</p>
+<h4 id="debug-and-fix">Debug and Fix</h4>
+<ol>
+<li>
+<p><strong>Check Logs</strong>: Check logs of both containers</p>
+<pre tabindex="0"><code>kubectl logs &lt;pod_name&gt; -c main-app
+kubectl logs &lt;pod_name&gt; -c helper
+</code></pre></li>
+<li>
+<p><strong>Inspect Volume</strong>: Make sure that both containers mount the volume at the correct path.</p>
+</li>
+<li>
+<p><strong>Check Permissions</strong>: Make sure <code>helper</code> has the correct permissions to read data. You might need to adjust the security context.</p>
+</li>
+<li>
+<p><strong>Check Application Code</strong>: Ensure that <code>main-app</code> is writing to the correct location that <code>helper</code> is trying to read from.</p>
+</li>
+<li>
+<p><strong>Resource Consumption</strong>: Use <code>kubectl describe pod &lt;pod_name&gt;</code> to check if any of the containers is consuming too many resources.</p>
+</li>
+<li>
+<p><strong>Restart Container</strong>: Sometimes a simple restart helps.</p>
+<pre tabindex="0"><code>kubectl delete pod &lt;pod_name&gt; 
+</code></pre><p>Then reapply the YAML file.</p>
+</li>
+</ol>
+
             </div>
           </div>
         </div>
@@ -320,6 +478,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +502,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,23 +545,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -411,7 +571,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -430,7 +590,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -544,7 +704,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -553,7 +713,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -612,12 +772,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

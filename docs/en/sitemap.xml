@@ -175,6 +175,19 @@
     <loc>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</loc>
     <lastmod>2023-05-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/mastering-multi-container-pods-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/introduction-embeddings/</loc>
     <lastmod>2023-04-11T00:00:00+00:00</lastmod>
     <xhtml:link
