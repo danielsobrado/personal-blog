@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Kubernetes Custom Resource Definitions (CRDs)</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Master Custom Resource Definitions in Kubernetes. Learn how to extend the Kubernetes API with custom resources.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/4G39qGH.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Kubernetes Custom Resource Definitions (CRDs)</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 04 Sep</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,177 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="kubernetes-custom-resource-definitions-crds">Kubernetes Custom Resource Definitions (CRDs)</h3>
+<h4 id="what-are-crds">What are CRDs?</h4>
+<p>In Kubernetes, a CRD allows users to define their own custom resources, extending the Kubernetes API. Once you&rsquo;ve defined a CRD, you can manage it using <code>kubectl</code> just like built-in resources (like Pods, Services).</p>
+<h4 id="why-use-crds">Why use CRDs?</h4>
+<p>If you have a specific configuration or application-related specification that doesn&rsquo;t fit into existing Kubernetes objects, CRDs can help. For instance, if you&rsquo;ve developed a specific operator to manage a database, you might use a CRD to represent each database instance.</p>
+<h4 id="key-components">Key Components</h4>
+<ol>
+<li>
+<p><strong>Custom Resources</strong>: These are the instances of your CRD. If you define a CRD for <code>Database</code>, then each individual database you create would be a custom resource.</p>
+</li>
+<li>
+<p><strong>Custom Controllers</strong>: Often used in conjunction with CRDs. A custom controller watches your custom resource and takes actions based on changes.</p>
+</li>
+</ol>
+<p>Together, a CRD and a custom controller make up an operator.</p>
+<h4 id="creating-a-crd">Creating a CRD</h4>
+<p>A CRD is defined using a YAML file. Here&rsquo;s a basic outline:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apiextensions.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">CustomResourceDefinition</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">databases.yourdomain.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#ae81ff">yourdomain.com</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">versions</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">served</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">storage</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">scope</span>: <span style="color:#ae81ff">Namespaced </span> <span style="color:#75715e"># or &#34;Cluster&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">names</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plural</span>: <span style="color:#ae81ff">databases</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">singular</span>: <span style="color:#ae81ff">database</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Database</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shortNames</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">db</span>
+</span></span></code></pre></div><ul>
+<li><code>group</code>: The API group.</li>
+<li><code>versions</code>: Supported versions.</li>
+<li><code>scope</code>: <code>Namespaced</code> if it should exist inside namespaces. <code>Cluster</code> for cluster-wide.</li>
+<li><code>names</code>: Specify the naming details.</li>
+</ul>
+<h4 id="working-with-crds">Working with CRDs</h4>
+<ol>
+<li><strong>Create a CRD</strong>: <code>kubectl apply -f your-crd-definition.yaml</code></li>
+<li><strong>List CRDs</strong>: <code>kubectl get crds</code></li>
+<li><strong>Use the CRD</strong>: Once the CRD is created, you can create custom objects just like built-in objects.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">yourdomain.com/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Database</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">mydb-instance</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># followed by the spec of your custom resource</span>
+</span></span></code></pre></div><h4 id="deleting-crds">Deleting CRDs</h4>
+<ul>
+<li>Remember, deleting a CRD will delete all the custom resources of that type!</li>
+<li><code>kubectl delete crd databases.yourdomain.com</code></li>
+</ul>
+<h3 id="kubernetes-ckad-practice-exercises-with-solutions">Kubernetes CKAD Practice Exercises with Solutions</h3>
+<h4 id="pre-setup-and-exercises">Pre-Setup and Exercises</h4>
+<p>This Markdown document provides initial setups for each exercise and the exercises themselves to help you practice Custom Resource Definitions (CRDs), troubleshooting, and imperative commands. Additionally, solutions are also provided for each exercise.</p>
+<h4 id="pre-setup-for-exercise-1">Pre-Setup for Exercise 1</h4>
+<p>No initial setup required. The exercise starts with creating the CRD.</p>
+<h4 id="exercise-1-create-a-custom-resource-definition-crd">Exercise 1: Create a Custom Resource Definition (CRD)</h4>
+<ol>
+<li>
+<p>Define a CRD for <code>WebApps</code> which has the following specifications:</p>
+<ul>
+<li>API Group: <code>example.com</code></li>
+<li>Version: <code>v1</code></li>
+<li>Namespaced</li>
+<li>Ensure the CRD supports both singular (<code>webapp</code>) and plural (<code>webapps</code>) forms.</li>
+</ul>
+</li>
+<li>
+<p>Create an instance of <code>WebApp</code> with the name <code>frontend-app</code> that has specifications like <code>image: nginx:latest</code>.</p>
+</li>
+</ol>
+<h4 id="solution-for-exercise-1">Solution for Exercise 1</h4>
+<pre tabindex="0"><code>kubectl create crd webapps.example.com \
+  --group=example.com \
+  --version=v1 \
+  --scope=Namespaced \
+  --names=singular=webapp,plural=webapps,kind=WebApp
+
+kubectl apply -f - &lt;&lt;EOF
+apiVersion: example.com/v1
+kind: WebApp
+metadata:
+  name: frontend-app
+spec:
+  image: nginx:latest
+EOF
+</code></pre><h4 id="pre-setup-for-exercise-2">Pre-Setup for Exercise 2</h4>
+<p>Create a namespace called <code>debug-namespace</code> and deploy a faulty pod named <code>trouble-pod</code> in it.</p>
+<pre tabindex="0"><code>kubectl create ns debug-namespace
+kubectl run trouble-pod --namespace=debug-namespace --image=nginx:broken --command -- /bin/sh -c &#34;exit 1&#34;
+</code></pre><h4 id="exercise-2-troubleshooting-a-pod">Exercise 2: Troubleshooting a Pod</h4>
+<p>A Pod named <code>trouble-pod</code> in the <code>debug-namespace</code> is failing to start.</p>
+<ol>
+<li>Use an imperative command to fetch logs of this Pod.</li>
+<li>Describe the Pod to identify any events or issues.</li>
+<li>Get the details of all the resources in <code>debug-namespace</code> using a single command.</li>
+</ol>
+<h4 id="solution-for-exercise-2">Solution for Exercise 2</h4>
+<pre tabindex="0"><code>kubectl logs trouble-pod -n debug-namespace
+kubectl describe pod trouble-pod -n debug-namespace
+kubectl get all -n debug-namespace
+</code></pre><h4 id="pre-setup-for-exercise-3">Pre-Setup for Exercise 3</h4>
+<p>No initial setup is required. You&rsquo;ll be working with an empty namespace.</p>
+<h4 id="exercise-3-imperative-commands-practice">Exercise 3: Imperative Commands Practice</h4>
+<ol>
+<li>Create a new namespace called <code>exercise-ns</code> using an imperative command.</li>
+<li>Run an nginx Pod named <code>web-server</code> in the <code>exercise-ns</code> namespace.</li>
+<li>Expose the <code>web-server</code> Pod on port <code>8080</code> using a Service named <code>web-service</code> in the same namespace. Do this using an imperative command.</li>
+</ol>
+<h4 id="solution-for-exercise-3">Solution for Exercise 3</h4>
+<pre tabindex="0"><code>kubectl create ns exercise-ns
+kubectl run web-server --image=nginx --namespace=exercise-ns
+kubectl expose pod web-server --port=8080 --name=web-service --namespace=exercise-ns
+</code></pre><h4 id="pre-setup-for-exercise-4">Pre-Setup for Exercise 4</h4>
+<p>Create the <code>WebApp</code> CRD and deploy a custom controller (dummy nginx pod for this exercise).</p>
+<pre tabindex="0"><code>kubectl create crd webapps.example.com \
+  --group=example.com \
+  --version=v1 \
+  --scope=Namespaced \
+  --names=singular=webapp,plural=webapps,kind=WebApp
+
+kubectl run webapp-controller --image=nginx
+</code></pre><ol start="3">
+<li>Deploy a WebApp resource:</li>
+</ol>
+<pre tabindex="0"><code>kubectl apply -f - &lt;&lt;EOF
+apiVersion: example.com/v1
+kind: WebApp
+metadata:
+  name: sample-app
+spec:
+  image: nginx:latest
+EOF
+</code></pre><h4 id="exercise-4-crd-troubleshooting">Exercise 4: CRD Troubleshooting</h4>
+<p>You realize that instances of the <code>WebApp</code> CRD are not behaving as expected. Some <code>WebApps</code> are not accessible via their services.</p>
+<ol>
+<li>Describe an instance of the <code>WebApp</code> to understand its current state.</li>
+<li>Check if any custom controllers are responsible for managing <code>WebApp</code> instances.</li>
+<li>Fetch logs of such controllers to understand if they are encountering any errors.</li>
+</ol>
+<h4 id="solution-for-exercise-4">Solution for Exercise 4</h4>
+<pre tabindex="0"><code>kubectl describe webapp sample-app
+kubectl get pods -l run=webapp-controller
+kubectl logs -l run=webapp-controller
+</code></pre><h4 id="pre-setup-for-exercise-5">Pre-Setup for Exercise 5</h4>
+<p>Deploy two deployments named <code>frontend-deployment</code> and <code>backend-deployment</code>.</p>
+<pre tabindex="0"><code>kubectl create deployment frontend-deployment --image=nginx
+kubectl create deployment backend-deployment --image=redis:3.0
+</code></pre><h4 id="exercise-5-imperative-commands-with-configurations">Exercise 5: Imperative Commands with Configurations</h4>
+<ol>
+<li>Create a busybox Pod named <code>config-pod</code> which has an environment variable <code>APP_MODE</code> set to <code>production</code>.</li>
+<li>Scale a deployment named <code>frontend-deployment</code> to 5 replicas using an imperative command.</li>
+<li>Set an image <code>redis:4.0</code> for a deployment named <code>backend-deployment</code> without changing any other configuration.</li>
+</ol>
+<h4 id="solution-for-exercise-5">Solution for Exercise 5</h4>
+<pre tabindex="0"><code>kubectl run config-pod --image=busybox --env=APP_MODE=production
+kubectl scale deployment frontend-deployment --replicas=5
+kubectl set image deployment/backend-deployment *=redis:4.0
+</code></pre><h4 id="for-ckad">For CKAD</h4>
+<ol>
+<li><strong>Understand CRD basics</strong>: How to define, apply, and manage them.</li>
+<li><strong>CRD Lifecycle</strong>: Be comfortable with creating, listing, and deleting CRDs.</li>
+<li><strong>Interaction</strong>: Understand how custom controllers might interact with these custom resources.</li>
+</ol>
+<p>For CKAD, the direct manipulation of CRDs might not be heavily emphasized, but having an understanding is beneficial. Instead, focus on how to interact with custom resources provided by any given CRD, which might be more relevant to application development and deployment.</p>
+
             </div>
           </div>
         </div>
@@ -320,6 +500,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +524,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,21 +567,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +593,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +612,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +726,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +735,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +794,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

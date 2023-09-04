@@ -6,7 +6,16 @@
     <description>Recent content in Kubernetes on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Custom Resource Definitions (CRDs)</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/</guid>
+      <description>Kubernetes Custom Resource Definitions (CRDs) What are CRDs? In Kubernetes, a CRD allows users to define their own custom resources, extending the Kubernetes API.</description>
+    </item>
+    
     <item>
       <title>Understanding and Using Kubernetes Deployments</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-deployments/</link>
@@ -40,7 +49,7 @@
       <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</guid>
-      <description>Kubernetes, the most popular container management system, includes many commands. Imperative commands directly create, modify, and remove Kubernetes objects.</description>
+      <description>Imperative commands directly create, modify, and remove Kubernetes objects. This is a quick and helpful way to get things going.</description>
     </item>
     
     <item>

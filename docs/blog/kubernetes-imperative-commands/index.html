@@ -172,7 +172,8 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Kubernetes, the most popular container management system, includes many commands. Imperative commands directly create, modify, and remove Kubernetes objects. Today, we&rsquo;ll break down these imperative commands and use them with examples, assignments, and questions.</p>
+              <p>Imperative commands directly create, modify, and remove Kubernetes objects. This is a quick and helpful way to get things going. Today, we&rsquo;re going to break down these &ldquo;must&rdquo; commands and use them.</p>
+<p>It is best to use declarative YAML settings for more stable deployments in production.</p>
 <h3 id="kubernetes-command-types">Kubernetes Command Types</h3>
 <p>Imperative commands, declarative object configuration, and imperative object configuration are the main approaches to control resources and applications in Kubernetes. Each strategy has advantages and drawbacks. Let&rsquo;s compare these types.</p>
 <ol>
@@ -210,7 +211,33 @@ This command updates the Kubernetes object in the <code>nginx.yaml</code> file 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods
 </span></span></code></pre></div></li>
 </ol>
-<h3 id="exercises-and-questions">Exercises and Questions</h3>
+<h4 id="create-and-expose-a-custom-nginx-pod-in-kubernetes">Create and Expose a Custom Nginx Pod in Kubernetes</h4>
+<h5 id="1-create-the-pod">1. Create the Pod</h5>
+<p>First, let&rsquo;s create a pod named <code>custom-nginx</code> using the <code>nginx</code> image.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run custom-nginx --image<span style="color:#f92672">=</span>nginx
+</span></span></code></pre></div><h5 id="2-modify-the-pod-to-use-port-8080">2. Modify the Pod to use port 8080</h5>
+<p>After creating the pod, we&rsquo;ll edit it to specify that it should use port <code>8080</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl edit pod custom-nginx
+</span></span></code></pre></div><p>In the editor that appears, find the <code>containers:</code> section. Under the line specifying <code>image: nginx</code>, add the following YAML to set the container port to <code>8080</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ports:
+</span></span><span style="display:flex;"><span>- containerPort: <span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><p>Save and exit the editor.</p>
+<blockquote>
+<p>This step only annotates the desired ports in the pod definition. The standard <code>nginx</code> image serves on port <code>80</code> by default. You&rsquo;ll need a custom configuration or a custom Docker image to make <code>nginx</code> actually serve on <code>8080</code>.</p>
+</blockquote>
+<h5 id="3-expose-the-pod">3. Expose the Pod</h5>
+<p>To expose the <code>custom-nginx</code> pod so that it can be accessed externally, you can create a service. Here, we&rsquo;ll use the <code>NodePort</code> type for demonstration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl expose pod custom-nginx --port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span> --target-port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span> --type<span style="color:#f92672">=</span>NodePort
+</span></span></code></pre></div><blockquote>
+<p>This assumes that your <code>nginx</code> is configured to serve on port <code>8080</code>. If you are using the standard <code>nginx</code> image, it serves on port <code>80</code>, so you&rsquo;ll need to adjust the <code>target-port</code> accordingly.</p>
+</blockquote>
+<h5 id="4-verify-the-pod-and-service">4. Verify the Pod and Service</h5>
+<p>Finally, verify that the pod and service are created successfully:</p>
+<p>Check the pod:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods custom-nginx
+</span></span></code></pre></div><p>Check the service:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get svc custom-nginx
+</span></span></code></pre></div><h3 id="exercises-and-questions">Exercises and Questions</h3>
 <p>Execute those instructions and examine the results:</p>
 <ol>
 <li><strong>Exercise</strong>: Create a deployment using <code>kubectl run</code>, expose it with <code>kubectl expose</code>, list it with <code>kubectl get</code>, and delete it with <code>kubectl delete</code>.</li>
@@ -245,8 +272,6 @@ This command updates the Kubernetes object in the <code>nginx.yaml</code> file 
 </span></span></code></pre></div><p>This command deletes the deployments named <code>deployment1</code>, <code>deployment2</code>, and <code>deployment3</code>.</p>
 </li>
 </ol>
-<h3 id="conclusion">Conclusion</h3>
-<p>Kubernetes imperative instructions directly manipulate objects. Kubernetes management requires understanding and using them.</p>
 
             </div>
           </div>
