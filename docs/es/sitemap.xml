@@ -528,6 +528,16 @@
     <loc>https://www.danielsobrado.com/es/blog/getting-started-with-kafka-command-line-tools/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/implementing-kubernetes-services/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/implementing-kubernetes-services/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/implementing-kubernetes-services/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/implementing-the-adapter-pattern-in-kubernetes/</loc>
   </url><url>
@@ -540,6 +550,16 @@
     <loc>https://www.danielsobrado.com/es/blog/kafka-operations-deep-dive/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-cronjobs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-cronjobs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-cronjobs/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-custom-resource-definitions-crds/</loc>
     <xhtml:link
@@ -566,6 +586,16 @@
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-resource-quotas-and-limits/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-role-based-access-control-rbac/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-role-based-access-control-rbac/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-security-best-practices/</loc>
   </url><url>
