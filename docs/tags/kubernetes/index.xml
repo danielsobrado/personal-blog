@@ -17,6 +17,24 @@
     </item>
     
     <item>
+      <title>Understanding and Using Helm in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</guid>
+      <description>Understanding and Using Helm in Kubernetes Introduction to Helm Helm is a package manager for Kubernetes, enabling you to define, install, and manage Kubernetes applications.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Liveness and Readiness Probes</title>
+      <link>https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/</guid>
+      <description>Basics of Container Logging in Kubernetes In Kubernetes, logs help you understand what&amp;rsquo;s happening inside your application and the underlying infrastructure.</description>
+    </item>
+    
+    <item>
       <title>Understanding and Using Kubernetes Deployments</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-deployments/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
@@ -32,6 +50,15 @@
       
       <guid>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</guid>
       <description>Adapter Pattern: A Brief Look at the Adapter Pattern The Adapter Pattern assembles incompatible systems.</description>
+    </item>
+    
+    <item>
+      <title>Managing Configurations with Kubernetes Kustomize</title>
+      <link>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</link>
+      <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</guid>
+      <description>Managing Configurations with Kubernetes Kustomize Kustomize is a standalone tool to customize Kubernetes manifests in a template-free way.</description>
     </item>
     
     <item>
@@ -53,6 +80,24 @@
     </item>
     
     <item>
+      <title>Securing Kubernetes Secrets</title>
+      <link>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</guid>
+      <description>Securing Kubernetes Secrets Introduction to Kubernetes Secrets Kubernetes Secrets are used to store sensitive information such as passwords, API keys, and tokens.</description>
+    </item>
+    
+    <item>
+      <title>Securing Kubernetes Clusters</title>
+      <link>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</guid>
+      <description>Securing Kubernetes Clusters: Mastering CKAD Material Security Basics in Kubernetes Role-Based Access Control (RBAC)</description>
+    </item>
+    
+    <item>
       <title>Schedule Tasks in Kubernetes with CronJobs</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-cronjobs/</link>
       <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
@@ -71,6 +116,15 @@
     </item>
     
     <item>
+      <title>Working with Kubernetes Volumes</title>
+      <link>https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/</link>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/</guid>
+      <description>Working with Kubernetes Volumes In Kubernetes, a volume is a directory accessible to containers in a pod and is used to store data.</description>
+    </item>
+    
+    <item>
       <title>Implementing Kubernetes Services</title>
       <link>https://www.danielsobrado.com/blog/implementing-kubernetes-services/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
@@ -80,12 +134,57 @@
     </item>
     
     <item>
+      <title>Kubernetes Service Accounts</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-service-accounts/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-service-accounts/</guid>
+      <description>Kubernetes Service Accounts Introduction to Service Accounts Service Accounts in Kubernetes are special accounts used by Pods (not humans) to interact with the Kubernetes API.</description>
+    </item>
+    
+    <item>
+      <title>Managing Kubernetes State with Persistent Volumes</title>
+      <link>https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/</guid>
+      <description>Managing Kubernetes State with Persistent Volumes Introduction to Persistent Volumes (PVs) In Kubernetes, a Persistent Volume (PV) is a storage resource that persists data beyond the lifecycle of a Pod.</description>
+    </item>
+    
+    <item>
+      <title>Using Annotations in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</link>
+      <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</guid>
+      <description>Using Annotations in Kubernetes Annotations in Kubernetes are metadata attached to objects like Pods, Services, and Deployments to store additional, non-identifying information.</description>
+    </item>
+    
+    <item>
       <title>Kubernetes Imperative Commands</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</link>
       <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</guid>
       <description>Imperative commands directly create, modify, and remove Kubernetes objects. This is a quick and helpful way to get things going.</description>
+    </item>
+    
+    <item>
+      <title>An In-depth Guide to Kubernetes Labels and Selectors</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-labels-and-selectors/</link>
+      <pubDate>Sun, 05 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-labels-and-selectors/</guid>
+      <description>Introduction to Labels and Selectors In Kubernetes, labels and selectors play a crucial role in associating, filtering, and managing resources.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Kubernetes Events</title>
+      <link>https://www.danielsobrado.com/blog/understanding-kubernetes-events/</link>
+      <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-kubernetes-events/</guid>
+      <description>Understanding Kubernetes Events Kubernetes Events provide insights into the behavior of cluster components, enabling you to understand their state and diagnose issues.</description>
     </item>
     
     <item>

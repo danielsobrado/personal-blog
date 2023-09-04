@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>An In-depth Guide to Kubernetes Labels and Selectors</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Explore how Labels and Selectors work in Kubernetes. Understand their importance in categorizing and selecting resources.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -145,16 +155,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/UgT9f3N.jpg" alt="blog-image">
           <div class="p-4">
             <h3>An In-depth Guide to Kubernetes Labels and Selectors</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 05 Feb</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Devops</a>
@@ -162,7 +172,87 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="introduction-to-labels-and-selectors">Introduction to Labels and Selectors</h3>
+<p>In Kubernetes, labels and selectors play a crucial role in associating, filtering, and managing resources. Labels are key-value pairs attached to resources like Pods, Services, and Deployments. Selectors help to query these resources based on their labels.</p>
+<h4 id="labeling-resources">Labeling Resources</h4>
+<h5 id="syntax">Syntax</h5>
+<p>The labels are defined within the metadata section of a resource manifest.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">my-app</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>: <span style="color:#ae81ff">production</span>
+</span></span></code></pre></div><h5 id="commands">Commands</h5>
+<p>You can also add or modify labels using kubectl:</p>
+<ul>
+<li>
+<p>To add or update labels:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl label pods my-pod new-label<span style="color:#f92672">=</span>value
+</span></span></code></pre></div></li>
+<li>
+<p>To remove labels:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl label pods my-pod new-label-
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="using-selectors-to-filter-resources">Using Selectors to Filter Resources</h4>
+<h5 id="syntax-1">Syntax</h5>
+<p>Selectors allow you to filter resources. For example, to get all the pods with a specific label:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods -l app<span style="color:#f92672">=</span>my-app
+</span></span></code></pre></div><h5 id="types">Types</h5>
+<ul>
+<li>Equality-based selectors: =, ==, !=</li>
+<li>Set-based selectors: in, notin, exists</li>
+</ul>
+<h5 id="where-to-use">Where to Use</h5>
+<p>Selectors are commonly used in:</p>
+<ul>
+<li>Service targeting</li>
+<li>Pod affinity/anti-affinity</li>
+<li>Network policies</li>
+</ul>
+<h4 id="best-practices-and-considerations">Best Practices and Considerations</h4>
+<ul>
+<li>
+<p><strong>Consistency</strong>: Use a consistent naming scheme for labels to make management easier.</p>
+</li>
+<li>
+<p><strong>Decoupling</strong>: Avoid using labels that are too tightly coupled to the implementation details of objects.</p>
+</li>
+<li>
+<p><strong>Atomicity</strong>: Labels should represent atomic information that can be used in combination with others to form selectors.</p>
+</li>
+<li>
+<p><strong>Use with RBAC</strong>: Be cautious while using labels, as poorly configured selectors can lead to unauthorized access.</p>
+</li>
+<li>
+<p><strong>Predefined Labels</strong>: Some labels like tier, release-stage, and environment are common and may have special semantic meanings. Use them where appropriate.</p>
+</li>
+</ul>
+<h4 id="exercise-troubleshooting-labels-and-selectors">Exercise: Troubleshooting Labels and Selectors</h4>
+<h5 id="setup">Setup</h5>
+<ol>
+<li>Create two pods with different labels:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run pod1 --image<span style="color:#f92672">=</span>nginx --labels<span style="color:#f92672">=</span>app<span style="color:#f92672">=</span>my-app,environment<span style="color:#f92672">=</span>production
+</span></span><span style="display:flex;"><span>kubectl run pod2 --image<span style="color:#f92672">=</span>nginx --labels<span style="color:#f92672">=</span>app<span style="color:#f92672">=</span>my-app,environment<span style="color:#f92672">=</span>staging
+</span></span></code></pre></div><h5 id="exercise">Exercise</h5>
+<p>Your task is to list only the pods running in the production environment using selectors.</p>
+<h5 id="debugging">Debugging</h5>
+<ol>
+<li>Try to list all the pods to see if they are running:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods
+</span></span></code></pre></div><ol start="2">
+<li>Describe one of the pods to see its labels:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl describe pod pod1
+</span></span></code></pre></div><h5 id="solution">Solution</h5>
+<p>Use a selector to filter out the pods running in the production environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods -l environment<span style="color:#f92672">=</span>production
+</span></span></code></pre></div><p>You should see only the pods running in the production environment listed.</p>
+
             </div>
           </div>
         </div>
@@ -290,6 +380,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -299,21 +404,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -357,23 +447,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -381,7 +473,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -400,7 +492,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -514,7 +606,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -523,7 +615,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -582,12 +674,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Securing Kubernetes Clusters</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Understand how to secure a Kubernetes cluster. Learn about network policies, RBAC, and other security measures.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/S1ccdBp.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Securing Kubernetes Clusters</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 02 May</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,134 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="securing-kubernetes-clusters-mastering-ckad-material">Securing Kubernetes Clusters: Mastering CKAD Material</h3>
+<h4 id="security-basics-in-kubernetes">Security Basics in Kubernetes</h4>
+<ul>
+<li>
+<p><strong>Role-Based Access Control (RBAC)</strong></p>
+<ul>
+<li>Use RBAC to define what actions a user, or a system component, can perform.</li>
+</ul>
+<pre tabindex="0"><code>kubectl create role read-pods --verb=get,list --resource=pods
+kubectl create rolebinding read-pods-binding --role=read-pods --user=john
+</code></pre></li>
+<li>
+<p><strong>API Throttling</strong></p>
+<ul>
+<li>Limit API requests to prevent DoS attacks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Secret Management</strong></p>
+<ul>
+<li>Use Kubernetes Secrets for storing sensitive data like API keys.</li>
+</ul>
+<pre tabindex="0"><code>kubectl create secret generic api-key-secret --from-literal=api-key=&#39;1234567890&#39;
+</code></pre></li>
+</ul>
+<h4 id="securing-node-and-network-traffic">Securing Node and Network Traffic</h4>
+<ul>
+<li>
+<p><strong>Node Hardening</strong></p>
+<ul>
+<li>Apply OS-level security best practices on the nodes, such as firewalls and system patches.</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Policies</strong></p>
+<ul>
+<li>Define rules for how pods communicate with each other and with external networks.</li>
+</ul>
+<pre tabindex="0"><code>kubectl apply -f network-policy.yaml
+</code></pre></li>
+<li>
+<p><strong>Encryption</strong></p>
+<ul>
+<li>Use Transport Layer Security (TLS) for encrypted communication between nodes.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cluster-authentication-and-authorization">Cluster Authentication and Authorization</h4>
+<ul>
+<li>
+<p><strong>Authentication</strong></p>
+<ul>
+<li>Use OpenID or OAuth for user-based authentication. Service Accounts for pod-to-API-server communication.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorization</strong></p>
+<ul>
+<li>Use RBAC for fine-grained control over who can do what within the cluster.</li>
+</ul>
+</li>
+</ul>
+<h4 id="keeping-software-and-dependencies-updated">Keeping Software and Dependencies Updated</h4>
+<ul>
+<li>
+<p><strong>Patch Management</strong></p>
+<ul>
+<li>Regularly update all components, including Kubernetes itself, to the latest secure versions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Vulnerability Scanning</strong></p>
+<ul>
+<li>Use tools to scan for vulnerabilities in container images.</li>
+</ul>
+</li>
+</ul>
+<h4 id="security-policies-pod-security-network-policies">Security Policies: Pod Security, Network Policies</h4>
+<ul>
+<li>
+<p><strong>Pod Security Policies (PSP)</strong></p>
+<ul>
+<li>Enforce security configurations like disallowing running containers as root.</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Policies</strong></p>
+<ul>
+<li>Define ingress and egress rules at the pod level. Block traffic that doesn’t meet the defined policies.</li>
+</ul>
+</li>
+</ul>
+<h4 id="troubleshooting-exercise-debugging-network-policies">Troubleshooting Exercise: Debugging Network Policies</h4>
+<h5 id="setup-commands">Setup Commands</h5>
+<p>Create a network policy that allows traffic from a specific namespace.</p>
+<pre tabindex="0"><code>kubectl create namespace test-ns
+kubectl label namespace test-ns purpose=test
+kubectl run nginx --image=nginx -n test-ns
+</code></pre><p>Create a network policy file named <code>allow-from-test-ns.yaml</code>.</p>
+<pre tabindex="0"><code>apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-from-test-ns
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          purpose: test
+</code></pre><p>Apply the network policy.</p>
+<pre tabindex="0"><code>kubectl apply -f allow-from-test-ns.yaml
+</code></pre><h5 id="exercise">Exercise</h5>
+<ol>
+<li>Create a new pod in a different namespace and try to access the <code>nginx</code> pod in <code>test-ns</code>.</li>
+<li>Debug why it can or cannot access the <code>nginx</code> pod.</li>
+</ol>
+<h5 id="debugging">Debugging</h5>
+<p>Check the existing network policies.</p>
+<pre tabindex="0"><code>kubectl get networkpolicies -n test-ns
+</code></pre><p>Check pod labels and namespace labels.</p>
+<pre tabindex="0"><code>kubectl get pods --show-labels -n test-ns
+kubectl get namespaces --show-labels
+</code></pre><h5 id="solution">Solution</h5>
+<p>If the new pod cannot access the <code>nginx</code> pod, it is likely because the network policy is correctly isolating the <code>nginx</code> pod to only allow traffic from the <code>test-ns</code> namespace.</p>
+
             </div>
           </div>
         </div>
@@ -320,6 +457,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +481,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,21 +524,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +550,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +569,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +683,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +692,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +751,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

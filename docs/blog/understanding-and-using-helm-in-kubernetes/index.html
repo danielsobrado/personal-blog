@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Understanding and Using Helm in Kubernetes</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Dive into Helm, the package manager for Kubernetes. Learn how to package, share, and deploy applications.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/Zhx03Hx.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Understanding and Using Helm in Kubernetes</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 14 Jul</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,124 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="understanding-and-using-helm-in-kubernetes">Understanding and Using Helm in Kubernetes</h3>
+<h4 id="introduction-to-helm">Introduction to Helm</h4>
+<p>Helm is a package manager for Kubernetes, enabling you to define, install, and manage Kubernetes applications. Think of it as the <code>apt</code> or <code>yum</code> for Kubernetes. Helm uses a packaging format called Charts.</p>
+<h4 id="helm-architecture-helm-client-and-tiller">Helm Architecture: Helm Client and Tiller</h4>
+<h5 id="helm-2">Helm 2</h5>
+<p>In Helm 2, the architecture was split between a client-side component called &ldquo;Helm&rdquo; and a server-side component called &ldquo;Tiller.&rdquo; Helm interacted with Tiller to deploy applications.</p>
+<h5 id="helm-3">Helm 3</h5>
+<p>In Helm 3, the architecture has been simplified and Tiller has been removed. Everything is now client-side, which enhances security by removing the need for a server component that needs cluster-wide access.</p>
+<h4 id="creating-helm-charts">Creating Helm Charts</h4>
+<p>A Helm Chart is a package that contains pre-configured Kubernetes resources. It has a specific directory structure:</p>
+<ul>
+<li><code>Chart.yaml</code>: Information about the chart</li>
+<li><code>values.yaml</code>: Default configuration file</li>
+<li><code>templates/</code>: Kubernetes YAML files with templating</li>
+<li><code>charts/</code>: Optional dependent charts</li>
+</ul>
+<p>To create a new Chart:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm create <span style="color:#f92672">[</span>CHART_NAME<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h4 id="installing-and-managing-helm-releases">Installing and Managing Helm Releases</h4>
+<p>A Helm &ldquo;release&rdquo; is an instance of a chart running in a Kubernetes cluster.</p>
+<ul>
+<li>
+<p><strong>Installing a Release:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm install <span style="color:#f92672">[</span>RELEASE_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>CHART<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Upgrading a Release:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm upgrade <span style="color:#f92672">[</span>RELEASE_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>NEW_CHART<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Rollback a Release:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm rollback <span style="color:#f92672">[</span>RELEASE_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>REVISION<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Listing Releases:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm list
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Uninstalling a Release:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm uninstall <span style="color:#f92672">[</span>RELEASE_NAME<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+</ul>
+<h4 id="helm-repositories-and-best-practices">Helm Repositories and Best Practices</h4>
+<h5 id="repositories">Repositories</h5>
+<p>Helm Charts can be shared through Helm Repositories. Official charts are available in the default Helm repo, but you can also add your own:</p>
+<ul>
+<li>
+<p><strong>Add Repo:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm repo add <span style="color:#f92672">[</span>REPO_NAME<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>REPO_URL<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Update Repo:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm repo update
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Search Repo:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm search repo <span style="color:#f92672">[</span>SEARCH_TERM<span style="color:#f92672">]</span>
+</span></span></code></pre></div></li>
+</ul>
+<h5 id="best-practices">Best Practices</h5>
+<ol>
+<li><strong>Version Control:</strong> Always keep your Helm charts in version control.</li>
+<li><strong>Use Helm Hooks:</strong> For lifecycle management.</li>
+<li><strong>Validate with Lint:</strong> Use <code>helm lint</code> to validate charts.</li>
+<li><strong>Test Charts:</strong> Use <code>helm test</code> to test releases.</li>
+<li><strong>Security:</strong> Be cautious when using third-party charts. Always review and understand what they do.</li>
+</ol>
+<h4 id="example-of-helm-chart-with-template-and-values">Example of Helm Chart with Template and Values</h4>
+<h5 id="directory-structure">Directory Structure</h5>
+<pre tabindex="0"><code>my-nginx-chart/
+|-- templates/
+|   |-- deployment.yaml
+|-- Chart.yaml
+|-- values.yaml
+</code></pre><h5 id="chartyaml">Chart.yaml</h5>
+<p>This file describes the metadata about the Helm chart.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-nginx-chart</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#ae81ff">A Helm chart to deploy Nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.1.0</span>
+</span></span></code></pre></div><h5 id="valuesyaml">values.yaml</h5>
+<p>This file contains the default values for the chart.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">replicaCount</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">image</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repository</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tag</span>: <span style="color:#ae81ff">stable</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pullPolicy</span>: <span style="color:#ae81ff">IfNotPresent</span>
+</span></span></code></pre></div><h5 id="templatesdeploymentyaml">templates/deployment.yaml</h5>
+<p>This is a Kubernetes Deployment YAML file with Helm templating.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: {{ <span style="color:#ae81ff">.Values.replicaCount }}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">my-nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">my-nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-nginx</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;{{ .Values.image.repository }}:{{ .Values.image.tag }}&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">imagePullPolicy</span>: {{ <span style="color:#ae81ff">.Values.image.pullPolicy }}</span>
+</span></span></code></pre></div><h5 id="installing-the-chart">Installing the Chart</h5>
+<p>To install this chart, you&rsquo;ll first need to package it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm package my-nginx-chart
+</span></span></code></pre></div><p>This will create a <code>.tgz</code> file that you can then install into your Kubernetes cluster:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm install my-nginx-release my-nginx-chart-0.1.0.tgz
+</span></span></code></pre></div><h5 id="overriding-values">Overriding Values</h5>
+<p>You can override the default <code>values.yaml</code> settings during install or upgrade:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm install my-nginx-release my-nginx-chart-0.1.0.tgz --set replicaCount<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p>This command will deploy 3 replicas instead of the default 1.</p>
+<p>And that&rsquo;s a simple example of a Helm chart! This chart can be used to deploy an Nginx web server with configurable parameters like <code>replicaCount</code> and <code>image.tag</code>. It showcases how to use <code>values.yaml</code> for default values and templating in Kubernetes YAML manifests.</p>
+
             </div>
           </div>
         </div>
@@ -320,6 +447,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +471,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,21 +514,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +540,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +559,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +673,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +682,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +741,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Working with Kubernetes Volumes</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Understand Kubernetes Volumes. Learn how they provide storage to your Pods and how to use them.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/EQzqIe5.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Working with Kubernetes Volumes</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 04 Apr</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,113 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="working-with-kubernetes-volumes">Working with Kubernetes Volumes</h3>
+<p>In Kubernetes, a volume is a directory accessible to containers in a pod and is used to store data. Unlike the ephemeral storage associated with containers, data in volumes persists across container restarts.</p>
+<h4 id="types-of-volumes">Types of Volumes</h4>
+<ul>
+<li>
+<p><strong>HostPath</strong>: Maps a file or directory on the host node&rsquo;s filesystem into a pod.</p>
+<pre tabindex="0"><code>Use mainly for single-node testing.
+kubectl apply -f hostpath-pod.yaml
+</code></pre></li>
+<li>
+<p><strong>NFS (Network File System)</strong>: Allows you to mount an NFS share into your pod.</p>
+<pre tabindex="0"><code>Suitable for multiple nodes.
+kubectl apply -f nfs-pod.yaml
+</code></pre></li>
+<li>
+<p><strong>Persistent Volumes (PV) and Persistent Volume Claims (PVC)</strong>: PV is a piece of storage in the cluster, and PVC is a request for storage by a user.</p>
+<pre tabindex="0"><code>Used for long-term storage needs.
+kubectl apply -f pv-pvc.yaml
+</code></pre></li>
+<li>
+<p><strong>Others</strong>: <code>emptyDir</code> for scratch space, <code>configMap</code> and <code>secret</code> for configuration data, and cloud-specific storage options.</p>
+</li>
+</ul>
+<h4 id="volume-lifecycle-and-management">Volume Lifecycle and Management</h4>
+<ol>
+<li><strong>Creation</strong>: Defined in YAML files for the pod or as standalone resources for PV/PVC.</li>
+<li><strong>Mounting</strong>: Attached to the nodes where the pod runs, making it available to the containers.</li>
+<li><strong>Usage</strong>: Read and/or write data.</li>
+<li><strong>Unmounting</strong>: Detached from the node.</li>
+<li><strong>Deletion</strong>: Optional, especially for PVs, which can be reclaimed or retained.</li>
+</ol>
+<h4 id="access-modes-and-mount-options">Access Modes and Mount Options</h4>
+<ul>
+<li>
+<p><strong>Access Modes</strong>:</p>
+<ul>
+<li><code>ReadWriteOnce (RWO)</code>: Can be mounted as read-write by a single node.</li>
+<li><code>ReadOnlyMany (ROX)</code>: Can be mounted as read-only by many nodes.</li>
+<li><code>ReadWriteMany (RWX)</code>: Can be mounted as read-write by many nodes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mount Options</strong>: Custom parameters like <code>readOnly</code>, <code>nfsvers</code> for NFS, etc.</p>
+</li>
+</ul>
+<h4 id="dynamic-provisioning-and-storage-classes">Dynamic Provisioning and Storage Classes</h4>
+<ul>
+<li>
+<p><strong>Dynamic Provisioning</strong>: Allows storage volumes to be created on-the-fly.</p>
+<pre tabindex="0"><code>Enabled by default in many Kubernetes installations.
+kubectl apply -f dynamic-pv-pvc.yaml
+</code></pre></li>
+<li>
+<p><strong>Storage Classes</strong>: Templates for creating PVs.</p>
+<pre tabindex="0"><code>They describe the &#34;class&#34; of storage like SSD, fast, etc.
+kubectl get storageclass
+</code></pre></li>
+</ul>
+<h4 id="troubleshooting-exercise">Troubleshooting Exercise</h4>
+<ol>
+<li>
+<p><strong>Setup Commands</strong>: Create a Pod with a PVC.</p>
+<pre tabindex="0"><code>Create a YAML file named `troubleshoot-pv-pvc.yaml` with the following content:
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: nginx
+    volumeMounts:
+    - name: my-volume
+      mountPath: /data
+  volumes:
+  - name: my-volume
+    persistentVolumeClaim:
+      claimName: my-pvc
+</code></pre><p>Then apply it:</p>
+<pre tabindex="0"><code>kubectl apply -f troubleshoot-pv-pvc.yaml
+</code></pre><pre tabindex="0"><code></code></pre></li>
+<li>
+<p><strong>Exercise</strong>: The Pod is stuck in <code>Pending</code> status. Find out why.</p>
+</li>
+<li>
+<p><strong>Debugging</strong>: Check the events for the Pod.</p>
+<pre tabindex="0"><code>kubectl describe pod &lt;pod-name&gt;
+</code></pre></li>
+<li>
+<p><strong>Solution</strong>: Most likely, the PVC is not bound. Make sure a corresponding PV exists and has the correct access modes and storage class.</p>
+<pre tabindex="0"><code>kubectl get pvc,pv
+kubectl describe pvc &lt;pvc-name&gt;
+</code></pre></li>
+</ol>
+
             </div>
           </div>
         </div>
@@ -320,6 +436,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +460,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,21 +503,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +529,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +548,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +662,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +671,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +730,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

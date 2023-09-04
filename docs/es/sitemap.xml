@@ -600,16 +600,46 @@
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-security-best-practices/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-service-accounts/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-service-accounts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-service-accounts/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-statefulsets-explained/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-configurations-with-kubernetes-kustomize/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/managing-configurations-with-kubernetes-kustomize/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-jobs/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-secrets-using-sealed-secrets/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-state-with-persistent-volumes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/managing-kubernetes-state-with-persistent-volumes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-schemas-with-confluent-schema-registry/</loc>
   </url><url>
@@ -648,8 +678,28 @@
     <loc>https://www.danielsobrado.com/es/blog/securing-kafka/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/securing-kubernetes-clusters/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/securing-kubernetes-clusters/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/securing-kubernetes-clusters/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/securing-kubernetes-secrets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/securing-kubernetes-secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/securing-kubernetes-secrets/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/serialization-and-deserialization-in-kafka/</loc>
   </url><url>
@@ -660,8 +710,28 @@
     <loc>https://www.danielsobrado.com/es/blog/troubleshooting-and-debugging-in-kafka/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/troubleshooting-kubernetes-container-logs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/troubleshooting-kubernetes-container-logs/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-helm-in-kubernetes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-and-using-helm-in-kubernetes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-deployments/</loc>
   </url><url>
@@ -680,14 +750,44 @@
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-configmaps/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-events/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kubernetes-events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kubernetes-events/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-services/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-producer-partition-selection-in-kafka/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/using-annotations-in-kubernetes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/using-annotations-in-kubernetes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/working-with-kubernetes-volumes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/working-with-kubernetes-volumes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/author/</loc>
     <xhtml:link

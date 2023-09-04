@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Managing Kubernetes State with Persistent Volumes</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Understand the concept of Persistent Volumes in Kubernetes. Learn how to manage stateful applications and store data across Pod restarts.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/bMu9y0J.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Managing Kubernetes State with Persistent Volumes</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 12 Mar</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Devops</a>
@@ -192,7 +202,93 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="managing-kubernetes-state-with-persistent-volumes">Managing Kubernetes State with Persistent Volumes</h3>
+<h4 id="introduction-to-persistent-volumes-pvs">Introduction to Persistent Volumes (PVs)</h4>
+<p>In Kubernetes, a Persistent Volume (PV) is a storage resource that persists data beyond the lifecycle of a Pod. This is useful for applications that require persistent storage, like databases. A PV is provisioned either manually by an administrator or dynamically using storage classes.</p>
+<h4 id="pv-lifecycle-and-states">PV Lifecycle and States</h4>
+<ol>
+<li><strong>Available</strong>: A volume that&rsquo;s ready to be claimed.</li>
+<li><strong>Bound</strong>: A volume bound to a Persistent Volume Claim (PVC).</li>
+<li><strong>Released</strong>: The PVC has been deleted, but the resource is not reclaimed by the cluster.</li>
+<li><strong>Failed</strong>: Automatic recovery failed; manual intervention is needed.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">PersistentVolume</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-pv</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">phase</span>: <span style="color:#ae81ff">Available</span>
+</span></span></code></pre></div><h4 id="access-modes">Access Modes</h4>
+<ol>
+<li><strong>ReadWriteOnce (RWO)</strong>: The volume can be mounted read-write by a single node.</li>
+<li><strong>ReadOnlyMany (ROX)</strong>: The volume can be mounted read-only by multiple nodes.</li>
+<li><strong>ReadWriteMany (RWX)</strong>: The volume can be mounted as read-write by multiple nodes.</li>
+</ol>
+<h4 id="reclaim-policies">Reclaim Policies</h4>
+<ol>
+<li><strong>Retain</strong>: Keeps the data in the PV after PVC is deleted.</li>
+<li><strong>Delete</strong>: Deletes the PV and the underlying storage upon PVC deletion.</li>
+<li><strong>Recycle</strong>: Deprecated; used to scrub data before becoming available again.</li>
+</ol>
+<h4 id="storage-classes">Storage Classes</h4>
+<p>A Storage Class defines how a PV should be provisioned. It sets the provisioner, parameters, and reclaim policy for dynamic volume allocation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">storage.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StorageClass</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-storage-class</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">provisioner</span>: <span style="color:#ae81ff">kubernetes.io/aws-ebs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">parameters</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">gp2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">reclaimPolicy</span>: <span style="color:#ae81ff">Retain</span>
+</span></span></code></pre></div><h4 id="dynamic-provisioning">Dynamic Provisioning</h4>
+<p>When a PVC request can&rsquo;t be fulfilled by existing PVs, a new PV is dynamically provisioned based on a Storage Class.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">PersistentVolumeClaim</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-pvc</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">storageClassName</span>: <span style="color:#ae81ff">my-storage-class</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">accessModes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">ReadWriteOnce</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">requests</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">1Gi</span>
+</span></span></code></pre></div><hr>
+<h3 id="troubleshooting-exercise">Troubleshooting Exercise</h3>
+<h4 id="setup-commands">Setup Commands</h4>
+<ol>
+<li>
+<p>Create a Storage Class</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f my-storage-class.yaml
+</span></span></code></pre></div></li>
+<li>
+<p>Create a Persistent Volume Claim</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f my-pvc.yaml
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="exercise">Exercise</h4>
+<p>Your Persistent Volume Claim is stuck in the <code>Pending</code> state. Find out why and resolve the issue.</p>
+<h4 id="debugging">Debugging</h4>
+<ol>
+<li>
+<p>Check the status of the PVC</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pvc my-pvc
+</span></span></code></pre></div></li>
+<li>
+<p>Describe the PVC for more details</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl describe pvc my-pvc
+</span></span></code></pre></div></li>
+<li>
+<p>Check logs or events (if applicable)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get events --sort-by<span style="color:#f92672">=</span>.metadata.creationTimestamp
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="solution">Solution</h4>
+<p>If the PVC is stuck in <code>Pending</code>, it&rsquo;s possible that the storage class is misconfigured or there are no available resources. Check the <code>describe</code> output and events for clues. You might need to edit or recreate the Storage Class and/or PVC with correct configurations.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl edit storageclass my-storage-class
+</span></span><span style="display:flex;"><span>kubectl delete pvc my-pvc
+</span></span><span style="display:flex;"><span>kubectl apply -f my-pvc.yaml
+</span></span></code></pre></div>
             </div>
           </div>
         </div>
@@ -320,6 +416,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +440,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,23 +483,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -411,7 +509,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -430,7 +528,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -544,7 +642,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -553,7 +651,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -612,12 +710,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

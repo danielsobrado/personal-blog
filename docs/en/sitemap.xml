@@ -105,6 +105,32 @@
                 href="https://www.danielsobrado.com/tags/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</loc>
+    <lastmod>2023-07-14T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-and-using-helm-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/</loc>
+    <lastmod>2023-07-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/troubleshooting-kubernetes-container-logs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-deployments/</loc>
     <lastmod>2023-07-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -113,6 +139,19 @@
   </url><url>
     <loc>https://www.danielsobrado.com/tags/pattern/</loc>
     <lastmod>2023-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/managing-configurations-with-kubernetes-kustomize/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
@@ -188,6 +227,32 @@
                 href="https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</loc>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/securing-kubernetes-secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/securing-kubernetes-secrets/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</loc>
+    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/securing-kubernetes-clusters/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/securing-kubernetes-clusters/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-cronjobs/</loc>
     <lastmod>2023-04-29T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -227,6 +292,19 @@
                 href="https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/</loc>
+    <lastmod>2023-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/working-with-kubernetes-volumes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/implementing-kubernetes-services/</loc>
     <lastmod>2023-04-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -240,8 +318,63 @@
                 href="https://www.danielsobrado.com/blog/implementing-kubernetes-services/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-service-accounts/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-service-accounts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-service-accounts/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/</loc>
+    <lastmod>2023-03-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/managing-kubernetes-state-with-persistent-volumes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/managing-kubernetes-state-with-persistent-volumes/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</loc>
+    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/using-annotations-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-imperative-commands/</loc>
     <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-labels-and-selectors/</loc>
+    <lastmod>2023-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-kubernetes-events/</loc>
+    <lastmod>2023-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kubernetes-events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kubernetes-events/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/big-data/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>

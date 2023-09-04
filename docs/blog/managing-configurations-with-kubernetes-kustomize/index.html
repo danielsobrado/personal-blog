@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Managing Configurations with Kubernetes Kustomize</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Learn about Kustomize, a standalone tool to customize Kubernetes objects. Understand how to manage your configurations declaratively.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/VsAN1UB.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Managing Configurations with Kubernetes Kustomize</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 20 May</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,92 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="managing-configurations-with-kubernetes-kustomize">Managing Configurations with Kubernetes Kustomize</h3>
+<p>Kustomize is a standalone tool to customize Kubernetes manifests in a template-free way. Unlike Helm, which uses templates, Kustomize uses base YAML files and applies a series of customizations to produce the final manifests. Kustomize became so popular that its functionality is now built into <code>kubectl</code>, so you can use <code>kubectl kustomize</code> to execute Kustomize builds.</p>
+<h4 id="basic-kustomize-use-cases">Basic Kustomize Use Cases</h4>
+<ol>
+<li><strong>Resource Customization</strong>: Modify properties of native Kubernetes resources without changing the original YAML.</li>
+<li><strong>Environment Separation</strong>: Generate different YAMLs for dev, staging, and prod from a single base configuration.</li>
+<li><strong>Resource Composition</strong>: Compose and create new resources from existing ones.</li>
+<li><strong>Secret Management</strong>: Generate and manage secrets outside the main YAML configurations.</li>
+</ol>
+<h4 id="creating-variants-with-overlays">Creating Variants with Overlays</h4>
+<p>Overlays allow you to define the differences between multiple environments while reusing a common base. The base contains all common configuration settings, and the overlay includes any modifications.</p>
+<p>Directory Structure:</p>
+<pre tabindex="0"><code>.
+├── base
+│   └── deployment.yaml
+└── overlays
+    ├── dev
+    │   └── kustomization.yaml
+    └── prod
+        └── kustomization.yaml
+</code></pre><p><code>kustomization.yaml</code> in overlay directory:</p>
+<pre tabindex="0"><code>apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- ../../base
+patchesStrategicMerge:
+- deployment-patch.yaml
+</code></pre><h4 id="kustomization-files-explained">Kustomization Files Explained</h4>
+<p>A <code>kustomization.yaml</code> file is used to manage all the customizations you want. Key fields include:</p>
+<ul>
+<li><code>resources</code>: List of YAML manifests to be included.</li>
+<li><code>bases</code>: Another Kustomize directory to inherit resources from.</li>
+<li><code>patchesStrategicMerge</code>: List of patches to apply.</li>
+<li><code>commonLabels</code> or <code>commonAnnotations</code>: Add labels or annotations to all resources.</li>
+<li><code>vars</code>: Variables that can be substituted into the manifests.</li>
+</ul>
+<h4 id="best-practices-and-tips">Best Practices and Tips</h4>
+<ol>
+<li><strong>Keep it Simple</strong>: Start with a simple structure and evolve as requirements grow.</li>
+<li><strong>Directory Organization</strong>: Keep a good folder structure distinguishing bases and overlays.</li>
+<li><strong>Source Control</strong>: Always version control your base and overlay files.</li>
+<li><strong>Avoid Deep Nesting</strong>: Deeply nested kustomizations can become hard to manage.</li>
+<li><strong>Validate Before Applying</strong>: Use the following command to apply changes, but always check the output first to ensure it generates what you expect.</li>
+</ol>
+<pre tabindex="0"><code>kubectl kustomize ./path | kubectl apply -f -
+</code></pre><h4 id="troubleshooting-exercise">Troubleshooting Exercise</h4>
+<h5 id="setup-commands">Setup Commands</h5>
+<p>Create a base deployment YAML file named <code>base-deployment.yaml</code>:</p>
+<pre tabindex="0"><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app
+        image: nginx:1.14.2
+</code></pre><p>Create a <code>kustomization.yaml</code> in the same directory:</p>
+<pre tabindex="0"><code>apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- base-deployment.yaml
+</code></pre><h5 id="exercise">Exercise</h5>
+<p>You&rsquo;ve applied your Kustomize changes, but the deployment is not scaling as expected. Troubleshoot the issue.</p>
+<h5 id="debugging">Debugging</h5>
+<ol>
+<li>Check the generated YAML to see if the configurations look correct:</li>
+</ol>
+<pre tabindex="0"><code>kubectl kustomize ./path &gt; output.yaml
+</code></pre><ol start="2">
+<li>Validate the deployed resources in Kubernetes:</li>
+</ol>
+<pre tabindex="0"><code>kubectl get deployments
+</code></pre><ol start="3">
+<li>Look for errors in the deployment:</li>
+</ol>
+<pre tabindex="0"><code>kubectl describe deployment my-app
+</code></pre><h5 id="solution">Solution</h5>
+<p>In this example, ensure that your <code>kustomization.yaml</code> is correctly referring to <code>base-deployment.yaml</code>. If the base YAML is misconfigured or not correctly referenced, your changes will not be applied. Always validate your YAML before applying to catch these issues.</p>
+<pre tabindex="0"><code>kubectl kustomize ./path | kubectl apply -f -
+</code></pre>
             </div>
           </div>
         </div>
@@ -320,6 +415,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +439,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,21 +482,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +508,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +527,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +641,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +650,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +709,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

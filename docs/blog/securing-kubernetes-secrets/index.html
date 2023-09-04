@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Securing Kubernetes Secrets</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Learn how to securely manage sensitive data like passwords and API keys using Kubernetes Secrets.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/GJOwu03.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Securing Kubernetes Secrets</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 05 May</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Devops</a>
@@ -192,7 +202,88 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="securing-kubernetes-secrets">Securing Kubernetes Secrets</h3>
+<h4 id="introduction-to-kubernetes-secrets">Introduction to Kubernetes Secrets</h4>
+<p>Kubernetes Secrets are used to store sensitive information such as passwords, API keys, and tokens. Unlike ConfigMaps, Secrets are specifically designed to handle confidential data and are stored more securely by default.</p>
+<h4 id="creating-and-managing-secrets">Creating and Managing Secrets</h4>
+<p>To create a Secret, you can use the <code>kubectl create secret</code> command. For example:</p>
+<pre tabindex="0"><code>kubectl create secret generic my-secret --from-literal=password=myPassword
+</code></pre><p>You can also create a Secret from a YAML file:</p>
+<pre tabindex="0"><code>apiVersion: v1
+kind: Secret
+metadata:
+  name: my-secret
+type: Opaque
+data:
+  password: bXlQYXNzd29yZA==
+</code></pre><p>To apply it, run:</p>
+<pre tabindex="0"><code>kubectl apply -f my-secret.yaml
+</code></pre><p>To use the Secret in a Pod, you can mount it as a volume or inject it as an environment variable.</p>
+<h4 id="encrypting-secrets-at-rest-and-in-transit">Encrypting Secrets at Rest and in Transit</h4>
+<ul>
+<li>
+<p><strong>At Rest</strong>: By default, Secrets are stored in base64 encoding, which is not encrypted. Enable Encryption at Rest by configuring the Kubernetes API server with an encryption configuration file.</p>
+</li>
+<li>
+<p><strong>In Transit</strong>: Always make sure to enable TLS for API Server to etcd communication. This ensures that Secrets are encrypted while traveling over the network.</p>
+</li>
+</ul>
+<h4 id="rotating-secrets-and-best-practices">Rotating Secrets and Best Practices</h4>
+<ul>
+<li><strong>Rotating Secrets</strong>: Periodically update Secrets and reflect the changes in your Pods. Use the following command to update the Pods using the Secrets:</li>
+</ul>
+<pre tabindex="0"><code>kubectl rollout restart deployment/my-deployment
+</code></pre><ul>
+<li><strong>Best Practices</strong>:
+<ul>
+<li>Limit access using RBAC.</li>
+<li>Never store Secrets in source code repositories.</li>
+<li>Use namespace segregation.</li>
+<li>Leverage Kubernetes audit logs to monitor access to Secrets.</li>
+</ul>
+</li>
+</ul>
+<h4 id="third-party-tools-for-enhanced-secret-security">Third-Party Tools for Enhanced Secret Security</h4>
+<ul>
+<li>
+<p><strong>Sealed Secrets</strong>: Encrypts Secrets so they are safe to store, even to a public repository.</p>
+</li>
+<li>
+<p><strong>Vault by HashiCorp</strong>: An external tool that integrates well with Kubernetes for storing, accessing, and managing Secrets.</p>
+</li>
+<li>
+<p><strong>AWS KMS, Azure Key Vault, Google Cloud KMS</strong>: Cloud-specific secret management services.</p>
+</li>
+</ul>
+<h4 id="troubleshooting-exercise">Troubleshooting Exercise</h4>
+<ol>
+<li><strong>Setup Commands</strong>:</li>
+</ol>
+<pre tabindex="0"><code>kubectl create namespace secret-test
+kubectl config set-context --current --namespace=secret-test
+kubectl create secret generic test-secret --from-literal=password=oldPassword
+</code></pre><ol start="2">
+<li>
+<p><strong>Exercise</strong>: You changed the Secret, but the Pod using the Secret is not picking up the new value.</p>
+</li>
+<li>
+<p><strong>Debugging</strong>:</p>
+</li>
+</ol>
+<ul>
+<li>Check if the Secret was updated:</li>
+</ul>
+<pre tabindex="0"><code>kubectl get secret test-secret -o jsonpath=&#39;{.data.password}&#39; | base64 --decode
+</code></pre><ul>
+<li>Check if the Pod is using the updated Secret:</li>
+</ul>
+<pre tabindex="0"><code>kubectl describe pod my-pod
+</code></pre><ol start="4">
+<li><strong>Solution</strong>:</li>
+</ol>
+<p>If the Pod is not picking up the new value, you will need to trigger a rollout to update the Pod:</p>
+<pre tabindex="0"><code>kubectl rollout restart deployment/my-deployment
+</code></pre>
             </div>
           </div>
         </div>
@@ -320,6 +411,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +435,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,23 +478,25 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -411,7 +504,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -430,7 +523,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -544,7 +637,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -553,7 +646,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -612,12 +705,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>
