@@ -205,24 +205,10 @@
               <p>In Kubernetes, a volume is a directory accessible to containers in a pod and is used to store data. Unlike the ephemeral storage associated with containers, data in volumes persists across container restarts.</p>
 <h4 id="types-of-volumes">Types of Volumes</h4>
 <ul>
-<li>
-<p><strong>HostPath</strong>: Maps a file or directory on the host node&rsquo;s filesystem into a pod.</p>
-<pre tabindex="0"><code>Use mainly for single-node testing.
-kubectl apply -f hostpath-pod.yaml
-</code></pre></li>
-<li>
-<p><strong>NFS (Network File System)</strong>: Allows you to mount an NFS share into your pod.</p>
-<pre tabindex="0"><code>Suitable for multiple nodes.
-kubectl apply -f nfs-pod.yaml
-</code></pre></li>
-<li>
-<p><strong>Persistent Volumes (PV) and Persistent Volume Claims (PVC)</strong>: PV is a piece of storage in the cluster, and PVC is a request for storage by a user.</p>
-<pre tabindex="0"><code>Used for long-term storage needs.
-kubectl apply -f pv-pvc.yaml
-</code></pre></li>
-<li>
-<p><strong>Others</strong>: <code>emptyDir</code> for scratch space, <code>configMap</code> and <code>secret</code> for configuration data, and cloud-specific storage options.</p>
-</li>
+<li><strong>HostPath</strong>: Maps a file or directory on the host node&rsquo;s filesystem into a pod.</li>
+<li><strong>NFS (Network File System)</strong>: Allows you to mount an NFS share into your pod.</li>
+<li><strong>Persistent Volumes (PV) and Persistent Volume Claims (PVC)</strong>: PV is a piece of storage in the cluster, and PVC is a request for storage by a user.</li>
+<li><strong>Others</strong>: <code>emptyDir</code> for scratch space, <code>configMap</code> and <code>secret</code> for configuration data, and cloud-specific storage options.</li>
 </ul>
 <h4 id="volume-lifecycle-and-management">Volume Lifecycle and Management</h4>
 <ol>
@@ -248,52 +234,45 @@ kubectl apply -f pv-pvc.yaml
 </ul>
 <h4 id="dynamic-provisioning-and-storage-classes">Dynamic Provisioning and Storage Classes</h4>
 <ul>
-<li>
-<p><strong>Dynamic Provisioning</strong>: Allows storage volumes to be created on-the-fly.</p>
-<pre tabindex="0"><code>Enabled by default in many Kubernetes installations.
-kubectl apply -f dynamic-pv-pvc.yaml
-</code></pre></li>
-<li>
-<p><strong>Storage Classes</strong>: Templates for creating PVs.</p>
-<pre tabindex="0"><code>They describe the &#34;class&#34; of storage like SSD, fast, etc.
-kubectl get storageclass
+<li><strong>Dynamic Provisioning</strong>: Allows storage volumes to be created on-the-fly. Enabled by default in many Kubernetes installations.</li>
+<li><strong>Storage Classes</strong>: Templates for creating PVs. They describe the &ldquo;class&rdquo; of storage like SSD, fast, etc.
+<pre tabindex="0"><code>kubectl get storageclass
 </code></pre></li>
 </ul>
 <h4 id="troubleshooting-exercise">Troubleshooting Exercise</h4>
 <ol>
 <li>
 <p><strong>Setup Commands</strong>: Create a Pod with a PVC.</p>
-<pre tabindex="0"><code>Create a YAML file named `troubleshoot-pv-pvc.yaml` with the following content:
-```yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: my-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: my-pod
-spec:
-  containers:
-  - name: my-container
-    image: nginx
-    volumeMounts:
-    - name: my-volume
-      mountPath: /data
-  volumes:
-  - name: my-volume
-    persistentVolumeClaim:
-      claimName: my-pvc
-</code></pre><p>Then apply it:</p>
+<p>Create a YAML file named <code>troubleshoot-pv-pvc.yaml</code> with the following content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">PersistentVolumeClaim</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-pvc</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">accessModes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">ReadWriteOnce</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">requests</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">1Gi</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-container</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumeMounts</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-volume</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/data</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-volume</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">persistentVolumeClaim</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">claimName</span>: <span style="color:#ae81ff">my-pvc</span>
+</span></span></code></pre></div><p>Then apply it:</p>
 <pre tabindex="0"><code>kubectl apply -f troubleshoot-pv-pvc.yaml
-</code></pre><pre tabindex="0"><code></code></pre></li>
+</code></pre></li>
 <li>
 <p><strong>Exercise</strong>: The Pod is stuck in <code>Pending</code> status. Find out why.</p>
 </li>
