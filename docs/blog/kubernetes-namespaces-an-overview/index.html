@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Kubernetes Namespaces: An Overview</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Learn about Kubernetes Namespaces. Understand their role in organizing and segregating cluster resources.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/cTy0rzr.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Kubernetes Namespaces: An Overview</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 21 Apr</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,71 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <p>Namespaces in Kubernetes act as a layer of isolation and organization for cluster resources. They allow you to segregate workloads, control resource allocation, and manage access to resources.</p>
+<h3 id="why-use-namespaces">Why Use Namespaces?</h3>
+<ol>
+<li><strong>Isolation</strong>: Separate teams or projects can work without interfering with each other.</li>
+<li><strong>Resource Management</strong>: Apply resource quotas to control CPU, memory, and storage usage.</li>
+<li><strong>Access Control</strong>: Fine-grained permission control at the namespace level.</li>
+<li><strong>Organization</strong>: Easier to manage resources by categorizing them into namespaces.</li>
+</ol>
+<h3 id="creating-and-managing-namespaces">Creating and Managing Namespaces</h3>
+<h4 id="create-a-namespace">Create a Namespace</h4>
+<p>To create a namespace, you can use the <code>kubectl</code> command:</p>
+<pre tabindex="0"><code>kubectl create namespace my-namespace
+</code></pre><h4 id="list-namespaces">List Namespaces</h4>
+<p>To list all namespaces:</p>
+<pre tabindex="0"><code>kubectl get namespaces
+</code></pre><h4 id="delete-a-namespace">Delete a Namespace</h4>
+<p>To delete a namespace:</p>
+<pre tabindex="0"><code>kubectl delete namespace my-namespace
+</code></pre><h3 id="resource-quotas-per-namespace">Resource Quotas per Namespace</h3>
+<p>You can set resource quotas to limit resources within a namespace.</p>
+<h4 id="create-a-resource-quota">Create a Resource Quota</h4>
+<p>Create a YAML file named <code>resource-quota.yaml</code>:</p>
+<pre tabindex="0"><code>apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-quota
+spec:
+  hard:
+    pods: &#34;10&#34;
+    requests.cpu: &#34;1&#34;
+    requests.memory: 1Gi
+    limits.cpu: &#34;2&#34;
+    limits.memory: 2Gi
+</code></pre><p>Apply the resource quota to a namespace:</p>
+<pre tabindex="0"><code>kubectl apply -f resource-quota.yaml -n my-namespace
+</code></pre><h3 id="best-practices">Best Practices</h3>
+<ol>
+<li><strong>Standardize Naming</strong>: Stick to a naming convention for easier management.</li>
+<li><strong>Limit Resource Allocation</strong>: Always set resource quotas to avoid resource exhaustion.</li>
+<li><strong>Use RBAC</strong>: Implement Role-Based Access Control for secure access.</li>
+<li><strong>Documentation</strong>: Document the purpose and policies for each namespace.</li>
+</ol>
+<h3 id="exercise-namespace-and-resource-quota-setup">Exercise: Namespace and Resource Quota Setup</h3>
+<h4 id="setup">Setup</h4>
+<ol>
+<li>Install Kubernetes and <code>kubectl</code>.</li>
+<li>Access to a running cluster.</li>
+</ol>
+<h4 id="steps">Steps</h4>
+<ol>
+<li>Create a namespace: <code>kubectl create namespace exercise-ns</code></li>
+<li>Create a Resource Quota YAML file.</li>
+<li>Apply the Resource Quota to <code>exercise-ns</code>.</li>
+</ol>
+<h4 id="troubleshooting">Troubleshooting</h4>
+<ol>
+<li><strong>Namespace not found</strong>: Make sure you specify the correct namespace in your <code>kubectl</code> commands.</li>
+<li><strong>Resource Quota not applying</strong>: Ensure the YAML is correctly formatted and applied to the correct namespace.</li>
+</ol>
+<h4 id="solution">Solution</h4>
+<ol>
+<li>Verify the namespace: <code>kubectl get namespaces</code></li>
+<li>Verify the Resource Quota: <code>kubectl get resourcequota -n exercise-ns</code></li>
+</ol>
+
             </div>
           </div>
         </div>
@@ -320,6 +394,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +418,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,7 +461,7 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
@@ -399,9 +473,15 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +489,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +508,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +622,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +631,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +690,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

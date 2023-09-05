@@ -6,14 +6,14 @@
     <description>Recent content in Pods on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/pods/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/pods/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating and Managing Kubernetes Pods</title>
       <link>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</link>
-      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</guid>
-      <description></description>
+      <description>Creating and Managing Kubernetes Pods Anatomy of a Pod A Pod is the smallest deployable unit in Kubernetes and can contain one or more containers.</description>
     </item>
     
   </channel>

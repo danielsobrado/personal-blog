@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Kubernetes Resource Quotas and Limits</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Discover Resource Quotas and Limits in Kubernetes. Learn how to manage and control resource consumption in a cluster.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/qpBLR32.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Kubernetes Resource Quotas and Limits</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 17 Jul</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,91 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <p>Kubernetes resource quotas and limits are essential for managing cluster resources effectively. They enable administrators to allocate specific amounts of resources per namespace, and developers to specify resource requirements for their Pods.</p>
+<h4 id="overview-of-resource-quotas">Overview of Resource Quotas</h4>
+<p>Resource quotas are set on a per-namespace basis to restrict the amount of resources that can be consumed in that namespace. It controls aspects like CPU, memory, storage, and even object count (like Pods, Services, etc.) within the namespace.</p>
+<pre tabindex="0"><code>apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-quota
+spec:
+  hard:
+    pods: &#34;10&#34;
+    requests.cpu: &#34;1&#34;
+    requests.memory: 1Gi
+    limits.cpu: &#34;2&#34;
+    limits.memory: 2Gi
+</code></pre><h4 id="setting-resource-quotas">Setting Resource Quotas</h4>
+<ol>
+<li>
+<p><strong>Create a YAML File</strong>: Create a file named <code>my-quota.yaml</code> and copy the above YAML into it.</p>
+</li>
+<li>
+<p><strong>Apply the Quota</strong>: Use the <code>kubectl</code> command to apply the resource quota to a specific namespace.</p>
+<pre tabindex="0"><code>kubectl apply -f my-quota.yaml --namespace=&lt;your-namespace&gt;
+</code></pre></li>
+</ol>
+<h4 id="working-with-limitrange">Working with LimitRange</h4>
+<p>LimitRange sets default, min, and max resource limits for Pods and Containers in a namespace. When no resource requests/limits are specified, the LimitRange defaults apply.</p>
+<pre tabindex="0"><code>apiVersion: v1
+kind: LimitRange
+metadata:
+  name: my-limit-range
+spec:
+  limits:
+  - default:
+      cpu: &#34;500m&#34;
+      memory: &#34;512Mi&#34;
+    defaultRequest:
+      cpu: &#34;200m&#34;
+      memory: &#34;256Mi&#34;
+    type: Container
+</code></pre><ol>
+<li>
+<p><strong>Create a YAML File</strong>: Create a file named <code>my-limit-range.yaml</code>.</p>
+</li>
+<li>
+<p><strong>Apply the LimitRange</strong>:</p>
+<pre tabindex="0"><code>kubectl apply -f my-limit-range.yaml --namespace=&lt;your-namespace&gt;
+</code></pre></li>
+</ol>
+<h4 id="monitoring-and-enforcement">Monitoring and Enforcement</h4>
+<p>Use <code>kubectl describe</code> to monitor resource quota and limit ranges.</p>
+<ul>
+<li>
+<p><strong>Resource Quota</strong>:</p>
+<pre tabindex="0"><code>kubectl describe resourcequota my-quota --namespace=&lt;your-namespace&gt;
+</code></pre></li>
+<li>
+<p><strong>LimitRange</strong>:</p>
+<pre tabindex="0"><code>kubectl describe limitrange my-limit-range --namespace=&lt;your-namespace&gt;
+</code></pre></li>
+</ul>
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+<li><strong>Be Conservative</strong>: Start with conservative resource quotas and adjust as needed.</li>
+<li><strong>Resource Types</strong>: Don&rsquo;t just limit CPU and memory; consider other resource types like persistent volume claims (PVCs).</li>
+<li><strong>Namespace Defaults</strong>: Use LimitRange to set sensible defaults for namespaces so that developers don&rsquo;t have to specify them every time.</li>
+</ul>
+<p>To try all of these out, you can:</p>
+<p><strong>Setup</strong>:</p>
+<ol>
+<li>Install Minikube or set up a Kubernetes cluster.</li>
+<li>Create a new namespace.</li>
+</ol>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>Apply the ResourceQuota and LimitRange YAML files.</li>
+<li>Monitor them using <code>kubectl describe</code>.</li>
+</ol>
+<p><strong>Troubleshooting</strong>:</p>
+<ul>
+<li>Make sure you are in the correct namespace when applying and describing resources.</li>
+<li>Use <code>kubectl get events --sort-by='.metadata.creationTimestamp'</code> to see recent events, including quota violations.</li>
+</ul>
+<p><strong>Solution</strong>:</p>
+<p>By following this guide, you should have a working ResourceQuota and LimitRange setup in your namespace, allowing for better resource management and allocation.</p>
+
             </div>
           </div>
         </div>
@@ -320,6 +414,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +438,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -387,7 +481,7 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
@@ -399,9 +493,15 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +509,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +528,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +642,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +651,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +710,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

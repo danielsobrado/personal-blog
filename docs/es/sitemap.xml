@@ -532,6 +532,16 @@
     <loc>https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/data-retention-strategies-and-implications-in-kafka/</loc>
   </url><url>
@@ -596,6 +606,16 @@
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-liveness-readiness-probes/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-namespaces-an-overview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-namespaces-an-overview/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-network-policies/</loc>
   </url><url>
@@ -604,6 +624,16 @@
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-persistent-volume-claims-explained/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-resource-quotas-and-limits/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-resource-quotas-and-limits/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-role-based-access-control-rbac/</loc>
     <xhtml:link

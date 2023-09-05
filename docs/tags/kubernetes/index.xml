@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Kubernetes Resource Quotas and Limits</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</guid>
+      <description>Kubernetes resource quotas and limits are essential for managing cluster resources effectively.</description>
+    </item>
+    
+    <item>
       <title>Understanding and Using Helm in Kubernetes</title>
       <link>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</link>
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
@@ -80,6 +89,15 @@
     </item>
     
     <item>
+      <title>Creating and Managing Kubernetes Pods</title>
+      <link>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/creating-and-managing-kubernetes-pods/</guid>
+      <description>Creating and Managing Kubernetes Pods Anatomy of a Pod A Pod is the smallest deployable unit in Kubernetes and can contain one or more containers.</description>
+    </item>
+    
+    <item>
       <title>Ambassador Pattern in Kubernetes Explained</title>
       <link>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</link>
       <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
@@ -123,6 +141,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-cronjobs/</guid>
       <description>Kubernetes CronJobs Introduction to CronJobs In Kubernetes, CronJobs are native objects that manage time-based jobs.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Namespaces: An Overview</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</guid>
+      <description>Namespaces in Kubernetes act as a layer of isolation and organization for cluster resources.</description>
     </item>
     
     <item>
