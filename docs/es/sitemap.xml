@@ -604,6 +604,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-liveness-readiness-probes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-liveness-readiness-probes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-liveness-readiness-probes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-namespaces-an-overview/</loc>
     <xhtml:link
@@ -620,8 +630,28 @@
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-network-policies/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-networking-overview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-networking-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-networking-overview/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-persistent-volume-claims-explained/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-persistent-volume-claims-explained/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-resource-quotas-and-limits/</loc>
     <xhtml:link
@@ -818,6 +848,16 @@
     <loc>https://www.danielsobrado.com/es/blog/understanding-kafka-message-structure/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-configmaps/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kubernetes-configmaps/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kubernetes-configmaps/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-events/</loc>
     <xhtml:link
@@ -832,6 +872,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-services/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kubernetes-services/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kubernetes-services/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-producer-partition-selection-in-kafka/</loc>
   </url><url>

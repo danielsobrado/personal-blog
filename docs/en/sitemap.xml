@@ -118,6 +118,19 @@
                 href="https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</loc>
+    <lastmod>2023-08-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-persistent-volume-claims-explained/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</loc>
     <lastmod>2023-07-17T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -192,6 +205,19 @@
                 href="https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-kubernetes-services/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kubernetes-services/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kubernetes-services/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/categories/data-science/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -216,6 +242,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/euclidean-manifold/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-liveness-readiness-probes/</loc>
+    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-liveness-readiness-probes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-liveness-readiness-probes/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/maths/</loc>
@@ -282,6 +321,19 @@
                 href="https://www.danielsobrado.com/blog/mastering-multi-container-pods-in-kubernetes/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-kubernetes-configmaps/</loc>
+    <lastmod>2023-05-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kubernetes-configmaps/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kubernetes-configmaps/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</loc>
     <lastmod>2023-05-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -320,6 +372,22 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/kubernetes-cronjobs/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-networking-overview/</loc>
+    <lastmod>2023-04-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-networking-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-networking-overview/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/networking/</loc>
+    <lastmod>2023-04-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/</loc>
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
