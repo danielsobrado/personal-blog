@@ -26,12 +26,39 @@
     </item>
     
     <item>
+      <title>Understanding and Using Kubernetes Ingress</title>
+      <link>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</link>
+      <pubDate>Sun, 03 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</guid>
+      <description>Basics of Kubernetes Ingress In Kubernetes, Ingress manages external access to services within a cluster.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Troubleshooting in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/</guid>
+      <description>First Steps in Troubleshooting Check Status of Cluster: Use kubectl get nodes to make sure that all nodes are in the &amp;lsquo;Ready&amp;rsquo; state.</description>
+    </item>
+    
+    <item>
       <title>Kubernetes Persistent Volume Claims Explained</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</link>
       <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</guid>
       <description>Introduction to Persistent Volume Claims (PVCs) Persistent Volume Claims (PVCs) in Kubernetes are used to manage storage resources.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes StatefulSets Explained</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/</guid>
+      <description>Overview of StatefulSets StatefulSets are Kubernetes resources that manage stateful applications.</description>
     </item>
     
     <item>
@@ -77,6 +104,15 @@
       
       <guid>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</guid>
       <description>Adapter Pattern: A Brief Look at the Adapter Pattern The Adapter Pattern assembles incompatible systems.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Network Policies Explained</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-network-policies/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-network-policies/</guid>
+      <description>Kubernetes Network Policies are crucial for controlling the communication between Pods.</description>
     </item>
     
     <item>
@@ -198,6 +234,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Creating and Managing Kubernetes Jobs</title>
+      <link>https://www.danielsobrado.com/blog/managing-kubernetes-jobs/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/managing-kubernetes-jobs/</guid>
+      <description>Introduction to Jobs In Kubernetes, a Job creates one or more pods and ensures they successfully terminate.</description>
+    </item>
+    
+    <item>
       <title>Kubernetes Role-Based Access Control (RBAC)</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/</link>
       <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
@@ -221,7 +266,7 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/implementing-kubernetes-services/</guid>
-      <description>Kubernetes Services: Overview and Troubleshooting Guide Service Overview Kubernetes services allow you to expose your applications running on a set of Pods as a network service.</description>
+      <description>Service Overview Kubernetes services allow you to expose your applications running on a set of Pods as a network service.</description>
     </item>
     
     <item>

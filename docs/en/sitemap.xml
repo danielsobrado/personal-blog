@@ -118,6 +118,32 @@
                 href="https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/</loc>
+    <lastmod>2023-09-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-ingress/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/advanced-troubleshooting-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</loc>
     <lastmod>2023-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -129,6 +155,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/</loc>
+    <lastmod>2023-08-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-statefulsets-explained/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</loc>
@@ -175,6 +214,19 @@
   </url><url>
     <loc>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</loc>
     <lastmod>2023-06-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-network-policies/</loc>
+    <lastmod>2023-06-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-network-policies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-network-policies/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/pattern/</loc>
     <lastmod>2023-06-21T00:00:00+00:00</lastmod>
@@ -400,6 +452,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/managing-kubernetes-jobs/</loc>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/managing-kubernetes-jobs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/managing-kubernetes-jobs/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/introduction-embeddings/</loc>

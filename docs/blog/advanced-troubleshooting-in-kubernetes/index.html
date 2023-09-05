@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Advanced Troubleshooting in Kubernetes</title>
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Master advanced troubleshooting techniques in Kubernetes. Learn how to diagnose and resolve complex issues in your cluster.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -175,16 +185,16 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FfQ6wEF.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/Bwcxp78.jpg" alt="blog-image">
           <div class="p-4">
             <h3>Advanced Troubleshooting in Kubernetes</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 21 Jun</li>
+              <li class="list-inline-item text-color">On 29 Aug</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Dev ops</a>
@@ -192,7 +202,223 @@
               </li>
             </ul>
             <div class="post-content">
-              
+              <h3 id="first-steps-in-troubleshooting">First Steps in Troubleshooting</h3>
+<h4 id="check-status-of-cluster"><strong>Check Status of Cluster</strong>:</h4>
+<ul>
+<li>Use <code>kubectl get nodes</code> to make sure that all nodes are in the &lsquo;Ready&rsquo; state.</li>
+</ul>
+<h4 id="review-what-happened"><strong>Review what happened</strong>:</h4>
+<ul>
+<li><code>kubectl get events -n namespace</code> shows what has been going on in the cluster recently.</li>
+</ul>
+<h4 id="access-logs"><strong>Access Logs</strong>:</h4>
+<ul>
+<li>Use <code>kubectl logs &lt;pod-name&gt;</code> to look at recent logs and learn about possible problems.</li>
+</ul>
+<h4 id="troubleshooting-at-the-node-level">Troubleshooting at the node level</h4>
+<h5 id="node-conditions"><strong>Node Conditions</strong>:</h5>
+<ul>
+<li>Use <code>kubectl describe node &lt;node-name&gt;</code> to see what&rsquo;s going on. Check for DiskPressure, MemoryPressure, or PID Pressure.</li>
+</ul>
+<h5 id="use-of-the-resource"><strong>Use of the Resource</strong>:</h5>
+<ul>
+<li>Use <code>top</code> or <code>free</code> right on the node to keep track of how resources are being used.</li>
+</ul>
+<h5 id="kubelet-status"><strong>Kubelet Status</strong>:</h5>
+<ul>
+<li>Make sure that the node&rsquo;s kubelet service is working. Use <code>journalctl -u kubelet</code> to look at the logs.</li>
+</ul>
+<h4 id="troubleshooting-at-the-pod-level">Troubleshooting at the pod level</h4>
+<h5 id="state"><strong>state</strong>:</h5>
+<ul>
+<li>Type <code>kubectl describe pod &lt;pod-name&gt;</code> to find out more about the state and events of a pod.</li>
+</ul>
+<h5 id="container-inspections"><strong>Container Inspections</strong>:</h5>
+<ul>
+<li>Use <code>kubectl logs &lt;pod-name&gt; -c &lt;container-name&gt;</code> to look at the logs for a particular container.</li>
+</ul>
+<h5 id="pod-restart-problems"><strong>Pod Restart Problems</strong>:</h5>
+<ul>
+<li>Check the logs for crash loops and think about using <code>kubectl describe</code>.</li>
+</ul>
+<h4 id="network-troubleshooting">Network Troubleshooting</h4>
+<h5 id="service-discovery"><strong>Service Discovery</strong>:</h5>
+<ul>
+<li>Use <code>kubectl get endpoints</code> to make sure services are properly pointing to pods.</li>
+</ul>
+<h5 id="pod-to-pod-communication"><strong>Pod-to-Pod Communication</strong>:</h5>
+<ul>
+<li>Use tools like <code>ping</code> or <code>curl</code> from inside a pod to test how well they work.</li>
+</ul>
+<h5 id="network-policies"><strong>Network Policies</strong>:</h5>
+<ul>
+<li>Use <code>kubectl get networkpolicy</code> to look over the policies and make sure that the desired network traffic paths are allowed.</li>
+</ul>
+<h5 id="dns-problems"><strong>DNS Problems</strong>:</h5>
+<ul>
+<li>Make sure the CoreDNS or kube-dns service is running and looking up service names properly.</li>
+</ul>
+<h4 id="storage-troubleshooting">Storage Troubleshooting</h4>
+<h5 id="pv--pvc-status"><strong>PV &amp; PVC Status</strong>:</h5>
+<ul>
+<li>Use <code>kubectl get pv,pvc</code> to check the binding status of persistent volumes and claims.</li>
+</ul>
+<h5 id="access-modes"><strong>Access Modes</strong>:</h5>
+<ul>
+<li>Make sure the access mode of the pod fits the access mode of the provisioned PV.</li>
+</ul>
+<h5 id="storage-class-problems"><strong>Storage Class Problems</strong>:</h5>
+<ul>
+<li>Make sure the right storage class is given and the provisioner is working.</li>
+</ul>
+<h5 id="mount-problems"><strong>Mount Problems</strong>:</h5>
+<ul>
+<li>Use <code>kubectl describe pod</code> to see any problems with mounts that are caused by pods.</li>
+</ul>
+<h4 id="advanced-troubleshooting-in-kubernetes">Advanced Troubleshooting in Kubernetes</h4>
+<p>Kubernetes, as the leading container orchestration platform, presents multiple intricate components that could lead to potential issues in various scenarios. Efficiently diagnosing these problems is an essential skill. Let&rsquo;s dive into some common troubleshooting scenarios and their resolutions.</p>
+<h5 id="preliminary-troubleshooting-steps">Preliminary Troubleshooting Steps</h5>
+<h6 id="1-examining-cluster-health">1. Examining Cluster Health</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: In this scenario, we&rsquo;ll intentionally taint a node to make it unschedulable and then inspect its state.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl taint nodes test-node key<span style="color:#f92672">=</span>value:NoSchedule
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get nodes
+</span></span><span style="display:flex;"><span>kubectl describe node test-node
+</span></span></code></pre></div></li>
+</ul>
+<h6 id="2-log-analysis">2. Log Analysis</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: A simulated faulty application will be deployed, which will exit immediately after logging an error.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run faulty-app --image<span style="color:#f92672">=</span>busybox --command -- /bin/sh -c <span style="color:#e6db74">&#34;echo &#39;Error: Something went wrong!&#39; &amp;&amp; exit 1&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl logs faulty-app
+</span></span></code></pre></div></li>
+</ul>
+<h5 id="node-level-troubleshooting">Node-level Troubleshooting</h5>
+<h6 id="1-node-resource-exhaustion">1. Node Resource Exhaustion</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: A pod demanding a high amount of memory will be scheduled, potentially leading to resource exhaustion on the node.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run resource-hog --image<span style="color:#f92672">=</span>busybox --requests<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;memory=800Mi&#39;</span> -- /bin/sh -c <span style="color:#e6db74">&#34;while true; do sleep 1; done&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl describe node test-node
+</span></span></code></pre></div></li>
+</ul>
+<h5 id="pod-level-troubleshooting">Pod-level Troubleshooting</h5>
+<h6 id="1-crashing-pods">1. Crashing Pods</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: Investigate the reasons behind a crashing pod (this scenario has been previously set up in the log analysis example).</p>
+</li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl describe pod faulty-app
+</span></span></code></pre></div></li>
+</ul>
+<h6 id="2-pod-access">2. Pod Access</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: Deploy a simple pod and access its shell, ensuring that there are no access-related issues.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run simple-pod --image<span style="color:#f92672">=</span>busybox --command -- /bin/sh -c <span style="color:#e6db74">&#34;sleep 3600&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl exec -it simple-pod -- /bin/sh
+</span></span></code></pre></div></li>
+</ul>
+<h5 id="network-troubleshooting-1">Network Troubleshooting</h5>
+<h6 id="1-networking-issues">1. Networking Issues</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: Create two pods in different namespaces and attempt to communicate between them.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create namespace ns1
+</span></span><span style="display:flex;"><span>kubectl create namespace ns2
+</span></span><span style="display:flex;"><span>kubectl run nginx1 --image<span style="color:#f92672">=</span>nginx --namespace<span style="color:#f92672">=</span>ns1
+</span></span><span style="display:flex;"><span>kubectl run nginx2 --image<span style="color:#f92672">=</span>nginx --namespace<span style="color:#f92672">=</span>ns2
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl exec -it -n ns1 nginx1 -- curl nginx2.ns2.svc.cluster.local
+</span></span></code></pre></div></li>
+</ul>
+<h6 id="2-network-policies">2. Network Policies</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: Establish a network policy that blocks incoming traffic and diagnose its impact.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f- <span style="color:#e6db74">&lt;&lt;EOF
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">apiVersion: networking.k8s.io/v1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">kind: NetworkPolicy
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">metadata:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  name: block-all
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">spec:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  podSelector: {}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  policyTypes:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  - Ingress
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get networkpolicies
+</span></span><span style="display:flex;"><span>kubectl describe networkpolicy block-all
+</span></span></code></pre></div></li>
+</ul>
+<h5 id="storage-troubleshooting-1">Storage Troubleshooting</h5>
+<h6 id="1-pv-and-pvc-binding">1. PV and PVC Binding</h6>
+<ul>
+<li>
+<p><strong>Description</strong>: Simulate a mismatch between the configurations of a PersistentVolume and a PersistentVolumeClaim.</p>
+</li>
+<li>
+<p><strong>Scenario Creation</strong>:</p>
+<ol>
+<li>Generate <code>PersistentVolume</code> YAML:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create pv example-pv --storage-class<span style="color:#f92672">=</span>manual --capacity<span style="color:#f92672">=</span>storage<span style="color:#f92672">=</span>1Gi --access-mode<span style="color:#f92672">=</span>ReadWriteOnce --host-path<span style="color:#f92672">=</span>path<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tmp&#34;</span> --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; example-pv.yaml
+</span></span></code></pre></div><p>Edit <code>example-pv.yaml</code> to ensure the <code>hostPath</code> section is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">hostPath</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#34;/tmp&#34;</span>
+</span></span></code></pre></div><p>Apply the configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f example-pv.yaml
+</span></span></code></pre></div><ol start="2">
+<li>Generate <code>PersistentVolumeClaim</code> YAML:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create pvc example-pvc --storage-class<span style="color:#f92672">=</span>manual --access-mode<span style="color:#f92672">=</span>ReadWriteMany --resources<span style="color:#f92672">=</span>requests<span style="color:#f92672">=</span>storage<span style="color:#f92672">=</span>1Gi --dry-run<span style="color:#f92672">=</span>client -o yaml &gt; example-pvc.yaml
+</span></span></code></pre></div><p>Apply the configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f example-pvc.yaml
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Troubleshooting</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl describe pvc example-pvc
+</span></span></code></pre></div></li>
+</ul>
+
             </div>
           </div>
         </div>
@@ -320,6 +546,21 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
 					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
 						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
@@ -329,21 +570,6 @@
 						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
 					<p class="meta">23 Jul 2016</p>
-				</div>
-			</div>
-			
-			<!-- post -->
-			<div class="d-flex py-3 border-bottom">
-				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/aRz1ymI.png" alt="post-thumb">
-					</a>
-				</div>
-				<div>
-					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/data-preparation-missing-values/">Data Preparation: Missing Records</a>
-					</h6>
-					<p class="meta">27 Dec 2014</p>
 				</div>
 			</div>
 			
@@ -389,6 +615,8 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
@@ -399,9 +627,15 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 			</ul>
 		</div>
 
@@ -409,7 +643,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -428,7 +662,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -542,7 +776,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -551,7 +785,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -610,12 +844,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

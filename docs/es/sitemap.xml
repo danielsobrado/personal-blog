@@ -494,6 +494,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/advanced-troubleshooting-in-kubernetes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/advanced-troubleshooting-in-kubernetes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/ambassador-pattern-in-kubernetes-explained/</loc>
   </url><url>
@@ -628,6 +638,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-network-policies/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-network-policies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-network-policies/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-networking-overview/</loc>
     <xhtml:link
@@ -702,6 +722,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-statefulsets-explained/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-statefulsets-explained/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-configurations-with-kubernetes-kustomize/</loc>
     <xhtml:link
@@ -716,6 +746,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-jobs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/managing-kubernetes-jobs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/managing-kubernetes-jobs/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-secrets-using-sealed-secrets/</loc>
   </url><url>
@@ -836,6 +876,16 @@
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-deployments/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-ingress/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-and-using-kubernetes-ingress/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-ingress/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-apache-kafka/</loc>
   </url><url>
