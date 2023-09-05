@@ -502,8 +502,28 @@
     <loc>https://www.danielsobrado.com/es/blog/application-deployment-choices-in-kafka/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/automating-deployments-with-kubernetes-operators/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/automating-deployments-with-kubernetes-operators/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/configuring-applications-in-kubernetes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/configuring-applications-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/configuring-applications-in-kubernetes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/</loc>
   </url><url>
@@ -598,6 +618,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-security-best-practices/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kubernetes-security-best-practices/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kubernetes-security-best-practices/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-service-accounts/</loc>
     <xhtml:link
@@ -704,6 +734,16 @@
     <loc>https://www.danielsobrado.com/es/blog/serialization-and-deserialization-in-kafka/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/sidecar-pattern-in-kubernetes/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/sidecar-pattern-in-kubernetes/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/system-metrics-in-kafka/</loc>
   </url><url>

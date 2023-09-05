@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title></title>
+    <title>Monitoring and Abservability in Kubernetes</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
+    <meta name="description" content=" Monitoring and observability in Kubernetes involve collecting metrics, logs, and traces to track cluster health and troubleshoot issues.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
@@ -172,10 +172,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold"></h2>
+				<h2 class="text-white font-weight-bold">Monitoring and Abservability in Kubernetes</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li></li>
+					<li>Monitoring and Abservability in Kubernetes</li>
 				</ol>
 			</div>
 		</div>
@@ -189,19 +189,57 @@
     <div class="row">
       <div class="col-lg-8 py-100">
         <div class="rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://www.danielsobrado.com/" alt="blog-image">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/FjgFVkz.jpg" alt="blog-image">
           <div class="p-4">
-            <h3></h3>
+            <h3>Monitoring and Abservability in Kubernetes</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
-              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/"></a></li>
-              <li class="list-inline-item text-color">On 01 Jan</li>
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 18 Mar</li>
               <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/devops"> Devops</a>
                 
               </li>
             </ul>
             <div class="post-content">
-              <p><a href="https://i.imgur.com/FjgFVkz.jpg">https://i.imgur.com/FjgFVkz.jpg</a></p>
-
+              <h3 id="overview-of-monitoring-in-kubernetes">Overview of Monitoring in Kubernetes</h3>
+<p>Monitoring is crucial for understanding the state and performance of your Kubernetes cluster and applications. The main areas to focus on are:</p>
+<ul>
+<li>Node and Pod Metrics: CPU, Memory, Disk, Network</li>
+<li>Application Metrics: Custom metrics specific to your application</li>
+<li>Logs: Error messages, application status</li>
+<li>Tracing: Performance and flow of requests through services</li>
+</ul>
+<h3 id="monitoring-tools-prometheus-and-grafana">Monitoring Tools: Prometheus and Grafana</h3>
+<h4 id="prometheus">Prometheus</h4>
+<p>Prometheus is an open-source monitoring solution that integrates well with Kubernetes. It collects metrics from configured targets at given intervals and stores them in a time-series database.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create -f prometheus-config.yaml
+</span></span></code></pre></div><p><strong>PromQL Query Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sum<span style="color:#f92672">(</span>rate<span style="color:#f92672">(</span>http_requests_total<span style="color:#f92672">[</span>5m<span style="color:#f92672">]))</span> by <span style="color:#f92672">(</span>status_code<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h4 id="grafana">Grafana</h4>
+<p>Grafana is often used in conjunction with Prometheus to visualize the collected data. You can set up Grafana dashboards to have real-time insights into your cluster&rsquo;s state.</p>
+<p><strong>Dashboard Configuration</strong></p>
+<p>Navigate to Grafana dashboard -&gt; Add Data Source -&gt; Choose Prometheus</p>
+<h3 id="kubernetes-logging">Kubernetes Logging</h3>
+<p>Logs provide essential information about the behavior and state of applications. In Kubernetes, you can fetch logs for a specific pod using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl logs POD_NAME
+</span></span></code></pre></div><p>Or to get logs from a previous instance of a container:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl logs -p POD_NAME
+</span></span></code></pre></div><h3 id="application-tracing-with-jaeger-or-opentracing">Application Tracing with Jaeger or OpenTracing</h3>
+<h4 id="jaeger">Jaeger</h4>
+<p>Jaeger helps with tracing the flow of requests across various microservices in your application.</p>
+<h4 id="opentracing">OpenTracing</h4>
+<p>OpenTracing provides an API for integrating various tracing solutions. You can use it as a vendor-neutral way to add tracing to your applications.</p>
+<h3 id="alerting-and-notifications">Alerting and Notifications</h3>
+<p>Alerting ensures that you are notified when specific conditions in your monitoring data are met. Prometheus can evaluate alert rules and send notifications via Alertmanager.</p>
+<p><strong>Example Alert Rule in Prometheus</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">alert</span>: <span style="color:#ae81ff">HighCPU</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expr</span>: <span style="color:#ae81ff">cpu_usage &gt; 80%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">for</span>: <span style="color:#ae81ff">5m</span>
+</span></span></code></pre></div><p><strong>Notification Channels</strong></p>
+<p>You can integrate Alertmanager with various notification channels like email, Slack, or PagerDuty.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create -f alertmanager-config.yaml
+</span></span></code></pre></div>
             </div>
           </div>
         </div>
@@ -217,13 +255,13 @@
                     <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Monitoring%20and%20Abservability%20in%20Kubernetes&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f&amp;resubmit=true&amp;title="><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f&amp;resubmit=true&amp;title=Monitoring%20and%20Abservability%20in%20Kubernetes"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=Monitoring%20and%20Abservability%20in%20Kubernetes&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fmonitoring-and-observability-in-kubernetes%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -233,6 +271,10 @@
               <div class="d-flex">
                 <span class="font-weight-light mt-2 mr-3">Tags:</span>
                 <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kubernetes">Kubernetes</a>
+                  </li>
                   
                 </ul>
               </div>

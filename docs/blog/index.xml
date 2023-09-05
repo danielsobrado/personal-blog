@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>Automating Deployments with Kubernetes Operators</title>
+      <link>https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/</guid>
+      <description>Introduction to Kubernetes Operators What: Operators are software extensions that manage operational complexity of applications on Kubernetes.</description>
+    </item>
+    
+    <item>
       <title>Kubernetes Custom Resource Definitions (CRDs)</title>
       <link>https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
@@ -98,12 +107,21 @@
     </item>
     
     <item>
+      <title>Sidecar Pattern in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</guid>
+      <description>Overview of the Sidecar Pattern The Sidecar Pattern in Kubernetes involves deploying a sidecar container alongside your application container in the same Pod.</description>
+    </item>
+    
+    <item>
       <title>Managing Configurations with Kubernetes Kustomize</title>
       <link>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</link>
       <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/managing-configurations-with-kubernetes-kustomize/</guid>
-      <description>Managing Configurations with Kubernetes Kustomize Kustomize is a standalone tool to customize Kubernetes manifests in a template-free way.</description>
+      <description>Kustomize is a standalone tool to customize Kubernetes manifests in a template-free way.</description>
     </item>
     
     <item>
@@ -148,7 +166,7 @@
       <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/securing-kubernetes-secrets/</guid>
-      <description>Securing Kubernetes Secrets Introduction to Kubernetes Secrets Kubernetes Secrets are used to store sensitive information such as passwords, API keys, and tokens.</description>
+      <description>Kubernetes Secrets are used to store sensitive information such as passwords, API keys, and tokens.</description>
     </item>
     
     <item>
@@ -157,7 +175,8 @@
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/securing-kubernetes-clusters/</guid>
-      <description>Securing Kubernetes Clusters: Mastering CKAD Material Security Basics in Kubernetes Role-Based Access Control (RBAC)</description>
+      <description>Security Basics in Kubernetes Role-Based Access Control (RBAC)
+Use RBAC to define what actions a user, or a system component, can perform.</description>
     </item>
     
     <item>
@@ -193,7 +212,7 @@
       <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/working-with-kubernetes-volumes/</guid>
-      <description>Working with Kubernetes Volumes In Kubernetes, a volume is a directory accessible to containers in a pod and is used to store data.</description>
+      <description>In Kubernetes, a volume is a directory accessible to containers in a pod and is used to store data.</description>
     </item>
     
     <item>
@@ -211,7 +230,16 @@
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kubernetes-service-accounts/</guid>
-      <description>Kubernetes Service Accounts Introduction to Service Accounts Service Accounts in Kubernetes are special accounts used by Pods (not humans) to interact with the Kubernetes API.</description>
+      <description>Introduction to Service Accounts Service Accounts in Kubernetes are special accounts used by Pods (not humans) to interact with the Kubernetes API.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring and Abservability in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/monitoring-and-observability-in-kubernetes/</link>
+      <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/monitoring-and-observability-in-kubernetes/</guid>
+      <description>Overview of Monitoring in Kubernetes Monitoring is crucial for understanding the state and performance of your Kubernetes cluster and applications.</description>
     </item>
     
     <item>
@@ -224,12 +252,30 @@
     </item>
     
     <item>
+      <title>Kubernetes Security Best Practices</title>
+      <link>https://www.danielsobrado.com/blog/kubernetes-security-best-practices/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kubernetes-security-best-practices/</guid>
+      <description>Overview of Kubernetes Security Kubernetes security involves protecting your Kubernetes clusters, workloads, and data by implementing best practices and features around authentication, authorization, network segmentation, and data encryption.</description>
+    </item>
+    
+    <item>
+      <title>Configuring Applications in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/configuring-applications-in-kubernetes/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/configuring-applications-in-kubernetes/</guid>
+      <description>ConfigMaps and Secrets ConfigMaps Purpose: Store configuration data in key-value pairs.</description>
+    </item>
+    
+    <item>
       <title>Using Annotations in Kubernetes</title>
       <link>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</link>
       <pubDate>Sat, 11 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/using-annotations-in-kubernetes/</guid>
-      <description>Using Annotations in Kubernetes Annotations in Kubernetes are metadata attached to objects like Pods, Services, and Deployments to store additional, non-identifying information.</description>
+      <description>Annotations in Kubernetes are metadata attached to objects like Pods, Services, and Deployments to store additional, non-identifying information.</description>
     </item>
     
     <item>
@@ -464,15 +510,6 @@
       
       <guid>https://www.danielsobrado.com/blog/introduction-to-machine-data/</guid>
       <description>Understanding Machine Data In this era of affordable storage and processing capabilities, we can extract and process diverse data that may provide invaluable insights.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.danielsobrado.com/blog/monitoring-and-observability-in-kubernetes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/monitoring-and-observability-in-kubernetes/</guid>
-      <description>https://i.imgur.com/FjgFVkz.jpg</description>
     </item>
     
     <item>

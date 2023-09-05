@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Sidecar Pattern in Kubernetes</title>
+      <link>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/sidecar-pattern-in-kubernetes/</guid>
+      <description>Overview of the Sidecar Pattern The Sidecar Pattern in Kubernetes involves deploying a sidecar container alongside your application container in the same Pod.</description>
+    </item>
+    
+    <item>
       <title>Ambassador Pattern in Kubernetes Explained</title>
       <link>https://www.danielsobrado.com/blog/ambassador-pattern-in-kubernetes/</link>
       <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>

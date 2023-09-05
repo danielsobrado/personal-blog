@@ -202,9 +202,7 @@
               </li>
             </ul>
             <div class="post-content">
-              <h3 id="securing-kubernetes-secrets">Securing Kubernetes Secrets</h3>
-<h4 id="introduction-to-kubernetes-secrets">Introduction to Kubernetes Secrets</h4>
-<p>Kubernetes Secrets are used to store sensitive information such as passwords, API keys, and tokens. Unlike ConfigMaps, Secrets are specifically designed to handle confidential data and are stored more securely by default.</p>
+              <p>Kubernetes Secrets are used to store sensitive information such as passwords, API keys, and tokens. Unlike ConfigMaps, Secrets are specifically designed to handle confidential data and are stored more securely by default.</p>
 <h4 id="creating-and-managing-secrets">Creating and Managing Secrets</h4>
 <p>To create a Secret, you can use the <code>kubectl create secret</code> command. For example:</p>
 <pre tabindex="0"><code>kubectl create secret generic my-secret --from-literal=password=myPassword
