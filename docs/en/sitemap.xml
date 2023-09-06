@@ -48,7 +48,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -58,6 +58,41 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/devops/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-ckad-preparation/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/</loc>
@@ -71,38 +106,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/devops/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-custom-resource-definitions-crds/</loc>
