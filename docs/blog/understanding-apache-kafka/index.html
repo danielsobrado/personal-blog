@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Understanding Apache Kafka: An Introduction</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="An introductory guide to understanding the basics of Apache Kafka.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
@@ -126,7 +126,7 @@
             
             
             
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
+            <option id="en" value="https://www.danielsobrado.com/blog/understanding-apache-kafka/" selected>En</option>
             
             
             
@@ -140,7 +140,7 @@
             
             
             
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
+            <option id="es" value="https://www.danielsobrado.com/es/blog/understanding-apache-kafka/">Es</option>
             
             
             
@@ -168,14 +168,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Understanding Apache Kafka: An Introduction</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Understanding Apache Kafka: An Introduction</li>
 				</ol>
 			</div>
 		</div>
@@ -183,370 +183,160 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/S1ccdBp.jpg" alt="Securing Kubernetes Clusters">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">02</h3>
-        <p class="mb-0">May</p>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/NDc9g81.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Understanding Apache Kafka: An Introduction</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 24 Jun</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/big%20data"> Big data</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>Apache Kafka is an open-source stream-processing software platform developed by Linkedin and donated to the Apache Software Foundation. It is designed to handle data streams and real-time analytics.</p>
+<h3 id="importance">Importance</h3>
+<ol>
+<li><strong>Scalability</strong>: Kafka can scale horizontally, allowing for more volume.</li>
+<li><strong>Durability</strong>: Data is replicated across multiple brokers.</li>
+<li><strong>Fault Tolerance</strong>: Built to recover from failures.</li>
+<li><strong>Real-Time</strong>: Low-latency support for real-time analytics and monitoring.</li>
+</ol>
+<h3 id="the-basic-components-of-apache-kafka">The Basic Components of Apache Kafka</h3>
+<ol>
+<li><strong>Producer</strong>: Pushes messages to Kafka topics.</li>
+<li><strong>Consumer</strong>: Reads messages from topics.</li>
+<li><strong>Broker</strong>: Kafka servers that store data and serve clients.</li>
+<li><strong>Topic</strong>: Categories where messages are stored.</li>
+<li><strong>Zookeeper</strong>: Manages the distributed nature of Kafka.</li>
+<li><strong>Partition</strong>: Kafka topics are split into partitions for more parallelism.</li>
+</ol>
+<h3 id="how-kafka-differs-from-other-messaging-systems">How Kafka Differs from Other Messaging Systems</h3>
+<ol>
+<li><strong>Durability</strong>: Kafka is more durable due to its distributed architecture.</li>
+<li><strong>Throughput</strong>: Handles more messages per second.</li>
+<li><strong>Flexibility</strong>: Can be used for stream processing, data lakes, aggregating data from different sources.</li>
+<li><strong>Schema</strong>: Support for message schemas via Schema Registry.</li>
+</ol>
+<h3 id="the-role-of-apache-kafka-in-data-streaming">The Role of Apache Kafka in Data Streaming</h3>
+<p>Kafka serves as the backbone for real-time analytics and monitoring. It can be used for:</p>
+<ol>
+<li><strong>Stream Processing</strong>: Manipulating data in real-time.</li>
+<li><strong>Event Sourcing</strong>: Capturing changes to application state as a series of events.</li>
+<li><strong>Decoupling</strong>: Decouples data pipelines.</li>
+</ol>
+<h3 id="use-cases-where-apache-kafka-excels">Use Cases: Where Apache Kafka Excels</h3>
+<ol>
+<li><strong>Real-Time Analytics</strong></li>
+<li><strong>Data Lakes</strong></li>
+<li><strong>Aggregating Data</strong></li>
+<li><strong>Monitoring</strong></li>
+<li><strong>ETL Pipelines</strong></li>
+</ol>
+<h3 id="10-questions-to-practice">10 Questions to practice</h3>
+<ol>
+<li>What is the role of Zookeeper in Kafka?</li>
+<li>How does Kafka ensure message durability?</li>
+<li>Explain the concept of partitions in Kafka.</li>
+<li>What are consumer groups in Kafka?</li>
+<li>How does Kafka handle failure in brokers?</li>
+<li>What is a Kafka topic and how is it different from a queue?</li>
+<li>What are the benefits of having multiple partitions in a Kafka topic?</li>
+<li>How does a Kafka producer know which partition to send a message to?</li>
+<li>Explain the significance of a Kafka broker ID.</li>
+<li>How can you secure Kafka?</li>
+</ol>
+<hr>
+<h3 id="solutions-to-questions">Solutions to Questions</h3>
+<ol>
+<li><strong>Zookeeper</strong> manages the distributed nature of Kafka and handles broker coordination.</li>
+<li><strong>Durability</strong> is ensured by replicating messages across multiple brokers.</li>
+<li><strong>Partitions</strong> allow for horizontal scalability and parallelism.</li>
+<li><strong>Consumer Groups</strong> are consumers organized into groups for parallel consumption of data.</li>
+<li><strong>Failure Handling</strong> is managed by designating a new leader for partitions managed by a failed broker.</li>
+<li><strong>Kafka Topic</strong> is more flexible than a queue and allows for multiple consumers to read from it concurrently.</li>
+<li><strong>Multiple Partitions</strong> provide higher throughput and scalability.</li>
+<li><strong>Producer</strong> either uses round-robin or a partitioning key to determine the target partition.</li>
+<li><strong>Broker ID</strong> is a unique identifier for each broker in a Kafka cluster.</li>
+<li><strong>Security</strong> can be ensured through SSL, SASL, and ACLs.</li>
+</ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2funderstanding-apache-kafka%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Understanding%20Apache%20Kafka%3a%20An%20Introduction&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2funderstanding-apache-kafka%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2funderstanding-apache-kafka%2f&amp;resubmit=true&amp;title=Understanding%20Apache%20Kafka%3a%20An%20Introduction"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Understanding%20Apache%20Kafka%3a%20An%20Introduction&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2funderstanding-apache-kafka%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kafka">Kafka</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/securing-kubernetes-clusters/" class="h4 font-primary text-dark">Securing Kubernetes Clusters</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/DT7TXa3.jpg" alt="Schedule Tasks in Kubernetes with CronJobs">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">29</h3>
-        <p class="mb-0">Apr</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kubernetes-cronjobs/" class="h4 font-primary text-dark">Schedule Tasks in Kubernetes with CronJobs</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/Z7vLN4p.jpg" alt="An Overview of Kubernetes Networking">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">24</h3>
-        <p class="mb-0">Apr</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kubernetes-networking-overview/" class="h4 font-primary text-dark">An Overview of Kubernetes Networking</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/cTy0rzr.jpg" alt="Kubernetes Namespaces: An Overview">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">21</h3>
-        <p class="mb-0">Apr</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kubernetes-namespaces-an-overview/" class="h4 font-primary text-dark">Kubernetes Namespaces: An Overview</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/0f4u1V6.jpg" alt="Creating and Managing Kubernetes Jobs">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Apr</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/managing-kubernetes-jobs/" class="h4 font-primary text-dark">Creating and Managing Kubernetes Jobs</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/wSSla9m.png" alt="Introduction to embeddings">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">11</h3>
-        <p class="mb-0">Apr</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/introduction-embeddings/" class="h4 font-primary text-dark">Introduction to embeddings</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">
-							<a href="https://www.danielsobrado.com/blog/page/5/" class="page-link">Prev</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/4/" class="page-link">
-								4
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/5/" class="page-link">
-								5
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/page/6/" class="page-link">
-								6
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/7/" class="page-link">
-								7
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/8/" class="page-link">
-								8
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/7/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -734,10 +524,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->

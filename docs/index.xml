@@ -152,6 +152,15 @@
     </item>
     
     <item>
+      <title>Understanding Apache Kafka: An Introduction</title>
+      <link>https://www.danielsobrado.com/blog/understanding-apache-kafka/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-apache-kafka/</guid>
+      <description>Apache Kafka is an open-source stream-processing software platform developed by Linkedin and donated to the Apache Software Foundation.</description>
+    </item>
+    
+    <item>
       <title>Implementing the Adapter Pattern in Kubernetes</title>
       <link>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</link>
       <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>

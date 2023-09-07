@@ -218,6 +218,35 @@
     <loc>https://www.danielsobrado.com/blog/kubernetes-deployments/</loc>
     <lastmod>2023-07-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/big-data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/big-data/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/kafka/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-apache-kafka/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-apache-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-apache-kafka/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</loc>
     <lastmod>2023-06-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -622,19 +651,6 @@
                 href="https://www.danielsobrado.com/blog/understanding-kubernetes-events/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
-    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/big-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/big-data/"
-                />
-  </url><url>
     <loc>https://www.danielsobrado.com/tags/elasticsearch/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -653,9 +669,6 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/concepts/"
                 />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/kafka/</loc>
-    <lastmod>2022-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kafka-consumer-group-replication/</loc>
     <lastmod>2022-10-16T00:00:00+00:00</lastmod>

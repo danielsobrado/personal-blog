@@ -888,6 +888,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-apache-kafka/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-apache-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-apache-kafka/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-confluent-ksql/</loc>
   </url><url>
