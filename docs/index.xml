@@ -446,7 +446,7 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/kafka-consumer-group-replication/</guid>
-      <description>Kafka Consumer Group: A Brief Explanation In your journey to understand the Kafka universe, understanding Consumer Groups is indispensable.</description>
+      <description>Kafka Consumer Group: A Brief Explanation A Kafka Consumer Group is, at its core, a way of allowing a pool of consumers to divide the processing of data over multiple consumer instances, each of which is called a consumer.</description>
     </item>
     
     <item>
