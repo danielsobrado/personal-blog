@@ -152,6 +152,33 @@
     </item>
     
     <item>
+      <title>Understanding Kafka&#39;s APIs</title>
+      <link>https://www.danielsobrado.com/blog/understanding-kafka-apis/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-kafka-apis/</guid>
+      <description>The Kafka APIs are a collection of interfaces that allow you to interact with Kafka in various ways—producing messages, consuming messages, real-time data processing, and administrative tasks.</description>
+    </item>
+    
+    <item>
+      <title>Diving into Kafka&#39;s Architecture and Design Decisions</title>
+      <link>https://www.danielsobrado.com/blog/diving-into-kafka-architecture-and-design/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diving-into-kafka-architecture-and-design/</guid>
+      <description>Apache Kafka is a distributed streaming platform used for building real-time data pipelines and streaming applications.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Kafka&#39;s Command-Line Tools</title>
+      <link>https://www.danielsobrado.com/blog/getting-started-with-kafka-command-line-tools/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/getting-started-with-kafka-command-line-tools/</guid>
+      <description>Installing Kafka Command-Line Tools using Docker To run Confluent Kafka using Docker, use the following command:</description>
+    </item>
+    
+    <item>
       <title>Understanding Apache Kafka: An Introduction</title>
       <link>https://www.danielsobrado.com/blog/understanding-apache-kafka/</link>
       <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>

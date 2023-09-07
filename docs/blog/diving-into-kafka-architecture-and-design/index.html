@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Diving into Kafka&#39;s Architecture and Design Decisions</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="An in-depth examination of Kafka&#39;s architectural design and the decisions that shaped it.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
@@ -126,7 +126,7 @@
             
             
             
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
+            <option id="en" value="https://www.danielsobrado.com/blog/diving-into-kafka-architecture-and-design/" selected>En</option>
             
             
             
@@ -140,7 +140,7 @@
             
             
             
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
+            <option id="es" value="https://www.danielsobrado.com/es/blog/diving-into-kafka-architecture-and-design/">Es</option>
             
             
             
@@ -168,14 +168,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Diving into Kafka&#39;s Architecture and Design Decisions</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Diving into Kafka&#39;s Architecture and Design Decisions</li>
 				</ol>
 			</div>
 		</div>
@@ -183,409 +183,199 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/OSv3WF6.png" alt="The shared database problem">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">25</h3>
-        <p class="mb-0">Jan</p>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/X6DdyiM.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Diving into Kafka&rsquo;s Architecture and Design Decisions</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 28 Jun</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/big%20data"> Big data</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>Apache Kafka is a distributed streaming platform used for building real-time data pipelines and streaming applications.</p>
+<h3 id="the-internal-architecture-of-kafka">The Internal Architecture of Kafka</h3>
+<ul>
+<li><strong>Producer</strong>: Sends records to Kafka topics.</li>
+<li><strong>Consumer</strong>: Reads records from Kafka topics.</li>
+<li><strong>Broker</strong>: Individual Kafka server, holding data and serving clients.</li>
+<li><strong>ZooKeeper</strong>: Manages brokers and maintains metadata.</li>
+</ul>
+<h3 id="understanding-kafka-brokers-and-clusters">Understanding Kafka Brokers and Clusters</h3>
+<ul>
+<li><strong>Broker</strong>: Stores data and serves clients.</li>
+<li><strong>Cluster</strong>: A set of Kafka brokers.</li>
+</ul>
+<p>Brokers store topic partitions and serve producers and consumers. Multiple brokers form a cluster, managed by ZooKeeper.</p>
+<h3 id="how-topics-and-partitions-work">How Topics and Partitions Work</h3>
+<ul>
+<li><strong>Topic</strong>: Logical channel to which records are sent by producers.</li>
+<li><strong>Partition</strong>: Physical subdivision of a topic.</li>
+</ul>
+<p>A topic is divided into partitions for parallelism and distributed storage.</p>
+<h3 id="replica-management-in-kafka">Replica Management in Kafka</h3>
+<ul>
+<li><strong>Leader Replica</strong>: Handles reads and writes for a partition.</li>
+<li><strong>Follower Replica</strong>: Mirrors the data and can take over if the leader fails.</li>
+</ul>
+<p>Replicas ensure data availability and resilience.</p>
+<h3 id="data-flow-and-message-routing-in-kafka">Data Flow and Message Routing in Kafka</h3>
+<ul>
+<li><strong>Producer API</strong>: Sends records to the broker.</li>
+<li><strong>Consumer API</strong>: Fetches records from the broker.</li>
+</ul>
+<p>Records are produced to topics, stored in partitions, and consumed from partitions.</p>
+<h3 id="load-balancing-and-data-distribution-in-kafka">Load Balancing and Data Distribution in Kafka</h3>
+<ul>
+<li><strong>Partitioning</strong>: Distributes data across multiple brokers.</li>
+</ul>
+<p>Producers use algorithms like round-robin or hash-based partitioning to distribute records.</p>
+<h3 id="understanding-leader-and-follower-roles">Understanding Leader and Follower Roles</h3>
+<ul>
+<li><strong>Leader</strong>: Serves client requests.</li>
+<li><strong>Follower</strong>: Mirrors the leader and can become leader if needed.</li>
+</ul>
+<p>Leaders are elected by ZooKeeper.</p>
+<h3 id="zookeepers-role-in-kafka-architecture">Zookeeper&rsquo;s Role in Kafka Architecture</h3>
+<ul>
+<li>Manages broker metadata.</li>
+<li>Handles broker failure and recovery.</li>
+<li>Manages leader elections.</li>
+</ul>
+<h3 id="extended-practice-questions-for-cckad">Extended Practice Questions for CCKAD</h3>
+<ol>
+<li>What is a Kafka broker?</li>
+<li>How is a topic different from a partition?</li>
+<li>What role does ZooKeeper play in Kafka?</li>
+<li>Explain the difference between leader and follower replicas.</li>
+<li>How does Kafka handle load balancing?</li>
+<li>Describe the data flow in Kafka.</li>
+<li>What algorithms can be used for partitioning in Kafka?</li>
+<li>How are consumer offsets managed?</li>
+<li>What happens when a broker fails?</li>
+<li>What are the core APIs in Kafka?</li>
+<li>How does Kafka ensure data durability?</li>
+<li>What are consumer groups and how do they work?</li>
+<li>How do producers decide which partition to send a message to?</li>
+<li>What is the role of a Kafka &ldquo;Producer Record&rdquo;?</li>
+<li>Describe the process of a leader election in a Kafka cluster.</li>
+<li>How is data ordered in Kafka partitions?</li>
+<li>What is &ldquo;Log Compaction&rdquo; in Kafka?</li>
+<li>How are read and write operations optimized in Kafka?</li>
+<li>What is a &ldquo;Topic Log&rdquo; in Kafka?</li>
+<li>Explain how Kafka enables fault-tolerance.</li>
+<li>What is the significance of the <code>acks</code> configuration in Kafka producers?</li>
+<li>How can you secure Kafka brokers?</li>
+<li>What is &ldquo;Exactly Once Semantics&rdquo; in Kafka?</li>
+<li>How does Kafka handle schema evolution?</li>
+<li>How can you monitor the health and performance of a Kafka cluster?</li>
+</ol>
+<h3 id="solutions">Solutions</h3>
+<ol>
+<li>A Kafka broker is an individual Kafka server that stores data and serves clients.</li>
+<li>A topic is a logical channel for storing records, whereas a partition is a physical subdivision of a topic.</li>
+<li>ZooKeeper manages the Kafka brokers and maintains the metadata.</li>
+<li>The leader replica handles client requests, while the follower replica mirrors the leader.</li>
+<li>Kafka uses partitioning to distribute data across multiple brokers.</li>
+<li>Producers send records to topics, which are stored in partitions. Consumers read from these partitions.</li>
+<li>Round-robin and hash-based partitioning.</li>
+<li>Consumer offsets are pointers that track the last read position in a partition.</li>
+<li>ZooKeeper detects the failure and initiates a leader re-election for partitions that the failed broker led.</li>
+<li>Producer API, Consumer API, Streams API, and Admin API.</li>
+<li>Through replication.</li>
+<li>Consumer groups allow multiple consumers to share the load of reading messages from topics.</li>
+<li>Producers use partitioning algorithms like round-robin or hash-based partitioning.</li>
+<li>A Producer Record contains the topic and partition information along with the key-value payload.</li>
+<li>ZooKeeper initiates leader election when a broker fails or a new broker is added.</li>
+<li>Data is ordered by the offset, a sequential ID, within each partition.</li>
+<li>Log compaction retains the latest update for each record key within a partition.</li>
+<li>Kafka optimizes read and write operations through sequential disk I/O.</li>
+<li>A Topic Log is the physical storage layer in a broker where messages for a particular topic partition are stored.</li>
+<li>Through data replication and leader elections.</li>
+<li>The <code>acks</code> configuration specifies the number of acknowledgments the producer requires the broker to receive before considering a request complete.</li>
+<li>Through SSL/TLS, SASL, and ACLs.</li>
+<li>&ldquo;Exactly Once Semantics&rdquo; ensure that records are neither lost nor seen more than once.</li>
+<li>Kafka handles schema evolution through schema registry services like Confluent&rsquo;s Schema Registry.</li>
+<li>You can use monitoring tools like JMX, Grafana, or built-in Kafka tools to monitor cluster health and performance.</li>
+</ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdiving-into-kafka-architecture-and-design%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Diving%20into%20Kafka%27s%20Architecture%20and%20Design%20Decisions&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdiving-into-kafka-architecture-and-design%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdiving-into-kafka-architecture-and-design%2f&amp;resubmit=true&amp;title=Diving%20into%20Kafka%27s%20Architecture%20and%20Design%20Decisions"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Diving%20into%20Kafka%27s%20Architecture%20and%20Design%20Decisions&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fdiving-into-kafka-architecture-and-design%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kafka">Kafka</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/shared-database/" class="h4 font-primary text-dark">The shared database problem</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/BTU18cC.png" alt="NLP: TF-IDF and Word2Vec">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">30</h3>
-        <p class="mb-0">Dec</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/tf-idf-word2vec/" class="h4 font-primary text-dark">NLP: TF-IDF and Word2Vec</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/duR94iD.png" alt="NLP: N-Grams and bag of words">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">29</h3>
-        <p class="mb-0">Dec</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/" class="h4 font-primary text-dark">NLP: N-Grams and bag of words</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/EG7uO7w.png" alt="Explaining Entropy">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">20</h3>
-        <p class="mb-0">May</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/explaining-entropy/" class="h4 font-primary text-dark">Explaining Entropy</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/5O23Ebp.jpg" alt="Prior and Posterior distributions">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Mar</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/prior-posterior-probabilities/" class="h4 font-primary text-dark">Prior and Posterior distributions</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/IenFUVF.jpg" alt="Basic probability concepts">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">10</h3>
-        <p class="mb-0">Mar</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/basic-probability-concepts/" class="h4 font-primary text-dark">Basic probability concepts</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">
-							<a href="https://www.danielsobrado.com/blog/page/11/" class="page-link">Prev</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/9/" class="page-link">
-								9
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/10/" class="page-link">
-								10
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/11/" class="page-link">
-								11
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/page/12/" class="page-link">
-								12
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/13/" class="page-link">
-								13
-							</a>
-						</li>
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/13/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -773,10 +563,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->

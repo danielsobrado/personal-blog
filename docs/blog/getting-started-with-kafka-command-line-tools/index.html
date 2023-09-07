@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Getting Started with Kafka&#39;s Command-Line Tools</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="A beginner&#39;s guide to using Kafka&#39;s command-line tools effectively.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
@@ -126,7 +126,7 @@
             
             
             
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
+            <option id="en" value="https://www.danielsobrado.com/blog/getting-started-with-kafka-command-line-tools/" selected>En</option>
             
             
             
@@ -140,7 +140,7 @@
             
             
             
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
+            <option id="es" value="https://www.danielsobrado.com/es/blog/getting-started-with-kafka-command-line-tools/">Es</option>
             
             
             
@@ -168,14 +168,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Getting Started with Kafka&#39;s Command-Line Tools</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Getting Started with Kafka&#39;s Command-Line Tools</li>
 				</ol>
 			</div>
 		</div>
@@ -183,409 +183,181 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/OSv3WF6.png" alt="The shared database problem">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">25</h3>
-        <p class="mb-0">Jan</p>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/xZF4jvV.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Getting Started with Kafka&rsquo;s Command-Line Tools</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 26 Jun</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/big%20data"> Big data</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h4 id="installing-kafka-command-line-tools-using-docker">Installing Kafka Command-Line Tools using Docker</h4>
+<p>To run Confluent Kafka using Docker, use the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -d --name zookeeper -p 2181:2181 confluentinc/cp-zookeeper:latest
+</span></span><span style="display:flex;"><span>docker run -d --name kafka -p 9092:9092 --link zookeeper:zookeeper confluentinc/cp-kafka:latest
+</span></span></code></pre></div><h4 id="starting-and-stopping-kafka-brokers">Starting and Stopping Kafka Brokers</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker start kafka
+</span></span><span style="display:flex;"><span>docker stop kafka
+</span></span></code></pre></div><h4 id="creating-topics-using-command-line">Creating Topics using Command-Line</h4>
+<p>Execute a shell in the running Kafka Docker container:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it kafka /bin/bash
+</span></span><span style="display:flex;"><span>kafka-topics --create --topic my_topic --bootstrap-server localhost:9092 --partitions <span style="color:#ae81ff">3</span> --replication-factor <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h4 id="producing-and-consuming-messages-from-cli">Producing and Consuming Messages from CLI</h4>
+<p>Open a shell inside the Kafka container:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it kafka /bin/bash
+</span></span><span style="display:flex;"><span>kafka-console-producer --topic my_topic --broker-list localhost:9092
+</span></span><span style="display:flex;"><span>kafka-console-consumer --topic my_topic --bootstrap-server localhost:9092
+</span></span></code></pre></div><h4 id="commonly-used-cli-commands-for-administration">Commonly Used CLI Commands for Administration</h4>
+<ul>
+<li>
+<p><strong>List topics:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kafka-topics --list --bootstrap-server localhost:9092
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Describe a topic:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kafka-topics --describe --topic my_topic --bootstrap-server localhost:9092
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Delete a topic:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kafka-topics --delete --topic my_topic --bootstrap-server localhost:9092
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="25-questions">25 Questions</h3>
+<ol>
+<li>How do you start a Kafka broker with a custom configuration file in Docker?</li>
+<li>What command changes the number of partitions for an existing topic?</li>
+<li>How to consume messages from a specific partition?</li>
+<li>How to produce messages with a specific key?</li>
+<li>Steps to stop all running Kafka and ZooKeeper containers?</li>
+<li>How to list consumer groups?</li>
+<li>How to reset the offset of a consumer group for a specific topic?</li>
+<li>How to alter the configuration of an existing topic?</li>
+<li>What command describes consumer groups?</li>
+<li>How to check the Kafka broker status?</li>
+<li>How to produce messages in a round-robin fashion to different partitions?</li>
+<li>How to set retention policies for a topic?</li>
+<li>How to change the replication factor of an existing topic?</li>
+<li>How to list all the brokers that are part of the Kafka cluster?</li>
+<li>How to purge all messages from a Kafka topic?</li>
+<li>How to read messages from a Kafka topic starting from the beginning?</li>
+<li>How to check the last offset for each partition of a topic?</li>
+<li>How to monitor the lag of a Kafka consumer group?</li>
+<li>How to set a quota for a Kafka client?</li>
+<li>How to authenticate against a Kafka broker?</li>
+<li>How to encrypt communication between Kafka brokers and clients?</li>
+<li>How to add or remove a broker to/from a Kafka cluster?</li>
+<li>How to perform a rolling restart of a Kafka cluster?</li>
+<li>How to configure ACLs for a Kafka topic?</li>
+<li>How to configure log segments in Kafka?</li>
+</ol>
+<h4 id="solutions">Solutions</h4>
+<ol>
+<li>Use <code>docker run</code> with a mounted custom <code>server.properties</code>: <code>docker run -v /path/to/custom/server.properties:/etc/kafka/server.properties ...</code></li>
+<li><code>kafka-topics --alter --topic my_topic --partitions 5 --bootstrap-server localhost:9092</code></li>
+<li><code>kafka-console-consumer --topic my_topic --partition 0 --bootstrap-server localhost:9092</code></li>
+<li><code>echo &quot;key,value&quot; | kafka-console-producer --topic my_topic --property &quot;key.separator=,&quot; --broker-list localhost:9092</code></li>
+<li><code>docker stop kafka zookeeper &amp;&amp; docker rm kafka zookeeper</code></li>
+<li><code>kafka-consumer-groups --list --bootstrap-server localhost:9092</code></li>
+<li><code>kafka-consumer-groups --reset-offsets --group my_group --topic my_topic --to-earliest --execute --bootstrap-server localhost:9092</code></li>
+<li><code>kafka-configs --alter --entity-type topics --entity-name my_topic --add-config max.message.bytes=128000 --bootstrap-server localhost:9092</code></li>
+<li><code>kafka-consumer-groups --describe --group my_group --bootstrap-server localhost:9092</code></li>
+<li>Use <code>docker logs kafka</code> or monitoring tools.</li>
+<li>Use <code>kafka-console-producer</code> without specifying keys.</li>
+<li>Use <code>kafka-configs --alter</code> with <code>retention.ms</code> and <code>retention.bytes</code> parameters.</li>
+<li>You can&rsquo;t directly change the replication factor; create a new topic with the desired replication factor and copy the data.</li>
+<li>Use ZooKeeper CLI or tools like <code>kafkacat</code>.</li>
+<li>Use <code>kafka-delete-records</code>.</li>
+<li><code>kafka-console-consumer --from-beginning --topic my_topic --bootstrap-server localhost:9092</code></li>
+<li>Use <code>kafka-run-class kafka.tools.GetOffsetShell</code></li>
+<li><code>kafka-consumer-groups --describe --group my_group --bootstrap-server localhost:9092</code></li>
+<li>Use <code>kafka-configs --alter</code> with <code>client</code> entity type.</li>
+<li>Through SASL mechanisms like PLAIN, SCRAM, etc.</li>
+<li>By enabling SSL/TLS.</li>
+<li>Add or remove a broker and then use partition reassignment.</li>
+<li>Use <code>kafka-rolling-restart</code> script or similar tools.</li>
+<li>Use <code>kafka-acls</code>.</li>
+<li>Configure <code>log.segment.bytes</code> and <code>log.segment.ms</code></li>
+</ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fgetting-started-with-kafka-command-line-tools%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Getting%20Started%20with%20Kafka%27s%20Command-Line%20Tools&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fgetting-started-with-kafka-command-line-tools%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fgetting-started-with-kafka-command-line-tools%2f&amp;resubmit=true&amp;title=Getting%20Started%20with%20Kafka%27s%20Command-Line%20Tools"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Getting%20Started%20with%20Kafka%27s%20Command-Line%20Tools&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fgetting-started-with-kafka-command-line-tools%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kafka">Kafka</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/shared-database/" class="h4 font-primary text-dark">The shared database problem</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/BTU18cC.png" alt="NLP: TF-IDF and Word2Vec">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">30</h3>
-        <p class="mb-0">Dec</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/tf-idf-word2vec/" class="h4 font-primary text-dark">NLP: TF-IDF and Word2Vec</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/duR94iD.png" alt="NLP: N-Grams and bag of words">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">29</h3>
-        <p class="mb-0">Dec</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/n-grams-and-bag-of-words/" class="h4 font-primary text-dark">NLP: N-Grams and bag of words</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/EG7uO7w.png" alt="Explaining Entropy">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">20</h3>
-        <p class="mb-0">May</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/explaining-entropy/" class="h4 font-primary text-dark">Explaining Entropy</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/5O23Ebp.jpg" alt="Prior and Posterior distributions">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Mar</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/prior-posterior-probabilities/" class="h4 font-primary text-dark">Prior and Posterior distributions</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/IenFUVF.jpg" alt="Basic probability concepts">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">10</h3>
-        <p class="mb-0">Mar</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/basic-probability-concepts/" class="h4 font-primary text-dark">Basic probability concepts</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">
-							<a href="https://www.danielsobrado.com/blog/page/11/" class="page-link">Prev</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/9/" class="page-link">
-								9
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/10/" class="page-link">
-								10
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/11/" class="page-link">
-								11
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/page/12/" class="page-link">
-								12
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/13/" class="page-link">
-								13
-							</a>
-						</li>
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/13/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -773,10 +545,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->
