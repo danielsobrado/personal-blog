@@ -211,10 +211,10 @@ This command updates the Kubernetes object in the <code>nginx.yaml</code> file 
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods
 </span></span></code></pre></div></li>
 </ol>
-<h4 id="create-and-expose-a-custom-nginx-pod-in-kubernetes">Create and Expose a Custom Nginx Pod in Kubernetes</h4>
+<h4 id="create-and-expose-a-custom-nginx-pod-from-alpine-in-kubernetes">Create and Expose a Custom Nginx Pod from Alpine in Kubernetes</h4>
 <h5 id="1-create-the-pod">1. Create the Pod</h5>
 <p>First, let&rsquo;s create a pod named <code>custom-nginx</code> using the <code>nginx</code> image.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run custom-nginx --image<span style="color:#f92672">=</span>nginx
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl run custom-nginx --image<span style="color:#f92672">=</span>nginx:alpine
 </span></span></code></pre></div><h5 id="2-modify-the-pod-to-use-port-8080">2. Modify the Pod to use port 8080</h5>
 <p>After creating the pod, we&rsquo;ll edit it to specify that it should use port <code>8080</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl edit pod custom-nginx
@@ -231,13 +231,31 @@ This command updates the Kubernetes object in the <code>nginx.yaml</code> file 
 </span></span></code></pre></div><blockquote>
 <p>This assumes that your <code>nginx</code> is configured to serve on port <code>8080</code>. If you are using the standard <code>nginx</code> image, it serves on port <code>80</code>, so you&rsquo;ll need to adjust the <code>target-port</code> accordingly.</p>
 </blockquote>
+<p>You can use <code>--name=custom-nginx-service</code> to specify the name of the service.</p>
 <h5 id="4-verify-the-pod-and-service">4. Verify the Pod and Service</h5>
 <p>Finally, verify that the pod and service are created successfully:</p>
 <p>Check the pod:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pods custom-nginx
 </span></span></code></pre></div><p>Check the service:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get svc custom-nginx
-</span></span></code></pre></div><h3 id="exercises-and-questions">Exercises and Questions</h3>
+</span></span></code></pre></div><h5 id="5-create-a-deployment">5. Create a Deployment</h5>
+<p>Create a deployment named <code>custom-nginx-deployment</code> with 3 replicas using the <code>nginx:alpine</code> image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create deployment custom-nginx-deployment --image<span style="color:#f92672">=</span>nginx:alpine --replicas<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><p>You can use <code>--namespace=custom-namespace</code> to specify the name of the namespace you want to use. (You can create a new namespace with <code>kubectl create namespace custom-namespace</code>)</p>
+<p>Now, update the deployment to use port 8080:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl patch deployment custom-nginx-deployment --type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;json&#39;</span> -p<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[{&#34;op&#34;: &#34;add&#34;, &#34;path&#34;: &#34;/spec/template/spec/containers/0/ports&#34;, &#34;value&#34;: [{&#34;containerPort&#34;: 8080}]}]&#39;</span>
+</span></span></code></pre></div><p>Now, your deployment <code>custom-nginx-deployment</code> should be running 3 replicas of the <code>nginx:alpine</code> image, each configured to use port <code>8080</code>.</p>
+<p>In this example:</p>
+<ol>
+<li>The <code>kubectl create deployment</code> command is used to create a deployment named <code>custom-nginx-deployment</code> with 3 replicas using the <code>nginx:alpine</code> image.</li>
+<li>The <code>kubectl patch</code> command is used to update the deployment to use port <code>8080</code>.</li>
+</ol>
+<p>You can edit the deployment with <code>kubectl edit deployment custom-nginx-deployment</code></p>
+<h5 id="6-verify-the-deployment">6. Verify the Deployment</h5>
+<p>Verify the status of the deployment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl describe deployment custom-nginx-deployment
+</span></span></code></pre></div><p><a href="https://i.imgur.com/hAZhfJl.png">Status of the deployment</a></p>
+<h3 id="exercises-and-questions">Exercises and Questions</h3>
 <p>Execute those instructions and examine the results:</p>
 <ol>
 <li><strong>Exercise</strong>: Create a deployment using <code>kubectl run</code>, expose it with <code>kubectl expose</code>, list it with <code>kubectl get</code>, and delete it with <code>kubectl delete</code>.</li>

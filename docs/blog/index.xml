@@ -495,6 +495,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Introduction to Concurrency</title>
+      <link>https://www.danielsobrado.com/blog/introduction-to-concurrency/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-to-concurrency/</guid>
+      <description>Concurrency in programming refers to the execution of multiple tasks or processes at the same time but not necessarily simultaneously.</description>
+    </item>
+    
+    <item>
       <title>Introducing Ray</title>
       <link>https://www.danielsobrado.com/blog/introducing-ray/</link>
       <pubDate>Sat, 20 Feb 2021 15:30:02 +0400</pubDate>
@@ -681,6 +690,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       
       <guid>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</guid>
       <description>Introduction With Java 8, Oracle introduced functional programming in the language, this is achieved by using Functional Interfaces.</description>
+    </item>
+    
+    <item>
+      <title>Threads and Processes</title>
+      <link>https://www.danielsobrado.com/blog/threads_and_processes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/threads_and_processes/</guid>
+      <description>Definition of Threads and Processes Threads: The smallest unit of execution within a process.</description>
     </item>
     
   </channel>

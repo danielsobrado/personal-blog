@@ -6,7 +6,16 @@
     <description>Recent content in Concurrency on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Feb 2021 15:30:02 +0400</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Concurrency</title>
+      <link>https://www.danielsobrado.com/blog/introduction-to-concurrency/</link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-to-concurrency/</guid>
+      <description>Concurrency in programming refers to the execution of multiple tasks or processes at the same time but not necessarily simultaneously.</description>
+    </item>
+    
     <item>
       <title>Introducing Ray</title>
       <link>https://www.danielsobrado.com/blog/introducing-ray/</link>
@@ -14,6 +23,15 @@
       
       <guid>https://www.danielsobrado.com/blog/introducing-ray/</guid>
       <description>Recently I had a request to match some counterparty names from different files.</description>
+    </item>
+    
+    <item>
+      <title>Threads and Processes</title>
+      <link>https://www.danielsobrado.com/blog/threads_and_processes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/threads_and_processes/</guid>
+      <description>Definition of Threads and Processes Threads: The smallest unit of execution within a process.</description>
     </item>
     
   </channel>

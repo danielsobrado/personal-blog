@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Concurrency</title>
+    <title>Introduction to Concurrency</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
+    <meta name="description" content="The basics of concurrency and understand its pivotal role in modern computing.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
@@ -142,10 +142,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Concurrency</h2>
+				<h2 class="text-white font-weight-bold">Introduction to Concurrency</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Concurrency</li>
+					<li>Introduction to Concurrency</li>
 				</ol>
 			</div>
 		</div>
@@ -153,92 +153,124 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/wQkaxzu.png" alt="Introduction to Concurrency">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Feb</p>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/wQkaxzu.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Introduction to Concurrency</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 01 Feb</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>Concurrency in programming refers to the execution of multiple tasks or processes at the same time but not necessarily simultaneously. It&rsquo;s about structuring a program or system to handle multiple tasks, often overlapping in time.</p>
+<h3 id="what-is-concurrency">What is Concurrency?</h3>
+<p>Concurrency is the concept where several tasks are being executed in overlapping periods. It doesn&rsquo;t mean that they&rsquo;re all executed at the exact same instant; rather, they&rsquo;re executed in a way that they appear to be running simultaneously to the user or system.</p>
+<h3 id="benefits-of-concurrency-in-modern-systems">Benefits of Concurrency in Modern Systems</h3>
+<ol>
+<li><strong>Efficiency</strong>: Concurrency can make use of system resources more efficiently. For instance, while one task waits for data from the disk, another can be executed.</li>
+<li><strong>Responsiveness</strong>: Concurrent systems can be more responsive. Even if a task is being processed, the system can still respond to user input.</li>
+<li><strong>Scalability</strong>: Concurrent systems can more easily scale with additional resources. As more processing cores are added, concurrent tasks can be distributed across them.</li>
+</ol>
+<h3 id="concurrency-vs-parallelism">Concurrency vs. Parallelism</h3>
+<p>While they&rsquo;re often used interchangeably, concurrency and parallelism are distinct concepts:</p>
+<ul>
+<li><strong>Concurrency</strong>: Focuses on managing multiple tasks by allowing them to overlap in execution. It&rsquo;s more about the design of the system.</li>
+<li><strong>Parallelism</strong>: Refers to the simultaneous execution of multiple tasks. It&rsquo;s about executing multiple things at the same time, often leveraging multi-core processors.</li>
+</ul>
+<h3 id="real-world-applications-of-concurrency">Real-world Applications of Concurrency</h3>
+<ol>
+<li><strong>Web Servers</strong>: Handle multiple requests from users concurrently, ensuring that the server remains responsive.</li>
+<li><strong>Databases</strong>: Process multiple queries and transactions at the same time.</li>
+<li><strong>Real-time Systems</strong>: Systems like air traffic control need to manage multiple tasks, like tracking planes and responding to pilot requests, concurrently.</li>
+<li><strong>Multimedia Systems</strong>: Streaming services might need to download, decode, and play a video all at the same time.</li>
+</ol>
+<h3 id="challenges-in-concurrent-programming">Challenges in Concurrent Programming</h3>
+<ol>
+<li><strong>Deadlocks</strong>: Situations where tasks wait indefinitely for resources that are held by other tasks.</li>
+<li><strong>Race Conditions</strong>: When the behavior of a program depends on the relative timing of events, such as the order in which threads are scheduled.</li>
+<li><strong>Complexity</strong>: Writing concurrent code can be more complex than writing single-threaded code, as developers need to consider synchronization, shared resources, and task coordination.</li>
+<li><strong>Testing and Debugging</strong>: Concurrent systems can be harder to test and debug due to the non-deterministic nature of their execution.</li>
+</ol>
+<p>In languages like <strong>Java</strong>, concurrency is achieved using threads and the Java Concurrency API. <strong>Go</strong> uses goroutines and channels for concurrency, making it more straightforward and less error-prone. <strong>Rust</strong> offers a unique approach with its ownership system, ensuring memory safety without a garbage collector, and uses threads and the <code>async/await</code> pattern for concurrency.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-concurrency%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Introduction%20to%20Concurrency&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-concurrency%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-concurrency%2f&amp;resubmit=true&amp;title=Introduction%20to%20Concurrency"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Introduction%20to%20Concurrency&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-concurrency%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/concurrency">Concurrency</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/introduction-to-concurrency/" class="h4 font-primary text-dark">Introduction to Concurrency</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/Fob7myA.png" alt="Introducing Ray">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">20</h3>
-        <p class="mb-0">Feb</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/introducing-ray/" class="h4 font-primary text-dark">Introducing Ray</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/ExyAMwR.png" alt="Threads and Processes">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">01</h3>
-        <p class="mb-0">Jan</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/threads_and_processes/" class="h4 font-primary text-dark">Threads and Processes</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -426,10 +458,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->
