@@ -218,6 +218,7 @@
 </span></span></code></pre></div><ul>
 <li><strong>Access in Pods</strong>: As environment variables, volume mounts, or command-line arguments.</li>
 </ul>
+<p>List all namespaces and its configmaps: <code>kubectl get configmaps --all-namespaces -o custom-columns=NAMESPACE:.metadata.namespace,NAME:.metadata.name</code></p>
 <h5 id="secrets">Secrets</h5>
 <ul>
 <li><strong>Purpose</strong>: Store sensitive data like passwords and API keys.</li>
