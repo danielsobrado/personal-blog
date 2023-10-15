@@ -235,7 +235,11 @@
 </span></span></code></pre></div><ul>
 <li><strong>Access in Pods</strong>: As environment variables or volume mounts.</li>
 </ul>
-<h4 id="environment-variables">Environment Variables</h4>
+<p>Get environment variables from secret configurations:</p>
+<pre tabindex="0"><code>envFrom:
+- secretRef:
+    name: db-secret
+</code></pre><h4 id="environment-variables">Environment Variables</h4>
 <ul>
 <li><strong>Purpose</strong>: Store non-sensitive and sensitive configuration.</li>
 <li><strong>How to Use</strong>: Declare them in the Pod specification.</li>

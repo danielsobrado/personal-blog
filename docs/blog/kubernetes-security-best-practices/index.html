@@ -270,6 +270,42 @@ rules:
   verbs: [&#34;get&#34;, &#34;list&#34;]
 </code></pre></li>
 </ol>
+<h3 id="setting-user-id-for-a-process-in-a-kubernetes-pod">Setting User ID for a Process in a Kubernetes Pod</h3>
+<p>To run a process inside a Kubernetes pod with a specific user ID, follow the steps outlined below:</p>
+<ol>
+<li>
+<p><strong>Export the Current Pod Configuration</strong>:</p>
+<p>First, retrieve the current configuration of the pod you wish to modify:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl get pod &lt;POD_NAME&gt; -o yaml &gt; &lt;POD_NAME&gt;.yaml
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Edit the Configuration</strong>:</p>
+<p>Open the saved configuration in your favorite text editor. Add (or modify, if it already exists) the <code>securityContext</code> section under the container specification:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;CONTAINER_NAME&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">&lt;IMAGE_NAME&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">securityContext</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">runAsUser</span>: <span style="color:#ae81ff">1010</span>
+</span></span></code></pre></div><p>Replace <code>&lt;CONTAINER_NAME&gt;</code> and <code>&lt;IMAGE_NAME&gt;</code> with appropriate values from your configuration.</p>
+</li>
+<li>
+<p><strong>Recreate the Pod with Updated Configuration</strong>:</p>
+<p>Delete the existing pod and recreate it using the modified configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl delete pod &lt;POD_NAME&gt;
+</span></span><span style="display:flex;"><span>kubectl create -f &lt;POD_NAME&gt;.yaml
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Verification</strong>:</p>
+<p>Once your pod is running again, verify that the process is running with the desired user ID:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl exec &lt;POD_NAME&gt; -- id -u
+</span></span></code></pre></div><p>This command should return <code>1010</code>, confirming the process is running with the user ID you specified.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong>: Directly editing an already-running pod&rsquo;s configuration isn&rsquo;t possible since pods are immutable. Therefore, it&rsquo;s necessary to delete and recreate the pod. If your pod is managed by a higher-level construct (like a Deployment or StatefulSet), it&rsquo;s recommended to update that construct&rsquo;s configuration and perform a rollout instead.</p>
+</blockquote>
 <h3 id="pod-security-policies">Pod Security Policies</h3>
 <p>Pod Security Policies (PSP) govern the permissions and capabilities that Pods should have.</p>
 <ol>
