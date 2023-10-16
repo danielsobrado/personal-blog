@@ -222,7 +222,7 @@ spec:
 <li><strong>Stopping:</strong> Delete a Pod with <code>kubectl delete pod &lt;POD_NAME&gt;</code>.</li>
 </ul>
 <blockquote>
-<p>To save time during the exam you can use <code>kubectl delete pod &lt;POD_NAME&gt; --grace-period=0 --force</code></p>
+<p>To save time during the exam you can use <code>kubectl delete pod &lt;POD_NAME&gt; --grace-period=0 --force</code>, and use <code>kubectl replace -f pod.yaml --force</code> to replace instead of delete and apply.</p>
 </blockquote>
 <p><strong>Scaling:</strong> Pods themselves are not scalable. Use Deployments or ReplicaSets for that.</p>
 <p>Sometimes, you&rsquo;ll need to delete a pod and recreate it again when you need to modify something that is immutable.</p>
