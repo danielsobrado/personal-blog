@@ -240,7 +240,15 @@
 <li><a href="https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/">Kubernetes Role-Based Access Control (RBAC)</a></li>
 </ol>
 <h3 id="tips">Tips</h3>
-<p>Ensure that bash-completion is already loaded. Typically, it&rsquo;s pre-installed in the exam environment.</p>
+<blockquote>
+<p>The context determines which cluster to use for information or solving problems. So, Kubernetes context is crucial, and each new question must start with a new context. (<code>kubectl config get-contexts</code> and <code>kubectl config use-context &lt;CONTEXT_NAME&gt;</code>)</p>
+</blockquote>
+<p>Set some aliases in <code>.bashrc</code>:</p>
+<pre tabindex="0"><code>alias k=kubectl
+alias kg=&#34;kubectl -o yaml get&#34;
+export do=&#34;--dry-run=client -o yaml&#34;
+export de=&#34;--grace-period=0 --force&#34;
+</code></pre><p>Ensure that bash-completion is already loaded. Typically, it&rsquo;s pre-installed in the exam environment.</p>
 <p>Use the following command to enable kubectl auto-completion:</p>
 <pre tabindex="0"><code>source &lt;(kubectl completion bash)
 </code></pre><p>To save time, set an alias for kubectl:</p>
