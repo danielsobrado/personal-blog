@@ -240,15 +240,24 @@
 <li><a href="https://www.danielsobrado.com/blog/kubernetes-role-based-access-control-rbac/">Kubernetes Role-Based Access Control (RBAC)</a></li>
 </ol>
 <h3 id="tips">Tips</h3>
+<p>Have an initial quick look at everything <code>kubectl get all --all-namespaces</code> or <code>k get all --A</code></p>
+<h4 id="cluster-and-namespace">Cluster and Namespace</h4>
+<p>Validate that you are in the correct cluster and namespace for the question:</p>
+<ol>
+<li>Set the current cluster <code>kubectl config set cluster cluster1</code></li>
+<li>Set the namespace to the question asked <code>kubectl config set-context --current --namespace=question1</code> available in <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/">namespaces</a></li>
+<li>Double check your current context <code>kubectl config get-contexts</code> you can copy-paste fromt he documentation this: <code>kubectl config view --minify | grep namespace:</code></li>
+</ol>
 <blockquote>
 <p>The context determines which cluster to use for information or solving problems. So, Kubernetes context is crucial, and each new question must start with a new context. (<code>kubectl config get-contexts</code> and <code>kubectl config use-context &lt;CONTEXT_NAME&gt;</code>)</p>
 </blockquote>
+<h4 id="aliases">Aliases</h4>
 <p>Set some aliases in <code>.bashrc</code>:</p>
 <pre tabindex="0"><code>alias k=kubectl
-alias kg=&#34;kubectl -o yaml get&#34;
 export do=&#34;--dry-run=client -o yaml&#34;
 export de=&#34;--grace-period=0 --force&#34;
-</code></pre><p>Ensure that bash-completion is already loaded. Typically, it&rsquo;s pre-installed in the exam environment.</p>
+</code></pre><h4 id="auto-completion">Auto-completion</h4>
+<p>Ensure that bash-completion is already loaded. Typically, it&rsquo;s pre-installed in the exam environment.</p>
 <p>Use the following command to enable kubectl auto-completion:</p>
 <pre tabindex="0"><code>source &lt;(kubectl completion bash)
 </code></pre><p>To save time, set an alias for kubectl:</p>
@@ -257,7 +266,8 @@ export de=&#34;--grace-period=0 --force&#34;
 <pre tabindex="0"><code>alias koy=&#39;kubectl -o yaml&#39;
 </code></pre><p>And then, you can enable auto-completion for this alias as well:</p>
 <pre tabindex="0"><code>complete -F __start_kubectl k
-</code></pre><p>To see 5 lines before and after a keyword of your pod&rsquo;s yaml, you can use:</p>
+</code></pre><h4 id="search-for-keywords">Search for keywords</h4>
+<p>To see 5 lines before and after a keyword of your pod&rsquo;s yaml, you can use:</p>
 <pre tabindex="0"><code>kubectl get pod &lt;POD_NAME&gt; -n &lt;NAMESPACE&gt; -o yaml | grep -B 5 -A 5 &lt;KEYWORD&gt;
 </code></pre><p>e.g. <code>get po webapp-example -o yaml | grep -B 5 -A 5 image</code></p>
 <p>This should give you a strong foundation in Kubernetes as you prepare for the CKAD exam.</p>
