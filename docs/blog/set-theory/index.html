@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
-    <title>Scraping financial news - Part 1</title>
+    <title>Set Theory</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content=". ">
+    <meta name="description" content="Introduction to the fundamental concepts of set theory, including basic properties, interception, and union.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -33,7 +43,7 @@
     <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
 
     <!-- MathJax -->
-    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 </head><body><!-- navigation -->
 <header>
@@ -47,8 +57,8 @@
                <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
             </li>
             <li class="list-inline-item">
-               <a href="https://t.me/drusniel">Let's talk:
-                <span class="ml-2">Ping me on Telegram</span> 
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
               </a>
             </li>
           </ul>
@@ -82,6 +92,12 @@
             
             
             <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
               <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
             </li>
             
@@ -101,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/set-theory/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/set-theory/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -156,10 +142,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Scraping financial news - Part 1</h2>
+				<h2 class="text-white font-weight-bold">Set Theory</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Scraping financial news - Part 1</li>
+					<li>Set Theory</li>
 				</ol>
 			</div>
 		</div>
@@ -169,35 +155,51 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
+        <div class="rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/YdZaj6r.png" alt="blog-image">
           <div class="p-4">
-            <h3>Scraping financial news - Part 1</h3>
+            <h3>Set Theory</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
               <li class="list-inline-item text-color">On 18 Feb</li>
               <li class="list-inline-item text-color">Category:
                 
-                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/mathematics"> Mathematics</a>
                 
               </li>
             </ul>
             <div class="post-content">
-              <h2 id="basic-concepts">Basic concepts</h2>
-<p>A set is a collection of stuff, items, things&hellip; We&rsquo;ll call them <em>elements</em>.</p>
-<p>We can have a set called <strong>A</strong>  that contains some numbers $ A =\ {1,2,3,9} $ and a set called <strong>B</strong> than contains names $ A =\ {Daniel, Alfredo, Vikas, Praveen, Bjorn} $ .</p>
-<p>We can say that an element is part of a set: $ 3 \in A $
-We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
-<p>We&rsquo;ll call cardinality to the number of elements in the set. In these cases $ | A | = 4 $ and $ | B | = 5 $</p>
-<h3 id="properties-of-the-sets">Properties of the sets</h3>
-<p>The order is not important and listing an element more than once doesn&rsquo;t change the set.</p>
-<h3 id="the-empty-set">The empty set</h3>
-<h2 id="interception">Interception</h2>
+              <h2 id="basic-concepts">Basic Concepts</h2>
+<p>A set is a collection of elements. We can have a set called <strong>A</strong> that contains some numbers:</p>
+<p>$A = \{1, 2, 3, 9\}$</p>
+<p>And a set called <strong>B</strong> that contains names:</p>
+<p>$B = \{Daniel, Alfredo, Vikas, Praveen, Bjorn\}$</p>
+<p>We can say that an element is part of a set:</p>
+<p>$3 \in A$</p>
+<p>We can also say that 5 is not an element of A:</p>
+<p>$5 \notin A$</p>
+<p>We&rsquo;ll call cardinality to the number of elements in the set. In these cases:</p>
+<p>$|A| = 4$ and $|B| = 5$</p>
+<h3 id="properties-of-sets">Properties of Sets</h3>
+<p>The order of elements in a set is not important, and listing an element more than once doesn&rsquo;t change the set.</p>
+<h3 id="the-empty-set">The Empty Set</h3>
+<p>The empty set, denoted by $\emptyset$, is a set that contains no elements. It is unique and has a cardinality of 0.</p>
+<p>$\emptyset = \{\}$</p>
+<h2 id="intersection">Intersection</h2>
+<p>The intersection of two sets A and B, denoted by $A \cap B$, is the set of elements that are common to both A and B.</p>
+<p>For example, if $A = \{1, 2, 3, 4\}$ and $B = \{3, 4, 5, 6\}$, then:</p>
+<p>$A \cap B = \{3, 4\}$</p>
 <h2 id="union">Union</h2>
-<p>The cardinality of the union of two sets:</p>
+<p>The union of two sets A and B, denoted by $A \cup B$, is the set of elements that belong to either A or B, or both.</p>
+<p>For example, if $A = \{1, 2, 3, 4\}$ and $B = \{3, 4, 5, 6\}$, then:</p>
+<p>$A \cup B = \{1, 2, 3, 4, 5, 6\}$</p>
+<h3 id="cardinality-of-the-union">Cardinality of the Union</h3>
+<p>The cardinality of the union of two sets A and B is given by:</p>
+<p>$|A \cup B| = |A| + |B| - |A \cap B|$</p>
+<p>This formula takes into account the elements that are common to both sets (the intersection) to avoid double-counting.</p>
 
             </div>
           </div>
@@ -214,13 +216,13 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
                     <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Scraping%20financial%20news%20-%20Part%201&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Set%20Theory&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f&amp;resubmit=true&amp;title=Scraping%20financial%20news%20-%20Part%201"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f&amp;resubmit=true&amp;title=Set%20Theory"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Scraping%20financial%20news%20-%20Part%201&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=Set%20Theory&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fset-theory%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -232,11 +234,11 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
                 <ul class="list-inline tag-list">
                   
                   <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/python">Python</a>
+                    <a href="https://www.danielsobrado.com/categories/math">Math</a>
                   </li>
                   
                   <li class="list-inline-item">
-                    <a href="https://www.danielsobrado.com/categories/scrapy">Scrapy</a>
+                    <a href="https://www.danielsobrado.com/categories/set%20theory">Set theory</a>
                   </li>
                   
                 </ul>
@@ -282,12 +284,24 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 						class="d-block text-color py-10">Big data</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
 						class="d-block text-color py-10">Data science</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/investing"
 						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/maths"
@@ -341,15 +355,15 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
@@ -359,9 +373,9 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
@@ -369,17 +383,17 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -387,47 +401,47 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
 		</div>
 
@@ -435,7 +449,7 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -454,7 +468,7 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -545,6 +559,10 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 						
 						
 						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
 						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
 						
 						
@@ -564,7 +582,7 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -573,7 +591,7 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -588,7 +606,7 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-5">
-					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
 				</div>
 				<div class="col-lg-6 col-md-7">
 					<ul class="list-inline text-center text-md-right">
@@ -605,15 +623,15 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 </footer>
 <!-- /footer -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
 <script>hljs.highlightAll();</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
 
 <!-- Essential Scripts -->
 <!-- Google Map API -->
@@ -632,12 +650,11 @@ We can also say that 5 is not an element of A:  $ 5 \notinA $</p>
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

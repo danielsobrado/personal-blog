@@ -1372,6 +1372,18 @@
                 href="https://www.danielsobrado.com/blog/basic-probability-concepts/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/tags/math/</loc>
+    <lastmod>2014-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/mathematics/</loc>
+    <lastmod>2014-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/set-theory/</loc>
+    <lastmod>2014-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/set-theory/</loc>
+    <lastmod>2014-02-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/datascience-concepts/</loc>
     <lastmod>2014-01-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -1431,6 +1443,14 @@
   </url><url>
     <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/spinlocks-and-atomic-flags/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/task-parallelism-and-data-parallelism/</loc>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/threads-and-processes/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/using-compare-and-swap-in-concurrency/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-volatile-in-concurrency/</loc>
   </url>
 </urlset>

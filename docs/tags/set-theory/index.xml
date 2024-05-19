@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Set Theory on </title>
+    <link>https://www.danielsobrado.com/tags/set-theory/</link>
+    <description>Recent content in Set Theory on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/set-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set Theory</title>
+      <link>https://www.danielsobrado.com/blog/set-theory/</link>
+      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/set-theory/</guid>
+      <description>Basic Concepts A set is a collection of elements. We can have a set called A that contains some numbers:</description>
+    </item>
+    
+  </channel>
+</rss>

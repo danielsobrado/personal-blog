@@ -945,6 +945,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Set Theory</title>
+      <link>https://www.danielsobrado.com/blog/set-theory/</link>
+      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/set-theory/</guid>
+      <description>Basic Concepts A set is a collection of elements. We can have a set called A that contains some numbers:</description>
+    </item>
+    
+    <item>
       <title>Introduction to Data Science: Concepts</title>
       <link>https://www.danielsobrado.com/blog/datascience-concepts/</link>
       <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
@@ -1035,12 +1044,48 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Spinlocks and Atomic Flags</title>
+      <link>https://www.danielsobrado.com/blog/spinlocks-and-atomic-flags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/spinlocks-and-atomic-flags/</guid>
+      <description>Spinlocks A spinlock is a lock that causes a thread to wait in a loop while repeatedly checking if the lock is available.</description>
+    </item>
+    
+    <item>
+      <title>Task Parallelism and Data Parallelism</title>
+      <link>https://www.danielsobrado.com/blog/task-parallelism-and-data-parallelism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/task-parallelism-and-data-parallelism/</guid>
+      <description>Task Parallelism Task parallelism, also known as function parallelism, focuses on distributing different tasks or functions across multiple threads or processors.</description>
+    </item>
+    
+    <item>
       <title>Threads and Processes</title>
       <link>https://www.danielsobrado.com/blog/threads-and-processes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/threads-and-processes/</guid>
       <description>Definition of Threads and Processes Threads: The smallest unit of execution within a process.</description>
+    </item>
+    
+    <item>
+      <title>Using compare-and-swap (CAS) in Concurrency</title>
+      <link>https://www.danielsobrado.com/blog/using-compare-and-swap-in-concurrency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/using-compare-and-swap-in-concurrency/</guid>
+      <description>What is Compare-and-Swap (CAS)? Compare-and-swap (CAS) is an atomic instruction that compares the contents of a memory location to a given value and, if they are equal, modifies the contents of that memory location to a new value.</description>
+    </item>
+    
+    <item>
+      <title>Volatile in Concurrency</title>
+      <link>https://www.danielsobrado.com/blog/understanding-volatile-in-concurrency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-volatile-in-concurrency/</guid>
+      <description>What is Volatile? The volatile keyword is a qualifier that can be applied to variables in programming languages such as Java and C++.</description>
     </item>
     
   </channel>
