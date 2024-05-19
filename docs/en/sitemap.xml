@@ -338,6 +338,19 @@
                 href="https://www.danielsobrado.com/blog/understanding-consumer-groups-partition-assignments-and-rebalances/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/</loc>
     <lastmod>2023-07-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -975,13 +988,13 @@
     <lastmod>2022-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/concurrency/</loc>
-    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/introduction-to-concurrency/</loc>
-    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/inter-process-communication/</loc>
+    <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/categories/programming/</loc>
-    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -992,6 +1005,12 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/categories/programming/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/basic-synchronization-mechanisms/</loc>
+    <lastmod>2022-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/introduction-to-concurrency/</loc>
+    <lastmod>2022-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/introducing-ray/</loc>
     <lastmod>2021-02-20T15:30:02+04:00</lastmod>
@@ -1372,6 +1391,8 @@
     <loc>https://www.danielsobrado.com/tags/machine-data/</loc>
     <lastmod>2013-05-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/applicative-and-other-functional-concepts/</loc>
+  </url><url>
     <loc>https://www.danielsobrado.com/author/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1384,6 +1405,14 @@
                 href="https://www.danielsobrado.com/author/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/back-pressure-and-error-handling-in-reactor/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/challenges-of-concurrency/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/concurrency-and-memory-hierarchy/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/concurrency-in-modern-programming-languages/</loc>
+  </url><url>
     <loc>https://www.danielsobrado.com/author/daniel-sobrado/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1395,6 +1424,8 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/author/daniel-sobrado/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/fetch-operations-in-concurrency/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/functional-programming/</loc>
   </url><url>

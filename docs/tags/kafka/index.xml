@@ -107,6 +107,15 @@
     </item>
     
     <item>
+      <title>Consumer Offset Management in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/</link>
+      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/</guid>
+      <description>Consumer Offset Management in Kafka What is a Consumer Offset? A Consumer Offset in Kafka marks the position up to which a consumer has read in a particular partition of a topic.</description>
+    </item>
+    
+    <item>
       <title>Understanding Producer Partition Selection in Kafka</title>
       <link>https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>

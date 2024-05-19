@@ -550,6 +550,16 @@
     <loc>https://www.danielsobrado.com/es/blog/confluent-certified-developer-review/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/</loc>
     <xhtml:link

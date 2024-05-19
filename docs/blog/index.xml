@@ -224,6 +224,15 @@
     </item>
     
     <item>
+      <title>Consumer Offset Management in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/</link>
+      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/consumer-offset-management-in-kafka/</guid>
+      <description>Consumer Offset Management in Kafka What is a Consumer Offset? A Consumer Offset in Kafka marks the position up to which a consumer has read in a particular partition of a topic.</description>
+    </item>
+    
+    <item>
       <title>Understanding Producer Partition Selection in Kafka</title>
       <link>https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
@@ -684,6 +693,24 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Inter-process Communication IPC</title>
+      <link>https://www.danielsobrado.com/blog/inter-process-communication/</link>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/inter-process-communication/</guid>
+      <description>Inter-process communication (IPC) refers to the mechanisms and techniques used for exchanging data and synchronizing actions between processes.</description>
+    </item>
+    
+    <item>
+      <title>Basic Synchronization Mechanisms</title>
+      <link>https://www.danielsobrado.com/blog/basic-synchronization-mechanisms/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/basic-synchronization-mechanisms/</guid>
+      <description>Locks Locks are a fundamental synchronization mechanism that allows exclusive access to a shared resource.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Concurrency</title>
       <link>https://www.danielsobrado.com/blog/introduction-to-concurrency/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
@@ -879,6 +906,60 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       
       <guid>https://www.danielsobrado.com/blog/introduction-to-machine-data/</guid>
       <description>Understanding Machine Data In this era of affordable storage and processing capabilities, we can extract and process diverse data that may provide invaluable insights.</description>
+    </item>
+    
+    <item>
+      <title>Applicative and Other Functional Concepts</title>
+      <link>https://www.danielsobrado.com/blog/applicative-and-other-functional-concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/applicative-and-other-functional-concepts/</guid>
+      <description>Applicative Functors Applicative functors, or simply applicatives, are a powerful concept in functional programming.</description>
+    </item>
+    
+    <item>
+      <title>Back-Pressure and Error Handling in Reactor</title>
+      <link>https://www.danielsobrado.com/blog/back-pressure-and-error-handling-in-reactor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/back-pressure-and-error-handling-in-reactor/</guid>
+      <description>Back-Pressure Back-pressure is a mechanism in reactive systems that allows the consumer of data to signal to the producer that it is unable to handle the current rate of data production.</description>
+    </item>
+    
+    <item>
+      <title>Challenges of Concurrency</title>
+      <link>https://www.danielsobrado.com/blog/challenges-of-concurrency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/challenges-of-concurrency/</guid>
+      <description>Race Conditions Race conditions occur when multiple threads access shared resources concurrently, and the final outcome depends on the relative timing of their execution.</description>
+    </item>
+    
+    <item>
+      <title>Concurrency and Memory Hierarchy</title>
+      <link>https://www.danielsobrado.com/blog/concurrency-and-memory-hierarchy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/concurrency-and-memory-hierarchy/</guid>
+      <description>Cache Coherence In modern computer systems, caches play a vital role in improving performance by reducing the latency of memory accesses.</description>
+    </item>
+    
+    <item>
+      <title>Concurrency in Modern Programming Languages</title>
+      <link>https://www.danielsobrado.com/blog/concurrency-in-modern-programming-languages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/concurrency-in-modern-programming-languages/</guid>
+      <description>Java Java provides built-in support for concurrency through the java.util.concurrent package.</description>
+    </item>
+    
+    <item>
+      <title>Fetch Operations in Concurrency</title>
+      <link>https://www.danielsobrado.com/blog/fetch-operations-in-concurrency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fetch-operations-in-concurrency/</guid>
+      <description>Atomic Fetch Operations Atomic fetch operations are a set of operations that combine reading a value from a shared variable and modifying it in a single, indivisible step.</description>
     </item>
     
     <item>
