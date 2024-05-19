@@ -6,7 +6,7 @@
     <description>Recent content in Big Data on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/big-data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precedence of properties</title>
       <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
@@ -23,6 +23,177 @@
       
       <guid>https://www.danielsobrado.com/blog/spark-introduction-tungsten/</guid>
       <description>Introduction Project Tungsten, first introduced with Spark 1.4 and further optimized in Spark 2.</description>
+    </item>
+    
+    <item>
+      <title>Kafka Operations: A Deep Dive</title>
+      <link>https://www.danielsobrado.com/blog/kafka-operations-deep-dive/</link>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/kafka-operations-deep-dive/</guid>
+      <description>Kafka Operations: A Deep Dive Effective management and monitoring of Kafka clusters are crucial for ensuring the smooth operation of Kafka-based systems.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Confluent REST Proxy</title>
+      <link>https://www.danielsobrado.com/blog/getting-started-with-confluent-rest-proxy/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/getting-started-with-confluent-rest-proxy/</guid>
+      <description>Confluent REST Proxy Confluent REST Proxy is a component of the Confluent Platform that provides a RESTful interface to interact with Apache Kafka.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Confluent KSQL</title>
+      <link>https://www.danielsobrado.com/blog/understanding-confluent-ksql/</link>
+      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-confluent-ksql/</guid>
+      <description>Understanding Confluent KSQL Confluent KSQL is a powerful stream processing engine built on top of Apache Kafka.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring and Metrics in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/monitoring-and-metrics-in-kafka/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/monitoring-and-metrics-in-kafka/</guid>
+      <description>Monitoring and Metrics in Kafka Monitoring and metrics are crucial for maintaining a healthy and performant Kafka cluster.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to KSQL: Features and Use Cases</title>
+      <link>https://www.danielsobrado.com/blog/introduction-to-ksql/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-to-ksql/</guid>
+      <description>Introduction to KSQL KSQL is a SQL-like interface for Apache Kafka that allows you to perform stream processing using a familiar SQL syntax.</description>
+    </item>
+    
+    <item>
+      <title>Exploring Kafka Streams: Features and Use Cases</title>
+      <link>https://www.danielsobrado.com/blog/exploring-kafka-streams/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/exploring-kafka-streams/</guid>
+      <description>Kafka Streams Kafka Streams is a lightweight library for building real-time, highly scalable, and fault-tolerant stream processing applications.</description>
+    </item>
+    
+    <item>
+      <title>Securing Kafka: A Comprehensive Guide</title>
+      <link>https://www.danielsobrado.com/blog/securing-kafka/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/securing-kafka/</guid>
+      <description>Securing Kafka: A Comprehensive Guide Security is a critical aspect of any Kafka deployment.</description>
+    </item>
+    
+    <item>
+      <title>Application Deployment Choices in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/application-deployment-choices-in-kafka/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/application-deployment-choices-in-kafka/</guid>
+      <description>Application Deployment Choices in Kafka When deploying applications that interact with Kafka, there are several deployment choices available.</description>
+    </item>
+    
+    <item>
+      <title>Exploring Topic Co-Partitioning in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/exploring-topic-co-partitioning-in-kafka/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/exploring-topic-co-partitioning-in-kafka/</guid>
+      <description>Topic Co-Partitioning in Kafka Topic co-partitioning is a concept in Kafka where related topics are partitioned in a coordinated manner.</description>
+    </item>
+    
+    <item>
+      <title>Data Retention Strategies and Implications in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/data-retention-strategies-and-implications-in-kafka/</link>
+      <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/data-retention-strategies-and-implications-in-kafka/</guid>
+      <description>Data Retention Strategies in Kafka Data retention is a crucial aspect of managing a Kafka cluster.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Consumer Groups, Partition Assignments, and Rebalances in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/understanding-consumer-groups-partition-assignments-and-rebalances/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-consumer-groups-partition-assignments-and-rebalances/</guid>
+      <description>Understanding Consumer Groups, Partition Assignments, and Rebalances in Kafka In Kafka, consumer groups play a crucial role in achieving scalability and fault tolerance when consuming messages from topics.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Producer Partition Selection in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/</guid>
+      <description>Understanding Producer Partition Selection in Kafka Producer partition selection in Kafka is essential for distributing data across various partitions for load balancing, fault tolerance, and message ordering.</description>
+    </item>
+    
+    <item>
+      <title>Serialization and Deserialization in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/serialization-and-deserialization-in-kafka/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/serialization-and-deserialization-in-kafka/</guid>
+      <description>Serialization and Deserialization in Kafka Serialization and deserialization play a crucial role in data processing with Apache Kafka.</description>
+    </item>
+    
+    <item>
+      <title>Performance in Kafka: Throughput, Latency, and Scaling</title>
+      <link>https://www.danielsobrado.com/blog/performance-in-kafka/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/performance-in-kafka/</guid>
+      <description>Performance in Kafka: Throughput, Latency, and Scaling Kafka is designed for high performance and scalability.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting and Debugging in Kafka</title>
+      <link>https://www.danielsobrado.com/blog/troubleshooting-and-debugging-in-kafka/</link>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/troubleshooting-and-debugging-in-kafka/</guid>
+      <description>Troubleshooting and Debugging in Kafka Troubleshooting and debugging are essential skills for managing and maintaining a Kafka cluster.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Kafka Clients: Producer and Consumer</title>
+      <link>https://www.danielsobrado.com/blog/introduction-to-kafka-clients/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/introduction-to-kafka-clients/</guid>
+      <description>Kafka Clients: Producer and Consumer In the world of Apache Kafka, two essential components play crucial roles in the production and consumption of messages: the Kafka Producer and the Kafka Consumer.</description>
+    </item>
+    
+    <item>
+      <title>System Metrics in Kafka: A Comprehensive Guide</title>
+      <link>https://www.danielsobrado.com/blog/system-metrics-in-kafka/</link>
+      <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/system-metrics-in-kafka/</guid>
+      <description>System Metrics in Kafka: A Comprehensive Guide Monitoring system metrics is crucial for ensuring the health and performance of a Kafka cluster.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Kafka Message Structure: Keys, Choices, Factors, and Metadata</title>
+      <link>https://www.danielsobrado.com/blog/understanding-kafka-message-structure/</link>
+      <pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/understanding-kafka-message-structure/</guid>
+      <description>Understanding Kafka Message Structure: Keys, Choices, Factors, and Metadata Kafka is a distributed streaming platform that allows you to publish and subscribe to streams of records.</description>
+    </item>
+    
+    <item>
+      <title>Exploring Kafka Configurations</title>
+      <link>https://www.danielsobrado.com/blog/exploring-kafka-configurations/</link>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/exploring-kafka-configurations/</guid>
+      <description>Broker Configurations Broker configurations are set in the server.properties file and apply to the entire Kafka broker.</description>
     </item>
     
     <item>
@@ -59,6 +230,15 @@
       
       <guid>https://www.danielsobrado.com/blog/understanding-apache-kafka/</guid>
       <description>Apache Kafka is an open-source stream-processing software platform developed by Linkedin and donated to the Apache Software Foundation.</description>
+    </item>
+    
+    <item>
+      <title>Your Guide to Confluent Kafka Developer Certification</title>
+      <link>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</guid>
+      <description>Learning Path for Confluent Kafka Developer Certification This article outlines a structured sequence of tutorials and guides aimed at preparing you for the Confluent Kafka Developer Certification exam.</description>
     </item>
     
     <item>

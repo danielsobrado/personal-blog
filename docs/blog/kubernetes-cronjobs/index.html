@@ -225,6 +225,56 @@
 <li><code>schedule</code>: This is a string that defines when the job should run. It follows the standard cron format.</li>
 <li><code>jobTemplate</code>: The job that should be run at the specified schedule. It is essentially a pod specification with added fields relevant to jobs.</li>
 </ul>
+<h4 id="other-important-properties">Other important properties</h4>
+<p>You can include <code>startingDeadlineSeconds</code>, <code>completions</code>, <code>parallelism</code>, and other relevant fields under the spec section of your CronJob definition. Here&rsquo;s an example of how you can modify your existing YAML configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">batch/v1beta1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">CronJob</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-cronjob</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">schedule</span>: <span style="color:#e6db74">&#34;*/1 * * * *&#34;</span>  <span style="color:#75715e"># Every minute</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">startingDeadlineSeconds</span>: <span style="color:#ae81ff">100</span>  <span style="color:#75715e"># Max time to start a job if missed</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">concurrencyPolicy: Forbid  # Options</span>: <span style="color:#ae81ff">Allow, Forbid, Replace</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">successfulJobsHistoryLimit</span>: <span style="color:#ae81ff">3</span>  <span style="color:#75715e"># Keep 3 successful job records</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">failedJobsHistoryLimit</span>: <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># Keep 1 failed job record</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ttlSecondsAfterFinished</span>: <span style="color:#ae81ff">3600</span>  <span style="color:#75715e"># Clean up finished jobs after 1 hour</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">jobTemplate</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">backoffLimit</span>: <span style="color:#ae81ff">3</span>  <span style="color:#75715e"># Number of retries before marking a job as failed</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">completions</span>: <span style="color:#ae81ff">5</span>  <span style="color:#75715e"># Total number of completions needed</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">parallelism</span>: <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># Number of pods processed in parallel</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">activeDeadlineSeconds</span>: <span style="color:#ae81ff">200</span>  <span style="color:#75715e"># Max time for the job to run</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>          - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-container</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">image</span>: <span style="color:#ae81ff">my-image</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">restartPolicy</span>: <span style="color:#ae81ff">OnFailure</span>
+</span></span></code></pre></div><p>In this modified configuration:</p>
+<ul>
+<li><code>startingDeadlineSeconds</code> specifies the deadline in seconds for starting the job if it misses its scheduled time for any reason.</li>
+<li><code>concurrencyPolicy</code> determines how to treat concurrent executions of a job.</li>
+<li><code>successfulJobsHistoryLimit</code> and failedJobsHistoryLimit specify how many completed and failed jobs should be kept.</li>
+<li>Inside the <code>jobTemplate</code>, <code>completions</code> is the number of times the job needs to be successfully completed.</li>
+<li><code>parallelism</code> is the number of jobs that will run in parallel.</li>
+<li><code>activeDeadlineSeconds</code> sets the maximum duration that the job can run.</li>
+<li><code>backoffLimit</code> is set to 3, meaning the job will be retried up to 3 times before it is considered failed.</li>
+<li><code>ttlSecondsAfterFinished</code> is set to 3600 seconds (1 hour), which means completed jobs (either successful or failed) will be automatically deleted one hour after finishing.</li>
+</ul>
+<p>The restartPolicy in a Kubernetes job or a pod template within a CronJob is quite relevant and plays a crucial role in how the Kubernetes system handles container failures or terminations.</p>
+<ul>
+<li>For Jobs and CronJobs, <code>restartPolicy</code> is particularly important. A common setting in Jobs is OnFailure, as you might want the job to retry if it fails.</li>
+<li><code>Always</code> is not a valid <code>restartPolicy</code> for Jobs and CronJobs since Jobs are intended to run to completion (either success or failure), and an always-restarting policy would contradict this behavior.</li>
+<li><code>Never</code> can be used if you want to ensure that no automatic restarts are attempted, which can be useful for debugging or in scenarios where a failure must be handled in a custom manner.</li>
+<li>The combination of <code>restartPolicy</code> and <code>backoffLimit</code> in a job definition can define the job&rsquo;s retry behavior. For example, if <code>restartPolicy</code> is set to <code>OnFailure</code> and <code>backoffLimit</code> is greater than 0, the job will be retried up to the specified limit if it fails.</li>
+</ul>
+<h4 id="yaml-differences-between-jobs-and-cronjobs">YAML differences between Jobs and CronJobs</h4>
+<p>Understanding these differences is crucial, especially for scenarios covered in the CKAD exam:</p>
+<ol>
+<li><strong>Schedule</strong>: Only present in CronJob for defining the time-based schedule.</li>
+<li><strong>Concurrency Policy and History Limits</strong>: Specific to CronJob for managing job execution and retention.</li>
+<li><strong>JobTemplate</strong>: In CronJob, the job configuration is nested under <code>jobTemplate</code>, whereas in a Job, the configuration is directly under spec.</li>
+</ol>
 <h4 id="monitoring-and-troubleshooting-cronjobs">Monitoring and Troubleshooting CronJobs</h4>
 <ol>
 <li>
@@ -408,6 +458,10 @@
 						class="d-block text-color py-10">Big data</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
 						class="d-block text-color py-10">Data science</a>
 				</li>
@@ -493,9 +547,13 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
@@ -540,6 +598,8 @@
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">

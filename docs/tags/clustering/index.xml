@@ -6,50 +6,14 @@
     <description>Recent content in Clustering on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Clustering with Categorical Features</title>
-      <link>https://www.danielsobrado.com/blog/clustering-categorical/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/clustering-categorical/</guid>
-      <description>Categorical variables Customer segmentation</description>
-    </item>
-    
-    <item>
-      <title>RFM Scoring</title>
-      <link>https://www.danielsobrado.com/blog/rfm-scoring/</link>
-      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/rfm-scoring/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 22 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customer Segmentation</title>
       <link>https://www.danielsobrado.com/blog/customer-segmentation/</link>
       <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/customer-segmentation/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.</description>
-    </item>
-    
-    <item>
-      <title>Customer Segmentation</title>
-      <link>https://www.danielsobrado.com/blog/rfm-clustering-kmeans/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/rfm-clustering-kmeans/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.</description>
-    </item>
-    
-    <item>
-      <title>Customer Segmentation</title>
-      <link>https://www.danielsobrado.com/blog/rfm-clustering-number-clusters/</link>
-      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/rfm-clustering-number-clusters/</guid>
-      <description>Why it matters? Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time.</description>
+      <description>Why it matters? Customer segmentation is a basic tool that banks use to group customers based on their similarities.</description>
     </item>
     
   </channel>

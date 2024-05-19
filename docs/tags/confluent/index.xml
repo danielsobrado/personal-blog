@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Confluent on </title>
+    <link>https://www.danielsobrado.com/tags/confluent/</link>
+    <description>Recent content in Confluent on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/confluent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your Guide to Confluent Kafka Developer Certification</title>
+      <link>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</guid>
+      <description>Learning Path for Confluent Kafka Developer Certification This article outlines a structured sequence of tutorials and guides aimed at preparing you for the Confluent Kafka Developer Certification exam.</description>
+    </item>
+    
+  </channel>
+</rss>

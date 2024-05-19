@@ -214,7 +214,8 @@
 <h4 id="create-a-namespace">Create a Namespace</h4>
 <p>To create a namespace, you can use the <code>kubectl</code> command:</p>
 <pre tabindex="0"><code>kubectl create namespace my-namespace
-</code></pre><h4 id="list-namespaces">List Namespaces</h4>
+</code></pre><p>Note: Use ns as short</p>
+<h4 id="list-namespaces">List Namespaces</h4>
 <p>To list all namespaces:</p>
 <pre tabindex="0"><code>kubectl get namespaces
 </code></pre><h4 id="delete-a-namespace">Delete a Namespace</h4>
@@ -237,7 +238,8 @@ spec:
     limits.memory: 2Gi
 </code></pre><p>Apply the resource quota to a namespace:</p>
 <pre tabindex="0"><code>kubectl apply -f resource-quota.yaml -n my-namespace
-</code></pre><h3 id="best-practices">Best Practices</h3>
+</code></pre><p>Note: Check <a href="https://kubernetes.io/docs/concepts/policy/limit-range/">LimitRanges</a> as well.</p>
+<h3 id="best-practices">Best Practices</h3>
 <ol>
 <li><strong>Standardize Naming</strong>: Stick to a naming convention for easier management.</li>
 <li><strong>Limit Resource Allocation</strong>: Always set resource quotas to avoid resource exhaustion.</li>
@@ -346,6 +348,10 @@ spec:
 						class="d-block text-color py-10">Big data</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
 						class="d-block text-color py-10">Data science</a>
 				</li>
@@ -431,9 +437,13 @@ spec:
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
@@ -478,6 +488,8 @@ spec:
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">

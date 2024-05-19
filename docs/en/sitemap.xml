@@ -34,6 +34,9 @@
     <loc>https://www.danielsobrado.com/blog/data-preparation-missing-values/</loc>
     <lastmod>2014-12-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/data-preparation-numeric/</loc>
+    <lastmod>2014-12-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/data-preparation-categoricals/</loc>
     <lastmod>2014-12-25T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -150,6 +153,48 @@
                 href="https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/big-data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/big-data/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/kafka/</loc>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kafka-operations-deep-dive/</loc>
+    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/kafka-operations-deep-dive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/kafka-operations-deep-dive/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/getting-started-with-confluent-rest-proxy/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/getting-started-with-confluent-rest-proxy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/getting-started-with-confluent-rest-proxy/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/</loc>
     <lastmod>2023-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -161,6 +206,58 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-confluent-ksql/</loc>
+    <lastmod>2023-08-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-confluent-ksql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-confluent-ksql/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/monitoring-and-metrics-in-kafka/</loc>
+    <lastmod>2023-08-07T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/monitoring-and-metrics-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/monitoring-and-metrics-in-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/introduction-to-ksql/</loc>
+    <lastmod>2023-08-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/introduction-to-ksql/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/introduction-to-ksql/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/exploring-kafka-streams/</loc>
+    <lastmod>2023-08-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/exploring-kafka-streams/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/exploring-kafka-streams/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/</loc>
@@ -176,6 +273,97 @@
                 href="https://www.danielsobrado.com/blog/kubernetes-statefulsets-explained/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/securing-kafka/</loc>
+    <lastmod>2023-08-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/securing-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/securing-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/application-deployment-choices-in-kafka/</loc>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/application-deployment-choices-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/application-deployment-choices-in-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/exploring-topic-co-partitioning-in-kafka/</loc>
+    <lastmod>2023-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/exploring-topic-co-partitioning-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/exploring-topic-co-partitioning-in-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/data-retention-strategies-and-implications-in-kafka/</loc>
+    <lastmod>2023-07-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/data-retention-strategies-and-implications-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/data-retention-strategies-and-implications-in-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-consumer-groups-partition-assignments-and-rebalances/</loc>
+    <lastmod>2023-07-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-consumer-groups-partition-assignments-and-rebalances/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-consumer-groups-partition-assignments-and-rebalances/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/</loc>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-producer-partition-selection-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-producer-partition-selection-in-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/serialization-and-deserialization-in-kafka/</loc>
+    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/serialization-and-deserialization-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/serialization-and-deserialization-in-kafka/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/</loc>
     <lastmod>2023-07-17T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -187,6 +375,19 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/kubernetes-resource-quotas-and-limits/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/performance-in-kafka/</loc>
+    <lastmod>2023-07-14T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/performance-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/performance-in-kafka/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/</loc>
@@ -202,6 +403,19 @@
                 href="https://www.danielsobrado.com/blog/understanding-and-using-helm-in-kubernetes/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/troubleshooting-and-debugging-in-kafka/</loc>
+    <lastmod>2023-07-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/troubleshooting-and-debugging-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/troubleshooting-and-debugging-in-kafka/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/</loc>
     <lastmod>2023-07-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -215,24 +429,60 @@
                 href="https://www.danielsobrado.com/blog/troubleshooting-kubernetes-container-logs/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/kubernetes-deployments/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
-    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/introduction-to-kafka-clients/</loc>
+    <lastmod>2023-07-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/big-data/"
+                href="https://www.danielsobrado.com/es/blog/introduction-to-kafka-clients/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/big-data/"
+                href="https://www.danielsobrado.com/blog/introduction-to-kafka-clients/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/kafka/</loc>
-    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/system-metrics-in-kafka/</loc>
+    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/system-metrics-in-kafka/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/system-metrics-in-kafka/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-deployments/</loc>
+    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/understanding-kafka-message-structure/</loc>
+    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/understanding-kafka-message-structure/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/understanding-kafka-message-structure/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/exploring-kafka-configurations/</loc>
+    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/exploring-kafka-configurations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/exploring-kafka-configurations/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/understanding-kafka-apis/</loc>
     <lastmod>2023-06-30T00:00:00+00:00</lastmod>
@@ -273,6 +523,12 @@
                 href="https://www.danielsobrado.com/blog/getting-started-with-kafka-command-line-tools/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/categories/certification/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/confluent/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/understanding-apache-kafka/</loc>
     <lastmod>2023-06-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -285,6 +541,9 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/understanding-apache-kafka/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</loc>
+    <lastmod>2023-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/adapter-pattern-in-kubernetes/</loc>
     <lastmod>2023-06-21T00:00:00+00:00</lastmod>
@@ -850,6 +1109,12 @@
     <loc>https://www.danielsobrado.com/tags/time-series/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/tags/clustering/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/customer-segmentation/</loc>
+    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/commodities/</loc>
     <lastmod>2017-04-22T15:30:02+04:00</lastmod>
   </url><url>
@@ -980,6 +1245,9 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/data-preparation/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/scikit-learn/</loc>
+    <lastmod>2014-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/cross-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
@@ -1132,6 +1400,6 @@
   </url><url>
     <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/threads_and_processes/</loc>
+    <loc>https://www.danielsobrado.com/blog/threads-and-processes/</loc>
   </url>
 </urlset>

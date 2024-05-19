@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Data Preparation: Numeric</title>
+      <link>https://www.danielsobrado.com/blog/data-preparation-numeric/</link>
+      <pubDate>Fri, 26 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/data-preparation-numeric/</guid>
+      <description>Introduction Data preparation is a crucial step in the data science process.</description>
+    </item>
+    
+    <item>
       <title>Data Preparation: Categorical</title>
       <link>https://www.danielsobrado.com/blog/data-preparation-categoricals/</link>
       <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
@@ -77,6 +86,15 @@
       
       <guid>https://www.danielsobrado.com/blog/fast-fourier-transform/</guid>
       <description>Let&amp;rsquo;s discuss about Fast Fourier Transformations (FFT), an important concept in signal processing and data analysis.</description>
+    </item>
+    
+    <item>
+      <title>Customer Segmentation</title>
+      <link>https://www.danielsobrado.com/blog/customer-segmentation/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/customer-segmentation/</guid>
+      <description>Why it matters? Customer segmentation is a basic tool that banks use to group customers based on their similarities.</description>
     </item>
     
     <item>

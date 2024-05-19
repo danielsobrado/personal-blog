@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Introduction to KSQL: Features and Use Cases</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="An introductory guide to KSQL, Kafka&#39;s SQL interface for stream processing, highlighting its features and practical use cases.">
+    <meta name="author" content="Daniel Sobrado">
+    <meta name="generator" content="Hugo 0.117.0">
+
+    <!-- plugins -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick-theme.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/themify-icons/themify-icons.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/animate/animate.css ">
+    
+
+    <!-- Main Stylesheet -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/css/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://www.danielsobrado.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+
+</head><body><!-- navigation -->
+<header>
+  <!-- top header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline text-lg-right text-center">
+            <li class="list-inline-item">
+               <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
+            </li>
+            <li class="list-inline-item">
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nav bar -->
+  <div class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.danielsobrado.com/">
+          <img src="https://www.danielsobrado.com/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/programming/">Programming</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/data-science/">Data Science</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/others/">Others</a>
+            </li>
+            
+            
+          </ul>
+          
+        
+          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
+            
+            
+            
+            
+            
+            
+            
+            
+            <option id="en" value="https://www.danielsobrado.com/blog/introduction-to-ksql/" selected>En</option>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <option id="es" value="https://www.danielsobrado.com/es/blog/introduction-to-ksql/">Es</option>
+            
+            
+            
+            
+          </select>
+          
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header><!-- preloader start -->
+	
+	<!-- preloader start -->
+	<div class="preloader">
+		
+		<img src="https://www.danielsobrado.com/images/preloader.gif" alt="preloader">
+		
+	</div>
+	<!-- preloader end -->
+	
+	<!-- preloader end -->
+	<div id="content">
+
+<!-- page title -->
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="text-white font-weight-bold">Introduction to KSQL: Features and Use Cases</h2>
+				<ol class="breadcrumb">
+					<li><a href="https://www.danielsobrado.com/">Home</a></li>
+					<li>Introduction to KSQL: Features and Use Cases</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /page title -->
+
+<!-- blog single -->
+<section>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/mnDOthC.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Introduction to KSQL: Features and Use Cases</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 05 Aug</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/big%20data"> Big data</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h1 id="introduction-to-ksql">Introduction to KSQL</h1>
+<p>KSQL is a SQL-like interface for Apache Kafka that allows you to perform stream processing using a familiar SQL syntax. It simplifies the development of streaming applications by providing a high-level abstraction over Kafka Streams, Kafka&rsquo;s low-level stream processing library.</p>
+<h2 id="key-features">Key Features</h2>
+<ol>
+<li>
+<p><strong>SQL-like Syntax</strong>: KSQL uses a SQL-like syntax for defining and manipulating streams and tables. It supports common SQL statements such as <code>SELECT</code>, <code>FROM</code>, <code>WHERE</code>, <code>GROUP BY</code>, and <code>JOIN</code>.</p>
+</li>
+<li>
+<p><strong>Stream Processing</strong>: KSQL enables real-time processing of streaming data. You can perform operations like filtering, transformations, aggregations, and joins on Kafka topics.</p>
+</li>
+<li>
+<p><strong>Windowing</strong>: KSQL supports windowing operations, allowing you to perform aggregations and computations over time windows. It provides various window types, such as tumbling, hopping, and session windows.</p>
+</li>
+<li>
+<p><strong>Stateful Operations</strong>: KSQL allows you to perform stateful operations, such as aggregations and joins, on streaming data. It maintains the state of the computations in Kafka topics, ensuring fault tolerance and enabling scalability.</p>
+</li>
+<li>
+<p><strong>Integration with Kafka Ecosystem</strong>: KSQL seamlessly integrates with the Kafka ecosystem. It can read from and write to Kafka topics, and it can leverage Kafka&rsquo;s features like partitioning, replication, and fault tolerance.</p>
+</li>
+</ol>
+<h2 id="use-cases">Use Cases</h2>
+<p>KSQL is well-suited for a wide range of stream processing scenarios, such as:</p>
+<ol>
+<li>
+<p><strong>Real-time Analytics</strong>: KSQL can be used to perform real-time analytics on streaming data. You can calculate metrics, aggregations, and key performance indicators (KPIs) as data arrives in Kafka topics.</p>
+</li>
+<li>
+<p><strong>Data Transformations</strong>: KSQL allows you to transform and enrich streaming data on the fly. You can apply filters, mappings, and computations to the data before writing it back to Kafka or to an external system.</p>
+</li>
+<li>
+<p><strong>Anomaly Detection</strong>: KSQL can be used to detect anomalies and patterns in real-time data streams. By defining rules and conditions, you can identify and react to unusual behavior or events.</p>
+</li>
+<li>
+<p><strong>Streaming ETL</strong>: KSQL simplifies the process of streaming ETL (Extract, Transform, Load) pipelines. You can read data from various sources, perform transformations and enrichments, and write the processed data to target systems.</p>
+</li>
+</ol>
+<h2 id="example">Example</h2>
+<p>Here&rsquo;s a simple example of using KSQL to perform a real-time aggregation:</p>
+<pre tabindex="0"><code>-- Create a stream from a Kafka topic
+CREATE STREAM orders (order_id INT, product VARCHAR, amount DOUBLE) 
+  WITH (KAFKA_TOPIC=&#39;orders&#39;, VALUE_FORMAT=&#39;JSON&#39;);
+
+-- Perform a real-time aggregation
+SELECT product, COUNT(*) AS total_orders, SUM(amount) AS total_amount
+  FROM orders
+  WINDOW TUMBLING (SIZE 1 MINUTE)
+  GROUP BY product;
+</code></pre><p>In this example, we create a KSQL stream called <code>orders</code> that reads from a Kafka topic named <code>orders</code>. We then perform a real-time aggregation using a tumbling window of 1 minute. The query calculates the total number of orders and the total amount for each product within each 1-minute window.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To get started with KSQL, you need to have a Kafka cluster up and running. You can then install and start the KSQL server, which connects to your Kafka cluster.</p>
+<p>Here are the basic steps:</p>
+<ol>
+<li>Download and install the Confluent Platform, which includes KSQL.</li>
+<li>Start the KSQL server by running the <code>ksql-server-start</code> command and providing the necessary configuration.</li>
+<li>Connect to the KSQL server using the KSQL CLI or any supported client.</li>
+<li>Create streams and tables, and start writing KSQL queries to process your streaming data.</li>
+</ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-ksql%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Introduction%20to%20KSQL%3a%20Features%20and%20Use%20Cases&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-ksql%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-ksql%2f&amp;resubmit=true&amp;title=Introduction%20to%20KSQL%3a%20Features%20and%20Use%20Cases"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Introduction%20to%20KSQL%3a%20Features%20and%20Use%20Cases&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fintroduction-to-ksql%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/kafka">Kafka</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+      </div>
+      <!-- Sidebar -->
+<div class="col-lg-4">
+	<div class="bg-white px-4 py-100 sidebar-box-shadow">
+		<!-- categories -->
+		<div class="mb-50">
+			<h4 class="mb-3">Categories</h4>
+			<ul class="list-unstyled mb-0">
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/big-data"
+						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/data-science"
+						class="d-block text-color py-10">Data science</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/investing"
+						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/maths"
+						class="d-block text-color py-10">Maths</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/others"
+						class="d-block text-color py-10">Others</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/programming"
+						class="d-block text-color py-10">Programming</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Widget Recent Post -->
+		<div class="mb-50">
+			<h4 class="mb-3">Top Articles</h4>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-variable-precedence/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/HXoTjv8.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-variable-precedence/">Precedence of properties</a>
+					</h6>
+					<p class="meta">10 Feb 2019</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
+					</h6>
+					<p class="meta">23 Jul 2016</p>
+				</div>
+			</div>
+			
+		</div>
+		<!-- tags -->
+		<div class="mb-50">
+			<h4 class="mb-3">Tags</h4>
+			<ul class="list-inline tag-list">
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/functional-programming">Functional programming</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
+			</ul>
+		</div>
+
+		<!-- Widget Newsletter -->
+		<div class="newsletter">
+			<h4 class="mb-3">Stay Updated</h4>
+			<div id="mc_embed_signup">
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							</label>
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="FNAME" id="mce-FNAME" placeholder="First Name">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+								class="button"></div>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /blog-single -->
+
+
+	</div><!-- footer -->
+<footer class="bg-secondary">
+	<div class="py-100 border-bottom" style="border-color: #000000 !important">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="mb-5 mb-md-0 text-center text-md-left">
+						<!-- logo -->
+						<img class="mb-30" src="https://www.danielsobrado.com/images/logo-footer.png" alt="logo">
+						 <p class="text-white mb-30"> Personal Blog on Software Engineering, Data Engineering and Machine Learning. <!-- raw HTML omitted --> I also write about investments and my data-centric approach to sistematic investment.</p> 
+						<!-- social icon -->
+						<ul class="list-inline">
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://stackoverflow.com/users/2507462/daniel-sobrado">
+									<i class="ti-stack-overflow"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://github.com/danielsobrado">
+									<i class="ti-github"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.linkedin.com/in/dsobrado/">
+									<i class="ti-linkedin"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.instagram.com/daniel.sobrado/">
+									<i class="ti-instagram"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://twitter.com/danielinvest1">
+									<i class="ti-twitter-alt"></i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Investing</h4>
+					<ul class="footer-links">
+						
+						<li><a href="https://www.danielsobrado.com/investing/asset_allocation/">Asset Allocation</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/insiders/">Insiders</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/momentum/">Momentum</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/my-investing-philosophy/">My investing philosophy</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/backtesting/">Backtesting</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/value-investing/">Value Investing</a></li>
+						
+					</ul>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Technology</h4>
+					<ul class="footer-links">
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/programming/">Programming</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/data-science/">Data Science</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/others/">Others</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- subscribe form -->
+				<div class="col-lg-3 col-md-12 offset-lg-1">
+					<div class="mt-5 mt-lg-0 text-center text-md-left">
+						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
+						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
+						<div id="mc_embed_signup">
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll" class="position-relative">
+									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
+										placeholder="Enter Your Email">
+									<button class="btn-subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe-">
+										<i class="ti-arrow-right"></i>
+									</button>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="pt-4 pb-3 position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-5">
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
+				</div>
+				<div class="col-lg-6 col-md-7">
+					<ul class="list-inline text-center text-md-right">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- back to top -->
+		<button class="back-to-top">
+			<i class="ti-angle-up"></i>
+		</button>
+	</div>
+</footer>
+<!-- /footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
+<script>hljs.highlightAll();</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
+
+<!-- Essential Scripts -->
+<!-- Google Map API -->
+
+<!-- JS Plugins -->
+
+<script src="https://www.danielsobrado.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://www.danielsobrado.com/js/script.min.js"></script>
+</body>
+
+</html></body>
+
+</html>

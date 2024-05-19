@@ -227,7 +227,8 @@
 </span></span><span style="display:flex;"><span>          <span style="color:#f92672">project</span>: <span style="color:#ae81ff">my-project</span>
 </span></span></code></pre></div><p>To apply it, use:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl apply -f network-policy.yaml
-</span></span></code></pre></div><h3 id="common-use-cases">Common Use Cases</h3>
+</span></span></code></pre></div><p>Take into account that you cannot create Network Policies imperatively, you can type <strong>netpol</strong> in the search and copy an example, beware that the example has a namespace that you need to change.</p>
+<h3 id="common-use-cases">Common Use Cases</h3>
 <ol>
 <li><strong>Isolate Pods</strong>: Prevent all communication to Pods except from those in the same namespace.</li>
 <li><strong>Allow Specific External Access</strong>: Only allow egress traffic to specific external IPs.</li>
@@ -276,6 +277,7 @@
 </ul>
 <h4 id="solution">Solution</h4>
 <p>If set up correctly, Pods in <code>project-a</code> should only accept traffic from other Pods labeled with <code>project=my-project</code>.</p>
+<p><strong>Tip</strong>: Practice Network Policies <a href="https://editor.networkpolicy.io/">here</a></p>
 
             </div>
           </div>
@@ -354,6 +356,10 @@
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/big-data"
 						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
@@ -441,9 +447,13 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
@@ -488,6 +498,8 @@
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">

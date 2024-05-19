@@ -13,18 +13,7 @@
       <pubDate>Fri, 26 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/data-preparation-numeric/</guid>
-      <description>Introduction Data Preparation Mean Centering Standardization See: http://scikit-learn.org/stable/auto_examples/preprocessing/plot_scaling_importance.html#sphx-glr-auto-examples-preprocessing-plot-scaling-importance-py
-Normalization </description>
-    </item>
-    
-    <item>
-      <title>Analysis of residuals</title>
-      <link>https://www.danielsobrado.com/blog/residual-analysis/</link>
-      <pubDate>Sat, 11 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/residual-analysis/</guid>
-      <description>Introduction conda install statsmodels seaborn
-Plotting residuals Regression assumptions Linearity and equal variance Normality</description>
+      <description>Introduction Data preparation is a crucial step in the data science process.</description>
     </item>
     
   </channel>

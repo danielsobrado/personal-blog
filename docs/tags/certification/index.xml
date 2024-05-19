@@ -16,5 +16,14 @@
       <description>If you&amp;rsquo;re preparing for the Certified Kubernetes Application Developer (CKAD) exam or simply want to enhance your Kubernetes skills, this learning path is for you.</description>
     </item>
     
+    <item>
+      <title>Your Guide to Confluent Kafka Developer Certification</title>
+      <link>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/guide-ccdak-concluent-kafka-developer-certification/</guid>
+      <description>Learning Path for Confluent Kafka Developer Certification This article outlines a structured sequence of tutorials and guides aimed at preparing you for the Confluent Kafka Developer Certification exam.</description>
+    </item>
+    
   </channel>
 </rss>

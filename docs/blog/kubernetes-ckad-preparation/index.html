@@ -253,17 +253,24 @@
 </blockquote>
 <h4 id="aliases">Aliases</h4>
 <p>Set some aliases in <code>.bashrc</code>:</p>
+<p>k should be ready in the exam environment by default.</p>
 <pre tabindex="0"><code>alias k=kubectl
-export do=&#34;--dry-run=client -o yaml&#34;
+alias hh=&#39;history | grep&#39;
+alias koy=&#39;kubectl -o yaml&#39;
+alias kn=&#39;kubectl config set-context --current --namespace&#39; (You can change the namespace like this or use -n in each command)
+export do=&#34;--dry-run=client -o yaml&#34;  (This is the only one I configured during the exam)
 export de=&#34;--grace-period=0 --force&#34;
-</code></pre><h4 id="auto-completion">Auto-completion</h4>
+</code></pre><p>The main one for me is kn, to change namespaces quickly, remember to restore the default namespace when leaving a cluster/context and at the end of the exam.</p>
+<p>Alternatively use <code>-n</code> in each <code>k</code> command and don&rsquo;t change namespaces.</p>
+<h4 id="use-explain">Use Explain</h4>
+<p>You can use an alias: <code>alias ke='kubectl explain'</code></p>
+<p>Example:</p>
+<p><code>kubectl explain pods.spec —rescursive</code>  (And then pipe to grep -C10 volumes for example)</p>
+<p>Use help, as it is faster than browsing: <code>k run -h</code></p>
+<h4 id="auto-completion">Auto-completion</h4>
 <p>Ensure that bash-completion is already loaded. Typically, it&rsquo;s pre-installed in the exam environment.</p>
 <p>Use the following command to enable kubectl auto-completion:</p>
 <pre tabindex="0"><code>source &lt;(kubectl completion bash)
-</code></pre><p>To save time, set an alias for kubectl:</p>
-<pre tabindex="0"><code>alias k=kubectl
-</code></pre><p>Other useful alias you can create:</p>
-<pre tabindex="0"><code>alias koy=&#39;kubectl -o yaml&#39;
 </code></pre><p>And then, you can enable auto-completion for this alias as well:</p>
 <pre tabindex="0"><code>complete -F __start_kubectl k
 </code></pre><h4 id="search-for-keywords">Search for keywords</h4>
@@ -271,6 +278,16 @@ export de=&#34;--grace-period=0 --force&#34;
 <pre tabindex="0"><code>kubectl get pod &lt;POD_NAME&gt; -n &lt;NAMESPACE&gt; -o yaml | grep -B 5 -A 5 &lt;KEYWORD&gt;
 </code></pre><p>e.g. <code>get po webapp-example -o yaml | grep -B 5 -A 5 image</code></p>
 <p>This should give you a strong foundation in Kubernetes as you prepare for the CKAD exam.</p>
+<h4 id="bookmarks">Bookmarks</h4>
+<p>Autocomplete should be ready by default in the exam:</p>
+<p><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete">Auto-Complete</a></p>
+<pre tabindex="0"><code>source &lt;(kubectl completion bash)
+alias k=kubectl
+complete -F __start_kubectl k
+</code></pre><p><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands">Kubectl commands</a></p>
+<p>[Cheatsheet] (<a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">https://kubernetes.io/docs/reference/kubectl/cheatsheet/</a>)</p>
+<p>[Liveness] (<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-command">https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-command</a>)</p>
+<p>Firefox own bookmarks are not allowed anymore, each question has links to relevant documentation, but you cannot import your own bookmarks.</p>
 
             </div>
           </div>
@@ -353,6 +370,10 @@ export de=&#34;--grace-period=0 --force&#34;
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/big-data"
 						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
@@ -440,9 +461,13 @@ export de=&#34;--grace-period=0 --force&#34;
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
@@ -487,6 +512,8 @@ export de=&#34;--grace-period=0 --force&#34;
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">
