@@ -62,6 +62,15 @@
     </item>
     
     <item>
+      <title>Zero-Copy and the transferTo() Method in Java</title>
+      <link>https://www.danielsobrado.com/blog/zero-copy/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/zero-copy/</guid>
+      <description>Understanding Zero-Copy and the transferTo() Method in Java One technique that helps optimize data transfer is called &amp;ldquo;zero-copy.</description>
+    </item>
+    
+    <item>
       <title>Confluent Certified Developer: Exam Prep and Practice Questions</title>
       <link>https://www.danielsobrado.com/blog/confluent-certified-developer-exam-prep/</link>
       <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
