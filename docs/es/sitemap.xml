@@ -546,6 +546,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/confluent-certified-developer-exam-prep/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/"
+                />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/confluent-certified-developer-review/</loc>
   </url><url>

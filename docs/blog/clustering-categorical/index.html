@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
     <title>Clustering with Categorical Features</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Customer segmentation nowadays is a basic tool of any bank, you want to classify your customers naturally and understand how cluster shift and evolve in time. We&#39;ll find insights about our customer base, groups of clients that share common traits and deserve special attention from the relationship managers, to build tailored strategies for the most attractive segments.">
+    <meta name="description" content="Learn how to perform customer segmentation using clustering techniques that handle categorical features effectively. Discover insights about your customer base and identify groups of clients that share common traits, enabling you to build tailored strategies for the most attractive segments.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -33,7 +43,7 @@
     <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
 
     <!-- MathJax -->
-    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 </head><body><!-- navigation -->
 <header>
@@ -47,8 +57,8 @@
                <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
             </li>
             <li class="list-inline-item">
-               <a href="https://t.me/drusniel">Let's talk:
-                <span class="ml-2">Ping me on Telegram</span> 
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
               </a>
             </li>
           </ul>
@@ -82,6 +92,12 @@
             
             
             <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
               <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
             </li>
             
@@ -101,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/clustering-categorical/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/clustering-categorical/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -169,10 +155,10 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
+        <div class="rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/Y6Ergq2.png" alt="blog-image">
           <div class="p-4">
             <h3>Clustering with Categorical Features</h3>
@@ -186,8 +172,74 @@
               </li>
             </ul>
             <div class="post-content">
-              <h3 id="categorical-variables">Categorical variables</h3>
-<p>Customer segmentation</p>
+              <h2 id="categorical-variables">Categorical Variables</h2>
+<p>Categorical variables are a common type of data in customer segmentation tasks. These variables represent characteristics or attributes that can take on a limited number of distinct values or categories. Examples of categorical variables include:</p>
+<ul>
+<li>Gender (Male, Female)</li>
+<li>Marital Status (Single, Married, Divorced)</li>
+<li>Education Level (High School, Bachelor&rsquo;s, Master&rsquo;s, PhD)</li>
+<li>Employment Status (Employed, Unemployed, Self-employed, Retired)</li>
+</ul>
+<p>When working with categorical variables in clustering, it&rsquo;s essential to handle them appropriately to ensure meaningful results.</p>
+<h2 id="encoding-categorical-variables">Encoding Categorical Variables</h2>
+<p>One common approach to handle categorical variables in clustering is to encode them into numerical representations. There are several encoding techniques available, including:</p>
+<ol>
+<li>
+<p><strong>One-Hot Encoding</strong>: This technique creates a binary column for each unique category in the categorical variable. Each binary column indicates the presence (1) or absence (0) of a particular category for each data point.</p>
+</li>
+<li>
+<p><strong>Ordinal Encoding</strong>: If the categories in a categorical variable have a natural order or hierarchy, ordinal encoding can be used. It assigns a numerical value to each category based on its order or rank.</p>
+</li>
+<li>
+<p><strong>Label Encoding</strong>: Label encoding assigns a unique numerical value to each category in a categorical variable. However, it should be used with caution as it may introduce an arbitrary order among the categories.</p>
+</li>
+</ol>
+<p>The choice of encoding technique depends on the nature of the categorical variable and the clustering algorithm being used.</p>
+<h2 id="clustering-algorithms-for-categorical-data">Clustering Algorithms for Categorical Data</h2>
+<p>Several clustering algorithms are well-suited for handling categorical data. Some popular choices include:</p>
+<ol>
+<li>
+<p><strong>K-modes</strong>: K-modes is an extension of the K-means algorithm that is specifically designed for categorical data. Instead of calculating the mean of data points, it uses the mode (most frequent value) to update the cluster centroids.</p>
+</li>
+<li>
+<p><strong>Hierarchical Clustering</strong>: Hierarchical clustering algorithms, such as Agglomerative Clustering, can handle categorical data by using appropriate distance metrics, such as the Hamming distance or Jaccard similarity.</p>
+</li>
+<li>
+<p><strong>ROCK (RObust Clustering using linKs)</strong>: ROCK is a hierarchical clustering algorithm that uses links between data points to measure similarity. It is particularly effective for clustering categorical data with a large number of attributes.</p>
+</li>
+<li>
+<p><strong>COOLCAT (Entropy-based Categorical Clustering)</strong>: COOLCAT is an incremental clustering algorithm that aims to minimize the entropy within clusters. It is designed to handle high-dimensional categorical data efficiently.</p>
+</li>
+</ol>
+<p>When selecting a clustering algorithm, consider the characteristics of your categorical data, such as the number of categories, the presence of missing values, and the desired output format.</p>
+<h2 id="evaluating-clustering-results">Evaluating Clustering Results</h2>
+<p>Evaluating the quality of clustering results is an important step in customer segmentation. For categorical data, several evaluation metrics can be used, including:</p>
+<ol>
+<li>
+<p><strong>Purity</strong>: Purity measures the extent to which each cluster contains data points from a single class or category. A higher purity indicates better clustering performance.</p>
+</li>
+<li>
+<p><strong>Rand Index</strong>: The Rand Index measures the similarity between the clustering results and the ground truth labels. It considers both the correctly assigned pairs of data points and the correctly unassigned pairs.</p>
+</li>
+<li>
+<p><strong>Adjusted Rand Index</strong>: The Adjusted Rand Index is a corrected-for-chance version of the Rand Index. It accounts for the possibility of agreement between the clustering results and the ground truth labels occurring by chance.</p>
+</li>
+<li>
+<p><strong>Normalized Mutual Information (NMI)</strong>: NMI measures the mutual information between the clustering results and the ground truth labels, normalized by the entropy of both sets of labels.</p>
+</li>
+</ol>
+<p>These evaluation metrics provide insights into the quality and coherence of the clustering results, helping to assess the effectiveness of the chosen clustering algorithm and encoding techniques.</p>
+<h2 id="customer-segmentation-insights">Customer Segmentation Insights</h2>
+<p>Once the clustering process is complete, it&rsquo;s crucial to analyze and interpret the resulting customer segments. Each cluster represents a group of customers with similar characteristics or behaviors. By examining the defining features of each cluster, businesses can gain valuable insights into their customer base.</p>
+<p>Some potential insights from customer segmentation include:</p>
+<ul>
+<li>Identifying high-value customer segments that warrant special attention and targeted marketing strategies.</li>
+<li>Discovering underserved or untapped market segments that present growth opportunities.</li>
+<li>Understanding the preferences, needs, and behaviors of different customer segments to tailor products, services, and communication strategies accordingly.</li>
+<li>Identifying segments with high churn risk and developing retention strategies to minimize customer attrition.</li>
+<li>Optimizing resource allocation and targeting efforts based on the size and potential of each customer segment.</li>
+</ul>
+<p>These insights enable businesses to make data-driven decisions, improve customer satisfaction, and drive growth by focusing on the most promising segments.</p>
 
             </div>
           </div>
@@ -268,12 +320,24 @@
 						class="d-block text-color py-10">Big data</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
 						class="d-block text-color py-10">Data science</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/investing"
 						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/maths"
@@ -327,15 +391,15 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
@@ -345,9 +409,9 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
@@ -355,17 +419,19 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -373,47 +439,47 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
 		</div>
 
@@ -421,7 +487,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -440,7 +506,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -531,6 +597,10 @@
 						
 						
 						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
 						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
 						
 						
@@ -550,7 +620,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -559,7 +629,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -574,7 +644,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-5">
-					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
 				</div>
 				<div class="col-lg-6 col-md-7">
 					<ul class="list-inline text-center text-md-right">
@@ -591,15 +661,15 @@
 </footer>
 <!-- /footer -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
 <script>hljs.highlightAll();</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
 
 <!-- Essential Scripts -->
 <!-- Google Map API -->
@@ -618,12 +688,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

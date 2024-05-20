@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
-    <title>CRUD vs CQRS</title>
+    <title>CRUD vs CQRS: Exploring the Differences and Benefits</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Command and Query Responsibility Segregation (CQRS) is a pattern that assumes that reading and writing are two different things. EventSourcing is related to CQRS and by persisting events rather than domain objects, helps to avoid the object-relational mismatch problem.">
+    <meta name="description" content="Command and Query Responsibility Segregation (CQRS) is a pattern that separates read and write operations, treating them as distinct concerns. Event Sourcing, often used in conjunction with CQRS, persists events rather than domain objects, helping to avoid the object-relational impedance mismatch problem.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -33,7 +43,7 @@
     <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
 
     <!-- MathJax -->
-    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 </head><body><!-- navigation -->
 <header>
@@ -47,8 +57,8 @@
                <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
             </li>
             <li class="list-inline-item">
-               <a href="https://t.me/drusniel">Let's talk:
-                <span class="ml-2">Ping me on Telegram</span> 
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
               </a>
             </li>
           </ul>
@@ -82,6 +92,12 @@
             
             
             <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
               <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
             </li>
             
@@ -101,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/crud-cqrs/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/crud-cqrs/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -156,10 +142,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">CRUD vs CQRS</h2>
+				<h2 class="text-white font-weight-bold">CRUD vs CQRS: Exploring the Differences and Benefits</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>CRUD vs CQRS</li>
+					<li>CRUD vs CQRS: Exploring the Differences and Benefits</li>
 				</ol>
 			</div>
 		</div>
@@ -169,13 +155,13 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
+        <div class="rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/9juUrvZ.png" alt="blog-image">
           <div class="p-4">
-            <h3>CRUD vs CQRS</h3>
+            <h3>CRUD vs CQRS: Exploring the Differences and Benefits</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
               <li class="list-inline-item text-color">On 12 May</li>
@@ -186,7 +172,142 @@
               </li>
             </ul>
             <div class="post-content">
-              <h2 id="introduction">Introduction</h2>
+              <h2 id="crud-create-read-update-delete">CRUD: Create, Read, Update, Delete</h2>
+<p>CRUD is a traditional approach to designing systems where a single model is used for both reading and writing data. In a CRUD-based system, the same set of operations (Create, Read, Update, Delete) are performed on the same data model.</p>
+<p>Here&rsquo;s an example of a CRUD-based system in Java:</p>
+<pre tabindex="0"><code>public class UserController {
+    private UserRepository userRepository;
+
+    public User createUser(User user) {
+        return userRepository.save(user);
+    }
+
+    public User readUser(Long userId) {
+        return userRepository.findById(userId);
+    }
+
+    public User updateUser(User user) {
+        return userRepository.save(user);
+    }
+
+    public void deleteUser(Long userId) {
+        userRepository.deleteById(userId);
+    }
+}
+</code></pre><p>In this example, the <code>UserController</code> class performs CRUD operations on the <code>User</code> model using a <code>UserRepository</code>. The same <code>User</code> model is used for both reading and writing data.</p>
+<p>CRUD-based systems are simple to understand and implement, making them a popular choice for many applications. However, as the system grows in complexity, CRUD can lead to several challenges, such as:</p>
+<ul>
+<li>Performance: As the data model becomes more complex, querying and updating data can become slower, affecting system performance.</li>
+<li>Scalability: CRUD-based systems often struggle to scale horizontally, as the same data model is used for both read and write operations.</li>
+<li>Maintainability: As the system evolves, the data model may become tightly coupled with the application logic, making it harder to maintain and modify.</li>
+</ul>
+<h2 id="cqrs-command-and-query-responsibility-segregation">CQRS: Command and Query Responsibility Segregation</h2>
+<p>CQRS is an architectural pattern that separates the read and write operations of a system into distinct models. It treats reading and writing as separate concerns, allowing them to evolve independently.</p>
+<p>In a CQRS-based system, the read model (query) and the write model (command) are separated. The write model is responsible for handling commands that modify the system state, while the read model is optimized for querying and presenting data.</p>
+<p>Here&rsquo;s an example of a CQRS-based system in Java:</p>
+<pre tabindex="0"><code>public class UserCommandService {
+    private UserRepository userRepository;
+
+    public void createUser(CreateUserCommand command) {
+        User user = new User(command.getName(), command.getEmail());
+        userRepository.save(user);
+    }
+
+    public void updateUser(UpdateUserCommand command) {
+        User user = userRepository.findById(command.getUserId());
+        user.setName(command.getName());
+        user.setEmail(command.getEmail());
+        userRepository.save(user);
+    }
+
+    public void deleteUser(DeleteUserCommand command) {
+        userRepository.deleteById(command.getUserId());
+    }
+}
+
+public class UserQueryService {
+    private UserReadRepository userReadRepository;
+
+    public UserDto getUserById(Long userId) {
+        return userReadRepository.findById(userId);
+    }
+
+    public List&lt;UserDto&gt; getAllUsers() {
+        return userReadRepository.findAll();
+    }
+}
+</code></pre><p>In this example, the system is divided into two services: <code>UserCommandService</code> and <code>UserQueryService</code>. The <code>UserCommandService</code> handles commands that modify the system state, such as creating, updating, and deleting users. The <code>UserQueryService</code> is responsible for querying and returning user data.</p>
+<p>The benefits of using CQRS include:</p>
+<ul>
+<li>Scalability: CQRS allows for independent scaling of read and write operations. The read model can be scaled horizontally to handle high read loads, while the write model can be optimized for handling commands.</li>
+<li>Performance: By separating read and write concerns, CQRS enables optimized data models for each operation. The read model can be denormalized and optimized for fast querying, while the write model can be normalized and optimized for efficient updates.</li>
+<li>Maintainability: CQRS promotes a clear separation of concerns between read and write operations, making the system more maintainable and easier to evolve over time.</li>
+<li>Flexibility: CQRS allows for different technologies and storage mechanisms to be used for the read and write models, providing flexibility in system design.</li>
+</ul>
+<h2 id="event-sourcing">Event Sourcing</h2>
+<p>Event Sourcing is often used in conjunction with CQRS. Instead of persisting the current state of domain objects, Event Sourcing persists the sequence of events that led to the current state. Each event represents a change in the system state and is stored in an event store.</p>
+<p>The benefits of Event Sourcing include:</p>
+<ul>
+<li>Audit Trail: Event Sourcing provides a complete audit trail of all changes in the system, making it easy to track and analyze the history of the system state.</li>
+<li>Temporal Queries: Event Sourcing allows for querying the system state at any point in time by replaying the events up to that point.</li>
+<li>Scalability: Event Sourcing enables horizontal scalability by allowing multiple instances of the system to consume and process events independently.</li>
+<li>Resilience: Event Sourcing provides a natural way to implement data replication and ensures data consistency across multiple nodes.</li>
+</ul>
+<p>Here&rsquo;s an example of Event Sourcing in Java:</p>
+<pre tabindex="0"><code>public class UserAggregate {
+    private Long userId;
+    private String name;
+    private String email;
+    private List&lt;UserEvent&gt; events = new ArrayList&lt;&gt;();
+
+    public void createUser(String name, String email) {
+        apply(new UserCreatedEvent(userId, name, email));
+    }
+
+    public void updateUser(String name, String email) {
+        apply(new UserUpdatedEvent(userId, name, email));
+    }
+
+    public void deleteUser() {
+        apply(new UserDeletedEvent(userId));
+    }
+
+    private void apply(UserEvent event) {
+        events.add(event);
+        // Apply the event to the aggregate state
+        // ...
+    }
+}
+
+public interface UserEvent {
+    // Event marker interface
+}
+
+public class UserCreatedEvent implements UserEvent {
+    private Long userId;
+    private String name;
+    private String email;
+
+    // Constructor, getters, and setters
+}
+
+public class UserUpdatedEvent implements UserEvent {
+    private Long userId;
+    private String name;
+    private String email;
+
+    // Constructor, getters, and setters
+}
+
+public class UserDeletedEvent implements UserEvent {
+    private Long userId;
+
+    // Constructor, getters, and setters
+}
+</code></pre><p>In this example, the <code>UserAggregate</code> class represents the aggregate root for the user domain. It encapsulates the state and behavior of a user. Instead of directly modifying the state, the aggregate applies events to transition to a new state. The events are stored in an event store for persistence and can be replayed to reconstruct the aggregate state.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>CRUD and CQRS are two different approaches to designing systems. While CRUD is simple and widely used, it can face challenges in terms of performance, scalability, and maintainability as the system grows in complexity.</p>
+<p>CQRS, on the other hand, separates read and write operations, allowing for independent scaling, optimized data models, and improved maintainability. Event Sourcing, often used with CQRS, provides benefits such as an audit trail, temporal queries, scalability, and resilience.</p>
 
             </div>
           </div>
@@ -203,13 +324,13 @@
                     <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=CRUD%20vs%20CQRS&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=CRUD%20vs%20CQRS%3a%20Exploring%20the%20Differences%20and%20Benefits&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f&amp;resubmit=true&amp;title=CRUD%20vs%20CQRS"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f&amp;resubmit=true&amp;title=CRUD%20vs%20CQRS%3a%20Exploring%20the%20Differences%20and%20Benefits"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=CRUD%20vs%20CQRS&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=CRUD%20vs%20CQRS%3a%20Exploring%20the%20Differences%20and%20Benefits&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcrud-cqrs%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -267,12 +388,24 @@
 						class="d-block text-color py-10">Big data</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
 						class="d-block text-color py-10">Data science</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/investing"
 						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/maths"
@@ -326,15 +459,15 @@
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
@@ -344,9 +477,9 @@
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
 				<li class="list-inline-item">
@@ -354,17 +487,19 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
@@ -372,47 +507,47 @@
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
-				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
-				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
 			</ul>
 		</div>
 
@@ -420,7 +555,7 @@
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -439,7 +574,7 @@
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -530,6 +665,10 @@
 						
 						
 						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
 						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
 						
 						
@@ -549,7 +688,7 @@
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -558,7 +697,7 @@
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -573,7 +712,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-5">
-					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
 				</div>
 				<div class="col-lg-6 col-md-7">
 					<ul class="list-inline text-center text-md-right">
@@ -590,15 +729,15 @@
 </footer>
 <!-- /footer -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
 <script>hljs.highlightAll();</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
 
 <!-- Essential Scripts -->
 <!-- Google Map API -->
@@ -617,12 +756,11 @@
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

@@ -51,7 +51,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -63,8 +63,21 @@
                 href="https://www.danielsobrado.com/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/big-data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/big-data/"
+                />
+  </url><url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -77,19 +90,26 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/certification/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/categories/devops/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/confluent-certified-developer-exam-prep/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/blog/confluent-certified-developer-exam-prep/"
+                />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/kubernetes-ckad-preparation/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/tags/kafka/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -100,6 +120,15 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/devops/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/kubernetes/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/kubernetes-ckad-preparation/</loc>
+    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/automating-deployments-with-kubernetes-operators/</loc>
     <lastmod>2023-09-05T00:00:00+00:00</lastmod>
@@ -152,22 +181,6 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/"
                 />
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/big-data/</loc>
-    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/big-data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/big-data/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/kafka/</loc>
-    <lastmod>2023-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/kafka-operations-deep-dive/</loc>
     <lastmod>2023-08-17T00:00:00+00:00</lastmod>
@@ -1027,6 +1040,12 @@
     <loc>https://www.danielsobrado.com/blog/introduction-outlier-detection/</loc>
     <lastmod>2020-08-02T15:30:02+04:00</lastmod>
   </url><url>
+    <loc>https://www.danielsobrado.com/tags/clustering/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/clustering-categorical/</loc>
+    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/tags/spark/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -1128,9 +1147,6 @@
     <loc>https://www.danielsobrado.com/tags/time-series/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/clustering/</loc>
-    <lastmod>2017-07-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.danielsobrado.com/blog/customer-segmentation/</loc>
     <lastmod>2017-07-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -1164,6 +1180,12 @@
   </url><url>
     <loc>https://www.danielsobrado.com/tags/data/</loc>
     <lastmod>2016-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/crud-cqrs/</loc>
+    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/design-patterns/</loc>
+    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/numpy/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
@@ -1419,11 +1441,15 @@
   </url><url>
     <loc>https://www.danielsobrado.com/blog/back-pressure-and-error-handling-in-reactor/</loc>
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/building-restful-apis-with-webflux/</loc>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/challenges-of-concurrency/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/concurrency-and-memory-hierarchy/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/concurrency-in-modern-programming-languages/</loc>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/currying/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/author/daniel-sobrado/</loc>
     <xhtml:link

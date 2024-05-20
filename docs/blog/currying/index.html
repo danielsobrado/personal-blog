@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Currying in Java: Transforming Functions for Flexibility and Reusability</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Explore the concept of currying in Java, a technique that transforms a function to make it more flexible and reusable. Learn how to apply currying to create more composable and modular code.">
+    <meta name="author" content="Daniel Sobrado">
+    <meta name="generator" content="Hugo 0.117.0">
+
+    <!-- plugins -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick-theme.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/themify-icons/themify-icons.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/animate/animate.css ">
+    
+
+    <!-- Main Stylesheet -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/css/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://www.danielsobrado.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+
+</head><body><!-- navigation -->
+<header>
+  <!-- top header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline text-lg-right text-center">
+            <li class="list-inline-item">
+               <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
+            </li>
+            <li class="list-inline-item">
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nav bar -->
+  <div class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.danielsobrado.com/">
+          <img src="https://www.danielsobrado.com/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/programming/">Programming</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/data-science/">Data Science</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/others/">Others</a>
+            </li>
+            
+            
+          </ul>
+          
+        
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header><!-- preloader start -->
+	
+	<!-- preloader start -->
+	<div class="preloader">
+		
+		<img src="https://www.danielsobrado.com/images/preloader.gif" alt="preloader">
+		
+	</div>
+	<!-- preloader end -->
+	
+	<!-- preloader end -->
+	<div id="content">
+
+<!-- page title -->
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="text-white font-weight-bold">Currying in Java: Transforming Functions for Flexibility and Reusability</h2>
+				<ol class="breadcrumb">
+					<li><a href="https://www.danielsobrado.com/">Home</a></li>
+					<li>Currying in Java: Transforming Functions for Flexibility and Reusability</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /page title -->
+
+<!-- blog single -->
+<section>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/31NmdhS.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Currying in Java: Transforming Functions for Flexibility and Reusability</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 01 Jan</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h2 id="introduction">Introduction</h2>
+<p>In functional programming, currying is a technique that transforms a function with multiple arguments into a sequence of functions, each taking a single argument. This transformation allows for more flexible and reusable code by enabling partial application and function composition.</p>
+<h2 id="understanding-currying">Understanding Currying</h2>
+<p>Currying is named after the mathematician Haskell Curry, who developed the concept. The basic idea behind currying is to break down a function that takes multiple arguments into a series of functions, each accepting a single argument. The transformed function returns a new function that expects the next argument, and so on, until all arguments are provided.</p>
+<p>Here&rsquo;s a simple example to illustrate the concept:</p>
+<pre tabindex="0"><code>// Uncurried function
+Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; add = x -&gt; y -&gt; x + y;
+
+// Curried function
+Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; curriedAdd = x -&gt; y -&gt; x + y;
+</code></pre><p>In the uncurried version, the <code>add</code> function takes two arguments (<code>x</code> and <code>y</code>) and returns their sum. In the curried version, the <code>curriedAdd</code> function takes a single argument (<code>x</code>) and returns a new function that takes the second argument (<code>y</code>) and returns the sum.</p>
+<h2 id="benefits-of-currying">Benefits of Currying</h2>
+<p>Currying offers several benefits in terms of code flexibility, reusability, and composability:</p>
+<ol>
+<li><strong>Partial Application</strong>: Currying allows for partial application of functions. If a function expects multiple arguments, you can provide some of the arguments and receive a new function that expects the remaining arguments. This enables you to create specialized versions of functions with predefined arguments.</li>
+</ol>
+<pre tabindex="0"><code>Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; curriedMultiply = x -&gt; y -&gt; x * y;
+Function&lt;Integer, Integer&gt; double = curriedMultiply.apply(2);
+int result = double.apply(5); // 10
+</code></pre><p>In this example, we create a <code>curriedMultiply</code> function that multiplies two numbers. By applying the first argument (<code>2</code>), we create a new function <code>double</code> that doubles its input. We can then apply the second argument (<code>5</code>) to get the final result.</p>
+<ol start="2">
+<li><strong>Function Composition</strong>: Currying facilitates function composition by allowing functions to be combined and chained together. Since curried functions return new functions, they can be easily composed to create more complex behavior.</li>
+</ol>
+<pre tabindex="0"><code>Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; curriedAdd = x -&gt; y -&gt; x + y;
+Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; curriedMultiply = x -&gt; y -&gt; x * y;
+
+Function&lt;Integer, Function&lt;Integer, Integer&gt;&gt; composed = x -&gt; curriedMultiply.apply(x).compose(curriedAdd.apply(x));
+int result = composed.apply(3).apply(4); // (3 + 4) * 3 = 21
+</code></pre><p>Here, we compose the <code>curriedAdd</code> and <code>curriedMultiply</code> functions to create a new function <code>composed</code> that adds the input to itself and then multiplies the result by the original input.</p>
+<ol start="3">
+<li><strong>Improved Readability</strong>: Currying can make code more readable by breaking down complex functions into smaller, more focused functions. Each curried function has a specific responsibility, making the code easier to understand and maintain.</li>
+</ol>
+<h2 id="implementing-currying-in-java">Implementing Currying in Java</h2>
+<p>Java 8 introduced functional interfaces and lambda expressions, which make it easier to implement currying. However, Java does not have built-in support for currying, so we need to manually transform functions.</p>
+<p>Here&rsquo;s an example of implementing currying using Java&rsquo;s functional interfaces:</p>
+<pre tabindex="0"><code>@FunctionalInterface
+interface CurriedBiFunction&lt;T, U, R&gt; extends Function&lt;T, Function&lt;U, R&gt;&gt; {
+    static &lt;T, U, R&gt; CurriedBiFunction&lt;T, U, R&gt; curry(BiFunction&lt;T, U, R&gt; f) {
+        return t -&gt; u -&gt; f.apply(t, u);
+    }
+}
+
+BiFunction&lt;Integer, Integer, Integer&gt; add = (x, y) -&gt; x + y;
+CurriedBiFunction&lt;Integer, Integer, Integer&gt; curriedAdd = CurriedBiFunction.curry(add);
+
+int result = curriedAdd.apply(3).apply(4); // 7
+</code></pre><p>In this example, we define a <code>CurriedBiFunction</code> functional interface that extends <code>Function&lt;T, Function&lt;U, R&gt;&gt;</code>. It represents a curried version of a <code>BiFunction</code>. We provide a <code>curry</code> method that takes a <code>BiFunction</code> and returns its curried equivalent.</p>
+<p>We then create an <code>add</code> function using a <code>BiFunction</code> and curry it using the <code>CurriedBiFunction.curry</code> method. The resulting <code>curriedAdd</code> function can be applied in a curried manner, providing one argument at a time.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcurrying%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Currying%20in%20Java%3a%20Transforming%20Functions%20for%20Flexibility%20and%20Reusability&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcurrying%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcurrying%2f&amp;resubmit=true&amp;title=Currying%20in%20Java%3a%20Transforming%20Functions%20for%20Flexibility%20and%20Reusability"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Currying%20in%20Java%3a%20Transforming%20Functions%20for%20Flexibility%20and%20Reusability&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcurrying%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/functional%20programming">Functional programming</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/java">Java</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+      </div>
+      <!-- Sidebar -->
+<div class="col-lg-4">
+	<div class="bg-white px-4 py-100 sidebar-box-shadow">
+		<!-- categories -->
+		<div class="mb-50">
+			<h4 class="mb-3">Categories</h4>
+			<ul class="list-unstyled mb-0">
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/big-data"
+						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/data-science"
+						class="d-block text-color py-10">Data science</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/investing"
+						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/maths"
+						class="d-block text-color py-10">Maths</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/others"
+						class="d-block text-color py-10">Others</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/programming"
+						class="d-block text-color py-10">Programming</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Widget Recent Post -->
+		<div class="mb-50">
+			<h4 class="mb-3">Top Articles</h4>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-variable-precedence/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/HXoTjv8.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-variable-precedence/">Precedence of properties</a>
+					</h6>
+					<p class="meta">10 Feb 2019</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
+					</h6>
+					<p class="meta">23 Jul 2016</p>
+				</div>
+			</div>
+			
+		</div>
+		<!-- tags -->
+		<div class="mb-50">
+			<h4 class="mb-3">Tags</h4>
+			<ul class="list-inline tag-list">
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/functional-programming">Functional programming</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
+			</ul>
+		</div>
+
+		<!-- Widget Newsletter -->
+		<div class="newsletter">
+			<h4 class="mb-3">Stay Updated</h4>
+			<div id="mc_embed_signup">
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							</label>
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="FNAME" id="mce-FNAME" placeholder="First Name">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+								class="button"></div>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /blog-single -->
+
+
+	</div><!-- footer -->
+<footer class="bg-secondary">
+	<div class="py-100 border-bottom" style="border-color: #000000 !important">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="mb-5 mb-md-0 text-center text-md-left">
+						<!-- logo -->
+						<img class="mb-30" src="https://www.danielsobrado.com/images/logo-footer.png" alt="logo">
+						 <p class="text-white mb-30"> Personal Blog on Software Engineering, Data Engineering and Machine Learning. <!-- raw HTML omitted --> I also write about investments and my data-centric approach to sistematic investment.</p> 
+						<!-- social icon -->
+						<ul class="list-inline">
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://stackoverflow.com/users/2507462/daniel-sobrado">
+									<i class="ti-stack-overflow"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://github.com/danielsobrado">
+									<i class="ti-github"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.linkedin.com/in/dsobrado/">
+									<i class="ti-linkedin"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.instagram.com/daniel.sobrado/">
+									<i class="ti-instagram"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://twitter.com/danielinvest1">
+									<i class="ti-twitter-alt"></i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Investing</h4>
+					<ul class="footer-links">
+						
+						<li><a href="https://www.danielsobrado.com/investing/asset_allocation/">Asset Allocation</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/insiders/">Insiders</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/momentum/">Momentum</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/my-investing-philosophy/">My investing philosophy</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/backtesting/">Backtesting</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/value-investing/">Value Investing</a></li>
+						
+					</ul>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Technology</h4>
+					<ul class="footer-links">
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/programming/">Programming</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/data-science/">Data Science</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/others/">Others</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- subscribe form -->
+				<div class="col-lg-3 col-md-12 offset-lg-1">
+					<div class="mt-5 mt-lg-0 text-center text-md-left">
+						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
+						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
+						<div id="mc_embed_signup">
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll" class="position-relative">
+									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
+										placeholder="Enter Your Email">
+									<button class="btn-subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe-">
+										<i class="ti-arrow-right"></i>
+									</button>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="pt-4 pb-3 position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-5">
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
+				</div>
+				<div class="col-lg-6 col-md-7">
+					<ul class="list-inline text-center text-md-right">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- back to top -->
+		<button class="back-to-top">
+			<i class="ti-angle-up"></i>
+		</button>
+	</div>
+</footer>
+<!-- /footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
+<script>hljs.highlightAll();</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
+
+<!-- Essential Scripts -->
+<!-- Google Map API -->
+
+<!-- JS Plugins -->
+
+<script src="https://www.danielsobrado.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://www.danielsobrado.com/js/script.min.js"></script>
+</body>
+
+</html></body>
+
+</html>

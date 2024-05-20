@@ -6,7 +6,7 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Precedence of properties</title>
       <link>https://www.danielsobrado.com/blog/spark-variable-precedence/</link>
@@ -59,6 +59,15 @@
       
       <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
       <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
+    </item>
+    
+    <item>
+      <title>Confluent Certified Developer: Exam Prep and Practice Questions</title>
+      <link>https://www.danielsobrado.com/blog/confluent-certified-developer-exam-prep/</link>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/confluent-certified-developer-exam-prep/</guid>
+      <description>Exam Overview The CCDAK exam is designed to test your ability to develop Kafka-based applications using Confluent Platform.</description>
     </item>
     
     <item>
@@ -747,6 +756,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Clustering with Categorical Features</title>
+      <link>https://www.danielsobrado.com/blog/clustering-categorical/</link>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/clustering-categorical/</guid>
+      <description>Categorical Variables Categorical variables are a common type of data in customer segmentation tasks.</description>
+    </item>
+    
+    <item>
       <title>Introduction to REST API</title>
       <link>https://www.danielsobrado.com/blog/introduction-rest-api/</link>
       <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
@@ -861,6 +879,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       
       <guid>https://www.danielsobrado.com/blog/acid/</guid>
       <description>In 1983, Andreas Reuter and Theo Härder published the paper “Principles of Transaction-Oriented Database Recovery”, and minted the term ACID.</description>
+    </item>
+    
+    <item>
+      <title>CRUD vs CQRS: Exploring the Differences and Benefits</title>
+      <link>https://www.danielsobrado.com/blog/crud-cqrs/</link>
+      <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/crud-cqrs/</guid>
+      <description>CRUD: Create, Read, Update, Delete CRUD is a traditional approach to designing systems where a single model is used for both reading and writing data.</description>
     </item>
     
     <item>
@@ -990,6 +1017,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>Building RESTful APIs with WebFlux</title>
+      <link>https://www.danielsobrado.com/blog/building-restful-apis-with-webflux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/building-restful-apis-with-webflux/</guid>
+      <description>Introduction to Spring WebFlux Spring WebFlux is part of the Spring Framework and provides support for reactive programming in web applications.</description>
+    </item>
+    
+    <item>
       <title>Challenges of Concurrency</title>
       <link>https://www.danielsobrado.com/blog/challenges-of-concurrency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1014,6 +1050,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       
       <guid>https://www.danielsobrado.com/blog/concurrency-in-modern-programming-languages/</guid>
       <description>Java Java provides built-in support for concurrency through the java.util.concurrent package.</description>
+    </item>
+    
+    <item>
+      <title>Currying in Java: Transforming Functions for Flexibility and Reusability</title>
+      <link>https://www.danielsobrado.com/blog/currying/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/currying/</guid>
+      <description>Introduction In functional programming, currying is a technique that transforms a function with multiple arguments into a sequence of functions, each taking a single argument.</description>
     </item>
     
     <item>
