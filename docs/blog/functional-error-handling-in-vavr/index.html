@@ -11,11 +11,11 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Blog</title>
+    <title>Functional Error Handling in Vavr</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal blog of J. Daniel Sobrado">
+    <meta name="description" content="Vavr brings functional error handling to Java, providing a more expressive and composable approach to dealing with exceptions and failures.">
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
@@ -117,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -168,14 +138,14 @@
 	<div id="content">
 
 <!-- page title -->
-<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/images/background/page-title.jpg'),url('/images/background/page-title.jpg');">
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Blog</h2>
+				<h2 class="text-white font-weight-bold">Functional Error Handling in Vavr</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Blog</li>
+					<li>Functional Error Handling in Vavr</li>
 				</ol>
 			</div>
 		</div>
@@ -183,550 +153,170 @@
 </section>
 <!-- /page title -->
 
-<!-- blog -->
+<!-- blog single -->
 <section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 py-100">
-				<div class="row">
-					
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/Bwcxp78.jpg" alt="Advanced Troubleshooting in Kubernetes">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">29</h3>
-        <p class="mb-0">Aug</p>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/31NmdhS.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Functional Error Handling in Vavr</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 01 Jan</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h2 id="the-problem-with-exceptions">The Problem with Exceptions</h2>
+<p>Exceptions are the traditional way of handling errors in Java. However, they have several drawbacks:</p>
+<ol>
+<li>
+<p><strong>Exceptions disrupt the normal flow of control</strong>: When an exception is thrown, it interrupts the normal execution flow and requires explicit handling, often leading to complex and nested try-catch blocks.</p>
+</li>
+<li>
+<p><strong>Exceptions are not part of the method signature</strong>: The fact that a method may throw an exception is not explicitly visible in its signature. This can lead to unexpected behavior and runtime errors if the caller is unaware of the possible exceptions.</p>
+</li>
+<li>
+<p><strong>Exceptions are not composable</strong>: Combining multiple operations that may throw exceptions becomes cumbersome and requires explicit error handling at each step, making the code less readable and harder to reason about.</p>
+</li>
+</ol>
+<h2 id="vavrs-approach-to-error-handling">Vavr&rsquo;s Approach to Error Handling</h2>
+<p>Vavr addresses these issues by providing functional data types and utilities for error handling. The two main data types in Vavr for error handling are <code>Try</code> and <code>Either</code>.</p>
+<h3 id="try">Try</h3>
+<p><code>Try</code> is a monadic container that represents a computation that may either result in an exception (<code>Failure</code>) or return a successfully computed value (<code>Success</code>). It allows you to wrap a computation that may throw an exception and handle it in a functional way.</p>
+<p>Here&rsquo;s an example of using <code>Try</code> in Vavr:</p>
+<pre tabindex="0"><code>import io.vavr.control.Try;
+
+public class TryExample {
+    public static void main(String[] args) {
+        Try&lt;Integer&gt; result = Try.of(() -&gt; {
+            // Computation that may throw an exception
+            return Integer.parseInt(&#34;abc&#34;);
+        });
+
+        result.onSuccess(value -&gt; System.out.println(&#34;Success: &#34; + value))
+              .onFailure(exception -&gt; System.out.println(&#34;Failure: &#34; + exception.getMessage()));
+    }
+}
+</code></pre><p>In this example, we use <code>Try.of()</code> to wrap a computation that may throw an exception. If the computation is successful, the <code>onSuccess</code> callback is invoked with the computed value. If an exception occurs, the <code>onFailure</code> callback is invoked with the exception.</p>
+<h3 id="either">Either</h3>
+<p><code>Either</code> is a functional data type that represents a value of one of two possible types, <code>Left</code> or <code>Right</code>. It is commonly used for error handling, where <code>Left</code> represents an error and <code>Right</code> represents a successful value.</p>
+<p>Here&rsquo;s an example of using <code>Either</code> in Vavr:</p>
+<pre tabindex="0"><code>import io.vavr.control.Either;
+
+public class EitherExample {
+    public static void main(String[] args) {
+        Either&lt;String, Integer&gt; result = parseNumber(&#34;abc&#34;);
+
+        result.fold(
+            error -&gt; System.out.println(&#34;Error: &#34; + error),
+            value -&gt; System.out.println(&#34;Value: &#34; + value)
+        );
+    }
+
+    private static Either&lt;String, Integer&gt; parseNumber(String input) {
+        try {
+            return Either.right(Integer.parseInt(input));
+        } catch (NumberFormatException e) {
+            return Either.left(&#34;Invalid input: &#34; + input);
+        }
+    }
+}
+</code></pre><p>In this example, the <code>parseNumber</code> method returns an <code>Either&lt;String, Integer&gt;</code>, where <code>Left</code> represents an error message and <code>Right</code> represents a successfully parsed integer. We can use the <code>fold</code> method to handle both cases in a concise and expressive way.</p>
+<h2 id="benefits-of-functional-error-handling">Benefits of Functional Error Handling</h2>
+<p>Functional error handling with Vavr offers several benefits:</p>
+<ol>
+<li>
+<p><strong>Explicit error handling</strong>: Errors are explicitly represented as part of the return type, making it clear that a computation may fail and how to handle it.</p>
+</li>
+<li>
+<p><strong>Composability</strong>: Functional error handling types like <code>Try</code> and <code>Either</code> are composable, allowing you to combine and chain operations that may fail without the need for explicit error handling at each step.</p>
+</li>
+<li>
+<p><strong>Improved readability</strong>: Functional error handling leads to more readable and expressive code, as the error handling logic is separated from the main computation flow.</p>
+</li>
+<li>
+<p><strong>Forced error handling</strong>: With functional error handling, you are forced to handle errors explicitly, reducing the chances of overlooking or ignoring potential failures.</p>
+</li>
+</ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ffunctional-error-handling-in-vavr%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Functional%20Error%20Handling%20in%20Vavr&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ffunctional-error-handling-in-vavr%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ffunctional-error-handling-in-vavr%2f&amp;resubmit=true&amp;title=Functional%20Error%20Handling%20in%20Vavr"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Functional%20Error%20Handling%20in%20Vavr&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2ffunctional-error-handling-in-vavr%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/functional%20programming">Functional programming</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/java">Java</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
       </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/advanced-troubleshooting-in-kubernetes/" class="h4 font-primary text-dark">Advanced Troubleshooting in Kubernetes</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/paML8Su.png" alt="Kafka Operations: A Deep Dive">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">17</h3>
-        <p class="mb-0">Aug</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kafka-operations-deep-dive/" class="h4 font-primary text-dark">Kafka Operations: A Deep Dive</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/M2kVRUT.png" alt="Getting Started with Confluent REST Proxy">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">15</h3>
-        <p class="mb-0">Aug</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/getting-started-with-confluent-rest-proxy/" class="h4 font-primary text-dark">Getting Started with Confluent REST Proxy</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/KcID0ds.jpg" alt="Kubernetes Persistent Volume Claims Explained">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">11</h3>
-        <p class="mb-0">Aug</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/kubernetes-persistent-volume-claims-explained/" class="h4 font-primary text-dark">Kubernetes Persistent Volume Claims Explained</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/WvVUcii.png" alt="Understanding Confluent KSQL">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">11</h3>
-        <p class="mb-0">Aug</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/understanding-confluent-ksql/" class="h4 font-primary text-dark">Understanding Confluent KSQL</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-					<!-- blog-item -->
-					<div class="col-sm-6 mb-4">
-						<article class="card">
-  <div class="card-img-wrapper overlay-rounded-top">
-    <img class="card-img-top" src="https://i.imgur.com/o2GV7eW.png" alt="Monitoring and Metrics in Kafka">
-  </div>
-  <div class="card-body p-0">
-    <div class="d-flex">
-      <div class="py-3 px-4 border-right text-center">
-        <h3 class="text-primary mb-0">07</h3>
-        <p class="mb-0">Aug</p>
-      </div>
-      <div class="p-3">
-        <a href="https://www.danielsobrado.com/blog/monitoring-and-metrics-in-kafka/" class="h4 font-primary text-dark">Monitoring and Metrics in Kafka</a>
-        <p>by Daniel Sobrado</p>
-      </div>
-    </div>
-  </div>
-</article>
-					</div>
-					
-				</div>
-				<!-- pagination -->
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<nav class="mb-md-50">
-					<ul class="pagination justify-content-center align-items-center">
-						
-						
-						<li class="page-item prev">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">Prev</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/" class="page-link">
-								1
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/2/" class="page-link">
-								2
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item page-item active ">
-							<a href="https://www.danielsobrado.com/blog/page/3/" class="page-link">
-								3
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/4/" class="page-link">
-								4
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item">
-							<a href="https://www.danielsobrado.com/blog/page/5/" class="page-link">
-								5
-							</a>
-						</li>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						<li class="page-item next">
-							<a href="https://www.danielsobrado.com/blog/page/4/" class="page-link">Next</a>
-						</li>
-						
-					</ul>
-				</nav>
-				
-			</div>
-			<!-- Sidebar -->
+      <!-- Sidebar -->
 <div class="col-lg-4">
 	<div class="bg-white px-4 py-100 sidebar-box-shadow">
 		<!-- categories -->
@@ -936,10 +526,10 @@
 		</div>
 	</div>
 </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
-<!-- /blog -->
+<!-- /blog-single -->
 
 
 	</div><!-- footer -->
