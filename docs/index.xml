@@ -1008,6 +1008,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
     </item>
     
     <item>
+      <title>2 Pointers Pattern</title>
+      <link>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</guid>
+      <description>Two Pointers Pattern Concept The Two Pointers technique is an approach in programming used to solve various problems efficiently.</description>
+    </item>
+    
+    <item>
       <title>Applicative and Other Functional Concepts</title>
       <link>https://www.danielsobrado.com/blog/applicative-and-other-functional-concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1122,6 +1131,15 @@ Use RBAC to define what actions a user, or a system component, can perform.</des
       
       <guid>https://www.danielsobrado.com/blog/functional-java-lambda/</guid>
       <description>What are Lambda Expressions? A lambda expression is a simple way to represent an anonymous function in Java.</description>
+    </item>
+    
+    <item>
+      <title>Prefix Sum Pattern</title>
+      <link>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</guid>
+      <description>Prefix Sum Pattern Concept The Prefix Sum technique is a preprocessing method used to optimize certain types of array queries, particularly those involving sum calculations over subarrays.</description>
     </item>
     
     <item>
