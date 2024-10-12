@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Common Git Commands</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Common Git Commands, the basics.">
+    <meta name="author" content="Daniel Sobrado">
+    <meta name="generator" content="Hugo 0.117.0">
+
+    <!-- plugins -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick-theme.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/themify-icons/themify-icons.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/animate/animate.css ">
+    
+
+    <!-- Main Stylesheet -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/css/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://www.danielsobrado.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+
+</head><body><!-- navigation -->
+<header>
+  <!-- top header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline text-lg-right text-center">
+            <li class="list-inline-item">
+               <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
+            </li>
+            <li class="list-inline-item">
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nav bar -->
+  <div class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.danielsobrado.com/">
+          <img src="https://www.danielsobrado.com/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/programming/">Programming</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/data-science/">Data Science</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/others/">Others</a>
+            </li>
+            
+            
+          </ul>
+          
+        
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header><!-- preloader start -->
+	
+	<!-- preloader start -->
+	<div class="preloader">
+		
+		<img src="https://www.danielsobrado.com/images/preloader.gif" alt="preloader">
+		
+	</div>
+	<!-- preloader end -->
+	
+	<!-- preloader end -->
+	<div id="content">
+
+<!-- page title -->
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="text-white font-weight-bold">Common Git Commands</h2>
+				<ol class="breadcrumb">
+					<li><a href="https://www.danielsobrado.com/">Home</a></li>
+					<li>Common Git Commands</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /page title -->
+
+<!-- blog single -->
+<section>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/Sa94lAD.jpeg" alt="blog-image">
+          <div class="p-4">
+            <h3>Common Git Commands</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 07 Jul</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h1 id="git-command-guide">Git Command Guide</h1>
+<p>When I first stumbled upon Git, I was overwhelmed by its complexity. Who knew version control could be so intricate? But as I understood more, I realized something shocking: most developers barely scratch the surface of Git&rsquo;s capabilities. It&rsquo;s like having a Swiss Army knife and only using the bottle opener.</p>
+<p>So, I decided to embark on a journey. I&rsquo;d master Git, not just the basics, but the advanced stuff too. And you know what? It changed my development game entirely. In this article, I&rsquo;ll share what I&rsquo;ve learned - from security considerations that&rsquo;ll make you rethink your commit history, to performance hacks for those massive projects we all dread. Buckle up, it&rsquo;s going to be a wild ride through the Git universe!</p>
+<h2 id="the-basics">The Basics</h2>
+<h3 id="getting-started">Getting Started</h3>
+<p>Git&rsquo;s your trusty sidekick for version control. It&rsquo;s like having a time machine for your code. Let&rsquo;s kick things off with some essentials:</p>
+<h4 id="init">init</h4>
+<ul>
+<li>What it does: Starts a new Git adventure</li>
+<li>When to use it: Beginning a fresh project</li>
+<li>Try this: <code>git init my-awesome-project</code></li>
+</ul>
+<h4 id="clone">clone</h4>
+<ul>
+<li>What it does: Copies an existing code playground</li>
+<li>When to use it: Joining an ongoing project</li>
+<li>Give it a shot: <code>git clone https://github.com/cool-dev/amazing-repo.git</code></li>
+</ul>
+<h3 id="daily-drivers">Daily Drivers</h3>
+<p>These commands? You&rsquo;ll use them every day. Get ready to make them your new best friends:</p>
+<h4 id="add">add</h4>
+<ul>
+<li>What it does: Prepares your changes for the big stage</li>
+<li>When to use it: Getting your code ready for its debut</li>
+<li>Example: <code>git add file.txt</code> or <code>git add .</code> (for everything)</li>
+</ul>
+<h4 id="commit">commit</h4>
+<ul>
+<li>What it does: Saves your work for posterity</li>
+<li>When to use it: Immortalizing your code changes</li>
+<li>Try these:
+<ul>
+<li><code>git commit -m &quot;Add mind-blowing feature&quot;</code></li>
+<li><code>git commit -am &quot;Tweak configs like a boss&quot;</code></li>
+<li><code>git commit --amend</code> (oops, forgot something!)</li>
+</ul>
+</li>
+</ul>
+<h4 id="status">status</h4>
+<ul>
+<li>What it does: Gives you the lay of the land</li>
+<li>When to use it: Checking what&rsquo;s changed in your project</li>
+<li>Just type: <code>git status</code></li>
+</ul>
+<h2 id="branching-out">Branching Out</h2>
+<h3 id="creating-your-own-path">Creating Your Own Path</h3>
+<p>Branches are like parallel universes for your code. Here&rsquo;s how to wield this power:</p>
+<h4 id="branch">branch</h4>
+<ul>
+<li>What it does: Lists, creates, or zaps branches</li>
+<li>When to use it: Managing different lines of development</li>
+<li>Examples:
+<ul>
+<li><code>git branch new-crazy-idea</code></li>
+<li><code>git branch -d old-boring-idea</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="checkout">checkout</h4>
+<ul>
+<li>What it does: Hops between branches or restores files</li>
+<li>When to use it: Switching gears or undoing oopsies</li>
+<li>Try: <code>git checkout feature-bonanza</code> or <code>git checkout -- whoops.txt</code></li>
+</ul>
+<h4 id="merge">merge</h4>
+<ul>
+<li>What it does: Brings two worlds together</li>
+<li>When to use it: Combining your work with others</li>
+<li>Example: <code>git merge game-changing-feature</code></li>
+</ul>
+<h2 id="team-player">Team Player</h2>
+<h3 id="playing-nice-with-others">Playing Nice with Others</h3>
+<p>Git shines when you&rsquo;re collaborating. Here&rsquo;s how to be a Git team superstar:</p>
+<h4 id="remote">remote</h4>
+<ul>
+<li>What it does: Manages your project&rsquo;s connections</li>
+<li>When to use it: Adding or tweaking remote repos</li>
+<li>Try this: <code>git remote add upstream https://github.com/original/repo.git</code></li>
+</ul>
+<h4 id="fetch">fetch</h4>
+<ul>
+<li>What it does: Checks what&rsquo;s new without commitment</li>
+<li>When to use it: Seeing remote changes before merging</li>
+<li>Just type: <code>git fetch origin</code></li>
+</ul>
+<h4 id="pull">pull</h4>
+<ul>
+<li>What it does: Grabs and integrates remote changes</li>
+<li>When to use it: Updating your local branch</li>
+<li>Example: <code>git pull origin main</code></li>
+</ul>
+<h4 id="push">push</h4>
+<ul>
+<li>What it does: Shares your genius with the world</li>
+<li>When to use it: Uploading your local commits</li>
+<li>Go for it: <code>git push origin mind-blowing-feature</code></li>
+</ul>
+<h2 id="diving-deeper">Diving Deeper</h2>
+<h3 id="advanced-maneuvers">Advanced Maneuvers</h3>
+<p>Ready to level up? These commands separate the Git masters from the rest:</p>
+<h4 id="rebase">rebase</h4>
+<ul>
+<li>What it does: Rewrites history (use with caution!)</li>
+<li>When to use it: Keeping a clean, linear project history</li>
+<li>Carefully try: <code>git rebase main</code></li>
+</ul>
+<h4 id="cherry-pick">cherry-pick</h4>
+<ul>
+<li>What it does: Applies specific commits where you want</li>
+<li>When to use it: Selecting choice bits from one branch to another</li>
+<li>Example: <code>git cherry-pick abc123</code></li>
+</ul>
+<h4 id="stash">stash</h4>
+<ul>
+<li>
+<p>What it does: Temporarily shelves changes</p>
+</li>
+<li>
+<p>When to use it: Switching tasks without losing work</p>
+</li>
+<li>
+<p>Try these:</p>
+<ul>
+<li><code>git stash save &quot;Work in progress on feature X&quot;</code></li>
+<li><code>git stash list</code></li>
+<li><code>git stash apply stash@{2}</code></li>
+</ul>
+<h2 id="security-matters">Security Matters</h2>
+</li>
+</ul>
+<h3 id="oops-i-did-it-again">Oops, I Did It Again</h3>
+<p>Ever committed a password to your repo? Yeah, me too. It&rsquo;s embarrassing, but it happens. Here&rsquo;s how to fix it:</p>
+<ul>
+<li>Use <code>git filter-repo</code>. It&rsquo;s like a time machine for your commits.</li>
+<li>Try this: <code>git filter-repo --invert-paths --path secrets.txt</code></li>
+<li>Warning: This rewrites history. It&rsquo;s like editing your yearbook photos - use with caution!</li>
+</ul>
+<p>For the paranoid (or just really security-conscious):</p>
+<ul>
+<li>Check out <code>git-secret</code> or <code>BlackBox</code>. They&rsquo;re like a vault for your code secrets.</li>
+</ul>
+<h2 id="speed-it-up">Speed It Up</h2>
+<p>Working with a repo that&rsquo;s bigger than your last Netflix binge? Try these:</p>
+<ul>
+<li>Shallow clones: <code>git clone --depth 1</code>. It&rsquo;s like skimming a book instead of reading every page.</li>
+<li>Sparse checkout: Only grab what you need. It&rsquo;s like packing light for a code trip.</li>
+<li>Partial clone: <code>git clone --filter=blob:none</code>. Skip the heavy lifting!</li>
+</ul>
+<h2 id="merge-conflicts-the-final-boss">Merge Conflicts: The Final Boss</h2>
+<p>Merge conflicts are like puzzles. Frustrating, headache-inducing puzzles. Here&rsquo;s your cheat sheet:</p>
+<ol>
+<li><code>git merge --abort</code>: The &ldquo;I give up&rdquo; button. No shame in it!</li>
+<li><code>git mergetool</code>: For when you&rsquo;re feeling brave.</li>
+<li>Look for <code>&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;</code>. They&rsquo;re like treasure map markers, but for code.</li>
+<li>Fix it, stage it, commit it. Victory dance optional, but recommended.</li>
+</ol>
+<h2 id="when-git-goes-wrong">When Git Goes Wrong</h2>
+<p>Because it will. Trust me.</p>
+<ul>
+<li>&ldquo;Unrelated histories&rdquo;? Try <code>git merge --allow-unrelated-histories</code>. It&rsquo;s like introducing two strangers at a party.</li>
+<li>Detached HEAD? Sounds painful. Fix it with <code>git switch -c new-branch-name</code>.</li>
+<li>Can&rsquo;t push? <code>git pull --rebase</code> first. It&rsquo;s like letting others go through the door before you.</li>
+</ul>
+<h2 id="git-meet-robots">Git, Meet Robots</h2>
+<p>Integrating with CI/CD is like teaching Git to work while you sleep:</p>
+<ul>
+<li>GitHub Actions: Your personal code butler.</li>
+<li>GitLab CI/CD: For when you want your pipeline to be as cool as your code.</li>
+<li>Jenkins: The OG of automation.</li>
+</ul>
+<h2 id="git-your-way">Git, Your Way</h2>
+<p>Aliases are like custom shortcuts. Here are some of my favorites:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global alias.co checkout
+</span></span><span style="display:flex;"><span>git config --global alias.lg <span style="color:#e6db74">&#34;log --oneline --decorate --all --graph&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global alias.s status
+</span></span></code></pre></div><p>Now <code>git s</code> feels like sending a quick text to your repo.</p>
+<h2 id="join-the-party">Join the Party</h2>
+<p>Contributing to open source is like joining a massive coding potluck. Here&rsquo;s how:</p>
+<ol>
+<li>Fork it (not with a fork, obviously).</li>
+<li>Clone it.</li>
+<li>Branch it.</li>
+<li>Change it.</li>
+<li>Push it.</li>
+<li>Pull request it.</li>
+<li>Wait anxiously for feedback.</li>
+</ol>
+<h2 id="name-that-branch">Name That Branch</h2>
+<ul>
+<li>Use prefixes: <code>feature/</code>, <code>bugfix/</code>, <code>hotfix/</code>, <code>release/</code>.</li>
+<li>Be specific: <code>feature/user-authentication</code> is better than <code>feature/new-stuff</code>.</li>
+<li>Pro tip: Add issue numbers. <code>feature/123-add-login</code> tells a story.</li>
+</ul>
+<h2 id="git-everywhere">Git Everywhere</h2>
+<ul>
+<li>Windows user? Git Bash is your new best friend.</li>
+<li>IDE junkie? Visual Studio Code, IntelliJ IDEA, and Eclipse have got your back.</li>
+<li>Feeling cloudy? Try Gitpod or GitHub Codespaces. It&rsquo;s like coding in the future.</li>
+</ul>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>There you have it - from Git newbie to command line ninja! We&rsquo;ve covered the essentials and even peeked at some advanced techniques. Remember, Git&rsquo;s power lies in practice. Start small, commit often, and before you know it, you&rsquo;ll be version controlling like a pro.</p>
+<p>Feeling overwhelmed? Don&rsquo;t sweat it. Every developer&rsquo;s been there. Bookmark this guide, keep experimenting, and you&rsquo;ll be amazed at how quickly these commands become second nature.</p>
+<p>Now go forth and Git with confidence!</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommon-git-commands%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Common%20Git%20Commands&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommon-git-commands%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommon-git-commands%2f&amp;resubmit=true&amp;title=Common%20Git%20Commands"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Common%20Git%20Commands&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcommon-git-commands%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/git">Git</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+      </div>
+      <!-- Sidebar -->
+<div class="col-lg-4">
+	<div class="bg-white px-4 py-100 sidebar-box-shadow">
+		<!-- categories -->
+		<div class="mb-50">
+			<h4 class="mb-3">Categories</h4>
+			<ul class="list-unstyled mb-0">
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/big-data"
+						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/data-science"
+						class="d-block text-color py-10">Data science</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/investing"
+						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/maths"
+						class="d-block text-color py-10">Maths</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/others"
+						class="d-block text-color py-10">Others</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/programming"
+						class="d-block text-color py-10">Programming</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Widget Recent Post -->
+		<div class="mb-50">
+			<h4 class="mb-3">Top Articles</h4>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-variable-precedence/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/HXoTjv8.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-variable-precedence/">Precedence of properties</a>
+					</h6>
+					<p class="meta">10 Feb 2019</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
+					</h6>
+					<p class="meta">23 Jul 2016</p>
+				</div>
+			</div>
+			
+		</div>
+		<!-- tags -->
+		<div class="mb-50">
+			<h4 class="mb-3">Tags</h4>
+			<ul class="list-inline tag-list">
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dsa">Dsa</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/functional-programming">Functional programming</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/git">Git</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/performance">Performance</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
+			</ul>
+		</div>
+
+		<!-- Widget Newsletter -->
+		<div class="newsletter">
+			<h4 class="mb-3">Stay Updated</h4>
+			<div id="mc_embed_signup">
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							</label>
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="FNAME" id="mce-FNAME" placeholder="First Name">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+								class="button"></div>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /blog-single -->
+
+
+	</div><!-- footer -->
+<footer class="bg-secondary">
+	<div class="py-100 border-bottom" style="border-color: #000000 !important">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="mb-5 mb-md-0 text-center text-md-left">
+						<!-- logo -->
+						<img class="mb-30" src="https://www.danielsobrado.com/images/logo-footer.png" alt="logo">
+						 <p class="text-white mb-30"> Personal Blog on Software Engineering, Data Engineering and Machine Learning. <!-- raw HTML omitted --> I also write about investments and my data-centric approach to sistematic investment.</p> 
+						<!-- social icon -->
+						<ul class="list-inline">
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://stackoverflow.com/users/2507462/daniel-sobrado">
+									<i class="ti-stack-overflow"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://github.com/danielsobrado">
+									<i class="ti-github"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.linkedin.com/in/dsobrado/">
+									<i class="ti-linkedin"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.instagram.com/daniel.sobrado/">
+									<i class="ti-instagram"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://twitter.com/danielinvest1">
+									<i class="ti-twitter-alt"></i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Investing</h4>
+					<ul class="footer-links">
+						
+						<li><a href="https://www.danielsobrado.com/investing/asset_allocation/">Asset Allocation</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/insiders/">Insiders</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/momentum/">Momentum</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/my-investing-philosophy/">My investing philosophy</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/backtesting/">Backtesting</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/value-investing/">Value Investing</a></li>
+						
+					</ul>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Technology</h4>
+					<ul class="footer-links">
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/programming/">Programming</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/data-science/">Data Science</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/others/">Others</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- subscribe form -->
+				<div class="col-lg-3 col-md-12 offset-lg-1">
+					<div class="mt-5 mt-lg-0 text-center text-md-left">
+						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
+						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
+						<div id="mc_embed_signup">
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll" class="position-relative">
+									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
+										placeholder="Enter Your Email">
+									<button class="btn-subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe-">
+										<i class="ti-arrow-right"></i>
+									</button>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="pt-4 pb-3 position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-5">
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
+				</div>
+				<div class="col-lg-6 col-md-7">
+					<ul class="list-inline text-center text-md-right">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- back to top -->
+		<button class="back-to-top">
+			<i class="ti-angle-up"></i>
+		</button>
+	</div>
+</footer>
+<!-- /footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
+<script>hljs.highlightAll();</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
+
+<!-- Essential Scripts -->
+<!-- Google Map API -->
+
+<!-- JS Plugins -->
+
+<script src="https://www.danielsobrado.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://www.danielsobrado.com/js/script.min.js"></script>
+</body>
+
+</html></body>
+
+</html>
