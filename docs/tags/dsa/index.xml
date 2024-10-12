@@ -5,23 +5,24 @@
     <link>https://www.danielsobrado.com/tags/dsa/</link>
     <description>Recent content in DSA on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://www.danielsobrado.com/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2 Pointers Pattern</title>
-      <link>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</guid>
-      <description>Two Pointers Pattern Concept The Two Pointers technique is an approach in programming used to solve various problems efficiently.</description>
-    </item>
-    
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prefix Sum Pattern</title>
       <link>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</guid>
-      <description>Prefix Sum Pattern Concept The Prefix Sum technique is a preprocessing method used to optimize certain types of array queries, particularly those involving sum calculations over subarrays.</description>
+      <description>The Two Pointers Pattern: Your Ticket to Acing Array and String Interviews Hey there, coding interview warriors!</description>
+    </item>
+    
+    <item>
+      <title>2 Pointers Pattern</title>
+      <link>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</link>
+      <pubDate>Thu, 17 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</guid>
+      <description>Two Pointers Pattern Concept The Two Pointers technique is an approach in programming used to solve various problems efficiently.</description>
     </item>
     
   </channel>

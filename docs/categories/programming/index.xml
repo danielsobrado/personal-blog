@@ -71,6 +71,24 @@
     </item>
     
     <item>
+      <title>Prefix Sum Pattern</title>
+      <link>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</link>
+      <pubDate>Mon, 21 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</guid>
+      <description>The Two Pointers Pattern: Your Ticket to Acing Array and String Interviews Hey there, coding interview warriors!</description>
+    </item>
+    
+    <item>
+      <title>2 Pointers Pattern</title>
+      <link>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</link>
+      <pubDate>Thu, 17 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</guid>
+      <description>Two Pointers Pattern Concept The Two Pointers technique is an approach in programming used to solve various problems efficiently.</description>
+    </item>
+    
+    <item>
       <title>ACID Properties</title>
       <link>https://www.danielsobrado.com/blog/acid/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
@@ -122,15 +140,6 @@
       
       <guid>https://www.danielsobrado.com/blog/shared-database/</guid>
       <description>The Problem You&amp;rsquo;ve been asked to write a service that requires some information from one or multiple databases, accessing a database is easy, and writing some SQL is fast, I can do that!</description>
-    </item>
-    
-    <item>
-      <title>2 Pointers Pattern</title>
-      <link>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</guid>
-      <description>Two Pointers Pattern Concept The Two Pointers technique is an approach in programming used to solve various problems efficiently.</description>
     </item>
     
     <item>
@@ -239,15 +248,6 @@
       
       <guid>https://www.danielsobrado.com/blog/functional-java-lambda/</guid>
       <description>What are Lambda Expressions? A lambda expression is a simple way to represent an anonymous function in Java.</description>
-    </item>
-    
-    <item>
-      <title>Prefix Sum Pattern</title>
-      <link>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</guid>
-      <description>Prefix Sum Pattern Concept The Prefix Sum technique is a preprocessing method used to optimize certain types of array queries, particularly those involving sum calculations over subarrays.</description>
     </item>
     
     <item>

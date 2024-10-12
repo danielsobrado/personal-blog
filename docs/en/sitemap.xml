@@ -1144,6 +1144,15 @@
                 href="https://www.danielsobrado.com/investing/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/tags/dsa/</loc>
+    <lastmod>2018-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</loc>
+    <lastmod>2018-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</loc>
+    <lastmod>2018-05-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.danielsobrado.com/blog/fast-fourier-transform/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -1431,8 +1440,6 @@
     <loc>https://www.danielsobrado.com/tags/machine-data/</loc>
     <lastmod>2013-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/two-pointer-dsa-pattern/</loc>
-  </url><url>
     <loc>https://www.danielsobrado.com/blog/applicative-and-other-functional-concepts/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/author/</loc>
@@ -1471,8 +1478,6 @@
                 href="https://www.danielsobrado.com/author/daniel-sobrado/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/dsa/</loc>
-  </url><url>
     <loc>https://www.danielsobrado.com/blog/fetch-operations-in-concurrency/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/functional-error-handling-in-vavr/</loc>
@@ -1484,8 +1489,6 @@
     <loc>https://www.danielsobrado.com/blog/functional-java-functional-interfaces/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/functional-java-lambda/</loc>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/prefix-sum-dsa-pattern/</loc>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/spinlocks-and-atomic-flags/</loc>
   </url><url>

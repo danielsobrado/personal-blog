@@ -164,7 +164,7 @@
             <h3>Prefix Sum Pattern</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 01 Jan</li>
+              <li class="list-inline-item text-color">On 21 May</li>
               <li class="list-inline-item text-color">Category:
                 
                 <a class="text-primary" href="https://www.danielsobrado.com/categories/programming"> Programming</a>
@@ -172,170 +172,118 @@
               </li>
             </ul>
             <div class="post-content">
-              <h1 id="prefix-sum-pattern">Prefix Sum Pattern</h1>
-<h2 id="concept">Concept</h2>
-<p>The Prefix Sum technique is a preprocessing method used to optimize certain types of array queries, particularly those involving sum calculations over subarrays.</p>
-<p><img src="https://i.imgur.com/LvJ4f6T.jpeg" alt="Prefix Sum Pattern"></p>
-<p><strong>Key Insight:</strong> By preprocessing the array to create cumulative sums, we can perform multiple subarray sum queries in constant time.</p>
-<p><strong>Core Idea:</strong> Create a new array where each element at index <code>i</code> represents the sum of all elements from the start of the original array up to index <code>i</code>.</p>
-<h2 id="implementation">Implementation</h2>
-<h3 id="basic-prefix-sum-array-creation">Basic Prefix Sum Array Creation</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_prefix_sum</span>(nums):
-</span></span><span style="display:flex;"><span>    prefix <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> (len(nums) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># The prefix array has an extra space at the beginning (prefix[0] = 0)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># This simplifies the calculation of the sum from index i to j</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># because prefix[j+1] - prefix[i] gives the sum nums[i] to nums[j]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(prefix)):
-</span></span><span style="display:flex;"><span>        prefix[i] <span style="color:#f92672">=</span> prefix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> prefix
-</span></span></code></pre></div><h3 id="using-prefix-sum-for-range-queries">Using Prefix Sum for Range Queries</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">range_sum</span>(prefix, i, j):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> prefix[j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> prefix[i]
-</span></span></code></pre></div><h3 id="visual-representation">Visual Representation</h3>
-<p>Here&rsquo;s a simple visualization of how a prefix sum array is constructed:</p>
-<pre tabindex="0"><code>Original array:   [3,  1,  4,  2,  5]
-                   |   |   |   |   |
-                   v   v   v   v   v
-Prefix sum array: [0,  3,  4,  8, 10, 15]
-                   ^
-                   |
-              Extra zero
-</code></pre><h3 id="2d-prefix-sum">2D Prefix Sum</h3>
-<p>For problems involving 2D arrays, we can extend the prefix sum concept:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_2d_prefix_sum</span>(matrix):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> matrix <span style="color:#f92672">or</span> <span style="color:#f92672">not</span> matrix[<span style="color:#ae81ff">0</span>]:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> []
-</span></span><span style="display:flex;"><span>    rows, cols <span style="color:#f92672">=</span> len(matrix), len(matrix[<span style="color:#ae81ff">0</span>])
-</span></span><span style="display:flex;"><span>    prefix <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> (cols <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(rows <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, rows <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, cols <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
-</span></span><span style="display:flex;"><span>            prefix[i][j] <span style="color:#f92672">=</span> (prefix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j] <span style="color:#f92672">+</span> prefix[i][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] 
-</span></span><span style="display:flex;"><span>                            <span style="color:#f92672">-</span> prefix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> matrix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> prefix
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Query sum of submatrix from (r1,c1) to (r2,c2)</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query_submatrix_sum</span>(prefix, r1, c1, r2, c2):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (prefix[r2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][c2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> prefix[r1][c2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] 
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> prefix[r2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][c1] <span style="color:#f92672">+</span> prefix[r1][c1])
-</span></span></code></pre></div><h2 id="use-cases">Use Cases</h2>
-<p>Use the Prefix Sum pattern when you need to:</p>
+              <h1 id="the-two-pointers-pattern-your-ticket-to-acing-array-and-string-interviews">The Two Pointers Pattern: Your Ticket to Acing Array and String Interviews</h1>
+<p>Hey there, coding interview warriors! Ready to add another powerful weapon to your algorithmic arsenal? Today, we&rsquo;re diving into the Two Pointers pattern – a technique that&rsquo;s going to make your interviewers sit up and take notice. Trust me, mastering this could be the difference between a &ldquo;meh&rdquo; solution and a &ldquo;wow, you&rsquo;re hired!&rdquo; moment.</p>
+<h2 id="concept-the-dynamic-duo-of-data-structures">Concept: The Dynamic Duo of Data Structures</h2>
+<p>The Two Pointers technique is like having a tag team working through your data structures. It&rsquo;s not just for sorted arrays (though it shines there) – it&rsquo;s a versatile approach that can tackle unsorted arrays, strings, linked lists, and more.</p>
+<p><img src="https://i.imgur.com/ZUDVAWM.jpeg" alt="2 Pointers Pattern"></p>
+<p><strong>Key Insight:</strong> Imagine having two fingers scanning through your data, often moving in opposite directions or at different speeds. That&rsquo;s the essence of Two Pointers.</p>
+<p><strong>Core Idea:</strong> By cleverly manipulating these two pointers, you can often turn a nested-loop nightmare (O(n²)) into a smooth, single-pass solution (O(n)). It&rsquo;s like magic, but it&rsquo;s just smart coding!</p>
+<h2 id="implementation-strategies-choose-your-fighter">Implementation Strategies: Choose Your Fighter</h2>
+<h3 id="1-opposite-directions-the-classic-approach">1. Opposite Directions: The Classic Approach</h3>
+<p>This is like having two people start at opposite ends of a rope and walking towards each other. Here&rsquo;s how it looks in code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">opposite_direction_example</span>(arr):
+</span></span><span style="display:flex;"><span>    left, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(arr) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Do something clever with arr[left] and arr[right]</span>
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h3 id="2-same-direction-the-tortoise-and-hare">2. Same Direction: The Tortoise and Hare</h3>
+<p>Sometimes, you want both pointers moving the same way, but at different speeds. It&rsquo;s like the story of the tortoise and the hare, but in this case, they&rsquo;re working together:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">same_direction_example</span>(arr):
+</span></span><span style="display:flex;"><span>    slow <span style="color:#f92672">=</span> fast <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> fast <span style="color:#f92672">&lt;</span> len(arr):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Use slow and fast pointers to do something amazing</span>
+</span></span><span style="display:flex;"><span>        slow <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        fast <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h2 id="example-problems-lets-get-our-hands-dirty">Example Problems: Let&rsquo;s Get Our Hands Dirty</h2>
+<h3 id="1-remove-duplicates-from-sorted-array-leetcode-26">1. Remove Duplicates from Sorted Array (LeetCode #26)</h3>
+<p>This problem is like cleaning up your sock drawer – you want to keep one of each pair and toss the rest:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">remove_duplicates</span>(nums):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> nums:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(nums)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nums[j] <span style="color:#f92672">!=</span> nums[i]:
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            nums[i] <span style="color:#f92672">=</span> nums[j]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># Length of the array without duplicates</span>
+</span></span></code></pre></div><h3 id="2-valid-palindrome-leetcode-125">2. Valid Palindrome (LeetCode #125)</h3>
+<p>Checking if a string reads the same backward as forward, ignoring non-alphanumeric characters:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_palindrome</span>(s):
+</span></span><span style="display:flex;"><span>    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, len(s) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> j:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> j <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> s[i]<span style="color:#f92672">.</span>isalnum():
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> j <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> s[j]<span style="color:#f92672">.</span>isalnum():
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> s[i]<span style="color:#f92672">.</span>lower() <span style="color:#f92672">!=</span> s[j]<span style="color:#f92672">.</span>lower():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        j <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><h3 id="3-merge-sorted-array-leetcode-88">3. Merge Sorted Array (LeetCode #88)</h3>
+<p>This is like shuffling two decks of cards together, but backwards:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge</span>(nums1, m, nums2, n):
+</span></span><span style="display:flex;"><span>    i, j, k <span style="color:#f92672">=</span> m <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, m <span style="color:#f92672">+</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nums1[i] <span style="color:#f92672">&gt;</span> nums2[j]:
+</span></span><span style="display:flex;"><span>            nums1[k] <span style="color:#f92672">=</span> nums1[i]
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            nums1[k] <span style="color:#f92672">=</span> nums2[j]
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        k <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        nums1[k] <span style="color:#f92672">=</span> nums2[j]
+</span></span><span style="display:flex;"><span>        j <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        k <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h2 id="types-of-problems-where-two-pointers-shine">Types of Problems: Where Two Pointers Shine</h2>
 <ol>
-<li>Perform multiple sum queries on subarrays</li>
-<li>Calculate cumulative sums efficiently</li>
-<li>Solve problems involving continuous sequences or ranges</li>
+<li>String Manipulation: Palindromes, substring searches, you name it</li>
+<li>Array Operations: Removing duplicates, partitioning arrays, finding pairs or triplets</li>
+<li>Linked List Problems: Cycle detection, finding middle elements</li>
+<li>Sliding Window Problems: Finding subarrays with specific properties</li>
+<li>Two Sum and its variations: Finding pairs, triplets, or even k-tuples with a given sum</li>
 </ol>
-<h2 id="example-problem">Example Problem</h2>
-<h3 id="subarray-sum-divisible-by-k">Subarray Sum Divisible by K</h3>
-<p><strong>Problem:</strong> Given an array of integers <code>nums</code> and an integer <code>k</code>, return the number of subarrays whose sum is divisible by <code>k</code>.</p>
-<p><strong>Solution:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">subarraysDivByK</span>(nums, k):
-</span></span><span style="display:flex;"><span>    prefix_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>    count <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>: <span style="color:#ae81ff">1</span>}  <span style="color:#75715e"># Initialize with 0 sum occurring once</span>
-</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> num <span style="color:#f92672">in</span> nums:
-</span></span><span style="display:flex;"><span>        prefix_sum <span style="color:#f92672">=</span> (prefix_sum <span style="color:#f92672">+</span> num) <span style="color:#f92672">%</span> k
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> prefix_sum <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
-</span></span><span style="display:flex;"><span>            prefix_sum <span style="color:#f92672">+=</span> k  <span style="color:#75715e"># Handle negative numbers</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> prefix_sum <span style="color:#f92672">in</span> count:
-</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">+=</span> count[prefix_sum]
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        count[prefix_sum] <span style="color:#f92672">=</span> count<span style="color:#f92672">.</span>get(prefix_sum, <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example usage</span>
-</span></span><span style="display:flex;"><span>nums <span style="color:#f92672">=</span> [<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>k <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span>print(subarraysDivByK(nums, k))  <span style="color:#75715e"># Output: 7</span>
-</span></span></code></pre></div><h2 id="complexity-analysis">Complexity Analysis</h2>
+<h2 id="advanced-techniques-level-up-your-game">Advanced Techniques: Level Up Your Game</h2>
+<ol>
+<li><strong>Sliding Window:</strong> It&rsquo;s like having a movable frame over your data. Great for substring problems!</li>
+<li><strong>Fast and Slow Pointers:</strong> Perfect for cycle detection. Ever heard of Floyd&rsquo;s Tortoise and Hare?</li>
+<li><strong>K Pointers:</strong> Why stop at two? Some problems need three or more pointers.</li>
+<li><strong>Two Pointers in Graphs or Trees:</strong> Less common, but oh so impressive when you pull it off.</li>
+</ol>
+<h2 id="when-to-use-and-when-to-pass">When to Use and When to Pass</h2>
+<h3 id="use-two-pointers-when">Use Two Pointers When:</h3>
 <ul>
-<li><strong>Time Complexity:</strong>
+<li>You&rsquo;re examining combinations of elements in arrays, strings, or linked lists</li>
+<li>You&rsquo;ve got sorted data and want to leverage that property</li>
+<li>You&rsquo;re looking at a problem and thinking, &ldquo;Ugh, nested loops? There&rsquo;s got to be a better way!&rdquo;</li>
+</ul>
+<h3 id="maybe-skip-it-when">Maybe Skip It When:</h3>
 <ul>
-<li>Preprocessing: O(n)</li>
-<li>Each query: O(1)</li>
+<li>Your data is unsorted and sorting it would be more trouble than it&rsquo;s worth</li>
+<li>You&rsquo;re dealing with data structures that don&rsquo;t play nice with random access</li>
+<li>The problem requires you to look at literally every possible combination</li>
 </ul>
-</li>
-<li><strong>Space Complexity:</strong> O(n) for storing the prefix sum array</li>
-</ul>
-<h2 id="additional-leetcode-problems">Additional LeetCode Problems</h2>
+<h2 id="common-pitfalls-dont-fall-into-these-traps">Common Pitfalls: Don&rsquo;t Fall Into These Traps</h2>
 <ol>
-<li>Range Sum Query - Immutable (LeetCode #303)</li>
-<li>Contiguous Array (LeetCode #525)</li>
-<li>Subarray Sum Equals K (LeetCode #560)</li>
-<li>Maximum Size Subarray Sum Equals k (LeetCode #325)</li>
-<li>Range Sum Query 2D - Immutable (LeetCode #304)</li>
-<li>Range Sum Query - Mutable (LeetCode #307)</li>
+<li><strong>Off-by-One Errors:</strong> Always double-check your loop conditions. Is it <code>i &lt; j</code> or <code>i &lt;= j</code>?</li>
+<li><strong>Infinite Loops:</strong> Make sure your pointers are actually moving, especially in fast-slow scenarios</li>
+<li><strong>Boundary Conditions:</strong> Empty arrays or lists with a single element can be sneaky. Handle them with care!</li>
+<li><strong>Unsorted Data Surprises:</strong> If the data&rsquo;s not sorted, you might need to do some preprocessing</li>
 </ol>
-<h2 id="limitations-and-when-not-to-use-prefix-sum">Limitations and When Not to Use Prefix Sum</h2>
-<p>While prefix sum is a powerful technique, it&rsquo;s not always the best choice:</p>
+<h2 id="practice-makes-perfect-leetcode-problems-to-tackle">Practice Makes Perfect: LeetCode Problems to Tackle</h2>
 <ol>
-<li><strong>Dynamic Arrays:</strong> If the array is frequently updated, recalculating prefix sums can be inefficient. In such cases, segment trees or Binary Indexed Trees (Fenwick Trees) might be more appropriate.</li>
-<li><strong>Space Constraints:</strong> For very large arrays, storing an additional prefix sum array might not be feasible.</li>
-<li><strong>Single Query Problems:</strong> If you only need to perform a single range sum query, calculating it directly might be simpler and more efficient.</li>
+<li>Two Sum II - Input Array Is Sorted (#167)</li>
+<li>Move Zeroes (#283)</li>
+<li>Linked List Cycle (#141)</li>
+<li>Container With Most Water (#11)</li>
+<li>3Sum (#15)</li>
+<li>Minimum Size Subarray Sum (#209)</li>
 </ol>
-<h2 id="common-issues-and-edge-cases">Common Issues and Edge Cases</h2>
-<ol>
-<li><strong>Index Boundaries:</strong> Be careful with index boundaries, especially in 0-indexed languages. Always test your implementation with edge cases like querying the first or last element.</li>
-<li><strong>Modular Arithmetic:</strong> Ensure that modulo operations handle negative numbers correctly. In languages where <code>%</code> doesn&rsquo;t handle negatives as expected, use <code>((n % k) + k) % k</code>.</li>
-<li><strong>Empty or Single-Element Arrays:</strong> Ensure your code handles these scenarios without errors.</li>
-<li><strong>Integer Overflow:</strong> For large arrays or long sequences of operations, be aware of potential integer overflow issues.</li>
-</ol>
-<h2 id="space-optimization-techniques">Space Optimization Techniques</h2>
-<ol>
-<li><strong>In-Place Calculation:</strong> If modifying the original array is acceptable, you can compute prefix sums in-place:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">in_place_prefix_sum</span>(nums):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(nums)):
-</span></span><span style="display:flex;"><span>        nums[i] <span style="color:#f92672">+=</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> nums
-</span></span></code></pre></div></li>
-<li><strong>Rolling Sum:</strong> For some problems, you may only need to maintain a rolling sum rather than storing the entire prefix sum array.</li>
-</ol>
-<h2 id="related-data-structures">Related Data Structures</h2>
-<ol>
-<li><strong>Fenwick Trees (Binary Indexed Trees):</strong> Efficient for dynamic prefix sums with update and query operations in logarithmic time.</li>
-<li><strong>Segment Trees:</strong> Useful for a wider range of range queries and updates, not limited to just sums.</li>
-</ol>
-<h2 id="real-world-applications">Real-World Applications</h2>
-<ol>
-<li><strong>Image Processing:</strong> Prefix sums are used in creating summed-area tables, which help in quickly computing the sum of pixel values in a rectangular subset of an image.</li>
-<li><strong>Financial Analysis:</strong> Computing cumulative returns or analyzing moving averages in stock market data.</li>
-<li><strong>Database Systems:</strong> Optimizing range sum queries in column-oriented databases.</li>
-</ol>
-<h2 id="additional-techniques">Additional Techniques</h2>
-<ol>
-<li>
-<p><strong>Handling Negative Numbers:</strong> When dealing with modular arithmetic in prefix sums, be cautious with negative numbers. As shown in the &ldquo;Subarray Sum Divisible by K&rdquo; example, you may need to add <code>k</code> to negative remainders to keep them in the range <code>[0, k-1]</code>.</p>
-</li>
-<li>
-<p><strong>Cumulative Property:</strong> Prefix sum leverages the cumulative property of addition. This allows us to reduce many range-based problems to the difference of two prefix sums.</p>
-</li>
-<li>
-<p><strong>Circular Array Problems:</strong> Prefix sum can be adapted for circular array problems by concatenating the array with itself and using a sliding window approach.</p>
-</li>
-<li>
-<p><strong>Memory Optimization:</strong> In some cases, you don&rsquo;t need to store the entire prefix sum array. As seen in the &ldquo;Subarray Sum Divisible by K&rdquo; example, you can often use a running sum and a hash map to solve problems more efficiently.</p>
-</li>
-<li>
-<p><strong>Prefix Product:</strong> Similar to prefix sum, you can create a prefix product array for problems involving multiplication over ranges.</p>
-</li>
-<li>
-<p><strong>Combining with Binary Search:</strong> For more complex problems, you can combine prefix sum with binary search. For example, finding the smallest subarray with a sum greater than a given value.</p>
-</li>
-<li>
-<p><strong>Sliding Window Alternative:</strong> In some cases, problems solvable with prefix sum can also be approached using the sliding window technique. Consider both approaches for optimization.</p>
-</li>
-<li>
-<p><strong>Prefix XOR for Bit Manipulation:</strong> When dealing with XOR operations over ranges, a prefix XOR array can be very useful, especially in problems involving bit manipulation.</p>
-</li>
-<li>
-<p><strong>Dynamic Programming Connection:</strong> Prefix sum is often a building block in dynamic programming solutions, especially for problems involving optimal substructures over contiguous subarrays.</p>
-</li>
-<li>
-<p><strong>Multidimensional Prefix Sums:</strong> The concept extends to 2D, 3D, or even higher dimensions, useful for problems involving sum queries over submatrices or subvolumes.</p>
-</li>
-</ol>
+<h2 id="conclusion-your-new-interview-superpower">Conclusion: Your New Interview Superpower</h2>
+<p>And there you have it, folks! The Two Pointers pattern – a simple yet powerful technique that can turn complex problems into elegant solutions. It&rsquo;s not just about solving problems; it&rsquo;s about solving them efficiently and impressively. So go ahead, dive into those LeetCode problems, and watch as your two-pointer skills transform you into the coding interview ninja you were always meant to be. Happy coding, and may the algorithmic force be with you in your next interview!</p>
 
             </div>
           </div>
