@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
+    <meta charset="utf-8">
+    <title>My take on a Code Prompt Management System</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="A prompt management tool for creating, editing, and organizing customizable task types and instruction templates with code generation and file handling capabilities.">
+    <meta name="author" content="Daniel Sobrado">
+    <meta name="generator" content="Hugo 0.117.0">
+
+    <!-- plugins -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick-theme.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/themify-icons/themify-icons.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/animate/animate.css ">
+    
+
+    <!-- Main Stylesheet -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/css/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://www.danielsobrado.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+
+</head><body><!-- navigation -->
+<header>
+  <!-- top header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline text-lg-right text-center">
+            <li class="list-inline-item">
+               <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
+            </li>
+            <li class="list-inline-item">
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nav bar -->
+  <div class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.danielsobrado.com/">
+          <img src="https://www.danielsobrado.com/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/programming/">Programming</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/data-science/">Data Science</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/others/">Others</a>
+            </li>
+            
+            
+          </ul>
+          
+        
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header><!-- preloader start -->
+	
+	<!-- preloader start -->
+	<div class="preloader">
+		
+		<img src="https://www.danielsobrado.com/images/preloader.gif" alt="preloader">
+		
+	</div>
+	<!-- preloader end -->
+	
+	<!-- preloader end -->
+	<div id="content">
+
+<!-- page title -->
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="text-white font-weight-bold">My take on a Code Prompt Management System</h2>
+				<ol class="breadcrumb">
+					<li><a href="https://www.danielsobrado.com/">Home</a></li>
+					<li>My take on a Code Prompt Management System</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /page title -->
+
+<!-- blog single -->
+<section>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/nliBZc2.png" alt="blog-image">
+          <div class="p-4">
+            <h3>My take on a Code Prompt Management System</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 01 Nov</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/sideprojects"> Side projects</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <h2 id="code-prompter-simplifying-task-and-prompt-management-for-developers">Code Prompter: Simplifying Task` and Prompt Management for Developers</h2>
+<p>In the fast-paced world of software development, efficiency and clear communication are essential. Managing tasks, crafting detailed instructions, and organizing information can become a challenge, especially when team members need to stay on the same page.</p>
+<p>Enter <strong>Code Prompter</strong>, a <a href="https://github.com/danielsobrado/code-prompter/">tool</a> designed to help on this process by enabling developers to create, customize, and manage prompts and instructions efficiently.</p>
+<h2 id="1-the-problem-with-unorganized-prompt-management">1. The Problem with Unorganized Prompt Management</h2>
+<p>When developing software, writing clear prompts, tasks, and instructions is crucial. These components play a significant role in ensuring team alignment, maintaining code quality, and accelerating development timelines. However, managing various task types and custom instructions can become chaotic when done manually or with basic note-taking tools. Some common issues developers face include:</p>
+<ul>
+<li><strong>Time wasted on repetitive prompts</strong>: Rewriting similar instructions for common tasks like bug fixing or feature implementation.</li>
+<li><strong>Miscommunication and inconsistencies</strong>: Inconsistent descriptions or instructions can lead to misunderstandings and errors.</li>
+<li><strong>Lack of customization</strong>: Developers often need to tailor prompts for different projects, tasks, or team members, and traditional tools make this tedious.</li>
+</ul>
+<p>Code Prompter helps with these problems head-on by providing a prompt and task management system tailored to development workflows.</p>
+<h2 id="2-what-is-code-prompter">2. What is Code Prompter?</h2>
+<p><strong>Code Prompter</strong> is a web-based application designed to help developers create, edit, and manage customizable prompts and task instructions. With an easy-to-use interface, Code Prompter allows users to select, update, and delete task types and instructions as needed, providing a flexible, organized way to manage the task management process.</p>
+<p><img src="https://i.imgur.com/ZsGJdxU.png" alt="Screenshot"></p>
+<h3 id="key-features">Key Features</h3>
+<p>Code Prompter is packed with features that make it a powerful tool for developers and teams:</p>
+<ul>
+<li><strong>Customizable Task Types</strong>: Define different task categories, such as &ldquo;Feature,&rdquo; &ldquo;Bug Fix,&rdquo; or &ldquo;Refactor,&rdquo; and create personalized instructions for each.</li>
+<li><strong>CRUD Functionality</strong>: Full Create, Read, Update, Delete (CRUD) capabilities enable seamless management of task types and instructions. (File based)</li>
+<li><strong>Intuitive Prompt Generation</strong>: Automatically generates detailed prompts by combining task type, instructions, and custom notes.</li>
+<li><strong>File Management</strong>: Includes drag-and-drop functionality for handling related files, making it easy to organize and reference files within prompts.</li>
+<li><strong>Token Count for Prompt Optimization</strong>: Calculates prompt length to optimize communication, especially useful when working with prompt-sensitive tools like language models.</li>
+</ul>
+<h2 id="3-exploring-code-prompters-core-components">3. Exploring Code Prompter&rsquo;s Core Components</h2>
+<h3 id="task-type-management">Task Type Management</h3>
+<p>The <strong>Task Type</strong> component is the heart of Code Prompter. Task Types define the nature of the work, such as creating a new feature, fixing a bug, or refactoring code. In Code Prompter, users can:</p>
+<ul>
+<li><strong>Create New Task Types</strong>: Easily add new task types to suit different project needs.</li>
+<li><strong>Edit Existing Task Types</strong>: Modify descriptions or instructions as project requirements change.</li>
+<li><strong>Delete Task Types</strong>: Remove outdated or irrelevant task types, keeping the list concise and relevant.</li>
+</ul>
+<p>Each task type can be given a specific label and description, ensuring that each prompt has context for its intended purpose.</p>
+<h3 id="custom-instructions-management">Custom Instructions Management</h3>
+<p>In addition to task types, <strong>Custom Instructions</strong> provide an extra layer of guidance. These instructions allow users to include detailed steps or considerations, tailoring each prompt to the specific needs of a project or team member. For example, a “Feature” task type might have options for “Detailed” or “Minimal” instructions based on the complexity of the feature.</p>
+<p>Custom Instructions can be:</p>
+<ul>
+<li><strong>Selected from Predefined Options</strong>: Choose from a list of common instructions to maintain consistency.</li>
+<li><strong>Created, Updated, and Deleted</strong>: Full CRUD functionality ensures flexibility, allowing users to update instructions as needed.</li>
+</ul>
+<p>This feature is especially valuable for teams with varying documentation standards or multi-step tasks requiring clarity.</p>
+<h3 id="prompt-generation">Prompt Generation</h3>
+<p>At the core of Code Prompter is the <strong>Prompt Generation</strong> functionality. By combining the selected task type and custom instructions with optional notes, Code Prompter generates a clear, concise, and detailed prompt that can be copied, shared, or integrated into project management tools.</p>
+<p>The prompt generation process is straightforward:</p>
+<ol>
+<li><strong>Select Task Type and Instructions</strong>: Choose from existing task types and instructions or create new ones if needed.</li>
+<li><strong>Add Additional Details</strong>: Include any raw prompts, file references, or specific instructions for further customization.</li>
+<li><strong>Generate the Prompt</strong>: Code Prompter creates a formatted, easy-to-read prompt.</li>
+</ol>
+<p>This output can be shared with team members, used in documentation, or added to project tracking software, ensuring everyone has a clear understanding of the task requirements.</p>
+<h3 id="file-management-with-drag-and-drop">File Management with Drag-and-Drop</h3>
+<p>Managing files related to prompts can be a hassle, especially in large projects with numerous assets. Code Prompter’s <strong>drag-and-drop file management</strong> simplifies this by allowing users to easily include files in their prompts:</p>
+<ul>
+<li><strong>Drag and Drop Files</strong>: Directly attach files to a prompt to ensure easy reference.</li>
+<li><strong>Set Folder Options</strong>: Configure folder-specific rules, such as ignoring certain file types or directories.</li>
+<li><strong>Optimize File Size</strong>: Automatically excludes files over a certain size, keeping the prompt lightweight.</li>
+</ul>
+<p>This feature helps teams maintain a well-organized file structure and reduces confusion when multiple files are associated with a task.</p>
+<h3 id="token-count-and-prompt-optimization">Token Count and Prompt Optimization</h3>
+<p>With the growing use of AI and large language models in software development, prompt length matters. Code Prompter includes a <strong>Token Count</strong> feature that calculates the token usage of each prompt. This enables developers to:</p>
+<ul>
+<li><strong>Optimize Prompts for Language Models</strong>: Keep prompts within token limits for tools like GPT or Codex.</li>
+<li><strong>Streamline Communication</strong>: Ensure prompts are clear without being too lengthy.</li>
+</ul>
+<p>By being mindful of prompt length, developers can optimize their prompts for maximum efficiency.</p>
+<h2 id="4-how-code-prompter-works">4. How Code Prompter Works</h2>
+<p>Code Prompter is built to be intuitive and user-friendly. Here’s a quick overview of how it works:</p>
+<ol>
+<li><strong>Select or Create Task Types and Instructions</strong>: Use the task type and instruction modals to define the context and details of the prompt.</li>
+<li><strong>Customize Your Prompt</strong>: Add additional instructions, select related files, and adjust the prompt as needed.</li>
+<li><strong>Generate and Review</strong>: View the final prompt, check the token count, and copy it for easy integration into other tools.</li>
+</ol>
+<p>For developers and project managers, Code Prompter’s workflow simplifies the otherwise complex process of task documentation and ensures a streamlined experience.</p>
+<h2 id="5-benefits-of-using-code-prompter">5. Benefits of Using Code Prompter</h2>
+<p>Code Prompter’s features can improve development workflows in several ways:</p>
+<ul>
+<li><strong>Time Efficiency</strong>: By reducing repetitive writing tasks, developers can focus more on coding and problem-solving.</li>
+<li><strong>Clear Communication</strong>: Standardized prompts and instructions ensure that all team members use the same task, reducing back-and-forth communication.</li>
+<li><strong>Flexibility and Customization</strong>: Customizable task types and instructions provide flexibility to adapt to any project or team structure.</li>
+<li><strong>Enhanced Documentation</strong>: With prompts readily available, documentation becomes more accessible, improving team alignment.</li>
+</ul>
+<h2 id="use-cases-for-code-prompter">Use Cases for Code Prompter</h2>
+<p>Code Prompter is a tool that can be applied in many scenarios:</p>
+<ul>
+<li><strong>Software Development Teams</strong>: Standardize task prompts to ensure a consistent process.</li>
+<li><strong>Freelance Developers</strong>: Quickly generate task instructions for clients, improving clarity and communication.</li>
+<li><strong>Technical Writers</strong>: Generate detailed descriptions and instructions to support software documentation.</li>
+</ul>
+<h2 id="how-to-get-started-with-code-prompter">How to Get Started with Code Prompter</h2>
+<p>Ready to streamline your task management process? Getting started with Code Prompter is simple. Once installed, you can begin setting up task types and instructions tailored to your workflow. With just a few clicks, you’ll have prompts ready to go, saving time and improving task clarity.</p>
+<p>Get the <a href="https://github.com/danielsobrado/code-prompter/tree/main/build/bin">windows binary</a>.</p>
+<h2 id="8-future-improvements-and-expansions">8. Future Improvements and Expansions</h2>
+<p>The current version of Code Prompter is just the beginning, feel free to send a PRon the <a href="https://github.com/danielsobrado/code-prompter/">github</a>.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcode-prompter%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=My%20take%20on%20a%20Code%20Prompt%20Management%20System&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcode-prompter%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcode-prompter%2f&amp;resubmit=true&amp;title=My%20take%20on%20a%20Code%20Prompt%20Management%20System"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=My%20take%20on%20a%20Code%20Prompt%20Management%20System&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fcode-prompter%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/llms">Llms</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+      </div>
+      <!-- Sidebar -->
+<div class="col-lg-4">
+	<div class="bg-white px-4 py-100 sidebar-box-shadow">
+		<!-- categories -->
+		<div class="mb-50">
+			<h4 class="mb-3">Categories</h4>
+			<ul class="list-unstyled mb-0">
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/big-data"
+						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/data-science"
+						class="d-block text-color py-10">Data science</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/investing"
+						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/maths"
+						class="d-block text-color py-10">Maths</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/others"
+						class="d-block text-color py-10">Others</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/programming"
+						class="d-block text-color py-10">Programming</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/sideprojects"
+						class="d-block text-color py-10">Sideprojects</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Widget Recent Post -->
+		<div class="mb-50">
+			<h4 class="mb-3">Top Articles</h4>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-variable-precedence/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/HXoTjv8.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-variable-precedence/">Precedence of properties</a>
+					</h6>
+					<p class="meta">10 Feb 2019</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
+					</h6>
+					<p class="meta">23 Jul 2016</p>
+				</div>
+			</div>
+			
+		</div>
+		<!-- tags -->
+		<div class="mb-50">
+			<h4 class="mb-3">Tags</h4>
+			<ul class="list-inline tag-list">
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dsa">Dsa</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/functional-programming">Functional programming</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/git">Git</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/llms">Llms</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/performance">Performance</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
+			</ul>
+		</div>
+
+		<!-- Widget Newsletter -->
+		<div class="newsletter">
+			<h4 class="mb-3">Stay Updated</h4>
+			<div id="mc_embed_signup">
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							</label>
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="FNAME" id="mce-FNAME" placeholder="First Name">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+								class="button"></div>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /blog-single -->
+
+
+	</div><!-- footer -->
+<footer class="bg-secondary">
+	<div class="py-100 border-bottom" style="border-color: #000000 !important">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="mb-5 mb-md-0 text-center text-md-left">
+						<!-- logo -->
+						<img class="mb-30" src="https://www.danielsobrado.com/images/logo-footer.png" alt="logo">
+						 <p class="text-white mb-30"> Personal Blog on Software Engineering, Data Engineering and Machine Learning. <!-- raw HTML omitted --> I also write about investments and my data-centric approach to sistematic investment.</p> 
+						<!-- social icon -->
+						<ul class="list-inline">
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://stackoverflow.com/users/2507462/daniel-sobrado">
+									<i class="ti-stack-overflow"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://github.com/danielsobrado">
+									<i class="ti-github"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.linkedin.com/in/dsobrado/">
+									<i class="ti-linkedin"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.instagram.com/daniel.sobrado/">
+									<i class="ti-instagram"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://twitter.com/danielinvest1">
+									<i class="ti-twitter-alt"></i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Investing</h4>
+					<ul class="footer-links">
+						
+						<li><a href="https://www.danielsobrado.com/investing/asset_allocation/">Asset Allocation</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/insiders/">Insiders</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/momentum/">Momentum</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/my-investing-philosophy/">My investing philosophy</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/backtesting/">Backtesting</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/value-investing/">Value Investing</a></li>
+						
+					</ul>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Technology</h4>
+					<ul class="footer-links">
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/programming/">Programming</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/data-science/">Data Science</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/others/">Others</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- subscribe form -->
+				<div class="col-lg-3 col-md-12 offset-lg-1">
+					<div class="mt-5 mt-lg-0 text-center text-md-left">
+						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
+						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
+						<div id="mc_embed_signup">
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll" class="position-relative">
+									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
+										placeholder="Enter Your Email">
+									<button class="btn-subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe-">
+										<i class="ti-arrow-right"></i>
+									</button>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="pt-4 pb-3 position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-5">
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
+				</div>
+				<div class="col-lg-6 col-md-7">
+					<ul class="list-inline text-center text-md-right">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- back to top -->
+		<button class="back-to-top">
+			<i class="ti-angle-up"></i>
+		</button>
+	</div>
+</footer>
+<!-- /footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
+<script>hljs.highlightAll();</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
+
+<!-- Essential Scripts -->
+<!-- Google Map API -->
+
+<!-- JS Plugins -->
+
+<script src="https://www.danielsobrado.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://www.danielsobrado.com/js/script.min.js"></script>
+</body>
+
+</html></body>
+
+</html>

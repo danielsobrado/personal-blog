@@ -6,7 +6,16 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SideProjects</title>
+      <link>https://www.danielsobrado.com/categories/sideprojects/</link>
+      <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/categories/sideprojects/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Programming</title>
       <link>https://www.danielsobrado.com/categories/programming/</link>
