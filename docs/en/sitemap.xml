@@ -51,7 +51,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -63,11 +63,8 @@
                 href="https://www.danielsobrado.com/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/ai-novel-prompter/</loc>
-    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -80,13 +77,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/llms/</loc>
-    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/categories/sideprojects/</loc>
-    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/categories/rag/</loc>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/rag-content-issues/</loc>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -97,6 +97,12 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/ai-novel-prompter/</loc>
+    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/sideprojects/</loc>
+    <lastmod>2024-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/code-prompter/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>

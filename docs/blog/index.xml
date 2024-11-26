@@ -62,6 +62,15 @@
     </item>
     
     <item>
+      <title>RAG and content</title>
+      <link>https://www.danielsobrado.com/blog/rag-content-issues/</link>
+      <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rag-content-issues/</guid>
+      <description>It&amp;rsquo;s Not the Technology, It&amp;rsquo;s Your Content In the rush to implement Retrieval-Augmented Generation (RAG) systems, organizations are discovering an uncomfortable truth: the technical implementation isn&amp;rsquo;t the hardest part anymore.</description>
+    </item>
+    
+    <item>
       <title>AI Novel Prompter</title>
       <link>https://www.danielsobrado.com/blog/ai-novel-prompter/</link>
       <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
