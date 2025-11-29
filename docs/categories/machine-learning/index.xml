@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Diffusion Models Part 7 - Conditioning and Text-to-Image</title>
+      <title>Building Diffusion Models (7/7): Text-to-Image Conditioning</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</link>
       <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 6 - Sampling and Generation</title>
+      <title>Building Diffusion Models (6/7): Sampling and Generation</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 5 - Training the Denoiser</title>
+      <title>Building Diffusion Models (5/7): Training the Denoiser</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part5-training/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 4 - U-Net Architecture</title>
+      <title>Building Diffusion Models (4/7): U-Net Architecture</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part4-unet/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 3 - The Noise Process</title>
+      <title>Building Diffusion Models (3/7): The Noise Process</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part3-noise/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 2 - Neural Networks Basics</title>
+      <title>Building Diffusion Models (2/7): Neural Network Basics</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 1 - Understanding Tensors</title>
+      <title>Building Diffusion Models (1/7): Understanding Tensors</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
       
@@ -71,7 +71,7 @@
     </item>
     
     <item>
-      <title>Multimodal LLMs - Understanding Images and Text Together</title>
+      <title>Multimodal LLMs: When AI Sees and Reads</title>
       <link>https://www.danielsobrado.com/blog/multimodal-llm/</link>
       <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
       
@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>Fine-Tuning LLMs - Customizing Language Models</title>
+      <title>How to Fine-Tune LLMs for Your Use Case</title>
       <link>https://www.danielsobrado.com/blog/fine-tuning/</link>
       <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
       
@@ -89,7 +89,7 @@
     </item>
     
     <item>
-      <title>RAG - Retrieval-Augmented Generation</title>
+      <title>RAG: Retrieval-Augmented Generation Explained</title>
       <link>https://www.danielsobrado.com/blog/rag/</link>
       <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
       
@@ -98,7 +98,7 @@
     </item>
     
     <item>
-      <title>Variational Autoencoders - Probabilistic Generative Models</title>
+      <title>Variational Autoencoders: Probabilistic Generation</title>
       <link>https://www.danielsobrado.com/blog/vae/</link>
       <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
       
@@ -107,7 +107,7 @@
     </item>
     
     <item>
-      <title>Exploration in Reinforcement Learning</title>
+      <title>The Exploration-Exploitation Dilemma in RL</title>
       <link>https://www.danielsobrado.com/blog/rl-exploration/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
       
@@ -116,7 +116,7 @@
     </item>
     
     <item>
-      <title>Q-Learning - Learning Action Values</title>
+      <title>Q-Learning: Mastering Action Values</title>
       <link>https://www.danielsobrado.com/blog/q-learning/</link>
       <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -125,7 +125,7 @@
     </item>
     
     <item>
-      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <title>Reinforcement Learning: Foundations and Key Concepts</title>
       <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -134,7 +134,7 @@
     </item>
     
     <item>
-      <title>BERT - Bidirectional Language Understanding</title>
+      <title>BERT: Bidirectional Language Understanding</title>
       <link>https://www.danielsobrado.com/blog/bert/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -143,7 +143,7 @@
     </item>
     
     <item>
-      <title>Transformer Architecture - The Model Behind Modern AI</title>
+      <title>The Transformer Architecture: Model Behind Modern AI</title>
       <link>https://www.danielsobrado.com/blog/transformer-architecture/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
       
@@ -152,7 +152,7 @@
     </item>
     
     <item>
-      <title>Positional Encoding - Giving Transformers a Sense of Order</title>
+      <title>How Transformers Know Position: Positional Encoding</title>
       <link>https://www.danielsobrado.com/blog/positional-encoding/</link>
       <pubDate>Thu, 19 Jun 2025 00:00:00 +0000</pubDate>
       
@@ -161,7 +161,7 @@
     </item>
     
     <item>
-      <title>Self-Attention - The Key Mechanism in Transformers</title>
+      <title>Self-Attention: The Key to Transformers</title>
       <link>https://www.danielsobrado.com/blog/self-attention/</link>
       <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
       
@@ -170,7 +170,7 @@
     </item>
     
     <item>
-      <title>Attention Mechanisms - Part 1: The Core Idea</title>
+      <title>Attention Mechanisms (Part 1): The Core Idea</title>
       <link>https://www.danielsobrado.com/blog/attention-mechanism-part1/</link>
       <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
       
@@ -179,7 +179,7 @@
     </item>
     
     <item>
-      <title>LSTM - Learning Long-Term Dependencies</title>
+      <title>LSTMs: Learning Long-Term Dependencies</title>
       <link>https://www.danielsobrado.com/blog/lstm/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
       
@@ -188,7 +188,7 @@
     </item>
     
     <item>
-      <title>Layer Normalization - Keeping Activations Stable</title>
+      <title>Layer Normalization for Stable Training</title>
       <link>https://www.danielsobrado.com/blog/layer-normalization/</link>
       <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
       
@@ -197,7 +197,7 @@
     </item>
     
     <item>
-      <title>Conv &#43; ReLU - The Building Block of CNNs</title>
+      <title>Conv &#43; ReLU: The CNN Building Block</title>
       <link>https://www.danielsobrado.com/blog/conv-relu/</link>
       <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
       
@@ -206,7 +206,7 @@
     </item>
     
     <item>
-      <title>2D Convolutions - How Neural Networks See Images</title>
+      <title>2D Convolutions: How Neural Networks See Images</title>
       <link>https://www.danielsobrado.com/blog/conv2d/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
       
@@ -215,7 +215,7 @@
     </item>
     
     <item>
-      <title>Cross-Entropy Loss - The Classification Loss Function</title>
+      <title>Why Cross-Entropy Works for Classification</title>
       <link>https://www.danielsobrado.com/blog/cross-entropy/</link>
       <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
       
@@ -224,7 +224,7 @@
     </item>
     
     <item>
-      <title>FastText - Handling Words Not in Vocabulary</title>
+      <title>FastText: When Words Aren&#39;t in Your Vocabulary</title>
       <link>https://www.danielsobrado.com/blog/fasttext/</link>
       <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
       
@@ -233,7 +233,7 @@
     </item>
     
     <item>
-      <title>GloVe - Global Vectors for Word Representation</title>
+      <title>GloVe: Global Vectors for Word Representation</title>
       <link>https://www.danielsobrado.com/blog/glove/</link>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
       
@@ -242,7 +242,7 @@
     </item>
     
     <item>
-      <title>Word2Vec - Where Word Embeddings Started Getting Good</title>
+      <title>Word2Vec: The Breakthrough in Word Embeddings</title>
       <link>https://www.danielsobrado.com/blog/word2vec/</link>
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
@@ -251,7 +251,7 @@
     </item>
     
     <item>
-      <title>Embeddings - Representing Stuff as Vectors</title>
+      <title>Embeddings: Turning Everything Into Vectors</title>
       <link>https://www.danielsobrado.com/blog/embeddings/</link>
       <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
       
@@ -260,7 +260,7 @@
     </item>
     
     <item>
-      <title>Tokenization - How Text Becomes Numbers</title>
+      <title>How Text Becomes Numbers: Tokenization Explained</title>
       <link>https://www.danielsobrado.com/blog/tokenization/</link>
       <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
       
@@ -269,7 +269,7 @@
     </item>
     
     <item>
-      <title>Bag of Words - The Simplest Text Representation</title>
+      <title>Bag of Words: Still the Simplest Text Representation</title>
       <link>https://www.danielsobrado.com/blog/bag-of-words/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
       
@@ -278,7 +278,7 @@
     </item>
     
     <item>
-      <title>Softmax - Turning Numbers into Probabilities</title>
+      <title>From Numbers to Probabilities: The Softmax Function</title>
       <link>https://www.danielsobrado.com/blog/softmax/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -287,7 +287,7 @@
     </item>
     
     <item>
-      <title>Leaky ReLU - Fixing Dead Neurons</title>
+      <title>Leaky ReLU and the Dead Neuron Problem</title>
       <link>https://www.danielsobrado.com/blog/leaky-relu/</link>
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -296,7 +296,7 @@
     </item>
     
     <item>
-      <title>ReLU - Why Neural Networks Learned to Use Simple Functions</title>
+      <title>ReLU: The Simple Function That Powers Deep Learning</title>
       <link>https://www.danielsobrado.com/blog/relu/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -305,7 +305,7 @@
     </item>
     
     <item>
-      <title>Gradient Descent - How Neural Networks Learn</title>
+      <title>How Neural Networks Learn: Gradient Descent</title>
       <link>https://www.danielsobrado.com/blog/gradient-descent/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -314,7 +314,7 @@
     </item>
     
     <item>
-      <title>Linear Regression - The Foundation of ML</title>
+      <title>Linear Regression: The Foundation of Machine Learning</title>
       <link>https://www.danielsobrado.com/blog/linear-regression/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       

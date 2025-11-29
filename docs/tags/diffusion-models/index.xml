@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/diffusion-models/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Diffusion Models Part 7 - Conditioning and Text-to-Image</title>
+      <title>Building Diffusion Models (7/7): Text-to-Image Conditioning</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</link>
       <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 6 - Sampling and Generation</title>
+      <title>Building Diffusion Models (6/7): Sampling and Generation</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 5 - Training the Denoiser</title>
+      <title>Building Diffusion Models (5/7): Training the Denoiser</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part5-training/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 4 - U-Net Architecture</title>
+      <title>Building Diffusion Models (4/7): U-Net Architecture</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part4-unet/</link>
       <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 3 - The Noise Process</title>
+      <title>Building Diffusion Models (3/7): The Noise Process</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part3-noise/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 2 - Neural Networks Basics</title>
+      <title>Building Diffusion Models (2/7): Neural Network Basics</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>Diffusion Models Part 1 - Understanding Tensors</title>
+      <title>Building Diffusion Models (1/7): Understanding Tensors</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
       

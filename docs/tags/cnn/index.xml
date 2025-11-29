@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/cnn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Conv &#43; ReLU - The Building Block of CNNs</title>
+      <title>Conv &#43; ReLU: The CNN Building Block</title>
       <link>https://www.danielsobrado.com/blog/conv-relu/</link>
       <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>2D Convolutions - How Neural Networks See Images</title>
+      <title>2D Convolutions: How Neural Networks See Images</title>
       <link>https://www.danielsobrado.com/blog/conv2d/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
       

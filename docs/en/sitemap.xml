@@ -77,6 +77,11 @@
                 href="https://www.danielsobrado.com/"
                 />
   </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</loc>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://www.danielsobrado.com/categories/</loc>
     <lastmod>2025-11-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,11 +103,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/diffusion-models/</loc>
-    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</loc>
     <lastmod>2025-11-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -272,12 +272,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/rl-exploration/</loc>
+    <loc>https://www.danielsobrado.com/tags/reinforcement-learning/</loc>
     <lastmod>2025-08-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/reinforcement-learning/</loc>
+    <loc>https://www.danielsobrado.com/blog/rl-exploration/</loc>
     <lastmod>2025-08-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -457,11 +457,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/cross-entropy/</loc>
-    <lastmod>2025-04-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
     <lastmod>2025-04-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -476,6 +471,11 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/loss-functions/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/cross-entropy/</loc>
+    <lastmod>2025-04-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/entropy/</loc>
     <lastmod>2025-04-17T00:00:00+00:00</lastmod>
@@ -547,12 +547,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/tokenization/</loc>
+    <loc>https://www.danielsobrado.com/blog/tokenization/</loc>
     <lastmod>2025-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/tokenization/</loc>
+    <loc>https://www.danielsobrado.com/tags/tokenization/</loc>
     <lastmod>2025-03-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -577,12 +577,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/eigenvalue/</loc>
+    <loc>https://www.danielsobrado.com/tags/pca/</loc>
     <lastmod>2025-02-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/pca/</loc>
+    <loc>https://www.danielsobrado.com/blog/eigenvalue/</loc>
     <lastmod>2025-02-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

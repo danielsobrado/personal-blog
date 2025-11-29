@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Diffusion Models Part 3 - The Noise Process</title>
+      <title>Building Diffusion Models (3/7): The Noise Process</title>
       <link>https://www.danielsobrado.com/blog/diffusion-part3-noise/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Markov Chains - Predicting the Future from the Present</title>
+      <title>Markov Chains: Predicting the Future from the Present</title>
       <link>https://www.danielsobrado.com/blog/markov-chains/</link>
       <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Entropy - Measuring Uncertainty</title>
+      <title>How to Measure Uncertainty: Entropy</title>
       <link>https://www.danielsobrado.com/blog/entropy/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>Probability Distributions - The Shapes of Randomness</title>
+      <title>Probability Distributions: The Shapes of Randomness</title>
       <link>https://www.danielsobrado.com/blog/probability-distributions/</link>
       <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>Expected Value and Variance - Summarizing Distributions</title>
+      <title>Expected Value and Variance Explained</title>
       <link>https://www.danielsobrado.com/blog/expected-value-variance/</link>
       <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>Conditional Probability - P(A|B)</title>
+      <title>What is Conditional Probability? Understanding P(A|B)</title>
       <link>https://www.danielsobrado.com/blog/conditional-probability/</link>
       <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
       

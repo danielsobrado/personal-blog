@@ -11,7 +11,7 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Entropy - Measuring Uncertainty</title>
+    <title>How to Measure Uncertainty: Entropy</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,7 +22,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.danielsobrado.com/blog/entropy/">
-    <meta property="og:title" content="Entropy - Measuring Uncertainty">
+    <meta property="og:title" content="How to Measure Uncertainty: Entropy">
     <meta property="og:description" content="Understand entropy from information theory: how to quantify uncertainty, its role in decision trees, and connection to cross-entropy loss.">
     <meta property="og:image" content="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/entropy.png">
     <meta property="og:site_name" content="">
@@ -35,7 +35,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@DalamarBlog">
-    <meta name="twitter:title" content="Entropy - Measuring Uncertainty">
+    <meta name="twitter:title" content="How to Measure Uncertainty: Entropy">
     <meta name="twitter:description" content="Understand entropy from information theory: how to quantify uncertainty, its role in decision trees, and connection to cross-entropy loss.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/entropy.png">
 
@@ -48,7 +48,7 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Entropy - Measuring Uncertainty",
+        "headline": "How to Measure Uncertainty: Entropy",
         "description": "Understand entropy from information theory: how to quantify uncertainty, its role in decision trees, and connection to cross-entropy loss.",
         "image": "https:\/\/raw.githubusercontent.com\/danielsobrado\/personal-blog\/master\/docs\/images\/blog\/entropy.png",
         "author": {
@@ -197,10 +197,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Entropy - Measuring Uncertainty</h2>
+				<h2 class="text-white font-weight-bold">How to Measure Uncertainty: Entropy</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Entropy - Measuring Uncertainty</li>
+					<li>How to Measure Uncertainty: Entropy</li>
 				</ol>
 			</div>
 		</div>
@@ -216,7 +216,7 @@
         <div class="rounded bg-white">
           <img class="img-fluid w-100 rounded-top" src="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/entropy.png" alt="blog-image">
           <div class="p-4">
-            <h3>Entropy - Measuring Uncertainty</h3>
+            <h3>How to Measure Uncertainty: Entropy</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
               <li class="list-inline-item text-color">On 17 Apr</li>
@@ -228,32 +228,34 @@
             </ul>
             <div class="post-content">
               <p>How uncertain is a distribution? Entropy measures that. High entropy = hard to predict. Low entropy = predictable.</p>
-<h2 id="definition">Definition</h2>
+<h2 id="what-is-entropy-really">What is entropy, really?</h2>
+<p>Think of entropy as a measure of &ldquo;surprise.&rdquo; If you flip a fair coin, you&rsquo;re genuinely uncertain about the outcome - that&rsquo;s high entropy. But if you have a coin that lands heads 99% of the time, you&rsquo;re rarely surprised - that&rsquo;s low entropy.</p>
+<p>The formula looks scary but the idea is simple: we&rsquo;re averaging how surprised we&rsquo;d be across all possible outcomes.</p>
 <p>$$H(X) = -\sum_x P(x) \log P(x)$$</p>
 <p>For continuous distributions, use differential entropy with integral.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/entropy" alt="Entropy"></p>
-<p>Interactive demo: <a href="https://danielsobrado.github.io/ml-animations/animation/entropy">Entropy Animation</a></p>
-<h2 id="intuition">Intuition</h2>
-<p>Consider distribution over weather: {sunny, rainy, cloudy, snowy}</p>
-<p><strong>High entropy:</strong> Each equally likely (25% each). Very unpredictable.
-$$H = -4 \times 0.25 \log_2(0.25) = 2 \text{ bits}$$</p>
-<p><strong>Low entropy:</strong> Sunny 90%, others 3.33% each. Pretty predictable.
-$$H \approx 0.61 \text{ bits}$$</p>
-<p><strong>Zero entropy:</strong> Sunny 100%. No uncertainty.
-$$H = 0$$</p>
+<p>👉 <strong>Play with it yourself:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/entropy">Interactive Entropy Animation</a> - slide the probabilities around and watch entropy change in real time!</p>
+<h2 id="building-intuition">Building intuition</h2>
+<p>Let&rsquo;s make this concrete with a weather example. Imagine predicting tomorrow&rsquo;s weather from {sunny, rainy, cloudy, snowy}.</p>
+<p><strong>High entropy (2 bits):</strong> Each outcome has 25% chance. You really have no idea what&rsquo;s coming. Maximum confusion!</p>
+<p>$$H = -4 \times 0.25 \log_2(0.25) = 2 \text{ bits}$$</p>
+<p><strong>Low entropy (~0.61 bits):</strong> Sunny 90%, others 3.33% each. You can confidently guess &ldquo;sunny&rdquo; and be right most of the time.</p>
+<p>$$H \approx 0.61 \text{ bits}$$</p>
+<p><strong>Zero entropy:</strong> Sunny 100%. No uncertainty at all - you always know exactly what will happen.</p>
+<p>$$H = 0$$</p>
+<p>The &ldquo;bits&rdquo; unit tells you how many yes/no questions you&rsquo;d need to identify the outcome. With 4 equally likely options, you need 2 questions. With one dominant option, you barely need to ask anything.</p>
 <h2 id="properties">Properties</h2>
 <ol>
 <li>
-<p><strong>Non-negative:</strong> H(X) ≥ 0</p>
+<p><strong>Non-negative:</strong> H(X) ≥ 0 (you can&rsquo;t have negative uncertainty)</p>
 </li>
 <li>
-<p><strong>Maximum for uniform:</strong> Among distributions over k outcomes, uniform has highest entropy (log k)</p>
+<p><strong>Maximum for uniform:</strong> When all outcomes are equally likely, uncertainty is highest (log k for k outcomes)</p>
 </li>
 <li>
-<p><strong>Additive for independent:</strong> H(X, Y) = H(X) + H(Y)</p>
+<p><strong>Additive for independent events:</strong> H(X, Y) = H(X) + H(Y) - knowing about one doesn&rsquo;t help with the other</p>
 </li>
 </ol>
-<h2 id="computing-entropy">Computing entropy</h2>
+<h2 id="computing-entropy-in-python">Computing entropy in Python</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> entropy
 </span></span><span style="display:flex;"><span>
@@ -266,36 +268,37 @@ $$H = 0$$</p>
 </span></span><span style="display:flex;"><span>    probs <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(probs)
 </span></span><span style="display:flex;"><span>    probs <span style="color:#f92672">=</span> probs[probs <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]  <span style="color:#75715e"># avoid log(0)</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>np<span style="color:#f92672">.</span>sum(probs <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log2(probs))
-</span></span></code></pre></div><h2 id="in-machine-learning">In machine learning</h2>
+</span></span></code></pre></div><h2 id="why-ml-engineers-care-about-entropy">Why ML engineers care about entropy</h2>
 <p><strong>Decision trees:</strong>
-Split to maximize information gain (reduce entropy).</p>
+When building a decision tree, we want splits that reduce uncertainty the most. Information gain measures how much a split decreases entropy:</p>
 <p>$$\text{IG}(S, A) = H(S) - \sum_v \frac{|S_v|}{|S|} H(S_v)$$</p>
+<p>A good split creates child nodes with lower entropy (purer groups).</p>
 <p><strong>Maximum entropy models:</strong>
-Among distributions satisfying constraints, choose highest entropy (least assuming).</p>
+When you only have partial information about a distribution, the safest bet is the one with highest entropy. It makes the fewest assumptions.</p>
 <p><strong>Language models:</strong>
-Perplexity = 2^H. Measures how &ldquo;surprised&rdquo; model is.</p>
-<h2 id="cross-entropy">Cross-entropy</h2>
-<p>Compare true distribution P with model Q:</p>
+Perplexity = 2^H tells us how &ldquo;surprised&rdquo; a model is by text. Lower perplexity = better model. A perplexity of 100 means the model is as confused as if choosing uniformly from 100 words at each step.</p>
+<h2 id="cross-entropy-comparing-distributions">Cross-entropy: comparing distributions</h2>
+<p>What if we have a true distribution P but we&rsquo;re modeling it with Q?</p>
 <p>$$H(P, Q) = -\sum_x P(x) \log Q(x)$$</p>
-<p>Always H(P, Q) ≥ H(P). Equality when Q = P.</p>
-<p>This is the loss function for classification!</p>
-<h2 id="kl-divergence">KL divergence</h2>
-<p>Difference between distributions:</p>
+<p>Cross-entropy is always ≥ H(P), with equality only when Q = P perfectly.</p>
+<p><strong>This is why cross-entropy is THE loss function for classification!</strong> We&rsquo;re measuring how well our predicted probabilities Q match the true labels P.</p>
+<h2 id="kl-divergence-the-gap-between-distributions">KL divergence: the gap between distributions</h2>
+<p>How different are P and Q?</p>
 <p>$$D_{KL}(P || Q) = H(P, Q) - H(P) = \sum_x P(x) \log \frac{P(x)}{Q(x)}$$</p>
-<p>Not symmetric! D(P||Q) ≠ D(Q||P)</p>
-<p>Used in:</p>
+<p>⚠️ <strong>Watch out:</strong> KL divergence is NOT symmetric! D(P||Q) ≠ D(Q||P). The direction matters.</p>
+<p>You&rsquo;ll see KL divergence in:</p>
 <ul>
-<li>VAE loss</li>
+<li>VAE loss (regularizing the latent space)</li>
 <li>Information bottleneck</li>
-<li>Bayesian inference</li>
+<li>Bayesian inference (comparing posteriors)</li>
 </ul>
-<h2 id="mutual-information">Mutual information</h2>
-<p>How much knowing X tells you about Y:</p>
+<h2 id="mutual-information-shared-knowledge">Mutual information: shared knowledge</h2>
+<p>How much does knowing X tell you about Y?</p>
 <p>$$I(X; Y) = H(Y) - H(Y|X) = H(X) - H(X|Y)$$</p>
-<p>Symmetric. Zero if independent.</p>
-<p>Used for feature selection, representation learning.</p>
+<p>This one IS symmetric. It&rsquo;s zero when X and Y are independent (knowing one tells you nothing about the other).</p>
+<p>Used for feature selection (which features tell us most about the target?) and representation learning.</p>
 <hr>
-<p><em>Information theory visualized! Star the <a href="https://github.com/danielsobrado/ml-animations">ML Animations</a> repo and share this with other curious minds!</em></p>
+<p><em>Information theory clicked? Star the <a href="https://github.com/danielsobrado/ml-animations">ML Animations</a> repo and share this with other curious minds!</em></p>
 
             </div>
           </div>
@@ -312,13 +315,13 @@ Perplexity = 2^H. Measures how &ldquo;surprised&rdquo; model is.</p>
                     <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Entropy%20-%20Measuring%20Uncertainty&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=How%20to%20Measure%20Uncertainty%3a%20Entropy&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f&amp;resubmit=true&amp;title=Entropy%20-%20Measuring%20Uncertainty"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f&amp;resubmit=true&amp;title=How%20to%20Measure%20Uncertainty%3a%20Entropy"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Entropy%20-%20Measuring%20Uncertainty&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=How%20to%20Measure%20Uncertainty%3a%20Entropy&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fentropy%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>

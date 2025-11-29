@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <title>Reinforcement Learning: Foundations and Key Concepts</title>
       <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Markov Chains - Predicting the Future from the Present</title>
+      <title>Markov Chains: Predicting the Future from the Present</title>
       <link>https://www.danielsobrado.com/blog/markov-chains/</link>
       <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Entropy - Measuring Uncertainty</title>
+      <title>How to Measure Uncertainty: Entropy</title>
       <link>https://www.danielsobrado.com/blog/entropy/</link>
       <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>Bag of Words - The Simplest Text Representation</title>
+      <title>Bag of Words: Still the Simplest Text Representation</title>
       <link>https://www.danielsobrado.com/blog/bag-of-words/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
       
@@ -44,7 +44,7 @@
     </item>
     
     <item>
-      <title>Gradient Descent - How Neural Networks Learn</title>
+      <title>How Neural Networks Learn: Gradient Descent</title>
       <link>https://www.danielsobrado.com/blog/gradient-descent/</link>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>Linear Regression - The Foundation of ML</title>
+      <title>Linear Regression: The Foundation of Machine Learning</title>
       <link>https://www.danielsobrado.com/blog/linear-regression/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>Spearman Correlation - Ranking Relationships</title>
+      <title>Spearman Correlation for Ranking Relationships</title>
       <link>https://www.danielsobrado.com/blog/spearman-correlation/</link>
       <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
       
@@ -71,7 +71,7 @@
     </item>
     
     <item>
-      <title>Cosine Similarity - Measuring Direction Not Magnitude</title>
+      <title>Cosine Similarity: Why Direction Matters More Than Magnitude</title>
       <link>https://www.danielsobrado.com/blog/cosine-similarity/</link>
       <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
       
@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>Probability Distributions - The Shapes of Randomness</title>
+      <title>Probability Distributions: The Shapes of Randomness</title>
       <link>https://www.danielsobrado.com/blog/probability-distributions/</link>
       <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
       

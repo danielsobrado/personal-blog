@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Exploration in Reinforcement Learning</title>
+      <title>The Exploration-Exploitation Dilemma in RL</title>
       <link>https://www.danielsobrado.com/blog/rl-exploration/</link>
       <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>Q-Learning - Learning Action Values</title>
+      <title>Q-Learning: Mastering Action Values</title>
       <link>https://www.danielsobrado.com/blog/q-learning/</link>
       <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <title>Reinforcement Learning: Foundations and Key Concepts</title>
       <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
       
