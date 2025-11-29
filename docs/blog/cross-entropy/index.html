@@ -19,6 +19,61 @@
     <meta name="author" content="Daniel Sobrado">
     <meta name="generator" content="Hugo 0.117.0">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.danielsobrado.com/blog/cross-entropy/">
+    <meta property="og:title" content="Cross-Entropy Loss - The Classification Loss Function">
+    <meta property="og:description" content="Deep dive into cross-entropy loss: why it works for classification, numerical stability tricks, and handling class imbalance.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/cross-entropy.png">
+    <meta property="og:site_name" content="">
+    
+    <meta property="article:published_time" content="2025-04-24T00:00:00Z">
+    <meta property="article:author" content="Daniel Sobrado">
+    <meta property="article:tag" content="Deep Learning"><meta property="article:tag" content="Loss Functions"><meta property="article:tag" content="Classification">
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@DalamarBlog">
+    <meta name="twitter:title" content="Cross-Entropy Loss - The Classification Loss Function">
+    <meta name="twitter:description" content="Deep dive into cross-entropy loss: why it works for classification, numerical stability tricks, and handling class imbalance.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/cross-entropy.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.danielsobrado.com/blog/cross-entropy/">
+
+    <!-- JSON-LD Structured Data -->
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cross-Entropy Loss - The Classification Loss Function",
+        "description": "Deep dive into cross-entropy loss: why it works for classification, numerical stability tricks, and handling class imbalance.",
+        "image": "https:\/\/raw.githubusercontent.com\/danielsobrado\/personal-blog\/master\/docs\/images\/blog\/cross-entropy.png",
+        "author": {
+            "@type": "Person",
+            "name": "Daniel Sobrado",
+            "url": "https:\/\/www.danielsobrado.com\/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/www.danielsobrado.com\/images\/logo.png"
+            }
+        },
+        "datePublished": "2025-04-24T00:00:00Z",
+        "dateModified": "2025-04-24T00:00:00Z",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.danielsobrado.com\/blog\/cross-entropy\/"
+        }
+    }
+    </script>
+    
+
     <!-- plugins -->
     
     <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
@@ -240,7 +295,9 @@ $$\log\text{softmax}(z_i) = z_i - \log\sum_j e^{z_j}$$</p>
 </span></span><span style="display:flex;"><span>    ce <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>cross_entropy(logits, targets, reduction<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;none&#39;</span>)
 </span></span><span style="display:flex;"><span>    pt <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>exp(<span style="color:#f92672">-</span>ce)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ((<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> pt) <span style="color:#f92672">**</span> gamma <span style="color:#f92672">*</span> ce)<span style="color:#f92672">.</span>mean()
-</span></span></code></pre></div>
+</span></span></code></pre></div><hr>
+<p><em>Cross-entropy loss demystified? Give <a href="https://github.com/danielsobrado/ml-animations">ML Animations</a> a star and help others understand these concepts by sharing!</em></p>
+
             </div>
           </div>
         </div>

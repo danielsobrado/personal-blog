@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.danielsobrado.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all crawlers for blog content
+User-agent: Googlebot
+Allow: /blog/
+
+User-agent: Bingbot
+Allow: /blog/

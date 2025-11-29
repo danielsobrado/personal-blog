@@ -4,6 +4,8 @@
   <url>
     <loc>https://www.danielsobrado.com/es/blog/loss-rmse-mse-mae-mape/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -17,6 +19,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/data-preparation-categoricals/</loc>
     <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -29,9 +33,13 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/python-linear-regression/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -45,6 +53,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/categories/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -58,6 +68,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/categories/data-science/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -71,6 +83,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/euclidean-manifold/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -84,6 +98,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/categories/maths/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -97,6 +113,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/python/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -110,6 +128,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -123,6 +143,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/introduction-embeddings/</loc>
     <lastmod>2023-04-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -136,6 +158,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/categories/big-data/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -149,6 +173,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/spark-variable-precedence/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -162,6 +188,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/spark/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -175,24 +203,38 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/market-strategy/</loc>
     <lastmod>2018-09-29T11:54:02+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/market-strategy1/</loc>
     <lastmod>2018-09-29T11:54:02+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/valuable-idea/</loc>
     <lastmod>2018-09-29T11:51:17+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/valuable-idea1/</loc>
     <lastmod>2018-09-29T11:51:17+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/business-consulting/</loc>
     <lastmod>2018-09-25T15:51:35+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/business-consulting1/</loc>
     <lastmod>2018-09-25T15:51:35+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/about/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -206,6 +248,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -219,6 +263,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/contact/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -232,6 +278,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/investing/</loc>
     <lastmod>2018-07-12T18:19:33+06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -245,6 +293,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/loss-functions/</loc>
     <lastmod>2016-07-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -258,6 +308,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/numpy/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -271,6 +323,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/numpy-ndarrays/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -284,6 +338,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/categories/programming/</loc>
     <lastmod>2016-02-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -297,6 +353,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/numpy-introduction/</loc>
     <lastmod>2016-02-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -310,6 +368,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/discuss-microservices/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -323,6 +383,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/microservices/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -336,9 +398,13 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/soa/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/shared-database/</loc>
     <lastmod>2016-01-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -352,6 +418,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/data-preparation/</loc>
     <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -365,6 +433,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/cross-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -378,6 +448,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -391,6 +463,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/explaining-entropy/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -404,6 +478,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/kl-divergence/</loc>
     <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -417,6 +493,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/bayesian/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -430,6 +508,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/prior-posterior-probabilities/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -443,6 +523,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/probability/</loc>
     <lastmod>2014-03-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -456,6 +538,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/basic-probability-concepts/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -469,6 +553,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/concepts/</loc>
     <lastmod>2014-01-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -482,6 +568,8 @@
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/datascience-concepts/</loc>
     <lastmod>2014-01-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -494,6 +582,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/advanced-troubleshooting-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -506,10 +596,16 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/ambassador-pattern-in-kubernetes-explained/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/an-in-depth-guide-to-kubernetes-labels-and-selectors/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/application-deployment-choices-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -522,6 +618,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/automating-deployments-with-kubernetes-operators/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -534,6 +632,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/configuring-applications-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -546,6 +646,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/confluent-certified-developer-exam-prep/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -558,8 +660,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/confluent-certified-developer-review/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/consumer-offset-management-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -572,6 +678,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/creating-and-managing-kubernetes-pods/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -584,6 +692,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/data-retention-strategies-and-implications-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -596,6 +706,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/diving-into-kafka-architecture-and-design/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -608,6 +720,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/exploring-kafka-configurations/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -620,6 +734,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/exploring-kafka-streams/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -632,6 +748,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/exploring-topic-co-partitioning-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -644,6 +762,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/getting-started-with-confluent-rest-proxy/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -656,6 +776,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/getting-started-with-kafka-command-line-tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -668,6 +790,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/implementing-kubernetes-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -680,8 +804,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/implementing-the-adapter-pattern-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/introduction-to-kafka-clients/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -694,8 +822,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/introduction-to-kafka-connect/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/introduction-to-ksql/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -708,6 +840,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kafka-operations-deep-dive/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -720,6 +854,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-cronjobs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -732,6 +868,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-custom-resource-definitions-crds/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -744,6 +882,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-liveness-readiness-probes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -756,6 +896,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-namespaces-an-overview/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -768,6 +910,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-network-policies/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -780,6 +924,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-networking-overview/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -792,6 +938,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-persistent-volume-claims-explained/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -804,6 +952,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-resource-quotas-and-limits/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -816,6 +966,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-role-based-access-control-rbac/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -828,6 +980,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-security-best-practices/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -840,6 +994,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-service-accounts/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -852,6 +1008,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/kubernetes-statefulsets-explained/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -864,6 +1022,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-configurations-with-kubernetes-kustomize/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -876,6 +1036,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-jobs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -888,8 +1050,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-secrets-using-sealed-secrets/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-kubernetes-state-with-persistent-volumes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -902,8 +1068,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/managing-schemas-with-confluent-schema-registry/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/mastering-multi-container-pods-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -916,8 +1086,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/message-ordering-and-delivery-guarantees-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/monitoring-and-metrics-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -930,6 +1104,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/monitoring-and-observability-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -942,6 +1118,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/performance-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -954,8 +1132,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/schema-management-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/securing-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -968,6 +1150,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/securing-kubernetes-clusters/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -980,6 +1164,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/securing-kubernetes-secrets/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -992,6 +1178,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/serialization-and-deserialization-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1004,6 +1192,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/sidecar-pattern-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1016,6 +1206,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/system-metrics-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1028,6 +1220,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/troubleshooting-and-debugging-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1040,6 +1234,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/troubleshooting-kubernetes-container-logs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1052,6 +1248,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-helm-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1064,8 +1262,12 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-deployments/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-and-using-kubernetes-ingress/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1078,6 +1280,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-apache-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1090,6 +1294,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-confluent-ksql/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1102,6 +1308,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-consumer-groups-partition-assignments-and-rebalances/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1114,6 +1322,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kafka-apis/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1126,6 +1336,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kafka-message-structure/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1138,6 +1350,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-configmaps/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1150,6 +1364,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-events/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1162,6 +1378,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-kubernetes-services/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1174,6 +1392,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/understanding-producer-partition-selection-in-kafka/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1186,6 +1406,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/using-annotations-in-kubernetes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1198,6 +1420,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/blog/working-with-kubernetes-volumes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1210,6 +1434,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/author/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1222,6 +1448,8 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/author/daniel-sobrado/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -1234,5 +1462,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/es/tags/linear-regression/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
