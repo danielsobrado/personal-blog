@@ -246,8 +246,7 @@
 <li>γ, β = learnable scale and shift</li>
 <li>ε = small constant for stability</li>
 </ul>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/layer-normalization" alt="Layer Normalization"></p>
-<p>See it visualized: <a href="https://danielsobrado.github.io/ml-animations/animation/layer-normalization">Layer Norm Animation</a></p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/layer-normalization">Layer Norm Animation</a></p>
 <h2 id="code">Code</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">layer_norm</span>(x, gamma, beta, eps<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-5</span>):
 </span></span><span style="display:flex;"><span>    mean <span style="color:#f92672">=</span> x<span style="color:#f92672">.</span>mean(dim<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>, keepdim<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)

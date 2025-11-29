@@ -227,35 +227,34 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>ML models don&rsquo;t read text. They need numbers. Tokenization bridges that gap. Seems simple but lots of nuance.</p>
-<h2 id="the-basic-question">The basic question</h2>
-<p>How do you split &ldquo;Don&rsquo;t tokenize carelessly!&rdquo;?</p>
-<p>Options:</p>
+              <p>ML models can&rsquo;t read text - they only understand numbers. So how do we convert &ldquo;Hello world!&rdquo; into something a neural network can process? That&rsquo;s tokenization. It seems simple, but there&rsquo;s a lot of nuance.</p>
+<h2 id="the-fundamental-question">The fundamental question</h2>
+<p>How do you split <code>&quot;Don't tokenize carelessly!&quot;</code>?</p>
+<p>You have several options:</p>
 <ul>
-<li>Character level: [&ldquo;D&rdquo;, &ldquo;o&rdquo;, &ldquo;n&rdquo;, &ldquo;&rsquo;&rdquo;, &ldquo;t&rdquo;, &hellip;]</li>
-<li>Word level: [&ldquo;Don&rsquo;t&rdquo;, &ldquo;tokenize&rdquo;, &ldquo;carelessly&rdquo;, &ldquo;!&rdquo;]</li>
-<li>Subword: [&ldquo;Don&rdquo;, &ldquo;&rsquo;t&rdquo;, &ldquo;token&rdquo;, &ldquo;ize&rdquo;, &ldquo;care&rdquo;, &ldquo;less&rdquo;, &ldquo;ly&rdquo;, &ldquo;!&rdquo;]</li>
+<li><strong>Character level:</strong> <code>[&quot;D&quot;, &quot;o&quot;, &quot;n&quot;, &quot;'&quot;, &quot;t&quot;, &quot; &quot;, &quot;t&quot;, ...]</code></li>
+<li><strong>Word level:</strong> <code>[&quot;Don't&quot;, &quot;tokenize&quot;, &quot;carelessly&quot;, &quot;!&quot;]</code></li>
+<li><strong>Subword:</strong> <code>[&quot;Don&quot;, &quot;'t&quot;, &quot;token&quot;, &quot;ize&quot;, &quot;care&quot;, &quot;less&quot;, &quot;ly&quot;, &quot;!&quot;]</code></li>
 </ul>
-<p>Each has tradeoffs.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/tokenization" alt="Tokenization Methods"></p>
-<p>See different methods: <a href="https://danielsobrado.github.io/ml-animations/animation/tokenization">Tokenization Animation</a></p>
-<h2 id="character-level">Character-level</h2>
-<p>Every character is a token.</p>
-<p>Pros:</p>
+<p>Each approach has tradeoffs. Modern models mostly use subword tokenization - the best of both worlds.</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/tokenization">Tokenization Animation</a> - see how the same text gets split differently.</p>
+<h2 id="character-level-tokenization">Character-level tokenization</h2>
+<p>Every single character becomes its own token.</p>
+<p><strong>The good:</strong></p>
 <ul>
-<li>Small vocabulary (just alphabet + symbols)</li>
-<li>No OOV (out of vocabulary) words</li>
-<li>Works for any language</li>
+<li>Tiny vocabulary (just letters + punctuation)</li>
+<li>Never see &ldquo;unknown&rdquo; words</li>
+<li>Works for any language, even made-up words</li>
 </ul>
-<p>Cons:</p>
+<p><strong>The bad:</strong></p>
 <ul>
-<li>Very long sequences</li>
-<li>Harder to learn word-level meaning</li>
-<li>More compute needed</li>
+<li>Sequences get VERY long (&ldquo;hello&rdquo; = 5 tokens)</li>
+<li>Harder for the model to learn word-level meanings</li>
+<li>More computation needed</li>
 </ul>
-<p>Rarely used alone now.</p>
-<h2 id="word-level">Word-level</h2>
-<p>Split on whitespace and punctuation.</p>
+<p>Rarely used alone nowadays, but some models use it as a fallback.</p>
+<h2 id="word-level-tokenization">Word-level tokenization</h2>
+<p>Split on whitespace and punctuation. The intuitive approach.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, world!&#34;</span>
 </span></span><span style="display:flex;"><span>tokens <span style="color:#f92672">=</span> text<span style="color:#f92672">.</span>split()  <span style="color:#75715e"># [&#34;Hello,&#34;, &#34;world!&#34;]</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># or with regex</span>

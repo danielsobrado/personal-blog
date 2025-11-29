@@ -233,7 +233,7 @@
 <p>The formula looks scary but the idea is simple: we&rsquo;re averaging how surprised we&rsquo;d be across all possible outcomes.</p>
 <p>$$H(X) = -\sum_x P(x) \log P(x)$$</p>
 <p>For continuous distributions, use differential entropy with integral.</p>
-<p>👉 <strong>Play with it yourself:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/entropy">Interactive Entropy Animation</a> - slide the probabilities around and watch entropy change in real time!</p>
+<p><strong>Try the interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/entropy">Entropy Animation</a> - slide the probabilities around and watch entropy change in real time.</p>
 <h2 id="building-intuition">Building intuition</h2>
 <p>Let&rsquo;s make this concrete with a weather example. Imagine predicting tomorrow&rsquo;s weather from {sunny, rainy, cloudy, snowy}.</p>
 <p><strong>High entropy (2 bits):</strong> Each outcome has 25% chance. You really have no idea what&rsquo;s coming. Maximum confusion!</p>
@@ -284,8 +284,8 @@ Perplexity = 2^H tells us how &ldquo;surprised&rdquo; a model is by text. Lower 
 <p><strong>This is why cross-entropy is THE loss function for classification!</strong> We&rsquo;re measuring how well our predicted probabilities Q match the true labels P.</p>
 <h2 id="kl-divergence-the-gap-between-distributions">KL divergence: the gap between distributions</h2>
 <p>How different are P and Q?</p>
-<p>$$D_{KL}(P || Q) = H(P, Q) - H(P) = \sum_x P(x) \log \frac{P(x)}{Q(x)}$$</p>
-<p>⚠️ <strong>Watch out:</strong> KL divergence is NOT symmetric! D(P||Q) ≠ D(Q||P). The direction matters.</p>
+<p>$$D_{KL}(P | Q) = H(P, Q) - H(P) = \sum_x P(x) \log \frac{P(x)}{Q(x)}$$</p>
+<p><strong>Important:</strong> KL divergence is NOT symmetric! D(P|Q) ≠ D(Q|P). The direction matters.</p>
 <p>You&rsquo;ll see KL divergence in:</p>
 <ul>
 <li>VAE loss (regularizing the latent space)</li>

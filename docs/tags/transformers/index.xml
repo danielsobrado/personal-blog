@@ -40,7 +40,7 @@
       <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/attention-mechanism-part1/</guid>
-      <description>LSTMs helped with long-range dependencies. Attention does something more powerful - direct connections from anywhere to anywhere.</description>
+      <description>LSTMs were a big step forward for handling sequences. But attention does something more powerful - it creates direct connections from anywhere to anywhere.</description>
     </item>
     
     <item>

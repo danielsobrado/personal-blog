@@ -227,37 +227,65 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Neural networks learn by adjusting weights to reduce error. Gradient descent tells you which direction to adjust. It&rsquo;s the engine behind all of deep learning.</p>
+              <p>How does a neural network learn? It adjusts its weights to make better predictions. But how does it know which direction to adjust? That&rsquo;s where gradient descent comes in - it&rsquo;s the core algorithm powering all of deep learning.</p>
 <h2 id="the-basic-idea">The basic idea</h2>
-<p>You have a loss function L(w) that measures how wrong your predictions are.</p>
-<p>Goal: find weights w that minimize L.</p>
-<p>Gradient ∇L tells you which direction increases L fastest. Go opposite direction to decrease L.</p>
+<p>Imagine you&rsquo;re blindfolded on a hilly landscape and need to find the lowest point. You can feel the slope under your feet. Gradient descent says: always step downhill.</p>
+<p>In math terms:</p>
+<ul>
+<li>You have a loss function L(w) measuring how wrong your predictions are</li>
+<li>The gradient ∇L tells you which direction makes the loss go UP</li>
+<li>So you step in the opposite direction to make it go DOWN</li>
+</ul>
 <p>$$w_{new} = w_{old} - \alpha \nabla L(w)$$</p>
-<p>Where α is learning rate.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/gradient-descent" alt="Gradient Descent"></p>
-<p>Watch the optimization: <a href="https://danielsobrado.github.io/ml-animations/animation/gradient-descent">Gradient Descent Animation</a></p>
-<h2 id="why-it-works">Why it works</h2>
-<p>Loss surface is like landscape. You&rsquo;re at some point. Gradient points uphill.</p>
-<p>Move opposite direction = move downhill = lower loss.</p>
-<p>Repeat until you reach a minimum.</p>
-<h2 id="learning-rate-matters">Learning rate matters</h2>
-<p><strong>Too small:</strong> Takes forever to converge. Might get stuck.</p>
-<p><strong>Too large:</strong> Overshoots minimum. Loss oscillates or diverges.</p>
-<p><strong>Just right:</strong> Converges smoothly.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Typical ranges</span>
-</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-3</span>   <span style="color:#75715e"># common starting point</span>
-</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-4</span>   <span style="color:#75715e"># smaller, more stable</span>
-</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">3e-4</span>   <span style="color:#75715e"># often works for Adam</span>
-</span></span></code></pre></div><h2 id="types-of-gradient-descent">Types of gradient descent</h2>
+<p>Where α (alpha) is the learning rate - how big your steps are.</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/gradient-descent">Gradient Descent Animation</a> - see the optimization ball roll downhill.</p>
+<h2 id="why-this-actually-works">Why this actually works</h2>
+<p>Think of the loss as a landscape:</p>
+<ul>
+<li>Mountains = bad predictions (high loss)</li>
+<li>Valleys = good predictions (low loss)</li>
+</ul>
+<p>The gradient is like feeling the slope - it tells you which direction is steepest uphill. Go the opposite way, and you head downhill toward better predictions.</p>
+<p>Keep stepping downhill until you reach a valley. That&rsquo;s your trained model!</p>
+<h2 id="learning-rate-the-most-important-hyperparameter">Learning rate: the most important hyperparameter</h2>
+<p>The learning rate controls your step size, and getting it right is crucial:</p>
+<table>
+<thead>
+<tr>
+<th>Learning Rate</th>
+<th>What Happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Too small</strong></td>
+<td>Takes forever, might get stuck</td>
+</tr>
+<tr>
+<td><strong>Too large</strong></td>
+<td>Overshoots the valley, bounces around, might explode</td>
+</tr>
+<tr>
+<td><strong>Just right</strong></td>
+<td>Smooth convergence to a good minimum</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Typical ranges to try</span>
+</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-3</span>   <span style="color:#75715e"># 0.001 - common starting point</span>
+</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-4</span>   <span style="color:#75715e"># 0.0001 - smaller, more stable</span>
+</span></span><span style="display:flex;"><span>lr <span style="color:#f92672">=</span> <span style="color:#ae81ff">3e-4</span>   <span style="color:#75715e"># 0.0003 - often works well for Adam optimizer</span>
+</span></span></code></pre></div><p>Pro tip: if your loss goes to NaN or infinity, your learning rate is too high.</p>
+<h2 id="three-flavors-of-gradient-descent">Three flavors of gradient descent</h2>
 <p><strong>Batch (full) gradient descent:</strong>
-Compute gradient on entire dataset. Accurate but slow.</p>
+Compute gradient using the entire dataset. Very accurate direction, but slow.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(epochs):
-</span></span><span style="display:flex;"><span>    gradient <span style="color:#f92672">=</span> compute_gradient(all_data)
+</span></span><span style="display:flex;"><span>    gradient <span style="color:#f92672">=</span> compute_gradient(all_data)  <span style="color:#75715e"># expensive!</span>
 </span></span><span style="display:flex;"><span>    weights <span style="color:#f92672">-=</span> lr <span style="color:#f92672">*</span> gradient
 </span></span></code></pre></div><p><strong>Stochastic gradient descent (SGD):</strong>
-Compute gradient on single sample. Fast but noisy.</p>
+Compute gradient on a single sample. Fast but noisy (zigzags a lot).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> sample <span style="color:#f92672">in</span> dataset:
-</span></span><span style="display:flex;"><span>    gradient <span style="color:#f92672">=</span> compute_gradient(sample)
+</span></span><span style="display:flex;"><span>    gradient <span style="color:#f92672">=</span> compute_gradient(sample)  <span style="color:#75715e"># cheap!</span>
 </span></span><span style="display:flex;"><span>    weights <span style="color:#f92672">-=</span> lr <span style="color:#f92672">*</span> gradient
 </span></span></code></pre></div><p><strong>Mini-batch gradient descent:</strong>
 Compute gradient on small batch. Best of both worlds.</p>

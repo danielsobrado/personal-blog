@@ -175,7 +175,7 @@
       <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/attention-mechanism-part1/</guid>
-      <description>LSTMs helped with long-range dependencies. Attention does something more powerful - direct connections from anywhere to anywhere.</description>
+      <description>LSTMs were a big step forward for handling sequences. But attention does something more powerful - it creates direct connections from anywhere to anywhere.</description>
     </item>
     
     <item>
@@ -247,7 +247,7 @@
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/word2vec/</guid>
-      <description>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&amp;hellip; none of them captured meaning.</description>
+      <description>Before Word2Vec, representing words for ML was painful. One-hot encoding treated every word as equally different.</description>
     </item>
     
     <item>
@@ -256,7 +256,7 @@
       <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/embeddings/</guid>
-      <description>Embeddings are everywhere now. Words, sentences, images, users, products&amp;hellip; anything can be an embedding.</description>
+      <description>Embeddings are everywhere in modern ML. Words, sentences, images, users, products, songs&amp;hellip; anything can become an embedding.</description>
     </item>
     
     <item>
@@ -265,7 +265,7 @@
       <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/tokenization/</guid>
-      <description>ML models don&amp;rsquo;t read text. They need numbers. Tokenization bridges that gap.</description>
+      <description>ML models can&amp;rsquo;t read text - they only understand numbers. So how do we convert &amp;ldquo;Hello world!</description>
     </item>
     
     <item>
@@ -301,7 +301,7 @@
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/relu/</guid>
-      <description>Sigmoid was the standard. Then ReLU came along and made deep learning actually work.</description>
+      <description>Sigmoid was the standard activation function for decades. Then ReLU came along and made deep learning actually work.</description>
     </item>
     
     <item>
@@ -310,7 +310,7 @@
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/gradient-descent/</guid>
-      <description>Neural networks learn by adjusting weights to reduce error. Gradient descent tells you which direction to adjust.</description>
+      <description>How does a neural network learn? It adjusts its weights to make better predictions.</description>
     </item>
     
     <item>

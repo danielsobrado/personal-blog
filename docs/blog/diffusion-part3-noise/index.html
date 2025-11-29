@@ -234,8 +234,7 @@
 <p>$$q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1-\beta_t}x_{t-1}, \beta_t I)$$</p>
 <p>β_t is noise schedule. Small values (0.0001 to 0.02).</p>
 <p>After T steps (T~1000), image becomes pure noise.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/flow-matching" alt="Flow Matching"></p>
-<p>See flow-based generative modeling: <a href="https://danielsobrado.github.io/ml-animations/animation/flow-matching">Flow Matching Animation</a></p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/flow-matching">Flow Matching Animation</a></p>
 <h2 id="closed-form-sampling">Closed-form sampling</h2>
 <p>Don&rsquo;t need to iterate. Sample x_t directly from x_0:</p>
 <p>$$q(x_t | x_0) = \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t}x_0, (1-\bar{\alpha}_t)I)$$</p>
@@ -279,7 +278,7 @@ Most common. Simpler loss.</p>
 $$v = \sqrt{\bar{\alpha}_t}\epsilon - \sqrt{1-\bar{\alpha}_t}x_0$$
 Better for some applications.</p>
 <h2 id="noise-prediction-loss">Noise prediction loss</h2>
-<p>$$\mathcal{L} = \mathbb{E}<em>{t, x_0, \epsilon}\left[||\epsilon - \epsilon</em>\theta(x_t, t)||^2\right]$$</p>
+<p>$$\mathcal{L} = \mathbb{E}<em>{t, x_0, \epsilon}\left[|\epsilon - \epsilon</em>\theta(x_t, t)|^2\right]$$</p>
 <p>Simple MSE between true noise and predicted noise.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">diffusion_loss</span>(model, x_0, t):
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Sample noise</span>

@@ -237,8 +237,7 @@ Too much exploration: waste time on bad actions</p>
 <li>Action B gives +0 usually, but +100 rarely</li>
 </ul>
 <p>Greedy agent tries B once, gets 0, never tries again. Misses the jackpot.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/rl-exploration" alt="Exploration vs Exploitation"></p>
-<p>Watch different strategies: <a href="https://danielsobrado.github.io/ml-animations/animation/rl-exploration">Exploration Animation</a></p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/rl-exploration">Exploration Animation</a></p>
 <h2 id="epsilon-greedy">Epsilon-greedy</h2>
 <p>Simplest approach:</p>
 <ul>
@@ -290,7 +289,7 @@ Too much exploration: waste time on bad actions</p>
 <h2 id="curiosity-driven-exploration">Curiosity-driven exploration</h2>
 <p>For complex environments, add intrinsic reward for novelty.</p>
 <p><strong>Prediction error:</strong> Reward for visiting states the model predicts poorly.</p>
-<p>$$r_i = ||f(\phi(s), a) - \phi(s&rsquo;)||^2$$</p>
+<p>$$r_i = |f(\phi(s), a) - \phi(s&rsquo;)|^2$$</p>
 <p>Where f is forward model, φ is feature extractor.</p>
 <p><strong>Count-based:</strong> Bonus inversely proportional to visit count.</p>
 <p>$$r_i = \frac{\beta}{\sqrt{N(s)}}$$</p>

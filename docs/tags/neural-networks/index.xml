@@ -49,7 +49,7 @@
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/relu/</guid>
-      <description>Sigmoid was the standard. Then ReLU came along and made deep learning actually work.</description>
+      <description>Sigmoid was the standard activation function for decades. Then ReLU came along and made deep learning actually work.</description>
     </item>
     
   </channel>

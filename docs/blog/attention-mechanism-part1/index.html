@@ -227,32 +227,38 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>LSTMs helped with long-range dependencies. Attention does something more powerful - direct connections from anywhere to anywhere. Look at what matters, ignore what doesn&rsquo;t.</p>
-<h2 id="the-limitation-of-sequence-models">The limitation of sequence models</h2>
-<p>RNN/LSTM process sequences step by step. To connect word 1 to word 50, information flows through 49 intermediate steps.</p>
-<p>Attention: skip all that. Word 1 directly attends to word 50.</p>
-<h2 id="core-idea">Core idea</h2>
-<p>Given a query, compare it against all keys. Use similarity scores to weight the values.</p>
-<p>$$\text{Attention}(Q, K, V) = \text{softmax}(scores) \cdot V$$</p>
-<p>Softmax ensures weights sum to 1. Output is weighted average of values.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/attention-mechanism" alt="Attention Mechanism"></p>
-<p>Watch attention flow: <a href="https://danielsobrado.github.io/ml-animations/animation/attention-mechanism">Attention Animation</a></p>
-<h2 id="query-key-value">Query, Key, Value</h2>
-<p>Think of it like a dictionary lookup, but soft/fuzzy:</p>
-<ul>
-<li><strong>Query:</strong> What am I looking for?</li>
-<li><strong>Key:</strong> What does each item offer?</li>
-<li><strong>Value:</strong> What information does each item have?</li>
-</ul>
-<p>Query-key similarity determines how much of each value to retrieve.</p>
-<h2 id="simple-attention">Simple attention</h2>
-<p>Original sequence-to-sequence attention:</p>
+              <p>LSTMs were a big step forward for handling sequences. But attention does something more powerful - it creates direct connections from anywhere to anywhere. Instead of information flowing through dozens of steps, word 1 can directly &ldquo;look at&rdquo; word 50.</p>
+<h2 id="the-problem-with-sequence-models">The problem with sequence models</h2>
+<p>RNNs and LSTMs process sequences step by step, like reading one word at a time. To connect information from the beginning of a sentence to the end, everything has to flow through all the intermediate steps.</p>
+<p>Think about translating a long sentence. By the time you reach the end, information about the beginning has been passed through dozens of transforms. Important details get lost in the shuffle.</p>
+<p>Attention says: forget the middlemen. Let any position directly attend to any other position.</p>
+<h2 id="the-core-idea-its-simpler-than-you-think">The core idea (it&rsquo;s simpler than you think)</h2>
+<p>Attention is basically a smart lookup:</p>
 <ol>
-<li>Encoder produces states: $h_1, h_2, &hellip;, h_n$</li>
-<li>Decoder has current state: $s_t$</li>
-<li>Compare $s_t$ (query) against all $h_i$ (keys)</li>
-<li>Weight $h_i$ (values) by similarity</li>
-<li>Use weighted sum to help decode</li>
+<li>You have a <strong>query</strong> (what you&rsquo;re looking for)</li>
+<li>You compare it against all <strong>keys</strong> (what each item offers)</li>
+<li>Use those similarity scores to weight the <strong>values</strong> (actual information)</li>
+</ol>
+<p>$$\text{Attention}(Q, K, V) = \text{softmax}(scores) \cdot V$$</p>
+<p>The softmax makes the weights sum to 1, so the output is just a weighted average. Items that match your query well get more weight.</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/attention-mechanism">Attention Animation</a> - watch how different queries focus on different parts of the input.</p>
+<h2 id="query-key-value---a-helpful-analogy">Query, Key, Value - a helpful analogy</h2>
+<p>Think of it like searching a library:</p>
+<ul>
+<li><strong>Query:</strong> &ldquo;I want books about cats&rdquo; (what you&rsquo;re looking for)</li>
+<li><strong>Key:</strong> Each book&rsquo;s title and description (what each item offers)</li>
+<li><strong>Value:</strong> The actual book content (what you get back)</li>
+</ul>
+<p>You compare your query against all keys, then retrieve a blend of values weighted by how well they matched.</p>
+<p>The key insight: <strong>query-key similarity determines how much of each value to retrieve</strong>.</p>
+<h2 id="a-simple-attention-example">A simple attention example</h2>
+<p>Let&rsquo;s say we&rsquo;re translating a sentence:</p>
+<ol>
+<li>Encoder produces a hidden state for each input word: $h_1, h_2, &hellip;, h_n$</li>
+<li>Decoder is currently generating a word and has state $s_t$</li>
+<li>Use $s_t$ as query, compare against all $h_i$ as keys</li>
+<li>Weight the $h_i$ values by similarity</li>
+<li>This weighted sum helps the decoder focus on relevant input words</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">attention</span>(query, keys, values):
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># query: (batch, hidden)</span>
@@ -266,9 +272,9 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (batch, 1, hidden)</span>
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> output<span style="color:#f92672">.</span>squeeze(<span style="color:#ae81ff">1</span>), weights
-</span></span></code></pre></div><h2 id="scoring-functions">Scoring functions</h2>
-<p>How to compute similarity?</p>
-<p><strong>Dot product:</strong>
+</span></span></code></pre></div><h2 id="how-do-we-compute-similarity">How do we compute similarity?</h2>
+<p>Several options:</p>
+<p><strong>Dot product (simplest):</strong>
 $$score(q, k) = q \cdot k$$</p>
 <p><strong>Scaled dot product:</strong> (used in transformers)
 $$score(q, k) = \frac{q \cdot k}{\sqrt{d_k}}$$</p>

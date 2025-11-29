@@ -13,7 +13,7 @@
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/word2vec/</guid>
-      <description>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&amp;hellip; none of them captured meaning.</description>
+      <description>Before Word2Vec, representing words for ML was painful. One-hot encoding treated every word as equally different.</description>
     </item>
     
   </channel>

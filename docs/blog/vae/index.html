@@ -237,10 +237,9 @@ Decoder: z → x̂ (deterministic)</p>
 Sample: z ~ N(μ, σ²)
 Decoder: z → x̂</p>
 <p>Latent space becomes continuous. Similar inputs → similar latent distributions.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/vae" alt="VAE Architecture"></p>
-<p>See encoding and sampling: <a href="https://danielsobrado.github.io/ml-animations/animation/vae">VAE Animation</a></p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/vae">VAE Animation</a></p>
 <h2 id="the-loss-function">The loss function</h2>
-<p>$$\mathcal{L} = \mathbb{E}<em>{z \sim q(z|x)}[\log p(x|z)] - D</em>{KL}(q(z|x) || p(z))$$</p>
+<p>$$\mathcal{L} = \mathbb{E}<em>{z \sim q(z|x)}[\log p(x|z)] - D</em>{KL}(q(z|x) | p(z))$$</p>
 <p>Two parts:</p>
 <ol>
 <li><strong>Reconstruction:</strong> Decoded output matches input</li>

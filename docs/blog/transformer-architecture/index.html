@@ -227,21 +227,27 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>The paper that changed everything: &ldquo;Attention Is All You Need&rdquo; (2017). No RNNs, no convolutions. Just attention. Now powers GPT, BERT, and nearly every language model.</p>
-<h2 id="high-level-structure">High-level structure</h2>
-<p>Original transformer: encoder-decoder</p>
-<p><strong>Encoder:</strong> Process input, create representations
-<strong>Decoder:</strong> Generate output, attending to encoder</p>
-<p>BERT uses encoder only. GPT uses decoder only.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/transformer" alt="Transformer Architecture"></p>
-<p>Full architecture tour: <a href="https://danielsobrado.github.io/ml-animations/animation/transformer">Transformer Animation</a></p>
-<h2 id="encoder-block">Encoder block</h2>
-<p>Each encoder layer:</p>
+              <p>The paper that changed everything: &ldquo;Attention Is All You Need&rdquo; (2017). The authors threw out RNNs, threw out convolutions, and built a model using <em>only</em> attention. That architecture now powers GPT, BERT, Claude, and virtually every modern language model.</p>
+<p>Let&rsquo;s break down how it actually works.</p>
+<h2 id="the-big-picture">The big picture</h2>
+<p>The original transformer has two main parts:</p>
+<ul>
+<li><strong>Encoder:</strong> Reads the input and creates rich representations</li>
+<li><strong>Decoder:</strong> Generates output, one token at a time, while looking at the encoder&rsquo;s representations</li>
+</ul>
+<p>Here&rsquo;s the thing though - modern models often use just one half:</p>
+<ul>
+<li><strong>BERT</strong> = encoder only (good for understanding text)</li>
+<li><strong>GPT</strong> = decoder only (good for generating text)</li>
+</ul>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/transformer">Transformer Animation</a> - click through each component to see how data flows.</p>
+<h2 id="inside-an-encoder-block">Inside an encoder block</h2>
+<p>Each encoder layer does four things:</p>
 <ol>
-<li>Multi-head self-attention</li>
-<li>Add &amp; normalize (residual + layer norm)</li>
-<li>Feed-forward network</li>
-<li>Add &amp; normalize</li>
+<li><strong>Multi-head self-attention</strong> - every position attends to every other position</li>
+<li><strong>Add &amp; normalize</strong> - residual connection + layer normalization</li>
+<li><strong>Feed-forward network</strong> - process each position independently</li>
+<li><strong>Add &amp; normalize</strong> - another residual + layer norm</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EncoderLayer</span>(nn<span style="color:#f92672">.</span>Module):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, d_model, num_heads, d_ff):
@@ -256,16 +262,16 @@
 </span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>norm2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>LayerNorm(d_model)
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Pre-norm style</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Pre-norm style (more common now)</span>
 </span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>attention(self<span style="color:#f92672">.</span>norm1(x))
 </span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>ffn(self<span style="color:#f92672">.</span>norm2(x))
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> x
-</span></span></code></pre></div><p>Stack N of these (usually 6-96 depending on model size).</p>
-<h2 id="decoder-block">Decoder block</h2>
-<p>Same as encoder, plus:</p>
+</span></span></code></pre></div><p>Stack 6 to 96 of these (depending on how big your model is) and you&rsquo;ve got an encoder!</p>
+<h2 id="inside-a-decoder-block">Inside a decoder block</h2>
+<p>The decoder is similar to the encoder, but with two key differences:</p>
 <ul>
-<li><strong>Masked self-attention:</strong> Can only attend to previous positions</li>
-<li><strong>Cross-attention:</strong> Attend to encoder outputs</li>
+<li><strong>Masked self-attention:</strong> When generating token 5, you can only see tokens 1-4, not the future</li>
+<li><strong>Cross-attention:</strong> After self-attention, attend to the encoder&rsquo;s output</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecoderLayer</span>(nn<span style="color:#f92672">.</span>Module):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, d_model, num_heads, d_ff):

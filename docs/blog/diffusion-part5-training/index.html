@@ -231,9 +231,8 @@
 <p>Part 5 of 7 in the Diffusion Models series.</p>
 <h2 id="the-training-objective">The training objective</h2>
 <p>Predict the noise that was added:</p>
-<p>$$\mathcal{L} = \mathbb{E}<em>{t \sim U(1,T), x_0 \sim data, \epsilon \sim \mathcal{N}(0,1)}\left[||\epsilon - \epsilon</em>\theta(x_t, t)||^2\right]$$</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/sd3-overview" alt="SD3 Architecture"></p>
-<p>See the full pipeline: <a href="https://danielsobrado.github.io/ml-animations/animation/sd3-overview">SD3 Overview Animation</a></p>
+<p>$$\mathcal{L} = \mathbb{E}<em>{t \sim U(1,T), x_0 \sim data, \epsilon \sim \mathcal{N}(0,1)}\left[|\epsilon - \epsilon</em>\theta(x_t, t)|^2\right]$$</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/sd3-overview">SD3 Overview Animation</a></p>
 <h2 id="training-loop">Training loop</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train_step</span>(model, optimizer, x_0):
 </span></span><span style="display:flex;"><span>    batch_size <span style="color:#f92672">=</span> x_0<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]

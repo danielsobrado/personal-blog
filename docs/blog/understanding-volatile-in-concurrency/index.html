@@ -238,7 +238,7 @@
 <h2 id="visibility-and-reordering">Visibility and Reordering</h2>
 <p>One of the main purposes of <code>volatile</code> is to guarantee the visibility of changes made to a variable across threads. In the absence of <code>volatile</code>, the compiler and the runtime are allowed to perform certain optimizations, such as caching the value of a variable in a register or reordering memory operations, which can lead to inconsistent views of the variable by different threads.</p>
 <p>When a variable is declared as <code>volatile</code>, the compiler and the runtime are prohibited from performing such optimizations. Any write to a <code>volatile</code> variable by one thread is guaranteed to be visible to subsequent reads by other threads, ensuring that all threads always see the most up-to-date value of the variable.</p>
-<p>However, it&rsquo;s important to note that <code>volatile</code> does not provide atomicity or mutual exclusion. It does not prevent multiple threads from simultaneously accessing or modifying the variable, which can still lead to race conditions if not properly synchronized.</p>
+<p>However, <code>volatile</code> does not provide atomicity or mutual exclusion. It does not prevent multiple threads from simultaneously accessing or modifying the variable, which can still lead to race conditions if not properly synchronized.</p>
 <p>Here&rsquo;s an example that demonstrates the importance of visibility in concurrent code:</p>
 <pre tabindex="0"><code>public class VisibilityExample {
     private static volatile boolean flag = false;

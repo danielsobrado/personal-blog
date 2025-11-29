@@ -227,34 +227,32 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&hellip; none of them captured meaning. Then Mikolov and team at Google published Word2Vec in 2013 and everything changed.</p>
-<h2 id="the-big-idea">The big idea</h2>
-<p>Words that appear in similar contexts have similar meanings. &ldquo;Dog&rdquo; and &ldquo;cat&rdquo; both appear near &ldquo;pet&rdquo;, &ldquo;cute&rdquo;, &ldquo;fur&rdquo;. So their vectors should be close.</p>
-<p>Train a simple neural network on a prediction task. The &ldquo;side effect&rdquo; is that word vectors learn to encode meaning.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/word2vec" alt="Word2Vec Training"></p>
-<p>See it in action: <a href="https://danielsobrado.github.io/ml-animations/animation/word2vec">Word2Vec Animation</a></p>
-<h2 id="two-flavors">Two flavors</h2>
-<p><strong>Skip-gram:</strong> Given center word, predict context words</p>
-<p>&ldquo;The cat sat on the mat&rdquo;</p>
+              <p>Before Word2Vec, representing words for ML was painful. One-hot encoding treated every word as equally different. TF-IDF captured some statistics but no meaning. Then in 2013, Mikolov and team at Google published Word2Vec, and suddenly we could do things like:</p>
+<pre tabindex="0"><code>king - man + woman ≈ queen
+</code></pre><p>Wait, what? Word <em>arithmetic</em> that actually works? Let&rsquo;s see how.</p>
+<h2 id="the-brilliant-insight">The brilliant insight</h2>
+<p>Words that appear in similar contexts have similar meanings.</p>
+<p>Think about it: &ldquo;dog&rdquo; and &ldquo;cat&rdquo; both appear near words like &ldquo;pet&rdquo;, &ldquo;cute&rdquo;, &ldquo;fur&rdquo;, &ldquo;feed&rdquo;. The word &ldquo;laptop&rdquo; appears near totally different words. So if we train a model to predict context, &ldquo;dog&rdquo; and &ldquo;cat&rdquo; vectors will naturally end up close together.</p>
+<p>The embeddings aren&rsquo;t the goal - they&rsquo;re a &ldquo;side effect&rdquo; of training a simple prediction task. And that side effect turned out to be incredibly useful.</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/word2vec">Word2Vec Animation</a> - see how word vectors organize themselves during training.</p>
+<h2 id="two-training-flavors">Two training flavors</h2>
+<p><strong>Skip-gram:</strong> Given a center word, predict the surrounding context words</p>
+<pre tabindex="0"><code>&#34;The cat sat on the mat&#34;
+Center word: &#34;sat&#34;
+Predict: &#34;The&#34;, &#34;cat&#34;, &#34;on&#34;, &#34;the&#34;
+</code></pre><p><strong>CBOW (Continuous Bag of Words):</strong> Given context words, predict the center</p>
+<pre tabindex="0"><code>Context: &#34;The&#34;, &#34;cat&#34;, &#34;on&#34;, &#34;the&#34;  
+Predict: &#34;sat&#34;
+</code></pre><p>Which is better? Skip-gram works better for smaller datasets and rare words. CBOW is faster and handles frequent words well. In practice, Skip-gram is more popular.</p>
+<h2 id="the-architecture-surprisingly-simple">The architecture (surprisingly simple)</h2>
+<p>It&rsquo;s basically just one hidden layer:</p>
 <ul>
-<li>Center: &ldquo;sat&rdquo;</li>
-<li>Predict: &ldquo;The&rdquo;, &ldquo;cat&rdquo;, &ldquo;on&rdquo;, &ldquo;the&rdquo;</li>
-</ul>
-<p><strong>CBOW (Continuous Bag of Words):</strong> Given context, predict center</p>
-<ul>
-<li>Context: &ldquo;The&rdquo;, &ldquo;cat&rdquo;, &ldquo;on&rdquo;, &ldquo;the&rdquo;</li>
-<li>Predict: &ldquo;sat&rdquo;</li>
-</ul>
-<p>Skip-gram works better for smaller datasets and rare words. CBOW is faster and works well with frequent words.</p>
-<h2 id="the-architecture">The architecture</h2>
-<p>Surprisingly simple:</p>
-<ul>
-<li>Input layer: one-hot encoded word</li>
-<li>Hidden layer: embedding dimension (typically 100-300)</li>
-<li>Output layer: vocabulary size, softmax</li>
+<li>Input: one-hot encoded word (vocabulary size V)</li>
+<li>Hidden: embedding dimension (typically 100-300)</li>
+<li>Output: vocabulary size V, with softmax</li>
 </ul>
 <pre tabindex="0"><code>Input (V) → Hidden (D) → Output (V)
-</code></pre><p>The magic happens in the hidden layer. Those weights become your word vectors.</p>
+</code></pre><p>The hidden layer weights ARE your word embeddings. That&rsquo;s it!</p>
 <h2 id="negative-sampling">Negative sampling</h2>
 <p>Don&rsquo;t compute full softmax. Instead:</p>
 <ul>

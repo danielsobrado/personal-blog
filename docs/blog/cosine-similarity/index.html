@@ -229,11 +229,10 @@
             <div class="post-content">
               <p>Two embeddings point in similar direction? They&rsquo;re similar. Cosine similarity ignores magnitude, only cares about angle.</p>
 <h2 id="definition">Definition</h2>
-<p>$$\cos(\theta) = \frac{\mathbf{a} \cdot \mathbf{b}}{||\mathbf{a}|| \cdot ||\mathbf{b}||}$$</p>
+<p>$$\cos(\theta) = \frac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| \cdot |\mathbf{b}|}$$</p>
 <p>Range: -1 (opposite) to 1 (same direction).
 0 means perpendicular (orthogonal).</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/cosine-similarity" alt="Cosine Similarity"></p>
-<p>Visual explanation: <a href="https://danielsobrado.github.io/ml-animations/animation/cosine-similarity">Cosine Similarity Animation</a></p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/cosine-similarity">Cosine Similarity Animation</a></p>
 <h2 id="computing-it">Computing it</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 </span></span><span style="display:flex;"><span>

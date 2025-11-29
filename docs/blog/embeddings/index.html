@@ -227,43 +227,43 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Embeddings are everywhere now. Words, sentences, images, users, products&hellip; anything can be an embedding. But what are they actually?</p>
-<h2 id="the-basic-idea">The basic idea</h2>
-<p>Convert discrete things into continuous vectors where similar things are close together.</p>
-<p>Cat → [0.2, -0.5, 0.8, &hellip;]
-Dog → [0.3, -0.4, 0.7, &hellip;]
-Car → [-0.8, 0.3, -0.2, &hellip;]</p>
-<p>Cat and dog vectors are close. Car is far from both. That&rsquo;s the goal.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/embeddings" alt="Embedding Space"></p>
-<p>Explore: <a href="https://danielsobrado.github.io/ml-animations/animation/embeddings">Embeddings Animation</a></p>
-<h2 id="why-not-one-hot">Why not one-hot?</h2>
-<p>One-hot encoding for words:</p>
-<pre tabindex="0"><code>cat = [1, 0, 0, 0, ...]  # 10000 dims for 10000 words
+              <p>Embeddings are everywhere in modern ML. Words, sentences, images, users, products, songs&hellip; anything can become an embedding. But what are they actually, and why do we need them?</p>
+<h2 id="the-core-idea">The core idea</h2>
+<p>An embedding converts something discrete (like a word) into a list of numbers (a vector) where <strong>similar things end up close together</strong>.</p>
+<pre tabindex="0"><code>Cat → [0.2, -0.5, 0.8, ...]
+Dog → [0.3, -0.4, 0.7, ...]
+Car → [-0.8, 0.3, -0.2, ...]
+</code></pre><p>Cat and dog vectors are close to each other (both are pets). Car is far from both. The embedding has captured meaning!</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/embeddings">Embeddings Animation</a> - see how similar items cluster together in embedding space.</p>
+<h2 id="why-not-just-use-one-hot-encoding">Why not just use one-hot encoding?</h2>
+<p>The naive approach - one-hot encoding:</p>
+<pre tabindex="0"><code>cat = [1, 0, 0, 0, ...]  # 10,000 dims for 10,000 word vocabulary
 dog = [0, 1, 0, 0, ...]
 car = [0, 0, 1, 0, ...]
-</code></pre><p>Problems:</p>
+</code></pre><p>This has serious problems:</p>
 <ul>
-<li>Huge dimensionality</li>
-<li>All words equally distant</li>
-<li>No semantic information</li>
-<li>Sparse (wasteful)</li>
+<li><strong>Huge vectors</strong> - vocabulary of 50k words = 50k dimensions</li>
+<li><strong>All words equally distant</strong> - &ldquo;cat&rdquo; is as far from &ldquo;dog&rdquo; as from &ldquo;refrigerator&rdquo;</li>
+<li><strong>No semantic meaning</strong> - the model can&rsquo;t see that cat and dog are related</li>
+<li><strong>Wasteful</strong> - 99.99% zeros</li>
 </ul>
-<p>Embeddings fix all of these.</p>
-<h2 id="word-embeddings">Word embeddings</h2>
-<p>The first big success. Word2Vec, GloVe, FastText.</p>
-<p>Trained on &ldquo;words appearing in similar contexts have similar meanings.&rdquo;</p>
+<p>Embeddings solve ALL of these. You get dense 100-1000 dimensional vectors that capture meaning.</p>
+<h2 id="word-embeddings-where-it-started">Word embeddings: where it started</h2>
+<p>Word2Vec, GloVe, and FastText showed the world that embeddings work. The key insight: <strong>words appearing in similar contexts have similar meanings.</strong></p>
+<p>&ldquo;The ___ sat on the mat&rdquo; → probably cat, dog, baby, etc.</p>
+<p>Training on billions of sentences, the model learns that these words should have similar vectors.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> gensim.models <span style="color:#f92672">import</span> Word2Vec
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># similar words have similar vectors</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Similar words cluster together</span>
 </span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>wv<span style="color:#f92672">.</span>most_similar(<span style="color:#e6db74">&#39;king&#39;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># [(&#39;queen&#39;, 0.8), (&#39;prince&#39;, 0.7), ...]</span>
-</span></span></code></pre></div><p>Limitation: one vector per word. &ldquo;Bank&rdquo; (river) and &ldquo;bank&rdquo; (financial) get same vector.</p>
-<h2 id="sentence-embeddings">Sentence embeddings</h2>
-<p>Words are nice but you often need sentence or document level.</p>
-<p><strong>Simple approach:</strong> average word embeddings</p>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># [(&#39;queen&#39;, 0.8), (&#39;prince&#39;, 0.7), (&#39;monarch&#39;, 0.6), ...]</span>
+</span></span></code></pre></div><p><strong>The famous limitation:</strong> one vector per word. &ldquo;Bank&rdquo; (river) and &ldquo;bank&rdquo; (financial institution) get the same embedding. Context-aware models like BERT fix this.</p>
+<h2 id="sentence-and-document-embeddings">Sentence and document embeddings</h2>
+<p>Individual words are great, but often you need to represent entire sentences or documents.</p>
+<p><strong>Simple approach:</strong> average the word vectors</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sentence_vec <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean([word_vec(w) <span style="color:#66d9ef">for</span> w <span style="color:#f92672">in</span> sentence])
-</span></span></code></pre></div><p>Works okayish but loses word order.</p>
-<p><strong>Better:</strong> models trained for sentence similarity</p>
+</span></span></code></pre></div><p>Works okay for some tasks, but loses word order completely. &ldquo;Dog bites man&rdquo; = &ldquo;Man bites dog&rdquo; - not ideal!</p>
+<p><strong>Better approach:</strong> models trained specifically for sentence similarity</p>
 <ul>
 <li>Sentence-BERT</li>
 <li>Universal Sentence Encoder</li>

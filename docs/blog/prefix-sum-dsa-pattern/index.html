@@ -274,8 +274,8 @@ Prefix sum array: [0,  3,  4,  8, 10, 15]
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">query_submatrix_sum</span>(prefix, r1, c1, r2, c2):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (prefix[r2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][c2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> prefix[r1][c2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>] 
 </span></span><span style="display:flex;"><span>            <span style="color:#f92672">-</span> prefix[r2<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][c1] <span style="color:#f92672">+</span> prefix[r1][c1])
-</span></span></code></pre></div><h2 id="when-to-unleash-the-prefix-sum-power">When to Unleash the Prefix Sum Power</h2>
-<p>You might be wondering, &ldquo;Okay, this looks cool, but when would I actually use this in an interview?&rdquo; Great question! Here are some scenarios where Prefix Sum can be your secret weapon:</p>
+</span></span></code></pre></div><h2 id="when-to-use-prefix-sum">When to Use Prefix Sum</h2>
+<p>When would you actually use this in an interview? Here are some scenarios where Prefix Sum shines:</p>
 <ol>
 <li>When you need to perform multiple sum queries on subarrays (think: &ldquo;What&rsquo;s the sum of elements from index 3 to 7?&rdquo; asked a hundred times)</li>
 <li>When you&rsquo;re calculating cumulative sums efficiently (like running totals in financial data)</li>

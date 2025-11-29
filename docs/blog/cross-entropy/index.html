@@ -233,7 +233,7 @@
 <p>For true distribution P and predicted distribution Q:</p>
 <p>$$H(P, Q) = -\sum_x P(x) \log Q(x)$$</p>
 <p>In classification, P is one-hot (true label), Q is your softmax output.</p>
-<p>👉 <strong>See it in action:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/cross-entropy">Cross-Entropy Animation</a> - watch how loss changes as predictions shift!</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/cross-entropy">Cross-Entropy Animation</a> - watch how loss changes as predictions shift.</p>
 <h2 id="a-concrete-example">A concrete example</h2>
 <p>Say we have 4 classes and the true label is class 2.</p>
 <p>True label (one-hot): <code>[0, 0, 1, 0]</code>
@@ -253,9 +253,9 @@ Model prediction: <code>[0.1, 0.2, 0.6, 0.1]</code></p>
 </thead>
 <tbody>
 <tr>
-<td>Confident &amp; correct</td>
+<td>Confident and correct</td>
 <td>-log(0.99)</td>
-<td>0.01 ✅</td>
+<td>0.01 (good)</td>
 </tr>
 <tr>
 <td>Unsure but correct</td>
@@ -268,9 +268,9 @@ Model prediction: <code>[0.1, 0.2, 0.6, 0.1]</code></p>
 <td>1.2</td>
 </tr>
 <tr>
-<td>Confident &amp; wrong</td>
+<td>Confident and wrong</td>
 <td>-log(0.01)</td>
-<td>4.6 ❌</td>
+<td>4.6 (bad)</td>
 </tr>
 </tbody>
 </table>
@@ -288,7 +288,7 @@ Model prediction: <code>[0.1, 0.2, 0.6, 0.1]</code></p>
 </span></span><span style="display:flex;"><span>loss <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>binary_cross_entropy_with_logits(logits, targets)
 </span></span></code></pre></div><h2 id="multi-class-cross-entropy">Multi-class cross-entropy</h2>
 <p>$$\text{CE} = -\sum_{c=1}^{C} y_c \log(\hat{y}_c)$$</p>
-<p>⚠️ <strong>Important PyTorch gotcha:</strong> <code>CrossEntropyLoss</code> expects raw logits, NOT softmax outputs. It applies softmax internally:</p>
+<p><strong>Important PyTorch note:</strong> <code>CrossEntropyLoss</code> expects raw logits, NOT softmax outputs. It applies softmax internally:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>loss_fn <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>CrossEntropyLoss()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># logits: (batch, num_classes) - raw network output</span>
@@ -298,7 +298,7 @@ Model prediction: <code>[0.1, 0.2, 0.6, 0.1]</code></p>
 <p>Computing softmax then log separately is dangerous:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># DON&#39;T DO THIS</span>
 </span></span><span style="display:flex;"><span>probs <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(logits, dim<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># might underflow to 0</span>
-</span></span><span style="display:flex;"><span>loss <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>torch<span style="color:#f92672">.</span>log(probs[target])   <span style="color:#75715e"># log(0) = -inf 💥</span>
+</span></span><span style="display:flex;"><span>loss <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>torch<span style="color:#f92672">.</span>log(probs[target])   <span style="color:#75715e"># log(0) = -inf, crashes!</span>
 </span></span></code></pre></div><p>The combined log-softmax is stable:
 $$\log\text{softmax}(z_i) = z_i - \log\sum_j e^{z_j}$$</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># DO THIS</span>

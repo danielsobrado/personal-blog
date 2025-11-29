@@ -227,49 +227,50 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Sigmoid was the standard. Then ReLU came along and made deep learning actually work. Such a simple function but it changed everything.</p>
+              <p>Sigmoid was the standard activation function for decades. Then ReLU came along and made deep learning actually work. The crazy part? It&rsquo;s embarrassingly simple.</p>
 <h2 id="what-is-relu">What is ReLU?</h2>
-<p>Rectified Linear Unit. Just:</p>
+<p>Rectified Linear Unit. The whole thing is just:</p>
 <p>$$f(x) = \max(0, x)$$</p>
-<p>Negative inputs → 0
-Positive inputs → unchanged</p>
+<ul>
+<li>Negative inputs → 0 (just throw them away)</li>
+<li>Positive inputs → pass through unchanged</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">relu</span>(x):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> max(<span style="color:#ae81ff">0</span>, x)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># or with numpy</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">relu</span>(x):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>maximum(<span style="color:#ae81ff">0</span>, x)
-</span></span></code></pre></div><p>That&rsquo;s it. Why is this good?</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/relu" alt="ReLU Function"></p>
-<p>Visual explanation: <a href="https://danielsobrado.github.io/ml-animations/animation/relu">ReLU Animation</a></p>
-<h2 id="the-sigmoid-problem">The sigmoid problem</h2>
-<p>Before ReLU, networks used sigmoid:
-$$\sigma(x) = \frac{1}{1 + e^{-x}}$$</p>
-<p>Looks nice but has issues.</p>
-<p><strong>Vanishing gradients</strong></p>
-<p>Sigmoid derivative maxes at 0.25. Multiple layers multiply gradients together. 0.25^10 = 0.0000009. Signal dies.</p>
-<p>Deep networks couldn&rsquo;t train. Gradients vanished before reaching early layers.</p>
-<p><strong>Saturation</strong></p>
-<p>Very negative or very positive inputs have gradient ≈ 0. Neurons get &ldquo;stuck&rdquo; and stop learning.</p>
-<p><strong>Compute expensive</strong></p>
-<p>Exponential is slow compared to max.</p>
-<h2 id="relu-solves-these">ReLU solves these</h2>
+</span></span></code></pre></div><p>That&rsquo;s literally it. A bent line. And it revolutionized the field.</p>
+<p><strong>Interactive demo:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/relu">ReLU Animation</a> - watch how gradients flow through the network.</p>
+<h2 id="why-sigmoid-was-a-problem">Why sigmoid was a problem</h2>
+<p>Before ReLU, everyone used sigmoid: $\sigma(x) = \frac{1}{1 + e^{-x}}$</p>
+<p>Looks smooth and pretty, but it has killer problems:</p>
+<p><strong>Problem 1: Vanishing gradients</strong></p>
+<p>Sigmoid&rsquo;s derivative maxes out at 0.25. In a deep network, gradients multiply through layers:</p>
+<p>$$0.25 \times 0.25 \times 0.25 \times &hellip; = \text{basically zero}$$</p>
+<p>After 10 layers, your gradient is 0.0000009. The early layers never learn anything because the learning signal dies before reaching them.</p>
+<p><strong>Problem 2: Saturation</strong></p>
+<p>For very negative or very positive inputs, sigmoid is almost flat. Gradient ≈ 0. Neurons get &ldquo;stuck&rdquo; and stop learning entirely.</p>
+<p><strong>Problem 3: Expensive</strong></p>
+<p>Computing exponentials is slow. In a network with millions of activations, this adds up.</p>
+<h2 id="how-relu-fixes-everything">How ReLU fixes everything</h2>
 <p><strong>Gradient is 1 for positive inputs</strong></p>
-<p>No matter how deep, positive signals pass through unchanged.</p>
-<p><strong>No saturation on positive side</strong></p>
-<p>Large positive values don&rsquo;t squash gradient.</p>
-<p><strong>Stupid fast</strong></p>
-<p>Just a comparison. No exponential.</p>
-<h2 id="relus-problem---dying-neurons">ReLU&rsquo;s problem - dying neurons</h2>
-<p>Negative side has gradient 0. If neuron always outputs negative, it stops learning entirely.</p>
-<p>&ldquo;Dead ReLU&rdquo; - neuron that never activates.</p>
-<p>Happens when:</p>
+<p>No matter how deep your network, if the input is positive, the gradient passes through at full strength. Signal doesn&rsquo;t die!</p>
+<p><strong>No saturation on the positive side</strong></p>
+<p>Big positive values? Still gradient of 1. No getting stuck.</p>
+<p><strong>Blazing fast</strong></p>
+<p>It&rsquo;s literally just <code>if x &gt; 0 then x else 0</code>. Your GPU loves this.</p>
+<h2 id="the-catch-dying-neurons">The catch: dying neurons</h2>
+<p>ReLU has one annoying problem. On the negative side, gradient is exactly 0.</p>
+<p>If a neuron consistently receives negative inputs, it outputs 0 forever. With gradient 0, it can never recover. It&rsquo;s &ldquo;dead.&rdquo;</p>
+<p>This happens when:</p>
 <ul>
-<li>Learning rate too high</li>
+<li>Learning rate is too high (weights swing too far)</li>
 <li>Bad initialization</li>
 <li>Unlucky input distribution</li>
 </ul>
-<p>Some networks end up with 20-40% dead neurons.</p>
+<p>Some networks end up with 20-40% dead neurons. Still works, but wasteful.</p>
 <h2 id="leaky-relu">Leaky ReLU</h2>
 <p>Small slope for negative values:</p>
 <p>$$f(x) = \begin{cases} x &amp; x &gt; 0 \ 0.01x &amp; x \leq 0 \end{cases}$$</p>

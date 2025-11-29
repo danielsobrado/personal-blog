@@ -58,7 +58,7 @@
       <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/word2vec/</guid>
-      <description>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&amp;hellip; none of them captured meaning.</description>
+      <description>Before Word2Vec, representing words for ML was painful. One-hot encoding treated every word as equally different.</description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@
       <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/embeddings/</guid>
-      <description>Embeddings are everywhere now. Words, sentences, images, users, products&amp;hellip; anything can be an embedding.</description>
+      <description>Embeddings are everywhere in modern ML. Words, sentences, images, users, products, songs&amp;hellip; anything can become an embedding.</description>
     </item>
     
     <item>
@@ -76,7 +76,7 @@
       <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/tokenization/</guid>
-      <description>ML models don&amp;rsquo;t read text. They need numbers. Tokenization bridges that gap.</description>
+      <description>ML models can&amp;rsquo;t read text - they only understand numbers. So how do we convert &amp;ldquo;Hello world!</description>
     </item>
     
     <item>
