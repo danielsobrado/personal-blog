@@ -6,7 +6,61 @@
     <description>Recent content in probability on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Mar 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Models Part 3 - The Noise Process</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part3-noise/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part3-noise/</guid>
+      <description>Diffusion&amp;rsquo;s key insight: destroying structure is easy (add noise), creating structure is hard.</description>
+    </item>
+    
+    <item>
+      <title>Markov Chains - Predicting the Future from the Present</title>
+      <link>https://www.danielsobrado.com/blog/markov-chains/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/markov-chains/</guid>
+      <description>&amp;ldquo;The future depends only on the present, not on how we got here.</description>
+    </item>
+    
+    <item>
+      <title>Entropy - Measuring Uncertainty</title>
+      <link>https://www.danielsobrado.com/blog/entropy/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/entropy/</guid>
+      <description>How uncertain is a distribution? Entropy measures that. High entropy = hard to predict.</description>
+    </item>
+    
+    <item>
+      <title>Probability Distributions - The Shapes of Randomness</title>
+      <link>https://www.danielsobrado.com/blog/probability-distributions/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/probability-distributions/</guid>
+      <description>ML is full of probability distributions. Knowing when to use which one matters.</description>
+    </item>
+    
+    <item>
+      <title>Expected Value and Variance - Summarizing Distributions</title>
+      <link>https://www.danielsobrado.com/blog/expected-value-variance/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/expected-value-variance/</guid>
+      <description>Two numbers that capture essence of a distribution: expected value (center) and variance (spread).</description>
+    </item>
+    
+    <item>
+      <title>Conditional Probability - P(A|B)</title>
+      <link>https://www.danielsobrado.com/blog/conditional-probability/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conditional-probability/</guid>
+      <description>&amp;ldquo;Given that X happened, what&amp;rsquo;s the probability of Y?&amp;rdquo; This is conditional probability.</description>
+    </item>
+    
     <item>
       <title>Prior and Posterior distributions</title>
       <link>https://www.danielsobrado.com/blog/prior-posterior-probabilities/</link>

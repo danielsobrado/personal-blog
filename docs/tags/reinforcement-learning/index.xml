@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reinforcement Learning on </title>
+    <link>https://www.danielsobrado.com/tags/reinforcement-learning/</link>
+    <description>Recent content in Reinforcement Learning on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploration in Reinforcement Learning</title>
+      <link>https://www.danielsobrado.com/blog/rl-exploration/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-exploration/</guid>
+      <description>The exploration-exploitation dilemma: do you try new things (might be better) or stick with what works (guaranteed decent)?</description>
+    </item>
+    
+    <item>
+      <title>Q-Learning - Learning Action Values</title>
+      <link>https://www.danielsobrado.com/blog/q-learning/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/q-learning/</guid>
+      <description>Learn the value of actions without knowing environment dynamics. Q-learning: simple, powerful, the foundation of DQN and modern deep RL.</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-foundations/</guid>
+      <description>Supervised learning needs labeled data. What if there&amp;rsquo;s no teacher? RL learns from interaction - take actions, observe outcomes, maximize reward.</description>
+    </item>
+    
+  </channel>
+</rss>

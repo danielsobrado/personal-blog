@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Attention on </title>
+    <link>https://www.danielsobrado.com/tags/attention/</link>
+    <description>Recent content in Attention on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/attention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self-Attention - The Key Mechanism in Transformers</title>
+      <link>https://www.danielsobrado.com/blog/self-attention/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/self-attention/</guid>
+      <description>Regular attention: query from one sequence, attend to another. Self-attention: query, key, value all come from same sequence.</description>
+    </item>
+    
+    <item>
+      <title>Attention Mechanisms - Part 1: The Core Idea</title>
+      <link>https://www.danielsobrado.com/blog/attention-mechanism-part1/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/attention-mechanism-part1/</guid>
+      <description>LSTMs helped with long-range dependencies. Attention does something more powerful - direct connections from anywhere to anywhere.</description>
+    </item>
+    
+  </channel>
+</rss>

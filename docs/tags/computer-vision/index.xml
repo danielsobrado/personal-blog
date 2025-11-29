@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Vision on </title>
+    <link>https://www.danielsobrado.com/tags/computer-vision/</link>
+    <description>Recent content in Computer Vision on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multimodal LLMs - Understanding Images and Text Together</title>
+      <link>https://www.danielsobrado.com/blog/multimodal-llm/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/multimodal-llm/</guid>
+      <description>Text-only LLMs miss half the world. Images, diagrams, charts, photos. Multimodal models see and read - understanding both modalities together.</description>
+    </item>
+    
+    <item>
+      <title>2D Convolutions - How Neural Networks See Images</title>
+      <link>https://www.danielsobrado.com/blog/conv2d/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conv2d/</guid>
+      <description>Images are grids of pixels. Fully connected layers would need billions of parameters.</description>
+    </item>
+    
+  </channel>
+</rss>

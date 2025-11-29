@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM on </title>
+    <link>https://www.danielsobrado.com/tags/llm/</link>
+    <description>Recent content in LLM on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multimodal LLMs - Understanding Images and Text Together</title>
+      <link>https://www.danielsobrado.com/blog/multimodal-llm/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/multimodal-llm/</guid>
+      <description>Text-only LLMs miss half the world. Images, diagrams, charts, photos. Multimodal models see and read - understanding both modalities together.</description>
+    </item>
+    
+    <item>
+      <title>Fine-Tuning LLMs - Customizing Language Models</title>
+      <link>https://www.danielsobrado.com/blog/fine-tuning/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fine-tuning/</guid>
+      <description>Pretrained LLMs are generalists. Fine-tuning makes them specialists. Adapt to your domain, your style, your task.</description>
+    </item>
+    
+    <item>
+      <title>RAG - Retrieval-Augmented Generation</title>
+      <link>https://www.danielsobrado.com/blog/rag/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rag/</guid>
+      <description>LLMs have a knowledge cutoff. They hallucinate. RAG fixes this: retrieve relevant documents first, then generate answer based on retrieved context.</description>
+    </item>
+    
+    <item>
+      <title>Transformer Architecture - The Model Behind Modern AI</title>
+      <link>https://www.danielsobrado.com/blog/transformer-architecture/</link>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/transformer-architecture/</guid>
+      <description>The paper that changed everything: &amp;ldquo;Attention Is All You Need&amp;rdquo; (2017).</description>
+    </item>
+    
+  </channel>
+</rss>

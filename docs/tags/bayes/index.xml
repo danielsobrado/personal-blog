@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayes on </title>
+    <link>https://www.danielsobrado.com/tags/bayes/</link>
+    <description>Recent content in Bayes on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/bayes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conditional Probability - P(A|B)</title>
+      <link>https://www.danielsobrado.com/blog/conditional-probability/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conditional-probability/</guid>
+      <description>&amp;ldquo;Given that X happened, what&amp;rsquo;s the probability of Y?&amp;rdquo; This is conditional probability.</description>
+    </item>
+    
+  </channel>
+</rss>

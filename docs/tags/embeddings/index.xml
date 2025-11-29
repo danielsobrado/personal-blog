@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Embeddings on </title>
+    <link>https://www.danielsobrado.com/tags/embeddings/</link>
+    <description>Recent content in Embeddings on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/embeddings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FastText - Handling Words Not in Vocabulary</title>
+      <link>https://www.danielsobrado.com/blog/fasttext/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fasttext/</guid>
+      <description>Word2Vec problem: what about misspellings? What about &amp;ldquo;unhappiness&amp;rdquo; when you only trained on &amp;ldquo;happy&amp;rdquo;?</description>
+    </item>
+    
+    <item>
+      <title>GloVe - Global Vectors for Word Representation</title>
+      <link>https://www.danielsobrado.com/blog/glove/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/glove/</guid>
+      <description>Word2Vec uses local context windows. GloVe takes a different approach - use global word co-occurrence statistics.</description>
+    </item>
+    
+    <item>
+      <title>Word2Vec - Where Word Embeddings Started Getting Good</title>
+      <link>https://www.danielsobrado.com/blog/word2vec/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/word2vec/</guid>
+      <description>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&amp;hellip; none of them captured meaning.</description>
+    </item>
+    
+    <item>
+      <title>Embeddings - Representing Stuff as Vectors</title>
+      <link>https://www.danielsobrado.com/blog/embeddings/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/embeddings/</guid>
+      <description>Embeddings are everywhere now. Words, sentences, images, users, products&amp;hellip; anything can be an embedding.</description>
+    </item>
+    
+    <item>
+      <title>Cosine Similarity - Measuring Direction Not Magnitude</title>
+      <link>https://www.danielsobrado.com/blog/cosine-similarity/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/cosine-similarity/</guid>
+      <description>Two embeddings point in similar direction? They&amp;rsquo;re similar. Cosine similarity ignores magnitude, only cares about angle.</description>
+    </item>
+    
+  </channel>
+</rss>

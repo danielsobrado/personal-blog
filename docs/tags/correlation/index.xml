@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Correlation on </title>
+    <link>https://www.danielsobrado.com/tags/correlation/</link>
+    <description>Recent content in Correlation on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/correlation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spearman Correlation - Ranking Relationships</title>
+      <link>https://www.danielsobrado.com/blog/spearman-correlation/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/spearman-correlation/</guid>
+      <description>Pearson correlation measures linear relationships. Spearman measures monotonic ones. If X goes up, does Y tend to go up?</description>
+    </item>
+    
+  </channel>
+</rss>

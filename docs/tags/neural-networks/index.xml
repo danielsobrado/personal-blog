@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neural Networks on </title>
+    <link>https://www.danielsobrado.com/tags/neural-networks/</link>
+    <description>Recent content in Neural Networks on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/neural-networks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Models Part 2 - Neural Networks Basics</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</guid>
+      <description>Neural networks learn to denoise images. Before building a full diffusion model, understand the building blocks: conv layers, activations, residual connections.</description>
+    </item>
+    
+    <item>
+      <title>Conv &#43; ReLU - The Building Block of CNNs</title>
+      <link>https://www.danielsobrado.com/blog/conv-relu/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conv-relu/</guid>
+      <description>Convolution followed by ReLU. This pattern repeats hundreds of times in modern image networks.</description>
+    </item>
+    
+    <item>
+      <title>Softmax - Turning Numbers into Probabilities</title>
+      <link>https://www.danielsobrado.com/blog/softmax/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/softmax/</guid>
+      <description>Neural network outputs raw numbers (logits). For classification, you want probabilities.</description>
+    </item>
+    
+    <item>
+      <title>Leaky ReLU - Fixing Dead Neurons</title>
+      <link>https://www.danielsobrado.com/blog/leaky-relu/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/leaky-relu/</guid>
+      <description>ReLU is great but has a problem. Neurons can die. Leaky ReLU fixes this with one small change.</description>
+    </item>
+    
+    <item>
+      <title>ReLU - Why Neural Networks Learned to Use Simple Functions</title>
+      <link>https://www.danielsobrado.com/blog/relu/</link>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/relu/</guid>
+      <description>Sigmoid was the standard. Then ReLU came along and made deep learning actually work.</description>
+    </item>
+    
+  </channel>
+</rss>

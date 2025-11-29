@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on </title>
+    <link>https://www.danielsobrado.com/tags/algorithms/</link>
+    <description>Recent content in Algorithms on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploration in Reinforcement Learning</title>
+      <link>https://www.danielsobrado.com/blog/rl-exploration/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-exploration/</guid>
+      <description>The exploration-exploitation dilemma: do you try new things (might be better) or stick with what works (guaranteed decent)?</description>
+    </item>
+    
+    <item>
+      <title>Q-Learning - Learning Action Values</title>
+      <link>https://www.danielsobrado.com/blog/q-learning/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/q-learning/</guid>
+      <description>Learn the value of actions without knowing environment dynamics. Q-learning: simple, powerful, the foundation of DQN and modern deep RL.</description>
+    </item>
+    
+    <item>
+      <title>PageRank - The Algorithm That Built Google</title>
+      <link>https://www.danielsobrado.com/blog/pagerank/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/pagerank/</guid>
+      <description>Not all links are equal. A link from Wikipedia matters more than a random blog.</description>
+    </item>
+    
+    <item>
+      <title>Bloom Filter - Probably Yes, Definitely No</title>
+      <link>https://www.danielsobrado.com/blog/bloom-filter/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bloom-filter/</guid>
+      <description>A set that uses almost no memory. Trade-off: might say &amp;ldquo;yes&amp;rdquo; when answer is &amp;ldquo;no&amp;rdquo; (false positive).</description>
+    </item>
+    
+  </channel>
+</rss>

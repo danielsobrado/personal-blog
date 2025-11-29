@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diffusion Models on </title>
+    <link>https://www.danielsobrado.com/tags/diffusion-models/</link>
+    <description>Recent content in Diffusion Models on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/diffusion-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Models Part 7 - Conditioning and Text-to-Image</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</guid>
+      <description>Unconditional diffusion generates random images. Conditioning lets you control what&amp;rsquo;s generated.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 6 - Sampling and Generation</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</guid>
+      <description>Model trained. Now generate images. Start with random noise, repeatedly denoise, arrive at a realistic image.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 5 - Training the Denoiser</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part5-training/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part5-training/</guid>
+      <description>Architecture ready. Now train it. Diffusion training is simple in principle but requires careful implementation for good results.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 4 - U-Net Architecture</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part4-unet/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part4-unet/</guid>
+      <description>The denoiser needs to see both big picture and fine details.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 3 - The Noise Process</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part3-noise/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part3-noise/</guid>
+      <description>Diffusion&amp;rsquo;s key insight: destroying structure is easy (add noise), creating structure is hard.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 2 - Neural Networks Basics</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</guid>
+      <description>Neural networks learn to denoise images. Before building a full diffusion model, understand the building blocks: conv layers, activations, residual connections.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 1 - Understanding Tensors</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</guid>
+      <description>Before diving into diffusion models, master the foundation: tensors. Every image is a tensor.</description>
+    </item>
+    
+  </channel>
+</rss>

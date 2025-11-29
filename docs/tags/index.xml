@@ -6,7 +6,493 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Learning</title>
+      <link>https://www.danielsobrado.com/tags/deep-learning/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models</title>
+      <link>https://www.danielsobrado.com/tags/diffusion-models/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/diffusion-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text-to-Image</title>
+      <link>https://www.danielsobrado.com/tags/text-to-image/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/text-to-image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generation</title>
+      <link>https://www.danielsobrado.com/tags/generation/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/generation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Training</title>
+      <link>https://www.danielsobrado.com/tags/training/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/training/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>U-Net</title>
+      <link>https://www.danielsobrado.com/tags/u-net/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/u-net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probability</title>
+      <link>https://www.danielsobrado.com/tags/probability/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/probability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neural Networks</title>
+      <link>https://www.danielsobrado.com/tags/neural-networks/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/neural-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tensors</title>
+      <link>https://www.danielsobrado.com/tags/tensors/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/tensors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>https://www.danielsobrado.com/tags/computer-vision/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>https://www.danielsobrado.com/tags/llm/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/llm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multimodal AI</title>
+      <link>https://www.danielsobrado.com/tags/multimodal-ai/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/multimodal-ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transfer Learning</title>
+      <link>https://www.danielsobrado.com/tags/transfer-learning/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/transfer-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Retrieval</title>
+      <link>https://www.danielsobrado.com/tags/information-retrieval/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/information-retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>https://www.danielsobrado.com/tags/nlp/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generative Models</title>
+      <link>https://www.danielsobrado.com/tags/generative-models/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/generative-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unsupervised Learning</title>
+      <link>https://www.danielsobrado.com/tags/unsupervised-learning/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/unsupervised-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://www.danielsobrado.com/tags/algorithms/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploration</title>
+      <link>https://www.danielsobrado.com/tags/exploration/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/exploration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://www.danielsobrado.com/tags/reinforcement-learning/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Q-Learning</title>
+      <link>https://www.danielsobrado.com/tags/q-learning/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/q-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI</title>
+      <link>https://www.danielsobrado.com/tags/ai/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://www.danielsobrado.com/tags/machine-learning/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stochastic Processes</title>
+      <link>https://www.danielsobrado.com/tags/stochastic-processes/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/stochastic-processes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Theory</title>
+      <link>https://www.danielsobrado.com/tags/graph-theory/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/graph-theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://www.danielsobrado.com/tags/search/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformers</title>
+      <link>https://www.danielsobrado.com/tags/transformers/</link>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/transformers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Attention</title>
+      <link>https://www.danielsobrado.com/tags/attention/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/attention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structures</title>
+      <link>https://www.danielsobrado.com/tags/data-structures/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Probabilistic</title>
+      <link>https://www.danielsobrado.com/tags/probabilistic/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/probabilistic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNN</title>
+      <link>https://www.danielsobrado.com/tags/rnn/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/rnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sequence Modeling</title>
+      <link>https://www.danielsobrado.com/tags/sequence-modeling/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/sequence-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normalization</title>
+      <link>https://www.danielsobrado.com/tags/normalization/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/normalization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CNN</title>
+      <link>https://www.danielsobrado.com/tags/cnn/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/cnn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classification</title>
+      <link>https://www.danielsobrado.com/tags/classification/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/classification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Loss Functions</title>
+      <link>https://www.danielsobrado.com/tags/loss-functions/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/loss-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Theory</title>
+      <link>https://www.danielsobrado.com/tags/information-theory/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/information-theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dimensionality Reduction</title>
+      <link>https://www.danielsobrado.com/tags/dimensionality-reduction/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/dimensionality-reduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>https://www.danielsobrado.com/tags/linear-algebra/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/linear-algebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics</title>
+      <link>https://www.danielsobrado.com/tags/mathematics/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embeddings</title>
+      <link>https://www.danielsobrado.com/tags/embeddings/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/embeddings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FastText</title>
+      <link>https://www.danielsobrado.com/tags/fasttext/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/fasttext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GloVe</title>
+      <link>https://www.danielsobrado.com/tags/glove/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/glove/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Word2Vec</title>
+      <link>https://www.danielsobrado.com/tags/word2vec/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/word2vec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tokenization</title>
+      <link>https://www.danielsobrado.com/tags/tokenization/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/tokenization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Processing</title>
+      <link>https://www.danielsobrado.com/tags/text-processing/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/text-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Numerical Methods</title>
+      <link>https://www.danielsobrado.com/tags/numerical-methods/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/numerical-methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PCA</title>
+      <link>https://www.danielsobrado.com/tags/pca/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/pca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Activation Functions</title>
+      <link>https://www.danielsobrado.com/tags/activation-functions/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/activation-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>https://www.danielsobrado.com/tags/optimization/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression</title>
+      <link>https://www.danielsobrado.com/tags/regression/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://www.danielsobrado.com/tags/statistics/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correlation</title>
+      <link>https://www.danielsobrado.com/tags/correlation/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/correlation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayes</title>
+      <link>https://www.danielsobrado.com/tags/bayes/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/tags/bayes/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>LLMs</title>
       <link>https://www.danielsobrado.com/tags/llms/</link>
@@ -215,15 +701,6 @@
     </item>
     
     <item>
-      <title>Loss Functions</title>
-      <link>https://www.danielsobrado.com/tags/loss-functions/</link>
-      <pubDate>Sat, 23 Jul 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/loss-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data</title>
       <link>https://www.danielsobrado.com/tags/data/</link>
       <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
@@ -256,15 +733,6 @@
       <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/microservices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nlp</title>
-      <link>https://www.danielsobrado.com/tags/nlp/</link>
-      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/nlp/</guid>
       <description></description>
     </item>
     
@@ -319,15 +787,6 @@
       <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/tags/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>probability</title>
-      <link>https://www.danielsobrado.com/tags/probability/</link>
-      <pubDate>Sat, 15 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.danielsobrado.com/tags/probability/</guid>
       <description></description>
     </item>
     

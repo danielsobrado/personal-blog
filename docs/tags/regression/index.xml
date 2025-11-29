@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regression on </title>
+    <link>https://www.danielsobrado.com/tags/regression/</link>
+    <description>Recent content in Regression on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linear Regression - The Foundation of ML</title>
+      <link>https://www.danielsobrado.com/blog/linear-regression/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/linear-regression/</guid>
+      <description>Before deep learning there was linear regression. Still the most useful model for many problems.</description>
+    </item>
+    
+  </channel>
+</rss>

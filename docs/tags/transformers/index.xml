@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transformers on </title>
+    <link>https://www.danielsobrado.com/tags/transformers/</link>
+    <description>Recent content in Transformers on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transformer Architecture - The Model Behind Modern AI</title>
+      <link>https://www.danielsobrado.com/blog/transformer-architecture/</link>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/transformer-architecture/</guid>
+      <description>The paper that changed everything: &amp;ldquo;Attention Is All You Need&amp;rdquo; (2017).</description>
+    </item>
+    
+    <item>
+      <title>Positional Encoding - Giving Transformers a Sense of Order</title>
+      <link>https://www.danielsobrado.com/blog/positional-encoding/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/positional-encoding/</guid>
+      <description>Self-attention is permutation equivariant. Shuffle the input tokens, output shuffles the same way.</description>
+    </item>
+    
+    <item>
+      <title>Self-Attention - The Key Mechanism in Transformers</title>
+      <link>https://www.danielsobrado.com/blog/self-attention/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/self-attention/</guid>
+      <description>Regular attention: query from one sequence, attend to another. Self-attention: query, key, value all come from same sequence.</description>
+    </item>
+    
+    <item>
+      <title>Attention Mechanisms - Part 1: The Core Idea</title>
+      <link>https://www.danielsobrado.com/blog/attention-mechanism-part1/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/attention-mechanism-part1/</guid>
+      <description>LSTMs helped with long-range dependencies. Attention does something more powerful - direct connections from anywhere to anywhere.</description>
+    </item>
+    
+    <item>
+      <title>Layer Normalization - Keeping Activations Stable</title>
+      <link>https://www.danielsobrado.com/blog/layer-normalization/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/layer-normalization/</guid>
+      <description>Deep networks have unstable activations. Values explode or vanish as they pass through layers.</description>
+    </item>
+    
+  </channel>
+</rss>

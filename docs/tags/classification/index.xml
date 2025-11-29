@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Classification on </title>
+    <link>https://www.danielsobrado.com/tags/classification/</link>
+    <description>Recent content in Classification on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/classification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cross-Entropy Loss - The Classification Loss Function</title>
+      <link>https://www.danielsobrado.com/blog/cross-entropy/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/cross-entropy/</guid>
+      <description>Why do we use cross-entropy for classification? What does it actually measure?</description>
+    </item>
+    
+    <item>
+      <title>Softmax - Turning Numbers into Probabilities</title>
+      <link>https://www.danielsobrado.com/blog/softmax/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/softmax/</guid>
+      <description>Neural network outputs raw numbers (logits). For classification, you want probabilities.</description>
+    </item>
+    
+  </channel>
+</rss>

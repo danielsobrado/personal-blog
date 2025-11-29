@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on </title>
+    <link>https://www.danielsobrado.com/tags/mathematics/</link>
+    <description>Recent content in Mathematics on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SVD - Singular Value Decomposition Explained</title>
+      <link>https://www.danielsobrado.com/blog/svd/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/svd/</guid>
+      <description>SVD factors any matrix into three pieces. Unlike eigendecomposition, works for non-square matrices.</description>
+    </item>
+    
+    <item>
+      <title>QR Decomposition - Orthogonal Factorization</title>
+      <link>https://www.danielsobrado.com/blog/qr-decomposition/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/qr-decomposition/</guid>
+      <description>QR decomposition factors a matrix into orthogonal Q and upper triangular R.</description>
+    </item>
+    
+    <item>
+      <title>Eigenvalues and Eigenvectors - The Essence of Matrices</title>
+      <link>https://www.danielsobrado.com/blog/eigenvalue/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/eigenvalue/</guid>
+      <description>A matrix transforms vectors. Eigenvectors are special directions that only get scaled, not rotated.</description>
+    </item>
+    
+    <item>
+      <title>Matrix Multiplication - The Operation Behind Everything</title>
+      <link>https://www.danielsobrado.com/blog/matrix-multiplication/</link>
+      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/matrix-multiplication/</guid>
+      <description>Neural networks are mostly matrix multiplication. Understanding this operation deeply helps understand everything else.</description>
+    </item>
+    
+    <item>
+      <title>Expected Value and Variance - Summarizing Distributions</title>
+      <link>https://www.danielsobrado.com/blog/expected-value-variance/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/expected-value-variance/</guid>
+      <description>Two numbers that capture essence of a distribution: expected value (center) and variance (spread).</description>
+    </item>
+    
+  </channel>
+</rss>

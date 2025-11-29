@@ -1,0 +1,3 @@
+# Config files with secrets
+config/_default/params.toml
+**/params.toml

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>U-Net on </title>
+    <link>https://www.danielsobrado.com/tags/u-net/</link>
+    <description>Recent content in U-Net on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/u-net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Models Part 4 - U-Net Architecture</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part4-unet/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part4-unet/</guid>
+      <description>The denoiser needs to see both big picture and fine details.</description>
+    </item>
+    
+  </channel>
+</rss>

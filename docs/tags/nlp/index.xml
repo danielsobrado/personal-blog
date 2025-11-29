@@ -1,12 +1,102 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nlp on </title>
+    <title>NLP on </title>
     <link>https://www.danielsobrado.com/tags/nlp/</link>
-    <description>Recent content in nlp on </description>
+    <description>Recent content in NLP on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG - Retrieval-Augmented Generation</title>
+      <link>https://www.danielsobrado.com/blog/rag/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rag/</guid>
+      <description>LLMs have a knowledge cutoff. They hallucinate. RAG fixes this: retrieve relevant documents first, then generate answer based on retrieved context.</description>
+    </item>
+    
+    <item>
+      <title>BERT - Bidirectional Language Understanding</title>
+      <link>https://www.danielsobrado.com/blog/bert/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bert/</guid>
+      <description>Before BERT: train models from scratch for each task. After BERT: pretrain once, fine-tune everywhere.</description>
+    </item>
+    
+    <item>
+      <title>Positional Encoding - Giving Transformers a Sense of Order</title>
+      <link>https://www.danielsobrado.com/blog/positional-encoding/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/positional-encoding/</guid>
+      <description>Self-attention is permutation equivariant. Shuffle the input tokens, output shuffles the same way.</description>
+    </item>
+    
+    <item>
+      <title>FastText - Handling Words Not in Vocabulary</title>
+      <link>https://www.danielsobrado.com/blog/fasttext/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fasttext/</guid>
+      <description>Word2Vec problem: what about misspellings? What about &amp;ldquo;unhappiness&amp;rdquo; when you only trained on &amp;ldquo;happy&amp;rdquo;?</description>
+    </item>
+    
+    <item>
+      <title>GloVe - Global Vectors for Word Representation</title>
+      <link>https://www.danielsobrado.com/blog/glove/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/glove/</guid>
+      <description>Word2Vec uses local context windows. GloVe takes a different approach - use global word co-occurrence statistics.</description>
+    </item>
+    
+    <item>
+      <title>Word2Vec - Where Word Embeddings Started Getting Good</title>
+      <link>https://www.danielsobrado.com/blog/word2vec/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/word2vec/</guid>
+      <description>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&amp;hellip; none of them captured meaning.</description>
+    </item>
+    
+    <item>
+      <title>Embeddings - Representing Stuff as Vectors</title>
+      <link>https://www.danielsobrado.com/blog/embeddings/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/embeddings/</guid>
+      <description>Embeddings are everywhere now. Words, sentences, images, users, products&amp;hellip; anything can be an embedding.</description>
+    </item>
+    
+    <item>
+      <title>Tokenization - How Text Becomes Numbers</title>
+      <link>https://www.danielsobrado.com/blog/tokenization/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/tokenization/</guid>
+      <description>ML models don&amp;rsquo;t read text. They need numbers. Tokenization bridges that gap.</description>
+    </item>
+    
+    <item>
+      <title>Bag of Words - The Simplest Text Representation</title>
+      <link>https://www.danielsobrado.com/blog/bag-of-words/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bag-of-words/</guid>
+      <description>Before embeddings there was Bag of Words. Still useful, still relevant for some tasks.</description>
+    </item>
+    
+    <item>
+      <title>Cosine Similarity - Measuring Direction Not Magnitude</title>
+      <link>https://www.danielsobrado.com/blog/cosine-similarity/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/cosine-similarity/</guid>
+      <description>Two embeddings point in similar direction? They&amp;rsquo;re similar. Cosine similarity ignores magnitude, only cares about angle.</description>
+    </item>
+    
     <item>
       <title>NLP: TF-IDF and Word2Vec</title>
       <link>https://www.danielsobrado.com/blog/tf-idf-word2vec/</link>

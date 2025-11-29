@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stochastic Processes on </title>
+    <link>https://www.danielsobrado.com/tags/stochastic-processes/</link>
+    <description>Recent content in Stochastic Processes on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/stochastic-processes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markov Chains - Predicting the Future from the Present</title>
+      <link>https://www.danielsobrado.com/blog/markov-chains/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/markov-chains/</guid>
+      <description>&amp;ldquo;The future depends only on the present, not on how we got here.</description>
+    </item>
+    
+  </channel>
+</rss>

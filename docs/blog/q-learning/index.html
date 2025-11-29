@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Q-Learning - Learning Action Values</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Master Q-learning: the off-policy algorithm that learns optimal action values through temporal difference updates and Bellman equations.">
+    <meta name="author" content="Daniel Sobrado">
+    <meta name="generator" content="Hugo 0.117.0">
+
+    <!-- plugins -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/slick/slick-theme.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/themify-icons/themify-icons.css ">
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/plugins/animate/animate.css ">
+    
+
+    <!-- Main Stylesheet -->
+    
+    <link rel="stylesheet" href="https://www.danielsobrado.com/css/style.min.css" media="screen">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="https://www.danielsobrado.com/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
+
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+
+</head><body><!-- navigation -->
+<header>
+  <!-- top header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline text-lg-right text-center">
+            <li class="list-inline-item">
+               <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
+            </li>
+            <li class="list-inline-item">
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- nav bar -->
+  <div class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://www.danielsobrado.com/">
+          <img src="https://www.danielsobrado.com/images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/programming/">Programming</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/data-science/">Data Science</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/others/">Others</a>
+            </li>
+            
+            
+          </ul>
+          
+        
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header><!-- preloader start -->
+	
+	<!-- preloader start -->
+	<div class="preloader">
+		
+		<img src="https://www.danielsobrado.com/images/preloader.gif" alt="preloader">
+		
+	</div>
+	<!-- preloader end -->
+	
+	<!-- preloader end -->
+	<div id="content">
+
+<!-- page title -->
+<section class="page-title overlay" style="background-image: url('https://www.danielsobrado.com/'),url('/images/background/page-title.jpg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="text-white font-weight-bold">Q-Learning - Learning Action Values</h2>
+				<ol class="breadcrumb">
+					<li><a href="https://www.danielsobrado.com/">Home</a></li>
+					<li>Q-Learning - Learning Action Values</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /page title -->
+
+<!-- blog single -->
+<section>
+  <div class="container wide-lg">
+    <div class="row">
+      <div class="col-lg-8 py-100">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/q-learning-placeholder.png" alt="blog-image">
+          <div class="p-4">
+            <h3>Q-Learning - Learning Action Values</h3>
+            <ul class="list-inline d-block pb-4 border-bottom mb-3">
+              <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
+              <li class="list-inline-item text-color">On 31 Jul</li>
+              <li class="list-inline-item text-color">Category:
+                
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/machine%20learning"> Machine learning</a>
+                
+              </li>
+            </ul>
+            <div class="post-content">
+              <p>Learn the value of actions without knowing environment dynamics. Q-learning: simple, powerful, the foundation of DQN and modern deep RL.</p>
+<h2 id="the-q-function">The Q-function</h2>
+<p>Q(s, a) = expected return starting from state s, taking action a, then acting optimally.</p>
+<p>If we know Q*, we know optimal policy:
+$$\pi^<em>(s) = \arg\max_a Q^</em>(s, a)$$</p>
+<p>Just pick the action with highest Q-value.</p>
+<h2 id="the-update-rule">The update rule</h2>
+<p>$$Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a&rsquo;} Q(s&rsquo;, a&rsquo;) - Q(s, a) \right]$$</p>
+<p>Move Q toward observed return.</p>
+<p>$r + \gamma \max_{a&rsquo;} Q(s&rsquo;, a&rsquo;)$ is the target: immediate reward plus best future.</p>
+<p>$\alpha$ is learning rate.</p>
+<p><img src="https://danielsobrado.github.io/ml-animations/animation/q-learning" alt="Q-Learning"></p>
+<p>Watch Q-values converge: <a href="https://danielsobrado.github.io/ml-animations/animation/q-learning">Q-Learning Animation</a></p>
+<h2 id="why-it-works">Why it works</h2>
+<p>This is temporal difference learning. Instead of waiting for episode end:</p>
+<ul>
+<li>Observe one transition</li>
+<li>Update Q using estimated future value</li>
+<li>Repeat</li>
+</ul>
+<p>Off-policy: learns optimal Q regardless of what policy generated the data.</p>
+<h2 id="algorithm">Algorithm</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">q_learning</span>(env, num_episodes, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, gamma<span style="color:#f92672">=</span><span style="color:#ae81ff">0.99</span>, epsilon<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>):
+</span></span><span style="display:flex;"><span>    Q <span style="color:#f92672">=</span> defaultdict(<span style="color:#66d9ef">lambda</span>: np<span style="color:#f92672">.</span>zeros(env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>n))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> episode <span style="color:#f92672">in</span> range(num_episodes):
+</span></span><span style="display:flex;"><span>        state <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>reset()
+</span></span><span style="display:flex;"><span>        done <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">not</span> done:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Epsilon-greedy action selection</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>random() <span style="color:#f92672">&lt;</span> epsilon:
+</span></span><span style="display:flex;"><span>                action <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>sample()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                action <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>argmax(Q[state])
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            next_state, reward, done, _ <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>step(action)
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Q-learning update</span>
+</span></span><span style="display:flex;"><span>            best_next <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>max(Q[next_state]) <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> done <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            td_target <span style="color:#f92672">=</span> reward <span style="color:#f92672">+</span> gamma <span style="color:#f92672">*</span> best_next
+</span></span><span style="display:flex;"><span>            Q[state][action] <span style="color:#f92672">+=</span> alpha <span style="color:#f92672">*</span> (td_target <span style="color:#f92672">-</span> Q[state][action])
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            state <span style="color:#f92672">=</span> next_state
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Q
+</span></span></code></pre></div><h2 id="key-components">Key components</h2>
+<h3 id="epsilon-greedy">Epsilon-greedy</h3>
+<p>Balance exploration and exploitation:</p>
+<ul>
+<li>With probability ε: random action (explore)</li>
+<li>With probability 1-ε: best action (exploit)</li>
+</ul>
+<p>Common: start ε high, decay over time.</p>
+<h3 id="learning-rate">Learning rate</h3>
+<p>Too high: unstable, oscillates
+Too low: learns slowly</p>
+<p>Often decayed: $\alpha_t = 1/(1 + t)$</p>
+<h3 id="discount-factor">Discount factor</h3>
+<p>γ close to 1: values long-term rewards
+γ close to 0: myopic, immediate rewards only</p>
+<h2 id="example-cliff-walking">Example: Cliff Walking</h2>
+<pre tabindex="0"><code>S . . . . . . . . G
+C C C C C C C C C C
+</code></pre><p>S = start, G = goal, C = cliff (big negative reward)</p>
+<p>Q-learning finds optimal path: hug the cliff for shortest route.</p>
+<p>SARSA (on-policy) learns safer path: stay away from cliff.</p>
+<h2 id="deep-q-networks-dqn">Deep Q-Networks (DQN)</h2>
+<p>Q-table doesn&rsquo;t scale. Use neural network:</p>
+<p>$$Q(s, a; \theta) \approx Q^*(s, a)$$</p>
+<p>Challenges:</p>
+<ul>
+<li>Correlated samples → experience replay</li>
+<li>Moving target → target network</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DQN</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, state_dim, action_dim):
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>net <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Sequential(
+</span></span><span style="display:flex;"><span>            nn<span style="color:#f92672">.</span>Linear(state_dim, <span style="color:#ae81ff">128</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#f92672">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">128</span>),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#f92672">.</span>ReLU(),
+</span></span><span style="display:flex;"><span>            nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span>, action_dim)
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, state):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>net(state)  <span style="color:#75715e"># Q-values for all actions</span>
+</span></span></code></pre></div><h2 id="limitations">Limitations</h2>
+<ul>
+<li>Overestimates Q-values (max over noise)</li>
+<li>Struggles with large/continuous action spaces</li>
+<li>Sample inefficient</li>
+</ul>
+<p>Fixes: Double DQN, Dueling DQN, Rainbow&hellip;</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="py-4 border-bottom mb-100">
+          <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <!-- share-icon -->
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Share:</span>
+                <ul class="list-inline d-inline-block">
+                  
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fq-learning%2f"><i class="ti-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Q-Learning%20-%20Learning%20Action%20Values&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fq-learning%2f"><i class="ti-twitter-alt"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fq-learning%2f&amp;resubmit=true&amp;title=Q-Learning%20-%20Learning%20Action%20Values"><i class="ti-reddit"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="share-icon bg-primary" href="mailto:?subject=Q-Learning%20-%20Learning%20Action%20Values&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fq-learning%2f"><i class="ti-email"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- tags -->
+            <div class="col-lg-7">
+              <div class="d-flex">
+                <span class="font-weight-light mt-2 mr-3">Tags:</span>
+                <ul class="list-inline tag-list">
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/reinforcement%20learning">Reinforcement learning</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/q-learning">Q learning</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/algorithms">Algorithms</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="mt-5">
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "dalamarsblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        
+      </div>
+      <!-- Sidebar -->
+<div class="col-lg-4">
+	<div class="bg-white px-4 py-100 sidebar-box-shadow">
+		<!-- categories -->
+		<div class="mb-50">
+			<h4 class="mb-3">Categories</h4>
+			<ul class="list-unstyled mb-0">
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/big-data"
+						class="d-block text-color py-10">Big data</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/data-science"
+						class="d-block text-color py-10">Data science</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/investing"
+						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/machine-learning"
+						class="d-block text-color py-10">Machine learning</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/maths"
+						class="d-block text-color py-10">Maths</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/others"
+						class="d-block text-color py-10">Others</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/programming"
+						class="d-block text-color py-10">Programming</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/rag"
+						class="d-block text-color py-10">Rag</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/sideprojects"
+						class="d-block text-color py-10">Sideprojects</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Widget Recent Post -->
+		<div class="mb-50">
+			<h4 class="mb-3">Top Articles</h4>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-variable-precedence/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/HXoTjv8.png" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-variable-precedence/">Precedence of properties</a>
+					</h6>
+					<p class="meta">10 Feb 2019</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/Ous3FT6.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/spark-introduction-tungsten/">Apache Spark: Introduction to project Tungsten</a>
+					</h6>
+					<p class="meta">28 Sep 2018</p>
+				</div>
+			</div>
+			
+			<!-- post -->
+			<div class="d-flex py-3 border-bottom">
+				<div class="mr-4">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
+					</a>
+				</div>
+				<div>
+					<h6 class="mb-3">
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
+					</h6>
+					<p class="meta">23 Jul 2016</p>
+				</div>
+			</div>
+			
+		</div>
+		<!-- tags -->
+		<div class="mb-50">
+			<h4 class="mb-3">Tags</h4>
+			<ul class="list-inline tag-list">
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/activation-functions">Activation functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/ai">Ai</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/algorithms">Algorithms</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/attention">Attention</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayes">Bayes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/classification">Classification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cnn">Cnn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/computer-vision">Computer vision</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/correlation">Correlation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data">Data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-structures">Data structures</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/diffusion-models">Diffusion models</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dimensionality-reduction">Dimensionality reduction</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dsa">Dsa</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/embeddings">Embeddings</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/exploration">Exploration</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/fasttext">Fasttext</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/functional-programming">Functional programming</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/generation">Generation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/generative-models">Generative models</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/git">Git</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/glove">Glove</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/graph-theory">Graph theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/information-retrieval">Information retrieval</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/information-theory">Information theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/linear-algebra">Linear algebra</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/llm">Llm</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/llms">Llms</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-learning">Machine learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/mathematics">Mathematics</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/multimodal-ai">Multimodal ai</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/neural-networks">Neural networks</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/normalization">Normalization</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numerical-methods">Numerical methods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/optimization">Optimization</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pca">Pca</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/performance">Performance</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probabilistic">Probabilistic</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/q-learning">Q learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/regression">Regression</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/reinforcement-learning">Reinforcement learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rnn">Rnn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/search">Search</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/sequence-modeling">Sequence modeling</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/statistics">Statistics</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/stochastic-processes">Stochastic processes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/tensors">Tensors</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/text-processing">Text processing</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/text-to-image">Text to image</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/tokenization">Tokenization</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/training">Training</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/transfer-learning">Transfer learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/transformers">Transformers</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/u-net">U net</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/unsupervised-learning">Unsupervised learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/word2vec">Word2vec</a></li>
+			</ul>
+		</div>
+
+		<!-- Widget Newsletter -->
+		<div class="newsletter">
+			<h4 class="mb-3">Stay Updated</h4>
+			<div id="mc_embed_signup">
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							</label>
+							<input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="FNAME" id="mce-FNAME" placeholder="First Name">
+						</div>
+						<div class="mc-field-group">
+							<input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+								class="button"></div>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+</section>
+<!-- /blog-single -->
+
+
+	</div><!-- footer -->
+<footer class="bg-secondary">
+	<div class="py-100 border-bottom" style="border-color: #000000 !important">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="mb-5 mb-md-0 text-center text-md-left">
+						<!-- logo -->
+						<img class="mb-30" src="https://www.danielsobrado.com/images/logo-footer.png" alt="logo">
+						 <p class="text-white mb-30"> Personal Blog on Software Engineering, Data Engineering and Machine Learning. <!-- raw HTML omitted --> I also write about investments and my data-centric approach to sistematic investment.</p> 
+						<!-- social icon -->
+						<ul class="list-inline">
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://stackoverflow.com/users/2507462/daniel-sobrado">
+									<i class="ti-stack-overflow"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://github.com/danielsobrado">
+									<i class="ti-github"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.linkedin.com/in/dsobrado/">
+									<i class="ti-linkedin"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://www.instagram.com/daniel.sobrado/">
+									<i class="ti-instagram"></i>
+								</a>
+							</li>
+							
+							<li class="list-inline-item">
+								<a class="social-icon-outline" href="https://twitter.com/danielinvest1">
+									<i class="ti-twitter-alt"></i>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Investing</h4>
+					<ul class="footer-links">
+						
+						<li><a href="https://www.danielsobrado.com/investing/asset_allocation/">Asset Allocation</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/insiders/">Insiders</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/momentum/">Momentum</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/my-investing-philosophy/">My investing philosophy</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/backtesting/">Backtesting</a></li>
+						
+						<li><a href="https://www.danielsobrado.com/investing/value-investing/">Value Investing</a></li>
+						
+					</ul>
+				</div>
+				<!-- footer links -->
+				<div class="col-lg-2 col-md-4 col-6">
+					<h4 class="text-white mb-4">Technology</h4>
+					<ul class="footer-links">
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/programming/">Programming</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/data-science/">Data Science</a></li>
+						
+						
+						
+						<li><a href="https://www.danielsobrado.com/categories/others/">Others</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- subscribe form -->
+				<div class="col-lg-3 col-md-12 offset-lg-1">
+					<div class="mt-5 mt-lg-0 text-center text-md-left">
+						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
+						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
+						<div id="mc_embed_signup">
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
+								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll" class="position-relative">
+									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
+										placeholder="Enter Your Email">
+									<button class="btn-subscribe" type="submit" name="subscribe" id="mc-embedded-subscribe-">
+										<i class="ti-arrow-right"></i>
+									</button>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright -->
+	<div class="pt-4 pb-3 position-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-5">
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
+				</div>
+				<div class="col-lg-6 col-md-7">
+					<ul class="list-inline text-center text-md-right">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- back to top -->
+		<button class="back-to-top">
+			<i class="ti-angle-up"></i>
+		</button>
+	</div>
+</footer>
+<!-- /footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
+<script>hljs.highlightAll();</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
+
+<!-- Essential Scripts -->
+<!-- Google Map API -->
+
+<!-- JS Plugins -->
+
+<script src="https://www.danielsobrado.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
+
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://www.danielsobrado.com/js/script.min.js"></script>
+</body>
+
+</html></body>
+
+</html>

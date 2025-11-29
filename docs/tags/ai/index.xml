@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on </title>
+    <link>https://www.danielsobrado.com/tags/ai/</link>
+    <description>Recent content in AI on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-foundations/</guid>
+      <description>Supervised learning needs labeled data. What if there&amp;rsquo;s no teacher? RL learns from interaction - take actions, observe outcomes, maximize reward.</description>
+    </item>
+    
+  </channel>
+</rss>

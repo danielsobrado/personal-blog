@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on </title>
+    <link>https://www.danielsobrado.com/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Models Part 7 - Conditioning and Text-to-Image</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</guid>
+      <description>Unconditional diffusion generates random images. Conditioning lets you control what&amp;rsquo;s generated.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 6 - Sampling and Generation</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</guid>
+      <description>Model trained. Now generate images. Start with random noise, repeatedly denoise, arrive at a realistic image.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 5 - Training the Denoiser</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part5-training/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part5-training/</guid>
+      <description>Architecture ready. Now train it. Diffusion training is simple in principle but requires careful implementation for good results.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 4 - U-Net Architecture</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part4-unet/</link>
+      <pubDate>Thu, 23 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part4-unet/</guid>
+      <description>The denoiser needs to see both big picture and fine details.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 3 - The Noise Process</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part3-noise/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part3-noise/</guid>
+      <description>Diffusion&amp;rsquo;s key insight: destroying structure is easy (add noise), creating structure is hard.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 2 - Neural Networks Basics</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</guid>
+      <description>Neural networks learn to denoise images. Before building a full diffusion model, understand the building blocks: conv layers, activations, residual connections.</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Models Part 1 - Understanding Tensors</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</guid>
+      <description>Before diving into diffusion models, master the foundation: tensors. Every image is a tensor.</description>
+    </item>
+    
+    <item>
+      <title>Multimodal LLMs - Understanding Images and Text Together</title>
+      <link>https://www.danielsobrado.com/blog/multimodal-llm/</link>
+      <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/multimodal-llm/</guid>
+      <description>Text-only LLMs miss half the world. Images, diagrams, charts, photos. Multimodal models see and read - understanding both modalities together.</description>
+    </item>
+    
+    <item>
+      <title>Fine-Tuning LLMs - Customizing Language Models</title>
+      <link>https://www.danielsobrado.com/blog/fine-tuning/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fine-tuning/</guid>
+      <description>Pretrained LLMs are generalists. Fine-tuning makes them specialists. Adapt to your domain, your style, your task.</description>
+    </item>
+    
+    <item>
+      <title>RAG - Retrieval-Augmented Generation</title>
+      <link>https://www.danielsobrado.com/blog/rag/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rag/</guid>
+      <description>LLMs have a knowledge cutoff. They hallucinate. RAG fixes this: retrieve relevant documents first, then generate answer based on retrieved context.</description>
+    </item>
+    
+    <item>
+      <title>Variational Autoencoders - Probabilistic Generative Models</title>
+      <link>https://www.danielsobrado.com/blog/vae/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/vae/</guid>
+      <description>Autoencoders compress data to a bottleneck, then reconstruct. VAEs make the bottleneck probabilistic - encode to a distribution, sample from it, decode.</description>
+    </item>
+    
+    <item>
+      <title>Exploration in Reinforcement Learning</title>
+      <link>https://www.danielsobrado.com/blog/rl-exploration/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-exploration/</guid>
+      <description>The exploration-exploitation dilemma: do you try new things (might be better) or stick with what works (guaranteed decent)?</description>
+    </item>
+    
+    <item>
+      <title>Q-Learning - Learning Action Values</title>
+      <link>https://www.danielsobrado.com/blog/q-learning/</link>
+      <pubDate>Thu, 31 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/q-learning/</guid>
+      <description>Learn the value of actions without knowing environment dynamics. Q-learning: simple, powerful, the foundation of DQN and modern deep RL.</description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-foundations/</guid>
+      <description>Supervised learning needs labeled data. What if there&amp;rsquo;s no teacher? RL learns from interaction - take actions, observe outcomes, maximize reward.</description>
+    </item>
+    
+    <item>
+      <title>BERT - Bidirectional Language Understanding</title>
+      <link>https://www.danielsobrado.com/blog/bert/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bert/</guid>
+      <description>Before BERT: train models from scratch for each task. After BERT: pretrain once, fine-tune everywhere.</description>
+    </item>
+    
+    <item>
+      <title>Transformer Architecture - The Model Behind Modern AI</title>
+      <link>https://www.danielsobrado.com/blog/transformer-architecture/</link>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/transformer-architecture/</guid>
+      <description>The paper that changed everything: &amp;ldquo;Attention Is All You Need&amp;rdquo; (2017).</description>
+    </item>
+    
+    <item>
+      <title>Positional Encoding - Giving Transformers a Sense of Order</title>
+      <link>https://www.danielsobrado.com/blog/positional-encoding/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/positional-encoding/</guid>
+      <description>Self-attention is permutation equivariant. Shuffle the input tokens, output shuffles the same way.</description>
+    </item>
+    
+    <item>
+      <title>Self-Attention - The Key Mechanism in Transformers</title>
+      <link>https://www.danielsobrado.com/blog/self-attention/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/self-attention/</guid>
+      <description>Regular attention: query from one sequence, attend to another. Self-attention: query, key, value all come from same sequence.</description>
+    </item>
+    
+    <item>
+      <title>Attention Mechanisms - Part 1: The Core Idea</title>
+      <link>https://www.danielsobrado.com/blog/attention-mechanism-part1/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/attention-mechanism-part1/</guid>
+      <description>LSTMs helped with long-range dependencies. Attention does something more powerful - direct connections from anywhere to anywhere.</description>
+    </item>
+    
+    <item>
+      <title>LSTM - Learning Long-Term Dependencies</title>
+      <link>https://www.danielsobrado.com/blog/lstm/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/lstm/</guid>
+      <description>RNNs have short memory. Information from early timesteps fades quickly. LSTMs fix this with gates that control information flow.</description>
+    </item>
+    
+    <item>
+      <title>Layer Normalization - Keeping Activations Stable</title>
+      <link>https://www.danielsobrado.com/blog/layer-normalization/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/layer-normalization/</guid>
+      <description>Deep networks have unstable activations. Values explode or vanish as they pass through layers.</description>
+    </item>
+    
+    <item>
+      <title>Conv &#43; ReLU - The Building Block of CNNs</title>
+      <link>https://www.danielsobrado.com/blog/conv-relu/</link>
+      <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conv-relu/</guid>
+      <description>Convolution followed by ReLU. This pattern repeats hundreds of times in modern image networks.</description>
+    </item>
+    
+    <item>
+      <title>2D Convolutions - How Neural Networks See Images</title>
+      <link>https://www.danielsobrado.com/blog/conv2d/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conv2d/</guid>
+      <description>Images are grids of pixels. Fully connected layers would need billions of parameters.</description>
+    </item>
+    
+    <item>
+      <title>Cross-Entropy Loss - The Classification Loss Function</title>
+      <link>https://www.danielsobrado.com/blog/cross-entropy/</link>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/cross-entropy/</guid>
+      <description>Why do we use cross-entropy for classification? What does it actually measure?</description>
+    </item>
+    
+    <item>
+      <title>FastText - Handling Words Not in Vocabulary</title>
+      <link>https://www.danielsobrado.com/blog/fasttext/</link>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fasttext/</guid>
+      <description>Word2Vec problem: what about misspellings? What about &amp;ldquo;unhappiness&amp;rdquo; when you only trained on &amp;ldquo;happy&amp;rdquo;?</description>
+    </item>
+    
+    <item>
+      <title>GloVe - Global Vectors for Word Representation</title>
+      <link>https://www.danielsobrado.com/blog/glove/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/glove/</guid>
+      <description>Word2Vec uses local context windows. GloVe takes a different approach - use global word co-occurrence statistics.</description>
+    </item>
+    
+    <item>
+      <title>Word2Vec - Where Word Embeddings Started Getting Good</title>
+      <link>https://www.danielsobrado.com/blog/word2vec/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/word2vec/</guid>
+      <description>Before Word2Vec, representing words for ML was rough. One-hot encoding, TF-IDF&amp;hellip; none of them captured meaning.</description>
+    </item>
+    
+    <item>
+      <title>Embeddings - Representing Stuff as Vectors</title>
+      <link>https://www.danielsobrado.com/blog/embeddings/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/embeddings/</guid>
+      <description>Embeddings are everywhere now. Words, sentences, images, users, products&amp;hellip; anything can be an embedding.</description>
+    </item>
+    
+    <item>
+      <title>Tokenization - How Text Becomes Numbers</title>
+      <link>https://www.danielsobrado.com/blog/tokenization/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/tokenization/</guid>
+      <description>ML models don&amp;rsquo;t read text. They need numbers. Tokenization bridges that gap.</description>
+    </item>
+    
+    <item>
+      <title>Bag of Words - The Simplest Text Representation</title>
+      <link>https://www.danielsobrado.com/blog/bag-of-words/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bag-of-words/</guid>
+      <description>Before embeddings there was Bag of Words. Still useful, still relevant for some tasks.</description>
+    </item>
+    
+    <item>
+      <title>Softmax - Turning Numbers into Probabilities</title>
+      <link>https://www.danielsobrado.com/blog/softmax/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/softmax/</guid>
+      <description>Neural network outputs raw numbers (logits). For classification, you want probabilities.</description>
+    </item>
+    
+    <item>
+      <title>Leaky ReLU - Fixing Dead Neurons</title>
+      <link>https://www.danielsobrado.com/blog/leaky-relu/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/leaky-relu/</guid>
+      <description>ReLU is great but has a problem. Neurons can die. Leaky ReLU fixes this with one small change.</description>
+    </item>
+    
+    <item>
+      <title>ReLU - Why Neural Networks Learned to Use Simple Functions</title>
+      <link>https://www.danielsobrado.com/blog/relu/</link>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/relu/</guid>
+      <description>Sigmoid was the standard. Then ReLU came along and made deep learning actually work.</description>
+    </item>
+    
+    <item>
+      <title>Gradient Descent - How Neural Networks Learn</title>
+      <link>https://www.danielsobrado.com/blog/gradient-descent/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/gradient-descent/</guid>
+      <description>Neural networks learn by adjusting weights to reduce error. Gradient descent tells you which direction to adjust.</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression - The Foundation of ML</title>
+      <link>https://www.danielsobrado.com/blog/linear-regression/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/linear-regression/</guid>
+      <description>Before deep learning there was linear regression. Still the most useful model for many problems.</description>
+    </item>
+    
+  </channel>
+</rss>

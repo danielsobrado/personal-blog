@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on </title>
+    <link>https://www.danielsobrado.com/tags/statistics/</link>
+    <description>Recent content in Statistics on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linear Regression - The Foundation of ML</title>
+      <link>https://www.danielsobrado.com/blog/linear-regression/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/linear-regression/</guid>
+      <description>Before deep learning there was linear regression. Still the most useful model for many problems.</description>
+    </item>
+    
+    <item>
+      <title>Spearman Correlation - Ranking Relationships</title>
+      <link>https://www.danielsobrado.com/blog/spearman-correlation/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/spearman-correlation/</guid>
+      <description>Pearson correlation measures linear relationships. Spearman measures monotonic ones. If X goes up, does Y tend to go up?</description>
+    </item>
+    
+    <item>
+      <title>Probability Distributions - The Shapes of Randomness</title>
+      <link>https://www.danielsobrado.com/blog/probability-distributions/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/probability-distributions/</guid>
+      <description>ML is full of probability distributions. Knowing when to use which one matters.</description>
+    </item>
+    
+    <item>
+      <title>Expected Value and Variance - Summarizing Distributions</title>
+      <link>https://www.danielsobrado.com/blog/expected-value-variance/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/expected-value-variance/</guid>
+      <description>Two numbers that capture essence of a distribution: expected value (center) and variance (spread).</description>
+    </item>
+    
+    <item>
+      <title>Conditional Probability - P(A|B)</title>
+      <link>https://www.danielsobrado.com/blog/conditional-probability/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conditional-probability/</guid>
+      <description>&amp;ldquo;Given that X happened, what&amp;rsquo;s the probability of Y?&amp;rdquo; This is conditional probability.</description>
+    </item>
+    
+  </channel>
+</rss>

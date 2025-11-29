@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Normalization on </title>
+    <link>https://www.danielsobrado.com/tags/normalization/</link>
+    <description>Recent content in Normalization on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/normalization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Layer Normalization - Keeping Activations Stable</title>
+      <link>https://www.danielsobrado.com/blog/layer-normalization/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/layer-normalization/</guid>
+      <description>Deep networks have unstable activations. Values explode or vanish as they pass through layers.</description>
+    </item>
+    
+  </channel>
+</rss>

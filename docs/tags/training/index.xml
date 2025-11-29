@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Training on </title>
+    <link>https://www.danielsobrado.com/tags/training/</link>
+    <description>Recent content in Training on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/training/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Models Part 5 - Training the Denoiser</title>
+      <link>https://www.danielsobrado.com/blog/diffusion-part5-training/</link>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/diffusion-part5-training/</guid>
+      <description>Architecture ready. Now train it. Diffusion training is simple in principle but requires careful implementation for good results.</description>
+    </item>
+    
+  </channel>
+</rss>

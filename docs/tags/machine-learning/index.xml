@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on </title>
+    <link>https://www.danielsobrado.com/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reinforcement Learning Foundations - Learning from Interaction</title>
+      <link>https://www.danielsobrado.com/blog/rl-foundations/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rl-foundations/</guid>
+      <description>Supervised learning needs labeled data. What if there&amp;rsquo;s no teacher? RL learns from interaction - take actions, observe outcomes, maximize reward.</description>
+    </item>
+    
+    <item>
+      <title>Markov Chains - Predicting the Future from the Present</title>
+      <link>https://www.danielsobrado.com/blog/markov-chains/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/markov-chains/</guid>
+      <description>&amp;ldquo;The future depends only on the present, not on how we got here.</description>
+    </item>
+    
+    <item>
+      <title>Entropy - Measuring Uncertainty</title>
+      <link>https://www.danielsobrado.com/blog/entropy/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/entropy/</guid>
+      <description>How uncertain is a distribution? Entropy measures that. High entropy = hard to predict.</description>
+    </item>
+    
+    <item>
+      <title>Bag of Words - The Simplest Text Representation</title>
+      <link>https://www.danielsobrado.com/blog/bag-of-words/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bag-of-words/</guid>
+      <description>Before embeddings there was Bag of Words. Still useful, still relevant for some tasks.</description>
+    </item>
+    
+    <item>
+      <title>Gradient Descent - How Neural Networks Learn</title>
+      <link>https://www.danielsobrado.com/blog/gradient-descent/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/gradient-descent/</guid>
+      <description>Neural networks learn by adjusting weights to reduce error. Gradient descent tells you which direction to adjust.</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression - The Foundation of ML</title>
+      <link>https://www.danielsobrado.com/blog/linear-regression/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/linear-regression/</guid>
+      <description>Before deep learning there was linear regression. Still the most useful model for many problems.</description>
+    </item>
+    
+    <item>
+      <title>Spearman Correlation - Ranking Relationships</title>
+      <link>https://www.danielsobrado.com/blog/spearman-correlation/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/spearman-correlation/</guid>
+      <description>Pearson correlation measures linear relationships. Spearman measures monotonic ones. If X goes up, does Y tend to go up?</description>
+    </item>
+    
+    <item>
+      <title>Cosine Similarity - Measuring Direction Not Magnitude</title>
+      <link>https://www.danielsobrado.com/blog/cosine-similarity/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/cosine-similarity/</guid>
+      <description>Two embeddings point in similar direction? They&amp;rsquo;re similar. Cosine similarity ignores magnitude, only cares about angle.</description>
+    </item>
+    
+    <item>
+      <title>Probability Distributions - The Shapes of Randomness</title>
+      <link>https://www.danielsobrado.com/blog/probability-distributions/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/probability-distributions/</guid>
+      <description>ML is full of probability distributions. Knowing when to use which one matters.</description>
+    </item>
+    
+  </channel>
+</rss>

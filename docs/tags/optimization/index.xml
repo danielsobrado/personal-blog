@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on </title>
+    <link>https://www.danielsobrado.com/tags/optimization/</link>
+    <description>Recent content in Optimization on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gradient Descent - How Neural Networks Learn</title>
+      <link>https://www.danielsobrado.com/blog/gradient-descent/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/gradient-descent/</guid>
+      <description>Neural networks learn by adjusting weights to reduce error. Gradient descent tells you which direction to adjust.</description>
+    </item>
+    
+  </channel>
+</rss>

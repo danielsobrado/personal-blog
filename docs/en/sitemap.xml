@@ -51,7 +51,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/</loc>
-    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -64,7 +64,7 @@
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/categories/</loc>
-    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -76,17 +76,20 @@
                 href="https://www.danielsobrado.com/categories/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/llms/</loc>
-    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/tags/deep-learning/</loc>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/categories/rag/</loc>
-    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/tags/diffusion-models/</loc>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/blog/rag-content-issues/</loc>
-    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part7-conditioning/</loc>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/machine-learning/</loc>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/tags/</loc>
-    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-es"
@@ -97,6 +100,358 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/tags/"
                 />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/text-to-image/</loc>
+    <lastmod>2025-11-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part6-sampling/</loc>
+    <lastmod>2025-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/generation/</loc>
+    <lastmod>2025-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part5-training/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/training/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part4-unet/</loc>
+    <lastmod>2025-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/u-net/</loc>
+    <lastmod>2025-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part3-noise/</loc>
+    <lastmod>2025-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/probability/</loc>
+    <lastmod>2025-10-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/probability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/probability/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part2-neural-networks/</loc>
+    <lastmod>2025-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/neural-networks/</loc>
+    <lastmod>2025-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/diffusion-part1-tensors/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/tensors/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/computer-vision/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/llm/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/multimodal-ai/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/multimodal-llm/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/fine-tuning/</loc>
+    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/transfer-learning/</loc>
+    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/information-retrieval/</loc>
+    <lastmod>2025-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/nlp/</loc>
+    <lastmod>2025-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/rag/</loc>
+    <lastmod>2025-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/generative-models/</loc>
+    <lastmod>2025-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/unsupervised-learning/</loc>
+    <lastmod>2025-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/vae/</loc>
+    <lastmod>2025-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/algorithms/</loc>
+    <lastmod>2025-08-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/exploration/</loc>
+    <lastmod>2025-08-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/rl-exploration/</loc>
+    <lastmod>2025-08-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/reinforcement-learning/</loc>
+    <lastmod>2025-08-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/q-learning/</loc>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/q-learning/</loc>
+    <lastmod>2025-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/ai/</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/machine-learning/</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/rl-foundations/</loc>
+    <lastmod>2025-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/data-science/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/data-science/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/markov-chains/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/stochastic-processes/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/graph-theory/</loc>
+    <lastmod>2025-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/pagerank/</loc>
+    <lastmod>2025-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/programming/</loc>
+    <lastmod>2025-07-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/categories/programming/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/search/</loc>
+    <lastmod>2025-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/bert/</loc>
+    <lastmod>2025-07-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/transformer-architecture/</loc>
+    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/transformers/</loc>
+    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/positional-encoding/</loc>
+    <lastmod>2025-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/attention/</loc>
+    <lastmod>2025-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/self-attention/</loc>
+    <lastmod>2025-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/attention-mechanism-part1/</loc>
+    <lastmod>2025-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/bloom-filter/</loc>
+    <lastmod>2025-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/data-structures/</loc>
+    <lastmod>2025-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/probabilistic/</loc>
+    <lastmod>2025-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/lstm/</loc>
+    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/rnn/</loc>
+    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/sequence-modeling/</loc>
+    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/layer-normalization/</loc>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/normalization/</loc>
+    <lastmod>2025-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/cnn/</loc>
+    <lastmod>2025-05-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/conv-relu/</loc>
+    <lastmod>2025-05-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/conv2d/</loc>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/classification/</loc>
+    <lastmod>2025-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/cross-entropy/</loc>
+    <lastmod>2025-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
+    <lastmod>2025-04-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="https://www.danielsobrado.com/es/tags/loss-functions/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://www.danielsobrado.com/tags/loss-functions/"
+                />
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/entropy/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/information-theory/</loc>
+    <lastmod>2025-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/dimensionality-reduction/</loc>
+    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/linear-algebra/</loc>
+    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/mathematics/</loc>
+    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/svd/</loc>
+    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/embeddings/</loc>
+    <lastmod>2025-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/fasttext/</loc>
+    <lastmod>2025-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/fasttext/</loc>
+    <lastmod>2025-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/glove/</loc>
+    <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/glove/</loc>
+    <lastmod>2025-03-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/word2vec/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/word2vec/</loc>
+    <lastmod>2025-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/embeddings/</loc>
+    <lastmod>2025-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/tokenization/</loc>
+    <lastmod>2025-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/tokenization/</loc>
+    <lastmod>2025-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/bag-of-words/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/text-processing/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/numerical-methods/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/qr-decomposition/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/eigenvalue/</loc>
+    <lastmod>2025-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/pca/</loc>
+    <lastmod>2025-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/matrix-multiplication/</loc>
+    <lastmod>2025-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/softmax/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/activation-functions/</loc>
+    <lastmod>2025-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/leaky-relu/</loc>
+    <lastmod>2025-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/relu/</loc>
+    <lastmod>2025-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/gradient-descent/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/optimization/</loc>
+    <lastmod>2025-01-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/linear-regression/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/regression/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/statistics/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/correlation/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/spearman-correlation/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/cosine-similarity/</loc>
+    <lastmod>2024-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/probability-distributions/</loc>
+    <lastmod>2024-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/expected-value-variance/</loc>
+    <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/bayes/</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/conditional-probability/</loc>
+    <lastmod>2024-11-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/tags/llms/</loc>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/categories/rag/</loc>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.danielsobrado.com/blog/rag-content-issues/</loc>
+    <lastmod>2024-11-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/ai-novel-prompter/</loc>
     <lastmod>2024-11-02T00:00:00+00:00</lastmod>
@@ -112,19 +467,6 @@
   </url><url>
     <loc>https://www.danielsobrado.com/tags/git/</loc>
     <lastmod>2024-07-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.danielsobrado.com/categories/programming/</loc>
-    <lastmod>2024-07-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/programming/"
-                />
   </url><url>
     <loc>https://www.danielsobrado.com/tags/java/</loc>
     <lastmod>2024-03-08T00:00:00+00:00</lastmod>
@@ -675,19 +1017,6 @@
                 href="https://www.danielsobrado.com/blog/understanding-kubernetes-services/"
                 />
   </url><url>
-    <loc>https://www.danielsobrado.com/categories/data-science/</loc>
-    <lastmod>2023-05-17T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/categories/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/categories/data-science/"
-                />
-  </url><url>
     <loc>https://www.danielsobrado.com/blog/euclidean-manifold/</loc>
     <lastmod>2023-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -1198,19 +1527,6 @@
     <loc>https://www.danielsobrado.com/blog/kubernetes-concepts/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.danielsobrado.com/tags/loss-functions/</loc>
-    <lastmod>2016-07-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/loss-functions/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/loss-functions/"
-                />
-  </url><url>
     <loc>https://www.danielsobrado.com/blog/introduction-derivatives/</loc>
     <lastmod>2016-07-20T15:30:02+04:00</lastmod>
   </url><url>
@@ -1303,9 +1619,6 @@
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/shared-database/"
                 />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/nlp/</loc>
-    <lastmod>2014-12-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.danielsobrado.com/blog/tf-idf-word2vec/</loc>
     <lastmod>2014-12-30T00:00:00+00:00</lastmod>
@@ -1405,19 +1718,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://www.danielsobrado.com/blog/prior-posterior-probabilities/"
-                />
-  </url><url>
-    <loc>https://www.danielsobrado.com/tags/probability/</loc>
-    <lastmod>2014-03-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="https://www.danielsobrado.com/es/tags/probability/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://www.danielsobrado.com/tags/probability/"
                 />
   </url><url>
     <loc>https://www.danielsobrado.com/blog/basic-probability-concepts/</loc>

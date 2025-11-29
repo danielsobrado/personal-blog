@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMK9KCHT3Z"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MMK9KCHT3Z');
+    </script>
+
     <meta charset="utf-8">
-    <title>Probability distributions</title>
+    <title>Probability Distributions - The Shapes of Randomness</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Personal Blog on Software Engineering, Data Engineering and Machine Learning.">
+    <meta name="description" content="A comprehensive guide to the probability distributions you&#39;ll encounter in machine learning, from Normal to Dirichlet, with practical Python examples.">
     <meta name="author" content="Daniel Sobrado">
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.117.0">
 
     <!-- plugins -->
     
@@ -33,7 +43,7 @@
     <link rel="icon" href="https://www.danielsobrado.com/images/favicon.png" type="image/x-icon">
 
     <!-- MathJax -->
-    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
 
 </head><body><!-- navigation -->
 <header>
@@ -47,8 +57,8 @@
                <a href="mailto:https://www.danielsobrado.com/daniel@danielsobrado.com">daniel@danielsobrado.com</a> 
             </li>
             <li class="list-inline-item">
-               <a href="https://t.me/drusniel">Let's talk:
-                <span class="ml-2">Ping me on Telegram</span> 
+               <a href="https://www.linkedin.com/in/dsobrado/">Let's talk:
+                <span class="ml-2">Ping me on LinkedIn</span> 
               </a>
             </li>
           </ul>
@@ -82,6 +92,12 @@
             
             
             <li class="nav-item">
+              <a class="nav-link" href="https://www.danielsobrado.com/categories/devops/">Devops</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
               <a class="nav-link" href="https://www.danielsobrado.com/categories/big-data/">Big Data</a>
             </li>
             
@@ -101,36 +117,6 @@
           </ul>
           
         
-          <select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="en" value="https://www.danielsobrado.com/blog/probability-distributions/" selected>En</option>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <option id="es" value="https://www.danielsobrado.com/es/blog/probability-distributions/">Es</option>
-            
-            
-            
-            
-          </select>
-          
 
           
           
@@ -156,10 +142,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2 class="text-white font-weight-bold">Probability distributions</h2>
+				<h2 class="text-white font-weight-bold">Probability Distributions - The Shapes of Randomness</h2>
 				<ol class="breadcrumb">
 					<li><a href="https://www.danielsobrado.com/">Home</a></li>
-					<li>Probability distributions</li>
+					<li>Probability Distributions - The Shapes of Randomness</li>
 				</ol>
 			</div>
 		</div>
@@ -169,93 +155,165 @@
 
 <!-- blog single -->
 <section>
-  <div class="container">
+  <div class="container wide-lg">
     <div class="row">
       <div class="col-lg-8 py-100">
-        <div class="border rounded bg-white">
-          <img class="img-fluid w-100 rounded-top" src="https://i.imgur.com/WLrOv2Q.png" alt="blog-image">
+        <div class="rounded bg-white">
+          <img class="img-fluid w-100 rounded-top" src="https://raw.githubusercontent.com/danielsobrado/personal-blog/master/docs/images/blog/probability-distributions.png" alt="blog-image">
           <div class="p-4">
-            <h3>Probability distributions</h3>
+            <h3>Probability Distributions - The Shapes of Randomness</h3>
             <ul class="list-inline d-block pb-4 border-bottom mb-3">
               <li class="list-inline-item text-color">Posted By <a class="text-primary" href="https://www.danielsobrado.com/author/daniel-sobrado">Daniel Sobrado</a></li>
-              <li class="list-inline-item text-color">On 08 Feb</li>
+              <li class="list-inline-item text-color">On 12 Dec</li>
               <li class="list-inline-item text-color">Category:
                 
-                <a class="text-primary" href="https://www.danielsobrado.com/categories/maths"> Maths</a>
+                <a class="text-primary" href="https://www.danielsobrado.com/categories/data%20science"> Data science</a>
                 
               </li>
             </ul>
             <div class="post-content">
-              <h2 id="introduction">Introduction</h2>
-<p>Distributions a laws governing these are a must know for every data scientist.</p>
-<h2 id="the-law-of-large-numbers">The law of large numbers</h2>
-<p>The law of large numbers states that the more samples we collect the more close the sample mean will be to the population mean.</p>
-<h2 id="central-limit-theorem">Central Limit Theorem</h2>
-<blockquote>
-<p>The sampling distribution of the mean of any independent, random variable will be normal or nearly normal, if the sample size is large enough.</p>
-</blockquote>
-<p>We can say that 30 samples is a size good enough to consider it large enough, this theorem tells us that if we collect <strong>random</strong> samples from any distribution we&rsquo;ll finish with a Normal distribution in our sample data-set.</p>
-<p>The underlying distribution needs to have always a defined mean for the Central Limit Theorem to be valid.</p>
-<h2 id="normal-distribution">Normal Distribution</h2>
-<p>Properties:</p>
+              <p>ML is full of probability distributions. Knowing when to use which one matters.</p>
+<h2 id="why-distributions">Why distributions?</h2>
+<p>Data has patterns. Heights cluster around average. Rare events are rare. Distributions capture these patterns mathematically.</p>
+<p><img src="https://danielsobrado.github.io/ml-animations/animation/probability-distributions" alt="Probability Distributions"></p>
+<p>Interactive examples: <a href="https://danielsobrado.github.io/ml-animations/animation/probability-distributions">Probability Distributions Animation</a></p>
+<h2 id="normal-gaussian">Normal (Gaussian)</h2>
+<p>The most important distribution. Bell curve.</p>
+<p>$$f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$</p>
+<p>Parameters: μ (mean), σ (standard deviation)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate samples</span>
+</span></span><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(mu<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, sigma<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PDF at point</span>
+</span></span><span style="display:flex;"><span>prob <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>norm<span style="color:#f92672">.</span>pdf(x, loc<span style="color:#f92672">=</span>mu, scale<span style="color:#f92672">=</span>sigma)
+</span></span></code></pre></div><p>Used when:</p>
 <ul>
-<li><strong>Unimodal</strong>: Only one mode.</li>
-<li><strong>Symmetrical</strong>: Left and right of the mean are mirrored.</li>
-<li><strong>Bell-shaped</strong>: The highest point is at the mean.</li>
-<li><strong>Centered</strong>:  Mean, mode and median are all located in the centre.</li>
-<li><strong>Asymptotic</strong>: Tends to a value when it becomes very large.</li>
+<li>Central limit theorem applies</li>
+<li>Sum of many small effects</li>
+<li>Default assumption for continuous data</li>
 </ul>
-<h2 id="binomial-distribution">Binomial Distribution</h2>
-<p>This a discrete distribution, that models problems like tossing a coin and getting binary outcomes like heads and tails, True or False, Good or Bad&hellip;</p>
-<p>Our binomial distribution looks like:</p>
-<p>$$
-P ( x ) = \left( \begin{array} { l } { n } \ { x } \end{array} \right) p ^ { x } q ^ { n - x } = \frac { n ! } { ( n - x ) ! x ! } p ^ { x } q ^ { n - x }
-$$</p>
+<h2 id="bernoulli-and-binomial">Bernoulli and Binomial</h2>
+<p><strong>Bernoulli:</strong> Single yes/no trial</p>
 <ul>
-<li>n = number of events</li>
-<li>x = number of successes</li>
-<li>p = probability of getting a success in one event.</li>
-<li>q = (1-p) or the probability of getting a failure.</li>
-<li>There are only two possible outcomes at each trial.</li>
-<li>These events are independent.</li>
-<li>The events happen at a constant rate.</li>
+<li>P(X=1) = p</li>
+<li>P(X=0) = 1-p</li>
 </ul>
-<h2 id="multinomial-distribution">Multinomial Distribution</h2>
-<p>A multinomial distribution is an extension of a binomial distribution where we can have multiple outcomes.</p>
-<ul>
-<li>k is the number of outcomes.</li>
-<li>n is the number of events</li>
-<li>p is a vector of probabilities for each of the events.</li>
-<li>In the multinomial distribution the parameter vector is a Dirichlet distribution, this is the prior distribution for the parameter or conjugate prior.</li>
-</ul>
-<p>See: <a href="https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815">https://towardsdatascience.com/estimating-probabilities-with-bayesian-modeling-in-python-7144be007815</a>
-See: <a href="https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html">https://frnsys.com/ai_notes/machine_learning/bayesian_learning.html</a></p>
-<h2 id="dirichlet-distribution">Dirichlet Distribution</h2>
-<p>$$
-P ( p | a ) = \frac { \Gamma \left( \sum _ { k = 0 } ^ { K - 1 } \alpha _ { k } \right) } { \prod _ { k = 0 } ^ { K - 1 } \Gamma \left( \alpha _ { k } \right) } \prod _ { k = 0 } ^ { K - 1 } p _ { k } ^ { a _ { k } - 1 }</p>
-<p>$
-$$</p>
-<ul>
-<li>k is the number of outcomes.</li>
-<li>Alpha is a vector is positive real values called the concentration parameter and is used as a hyper-parameter.
-<ul>
-<li>Alpha can be a distribution itself, it will be a hyper-prior, and might have hyper-hyper-parameters.</li>
-<li>We can define alpha as a vector of prior beliefs like alpha=[2,4,1]</li>
-</ul>
-</li>
-</ul>
-<h2 id="bernoulli-distribution">Bernoulli Distribution</h2>
-<h2 id="poisson-distribution">Poisson Distribution</h2>
-<blockquote>
-<p>The Poisson distribution is useful to model the number of times an event occurs in an interval of time or space.</p>
-</blockquote>
-<ul>
-<li>k is a positive integer that represents the number of times that an event occurs in an interval.</li>
-<li>These events are independent.</li>
-<li>The events happen at a constant rate.</li>
-</ul>
-<p><a href="https://towardsdatascience.com/getting-to-know-probability-distributions-cc1dd1e2f22b">https://towardsdatascience.com/getting-to-know-probability-distributions-cc1dd1e2f22b</a></p>
-
+<p><strong>Binomial:</strong> Sum of n Bernoulli trials
+$$P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}$$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Bernoulli</span>
+</span></span><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>binomial(n<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Binomial</span>
+</span></span><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>binomial(n<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, p<span style="color:#f92672">=</span><span style="color:#ae81ff">0.3</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span></code></pre></div><p>Used for: coin flips, success/failure counts, binary classification probabilities.</p>
+<h2 id="poisson">Poisson</h2>
+<p>Counts of rare events in fixed interval.</p>
+<p>$$P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$$</p>
+<p>Parameter: λ (average rate)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>poisson(lam<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span></code></pre></div><p>Used for: website visits per minute, defects per unit, arrivals per hour.</p>
+<h2 id="exponential">Exponential</h2>
+<p>Time between Poisson events.</p>
+<p>$$f(x) = \lambda e^{-\lambda x}$$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>exponential(scale<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>lam, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span></code></pre></div><p>Memoryless property: P(X &gt; s+t | X &gt; s) = P(X &gt; t)</p>
+<h2 id="uniform">Uniform</h2>
+<p>All values equally likely in range.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>uniform(low<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, high<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span></code></pre></div><p>Used for: initialization, random sampling, random number generation base.</p>
+<h2 id="categorical-and-multinomial">Categorical and Multinomial</h2>
+<p><strong>Categorical:</strong> One trial with k possible outcomes
+<strong>Multinomial:</strong> n trials with k possible outcomes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Categorical (one-hot encoded)</span>
+</span></span><span style="display:flex;"><span>probs <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.2</span>, <span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">0.5</span>]
+</span></span><span style="display:flex;"><span>sample <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>multinomial(n<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, pvals<span style="color:#f92672">=</span>probs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Multinomial</span>
+</span></span><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>multinomial(n<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, pvals<span style="color:#f92672">=</span>probs)
+</span></span></code></pre></div><p>Softmax outputs follow categorical distribution.</p>
+<h2 id="beta">Beta</h2>
+<p>Distribution over probabilities (values in [0,1]).</p>
+<p>$$f(x) = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}$$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>beta(a<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, b<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span></code></pre></div><p>Used for: Bayesian inference on proportions, uncertainty over probabilities.</p>
+<h2 id="dirichlet">Dirichlet</h2>
+<p>Multivariate Beta. Distribution over probability vectors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>dirichlet(alpha<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>], size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Each sample sums to 1</span>
+</span></span></code></pre></div><p>Used for: topic models, mixture models, Bayesian categorical.</p>
+<h2 id="summary-table">Summary table</h2>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Domain</th>
+<th>Parameters</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>(-∞, ∞)</td>
+<td>μ, σ</td>
+<td>Continuous data</td>
+</tr>
+<tr>
+<td>Bernoulli</td>
+<td>{0, 1}</td>
+<td>p</td>
+<td>Single binary trial</td>
+</tr>
+<tr>
+<td>Binomial</td>
+<td>{0,&hellip;,n}</td>
+<td>n, p</td>
+<td>Count of successes</td>
+</tr>
+<tr>
+<td>Poisson</td>
+<td>{0,1,2,&hellip;}</td>
+<td>λ</td>
+<td>Rare event counts</td>
+</tr>
+<tr>
+<td>Exponential</td>
+<td>[0, ∞)</td>
+<td>λ</td>
+<td>Time between events</td>
+</tr>
+<tr>
+<td>Uniform</td>
+<td>[a, b]</td>
+<td>a, b</td>
+<td>Equal likelihood</td>
+</tr>
+<tr>
+<td>Categorical</td>
+<td>{1,&hellip;,k}</td>
+<td>p₁&hellip;pₖ</td>
+<td>k-way classification</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>[0, 1]</td>
+<td>α, β</td>
+<td>Probability values</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fitting-distributions">Fitting distributions</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy <span style="color:#f92672">import</span> stats
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fit normal to data</span>
+</span></span><span style="display:flex;"><span>mu, std <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>norm<span style="color:#f92672">.</span>fit(data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Test goodness of fit</span>
+</span></span><span style="display:flex;"><span>statistic, pvalue <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>kstest(data, <span style="color:#e6db74">&#39;norm&#39;</span>, args<span style="color:#f92672">=</span>(mu, std))
+</span></span></code></pre></div>
             </div>
           </div>
         </div>
@@ -271,13 +329,13 @@ $$</p>
                     <a class="share-icon bg-facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f"><i class="ti-facebook"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Probability%20distributions&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f"><i class="ti-twitter-alt"></i></a>
+                    <a class="share-icon bg-twitter" href="https://twitter.com/intent/tweet/?text=Probability%20Distributions%20-%20The%20Shapes%20of%20Randomness&amp;url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f"><i class="ti-twitter-alt"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f&amp;resubmit=true&amp;title=Probability%20distributions"><i class="ti-reddit"></i></a>
+                    <a class="share-icon bg-reddit" href="https://reddit.com/submit/?url=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f&amp;resubmit=true&amp;title=Probability%20Distributions%20-%20The%20Shapes%20of%20Randomness"><i class="ti-reddit"></i></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="share-icon bg-primary" href="mailto:?subject=Probability%20distributions&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f"><i class="ti-email"></i></a>
+                    <a class="share-icon bg-primary" href="mailto:?subject=Probability%20Distributions%20-%20The%20Shapes%20of%20Randomness&amp;body=https%3a%2f%2fwww.danielsobrado.com%2fblog%2fprobability-distributions%2f"><i class="ti-email"></i></a>
                   </li>
                 </ul>
               </div>
@@ -289,7 +347,15 @@ $$</p>
                 <ul class="list-inline tag-list">
                   
                   <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/statistics">Statistics</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
                     <a href="https://www.danielsobrado.com/categories/probability">Probability</a>
+                  </li>
+                  
+                  <li class="list-inline-item">
+                    <a href="https://www.danielsobrado.com/categories/machine%20learning">Machine learning</a>
                   </li>
                   
                 </ul>
@@ -335,12 +401,28 @@ $$</p>
 						class="d-block text-color py-10">Big data</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/certification"
+						class="d-block text-color py-10">Certification</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/data-science"
 						class="d-block text-color py-10">Data science</a>
 				</li>
 				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/devops"
+						class="d-block text-color py-10">Devops</a>
+				</li>
+				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/investing"
 						class="d-block text-color py-10">Investing</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/machine-learning"
+						class="d-block text-color py-10">Machine learning</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/mathematics"
+						class="d-block text-color py-10">Mathematics</a>
 				</li>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/maths"
@@ -353,6 +435,14 @@ $$</p>
 				<li class="border-bottom">
 					<a href="https://www.danielsobrado.com/categories/programming"
 						class="d-block text-color py-10">Programming</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/rag"
+						class="d-block text-color py-10">Rag</a>
+				</li>
+				<li class="border-bottom">
+					<a href="https://www.danielsobrado.com/categories/sideprojects"
+						class="d-block text-color py-10">Sideprojects</a>
 				</li>
 			</ul>
 		</div>
@@ -394,15 +484,15 @@ $$</p>
 			<!-- post -->
 			<div class="d-flex py-3 border-bottom">
 				<div class="mr-4">
-					<a href="https://www.danielsobrado.com/blog/likelihood-encoding/">
-						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/MDlo1LF.png" alt="post-thumb">
+					<a href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">
+						<img class="rounded img-fluid recent-post-thumb" src="https://i.imgur.com/isyQF4V.jpg" alt="post-thumb">
 					</a>
 				</div>
 				<div>
 					<h6 class="mb-3">
-						<a class="text-dark" href="https://www.danielsobrado.com/blog/likelihood-encoding/">Likelihood encoding</a>
+						<a class="text-dark" href="https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/">Loss functions</a>
 					</h6>
-					<p class="meta">12 Sep 2016</p>
+					<p class="meta">23 Jul 2016</p>
 				</div>
 			</div>
 			
@@ -412,15 +502,35 @@ $$</p>
 			<h4 class="mb-3">Tags</h4>
 			<ul class="list-inline tag-list">
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/angularjs">Angularjs</a></li>
+					<a href="https://www.danielsobrado.com/tags/activation-functions">Activation functions</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/ai">Ai</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/algorithms">Algorithms</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/attention">Attention</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/bayes">Bayes</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/bayesian">Bayesian</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/certification">Certification</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/classification">Classification</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/clustering">Clustering</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/cnn">Cnn</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/computer-vision">Computer vision</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concepts">Concepts</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/concurrency">Concurrency</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/confluent">Confluent</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/correlation">Correlation</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/cross-entropy">Cross entropy</a></li>
 				<li class="list-inline-item">
@@ -428,59 +538,151 @@ $$</p>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/data-preparation">Data preparation</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/data-structures">Data structures</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/deep-learning">Deep learning</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/design-patterns">Design patterns</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/devops">Devops</a></li>
+					<a href="https://www.danielsobrado.com/tags/diffusion-models">Diffusion models</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dimensionality-reduction">Dimensionality reduction</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dot-product">Dot product</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/dsa">Dsa</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/elasticsearch">Elasticsearch</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/embeddings">Embeddings</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/entropy">Entropy</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/exploration">Exploration</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/fasttext">Fasttext</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/functional-programming">Functional programming</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/generation">Generation</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/generative-models">Generative models</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/git">Git</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/glove">Glove</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/graph-theory">Graph theory</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/information-retrieval">Information retrieval</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/information-theory">Information theory</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/java">Java</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/kaggle">Kaggle</a></li>
+					<a href="https://www.danielsobrado.com/tags/kafka">Kafka</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/kl-divergence">Kl divergence</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/linear-regression">Linear regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/kubernetes">Kubernetes</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/logistic-regression">Logistic regression</a></li>
+					<a href="https://www.danielsobrado.com/tags/linear-algebra">Linear algebra</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/llm">Llm</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/llms">Llms</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/loss-functions">Loss functions</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/machine-data">Machine data</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/machine-learning">Machine learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/math">Math</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/mathematics">Mathematics</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/microservices">Microservices</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/modelling">Modelling</a></li>
+					<a href="https://www.danielsobrado.com/tags/multimodal-ai">Multimodal ai</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/networking">Networking</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/neural-networks">Neural networks</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/nlp">Nlp</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/normalization">Normalization</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/numerical-methods">Numerical methods</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/numpy">Numpy</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/optimization">Optimization</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pattern">Pattern</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pca">Pca</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/performance">Performance</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/pods">Pods</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/probabilistic">Probabilistic</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/probability">Probability</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/python">Python</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scala">Scala</a></li>
+					<a href="https://www.danielsobrado.com/tags/q-learning">Q learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/regression">Regression</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/reinforcement-learning">Reinforcement learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rest-api">Rest API</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/rnn">Rnn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scikit-learn">Scikit learn</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/scipy">Scipy</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/scrapy">Scrapy</a></li>
+					<a href="https://www.danielsobrado.com/tags/search">Search</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/security">Security</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/soa">Soa</a></li>
+					<a href="https://www.danielsobrado.com/tags/sequence-modeling">Sequence modeling</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/set-theory">Set theory</a></li>
 				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/spark">Spark</a></li>
 				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/statistics">Statistics</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/stochastic-processes">Stochastic processes</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/tensors">Tensors</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/text-processing">Text processing</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/text-to-image">Text to image</a></li>
+				<li class="list-inline-item">
 					<a href="https://www.danielsobrado.com/tags/time-series">Time series</a></li>
 				<li class="list-inline-item">
-					<a href="https://www.danielsobrado.com/tags/typescript">Typescript</a></li>
+					<a href="https://www.danielsobrado.com/tags/tokenization">Tokenization</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/training">Training</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/transfer-learning">Transfer learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/transformers">Transformers</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/u-net">U net</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/unsupervised-learning">Unsupervised learning</a></li>
+				<li class="list-inline-item">
+					<a href="https://www.danielsobrado.com/tags/word2vec">Word2vec</a></li>
 			</ul>
 		</div>
 
@@ -488,7 +690,7 @@ $$</p>
 		<div class="newsletter">
 			<h4 class="mb-3">Stay Updated</h4>
 			<div id="mc_embed_signup">
-				<form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+				<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
 				novalidate>
 					<div id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
@@ -507,7 +709,7 @@ $$</p>
 						</div>
 						
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-								name="" tabindex="-1"></div>
+								name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1"></div>
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
 								class="button"></div>
 					</div>
@@ -598,6 +800,10 @@ $$</p>
 						
 						
 						
+						<li><a href="https://www.danielsobrado.com/categories/devops/">Devops</a></li>
+						
+						
+						
 						<li><a href="https://www.danielsobrado.com/categories/big-data/">Big Data</a></li>
 						
 						
@@ -617,7 +823,7 @@ $$</p>
 						 <h4 class="mb-4 text-white">Keep in touch!</h4> 
 						 <p class="text-white mb-4">Let&#39;s stay connected, don&#39;t forget to say Hi!</p> 
 						<div id="mc_embed_signup">
-							<form action="" method="post" id="mc-embedded-subscribe-form"
+							<form action="https://danielsobrado.us8.list-manage.com/subscribe/post?u=af5e53fa0a4bf5416059df03a&amp;id=0e8c4e2294&amp;f_id=00ef78e0f0" method="post" id="mc-embedded-subscribe-form"
 								name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll" class="position-relative">
 									<input type="email" name="EMAIL" class="required email form-control subscribe" id="mce-EMAIL"
@@ -626,7 +832,7 @@ $$</p>
 										<i class="ti-arrow-right"></i>
 									</button>
 									<div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="" tabindex="-1">
+										<input type="text" name="b_af5e53fa0a4bf5416059df03a_0e8c4e2294" tabindex="-1">
 									</div>
 								</div>
 							</form>
@@ -641,7 +847,7 @@ $$</p>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-5">
-					<p class="text-white text-center text-md-left">Copyright © 2021 J.Daniel.Sobrado</p>
+					<p class="text-white text-center text-md-left">Copyright © 2023 J.Daniel.Sobrado</p>
 				</div>
 				<div class="col-lg-6 col-md-7">
 					<ul class="list-inline text-center text-md-right">
@@ -658,15 +864,15 @@ $$</p>
 </footer>
 <!-- /footer -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/obsidian.min.css">
 <script>hljs.highlightAll();</script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/plugin.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/plugin.min.js"></script>
 
 <!-- Essential Scripts -->
 <!-- Google Map API -->
@@ -685,12 +891,11 @@ $$</p>
 
 <script src="https://www.danielsobrado.com/plugins/google-map/gmap.js"></script>
 
+<script src="https://www.danielsobrado.com/plugins/medium-zoom/medium-zoom.min.js"></script>
+
 <!-- Main Script -->
 
 <script src="https://www.danielsobrado.com/js/script.min.js"></script>
-<!-- google analitycs -->
-
-
 </body>
 
 </html></body>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data-Science on </title>
+    <title>Data Science on </title>
     <link>https://www.danielsobrado.com/categories/data-science/</link>
-    <description>Recent content in Data-Science on </description>
+    <description>Recent content in Data Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loss functions</title>
       <link>https://www.danielsobrado.com/blog/loss-rmse-mse-mae-mape/</link>
@@ -41,6 +41,114 @@
       
       <guid>https://www.danielsobrado.com/blog/data-preparation-categoricals/</guid>
       <description>Introduction Qualitative feature encoding When dealing with machine learning algorithms, the format and quality of the input data are important to model performance.</description>
+    </item>
+    
+    <item>
+      <title>Markov Chains - Predicting the Future from the Present</title>
+      <link>https://www.danielsobrado.com/blog/markov-chains/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/markov-chains/</guid>
+      <description>&amp;ldquo;The future depends only on the present, not on how we got here.</description>
+    </item>
+    
+    <item>
+      <title>Bloom Filter - Probably Yes, Definitely No</title>
+      <link>https://www.danielsobrado.com/blog/bloom-filter/</link>
+      <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bloom-filter/</guid>
+      <description>A set that uses almost no memory. Trade-off: might say &amp;ldquo;yes&amp;rdquo; when answer is &amp;ldquo;no&amp;rdquo; (false positive).</description>
+    </item>
+    
+    <item>
+      <title>Entropy - Measuring Uncertainty</title>
+      <link>https://www.danielsobrado.com/blog/entropy/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/entropy/</guid>
+      <description>How uncertain is a distribution? Entropy measures that. High entropy = hard to predict.</description>
+    </item>
+    
+    <item>
+      <title>SVD - Singular Value Decomposition Explained</title>
+      <link>https://www.danielsobrado.com/blog/svd/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/svd/</guid>
+      <description>SVD factors any matrix into three pieces. Unlike eigendecomposition, works for non-square matrices.</description>
+    </item>
+    
+    <item>
+      <title>QR Decomposition - Orthogonal Factorization</title>
+      <link>https://www.danielsobrado.com/blog/qr-decomposition/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/qr-decomposition/</guid>
+      <description>QR decomposition factors a matrix into orthogonal Q and upper triangular R.</description>
+    </item>
+    
+    <item>
+      <title>Eigenvalues and Eigenvectors - The Essence of Matrices</title>
+      <link>https://www.danielsobrado.com/blog/eigenvalue/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/eigenvalue/</guid>
+      <description>A matrix transforms vectors. Eigenvectors are special directions that only get scaled, not rotated.</description>
+    </item>
+    
+    <item>
+      <title>Matrix Multiplication - The Operation Behind Everything</title>
+      <link>https://www.danielsobrado.com/blog/matrix-multiplication/</link>
+      <pubDate>Thu, 06 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/matrix-multiplication/</guid>
+      <description>Neural networks are mostly matrix multiplication. Understanding this operation deeply helps understand everything else.</description>
+    </item>
+    
+    <item>
+      <title>Spearman Correlation - Ranking Relationships</title>
+      <link>https://www.danielsobrado.com/blog/spearman-correlation/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/spearman-correlation/</guid>
+      <description>Pearson correlation measures linear relationships. Spearman measures monotonic ones. If X goes up, does Y tend to go up?</description>
+    </item>
+    
+    <item>
+      <title>Cosine Similarity - Measuring Direction Not Magnitude</title>
+      <link>https://www.danielsobrado.com/blog/cosine-similarity/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/cosine-similarity/</guid>
+      <description>Two embeddings point in similar direction? They&amp;rsquo;re similar. Cosine similarity ignores magnitude, only cares about angle.</description>
+    </item>
+    
+    <item>
+      <title>Probability Distributions - The Shapes of Randomness</title>
+      <link>https://www.danielsobrado.com/blog/probability-distributions/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/probability-distributions/</guid>
+      <description>ML is full of probability distributions. Knowing when to use which one matters.</description>
+    </item>
+    
+    <item>
+      <title>Expected Value and Variance - Summarizing Distributions</title>
+      <link>https://www.danielsobrado.com/blog/expected-value-variance/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/expected-value-variance/</guid>
+      <description>Two numbers that capture essence of a distribution: expected value (center) and variance (spread).</description>
+    </item>
+    
+    <item>
+      <title>Conditional Probability - P(A|B)</title>
+      <link>https://www.danielsobrado.com/blog/conditional-probability/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/conditional-probability/</guid>
+      <description>&amp;ldquo;Given that X happened, what&amp;rsquo;s the probability of Y?&amp;rdquo; This is conditional probability.</description>
     </item>
     
     <item>

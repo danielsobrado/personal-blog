@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Information Retrieval on </title>
+    <link>https://www.danielsobrado.com/tags/information-retrieval/</link>
+    <description>Recent content in Information Retrieval on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/information-retrieval/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG - Retrieval-Augmented Generation</title>
+      <link>https://www.danielsobrado.com/blog/rag/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/rag/</guid>
+      <description>LLMs have a knowledge cutoff. They hallucinate. RAG fixes this: retrieve relevant documents first, then generate answer based on retrieved context.</description>
+    </item>
+    
+  </channel>
+</rss>

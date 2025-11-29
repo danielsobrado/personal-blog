@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Activation Functions on </title>
+    <link>https://www.danielsobrado.com/tags/activation-functions/</link>
+    <description>Recent content in Activation Functions on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/activation-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leaky ReLU - Fixing Dead Neurons</title>
+      <link>https://www.danielsobrado.com/blog/leaky-relu/</link>
+      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/leaky-relu/</guid>
+      <description>ReLU is great but has a problem. Neurons can die. Leaky ReLU fixes this with one small change.</description>
+    </item>
+    
+    <item>
+      <title>ReLU - Why Neural Networks Learned to Use Simple Functions</title>
+      <link>https://www.danielsobrado.com/blog/relu/</link>
+      <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/relu/</guid>
+      <description>Sigmoid was the standard. Then ReLU came along and made deep learning actually work.</description>
+    </item>
+    
+  </channel>
+</rss>

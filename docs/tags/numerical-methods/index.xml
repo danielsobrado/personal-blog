@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Numerical Methods on </title>
+    <link>https://www.danielsobrado.com/tags/numerical-methods/</link>
+    <description>Recent content in Numerical Methods on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/numerical-methods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QR Decomposition - Orthogonal Factorization</title>
+      <link>https://www.danielsobrado.com/blog/qr-decomposition/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/qr-decomposition/</guid>
+      <description>QR decomposition factors a matrix into orthogonal Q and upper triangular R.</description>
+    </item>
+    
+  </channel>
+</rss>

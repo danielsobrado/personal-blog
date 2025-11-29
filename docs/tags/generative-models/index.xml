@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generative Models on </title>
+    <link>https://www.danielsobrado.com/tags/generative-models/</link>
+    <description>Recent content in Generative Models on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/generative-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Variational Autoencoders - Probabilistic Generative Models</title>
+      <link>https://www.danielsobrado.com/blog/vae/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/vae/</guid>
+      <description>Autoencoders compress data to a bottleneck, then reconstruct. VAEs make the bottleneck probabilistic - encode to a distribution, sample from it, decode.</description>
+    </item>
+    
+  </channel>
+</rss>

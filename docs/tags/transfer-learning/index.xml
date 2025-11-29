@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transfer Learning on </title>
+    <link>https://www.danielsobrado.com/tags/transfer-learning/</link>
+    <description>Recent content in Transfer Learning on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.danielsobrado.com/tags/transfer-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fine-Tuning LLMs - Customizing Language Models</title>
+      <link>https://www.danielsobrado.com/blog/fine-tuning/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/fine-tuning/</guid>
+      <description>Pretrained LLMs are generalists. Fine-tuning makes them specialists. Adapt to your domain, your style, your task.</description>
+    </item>
+    
+    <item>
+      <title>BERT - Bidirectional Language Understanding</title>
+      <link>https://www.danielsobrado.com/blog/bert/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.danielsobrado.com/blog/bert/</guid>
+      <description>Before BERT: train models from scratch for each task. After BERT: pretrain once, fine-tune everywhere.</description>
+    </item>
+    
+  </channel>
+</rss>
