@@ -31,7 +31,7 @@
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/softmax/</guid>
-      <description>Neural network outputs raw numbers (logits). For classification, you want probabilities.</description>
+      <description>Neural network outputs raw numbers called &amp;ldquo;logits.&amp;rdquo; These could be anything: -500, 2.</description>
     </item>
     
     <item>

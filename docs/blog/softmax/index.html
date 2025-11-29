@@ -227,62 +227,87 @@
               </li>
             </ul>
             <div class="post-content">
-              <p>Neural network outputs raw numbers (logits). For classification, you want probabilities. Softmax does that conversion.</p>
+              <p>Neural network outputs raw numbers called &ldquo;logits.&rdquo; These could be anything: -500, 2.3, 47. For classification, we need probabilities between 0 and 1 that sum to 1. Softmax does exactly that conversion.</p>
 <h2 id="the-formula">The formula</h2>
-<p>Given vector z of logits:</p>
+<p>Given a vector z of logits:</p>
 <p>$$\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$</p>
-<p>Each output becomes probability. All outputs sum to 1.</p>
+<p>In plain English: take e^(each value), then divide by the total. Now everything is positive and sums to 1!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">softmax</span>(z):
 </span></span><span style="display:flex;"><span>    exp_z <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>exp(z)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> exp_z <span style="color:#f92672">/</span> exp_z<span style="color:#f92672">.</span>sum()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>logits <span style="color:#f92672">=</span> [<span style="color:#ae81ff">2.0</span>, <span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">0.1</span>]
 </span></span><span style="display:flex;"><span>probs <span style="color:#f92672">=</span> softmax(logits)  <span style="color:#75715e"># [0.659, 0.242, 0.099]</span>
-</span></span></code></pre></div><p><img src="https://danielsobrado.github.io/ml-animations/animation/softmax" alt="Softmax Function"></p>
-<p>Interactive demo: <a href="https://danielsobrado.github.io/ml-animations/animation/softmax">Softmax Animation</a></p>
-<h2 id="what-it-does">What it does</h2>
+</span></span></code></pre></div><p>👉 <strong>Try it yourself:</strong> <a href="https://danielsobrado.github.io/ml-animations/animation/softmax">Interactive Softmax Animation</a> - drag the logits around and watch the probabilities change!</p>
+<h2 id="what-softmax-actually-does">What softmax actually does</h2>
+<p>Let&rsquo;s build intuition:</p>
 <ul>
-<li>Positive logit → high probability</li>
-<li>Negative logit → low probability</li>
-<li>Largest logit → highest probability</li>
-<li>Preserves ranking</li>
-<li>Outputs always in [0, 1]</li>
-<li>Sum always 1</li>
+<li><strong>Bigger logit → higher probability</strong> (the exponential amplifies differences)</li>
+<li><strong>Negative logit → small probability</strong> (but never zero!)</li>
+<li><strong>Ranking preserved</strong> - if logit A &gt; logit B, then prob(A) &gt; prob(B)</li>
+<li><strong>All outputs in [0, 1]</strong> and they always sum to 1</li>
 </ul>
-<h2 id="why-exponential">Why exponential?</h2>
-<p>We need positive numbers that preserve relative ordering.</p>
-<p>Could use other functions but exp has nice properties:</p>
-<ul>
-<li>Always positive</li>
-<li>Monotonic</li>
-<li>Differentiable everywhere</li>
-<li>Mathematically convenient</li>
-</ul>
-<h2 id="numerical-stability">Numerical stability</h2>
-<p>Naive implementation has problems:</p>
+<p>Think of it as a &ldquo;soft&rdquo; version of argmax. Instead of picking one winner, it gives each option a score proportional to how much &ldquo;bigger&rdquo; it is.</p>
+<h2 id="why-use-exponential">Why use exponential?</h2>
+<p>We need a function that:</p>
+<ol>
+<li>Makes all numbers positive</li>
+<li>Preserves which one is biggest</li>
+<li>Is smooth and differentiable</li>
+</ol>
+<p>Exponential nails all three. Plus it has nice mathematical properties that make gradients clean.</p>
+<h2 id="watch-out-numerical-stability">Watch out: numerical stability!</h2>
+<p>Here&rsquo;s a trap:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>logits <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1000</span>, <span style="color:#ae81ff">1001</span>, <span style="color:#ae81ff">1002</span>]
-</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>exp(logits)  <span style="color:#75715e"># [inf, inf, inf] - overflow!</span>
-</span></span></code></pre></div><p>Fix: subtract max before exp</p>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>exp(logits)  <span style="color:#75715e"># [inf, inf, inf] - overflow! 💥</span>
+</span></span></code></pre></div><p>The fix is simple - subtract the max first:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">stable_softmax</span>(z):
-</span></span><span style="display:flex;"><span>    z <span style="color:#f92672">=</span> z <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>max(z)  <span style="color:#75715e"># shift so max is 0</span>
+</span></span><span style="display:flex;"><span>    z <span style="color:#f92672">=</span> z <span style="color:#f92672">-</span> np<span style="color:#f92672">.</span>max(z)  <span style="color:#75715e"># now max is 0</span>
 </span></span><span style="display:flex;"><span>    exp_z <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>exp(z)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> exp_z <span style="color:#f92672">/</span> exp_z<span style="color:#f92672">.</span>sum()
-</span></span></code></pre></div><p>Now exp never gets input &gt; 0. No overflow.</p>
-<p>Most libraries do this automatically.</p>
-<h2 id="temperature">Temperature</h2>
-<p>Control how &ldquo;sharp&rdquo; the distribution is:</p>
+</span></span></code></pre></div><p>This doesn&rsquo;t change the result (the subtraction cancels out), but exp() never sees a number &gt; 0. No overflow.</p>
+<p>Good news: PyTorch and TensorFlow handle this automatically.</p>
+<h2 id="temperature-controlling-confidence">Temperature: controlling confidence</h2>
+<p>Want sharper or softer probabilities? Add temperature:</p>
 <p>$$\text{softmax}(z_i, T) = \frac{e^{z_i/T}}{\sum_j e^{z_j/T}}$$</p>
-<p>T = 1: normal softmax
-T &lt; 1: sharper, more confident
-T &gt; 1: softer, more uniform</p>
+<table>
+<thead>
+<tr>
+<th>Temperature</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T = 1</td>
+<td>Normal softmax</td>
+</tr>
+<tr>
+<td>T &lt; 1</td>
+<td>Sharper, more confident (winner takes more)</td>
+</tr>
+<tr>
+<td>T &gt; 1</td>
+<td>Softer, more uniform (spread out)</td>
+</tr>
+<tr>
+<td>T → 0</td>
+<td>Becomes argmax (one-hot)</td>
+</tr>
+<tr>
+<td>T → ∞</td>
+<td>Becomes uniform</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">softmax_with_temp</span>(z, temperature<span style="color:#f92672">=</span><span style="color:#ae81ff">1.0</span>):
 </span></span><span style="display:flex;"><span>    z <span style="color:#f92672">=</span> z <span style="color:#f92672">/</span> temperature
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> stable_softmax(z)
-</span></span></code></pre></div><p>Used in:</p>
+</span></span></code></pre></div><p>You&rsquo;ll see temperature in:</p>
 <ul>
-<li>Knowledge distillation (soft labels)</li>
-<li>Generation (controlling randomness)</li>
-<li>Attention (sometimes)</li>
+<li><strong>Knowledge distillation</strong> - soft labels from teacher model</li>
+<li><strong>Text generation</strong> - controlling randomness (higher T = more creative)</li>
+<li><strong>Attention</strong> - sometimes used to sharpen focus</li>
 </ul>
 <h2 id="softmax-vs-other-activations">Softmax vs other activations</h2>
 <p><strong>Softmax</strong> - multiclass classification output

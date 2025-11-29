@@ -175,7 +175,7 @@
       <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/cross-entropy/</guid>
-      <description>Why do we use cross-entropy for classification? What does it actually measure?</description>
+      <description>Why do we use cross-entropy for classification? And what does it actually measure?</description>
     </item>
     
     <item>
@@ -211,7 +211,7 @@
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.danielsobrado.com/blog/softmax/</guid>
-      <description>Neural network outputs raw numbers (logits). For classification, you want probabilities.</description>
+      <description>Neural network outputs raw numbers called &amp;ldquo;logits.&amp;rdquo; These could be anything: -500, 2.</description>
     </item>
     
     <item>
