@@ -188,7 +188,7 @@
 <h3 id="kafkas-replication-factor-an-overview">Kafka&rsquo;s Replication Factor: An Overview</h3>
 <p>Kafka&rsquo;s replication factor refers to the number of replicas of a Kafka partition within a Kafka cluster. It&rsquo;s a form of redundancy intended to provide resilience and fault-tolerance. To better illustrate this, let&rsquo;s consider an example.</p>
 <p><img src="https://i.imgur.com/1tRvgJN.png" alt="Replication Factor"></p>
-<p>In this example, each partition of the Kafka Topic has three replicas. Now, let&rsquo;s delve into some key points:</p>
+<p>In this example, each partition of the Kafka Topic has three replicas. Now, let&rsquo;s look at some key points:</p>
 <ol>
 <li>Among the replicas, one is designated as the &ldquo;leader,&rdquo; while the others are &ldquo;followers.&rdquo; All read and write operations for a partition go through the leader, and then the changes get propagated to the followers.</li>
 <li>The leader and follower roles are not static. In case the leader fails, one of the followers will be elected as the new leader, which ensures high availability of the Kafka Topic.</li>

@@ -305,7 +305,7 @@
 <p><strong>Concurrency</strong>: By default, CronJobs are allowed to run concurrently. Use the <code>concurrencyPolicy</code> field to adjust this if needed.</p>
 </li>
 <li>
-<p><strong>Failure Handling</strong>: Utilize the <code>restartPolicy</code> to define what should happen if the job fails. Most of the time, <code>OnFailure</code> is a good choice.</p>
+<p><strong>Failure Handling</strong>: Use the <code>restartPolicy</code> to define what should happen if the job fails. Most of the time, <code>OnFailure</code> is a good choice.</p>
 </li>
 <li>
 <p><strong>Cleanup Old Jobs</strong>: By default, all successful and failed job pods are kept, which can clutter the cluster. Adjust the <code>.spec.successfulJobsHistoryLimit</code> and <code>.spec.failedJobsHistoryLimit</code> fields to clean up old job pods.</p>

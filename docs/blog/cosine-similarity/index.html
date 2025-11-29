@@ -272,7 +272,9 @@ Cosine says king ≈ queen ≈ peasant (all same direction).</p>
 </span></span><span style="display:flex;"><span>    logits <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>cat([pos_sim<span style="color:#f92672">.</span>unsqueeze(<span style="color:#ae81ff">1</span>), neg_sims], dim<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
 </span></span><span style="display:flex;"><span>    labels <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros(len(anchor), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>long)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> F<span style="color:#f92672">.</span>cross_entropy(logits, labels)
-</span></span></code></pre></div>
+</span></span></code></pre></div><hr>
+<p><em>Like what you learned? Help others discover these concepts by starring <a href="https://github.com/danielsobrado/ml-animations">ML Animations</a> on GitHub and sharing on LinkedIn or Twitter!</em></p>
+
             </div>
           </div>
         </div>

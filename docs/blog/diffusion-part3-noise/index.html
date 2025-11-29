@@ -179,8 +179,8 @@
 <p>$$q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1-\beta_t}x_{t-1}, \beta_t I)$$</p>
 <p>β_t is noise schedule. Small values (0.0001 to 0.02).</p>
 <p>After T steps (T~1000), image becomes pure noise.</p>
-<p><img src="https://danielsobrado.github.io/ml-animations/animation/diffusion-part3-noise" alt="Noise Process"></p>
-<p>Watch noise gradually added: <a href="https://danielsobrado.github.io/ml-animations/animation/diffusion-part3-noise">Noise Animation</a></p>
+<p><img src="https://danielsobrado.github.io/ml-animations/animation/flow-matching" alt="Flow Matching"></p>
+<p>See flow-based generative modeling: <a href="https://danielsobrado.github.io/ml-animations/animation/flow-matching">Flow Matching Animation</a></p>
 <h2 id="closed-form-sampling">Closed-form sampling</h2>
 <p>Don&rsquo;t need to iterate. Sample x_t directly from x_0:</p>
 <p>$$q(x_t | x_0) = \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t}x_0, (1-\bar{\alpha}_t)I)$$</p>
